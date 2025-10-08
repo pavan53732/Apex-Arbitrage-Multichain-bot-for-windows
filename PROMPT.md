@@ -1,326 +1,282 @@
+# APEX WINDOWS FEATURE MAPPING PROMPT
 
+**Transform ANY legacy component into clear Windows feature specifications**
 
-# APEX WINDOWS FEATURE-MAPPING PROMPT (AI-OPTIMIZED)
+---
 
-Goal
-Turn any idea or legacy component into a Windows-first feature spec that updates files under features/. Output must be deterministic, machine-parseable (JSON), and human-readable (Markdown).
+## 🎯 Purpose
+Convert legacy components from your 6,165-file system into **Windows-first feature specifications** that clearly show:
+- **"What does this FEATURE do?"** → Clear feature description
+- **"Which MD file OWNS this FEATURE?"** → Primary specification file  
+- **"Which MD files REFERENCE this FEATURE?"** → Integration points
 
-Use
-- Provide the “Your Input” block exactly as described.
-- Select a Mode.
-- The AI returns one JSON block + one Markdown spec that you can paste into the correct features/*.md files.
+## 📝 How to Use This Prompt
+1. **Copy the entire "YOUR INPUT" template** below
+2. **Fill in your component details** 
+3. **Submit to AI** 
+4. **Receive clear guidance** on exactly which MD files to update
 
-Modes
-- spec-only: Produce the primary spec + secondary integration notes.
-- spec-and-tasks: Spec + implementation tasks broken into 2–3 day chunks.
-- delta-update: Update an existing spec; include a clear change log.
-- quick-classify: Only return owner file and secondary refs with a 3-line rationale.
+---
 
-Allowed Owner Files (choose exactly one)
-- install-dependencies.md
-- config.md
-- backend.md
-- dashboard.md
-- ai-modules.md
-- docs.md
-- contracts.md
-- security.md
-- testing.md
-- deployment.md
+# 🔄 FEATURE MAPPING REQUEST TEMPLATE
 
-Allowed Secondary Refs (choose any)
-Same list as above.
+## YOUR INPUT (Copy and Fill This Section)
 
-Priority Scale
-- P0: MVP-critical. Blocks release.
-- P1: High value. Next immediately after MVP.
-- P2: Important. Post-MVP.
-- P3: Nice-to-have.
-
-Windows Constraints (pick/set as needed)
-- Runtime: Electron desktop, Node service, Python (optional), .NET (optional)
-- Service: Windows Service (background), Tray App (foreground)
-- Data: SQLite, rolling file logs, cache
-- Storage: %AppData%/ApexArbitrage, %LocalAppData%, encrypted at rest (optional)
-- Security: Windows Credential Manager, DPAPI, key redaction
-- Networking: localhost only by default; operator-approved RPCs
-- Packaging: Signed .exe, NSIS/Inno Setup, auto-update channel
-
-Output Contract (always return JSON first, then Markdown)
-1) JSON (strict schema below)
-2) Markdown spec (paste-ready):
-   - Primary Owner section content
-   - Secondary integration notes sections
-   - Tasks (if requested)
-   - Change Log (for delta-update)
-
-JSON Schema (strict)
-{
-  "ownerFile": "backend.md",
-  "featureName": "Execution Batch Logging",
-  "priority": "P0",
-  "purpose": "Short purpose in one sentence.",
-  "scope": { "in": [], "out": [] },
-  "windowsImpl": {
-    "runtime": ["Electron", "NodeService"],
-    "service": "WindowsService|TrayApp|None",
-    "data": ["SQLite", "FileLogs", "Cache"],
-    "storage": { "dbPath": "%AppData%/ApexArbitrage/db", "logsPath": "%AppData%/ApexArbitrage/logs" },
-    "security": ["Redaction", "DPAPI"],
-    "performance": { "eventAppendMs": 2, "queryP95Ms": 50 }
-  },
-  "interfaces": {
-    "apis": ["GET /health"],
-    "events": [],
-    "ipc": []
-  },
-  "dataModel": {
-    "tables": [],
-    "retentionDays": 30,
-    "rotation": { "fileMaxMB": 100, "dailyRotate": true }
-  },
-  "errorHandling": [],
-  "observability": {
-    "metrics": [],
-    "healthChecks": []
-  },
-  "acceptanceCriteria": [],
-  "secondaryFiles": {
-    "dashboard.md": [],
-    "config.md": [],
-    "testing.md": [],
-    "security.md": [],
-    "deployment.md": [],
-    "docs.md": []
-  },
-  "dependencies": {
-    "upstream": [],
-    "downstream": []
-  },
-  "failureModes": [],
-  "mitigations": [],
-  "mode": "spec-only",
-  "tasks": [],
-  "changeLog": [],
-  "extensions": {
-    "lint": { "passed": true, "errors": [], "warnings": [] }
-  }
-}
-
-Validation Rules (the AI must enforce)
-- Reject if ownerFile not in allowed list.
-- Reject if priority not in {P0,P1,P2,P3}.
-- Require at least one of windowsImpl.runtime or windowsImpl.service.
-- Never reference legacy paths; Windows-first only.
-- No external links.
-- Security: must include at least “Redaction” in security for any logging or credential-related feature.
-- Acceptance criteria must be measurable (numbers, durations, thresholds).
-- Secondary file keys must be a subset of the allowed files.
-- If mode = spec-and-tasks → tasks[] must have 2–6 items with estimates.
-- If mode = delta-update → changeLog[] required with date, change, reason, impact.
-
-Your Input (fill and send as-is)
-
+```
 APEX WINDOWS FEATURE MAPPING REQUEST
 
-mode: spec-only | spec-and-tasks | delta-update | quick-classify
+=== COMPONENT ANALYSIS ===
+Component Name: [Name of your legacy component or new feature idea]
+Component Type: [Feature | Subsystem | Adapter | Service | UI Widget | Config | Documentation]
+Original Purpose: [What did this do in your old system? Or what should this new feature do?]
+Priority Level: [P0-Critical | P1-High | P2-Medium | P3-Nice-to-have]
 
-Component
-- Name:
-- Type: Feature | Subsystem | Adapter | Service | UI | Config | Doc
-- Original purpose (if any):
-- Priority: P0 | P1 | P2 | P3
+=== WINDOWS IMPLEMENTATION ===
+Runtime Needs: [Electron Desktop | Node.js Service | Python Scripts | Windows Service]
+Data Storage: [SQLite Database | File Logs | Cache | Registry]
+User Interface: [Dashboard Widget | Configuration Panel | System Tray | None]
+Security Requirements: [API Key Storage | Wallet Integration | Log Redaction | Encryption]
+Performance Target: [Response time, throughput, or other measurable goals]
 
-Ownership
-- Primary owner file (one of the allowed list):
-- Secondary files (any of the allowed list):
+=== FEATURE MAPPING QUESTION ===
+Please tell me:
+1. "What does this FEATURE do?" → [Clear 1-sentence description]
+2. "Which MD file OWNS this FEATURE?" → [Primary file that contains the main specification]
+3. "Which MD files REFERENCE this FEATURE?" → [List of files that need integration notes]
+```
 
-Windows Constraints
-- Runtime (choose): Electron | NodeService | Python | .NET
-- Service: WindowsService | TrayApp | None
-- Data: SQLite | FileLogs | Cache
-- Storage: desired base path (default %AppData%/ApexArbitrage)
-- Security: CredentialManager | DPAPI | Redaction | AtRestEncryption
-- Performance target: [e.g., append <= 2ms; p95 query <= 50ms]
+---
 
-Interfaces (if known)
-- APIs:
-- Events:
-- IPC:
+## 📂 Available MD Files (Your Options)
 
-Data Model (if known)
-- Tables/files:
-- Retention/rotation:
+### **Core Windows Features (P0-P1)**
+- **install-dependencies.md** - Windows installer, dependency management, bootstrap process
+- **config.md** - Configuration system, settings management, validation
+- **backend.md** - Core execution engine, arbitrage logic, API services
+- **dashboard.md** - User interface, control panels, real-time displays
 
-Acceptance (Definition of Done)
-- List 3–6 measurable criteria
+### **Advanced Features (P1-P2)**
+- **ai-modules.md** - Machine learning, decision engines, pattern recognition
+- **contracts.md** - Smart contract deployment, blockchain integration
+- **security.md** - Authentication, encryption, key management, audit trails
 
-Dependencies
-- Upstream:
-- Downstream:
+### **Supporting Features (P2-P3)**
+- **testing.md** - Quality assurance, automated testing, validation
+- **deployment.md** - Windows packaging, distribution, updates
+- **docs.md** - User guides, troubleshooting, operator manuals
 
-Risks
-- List major risks and mitigations
+---
 
-Style Rules (for all AI)
-- Start with JSON block exactly matching the schema, then Markdown spec.
-- No external links. No screenshots. No legacy paths.
-- Use simple, directive language. Avoid fluff.
-- Keep sections in a fixed order so they’re easy to diff.
-- Do not invent features outside the owner/secondary files list.
+## 🎯 Expected AI Response Format
 
-Change Management
-- For delta-update mode, include a “changeLog” with dated entries and impact tags (Spec|Config|API|Data).
-- Preserve field names; add new fields only under the “extensions” key.
+### **Feature Classification**
+```
+✅ FEATURE ANALYSIS COMPLETE
 
-Security Defaults
-- Never log private keys or seed phrases.
-- Mask API tokens by default.
-- Local-only endpoints unless explicitly requested.
+🔍 "What does this FEATURE do?"
+→ [Clear, actionable description of the feature's purpose]
 
-Minimal Lint Checklist (AI MUST RUN BEFORE RETURNING OUTPUT)
-- Owner file is in allowed list.
-- Priority is P0/P1/P2/P3.
-- windowsImpl includes runtime or service (or both).
-- If feature touches logging, credentials, wallets, or RPC keys → windowsImpl.security contains “Redaction”.
-- acceptanceCriteria has 3–10 items, each measurable (contains a number or quantifiable threshold).
-- No legacy paths (e.g., backend/, contracts/ from old repo) appear anywhere.
-- No external links present.
-- secondaryFiles keys are a subset of the allowed files; values are short bullet items.
-- dataModel.retentionDays is an integer; rotation.fileMaxMB is a number.
-- If mode = spec-and-tasks → tasks count 2–6, each with estimateDays.
-- If mode = delta-update → changeLog has at least 1 entry with date, change, reason, impact.
-- Add extensions.lint with passed true/false and any errors/warnings.
+📁 "Which MD file OWNS this FEATURE?"
+→ **[filename].md** - [Reason why this file is the primary owner]
 
-Worked Examples
+🔗 "Which MD files REFERENCE this FEATURE?"
+→ **[filename1].md** - [What integration notes to add]
+→ **[filename2].md** - [What integration notes to add]
+→ **[filename3].md** - [What integration notes to add]
+```
 
-Example A — Installer Bootstrap (install-dependencies.md, P0, spec-and-tasks)
-Your Input
-mode: spec-and-tasks
+### **Detailed Specifications**
+```markdown
+## PRIMARY SPECIFICATION (Paste into [owner-file].md)
 
-Component
-- Name: Installer Bootstrap
-- Type: Feature
-- Original purpose (if any): One-click Windows installer with runtime checks
-- Priority: P0
+### Feature Name: [Clear Feature Name]
+- **Purpose**: [What this feature accomplishes for Windows users]
+- **Windows Implementation**: 
+  - [How this works on Windows desktop]
+  - [Technologies and services used]
+- **Key Functions**:
+  - [Function 1]: [Description]
+  - [Function 2]: [Description]
+  - [Function 3]: [Description]
+- **Performance Targets**: [Measurable goals]
+- **Acceptance Criteria**:
+  - [ ] [Testable requirement 1]
+  - [ ] [Testable requirement 2]
+  - [ ] [Testable requirement 3]
 
-Ownership
-- Primary owner file: install-dependencies.md
-- Secondary files: deployment.md, security.md, docs.md, testing.md
+## INTEGRATION NOTES (Add to referenced MD files)
 
-Windows Constraints
-- Runtime: Electron
-- Service: WindowsService
-- Data: SQLite
-- Storage: %AppData%/ApexArbitrage
-- Security: DPAPI, Redaction
-- Performance target: Install < 2 minutes on typical hardware
+### [filename1].md Integration
+- **Connection Point**: [How this file connects to the feature]
+- **Required Changes**: [What to add to this file]
+- **Dependencies**: [What this file needs from the feature]
 
-Interfaces
-- APIs: GET /health (post-install validation)
-- Events: install.started, install.completed, install.failed
-- IPC: n/a
+### [filename2].md Integration
+- **Connection Point**: [How this file connects to the feature]
+- **Required Changes**: [What to add to this file]
+- **Dependencies**: [What this file needs from the feature]
+```
 
-Data Model
-- Tables/files: installer logs (rolling), config bootstrap file
-- Retention/rotation: retain last 5 installer logs
+---
 
-Acceptance
-- Signed .exe installer runs offline; verifies runtimes; configures folders; creates shortcut; optional service registration; uninstall cleans up.
+## 💡 Worked Examples
 
-Dependencies
-- Upstream: code-signing certificates
-- Downstream: backend service, dashboard app
+### **Example 1: Batch Logging System**
 
-Risks
-- AV false positives; incomplete uninstalls
-- Mitigations: code signing, clean uninstall scripts, clear rollback
+**Your Input:**
+```
+APEX WINDOWS FEATURE MAPPING REQUEST
 
-Expected Output Summary
-- ownerFile: install-dependencies.md
-- Secondary integration notes for deployment.md (packaging pipeline), security.md (signing and DPAPI), docs.md (install guide), testing.md (silent install tests).
-- Tasks: author NSIS/Inno scripts, sign build, silent install test, uninstall validation.
+=== COMPONENT ANALYSIS ===
+Component Name: Execution Batch Logging
+Component Type: Feature
+Original Purpose: Track arbitrage execution batches with performance metrics
+Priority Level: P0-Critical
 
-Example B — Config Engine (config.md, P0, spec-only)
-Your Input
-mode: spec-only
+=== WINDOWS IMPLEMENTATION ===
+Runtime Needs: Node.js Service
+Data Storage: SQLite Database + File Logs
+User Interface: Dashboard Widget
+Security Requirements: Log Redaction
+Performance Target: Log 2000 events/second, query response < 50ms
+```
 
-Component
-- Name: Config Engine (Typed + Safe)
-- Type: Feature
-- Original purpose (if any): Centralized app configuration with validation and safe persistence
-- Priority: P0
+**AI Response:**
+```
+✅ FEATURE ANALYSIS COMPLETE
 
-Ownership
-- Primary owner file: config.md
-- Secondary files: backend.md, dashboard.md, security.md, testing.md, docs.md, deployment.md
+🔍 "What does this FEATURE do?"
+→ Tracks arbitrage execution batches with real-time logging and performance metrics
 
-Windows Constraints
-- Runtime: NodeService, Electron
-- Service: WindowsService
-- Data: SQLite, FileLogs
-- Storage: %AppData%/ApexArbitrage
-- Security: DPAPI, Redaction
-- Performance target: Load/validate < 100 ms; hot-reload-safe updates
+📁 "Which MD file OWNS this FEATURE?"
+→ **backend.md** - Core execution logging belongs in the backend engine
 
-Interfaces
-- APIs: GET /config, PUT /config (validated)
-- Events: config.changed
-- IPC: subscribe to config updates
+🔗 "Which MD files REFERENCE this FEATURE?"
+→ **dashboard.md** - Real-time log viewer widget and export controls
+→ **config.md** - Log retention settings and file rotation policies
+→ **security.md** - Log redaction rules for sensitive data
+→ **testing.md** - Performance testing for 2k events/second
+→ **docs.md** - Operator guide for log analysis and troubleshooting
+```
 
-Data Model
-- Tables/files: config.json (encrypted fields), schema.json
-- Retention/rotation: versioned backups (last 5)
+### **Example 2: Windows Installer**
 
-Acceptance
-- Typed schema with validation; defaults applied; secure persistence of secrets; rollback to last good config; audit of changes.
+**Your Input:**
+```
+APEX WINDOWS FEATURE MAPPING REQUEST
 
-Expected Output Summary
-- ownerFile: config.md
-- Secondary notes for backend.md (read-only cache + hot-reload edges), dashboard.md (UI editor with validation), security.md (fields encrypted via DPAPI), testing.md (schema validation tests), deployment.md (migrate on update), docs.md (operator guide).
+=== COMPONENT ANALYSIS ===
+Component Name: One-Click Installer
+Component Type: Feature
+Original Purpose: Install application with all dependencies automatically
+Priority Level: P0-Critical
 
-Example C — Dashboard Shell (dashboard.md, P0, spec-and-tasks)
-Your Input
-mode: spec-and-tasks
+=== WINDOWS IMPLEMENTATION ===
+Runtime Needs: NSIS/Inno Setup
+Data Storage: Registry + %AppData%
+User Interface: Installation Wizard
+Security Requirements: Code Signing
+Performance Target: Complete installation in under 3 minutes
+```
 
-Component
-- Name: Dashboard Shell + Streams
-- Type: UI
-- Original purpose (if any): Operator UI, real-time status, start/stop control
-- Priority: P0
+**AI Response:**
+```
+✅ FEATURE ANALYSIS COMPLETE
 
-Ownership
-- Primary owner file: dashboard.md
-- Secondary files: backend.md, testing.md, security.md, docs.md
+🔍 "What does this FEATURE do?"
+→ Provides one-click Windows installation with automatic dependency management
 
-Windows Constraints
-- Runtime: Electron
-- Service: TrayApp
-- Data: Cache
-- Storage: %AppData%/ApexArbitrage
-- Security: Redaction
-- Performance target: Connect to backend < 1s; live widgets update p95 < 200 ms
+📁 "Which MD file OWNS this FEATURE?"
+→ **install-dependencies.md** - Primary installer specification and requirements
 
-Interfaces
-- APIs: GET /health, GET /metrics
-- Events: status.changed, alert.raised
-- IPC: ws://localhost:PORT/stream
+🔗 "Which MD files REFERENCE this FEATURE?"
+→ **deployment.md** - Packaging pipeline and distribution strategy
+→ **security.md** - Code signing certificates and validation
+→ **config.md** - Default configuration setup during installation
+→ **testing.md** - Silent installation testing and validation
+→ **docs.md** - Installation guide for end users
+```
 
-Data Model
-- Tables/files: UI state cache (in-memory or local storage)
-- Retention/rotation: n/a
+### **Example 3: AI Decision Engine**
 
-Acceptance
-- App shell with connectivity check; start/stop controls; live metrics widget; alert banner; tray icon; graceful reconnection.
+**Your Input:**
+```
+APEX WINDOWS FEATURE MAPPING REQUEST
 
-Expected Output Summary
-- ownerFile: dashboard.md
-- Secondary notes for backend.md (health, metrics, start/stop endpoints), testing.md (UI smoke/e2e, offline simulation), security.md (mask sensitive values), docs.md (operator walkthrough).
-- Tasks: shell scaffolding, connectivity & reconnection, core widgets, tray integration, e2e smoke tests.
+=== COMPONENT ANALYSIS ===
+Component Name: Opportunity Detection AI
+Component Type: Subsystem
+Original Purpose: ML-based arbitrage opportunity identification
+Priority Level: P1-High
 
-Response Contract (what you’ll get back every time)
-- One JSON “feature spec” conforming to the schema (with extensions.lint results).
-- One Markdown spec ready to paste into the owner and secondary files.
-- Clear Windows implementation details, dependencies, risks, and acceptance criteria.
-- Tasks and/or change log sections when requested by mode.
+=== WINDOWS IMPLEMENTATION ===
+Runtime Needs: Python Scripts + Node.js Bridge
+Data Storage: SQLite Database + Model Files
+User Interface: Dashboard Analytics Panel
+Security Requirements: Model Protection
+Performance Target: Scan opportunities in under 2 seconds
+```
 
+**AI Response:**
+```
+✅ FEATURE ANALYSIS COMPLETE
+
+🔍 "What does this FEATURE do?"
+→ Uses machine learning to identify profitable arbitrage opportunities in real-time
+
+📁 "Which MD file OWNS this FEATURE?"
+→ **ai-modules.md** - Primary AI/ML system specification and model management
+
+🔗 "Which MD files REFERENCE this FEATURE?"
+→ **backend.md** - AI integration points and opportunity data flow
+→ **dashboard.md** - AI insights panel and opportunity visualization
+→ **config.md** - AI model settings and performance tuning
+→ **testing.md** - Model accuracy testing and performance validation
+→ **docs.md** - AI system explanation for operators
+```
+
+---
+
+## 🔍 Feature-Based Thinking Guide
+
+### **Instead of asking "Where does this folder go?"**
+Ask: **"What does this FEATURE do for Windows users?"**
+
+### **Instead of thinking about file paths**
+Think: **"Which MD file should OWN this functionality?"**
+
+### **Instead of complex integration**
+Focus: **"Which MD files need to REFERENCE this feature?"**
+
+### **Key Questions for Any Component:**
+1. **Purpose**: What value does this provide to users?
+2. **Owner**: Which MD file contains the main specification?
+3. **References**: Which other MD files need integration notes?
+4. **Implementation**: How does this work on Windows specifically?
+5. **Testing**: How do we validate this feature works correctly?
+
+---
+
+## 📋 Quality Checklist
+
+### **Before Submitting Your Request:**
+- [ ] Component name is clear and descriptive
+- [ ] Priority level matches business importance
+- [ ] Windows implementation needs are specified
+- [ ] Performance targets are measurable
+- [ ] Security requirements are identified
+
+### **Expected in AI Response:**
+- [ ] Clear "What does this FEATURE do?" answer
+- [ ] Single MD file identified as primary owner
+- [ ] List of MD files needing integration notes
+- [ ] Paste-ready specifications for each file
+- [ ] Windows-specific implementation details
+
+---
+
+## 🚀 Ready to Use!
+
+**Copy the "YOUR INPUT" template above, fill in your component details, and submit to any AI assistant. You'll receive clear guidance on exactly which MD files to update with paste-ready specifications.**
+
+**This approach transforms your complex 6,165-file system into manageable Windows desktop features, one component at a time!**
