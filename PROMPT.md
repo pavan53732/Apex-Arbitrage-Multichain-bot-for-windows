@@ -18,40 +18,56 @@ Convert legacy components from your 6,165-file system into **Windows-first featu
 
 ---
 
-# 🗂️ PATH-TO-FEATURE MAPPER MODE (NEW - SIMPLE 3-LINE MAPPING)
+# 🗂️ PATH-TO-FEATURE MAPPER MODE (SIMPLE 3-LINE MAPPING ONLY)
 
-## Quick Path Mapping
-**Just paste any legacy folder path and get instant feature mapping:**
+## 🚀 CRITICAL: This mode returns EXACTLY 3 lines - NOTHING MORE!
 
 ### Input Format:
 ```
 PATH-TO-FEATURE MAPPER
 
-Legacy Path: Apex Arbitrage Multichain bot/backend/engine/utils/
+Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 ```
 
-### Expected Output:
+### 🚨 MANDATORY Output Format (AI MUST FOLLOW EXACTLY):
 ```
 ✅ PATH-TO-FEATURE MAPPING COMPLETE
 
 🔍 "What does this FEATURE do?"
-→ Provides core execution utilities (math, serialization, retry helpers, timing functions) for the arbitrage engine
+→ [ONE sentence describing the feature - maximum 20 words]
 
 📁 "Which MD file OWNS this FEATURE?"
-→ **backend.md** (engine internals and shared utilities belong to backend runtime)
+→ **[filename].md** ([short reason - maximum 10 words])
 
 🔗 "Which MD files REFERENCE this FEATURE?"
-→ **testing.md** (unit + performance test coverage), **docs.md** (developer API documentation), **config.md** (tunable retry/backoff settings), **security.md** (prevent secret leakage in logs)
+→ **[file1].md**, **[file2].md**, **[file3].md** ([short reason for each])
 ```
 
-## Path Mapping Rules
+### ❌ FORBIDDEN in PATH-TO-FEATURE MAPPER:
+- **NO detailed specifications**
+- **NO "PRIMARY SPECIFICATION" sections**
+- **NO "INTEGRATION NOTES" sections**
+- **NO acceptance criteria**
+- **NO performance targets**
+- **NO Windows implementation details**
+- **ONLY the 3-line mapping above**
+
+### Path Mapping Rules:
 - **backend/engine/** → backend.md
 - **backend/plugins/** → backend.md  
+- **backend/data/** → backend.md
+- **backend/gas/** → backend.md
+- **backend/mempool/** → backend.md
 - **dashboard/** → dashboard.md
+- **dashboard/widgets/** → dashboard.md
+- **dashboard/overlays/** → dashboard.md
 - **ai-modules/** → ai-modules.md
+- **ai-modules/models/** → ai-modules.md
 - **config/** → config.md
 - **contracts/** → contracts.md
 - **security/** → security.md
+- **logs/security/** → security.md
+- **logs/audit/** → security.md
 - **tests/** → testing.md
 - **deploy/installer/** → install-dependencies.md
 - **docs/** → docs.md
@@ -107,7 +123,7 @@ Please tell me:
 
 ---
 
-## 🎯 Expected AI Response Format
+## 🎯 Expected AI Response Format (For Full Template Only)
 
 ### **Feature Classification**
 ```
@@ -161,73 +177,73 @@ Please tell me:
 
 ## 💡 Worked Examples
 
-### **Example 1: Path Mapper Usage**
+### **Example 1: PATH-TO-FEATURE MAPPER (Simple)**
 
 **Your Input:**
 ```
 PATH-TO-FEATURE MAPPER
 
-Legacy Path: Apex Arbitrage Multichain bot/dashboard/widgets/real-time-monitor/
+Legacy Path: Apex Arbitrage Multichain bot/logs/security-log
 ```
 
-**AI Response:**
+**AI Response (MUST BE EXACTLY THIS FORMAT):**
 ```
 ✅ PATH-TO-FEATURE MAPPING COMPLETE
 
 🔍 "What does this FEATURE do?"
-→ Provides real-time monitoring widgets for arbitrage execution status and metrics
+→ Tracks security events and authentication attempts for compliance monitoring
 
 📁 "Which MD file OWNS this FEATURE?"
-→ **dashboard.md** (UI widgets and real-time displays belong to dashboard system)
+→ **security.md** (security logging belongs to security system)
 
 🔗 "Which MD files REFERENCE this FEATURE?"
-→ **backend.md** (data APIs for real-time feeds), **config.md** (widget refresh rates and display settings), **testing.md** (UI automation tests), **docs.md** (widget usage guide)
+→ **backend.md** (generates events), **dashboard.md** (security alerts), **config.md** (log settings), **docs.md** (monitoring guide)
 ```
 
-### **Example 2: Complex Backend Path**
+### **Example 2: PATH-TO-FEATURE MAPPER (Dashboard)**
 
 **Your Input:**
 ```
 PATH-TO-FEATURE MAPPER
 
-Legacy Path: Apex Arbitrage Multichain bot/backend/plugins/dex-adapters/uniswap-v3/
+Legacy Path: Apex Arbitrage Multichain bot/dashboard/presets
 ```
 
-**AI Response:**
+**AI Response (MUST BE EXACTLY THIS FORMAT):**
 ```
 ✅ PATH-TO-FEATURE MAPPING COMPLETE
 
 🔍 "What does this FEATURE do?"
-→ Provides Uniswap V3 DEX integration for quote fetching and trade execution
+→ Manages pre-configured dashboard layouts and themes for different user types
 
 📁 "Which MD file OWNS this FEATURE?"
-→ **backend.md** (DEX adapters are core backend execution components)
+→ **dashboard.md** (UI presets belong to dashboard system)
 
 🔗 "Which MD files REFERENCE this FEATURE?"
-→ **config.md** (Uniswap RPC settings and pool configurations), **contracts.md** (Uniswap V3 contract interfaces), **testing.md** (fork testing and integration tests), **security.md** (API key management), **docs.md** (DEX setup guide)
+→ **config.md** (preset storage), **docs.md** (usage guide), **testing.md** (preset switching tests)
 ```
 
-### **Example 3: AI Module Path**
+### **Example 3: PATH-TO-FEATURE MAPPER (Backend)**
 
 **Your Input:**
 ```
 PATH-TO-FEATURE MAPPER
 
-Legacy Path: Apex Arbitrage Multichain bot/ai-modules/models/opportunity-scorer/
+Legacy Path: Apex Arbitrage Multichain bot/backend/engine/utils
 ```
 
-**AI Response:**
+**AI Response (MUST BE EXACTLY THIS FORMAT):**
 ```
 ✅ PATH-TO-FEATURE MAPPING COMPLETE
 
 🔍 "What does this FEATURE do?"
-→ Uses machine learning to score and rank arbitrage opportunities by profitability and risk
+→ Provides core execution utilities for math, timing, and retry logic
 
 📁 "Which MD file OWNS this FEATURE?"
-→ **ai-modules.md** (ML models and scoring algorithms belong to AI system)
+→ **backend.md** (engine utilities belong to backend system)
 
 🔗 "Which MD files REFERENCE this FEATURE?"
-→ **backend.md** (opportunity data flow and scoring API integration), **dashboard.md** (opportunity ranking display), **config.md** (model parameters and thresholds), **testing.md** (model accuracy validation), **docs.md** (AI system explanation)
+→ **testing.md** (unit tests), **docs.md** (API reference), **config.md** (utility settings)
 ```
 
 ---
@@ -254,30 +270,31 @@ Focus: **"Which MD files need to REFERENCE this feature?"**
 
 ## 📋 Quality Checklist
 
-### **Before Submitting Your Request:**
+### **For PATH-TO-FEATURE MAPPER:**
+- [ ] Input starts with "PATH-TO-FEATURE MAPPER"
+- [ ] Response is EXACTLY 3 lines (no more, no less)
+- [ ] No detailed specifications included
+- [ ] Owner file is from the allowed list
+- [ ] Reference files are from the allowed list
+
+### **For Full Feature Mapping:**
 - [ ] Component name is clear and descriptive
 - [ ] Priority level matches business importance
 - [ ] Windows implementation needs are specified
 - [ ] Performance targets are measurable
 - [ ] Security requirements are identified
 
-### **Expected in AI Response:**
-- [ ] Clear "What does this FEATURE do?" answer
-- [ ] Single MD file identified as primary owner
-- [ ] List of MD files needing integration notes
-- [ ] Paste-ready specifications for each file
-- [ ] Windows-specific implementation details
-
 ---
 
 ## 🚀 Ready to Use!
 
-**Now you can simply paste ANY legacy folder path and get instant feature mapping guidance!**
+**For quick path mapping, use PATH-TO-FEATURE MAPPER mode:**
+```
+PATH-TO-FEATURE MAPPER
 
-**Examples of paths you can use:**
-- `Apex Arbitrage Multichain bot/backend/engine/data/batch-logs/`
-- `Apex Arbitrage Multichain bot/dashboard/overlays/ar-vr/`
-- `Apex Arbitrage Multichain bot/ai-modules/inference/real-time/`
-- `Apex Arbitrage Multichain bot/contracts/governance/voting/`
+Legacy Path: [your-folder-path]
+```
+
+**For detailed feature specification, use the full template above.**
 
 **This approach transforms your complex 6,165-file system into manageable Windows desktop features, one path at a time!**
