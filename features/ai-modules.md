@@ -20,3 +20,7 @@
 ## References
 
 - AI module deployment automation (see deployment.md)
+- AI backend role orchestration (see deployment.md)
+- AI dashboard role orchestration (see deployment.md)
+- Operator role orchestration (see deployment.md)
+- AI modules role management (see deployment.md)
