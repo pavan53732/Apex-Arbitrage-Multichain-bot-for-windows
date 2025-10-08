@@ -46,7 +46,7 @@ ACCESS-PROOF UPDATE repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.m
 
 ---
 
-# 🗂️ PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS)
+# 🗂️ PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + IMPLEMENTATION)
 
 ## 🧠 MANDATORY ANALYSIS PROCESS:
 
@@ -71,6 +71,11 @@ ACCESS-PROOF UPDATE repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.m
 - Based on feature analysis, assign to appropriate Windows project .md file
 - Consider integration needs based on actual file dependencies
 
+### **STEP 5: IMPLEMENTATION GUIDE (FILENAME-ONLY)**
+- Show EXACTLY how to add to the owner MD (no folder paths, filenames only)
+- Show EXACTLY what one-line references to add in other MDs
+- Use filename-only format for all file lists
+
 ---
 
 ## 🎯 INPUT FORMAT:
@@ -80,7 +85,7 @@ PATH-TO-FEATURE MAPPER
 Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 ```
 
-## 🚨 MANDATORY OUTPUT FORMAT (EXACTLY 3 LINES):
+## 🚨 MANDATORY OUTPUT FORMAT (EXACTLY 5 SECTIONS):
 ```
 ✅ PATH-TO-FEATURE MAPPING COMPLETE
 
@@ -92,6 +97,21 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 
 🔗 "Which MD files REFERENCE this FEATURE?"
 → **[file1].md**, **[file2].md**, **[file3].md** ([reasons based on real integration needs])
+
+📝 "HOW TO IMPLEMENT - OWNER FILE ([filename].md):"
+## 📊 [Feature Name] System
+### **Feature Files**
+- `[file1]` - [description]
+- `[file2]` - [description]  
+- `[file3]` - [description]
+
+### **Windows Implementation**
+- [Brief implementation details - no OS paths]
+
+📝 "HOW TO IMPLEMENT - REFERENCES:"
+**In [file1].md**, add: "- [Feature reference] (see [owner].md)"
+**In [file2].md**, add: "- [Feature reference] (see [owner].md)"
+**In [file3].md**, add: "- [Feature reference] (see [owner].md)"
 ```
 
 ## ❌ ABSOLUTELY FORBIDDEN:
@@ -99,9 +119,9 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 - **NO "PRIMARY SPECIFICATION" sections**  
 - **NO "INTEGRATION NOTES" sections**
 - **NO acceptance criteria or performance targets**
-- **NO Windows implementation details**
+- **NO Windows system paths like %APPDATA%**
 - **NO generic responses - MUST analyze actual files**
-- **ONLY the 3-line mapping above**
+- **ONLY the 5-section format above**
 
 ---
 
@@ -118,6 +138,7 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 - **docs/*|*.md** → docs.md (documentation)
 - **deploy/*|kubernetes/*|helm/*|terraform/*** → deployment.md (deployment)
 - **ai-*|models/*|train/*|datasets/*|notebooks/*** → ai-modules.md (AI/ML)
+- **performance-*.log|metrics-*.log** → testing.md (performance monitoring)
 
 ### **Folder Pattern Analysis:**
 - **dashboard/** → dashboard.md
@@ -126,46 +147,63 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 - **config/** → config.md
 - **contracts/** → contracts.md
 - **security/**, **logs/security** → security.md
+- **logs/performance-logs** → testing.md (performance monitoring)
 - **tests/** → testing.md
 - **deploy/**, **scripts/** → deployment.md
 - **docs/** → docs.md
 
+### **Filename-only Rule (for all file lists):**
+- Show filenames only (no directories or OS paths)
+- Example:
+  - `cpu-usage.log` - CPU utilization tracking
+  - `memory-stats.log` - Memory consumption data
+  - `network-metrics.log` - Network latency measurements
+  - `gas-consumption.log` - Gas fee analysis
+  - `error-tracking.log` - Error rate monitoring
+
 ---
 
-## 💡 CORRECT EXAMPLES (Using Real File Analysis):
+## 💡 CORRECT EXAMPLE (Complete 5-Section Format):
 
-### **Example 1: Dashboard Presets**
-**Input:** `Apex Arbitrage Multichain bot/dashboard/presets`
-**Files Found:** advanced-presets.json, ai-presets.json, layout-presets.json, theme-presets.json, user-presets.json
+**Input:**
+```
+PATH-TO-FEATURE MAPPER
+
+Legacy Path: Apex Arbitrage Multichain bot/logs/performance-logs
+```
+
 **Output:**
 ```
 ✅ PATH-TO-FEATURE MAPPING COMPLETE
 
 🔍 "What does this FEATURE do?"
-→ Manages dashboard layout presets and themes for different user roles and scenarios
+→ Captures system and execution performance metrics (CPU, memory, network, gas consumption) for monitoring and optimization
 
 📁 "Which MD file OWNS this FEATURE?"
-→ **dashboard.md** (UI presets and layouts belong to dashboard system)
+→ **testing.md** (performance monitoring and metrics belong to testing/QA system)
 
 🔗 "Which MD files REFERENCE this FEATURE?"
-→ **config.md** (preset storage), **docs.md** (user guide), **testing.md** (preset switching tests), **security.md** (user permissions)
-```
+→ **backend.md** (generates performance data), **dashboard.md** (performance widgets), **config.md** (log retention settings), **docs.md** (monitoring guide)
 
-### **Example 2: Backend Engine Utils**
-**Input:** `Apex Arbitrage Multichain bot/backend/engine/utils`
-**Files Found:** math-utils.js, retry-helpers.js, timing-utils.js, serialization.js
-**Output:**
-```
-✅ PATH-TO-FEATURE MAPPING COMPLETE
+📝 "HOW TO IMPLEMENT - OWNER FILE (testing.md):"
+## 📊 Performance Logging System
+### **Feature Files**
+- `cpu-usage.log` - CPU utilization tracking
+- `gas-usage.log` - Gas consumption metrics  
+- `memory-usage.log` - Memory utilization data
+- `network-usage.log` - Network performance metrics
 
-🔍 "What does this FEATURE do?"
-→ Provides core execution utilities for math operations, retries, timing, and data serialization
+### **Windows Implementation**
+- Node.js logging system writes to project files
+- JSON format with timestamps
+- Dashboard reads files for real-time display
+- Daily rotation with 30-day retention
 
-📁 "Which MD file OWNS this FEATURE?"
-→ **backend.md** (engine utilities are core backend functionality)
-
-🔗 "Which MD files REFERENCE this FEATURE?"
-→ **testing.md** (utility testing), **docs.md** (API documentation), **config.md** (utility settings)
+📝 "HOW TO IMPLEMENT - REFERENCES:"
+**In backend.md**, add: "- Performance metrics logged to testing system (see testing.md)"
+**In dashboard.md**, add: "- Performance widgets display data from performance logs (see testing.md)"
+**In config.md**, add: "- Performance log settings configured in testing.md"
+**In docs.md**, add: "- Performance monitoring guide covered in testing.md"
 ```
 
 ---
@@ -197,11 +235,11 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 ACCESS-PROOF WRITE repo=Apex-Arbitrage-Multichain-bot-for-windows branch=main nonce=<YOUR-RANDOM>
 ```
 
-**For intelligent path mapping with real file analysis:**
+**For intelligent path mapping with implementation guide:**
 ```
 PATH-TO-FEATURE MAPPER
 
 Legacy Path: [your-folder-path]
 ```
 
-**The AI will analyze the actual files in that path and give you precise Windows feature mapping!**
+**The AI will analyze the actual files AND show you exactly how to implement the feature in your Windows project with filename-only lists!**
