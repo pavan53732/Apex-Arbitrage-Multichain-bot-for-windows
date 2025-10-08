@@ -2,4 +2,5 @@
 
 ## References
 
-- Backend AI service deployment configured via deployment.md
+- Simulation engine consumes synthetic data for validation (see ai-modules.md)
+- Backend AI service deployment (see deployment.md)
