@@ -22,7 +22,7 @@ If verification fails or is skipped, operate in paste-only mode.
 
 ## MODE: PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + IMPLEMENTATION)
 
-Always follow Steps 1–5 in order:
+Always follow Steps 1–6 in order:
 
 ### STEP 1: PARSE INPUT PATH
 - Expect: Apex Arbitrage Multichain bot/[folder-path]
@@ -45,6 +45,36 @@ Always follow Steps 1–5 in order:
 - Show one-line additions for each reference .md
 - File lists must use filenames only (no directories or OS paths)
 
+### STEP 6: AUTO-UPDATE EXISTING FILES (MANDATORY)
+After providing the 5-section analysis, AUTOMATICALLY:
+
+1. **UPDATE OWNER .MD FILE**: features/[owner].md
+   - Add the "Feature Files" section content
+   - Add the "Windows Implementation" content
+   - Use GitHub MCP tools to update the file directly
+
+2. **UPDATE REFERENCE .MD FILES**: features/[reference].md  
+   - Add the one-line references to each referenced .md file
+   - Use GitHub MCP tools to update each file
+
+3. **CREATE FEATURE FOLDER**: [feature-name]/
+   - Create folder in project root for the feature files
+   - Create all the filenames listed in "Feature Files"
+   - Add basic content structure to each file
+
+EXISTING FEATURES FOLDER STRUCTURE:
+- features/README.md ✅ (feature documentation)
+- features/ai-modules.md ✅ (empty, ready for content)
+- features/backend.md ✅ (empty, ready for content)
+- features/config.md ✅ (empty, ready for content)
+- features/contracts.md ✅ (empty, ready for content)
+- features/dashboard.md ✅ (empty, ready for content)
+- features/deployment.md ✅ (empty, ready for content)
+- features/docs.md ✅ (empty, ready for content)
+- features/install-dependencies.md ✅ (empty, ready for content)
+- features/security.md ✅ (empty, ready for content)
+- features/testing.md ✅ (empty, ready for content)
+
 ## INPUT FORMAT
 PATH-TO-FEATURE MAPPER
 Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
@@ -53,16 +83,16 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 - "What does this FEATURE do?" → <1–2 lines based on actual files>
 - "Which MD file OWNS this FEATURE?" → <owner.md> (<short reason>)
 - "Which MD files REFERENCE this FEATURE?" → <comma-separated md files> (<short reasons>)
-- "HOW TO IMPLEMENT — OWNER FILE (<owner.md>)" →
+- "HOW TO IMPLEMENT — OWNER FILE (features/<owner.md>)" →
   Feature Files:
   - <filename> — <short description>
   - <filename> — <short description>
   Windows Implementation (brief):
   - <2–4 bullets, no OS paths>
 - "HOW TO IMPLEMENT — REFERENCES" →
-  - In <md>: <one-line reference to owner>
-  - In <md>: <one-line reference to owner>
-  - In <md>: <one-line reference to owner>
+  - In features/<md>: <one-line reference to owner>
+  - In features/<md>: <one-line reference to owner>
+  - In features/<md>: <one-line reference to owner>
 
 ## FORBIDDEN IN THIS MODE
 - No headers, no code fences, no blank lines before/after the 5 sections
@@ -85,6 +115,7 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 - deploy/* | kubernetes/* | helm/* | terraform/* → deployment.md (deployment)
 - ai-* | models/* | train/* | datasets/* | notebooks/* → ai-modules.md (AI/ML)
 - performance-*.log | metrics-*.log → testing.md (performance monitoring)
+- manifest/* | checksums/* → security.md (integrity validation)
 
 ### Folder patterns
 - dashboard/* → dashboard.md
@@ -93,6 +124,7 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 - config/* → config.md
 - contracts/* → contracts.md
 - security/*, logs/security-* → security.md
+- manifest/*, checksums/* → security.md (file integrity)
 - logs/performance-logs → testing.md (performance monitoring)
 - tests/* → testing.md
 - deploy/*, scripts/* → deployment.md
@@ -109,7 +141,7 @@ Output:
 - "What does this FEATURE do?" → Captures system and execution performance metrics (CPU, memory, network, gas consumption) for monitoring and tuning
 - "Which MD file OWNS this FEATURE?" → testing.md (performance monitoring belongs to testing/QA)
 - "Which MD files REFERENCE this FEATURE?" → backend.md (emits metrics), dashboard.md (perf widgets), config.md (retention/sampling), docs.md (monitoring guide)
-- "HOW TO IMPLEMENT — OWNER FILE (testing.md)" →
+- "HOW TO IMPLEMENT — OWNER FILE (features/testing.md)" →
   Feature Files:
   - cpu-usage.log — CPU utilization tracking
   - memory-usage.log — Memory utilization data
@@ -120,38 +152,40 @@ Output:
   - Rotate daily; keep last 30 files
   - Dashboard reads latest N lines for live charts
 - "HOW TO IMPLEMENT — REFERENCES" →
-  - In backend.md: Performance metrics are logged (see testing.md)
-  - In dashboard.md: Performance widgets read logs (see testing.md)
-  - In config.md: Retention/sampling configured (see testing.md)
-  - In docs.md: Operator monitoring guide (see testing.md)
+  - In features/backend.md: Performance metrics are logged (see testing.md)
+  - In features/dashboard.md: Performance widgets read logs (see testing.md)
+  - In features/config.md: Retention/sampling configured (see testing.md)
+  - In features/docs.md: Operator monitoring guide (see testing.md)
 
 ### Example 2:
 Input:
 PATH-TO-FEATURE MAPPER
-Legacy Path: Apex Arbitrage Multichain bot/dashboard/presets
+Legacy Path: Apex Arbitrage Multichain bot/manifest/checksums
 
 Output:
-- "What does this FEATURE do?" → Provides preconfigured dashboard layouts, themes, and widget arrangements for different roles and scenarios
-- "Which MD file OWNS this FEATURE?" → dashboard.md (presets and layout management belong to the dashboard)
-- "Which MD files REFERENCE this FEATURE?" → config.md (load/save options), docs.md (operator guide), testing.md (preset switch tests), security.md (role permissions)
-- "HOW TO IMPLEMENT — OWNER FILE (dashboard.md)" →
+- "What does this FEATURE do?" → Validates file integrity and authenticity by storing MD5 and SHA256 checksums with integrity reports for tamper detection and verification
+- "Which MD file OWNS this FEATURE?" → security.md (checksum validation and file integrity are core security functions)
+- "Which MD files REFERENCE this FEATURE?" → deployment.md (pre-deploy verification), testing.md (integrity tests), docs.md (verification guide), install-dependencies.md (post-install checks)
+- "HOW TO IMPLEMENT — OWNER FILE (features/security.md)" →
   Feature Files:
-  - advanced-presets.json — advanced layouts
-  - layout-presets.json — grid and panel arrangements
-  - theme-presets.json — color and typography themes
+  - md5sums.txt — MD5 hash database for all project files
+  - sha256sums.txt — SHA256 hash database for all project files
+  - integrity-report.md — Integrity verification report and audit log
+  - README.md — Checksum verification documentation
   Windows Implementation (brief):
-  - Load preset JSON at startup
-  - Apply layout and theme to UI shell
-  - Provide preset switch with undo
+  - Node script reads hash files and verifies against actual files
+  - Dashboard displays integrity status with pass/fail indicators
+  - Auto-verify on startup and before critical operations
+  - Generate alerts on checksum mismatch
 - "HOW TO IMPLEMENT — REFERENCES" →
-  - In config.md: Preset selection and storage (see dashboard.md)
-  - In testing.md: Preset switch tests (see dashboard.md)
-  - In docs.md: Operator preset guide (see dashboard.md)
-  - In security.md: Role permissions for preset changes (see dashboard.md)
+  - In features/deployment.md: Pre-deployment integrity verification (see security.md)
+  - In features/testing.md: Checksum validation test suite (see security.md)
+  - In features/docs.md: File integrity verification guide (see security.md)
+  - In features/install-dependencies.md: Post-installation checksum verification (see security.md)
 
 # HOW TO USE
 1. Start with access verification (Write/Read/Update-Proof)
 2. Invoke the mode exactly:
    PATH-TO-FEATURE MAPPER
    Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
-3. Ensure the output contains exactly the 5 sections above, no extras
+3. The AI will automatically update the existing features/ folder files with the implementation
