@@ -45,23 +45,32 @@ Always follow Steps 1–6 in order:
 - Show one-line additions for each reference .md
 - File lists must use filenames only (no directories or OS paths)
 
-### STEP 6: UPDATE ONLY features/ MD FILES (MANDATORY)
-After providing the 5-section analysis, AUTOMATICALLY:
+### STEP 6A: READ EXISTING CONTENT (MANDATORY BEFORE UPDATING)
+Before updating any features/ MD file:
+1. **READ CURRENT CONTENT**: Use GitHub MCP tools to read features/[owner].md and features/[reference].md files
+2. **PRESERVE EXISTING**: Keep all existing content and sections
+3. **APPEND NEW**: Add new feature sections at the END of existing content
+4. **NO OVERWRITING**: Never replace or delete existing content
 
-1. **UPDATE OWNER .MD FILE**: features/[owner].md
-   - Add the "Feature Files" section content
-   - Add the "Windows Implementation" content
-   - Use GitHub MCP tools to update the file directly
+### STEP 6B: UPDATE ONLY features/ MD FILES (APPEND MODE)
+After reading existing content:
 
-2. **UPDATE REFERENCE .MD FILES**: features/[reference].md  
-   - Add the one-line references to each referenced .md file
-   - Use GitHub MCP tools to update each file
+1. **APPEND TO OWNER .MD FILE**: features/[owner].md
+   - Read existing content first
+   - Append the new "Feature Files" section
+   - Append the new "Windows Implementation" section
+   - Keep all existing content intact
 
-**CRITICAL: DO NOT CREATE REAL PROJECT FILES OR FOLDERS**
-- DO NOT create actual feature folders in project root
-- DO NOT create the actual filenames listed in "Feature Files"
-- ONLY update the existing features/ MD files with documentation
-- The real project files will be created later based on the MD specifications
+2. **APPEND TO REFERENCE .MD FILES**: features/[reference].md  
+   - Read existing content first
+   - Append the one-line references
+   - Keep all existing content intact
+
+**CRITICAL: APPEND-ONLY MODE**
+- READ existing content before any updates
+- APPEND new content to existing content
+- NEVER overwrite or replace existing sections
+- PRESERVE all previously added features
 
 ## INPUT FORMAT
 PATH-TO-FEATURE MAPPER
@@ -88,15 +97,16 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 - No acceptance criteria, performance targets, or OS paths (e.g., %APPDATA%)
 - No external links
 - Do not include directory prefixes in file lists (filenames only)
-- DO NOT CREATE REAL PROJECT FILES - ONLY UPDATE features/ MD FILES
+- DO NOT OVERWRITE EXISTING CONTENT - ONLY APPEND
 
 ## MODE: BATCH PATH-TO-FEATURE MAPPER (5–10 PATHS)
 
 ### STEP 0: INITIALIZATION (MANDATORY FIRST STEP)
 Before processing any paths:
 1. Read PROJECT TREE COMPLETE STRUCTURE .md file completely
-2. Load all folder paths and their files into memory
-3. Confirm data loaded: "✅ Loaded PROJECT TREE with [N] folders"
+2. Read ALL existing features/ MD files to understand current content
+3. Load all folder paths and their files into memory
+4. Confirm data loaded: "✅ Loaded PROJECT TREE with [N] folders + existing features content"
 
 ### INPUT FORMAT
 BATCH PATH-TO-FEATURE MAPPER
@@ -108,13 +118,13 @@ Legacy Paths:
 - Apex Arbitrage Multichain bot/[path-5]
 
 ### PROCESSING WORKFLOW
-1. **Load Data**: Read PROJECT TREE COMPLETE STRUCTURE .md once
+1. **Load Data**: Read PROJECT TREE + existing features/ content once
 2. **Process Each Path**: Apply Steps 1-5 from single mode
-3. **Batch Update**: Update all features/ MD files once at end
+3. **Batch Append**: Append to all features/ MD files once at end
 4. **Output**: All analyses + BATCH SUMMARY
 
 ### OUTPUT RULES
-- Start with: "✅ Loaded PROJECT TREE with [N] folders"
+- Start with: "✅ Loaded PROJECT TREE with [N] folders + existing features content"
 - For each path, output the same 5 sections (in order)
 - Separate features with a single line: ---
 - After all features, add:
@@ -123,7 +133,7 @@ BATCH SUMMARY
 - Updated: features/<owner-a>.md, features/<owner-b>.md, features/<owner-c>.md
 - References updated: features/<ref-1>.md, features/<ref-2>.md, features/<ref-3>.md
 - Total features processed: <N>
-- Documentation-only: no real files or folders were created
+- Documentation-only: content appended to existing MD files
 
 ## EXISTING FEATURES FOLDER STRUCTURE:
 - features/README.md ✅ (feature documentation)
@@ -202,7 +212,7 @@ Legacy Paths:
 - Apex Arbitrage Multichain bot/dashboard/presets
 
 Output:
-✅ Loaded PROJECT TREE with 849 folders
+✅ Loaded PROJECT TREE with 849 folders + existing features content
 
 - "What does this FEATURE do?" → Validates file integrity and authenticity by storing MD5 and SHA256 checksums with integrity reports for tamper detection and verification
 - "Which MD file OWNS this FEATURE?" → security.md (checksum validation and file integrity are core security functions)
@@ -248,10 +258,11 @@ BATCH SUMMARY
 - Updated: features/security.md, features/dashboard.md
 - References updated: features/deployment.md, features/testing.md, features/docs.md, features/install-dependencies.md, features/config.md
 - Total features processed: 2
-- Documentation-only: no real files or folders were created
+- Documentation-only: content appended to existing MD files
 
 # HOW TO USE
 1. Start with access verification (Write/Read/Update-Proof)
-2. Single mode: paste one Legacy Path, receive 5-section output + auto-update features/ MD files
-3. Batch mode: paste 5–10 Legacy Paths, AI loads PROJECT TREE once, processes all paths from memory, updates features/ MD files
+2. Single mode: paste one Legacy Path, AI reads existing content, appends new feature
+3. Batch mode: paste 5–10 Legacy Paths, AI loads PROJECT TREE + existing content once, appends all features
 4. Never create real files/folders in this phase - documentation-first only
+5. All updates use APPEND-ONLY mode to preserve existing content
