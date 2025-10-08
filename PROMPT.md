@@ -39,7 +39,7 @@ Always follow Steps 1–6 in order:
 ### STEP 2: LOOKUP ACTUAL FILES
 
 - Search PROJECT TREE COMPLETE STRUCTURE.md for the exact [folder-path]
-- Collect real filenames and subfolders found there
+- Collect real filenames and sub-folders found there
 - Do not guess; use only what's listed
 
 ### STEP 3: ANALYZE FILES FOR WINDOWS FEATURES
