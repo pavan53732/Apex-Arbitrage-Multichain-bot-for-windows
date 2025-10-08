@@ -92,6 +92,12 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 
 ## MODE: BATCH PATH-TO-FEATURE MAPPER (5–10 PATHS)
 
+### STEP 0: INITIALIZATION (MANDATORY FIRST STEP)
+Before processing any paths:
+1. Read PROJECT TREE COMPLETE STRUCTURE .md file completely
+2. Load all folder paths and their files into memory
+3. Confirm data loaded: "✅ Loaded PROJECT TREE with [N] folders"
+
 ### INPUT FORMAT
 BATCH PATH-TO-FEATURE MAPPER
 Legacy Paths:
@@ -101,7 +107,14 @@ Legacy Paths:
 - Apex Arbitrage Multichain bot/[path-4]
 - Apex Arbitrage Multichain bot/[path-5]
 
+### PROCESSING WORKFLOW
+1. **Load Data**: Read PROJECT TREE COMPLETE STRUCTURE .md once
+2. **Process Each Path**: Apply Steps 1-5 from single mode
+3. **Batch Update**: Update all features/ MD files once at end
+4. **Output**: All analyses + BATCH SUMMARY
+
 ### OUTPUT RULES
+- Start with: "✅ Loaded PROJECT TREE with [N] folders"
 - For each path, output the same 5 sections (in order)
 - Separate features with a single line: ---
 - After all features, add:
@@ -189,6 +202,8 @@ Legacy Paths:
 - Apex Arbitrage Multichain bot/dashboard/presets
 
 Output:
+✅ Loaded PROJECT TREE with 849 folders
+
 - "What does this FEATURE do?" → Validates file integrity and authenticity by storing MD5 and SHA256 checksums with integrity reports for tamper detection and verification
 - "Which MD file OWNS this FEATURE?" → security.md (checksum validation and file integrity are core security functions)
 - "Which MD files REFERENCE this FEATURE?" → deployment.md (pre-deploy verification), testing.md (integrity tests), docs.md (verification guide), install-dependencies.md (post-install checks)
@@ -238,5 +253,5 @@ BATCH SUMMARY
 # HOW TO USE
 1. Start with access verification (Write/Read/Update-Proof)
 2. Single mode: paste one Legacy Path, receive 5-section output + auto-update features/ MD files
-3. Batch mode: paste 5–10 Legacy Paths, receive multiple 5-section outputs + batch summary + auto-update features/ MD files
+3. Batch mode: paste 5–10 Legacy Paths, AI loads PROJECT TREE once, processes all paths from memory, updates features/ MD files
 4. Never create real files/folders in this phase - documentation-first only
