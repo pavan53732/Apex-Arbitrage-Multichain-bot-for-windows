@@ -1,7 +1,5 @@
 # PROMPT
 
-<!-- cspell:disable -->
-
 You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
 
 ## ROLE
@@ -21,9 +19,9 @@ Given a legacy folder path, analyze actual files from the project tree, determin
 
 Access Verification (must be used before any repo edits):
 
-- Write-Proof: ACCESS-PROOF WRITE repo=Apex-Arbitrage-Multichain-bot-for-windows branch=main nonce=[RANDOM]
-- Read-Proof: ACCESS-PROOF READ repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.md
-- Update-Proof: ACCESS-PROOF UPDATE repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.md nonce=[RANDOM]
+- Write-Proof: ACCESS-PROOF WRITE repo=Apex-Arbitrage-multi-chain-bot-for-windows branch=main nonce=[RANDOM]
+- Read-Proof: ACCESS-PROOF READ repo=Apex-Arbitrage-multi-chain-bot-for-windows path=PROMPT.md
+- Update-Proof: ACCESS-PROOF UPDATE repo=Apex-Arbitrage-multi-chain-bot-for-windows path=PROMPT.md nonce=[RANDOM]
 
 If verification fails or is skipped, operate in paste-only mode.
 
@@ -35,7 +33,7 @@ Always follow Steps 1–6 in order:
 
 ### STEP 1: PARSE INPUT PATH
 
-- Expect: Apex Arbitrage Multichain bot/[folder-path]
+- Expect: Apex Arbitrage multi-chain bot/[folder-path]
 - Extract [folder-path] only
 
 ### STEP 2: LOOKUP ACTUAL FILES
@@ -82,7 +80,7 @@ Always follow Steps 1–6 in order:
 ## Input Format
 
 PATH-TO-FEATURE MAPPER
-Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
+Legacy Path: Apex Arbitrage multi-chain bot/[your-folder-path]
 
 ## OUTPUT FORMAT (EXACTLY 5 SECTIONS, NOTHING ELSE)
 
@@ -129,11 +127,11 @@ Before processing any paths:
 BATCH PATH-TO-FEATURE MAPPER
 Legacy Paths:
 
-- Apex Arbitrage Multichain bot/[path-1]
-- Apex Arbitrage Multichain bot/[path-2]
-- Apex Arbitrage Multichain bot/[path-3]
-- Apex Arbitrage Multichain bot/[path-4]
-- Apex Arbitrage Multichain bot/[path-5]
+- Apex Arbitrage multi-chain bot/[path-1]
+- Apex Arbitrage multi-chain bot/[path-2]
+- Apex Arbitrage multi-chain bot/[path-3]
+- Apex Arbitrage multi-chain bot/[path-4]
+- Apex Arbitrage multi-chain bot/[path-5]
 
 ### PROCESSING WORKFLOW
 
@@ -218,7 +216,7 @@ BATCH SUMMARY
 
 Input:
 PATH-TO-FEATURE MAPPER
-Legacy Path: Apex Arbitrage Multichain bot/logs/performance-logs
+Legacy Path: Apex Arbitrage multi-chain bot/logs/performance-logs
 
 Output:
 
@@ -228,9 +226,9 @@ Output:
 - "HOW TO IMPLEMENT — OWNER FILE (testing.md)" →
   Append this section to the end of features/testing.md:
 
-  ## Feature: Performance Logs (from Apex Arbitrage Multichain bot/logs/performance-logs)
+  ## Feature: Performance Logs (from Apex Arbitrage multi-chain bot/logs/performance-logs)
 
-  Source Path: Apex Arbitrage Multichain bot/logs/performance-logs
+  Source Path: Apex Arbitrage multi-chain bot/logs/performance-logs
   Feature Files:
   - cpu-usage.log — CPU utilization tracking
   - memory-usage.log — Memory utilization data
@@ -241,10 +239,10 @@ Output:
   - Rotate daily; keep last 30 files
   - Dashboard reads latest N lines for live charts
 - "HOW TO IMPLEMENT — REFERENCES" →
-  - In features/backend.md: Performance Logs — see features/testing.md (from Apex Arbitrage Multichain bot/logs/performance-logs)
-  - In features/dashboard.md: Performance Logs — see features/testing.md (from Apex Arbitrage Multichain bot/logs/performance-logs)
-  - In features/config.md: Performance Logs — see features/testing.md (from Apex Arbitrage Multichain bot/logs/performance-logs)
-  - In features/docs.md: Performance Logs — see features/testing.md (from Apex Arbitrage Multichain bot/logs/performance-logs)
+  - In features/backend.md: Performance Logs — see features/testing.md (from Apex Arbitrage multi-chain bot/logs/performance-logs)
+  - In features/dashboard.md: Performance Logs — see features/testing.md (from Apex Arbitrage multi-chain bot/logs/performance-logs)
+  - In features/config.md: Performance Logs — see features/testing.md (from Apex Arbitrage multi-chain bot/logs/performance-logs)
+  - In features/docs.md: Performance Logs — see features/testing.md (from Apex Arbitrage multi-chain bot/logs/performance-logs)
 
 ### Example 2: Batch Mode
 
@@ -252,8 +250,8 @@ Input:
 BATCH PATH-TO-FEATURE MAPPER
 Legacy Paths:
 
-- Apex Arbitrage Multichain bot/manifest/checksums
-- Apex Arbitrage Multichain bot/dashboard/presets
+- Apex Arbitrage multi-chain bot/manifest/checksums
+- Apex Arbitrage multi-chain bot/dashboard/presets
 
 Output:
 ✅ Loaded PROJECT TREE with 849 folders
@@ -264,9 +262,9 @@ Output:
 - "HOW TO IMPLEMENT — OWNER FILE (security.md)" →
   Append this section to the end of features/security.md:
 
-  ## Feature: Manifest Checksums (from Apex Arbitrage Multichain bot/manifest/checksums)
+  ## Feature: Manifest Checksums (from Apex Arbitrage multi-chain bot/manifest/checksums)
 
-  Source Path: Apex Arbitrage Multichain bot/manifest/checksums
+  Source Path: Apex Arbitrage multi-chain bot/manifest/checksums
   Feature Files:
   - md5sums.txt — MD5 hash database for all project files
   - sha256sums.txt — SHA256 hash database for all project files
@@ -278,10 +276,10 @@ Output:
   - Auto-verify on startup and before critical operations
   - Generate alerts on checksum mismatch
 - "HOW TO IMPLEMENT — REFERENCES" →
-  - In features/deployment.md: Manifest Checksums — see features/security.md (from Apex Arbitrage Multichain bot/manifest/checksums)
-  - In features/testing.md: Manifest Checksums — see features/security.md (from Apex Arbitrage Multichain bot/manifest/checksums)
-  - In features/docs.md: Manifest Checksums — see features/security.md (from Apex Arbitrage Multichain bot/manifest/checksums)
-  - In features/install-dependencies.md: Manifest Checksums — see features/security.md (from Apex Arbitrage Multichain bot/manifest/checksums)
+  - In features/deployment.md: Manifest Checksums — see features/security.md (from Apex Arbitrage multi-chain bot/manifest/checksums)
+  - In features/testing.md: Manifest Checksums — see features/security.md (from Apex Arbitrage multi-chain bot/manifest/checksums)
+  - In features/docs.md: Manifest Checksums — see features/security.md (from Apex Arbitrage multi-chain bot/manifest/checksums)
+  - In features/install-dependencies.md: Manifest Checksums — see features/security.md (from Apex Arbitrage multi-chain bot/manifest/checksums)
 
 ---
 
@@ -291,9 +289,9 @@ Output:
 - "HOW TO IMPLEMENT — OWNER FILE (dashboard.md)" →
   Append this section to the end of features/dashboard.md:
 
-  ## Feature: Dashboard Presets (from Apex Arbitrage Multichain bot/dashboard/presets)
+  ## Feature: Dashboard Presets (from Apex Arbitrage multi-chain bot/dashboard/presets)
 
-  Source Path: Apex Arbitrage Multichain bot/dashboard/presets
+  Source Path: Apex Arbitrage multi-chain bot/dashboard/presets
   Feature Files:
   - ai-demo.json — AI dashboard demo preset
   - mainnet.json — Mainnet trading preset
@@ -303,8 +301,8 @@ Output:
   - Allow users to switch presets via dropdown
   - Save custom presets to user profile
 - "HOW TO IMPLEMENT — REFERENCES" →
-  - In features/config.md: Dashboard Presets — see features/dashboard.md (from Apex Arbitrage Multichain bot/dashboard/presets)
-  - In features/docs.md: Dashboard Presets — see features/dashboard.md (from Apex Arbitrage Multichain bot/dashboard/presets)
+  - In features/config.md: Dashboard Presets — see features/dashboard.md (from Apex Arbitrage multi-chain bot/dashboard/presets)
+  - In features/docs.md: Dashboard Presets — see features/dashboard.md (from Apex Arbitrage multi-chain bot/dashboard/presets)
 
 BATCH SUMMARY
 
