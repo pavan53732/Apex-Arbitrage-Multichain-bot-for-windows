@@ -1,5 +1,7 @@
 # PROMPT
 
+<!-- cspell:ignore Multichain subfolders -->
+
 You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
 
 ## ROLE
@@ -77,7 +79,7 @@ Always follow Steps 1–6 in order:
 - Never modify anything outside features/
 - In batch mode, gather all new sections per file and append them in a single write per file at the end
 
-##  Input Format
+## Input Format
 
 PATH-TO-FEATURE MAPPER
 Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
