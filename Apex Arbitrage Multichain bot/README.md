@@ -1,3 +1,5 @@
+# README
+
 ## Subsystem Ultra-Granular Map & Generation Cues
 
 ## Dashboard Usage Map (Agent and Operator)
@@ -13,8 +15,8 @@ Test: Generate and run all unit/integration/fuzz/AI tests
 
 ## Agent Quick Links
 
-- Health checks: [HEALTHCHECK.md](HEALTHCHECK.md)
-- Project tree: [PROJECT TREE COMPLETE STUCTURE .md](PROJECT%20TREE%20COMPLETE%20STUCTURE%20.md)
+- Health checks: [health check.md](health check.md)
+- Project tree: [PROJECT TREE COMPLETE STRUCTURE .md](PROJECT%20TREE%20COMPLETE%20STRUCTURE%20.md)
 
 ---
 
@@ -24,7 +26,7 @@ All agents must:
 
 Output test and lint results to /logs/ after every generation run
 
-Auto-scan for missing, duplicate, or broken files/folders after codegen
+Auto-scan for missing, duplicate, or broken files/folders after code generation
 
 Suggest fixes and validate against all manifest/ files and project tree
 
@@ -32,7 +34,7 @@ If an error or incomplete state is detected, halt further generation and report 
 
 ---
 
-# Apex Arbitrage Multichain Bot
+## Apex Arbitrage Multi-Chain Bot
 
 This project is config-first and multi-chain; networks and protocol addresses are declared in config/chains.json and config/protocols.json, with optional RPC overrides via environment.
 
@@ -46,13 +48,13 @@ This project is config-first and multi-chain; networks and protocol addresses ar
 - API specs: [api_reference.md](api_reference.md), [docs/api/](docs/api/)
 - Operator guide: [operator-guide.md](operator-guide.md)
 - Dashboard docs: [dashboard/README.md](dashboard/README.md)
-- Health checks: [HEALTHCHECK.md](HEALTHCHECK.md)
+- Health checks: [health check.md](health check.md)
 
-> Note: Examples in this repository are illustrative; the actual set of enabled networks is always read from config/chains.json at runtime. No networks or protocol addresses should be hardcoded in code.
+> Note: Examples in this repository are illustartive; the actual set of enabled networks is always read from config/chains.json at runtime. No networks or protocol addresses should be hardcoded in code.
 
 ## Project Structure (synced)
 
-This section is synchronized from 'PROJECT TREE COMPLETE STUCTURE .md' and shows the canonical top-level files and first-level directories; for the full nested tree, open that file.
+This section is synchronized from 'PROJECT TREE COMPLETE STRUCTURE .md' and shows the canonical top-level files and first-level directories; for the full nested tree, open that file.
 
 <!-- BEGIN: SYNCED_PROJECT_TREE -->
 ```text
@@ -79,7 +81,7 @@ This section is synchronized from 'PROJECT TREE COMPLETE STUCTURE .md' and shows
 - Dashboard.md
 - docker-compose.yml
 - forensics.sqlite
-- HEALTHCHECK.md
+- health check.md
 - LEGAL.md
 - LICENSE
 - logs.sqlite
@@ -90,7 +92,7 @@ This section is synchronized from 'PROJECT TREE COMPLETE STUCTURE .md' and shows
 - operator-guide.md
 - package.json
 - PROJECT FILES AND FOLDERS DETAILS .MD
-- PROJECT TREE COMPLETE STUCTURE .md
+- PROJECT TREE COMPLETE STRUCTURE .md
 - README.md
 - requirements.txt
 - roadmap.md
@@ -132,7 +134,7 @@ This section is synchronized from 'PROJECT TREE COMPLETE STUCTURE .md' and shows
 ```
 <!-- END: SYNCED_PROJECT_TREE -->
 
-For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPLETE STUCTURE .md'.
+For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPLETE STRUCTURE .md'.
 
 ## Project Structure Overview
 
@@ -144,10 +146,10 @@ For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPL
 | `.vscode/`         | Workspace/editor settings, recommended extensions, launch configs              |
 | `ai-modules/`      | All AI/ML logic: scoring, pattern learning, council, data, notebooks, weights |
 | `archive/`         | Deprecated modules, legacy configs, migration logs, previous releases          |
-| `backend/`         | Bot/engine core, strategy logic, plugins, contract adapters, state, utils      |
+| `backend/`         | Bot/engine core, startegy logic, plugins, contract adapters, state, utils      |
 | `benchmarks/`      | Stress and perf tests: CPU, gas, mempool, datasets, results                   |
 | `ci/`              | External CI/CD integrations: Jenkins, GitLab, Buildkite scripts               |
-| `config/`          | All configs: tokens, chains, DEXes, strategies, analytics, compliance         |
+| `config/`          | All configs: tokens, chains, DEXes, startegies, analytics, compliance         |
 | `data/`            | Datasets, logs, backup, audit, ML data, operator state, simulation results    |
 | `dashboard/`       | Next.js/React UI: pages, widgets, analytics, overlays, public assets          |
 | `deploy/`          | Infra-as-code: k8s, Terraform, Ansible, Helm, cloud configs                   |
@@ -157,15 +159,15 @@ For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPL
 | `manifest/`        | Project manifest: inventory files (.json/.csv/.md/tree.txt)                   |
 | `migrations/`      | DB/schema/contract migration scripts and logs                                 |
 | `overlays/`        | UI overlays: AR, XAI, debug, incident response                                |
-| `presets/`         | User/strategy presets, templates, demo configs                                |
+| `presets/`         | User/startegy presets, templates, demo configs                                |
 | `public/`          | Static assets for dashboard (logos, SVG, themes)                              |
 | `research/`        | Experiments, notebooks, alpha, quantum/ML prototypes                          |
-| `scripts/`         | Automation: setup, quickstart, update, manifest/batch/py/pwsh scripts         |
-| `storage/`         | Key vault, secret backups (encrypted), agent snapshots, strat archives        |
+| `scripts/`         | Automation: setup, quickstart, update, manifest/batch/py/PowerShell scripts         |
+| `storage/`         | Key vault, secret backups (encrypted), agent snapshots, start archives        |
 | `tests/`           | Unit, integration, E2E, regression, fuzz, AI/contract tests                   |
 | `third-party/`     | External SDKs, connectors, vendor plugins, adapters, oracles                  |
 | `types/`           | Shared types: TS/JS/Python/ABI/JSON-Schema, contract ABIs                     |
-| `utils/`           | Shared utilities, reusables, ops, simulation helpers                          |
+| `utils/`           | Shared utilities, reusable components, ops, simulation helpers                          |
 | `vendor/`          | Vendored source/libs, frozen dependencies, binaries, patches                  |
 | `wall-of-fame/`    | Contributor records, badges, recognitions, testimonials                       |
 | `watchdog/`        | Event listeners, kill switches, failover, circuit breakers, auto-restart      |
@@ -181,7 +183,7 @@ For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPL
 - **Infer intended file type, dependencies, and function**
 - **Wire with other folders strictly via public APIs/interfaces**
 - **Never cross-modify outside the assigned context without agent review**
-- **Prioritize runtime pluggability, atomic execution, and hot-swap compatibility**
+- **Prioritize runtime plugability, atomic execution, and hot-swap compatibility**
 
 ### Example integration flows
 
@@ -197,7 +199,7 @@ For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPL
 
 - **Always start from root README.md, then recursively walk every folder**
 - **For every file and folder:**
-  - **If README.md, parse and follow its requirements before codegen**
+  - **If README.md, parse and follow its requirements before code generation**
   - **If code file, generate robust, real, production-level logic**
   - **If config, validate schema, defaults, and usage in code**
   - **If test, cover all edge cases and integration flows**
@@ -313,7 +315,7 @@ Dashboard Usage Map (Agent and Operator)
 
 All bot controls, logs, and plugins are accessible via the main dashboard at <http://localhost:3000>
 
-Plugins, chains, strategies, and AI modes can be hot-swapped live via the UI
+Plugins, chains, startegies, and AI modes can be hot-swapped live via the UI
 
 All runtime data (trades, profits, errors, alerts, test runs) stream in real-time and are exportable from dashboard
 
@@ -328,7 +330,7 @@ Q: How do I run a single unified bot+UI session?
 A:
 Use scripts/quickstart/start-dev.sh (Windows via Git Bash/WSL: `bash scripts/quickstart/start-dev.sh`; macOS/Linux: `./scripts/quickstart/start-dev.sh`), or see operator-guide.md for manual backend + dashboard commands.
 
-Q: How do I extend to new chains, DEXs, or flashloan pools?
+Q: How do I extend to new chains, DEXs, or flash loan pools?
 
 A:
 
@@ -376,7 +378,7 @@ All agents must:
 
 Output test and lint results to /logs/ after every generation run
 
-Auto-scan for missing, duplicate, or broken files/folders after codegen
+Auto-scan for missing, duplicate, or broken files/folders after code generation
 
 Suggest fixes and validate against all manifest/ files and project tree
 
@@ -422,4 +424,4 @@ License: MIT
 
 ---
 
-> Let the Apex Arbitrage Multichain Bot run. Fully autonomous, always evolving.
+> Let the Apex Arbitrage multi-chain Bot run. Fully autonomous, always evolving.
