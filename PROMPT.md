@@ -75,7 +75,6 @@ Always follow Steps 1–6 in order:
 - Only create or update files under features/
 - Append-only: never overwrite, replace, or delete existing content
 - Never modify anything outside features/
-- In batch mode, gather all new sections per file and append them in a single write per file at the end
 
 ## Input Format
 
@@ -111,48 +110,6 @@ Legacy Path: Apex Arbitrage multi-chain bot/[your-folder-path]
 - Do not include directory prefixes in file lists (filenames only)
 - Do not create real (non-MD) files or folders
 - Do not modify or delete any existing content in features/*.md (append-only)
-
-## MODE: BATCH PATH-TO-FEATURE MAPPER (5–10 PATHS)
-
-### STEP 0: INITIALIZATION (MANDATORY FIRST STEP)
-
-Before processing any paths:
-
-1. Read PROJECT TREE COMPLETE STRUCTURE.md completely
-2. Load all folder paths and their files into memory
-3. Confirm data loaded: "✅ Loaded PROJECT TREE with [N] folders"
-
-### INPUT FORMAT
-
-BATCH PATH-TO-FEATURE MAPPER
-Legacy Paths:
-
-- Apex Arbitrage multi-chain bot/[path-1]
-- Apex Arbitrage multi-chain bot/[path-2]
-- Apex Arbitrage multi-chain bot/[path-3]
-- Apex Arbitrage multi-chain bot/[path-4]
-- Apex Arbitrage multi-chain bot/[path-5]
-
-### PROCESSING WORKFLOW
-
-1. **Load Data**: Read PROJECT TREE COMPLETE STRUCTURE.md once
-2. **Process Each Path**: Apply Steps 1-5 from single mode
-3. **Batch Append**: Append to all features/*.md at the end (one write per file)
-4. **Output**: All analyses + BATCH SUMMARY
-
-### OUTPUT RULES
-
-- Start with: "✅ Loaded PROJECT TREE with [N] folders"
-- For each path, output the same 5 sections (in order)
-- Separate features with a single line: ---
-- After all features, add:
-
-BATCH SUMMARY
-
-- Updated: features/[owner-a].md, features/[owner-b].md, features/[owner-c].md
-- References updated: features/[ref-1].md, features/[ref-2].md, features/[ref-3].md
-- Total features processed: [N]
-- Documentation-only: no real files or folders were created
 
 ## EXISTING FEATURES FOLDER STRUCTURE
 
@@ -244,77 +201,9 @@ Output:
   - In features/config.md: Performance Logs — see features/testing.md (from Apex Arbitrage multi-chain bot/logs/performance-logs)
   - In features/docs.md: Performance Logs — see features/testing.md (from Apex Arbitrage multi-chain bot/logs/performance-logs)
 
-### Example 2: Batch Mode
-
-Input:
-BATCH PATH-TO-FEATURE MAPPER
-Legacy Paths:
-
-- Apex Arbitrage multi-chain bot/manifest/checksums
-- Apex Arbitrage multi-chain bot/dashboard/presets
-
-Output:
-✅ Loaded PROJECT TREE with 849 folders
-
-- "What does this FEATURE do?" → Validates file integrity and authenticity by storing MD5 and SHA256 checksums with integrity reports for tamper detection and verification
-- "Which MD file OWNS this FEATURE?" → security.md (checksum validation and file integrity are core security functions)
-- "Which MD files REFERENCE this FEATURE?" → deployment.md (pre-deploy verification), testing.md (integrity tests), docs.md (verification guide), install-dependencies.md (post-install checks)
-- "HOW TO IMPLEMENT — OWNER FILE (security.md)" →
-  Append this section to the end of features/security.md:
-
-  ## Feature: Manifest Checksums (from Apex Arbitrage multi-chain bot/manifest/checksums)
-
-  Source Path: Apex Arbitrage multi-chain bot/manifest/checksums
-  Feature Files:
-  - md5sums.txt — MD5 hash database for all project files
-  - sha256sums.txt — SHA256 hash database for all project files
-  - integrity-report.md — Integrity verification report and audit log
-  - README.md — Checksum verification documentation
-  Windows Implementation (brief):
-  - Node script reads hash files and verifies against actual files
-  - Dashboard displays integrity status with pass/fail indicators
-  - Auto-verify on startup and before critical operations
-  - Generate alerts on checksum mismatch
-- "HOW TO IMPLEMENT — REFERENCES" →
-  - In features/deployment.md: Manifest Checksums — see features/security.md (from Apex Arbitrage multi-chain bot/manifest/checksums)
-  - In features/testing.md: Manifest Checksums — see features/security.md (from Apex Arbitrage multi-chain bot/manifest/checksums)
-  - In features/docs.md: Manifest Checksums — see features/security.md (from Apex Arbitrage multi-chain bot/manifest/checksums)
-  - In features/install-dependencies.md: Manifest Checksums — see features/security.md (from Apex Arbitrage multi-chain bot/manifest/checksums)
-
----
-
-- "What does this FEATURE do?" → Stores UI configuration presets for dashboard layouts, themes, and operator modes
-- "Which MD file OWNS this FEATURE?" → dashboard.md (UI presets are dashboard configuration)
-- "Which MD files REFERENCE this FEATURE?" → config.md (preset storage), docs.md (preset guide)
-- "HOW TO IMPLEMENT — OWNER FILE (dashboard.md)" →
-  Append this section to the end of features/dashboard.md:
-
-  ## Feature: Dashboard Presets (from Apex Arbitrage multi-chain bot/dashboard/presets)
-
-  Source Path: Apex Arbitrage multi-chain bot/dashboard/presets
-  Feature Files:
-  - ai-demo.json — AI dashboard demo preset
-  - mainnet.json — Mainnet trading preset
-  - testnet.json — Testnet configuration preset
-  Windows Implementation (brief):
-  - Load presets from JSON files on dashboard startup
-  - Allow users to switch presets via dropdown
-  - Save custom presets to user profile
-- "HOW TO IMPLEMENT — REFERENCES" →
-  - In features/config.md: Dashboard Presets — see features/dashboard.md (from Apex Arbitrage multi-chain bot/dashboard/presets)
-  - In features/docs.md: Dashboard Presets — see features/dashboard.md (from Apex Arbitrage multi-chain bot/dashboard/presets)
-
-BATCH SUMMARY
-
-- Updated: features/security.md, features/dashboard.md
-- References updated: features/deployment.md, features/testing.md, features/docs.md, features/install-dependencies.md, features/config.md
-- Total features processed: 2
-- Documentation-only: no real files or folders were created
-
 ## HOW TO USE
 
 1. Start with access verification (Write/Read/Update-Proof)
-2. Single mode: paste one Legacy Path, receive 5-section output, append new ## Feature section to features/ MD files
-3. Batch mode: paste 5–10 Legacy Paths, AI loads PROJECT TREE once, appends all ## Feature sections to features/ MD files
-4. Never create real files/folders in this phase - documentation-first only
-5. All updates use APPEND-ONLY mode to preserve existing feature collections
+2. Paste one Legacy Path, receive 5-section output, append new ## Feature section to features/ MD files
+3. Never create real files/folders in this phase - documentation-first only
+4. All updates use APPEND-ONLY mode to preserve existing feature collections
