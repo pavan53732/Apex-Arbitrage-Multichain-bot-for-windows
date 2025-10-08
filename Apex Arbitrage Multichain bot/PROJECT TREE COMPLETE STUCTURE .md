@@ -1,8 +1,8 @@
 # Project Complete Tree
 
-Generated: 
+Generated:
 2025-10-04 06:32:06 +05:30
-Source Root: Apex Arbitrage Multichain bot/
+Source Root: Apex Arbitrage Multi chain bot/
 File Count: 6165
 Directory Count: 849
 
@@ -49,7 +49,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   SECURITY.md
 |   tsconfig.json
 |   wall-of-fame.md
-|   
+|
 +---.devcontainer
 |       devcontainer.json
 |       Dockerfile
@@ -59,7 +59,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       README.md
 |       requirements.txt
 |       settings.json
-|       
+|
 +---.github
 |   |   CODEOWNERS
 |   |   dependabot.yml
@@ -67,17 +67,17 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   README.md
 |   |   SECURITY.md
 |   |   support.md
-|   |   
+|   |
 |   +---ISSUE_TEMPLATE
 |   |       bug_report.md
 |   |       feature_request.md
 |   |       general_question.md
 |   |       README.md
-|   |       
+|   |
 |   +---PULL_REQUEST_TEMPLATE
 |   |       pull_request.md
 |   |       README.md
-|   |       
+|   |
 |   \---workflows
 |           check-project-tree.yml
 |           ci.yml
@@ -87,7 +87,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           README.md
 |           sync-fork.yml
 |           test.yml
-|           
+|
 +---.husky
 |       commit-msg
 |       commitlint.config.js
@@ -95,14 +95,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       pre-commit
 |       pre-push
 |       README.md
-|       
+|
 +---.vscode
 |       extensions.json
 |       launch.json
 |       README.md
 |       settings.json
 |       tasks.json
-|       
+|
 +---ai-modules
 |   |   ai-engine.js
 |   |   aiConfig.json
@@ -113,64 +113,64 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   scoreArbOpportunity.js
 |   |   tokenReputationIndex.py
 |   |   tradeOutcomeLogger.js
-|   |   
+|   |
 |   +---datasets
 |   |       ai-decision-corpus.json
 |   |       features.csv
 |   |       profitLabels.json
 |   |       README.md
 |   |       trade-history.csv
-|   |       
+|   |
 |   +---features
 |   |       featureExtractor.js
 |   |       gasFeeSpikeFeature.js
 |   |       latencyProfileFeature.js
 |   |       priceDeltaFeature.js
 |   |       README.md
-|   |       
+|   |
 |   +---integration
 |   |       aiBridgeAdapter.js
 |   |       aiHooks.js
 |   |       aiLogFormatter.js
 |   |       aiWebhookReceiver.js
 |   |       README.md
-|   |       
+|   |
 |   +---models
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---modelWeights
 |   |   |       decisionNet-v1.pt
 |   |   |       patternNet-v2.onnx
 |   |   |       README.md
 |   |   |       scorerModel.json
 |   |   |       volatilityClassifier.pkl
-|   |   |       
+|   |   |
 |   |   \---trainingOutputs
 |   |           accuracy-report.txt
 |   |           README.md
 |   |           token-risk-score-histogram.png
 |   |           trade-learning-curve.png
-|   |           
+|   |
 |   +---notebooks
 |   |       latency-vs-profit.ipynb
 |   |       model-training-logistics.ipynb
 |   |       README.md
 |   |       risk-surface-analysis.ipynb
 |   |       trade-pattern-exploration.ipynb
-|   |       
+|   |
 |   +---simulation
 |   |       aiReplayValidator.js
 |   |       analyzeAIErrorCases.js
 |   |       README.md
 |   |       simulateAITrade.js
-|   |       
+|   |
 |   +---tests
 |   |       README.md
 |   |       testFeatureExtractor.test.js
 |   |       testModelRouter.test.js
 |   |       testPatternLearner.test.js
 |   |       testScoreArbOpportunity.test.js
-|   |       
+|   |
 |   \---train
 |           config.yaml
 |           evaluate.py
@@ -178,74 +178,74 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           README.md
 |           train.py
 |           trainFineTune.py
-|           
+|
 +---archive
 |   |   README.md
 |   |   README_ARCHIVE_GUIDE.md
-|   |   
+|   |
 |   +---archived-tests
 |   |   |   aiScoring-legacy.test.js
 |   |   |   README.md
 |   |   |   testLegacyFlashloan.js
 |   |   |   tradeSamples-v1.json
-|   |   |   
+|   |   |
 |   |   \---archived-output-logs
 |   |           ai-trace-legacy.log
 |   |           README.md
 |   |           trade-diffs-old.json
 |   |           tx-failure-snapshots.log
-|   |           
+|   |
 |   +---deprecated-modules
 |   |   |   flashloan-logic-legacy.sol
 |   |   |   legacy-arbEngine-v1.js
 |   |   |   old-ai-model.py
 |   |   |   README.md
 |   |   |   route-cache-old.js
-|   |   |   
+|   |   |
 |   |   \---ui-backup-2023-12
 |   |           app.js
 |   |           index.html
 |   |           main.css
 |   |           README.md
-|   |           
+|   |
 |   +---docs
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---api-diffs
 |   |   |       contracts-diff-v1-v2.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---compliance-logs
 |   |   |       audit-2023Q2.md
 |   |   |       audit-2024-GDPR-report.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---deprecation-notices
 |   |   |       deprecated-flashloan-2023.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---incident-reports
 |   |   |       incident-2023-07-22.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---migration-notes
 |   |   |       migration-v2.0.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---old-adrs
 |   |   |       adr-001-example.md
 |   |   |       adr-002-example.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---onboarding
 |   |   |       onboarding-v1.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---playbooks
 |   |           failover-v1.sh
 |   |           README.md
 |   |           runbook-legacy.md
-|   |           
+|   |
 |   +---migration-logs
 |   |       db-schema-v1.sql
 |   |       migration-2024-12-20.log
@@ -254,10 +254,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       migration-failures.log
 |   |       migration-summary.csv
 |   |       README.md
-|   |       
+|   |
 |   +---migrations-logs
 |   |       README.md
-|   |       
+|   |
 |   +---old-configs
 |   |       chains-v1.json
 |   |       dexes-legacy.json
@@ -266,7 +266,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       risk-profiles-archive.json
 |   |       strategy-params-legacy.yaml
 |   |       tokens-old.json
-|   |       
+|   |
 |   \---previous-releases
 |           README.md
 |           release-notes-v1.md
@@ -274,7 +274,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           release-v1.1-beta.zip
 |           release-v1.2-integrity.sha256
 |           release-v1.2.zip
-|           
+|
 +---backend
 |   |   .eslintrc
 |   |   .flake8
@@ -297,10 +297,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   requirements.txt
 |   |   SECURITY.md
 |   |   tsconfig.json
-|   |   
+|   |
 |   +---backup
 |   |       README.md
-|   |       
+|   |
 |   +---contracts
 |   |   |   AlphaNFT.sol
 |   |   |   ArbitrageExecutor.sol
@@ -317,7 +317,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   ReputationOracle.sol
 |   |   |   SocialImpactDistributor.sol
 |   |   |   UpgradableProxy.sol
-|   |   |   
+|   |   |
 |   |   +---docs
 |   |   |       ai-agent-integration.md
 |   |   |       audits.md
@@ -335,7 +335,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       test-playbooks.md
 |   |   |       upgradeability.md
-|   |   |       
+|   |   |
 |   |   +---interfaces
 |   |   |       IAIAgentInterface.sol
 |   |   |       IAIOracle.sol
@@ -360,7 +360,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       IUpgradeBeacon.sol
 |   |   |       IZKVerifier.sol
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---scripts
 |   |   |       alpha-nft-mint.js
 |   |   |       deploy.js
@@ -372,10 +372,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       snapshot.js
 |   |   |       upgrade.js
 |   |   |       verify.js
-|   |   |       
+|   |   |
 |   |   \---src
 |   |       |   README.md
-|   |       |   
+|   |       |
 |   |       +---executors
 |   |       |       alpha-signal-executor.sol
 |   |       |       arb-executor.sol
@@ -387,7 +387,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       |       plugin-executor.sol
 |   |       |       README.md
 |   |       |       sandbox-executor.sol
-|   |       |       
+|   |       |
 |   |       +---governance
 |   |       |       dispute-manager.sol
 |   |       |       fork-voting.sol
@@ -396,7 +396,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       |       README.md
 |   |       |       timelock.sol
 |   |       |       voting.sol
-|   |       |       
+|   |       |
 |   |       +---interfaces
 |   |       |       IAIAgentInterface.sol
 |   |       |       IAlphaFeed.sol
@@ -407,7 +407,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       |       IRewardVault.sol
 |   |       |       IUpgradeBeacon.sol
 |   |       |       README.md
-|   |       |       
+|   |       |
 |   |       +---onchain-governance
 |   |       |       council.sol
 |   |       |       dao.sol
@@ -415,7 +415,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       |       proposal-factory.sol
 |   |       |       README.md
 |   |       |       upgrade-voting.sol
-|   |       |       
+|   |       |
 |   |       +---proofs
 |   |       |       ai-audit.sol
 |   |       |       audit-proof.sol
@@ -425,7 +425,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       |       replay-attack-guard.sol
 |   |       |       zk-proof.sol
 |   |       |       zk-snark-utils.sol
-|   |       |       
+|   |       |
 |   |       +---registries
 |   |       |       address-registry.sol
 |   |       |       asset-registry.sol
@@ -434,7 +434,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       |       operator-registry.sol
 |   |       |       plugin-registry.sol
 |   |       |       README.md
-|   |       |       
+|   |       |
 |   |       \---test
 |   |               alpha-nft.test.js
 |   |               batch-executor.test.js
@@ -449,7 +449,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |               reputation-oracle.test.js
 |   |               upgradable-proxy.test.js
 |   |               zk-proof.test.js
-|   |               
+|   |
 |   +---core
 |   |   |   agent-orchestrator.js
 |   |   |   ai-controller.js
@@ -474,19 +474,19 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   README.md
 |   |   |   shadow-bot-manager.js
 |   |   |   simulate-trade.js
-|   |   |   
+|   |   |
 |   |   +---data
 |   |   |   |   active-pools.json
 |   |   |   |   README.md
 |   |   |   |   route-cache.json
 |   |   |   |   state-history.log
-|   |   |   |   
+|   |   |   |
 |   |   |   \---simulation-snapshots
 |   |   |           README.md
 |   |   |           snapshot-20250701.json
 |   |   |           snapshot-20250715.json
 |   |   |           snapshot-20250730.json
-|   |   |           
+|   |   |
 |   |   +---docs
 |   |   |       architecture.md
 |   |   |       core-flowcharts.md
@@ -494,14 +494,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       quickstart.md
 |   |   |       README.md
 |   |   |       troubleshooting.md
-|   |   |       
+|   |   |
 |   |   +---hooks
 |   |   |       README.md
 |   |   |       use-alerts-hook.js
 |   |   |       use-bundle-status.js
 |   |   |       use-rollback-hook.js
 |   |   |       use-simulation-hook.js
-|   |   |       
+|   |   |
 |   |   +---tests
 |   |   |   |   bundle-composer.test.js
 |   |   |   |   core-unit.test.js
@@ -509,14 +509,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   failover-engine.test.js
 |   |   |   |   incident-response-core.test.js
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   \---hooks
 |   |   |           README.md
 |   |   |           use-alerts-hook.test.js
 |   |   |           use-bundle-status.test.js
 |   |   |           use-rollback-hook.test.js
 |   |   |           use-simulation-hook.test.js
-|   |   |           
+|   |   |
 |   |   \---utils
 |   |           api-rate-limiter.js
 |   |           context-propagator.js
@@ -526,10 +526,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           nonce-manager.js
 |   |           README.md
 |   |           stateful-cache.js
-|   |           
+|   |
 |   +---coverage
 |   |       README.md
-|   |       
+|   |
 |   +---data
 |   |   |   active-pools.json
 |   |   |   agent-scores.json
@@ -549,14 +549,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   state-history.log
 |   |   |   token-metadata.json
 |   |   |   trade-history.json
-|   |   |   
+|   |   |
 |   |   +---ai-feedback
 |   |   |       feedback-20250701.json
 |   |   |       feedback-20250715.json
 |   |   |       feedback-20250730.json
 |   |   |       model-update-requests.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---analytics
 |   |   |       ai-inference-20250701.json
 |   |   |       ai-inference-20250715.json
@@ -569,7 +569,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       trade-alpha-scores-20250701.json
 |   |   |       trade-alpha-scores-20250715.json
 |   |   |       trade-alpha-scores-20250730.json
-|   |   |       
+|   |   |
 |   |   +---audit-trails
 |   |   |       audit-20250701.log
 |   |   |       audit-20250715.log
@@ -578,7 +578,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       event-archive-20250715.json
 |   |   |       event-archive-20250730.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---compliance-archive
 |   |   |       kyc-report-20250701.pdf
 |   |   |       kyc-report-20250715.pdf
@@ -587,7 +587,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       sanctions-check-20250701.json
 |   |   |       sanctions-check-20250715.json
 |   |   |       sanctions-check-20250730.json
-|   |   |       
+|   |   |
 |   |   +---export
 |   |   |       ai-inference-export-20250701.json
 |   |   |       dashboard-report-20250730.pdf
@@ -595,7 +595,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       export-20250715.csv
 |   |   |       export-20250730.csv
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---forensics
 |   |   |       exploit-dump-20250701.json
 |   |   |       exploit-dump-20250715.json
@@ -603,7 +603,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       root-cause-analysis.md
 |   |   |       trade-anomaly-20250730.json
-|   |   |       
+|   |   |
 |   |   +---logs
 |   |   |       ai-agent-20250701.log
 |   |   |       ai-agent-20250715.log
@@ -622,7 +622,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       watchdog-20250701.log
 |   |   |       watchdog-20250715.log
 |   |   |       watchdog-20250730.log
-|   |   |       
+|   |   |
 |   |   +---operator-audit
 |   |   |       ai-review-20250715.json
 |   |   |       nlp-feedback-20250730.json
@@ -630,7 +630,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       operator-actions-20250715.json
 |   |   |       operator-actions-20250730.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---simulation-snapshots
 |   |   |       post-fork-sim-20250715.json
 |   |   |       pre-fork-sim-20250715.json
@@ -639,7 +639,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       snapshot-20250701.json
 |   |   |       snapshot-20250715.json
 |   |   |       snapshot-20250730.json
-|   |   |       
+|   |   |
 |   |   +---snapshots
 |   |   |       agents-20250701.json
 |   |   |       agents-20250715.json
@@ -652,7 +652,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       sim-20250701.json
 |   |   |       sim-20250715.json
 |   |   |       sim-20250730.json
-|   |   |       
+|   |   |
 |   |   \---synthetic-datasets
 |   |           deep-arb-ai-trainset.csv
 |   |           fake-arb-scenarios.json
@@ -661,7 +661,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           synthetic-prices-20250701.csv
 |   |           synthetic-prices-20250715.csv
 |   |           synthetic-profits-20250730.csv
-|   |           
+|   |
 |   +---docs
 |   |   |   ai-integration.md
 |   |   |   architecture.md
@@ -697,7 +697,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   simulation-workflow.md
 |   |   |   test-strategy.md
 |   |   |   upgradeability.md
-|   |   |   
+|   |   |
 |   |   +---ai
 |   |   |       ai-engine.md
 |   |   |       ai-ml-pipeline.md
@@ -706,7 +706,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ai-testing-guide.md
 |   |   |       ai-upgradeability.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---api
 |   |   |       ai-engine-api.yaml
 |   |   |       backend-api.yaml
@@ -715,7 +715,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       plugin-api.yaml
 |   |   |       README.md
 |   |   |       simulation-api.yaml
-|   |   |       
+|   |   |
 |   |   +---compliance
 |   |   |       aml-logs.md
 |   |   |       compliance-audit.md
@@ -723,7 +723,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       kyc-flow.md
 |   |   |       README.md
 |   |   |       sanctions-workflow.md
-|   |   |       
+|   |   |
 |   |   +---dashboard
 |   |   |       ai-dashboard.md
 |   |   |       dashboard-api.md
@@ -733,7 +733,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       overlays-integration.md
 |   |   |       plugin-status-panel.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---diagrams
 |   |   |       ai-integration.drawio
 |   |   |       backend-architecture.drawio
@@ -747,7 +747,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       risk-flow.drawio
 |   |   |       simulation-workflow.drawio
-|   |   |       
+|   |   |
 |   |   +---formal
 |   |   |       ai-formal-verification.md
 |   |   |       contract-formal-verification.md
@@ -755,14 +755,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       invariants.md
 |   |   |       model-specs.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---legacy
 |   |   |       deprecated-architecture.md
 |   |   |       legacy-api.md
 |   |   |       legacy-upgrade-guide.md
 |   |   |       old-release-notes.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---migration
 |   |   |       ai-migration.md
 |   |   |       backend-migration.md
@@ -770,7 +770,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       db-migration.md
 |   |   |       plugin-migration.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---onboarding
 |   |   |       ai-module-onboarding.md
 |   |   |       auditor-onboarding.md
@@ -779,7 +779,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       operator-onboarding.md
 |   |   |       plugin-onboarding.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---playbooks
 |   |   |       disaster-recovery.md
 |   |   |       incident-playbook.md
@@ -787,7 +787,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       rollback-playbook.md
 |   |   |       upgrade-playbook.md
-|   |   |       
+|   |   |
 |   |   \---risk
 |   |           ai-risk.md
 |   |           bridge-risk.md
@@ -799,7 +799,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           README.md
 |   |           risk-dashboard.md
 |   |           trade-risk.md
-|   |           
+|   |
 |   +---engine
 |   |   |   adaptive-fee-controller.js
 |   |   |   alpha-marketplace-engine.js
@@ -828,34 +828,34 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   trade-batch-manager.js
 |   |   |   trade-throttler.js
 |   |   |   volatility-guard.js
-|   |   |   
+|   |   |
 |   |   +---data
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   +---analytics
 |   |   |   |       engine-analytics-20250701.json
 |   |   |   |       engine-analytics-20250715.json
 |   |   |   |       engine-analytics-20250730.json
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   +---batch-logs
 |   |   |   |       batch-20250701.log
 |   |   |   |       batch-20250715.log
 |   |   |   |       batch-20250730.log
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   +---sim-results
 |   |   |   |       README.md
 |   |   |   |       sim-20250701.json
 |   |   |   |       sim-20250715.json
 |   |   |   |       sim-20250730.json
-|   |   |   |       
+|   |   |   |
 |   |   |   \---snapshots
 |   |   |           README.md
 |   |   |           state-20250701.json
 |   |   |           state-20250715.json
 |   |   |           state-20250730.json
-|   |   |           
+|   |   |
 |   |   +---docs
 |   |   |       benchmarking.md
 |   |   |       change-log.md
@@ -865,20 +865,20 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       performance-tuning.md
 |   |   |       README.md
 |   |   |       workflows.md
-|   |   |       
+|   |   |
 |   |   +---hooks
 |   |   |       README.md
 |   |   |       use-alerts-hook.js
 |   |   |       use-execution-hook.js
 |   |   |       use-mev-detection-hook.js
 |   |   |       use-rollback-hook.js
-|   |   |       
+|   |   |
 |   |   +---jobs
 |   |   |       auto-report-uploader.js
 |   |   |       README.md
 |   |   |       result-cleaner.js
 |   |   |       scheduled-job-runner.js
-|   |   |       
+|   |   |
 |   |   +---modules
 |   |   |       arbitrage-scanner.js
 |   |   |       execution-timer.js
@@ -889,7 +889,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       risk-histogram.js
 |   |   |       slippage-simulator.js
 |   |   |       strategy-verifier.js
-|   |   |       
+|   |   |
 |   |   +---tests
 |   |   |   |   bundle-simulator.test.js
 |   |   |   |   engine-integration.test.js
@@ -897,7 +897,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   liquidity-shard-manager.test.js
 |   |   |   |   profit-curve-estimator.test.js
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   \---modules
 |   |   |           arbitrage-scanner.test.js
 |   |   |           execution-timer.test.js
@@ -905,7 +905,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           README.md
 |   |   |           slippage-simulator.test.js
 |   |   |           strategy-verifier.test.js
-|   |   |           
+|   |   |
 |   |   \---utils
 |   |           api-rate-limiter.js
 |   |           bundle-utils.js
@@ -916,7 +916,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           queue-utils.js
 |   |           README.md
 |   |           stateful-cache.js
-|   |           
+|   |
 |   +---examples
 |   |   |   ai-sim-report.md
 |   |   |   cli-usage.txt
@@ -931,7 +931,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   README.md
 |   |   |   sim-arb-day.json
 |   |   |   strategy-walkthrough.md
-|   |   |   
+|   |   |
 |   |   +---ai-tuning
 |   |   |       ai-ablation-study-20250701.md
 |   |   |       ai-config-tuning-20250701.json
@@ -939,7 +939,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ai-loss-curve-20250701.png
 |   |   |       model-selection-demo-20250701.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---configs
 |   |   |       ai-module.example.json
 |   |   |       chains.example.json
@@ -948,7 +948,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       routers.example.json
 |   |   |       sample-mode-presets.json
 |   |   |       tokens.example.json
-|   |   |       
+|   |   |
 |   |   +---dashboard-screenshots
 |   |   |       ai-arb-explorer.png
 |   |   |       dashboard-main.png
@@ -962,7 +962,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       risk-dashboard.png
 |   |   |       watchdog-alerts.png
-|   |   |       
+|   |   |
 |   |   +---legacy
 |   |   |       deprecated-sim-output.json
 |   |   |       legacy-arb-demo.json
@@ -970,7 +970,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       legacy-dashboard.png
 |   |   |       old-cli-usage.txt
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---mainnet-tx-samples
 |   |   |       batch-tx-mainnet-20250701.json
 |   |   |       batch-tx-mainnet-20250730.json
@@ -980,7 +980,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       tx-fork-diverge-5.json
 |   |   |       tx-mev-front-4.json
 |   |   |       tx-revert-3.json
-|   |   |       
+|   |   |
 |   |   +---research-demos
 |   |   |       ai-scorer-demo.md
 |   |   |       alpha-patterns-demo.md
@@ -990,7 +990,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       profit-gradient-demo.md
 |   |   |       README.md
 |   |   |       volatility-profile-demo.md
-|   |   |       
+|   |   |
 |   |   \---sim-outputs
 |   |           ai-feedback-20250701.json
 |   |           ai-trade-outputs-20250701.json
@@ -1000,15 +1000,15 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           sim-run-20250701.json
 |   |           sim-run-20250715.json
 |   |           sim-run-20250730.json
-|   |           
+|   |
 |   +---legacy
 |   |       README.md
-|   |       
+|   |
 |   +---migrations
 |   |   |   migration-manifest.json
 |   |   |   README.md
 |   |   |   VERSIONS.md
-|   |   |   
+|   |   |
 |   |   +---ai
 |   |   |   |   README.md
 |   |   |   |   v1.0-load-base-model.py
@@ -1016,13 +1016,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   v1.2-update-weights.py
 |   |   |   |   v1.3-score-thresholds.json
 |   |   |   |   v1.4-dashboard-pipeline.py
-|   |   |   |   
+|   |   |   |
 |   |   |   \---rollback
 |   |   |           README.md
 |   |   |           v1.1-rollback.py
 |   |   |           v1.2-rollback.py
 |   |   |           v1.3-rollback.json
-|   |   |           
+|   |   |
 |   |   +---config
 |   |   |   |   README.md
 |   |   |   |   v1.0-defaults.json
@@ -1030,14 +1030,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   v1.2-hotload-profiles.json
 |   |   |   |   v1.3-operator-roles.json
 |   |   |   |   v1.4-alert-thresholds.json
-|   |   |   |   
+|   |   |   |
 |   |   |   \---rollback
 |   |   |           README.md
 |   |   |           v1.1-rollback.json
 |   |   |           v1.2-rollback.json
 |   |   |           v1.3-rollback.json
 |   |   |           v1.4-rollback.json
-|   |   |           
+|   |   |
 |   |   +---contracts
 |   |   |   |   README.md
 |   |   |   |   v1.0-core-deploy.js
@@ -1046,7 +1046,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   v1.3-alpha-nft.js
 |   |   |   |   v1.4-intent-solver.js
 |   |   |   |   v1.5-zk-proof.js
-|   |   |   |   
+|   |   |   |
 |   |   |   \---rollback
 |   |   |           README.md
 |   |   |           v1.1-revert-governance.js
@@ -1054,7 +1054,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           v1.3-revert-alpha-nft.js
 |   |   |           v1.4-revert-intent-solver.js
 |   |   |           v1.5-revert-zk-proof.js
-|   |   |           
+|   |   |
 |   |   +---db
 |   |   |   |   README.md
 |   |   |   |   v1.0-init-schema.sql
@@ -1063,7 +1063,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   v1.3-metrics-dashboard.sql
 |   |   |   |   v1.4-kill-switch-schema.sql
 |   |   |   |   v1.5-plugin-registry.sql
-|   |   |   |   
+|   |   |   |
 |   |   |   \---rollback
 |   |   |           README.md
 |   |   |           v1.1-rollback.sql
@@ -1071,27 +1071,27 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           v1.3-rollback.sql
 |   |   |           v1.4-rollback.sql
 |   |   |           v1.5-rollback.sql
-|   |   |           
+|   |   |
 |   |   +---legacy
 |   |   |       deprecated-contracts.js
 |   |   |       legacy-ai-weights.json
 |   |   |       legacy-db-schema.sql
 |   |   |       legacy-plugin-registry.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---operator
 |   |   |   |   README.md
 |   |   |   |   v1.0-onboarding.json
 |   |   |   |   v1.1-policy-update.md
 |   |   |   |   v1.2-key-rotation.json
 |   |   |   |   v1.3-handover-script.js
-|   |   |   |   
+|   |   |   |
 |   |   |   \---rollback
 |   |   |           README.md
 |   |   |           v1.1-rollback.md
 |   |   |           v1.2-rollback.json
 |   |   |           v1.3-rollback.js
-|   |   |           
+|   |   |
 |   |   +---plugin
 |   |   |   |   README.md
 |   |   |   |   v1.0-register-core-plugins.js
@@ -1099,14 +1099,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   v1.2-ai-indexer.js
 |   |   |   |   v1.3-failover-switch.js
 |   |   |   |   v1.4-governance-marketplace.js
-|   |   |   |   
+|   |   |   |
 |   |   |   \---rollback
 |   |   |           README.md
 |   |   |           v1.1-rollback.js
 |   |   |           v1.2-rollback.js
 |   |   |           v1.3-rollback.js
 |   |   |           v1.4-rollback.js
-|   |   |           
+|   |   |
 |   |   \---scripts
 |   |           migrate-ai.py
 |   |           migrate-all.js
@@ -1118,10 +1118,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           migration-audit-log.json
 |   |           README.md
 |   |           rollback-all.js
-|   |           
+|   |
 |   +---notebooks
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---ai
 |   |   |       ablation-studies.ipynb
 |   |   |       agent-explainability.ipynb
@@ -1137,7 +1137,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       reinforcement-learning.ipynb
 |   |   |       volatility-modeling.ipynb
-|   |   |       
+|   |   |
 |   |   +---analytics
 |   |   |       alpha-signal-analytics.ipynb
 |   |   |       dashboard-integration-demo.ipynb
@@ -1145,14 +1145,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       performance-tuning.ipynb
 |   |   |       README.md
 |   |   |       trade-metrics.ipynb
-|   |   |       
+|   |   |
 |   |   +---data-demo
 |   |   |       export-demo.ipynb
 |   |   |       live-feed-demo.ipynb
 |   |   |       quick-exploration.ipynb
 |   |   |       README.md
 |   |   |       real-vs-sim-plots.ipynb
-|   |   |       
+|   |   |
 |   |   +---economics
 |   |   |       funding-rate-models.ipynb
 |   |   |       incentive-analysis.ipynb
@@ -1161,7 +1161,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       market-sentiment.ipynb
 |   |   |       protocol-tvl-charts.ipynb
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---explainability
 |   |   |       incident-xai-audit.ipynb
 |   |   |       local-vs-global-xai.ipynb
@@ -1169,7 +1169,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       saliency-map-demo.ipynb
 |   |   |       XAI-overview.ipynb
-|   |   |       
+|   |   |
 |   |   +---legacy
 |   |   |       deprecated-ai-models.ipynb
 |   |   |       legacy-alpha-analysis.ipynb
@@ -1177,7 +1177,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       legacy-ops-walkthrough.ipynb
 |   |   |       old-research-log.ipynb
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---MEV
 |   |   |       block-timing.ipynb
 |   |   |       frontrun-detection.ipynb
@@ -1185,7 +1185,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       MEV-research-demo.ipynb
 |   |   |       MEV-simulation.ipynb
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---operator
 |   |   |       alert-incident-demo.ipynb
 |   |   |       audit-log-explorer.ipynb
@@ -1193,7 +1193,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       governance-interaction.ipynb
 |   |   |       README.md
 |   |   |       workflow-demo.ipynb
-|   |   |       
+|   |   |
 |   |   +---simulation
 |   |   |       arb-simulation.ipynb
 |   |   |       batch-execution.ipynb
@@ -1206,7 +1206,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       simulation-outputs-demo.ipynb
 |   |   |       synthetic-dataset-gen.ipynb
 |   |   |       volatility-stress-test.ipynb
-|   |   |       
+|   |   |
 |   |   \---strategy
 |   |           adaptive-risk.ipynb
 |   |           dynamic-loan-sizing.ipynb
@@ -1217,13 +1217,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           README.md
 |   |           real-vs-sim-comparison.ipynb
 |   |           route-discovery.ipynb
-|   |           
+|   |
 |   +---onboarding
 |   |       README.md
-|   |       
+|   |
 |   +---operator
 |   |       README.md
-|   |       
+|   |
 |   +---overlays
 |   |   |   ai-action-overlay.js
 |   |   |   ai-audit-trail-overlay.js
@@ -1245,7 +1245,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   social-impact-overlay.js
 |   |   |   tx-history-overlay.js
 |   |   |   xai-inspector.js
-|   |   |   
+|   |   |
 |   |   +---ar
 |   |   |   |   ar-ai-analytics.js
 |   |   |   |   ar-entrypoint.js
@@ -1254,7 +1254,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   ar-operator-analytics.js
 |   |   |   |   ar-xai-visualizer.js
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   \---overlay-3d-assets
 |   |   |           3d-bot-avatar.glb
 |   |   |           3d-dashboard.glb
@@ -1264,7 +1264,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           3d-mev-shield.glb
 |   |   |           3d-token.glb
 |   |   |           README.md
-|   |   |           
+|   |   |
 |   |   +---docs
 |   |   |       alerting-tuning.md
 |   |   |       ar-integration-guide.md
@@ -1274,7 +1274,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       widget-development.md
 |   |   |       xai-explainability.md
-|   |   |       
+|   |   |
 |   |   +---tests
 |   |   |   |   ai-action-overlay.test.js
 |   |   |   |   ai-audit-trail-overlay.test.js
@@ -1293,19 +1293,19 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   simulation-overlay.test.js
 |   |   |   |   social-impact-overlay.test.js
 |   |   |   |   xai-inspector.test.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---ar
 |   |   |   |       ar-entrypoint.test.js
 |   |   |   |       ar-incident-mapper.test.js
 |   |   |   |       ar-xai-visualizer.test.js
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---widgets
 |   |   |           mev-risk-widget.test.js
 |   |   |           quick-arb-widget.test.js
 |   |   |           README.md
 |   |   |           wallet-health-widget.test.js
-|   |   |           
+|   |   |
 |   |   \---widgets
 |   |           ai-status-widget.js
 |   |           alpha-feed-widget.js
@@ -1318,7 +1318,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           time-sync-widget.js
 |   |           tx-rollback-widget.js
 |   |           wallet-health-widget.js
-|   |           
+|   |
 |   +---plugins
 |   |   |   atomic-swap-batched.ts
 |   |   |   bridge-latency-sniper.ts
@@ -1327,7 +1327,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   micro-latency-arb-suite.ts
 |   |   |   nft-gamefi-arb.ts
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---alpha-signal
 |   |   |   |   ai-signal-orchestrator.js
 |   |   |   |   alpha-nft-issuer.js
@@ -1340,7 +1340,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   trend-analyzer-v2.js
 |   |   |   |   trend-analyzer.js
 |   |   |   |   whale-signal.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       alerts-integration.md
 |   |   |   |       alpha-reputation-scores.md
@@ -1348,7 +1348,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       alpha-voting-protocol.md
 |   |   |   |       arb-patterns.md
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           ai-signal-orchestrator.test.js
 |   |   |           alpha-nft-issuer.test.js
@@ -1361,7 +1361,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           trend-analyzer-v2.test.js
 |   |   |           trend-analyzer.test.js
 |   |   |           whale-signal.test.js
-|   |   |           
+|   |   |
 |   |   +---bridge-adapters
 |   |   |   |   avalanche-adapter.js
 |   |   |   |   axelar-adapter.js
@@ -1375,7 +1375,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   relaychain-adapter.js
 |   |   |   |   symbiosis-adapter.js
 |   |   |   |   wormhole-adapter.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       avalanche-guide.md
 |   |   |   |       bridge-integrations.md
@@ -1383,7 +1383,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       polygon-zkevm-guide.md
 |   |   |   |       README.md
 |   |   |   |       relaychain-integration.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           avalanche-adapter.test.js
 |   |   |           axelar-adapter.test.js
@@ -1397,7 +1397,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           relaychain-adapter.test.js
 |   |   |           symbiosis-adapter.test.js
 |   |   |           wormhole-adapter.test.js
-|   |   |           
+|   |   |
 |   |   +---compliance
 |   |   |   |   adverse-media-scanner.js
 |   |   |   |   blacklist-module.js
@@ -1411,7 +1411,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   README.md
 |   |   |   |   sanctions-checker.js
 |   |   |   |   whitelist-module.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       compliance-checks.md
 |   |   |   |       forensics-guide.md
@@ -1419,7 +1419,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       kyc-flows.md
 |   |   |   |       README.md
 |   |   |   |       sanctions-lists.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           adverse-media-scanner.test.js
 |   |   |           blacklist-module.test.js
@@ -1433,7 +1433,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           README.md
 |   |   |           sanctions-checker.test.js
 |   |   |           whitelist-module.test.js
-|   |   |           
+|   |   |
 |   |   +---dex-adapters
 |   |   |   |   aggregator-adapter.js
 |   |   |   |   balancer-adapter.js
@@ -1454,7 +1454,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   uniswap-v3-adapter.js
 |   |   |   |   vertex-adapter.js
 |   |   |   |   woofi-adapter.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       adapter-development.md
 |   |   |   |       dex-architecture.md
@@ -1463,7 +1463,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       README.md
 |   |   |   |       slippage-models.md
 |   |   |   |       supported-dexes.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           aggregator-adapter.test.js
 |   |   |           balancer-adapter.test.js
@@ -1484,7 +1484,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           uniswap-v3-adapter.test.js
 |   |   |           vertex-adapter.test.js
 |   |   |           woofi-adapter.test.js
-|   |   |           
+|   |   |
 |   |   +---docs
 |   |   |       adapter-api.md
 |   |   |       alpha-patterns.md
@@ -1496,7 +1496,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       registry-guide.md
 |   |   |       smart-contract-integration.md
-|   |   |       
+|   |   |
 |   |   +---flashloan
 |   |   |   |   aave-adapter.js
 |   |   |   |   angle-adapter.js
@@ -1511,7 +1511,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   radiant-adapter.js
 |   |   |   |   README.md
 |   |   |   |   stargate-adapter.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       audit-log.md
 |   |   |   |       flashloan-architecture.md
@@ -1519,7 +1519,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       provider-integrations.md
 |   |   |   |       README.md
 |   |   |   |       upgrade-guide.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           aave-adapter.test.js
 |   |   |           angle-adapter.test.js
@@ -1534,7 +1534,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           radiant-adapter.test.js
 |   |   |           README.md
 |   |   |           stargate-adapter.test.js
-|   |   |           
+|   |   |
 |   |   +---insurance
 |   |   |   |   claim-auditor.js
 |   |   |   |   claim-verifier.js
@@ -1546,7 +1546,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   README.md
 |   |   |   |   risk-assessment-plugin.js
 |   |   |   |   risk-modeler.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       claim-workflow.md
 |   |   |   |       insurance-architecture.md
@@ -1554,7 +1554,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       README.md
 |   |   |   |       risk-assessment-methods.md
 |   |   |   |       risk-models.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           claim-auditor.test.js
 |   |   |           claim-verifier.test.js
@@ -1566,7 +1566,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           README.md
 |   |   |           risk-assessment-plugin.test.js
 |   |   |           risk-modeler.test.js
-|   |   |           
+|   |   |
 |   |   +---intent-solvers
 |   |   |   |   auction-intent-solver.js
 |   |   |   |   batch-intent-processor.js
@@ -1580,14 +1580,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   sandwich-intent-solver.js
 |   |   |   |   sniper-intent-solver.js
 |   |   |   |   uniswapx-intent-solver.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       auction-design.md
 |   |   |   |       eco-intents.md
 |   |   |   |       intent-architecture.md
 |   |   |   |       intent-merging.md
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           auction-intent-solver.test.js
 |   |   |           batch-intent-processor.test.js
@@ -1601,7 +1601,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           sandwich-intent-solver.test.js
 |   |   |           sniper-intent-solver.test.js
 |   |   |           uniswapx-intent-solver.test.js
-|   |   |           
+|   |   |
 |   |   +---internal
 |   |   |       interface-definitions.ts
 |   |   |       migration-tool.js
@@ -1611,7 +1611,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       registry.ts
 |   |   |       test-utils.js
-|   |   |       
+|   |   |
 |   |   +---marketplace
 |   |   |       governance-marketplace.js
 |   |   |       module-marketplace-registry.json
@@ -1619,7 +1619,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       plugin-marketplace-registry.json
 |   |   |       plugin-marketplace.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---model-marketplace
 |   |   |       ai-model-marketplace-registry.json
 |   |   |       ai-model-marketplace.js
@@ -1627,7 +1627,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ai-model-proxy.js
 |   |   |       ai-model-validator.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---oracles
 |   |   |   |   ai-oracle.js
 |   |   |   |   chainlink-oracle.js
@@ -1640,14 +1640,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   time-weighted-oracle.js
 |   |   |   |   volatility-oracle.js
 |   |   |   |   zero-knowledge-oracle.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       data-sources.md
 |   |   |   |       oracle-integrations.md
 |   |   |   |       README.md
 |   |   |   |       risk-mitigation.md
 |   |   |   |       zk-proofs.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           ai-oracle.test.js
 |   |   |           chainlink-oracle.test.js
@@ -1660,7 +1660,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           time-weighted-oracle.test.js
 |   |   |           volatility-oracle.test.js
 |   |   |           zero-knowledge-oracle.test.js
-|   |   |           
+|   |   |
 |   |   +---social-impact
 |   |   |   |   carbon-offset-module.js
 |   |   |   |   charity-oracle.js
@@ -1672,7 +1672,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   impact-scoring.js
 |   |   |   |   impact-voting.js
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       charity-protocols.md
 |   |   |   |       csr-programs.md
@@ -1680,7 +1680,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       impact-scoring-models.md
 |   |   |   |       README.md
 |   |   |   |       social-impact-flows.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           carbon-offset-module.test.js
 |   |   |           charity-oracle.test.js
@@ -1692,14 +1692,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           impact-scoring.test.js
 |   |   |           impact-voting.test.js
 |   |   |           README.md
-|   |   |           
+|   |   |
 |   |   +---template
 |   |   |       adapter-template.js
 |   |   |       model-template.js
 |   |   |       plugin-template.js
 |   |   |       README.md
 |   |   |       template-config.json
-|   |   |       
+|   |   |
 |   |   \---tests
 |   |           ai-model-marketplace.test.js
 |   |           atomic-swap-batched.test.ts
@@ -1713,7 +1713,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           plugins-integration.test.js
 |   |           README.md
 |   |           test-utils.js
-|   |           
+|   |
 |   +---research
 |   |   |   ai-experiments.md
 |   |   |   economic-module-report.md
@@ -1725,7 +1725,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   regulatory-mapping-exploration.md
 |   |   |   swarm-learning-overview.md
 |   |   |   threat-models-research.md
-|   |   |   
+|   |   |
 |   |   +---adversarial
 |   |   |       adversarial-attacks.ipynb
 |   |   |       ai-robustness-analysis.ipynb
@@ -1734,7 +1734,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       protocol-fuzz-testing.ipynb
 |   |   |       README.md
 |   |   |       recovery-strategies.ipynb
-|   |   |       
+|   |   |
 |   |   +---alphaNFT
 |   |   |       alphaNFT-attack-defense.ipynb
 |   |   |       alphaNFT-game-theory.ipynb
@@ -1742,7 +1742,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       alphaNFT-protocol-experiments.ipynb
 |   |   |       operator-nft-governance.ipynb
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---demos
 |   |   |       ai-interactive-sim.ipynb
 |   |   |       contract-governance-demo.ipynb
@@ -1751,7 +1751,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       intent-arbitrage-demo.ipynb
 |   |   |       plugin-hotload-demo.ipynb
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---economics
 |   |   |       agent-incentives-model.ipynb
 |   |   |       insurance-experiment.ipynb
@@ -1760,7 +1760,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       protocol-fee-analysis.ipynb
 |   |   |       README.md
 |   |   |       social-impact-analysis.ipynb
-|   |   |       
+|   |   |
 |   |   +---federated
 |   |   |       attack-resilience-test.ipynb
 |   |   |       federated-setup-demo.ipynb
@@ -1769,14 +1769,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       node-participation-metrics.ipynb
 |   |   |       privacy-eval.ipynb
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---legacy
 |   |   |       deprecated-research-log.md
 |   |   |       legacy-economic-models.ipynb
 |   |   |       legacy-experiment-index.md
 |   |   |       old-xai-notebook.ipynb
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---quantum
 |   |   |       quantum-bridge-sim.ipynb
 |   |   |       quantum-experiment-notes.md
@@ -1784,14 +1784,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       quantum-rng-prototype.ipynb
 |   |   |       quantum-xai-visual.ipynb
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---swarm
 |   |   |       async-learning-demo.ipynb
 |   |   |       chain-consensus-models.ipynb
 |   |   |       model-update-broadcast.ipynb
 |   |   |       README.md
 |   |   |       swarm-node-behavior.ipynb
-|   |   |       
+|   |   |
 |   |   \---xai
 |   |           ai-decision-graph.ipynb
 |   |           live-explainability-case.ipynb
@@ -1800,7 +1800,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           README.md
 |   |           xai-attack-defense.ipynb
 |   |           xai-dashboard-demo.ipynb
-|   |           
+|   |
 |   +---storage
 |   |   |   access-log.json
 |   |   |   agent-metadata.json
@@ -1811,20 +1811,20 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   operator-nfts.json
 |   |   |   README.md
 |   |   |   validator-registry.json
-|   |   |   
+|   |   |
 |   |   +---ai-agent-memory
 |   |   |   |   ai-session-context.json
 |   |   |   |   memory-20250701.json
 |   |   |   |   memory-20250715.json
 |   |   |   |   memory-20250730.json
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   \---memory-checkpoints
 |   |   |           checkpoint-1.json
 |   |   |           checkpoint-2.json
 |   |   |           checkpoint-3.json
 |   |   |           README.md
-|   |   |           
+|   |   |
 |   |   +---ai-agent-snapshots
 |   |   |   |   ai-agent-memory-v1.json
 |   |   |   |   ai-agent-memory-v2.json
@@ -1832,20 +1832,20 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   ai-agent-snapshot-20250715.json
 |   |   |   |   ai-agent-snapshot-20250730.json
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   \---ai-session-logs
 |   |   |           README.md
 |   |   |           session-log-20250701.json
 |   |   |           session-log-20250715.json
 |   |   |           session-log-20250730.json
-|   |   |           
+|   |   |
 |   |   +---api-auth
 |   |   |       api-access-log.json
 |   |   |       api-key-metadata.json
 |   |   |       oauth-credentials.json
 |   |   |       README.md
 |   |   |       session-tokens-20250730.json
-|   |   |       
+|   |   |
 |   |   +---backup
 |   |   |       ai-memory-backup-20250701.json
 |   |   |       backup-20250701.zip
@@ -1854,14 +1854,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       config-backup-20250701.json
 |   |   |       contracts-backup-20250701.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---config-snapshots
 |   |   |       config-20250701.json
 |   |   |       config-20250715.json
 |   |   |       config-20250730.json
 |   |   |       config-latest.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---forensic-archive
 |   |   |       ai-anomaly-logs.json
 |   |   |       full-trace-20250730.json
@@ -1869,7 +1869,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       incident-evidence-20250715.zip
 |   |   |       incident-evidence-20250730.zip
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---keys
 |   |   |       ai-agent-key.pem
 |   |   |       encryption-key.pem
@@ -1878,7 +1878,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       operator-key.pem
 |   |   |       README.md
 |   |   |       signing-key.pem
-|   |   |       
+|   |   |
 |   |   +---model-weight-snapshots
 |   |   |       ai-governance.weights
 |   |   |       digital-twin.weights
@@ -1888,7 +1888,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       session-weights-20250701.json
 |   |   |       session-weights-latest.json
 |   |   |       volatility.weights
-|   |   |       
+|   |   |
 |   |   +---plugin-vaults
 |   |   |       compliance-adapter-vault.json
 |   |   |       dex-adapter-vault.json
@@ -1896,13 +1896,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       oracle-adapter-vault.json
 |   |   |       plugin-auth-metadata.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---recovery-playbooks
 |   |   |       cold-storage-guide.md
 |   |   |       incident-response.md
 |   |   |       README.md
 |   |   |       restore-procedure.md
-|   |   |       
+|   |   |
 |   |   +---snapshots
 |   |   |       operator-balances-20250730.json
 |   |   |       README.md
@@ -1912,7 +1912,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       snapshot-20250730.json
 |   |   |       snapshot-latest.json
 |   |   |       wallet-balances-20250730.json
-|   |   |       
+|   |   |
 |   |   +---strat-archive
 |   |   |       archived-strategies.md
 |   |   |       legacy-strategy.json
@@ -1920,7 +1920,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       strategy-metadata.json
 |   |   |       strategy-v1.json
 |   |   |       strategy-v2.json
-|   |   |       
+|   |   |
 |   |   \---test
 |   |           ai-agent-memory.test.js
 |   |           backup-restore.test.js
@@ -1930,10 +1930,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           README.md
 |   |           storage-access.test.js
 |   |           strat-archive.test.js
-|   |           
+|   |
 |   +---tests
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---ai
 |   |   |       ai-dashboard-integration.test.py
 |   |   |       ai-module-smoke.test.py
@@ -1942,13 +1942,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       route-selection.test.py
 |   |   |       volatility-model.test.py
-|   |   |       
+|   |   |
 |   |   +---chaos
 |   |   |       incident-chaos.test.js
 |   |   |       node-crash-recovery.test.js
 |   |   |       README.md
 |   |   |       system-chaos.test.js
-|   |   |       
+|   |   |
 |   |   +---contracts
 |   |   |       alpha-nft.test.js
 |   |   |       batch-executor.test.js
@@ -1963,7 +1963,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       reputation-oracle.test.js
 |   |   |       upgradable-proxy.test.js
 |   |   |       zk-proof.test.js
-|   |   |       
+|   |   |
 |   |   +---coverage
 |   |   |   |   ai-coverage.test.py
 |   |   |   |   backend-coverage.test.js
@@ -1971,10 +1971,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   coverage-report.html
 |   |   |   |   coverage-summary.md
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   \---.nyc_output
 |   |   |           README.md
-|   |   |           
+|   |   |
 |   |   +---docs
 |   |   |       ai-testing.md
 |   |   |       chaos-testing.md
@@ -1986,28 +1986,28 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       snapshot-methods.md
 |   |   |       test-strategy.md
 |   |   |       test-troubleshooting.md
-|   |   |       
+|   |   |
 |   |   +---e2e
 |   |   |       ai-e2e.test.py
 |   |   |       dashboard-e2e.test.js
 |   |   |       failover-e2e.test.js
 |   |   |       mainnet-e2e.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---fork
 |   |   |       block-drift-fork.test.js
 |   |   |       mainnet-fork.test.js
 |   |   |       mempool-chaos.test.js
 |   |   |       README.md
 |   |   |       zk-sim-fork.test.js
-|   |   |       
+|   |   |
 |   |   +---fuzz
 |   |   |       ai-fuzz.test.py
 |   |   |       fork-fuzz.test.js
 |   |   |       fuzz-arb-paths.test.js
 |   |   |       plugin-fuzz.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---integration
 |   |   |       ai-integration.test.py
 |   |   |       contracts-integration.test.js
@@ -2018,24 +2018,24 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       storage-integration.test.js
 |   |   |       utils-integration.test.js
 |   |   |       watchdog-integration.test.js
-|   |   |       
+|   |   |
 |   |   +---legacy
 |   |   |       legacy-tests-summary.md
 |   |   |       migration-checks.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---migration
 |   |   |       contract-migration.test.js
 |   |   |       db-migration.test.js
 |   |   |       plugin-migration.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---performance
 |   |   |       ai-latency-benchmark.test.py
 |   |   |       fork-benchmark.test.js
 |   |   |       gas-benchmark.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---plugin
 |   |   |       alpha-signal-plugins.test.js
 |   |   |       bridge-adapters.test.js
@@ -2049,7 +2049,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       plugin-marketplace.test.js
 |   |   |       README.md
 |   |   |       template-plugins.test.js
-|   |   |       
+|   |   |
 |   |   +---python
 |   |   |       ai-agent-tests.py
 |   |   |       legacy-ml-tests.py
@@ -2057,26 +2057,26 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       strategy-selection-tests.py
 |   |   |       token-score-tests.py
-|   |   |       
+|   |   |
 |   |   +---regression
 |   |   |       failed-trade-replay.test.js
 |   |   |       patch-regression.test.js
 |   |   |       README.md
 |   |   |       snapshot-regression.test.js
 |   |   |       upgrade-regression.test.js
-|   |   |       
+|   |   |
 |   |   +---runner
 |   |   |       foundry.toml
 |   |   |       hardhat.config.js
 |   |   |       pytest.ini
 |   |   |       README.md
 |   |   |       test-runner.config.js
-|   |   |       
+|   |   |
 |   |   +---snapshot
 |   |   |       README.md
 |   |   |       snapshot-audit.test.js
 |   |   |       snapshot-compare.test.js
-|   |   |       
+|   |   |
 |   |   +---unit
 |   |   |       ai-unit.test.py
 |   |   |       contracts-unit.test.js
@@ -2088,7 +2088,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       storage-unit.test.js
 |   |   |       utils-unit.test.js
 |   |   |       watchdog-unit.test.js
-|   |   |       
+|   |   |
 |   |   \---utils
 |   |           analytics-utils.test.js
 |   |           api-rate-limiter-utils.test.js
@@ -2114,7 +2114,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           stateful-cache-utils.test.js
 |   |           tx-bundle-utils.test.js
 |   |           volatility-watchdog-utils.test.js
-|   |           
+|   |
 |   +---utils
 |   |   |   ai-sandbox.js
 |   |   |   analytics.js
@@ -2158,7 +2158,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   tx-bundle-utils.js
 |   |   |   volatility-watchdog.js
 |   |   |   webhook-helper.js
-|   |   |   
+|   |   |
 |   |   +---docs
 |   |   |       api-rate-limiter.md
 |   |   |       error-handling.md
@@ -2169,7 +2169,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       snapshot-manager.md
 |   |   |       usage-examples.md
 |   |   |       utils-overview.md
-|   |   |       
+|   |   |
 |   |   \---test
 |   |           ai-sandbox.test.js
 |   |           analytics.test.js
@@ -2186,7 +2186,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           simulation.test.js
 |   |           token-reputation-index.test.py
 |   |           webhook-helper.test.js
-|   |           
+|   |
 |   \---watchdog
 |       |   auto-restart.js
 |       |   block-watchdog.js
@@ -2203,20 +2203,20 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |   threshold-config.json
 |       |   trade-kill-switch.js
 |       |   watchdog-daemon.js
-|       |   
+|       |
 |       +---data
 |       |   |   event-history.log
 |       |   |   health-metrics.json
 |       |   |   last-restart.log
 |       |   |   README.md
 |       |   |   risk-alerts.json
-|       |   |   
+|       |   |
 |       |   \---incidents
 |       |           incident-20250701.json
 |       |           incident-20250715.json
 |       |           incident-20250730.json
 |       |           README.md
-|       |           
+|       |
 |       +---docs
 |       |       failover-and-ha.md
 |       |       forensics.md
@@ -2226,7 +2226,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |       testing-checklists.md
 |       |       thresholds-and-tuning.md
 |       |       watchdog-architecture.md
-|       |       
+|       |
 |       +---hooks
 |       |       README.md
 |       |       use-auto-recover.js
@@ -2234,7 +2234,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |       use-health-check.js
 |       |       use-latency-monitor.js
 |       |       use-risk-hook.js
-|       |       
+|       |
 |       +---tests
 |       |   |   auto-restart.test.js
 |       |   |   block-watchdog.test.js
@@ -2250,7 +2250,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |   |   risk-trigger-handler.test.js
 |       |   |   trade-kill-switch.test.js
 |       |   |   watchdog-daemon.test.js
-|       |   |   
+|       |   |
 |       |   +---hooks
 |       |   |       README.md
 |       |   |       use-auto-recover.test.js
@@ -2258,7 +2258,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |   |       use-health-check.test.js
 |       |   |       use-latency-monitor.test.js
 |       |   |       use-risk-hook.test.js
-|       |   |       
+|       |   |
 |       |   \---utils
 |       |           block-latency-calc.test.js
 |       |           dashboard-sync.test.js
@@ -2268,7 +2268,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |           notification-helper.test.js
 |       |           persistent-state.test.js
 |       |           README.md
-|       |           
+|       |
 |       \---utils
 |               block-latency-calc.js
 |               dashboard-sync.js
@@ -2278,7 +2278,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |               notification-helper.js
 |               persistent-state.js
 |               README.md
-|               
+|
 +---benchmarks
 |   |   benchmarks-config.json
 |   |   benchmarks-notes.md
@@ -2291,7 +2291,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   results.csv
 |   |   sample-batch.json
 |   |   test-batch.js
-|   |   
+|   |
 |   +---ai
 |   |       adversarial-ai-bench.py
 |   |       ai-bench-compare.ipynb
@@ -2306,7 +2306,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       ai-perf-metrics.json
 |   |       ai-scalability-demo.ipynb
 |   |       README.md
-|   |       
+|   |
 |   +---configs
 |   |       ai-benchmark-config.json
 |   |       cpu-benchmarks-config.json
@@ -2317,7 +2317,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       test-matrix-20250701.json
 |   |       toolchain-config.json
-|   |       
+|   |
 |   +---cpu
 |   |       ai-module-cpu-bench.py
 |   |       core-engine-cpu-bench.js
@@ -2329,7 +2329,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       cpu-usage-traces.log
 |   |       plugin-cpu-bench.js
 |   |       README.md
-|   |       
+|   |
 |   +---datasets
 |   |       ai-benchmark-set-20250715.csv
 |   |       arbsim-batch-20250701.csv
@@ -2348,10 +2348,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       test-data-20250701.csv
 |   |       test-data-20250715.csv
 |   |       test-data-20250730.csv
-|   |       
+|   |
 |   +---docs
 |   |       README.md
-|   |       
+|   |
 |   +---gas
 |   |       ai-gas-bench.py
 |   |       contracts-gas-bench.js
@@ -2364,7 +2364,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       plugin-gas-bench.js
 |   |       README.md
 |   |       routes-gas-bench.js
-|   |       
+|   |
 |   +---latency
 |   |       ai-latency-bench.py
 |   |       dashboard-latency-bench.js
@@ -2376,7 +2376,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       network-latency-bench.js
 |   |       plugin-latency-bench.js
 |   |       README.md
-|   |       
+|   |
 |   +---mempool
 |   |       block-reorg-events.log
 |   |       mempool-benchmark-methodology.md
@@ -2388,10 +2388,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       node-mempool-compare.ipynb
 |   |       README.md
 |   |       relayer-latency-bench.js
-|   |       
+|   |
 |   +---regression
 |   |       README.md
-|   |       
+|   |
 |   +---results
 |   |       20250701-ai-vs-core.csv
 |   |       20250701-ai-vs-core.md
@@ -2407,7 +2407,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       20250730-benchmark-report.md
 |   |       README.md
 |   |       results-changelog.md
-|   |       
+|   |
 |   \---tools
 |           bench-analyze.py
 |           bench-cleanup.py
@@ -2420,7 +2420,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           plot-benchmarks.ipynb
 |           README.md
 |           tool-release-notes.md
-|           
+|
 +---ci
 |   |   .env.example
 |   |   ci-config.json
@@ -2432,7 +2432,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   migration-history.md
 |   |   README.md
 |   |   tree_structure.txt
-|   |   
+|   |
 |   +---badges
 |   |       ai-status.svg
 |   |       ci-status.svg
@@ -2444,17 +2444,17 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       lint.svg
 |   |       README.md
 |   |       security-audit.svg
-|   |       
+|   |
 |   +---buildkite
 |   |   |   pipeline.yml
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---agent-hooks
 |   |   |       environment
 |   |   |       post-command
 |   |   |       pre-command
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---scripts
 |   |           ai-bench.sh
 |   |           badge-update.sh
@@ -2463,11 +2463,11 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           notify-slack.sh
 |   |           README.md
 |   |           run-e2e.sh
-|   |           
+|   |
 |   +---circleci
 |   |   |   config.yml
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   \---scripts
 |   |           badge-update.sh
 |   |           deploy.sh
@@ -2475,7 +2475,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           notify-discord.sh
 |   |           README.md
 |   |           run-tests.sh
-|   |           
+|   |
 |   +---config
 |   |       .secrets.example
 |   |       ai.env.template
@@ -2487,14 +2487,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       staging.env.template
 |   |       test.env.template
 |   |       workflows.env
-|   |       
+|   |
 |   +---github
 |   |   |   CODEOWNERS
 |   |   |   dependabot.yml
 |   |   |   issue-template.md
 |   |   |   pr-template.md
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   \---actions
 |   |           cache-hardhat-node.yml
 |   |           deploy-contract-action.yml
@@ -2504,14 +2504,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           setup-docker-action.yml
 |   |           shared-env-vars.yml
 |   |           upload-artifact-action.yml
-|   |           
+|   |
 |   +---gitlab
 |   |   |   .gitlab-ci.yml
 |   |   |   ai-train.gitlab-ci.yml
 |   |   |   contract-deploy.gitlab-ci.yml
 |   |   |   env.template
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   \---scripts
 |   |           ai-bench.py
 |   |           build.sh
@@ -2522,20 +2522,20 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           patch-release.sh
 |   |           README.md
 |   |           test.sh
-|   |           
+|   |
 |   +---jenkins
 |   |   |   credentials.xml
 |   |   |   Jenkinsfile
 |   |   |   Jenkinsfile.contracts
 |   |   |   Jenkinsfile.deploy
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---pipeline-libs
 |   |   |       ai-utils.groovy
 |   |   |       notifications.groovy
 |   |   |       README.md
 |   |   |       shared-library.groovy
-|   |   |       
+|   |   |
 |   |   \---scripts
 |   |           build-docker.sh
 |   |           deploy-contracts.sh
@@ -2547,23 +2547,23 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           README.md
 |   |           run-ai-bench.py
 |   |           run-tests.sh
-|   |           
+|   |
 |   +---legacy
 |   |   |   ci-migration-notes.md
 |   |   |   deprecated-gitlab-ci.yml
 |   |   |   old-github-actions.yml
 |   |   |   old-jenkinsfile
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---backup-pipelines
 |   |   |       pipeline-2023.yml
 |   |   |       pipeline-2024.yml
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---old-circleci
 |   |           config-old.yml
 |   |           README.md
-|   |           
+|   |
 |   +---notifications
 |   |       discord-webhook.json
 |   |       email-config.json
@@ -2574,7 +2574,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       slack-webhook.json
 |   |       telegram.json
 |   |       webhook-configs.json
-|   |       
+|   |
 |   +---scripts
 |   |       ci-check-pr-labels.js
 |   |       cleanup.sh
@@ -2595,7 +2595,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       secrets-loader.sh
 |   |       setup-env.sh
 |   |       test-all.sh
-|   |       
+|   |
 |   \---workflows
 |           ai-deploy.yml
 |           ai-tests.yml
@@ -2620,7 +2620,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           regression.yml
 |           release-tag.yml
 |           test.yml
-|           
+|
 +---config
 |   |   .env.example
 |   |   agent-compatibility.json
@@ -2642,10 +2642,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   roles.json
 |   |   vault-ref.json
 |   |   xai-params.json
-|   |   
+|   |
 |   +---.meta
 |   |       README.md
-|   |       
+|   |
 |   +---ai
 |   |       .meta
 |   |       ai-ablation-matrix.json
@@ -2658,7 +2658,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       ai-weights.json
 |   |       README.md
 |   |       retrain-policy.json
-|   |       
+|   |
 |   +---analytics
 |   |       analytics-config.json
 |   |       custom-metrics.json
@@ -2667,10 +2667,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       event-hooks.json
 |   |       README.md
 |   |       trade-log-template.json
-|   |       
+|   |
 |   +---api-snapshots
 |   |       README.md
-|   |       
+|   |
 |   +---chains
 |   |       arbitrum.json
 |   |       avalanche.json
@@ -2685,7 +2685,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       rpc-endpoints.json
 |   |       testnets.json
-|   |       
+|   |
 |   +---compliance
 |   |       audit-rules.json
 |   |       blacklisted-addresses.json
@@ -2695,10 +2695,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       sanctions-list.json
 |   |       whitelist.json
-|   |       
+|   |
 |   +---custom
 |   |       README.md
-|   |       
+|   |
 |   +---dao
 |   |       dao-core.json
 |   |       dao-gov-rules.json
@@ -2707,7 +2707,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       roles.json
 |   |       treasury-config.json
 |   |       voting-strategy.json
-|   |       
+|   |
 |   +---dashboards
 |   |       alerts.json
 |   |       dashboard-presets.json
@@ -2717,10 +2717,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       panel-layouts.json
 |   |       README.md
 |   |       stats-widgets.json
-|   |       
+|   |
 |   +---deprecated
 |   |       README.md
-|   |       
+|   |
 |   +---dexes
 |   |       adapters.json
 |   |       dex-abi-templates.json
@@ -2730,7 +2730,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       pools.json
 |   |       README.md
 |   |       routers.json
-|   |       
+|   |
 |   +---digital-twin
 |   |       chain-fork-templates.json
 |   |       digital-twin-schema.json
@@ -2738,7 +2738,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       simulation-config.json
 |   |       twin-overrides.json
-|   |       
+|   |
 |   +---examples
 |   |       ai-example.json
 |   |       all-in-one-demo-config.json
@@ -2756,7 +2756,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       strat-example.json
 |   |       tokens-example.json
 |   |       versioning-example.json
-|   |       
+|   |
 |   +---insurance
 |   |       collateral-config.json
 |   |       coverage-rules.json
@@ -2765,16 +2765,16 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       payout-logic.json
 |   |       pricing-models.json
 |   |       README.md
-|   |       
+|   |
 |   +---legacy
 |   |       README.md
-|   |       
+|   |
 |   +---locales
 |   |       README.md
-|   |       
+|   |
 |   +---migrations
 |   |       README.md
-|   |       
+|   |
 |   +---notifications
 |   |       alert-message-templates.json
 |   |       escalation-policy.json
@@ -2783,22 +2783,22 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       notification-thresholds.json
 |   |       provider-integrations.json
 |   |       README.md
-|   |       
+|   |
 |   +---overrides
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---dev
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---prod
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---staging
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---test
 |   |           README.md
-|   |           
+|   |
 |   +---presets
 |   |       ai-demo.json
 |   |       ai-presets.json
@@ -2810,10 +2810,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       strat-arb-batch-demo.json
 |   |       testnet.json
 |   |       user-quickstart.json
-|   |       
+|   |
 |   +---quickstart
 |   |       README.md
-|   |       
+|   |
 |   +---risk
 |   |       blacklist.json
 |   |       liquidation-rules.json
@@ -2822,19 +2822,19 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       risk-profiles.json
 |   |       risk-thresholds.json
 |   |       stress-test.json
-|   |       
+|   |
 |   +---runtime-patches
 |   |       README.md
-|   |       
+|   |
 |   +---sample-templates
 |   |       README.md
-|   |       
+|   |
 |   +---schema
 |   |       README.md
-|   |       
+|   |
 |   +---secrets
 |   |       README.md
-|   |       
+|   |
 |   +---strategies
 |   |   |   arbitrage.json
 |   |   |   liquidity.json
@@ -2842,13 +2842,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   sandwich.json
 |   |   |   stablecoin.json
 |   |   |   strategy-schema.json
-|   |   |   
+|   |   |
 |   |   \---examples
 |   |           demo-liquidity-strategy.json
 |   |           example-arb-mainnet.json
 |   |           example-arb-testnet.json
 |   |           README.md
-|   |           
+|   |
 |   +---tokens
 |   |       legacy-tokens.json
 |   |       README.md
@@ -2857,26 +2857,26 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       token-symbols.csv
 |   |       tokens.json
 |   |       tokens.schema.json
-|   |       
+|   |
 |   \---versioning
 |           config-changelog.json
 |           README.md
 |           rollback.json
 |           schema-migration-log.json
 |           version-history.json
-|           
+|
 +---dashboard
 |   |   README.md
-|   |   
+|   |
 |   +---admin
 |   |       README.md
-|   |       
+|   |
 |   +---ai
 |   |   |   ai-manifest.json
 |   |   |   CHANGELOG.md
 |   |   |   index.js
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---automation
 |   |   |       AIAutoPilotPanel.jsx
 |   |   |       AIBatchRunner.js
@@ -2885,7 +2885,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       AutoStrategySelector.js
 |   |   |       OperatorOverrideToggle.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---chat
 |   |   |       AIChatUtils.js
 |   |   |       ChatFeedbackPanel.jsx
@@ -2894,7 +2894,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       LLMChatEngine.js
 |   |   |       PromptTemplates.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---components
 |   |   |       AIInsightWidget.jsx
 |   |   |       AITradeScorer.jsx
@@ -2910,7 +2910,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       ScoreKPIBlock.jsx
 |   |   |       XAIHeatmapOverlay.jsx
-|   |   |       
+|   |   |
 |   |   +---config
 |   |   |       ai-dashboard-config.json
 |   |   |       ai-presets.json
@@ -2919,7 +2919,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       model-switcher-presets.json
 |   |   |       README.md
 |   |   |       xai-overlays.json
-|   |   |       
+|   |   |
 |   |   +---demo
 |   |   |       ai-dashboard-tour.md
 |   |   |       ai-insight-demo.json
@@ -2927,7 +2927,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       feedback-demo.json
 |   |   |       README.md
 |   |   |       xai-demo.json
-|   |   |       
+|   |   |
 |   |   +---explainability
 |   |   |       ExplainabilityHistory.json
 |   |   |       ExplainabilityUtils.js
@@ -2938,7 +2938,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       xai-demo-data.json
 |   |   |       XAIIncidentExplorer.jsx
 |   |   |       XAIOverviewModal.jsx
-|   |   |       
+|   |   |
 |   |   +---feedback
 |   |   |       feedback-demo.json
 |   |   |       FeedbackAPI.js
@@ -2946,7 +2946,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       FeedbackPanel.jsx
 |   |   |       FeedbackSchema.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---hooks
 |   |   |       README.md
 |   |   |       useAIAutoPilot.js
@@ -2956,31 +2956,31 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       useAIScoring.js
 |   |   |       useLLMChat.js
 |   |   |       useXAI.js
-|   |   |       
+|   |   |
 |   |   +---models
 |   |   |   |   ai-models-list.json
 |   |   |   |   default-model-config.json
 |   |   |   |   model-audit-log.json
 |   |   |   |   model-metadata.json
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   \---weights
 |   |   |       |   ai-arb-v5.onnx
 |   |   |       |   pattern-learner-v3.pt
 |   |   |       |   README.md
 |   |   |       |   xai-embedder-v1.bin
-|   |   |       |   
+|   |   |       |
 |   |   |       \---old-weights
 |   |   |               ai-arb-v3.pt
 |   |   |               ai-arb-v4.onnx
 |   |   |               README.md
-|   |   |               
+|   |   |
 |   |   +---presets
 |   |   |       ai-theme-presets.json
 |   |   |       explainability-presets.json
 |   |   |       model-switcher-presets.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---scoring
 |   |   |       AIPredictionTable.jsx
 |   |   |       AIScoreEngine.js
@@ -2990,7 +2990,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ScoreHeatmapPanel.jsx
 |   |   |       ScorePresetConfig.json
 |   |   |       ScoringUtils.js
-|   |   |       
+|   |   |
 |   |   +---tests
 |   |   |       aiModelSelect.test.js
 |   |   |       automationMode.test.js
@@ -2999,7 +2999,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       OperatorAIFeedbackPanel.test.js
 |   |   |       README.md
 |   |   |       XAIWidget.test.js
-|   |   |       
+|   |   |
 |   |   \---utils
 |   |           aiApiClient.js
 |   |           aiDataAdapters.js
@@ -3008,11 +3008,11 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           aiMetrics.js
 |   |           aiValidator.js
 |   |           README.md
-|   |           
+|   |
 |   +---analytics
 |   |   |   CHANGELOG.md
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---ai
 |   |   |       ai-demo-results.json
 |   |   |       AIDashboardAdapter.js
@@ -3022,7 +3022,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       OutlierDetectorAI.js
 |   |   |       README.md
 |   |   |       RegressionTrainer.js
-|   |   |       
+|   |   |
 |   |   +---charts
 |   |   |       AnalyticsChartUtils.js
 |   |   |       AnomalyScatterPlot.jsx
@@ -3032,7 +3032,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       OrderbookDepthChart.jsx
 |   |   |       PieChart.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---components
 |   |   |       AnalyticsAlertBanner.jsx
 |   |   |       AnalyticsDashboard.jsx
@@ -3047,7 +3047,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ROIHeatmap.jsx
 |   |   |       TradeMetricsTable.jsx
 |   |   |       VolumeTimeSeries.jsx
-|   |   |       
+|   |   |
 |   |   +---config
 |   |   |       ai-analytics-presets.json
 |   |   |       analytics-layout.json
@@ -3061,7 +3061,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       risk-indicators.json
 |   |   |       theme-presets.json
 |   |   |       timeseries-source.json
-|   |   |       
+|   |   |
 |   |   +---data
 |   |   |       demo-anomalies.json
 |   |   |       demo-gas-costs.csv
@@ -3070,14 +3070,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       outlier-events.csv
 |   |   |       README.md
 |   |   |       time-series-sample.csv
-|   |   |       
+|   |   |
 |   |   +---explainability
 |   |   |       AnalyticsXAIOverlay.jsx
 |   |   |       AnomalyExplanationPanel.jsx
 |   |   |       explainability-config.json
 |   |   |       README.md
 |   |   |       RegressionExplainPanel.jsx
-|   |   |       
+|   |   |
 |   |   +---hooks
 |   |   |       README.md
 |   |   |       useAnalyticsData.js
@@ -3087,7 +3087,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       useLatencyStats.js
 |   |   |       useLivePnL.js
 |   |   |       useVolumeTimeseries.js
-|   |   |       
+|   |   |
 |   |   +---integration
 |   |   |       AnalyticsAPI.js
 |   |   |       analyticsDataClient.js
@@ -3095,7 +3095,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       syncConfig.json
 |   |   |       useAnalyticsSocket.js
-|   |   |       
+|   |   |
 |   |   +---pages
 |   |   |       dashboard.js
 |   |   |       gas-cost.js
@@ -3106,7 +3106,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       roi.js
 |   |   |       time-series.js
 |   |   |       trade-metrics.js
-|   |   |       
+|   |   |
 |   |   +---panels
 |   |   |       MainAnalyticsPanel.jsx
 |   |   |       OperatorPerformancePanel.jsx
@@ -3115,7 +3115,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       RiskAndROIOverview.jsx
 |   |   |       TimeSeriesExplorerPanel.jsx
 |   |   |       VolumeVsGasPanel.jsx
-|   |   |       
+|   |   |
 |   |   +---reports
 |   |   |       custom-user-report-sample.pdf
 |   |   |       daily-report-20250730.pdf
@@ -3123,13 +3123,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       profit-loss-report-20250710.csv
 |   |   |       README.md
 |   |   |       regression-report-20250715.csv
-|   |   |       
+|   |   |
 |   |   +---state
 |   |   |       analyticsPersistence.js
 |   |   |       analyticsSelectors.js
 |   |   |       analyticsStore.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---tests
 |   |   |       AnalyticsAIMetrics.test.js
 |   |   |       AnalyticsAPI.test.js
@@ -3140,7 +3140,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       ROIHeatmap.test.js
 |   |   |       TradeMetricsTable.test.js
-|   |   |       
+|   |   |
 |   |   +---utils
 |   |   |       anomalyUtils.js
 |   |   |       calcROI.js
@@ -3150,7 +3150,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       regressionUtils.js
 |   |   |       timeSeriesUtils.js
-|   |   |       
+|   |   |
 |   |   \---widgets
 |   |           ActiveRouteWidget.jsx
 |   |           ArbitrageScoreWidget.jsx
@@ -3160,7 +3160,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           MiniPnLWidget.jsx
 |   |           README.md
 |   |           TradeCountWidget.jsx
-|   |           
+|   |
 |   +---api
 |   |   |   ai.js
 |   |   |   arb.js
@@ -3175,7 +3175,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   README.md
 |   |   |   user.js
 |   |   |   webhook.js
-|   |   |   
+|   |   |
 |   |   +---docs
 |   |   |       api-error-codes.md
 |   |   |       api-versioning.md
@@ -3188,7 +3188,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       sockets.md
 |   |   |       update-history.md
 |   |   |       webhooks.md
-|   |   |       
+|   |   |
 |   |   +---integration
 |   |   |       aiAdapter.js
 |   |   |       analyticsAdapter.js
@@ -3204,7 +3204,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       sandboxAdapter.js
 |   |   |       uploadAdapter.js
 |   |   |       wsAdapter.js
-|   |   |       
+|   |   |
 |   |   +---middleware
 |   |   |       analyticsThrottle.js
 |   |   |       auth.js
@@ -3217,7 +3217,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       rateLimit.js
 |   |   |       README.md
 |   |   |       validate.js
-|   |   |       
+|   |   |
 |   |   +---routes
 |   |   |   |   ai.js
 |   |   |   |   alerts.js
@@ -3245,7 +3245,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   user.js
 |   |   |   |   websocket.js
 |   |   |   |   xai.js
-|   |   |   |   
+|   |   |   |
 |   |   |   \---__mocks__
 |   |   |           ai-inference.json
 |   |   |           analytics.json
@@ -3259,7 +3259,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           session.json
 |   |   |           trades.json
 |   |   |           user.json
-|   |   |           
+|   |   |
 |   |   +---schemas
 |   |   |       ai-inference.schema.json
 |   |   |       analytics.schema.json
@@ -3276,7 +3276,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       upload.schema.json
 |   |   |       user.schema.json
 |   |   |       websocket.schema.json
-|   |   |       
+|   |   |
 |   |   +---sockets
 |   |   |       ai-socket.js
 |   |   |       alerts-socket.js
@@ -3289,7 +3289,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       trade-socket.js
 |   |   |       user-socket.js
-|   |   |       
+|   |   |
 |   |   +---tests
 |   |   |   |   api-ai.test.js
 |   |   |   |   api-analytics.test.js
@@ -3310,13 +3310,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   api-websocket.test.js
 |   |   |   |   api-xai.test.js
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   \---__mocks__
 |   |   |           aiMock.js
 |   |   |           analyticsMock.js
 |   |   |           README.md
 |   |   |           userSessionMock.js
-|   |   |           
+|   |   |
 |   |   \---utils
 |   |           apiErrorCodes.js
 |   |           apiMockUtils.js
@@ -3329,11 +3329,11 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           uploadUtils.js
 |   |           validateSchema.js
 |   |           websocketUtils.js
-|   |           
+|   |
 |   +---ar
 |   |   |   CHANGELOG.md
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---components
 |   |   |       ARActionPromptPanel.jsx
 |   |   |       ARCameraStreamView.jsx
@@ -3351,7 +3351,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ARRiskAlertOverlay.jsx
 |   |   |       ARXAIInsightPanel.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---config
 |   |   |       ar-context-presets.json
 |   |   |       ar-device-mapping.json
@@ -3359,21 +3359,21 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ar-overlays.json
 |   |   |       ar-theme-presets.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---context
 |   |   |       ARDeviceContext.js
 |   |   |       AROverlayContext.js
 |   |   |       ARPermissionContext.js
 |   |   |       ARSessionContext.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---fixtures
 |   |   |       ar-incident-demo.json
 |   |   |       demo-ar-overlays.json
 |   |   |       live-pool-demo.json
 |   |   |       README.md
 |   |   |       xr-demo-assets.json
-|   |   |       
+|   |   |
 |   |   +---hooks
 |   |   |       README.md
 |   |   |       useARCameraStream.js
@@ -3382,7 +3382,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       useAROverlay.js
 |   |   |       useARSession.js
 |   |   |       useXRScene.js
-|   |   |       
+|   |   |
 |   |   +---integration
 |   |   |       ARBackendAdapter.js
 |   |   |       ARIncidentFeedAdapter.js
@@ -3391,14 +3391,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ARXAIAdapter.js
 |   |   |       integration-config.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---modals
 |   |   |       ARIncidentDetailModal.jsx
 |   |   |       ARPermissionModal.jsx
 |   |   |       ARSettingsModal.jsx
 |   |   |       ARXAIExplainModal.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---overlays
 |   |   |       ARAlertBannerOverlay.jsx
 |   |   |       ARIncidentOverlay.jsx
@@ -3409,7 +3409,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       overlays-demo-data.json
 |   |   |       overlays-preset.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---pages
 |   |   |       incidents.js
 |   |   |       index.js
@@ -3418,13 +3418,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       pools.js
 |   |   |       README.md
 |   |   |       settings.js
-|   |   |       
+|   |   |
 |   |   +---preview
 |   |   |       ar-preview-demo.json
 |   |   |       ARPreviewControls.jsx
 |   |   |       ARPreviewPanel.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---tests
 |   |   |       ARContext.test.js
 |   |   |       ARIncidentFeed.test.js
@@ -3433,17 +3433,17 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       AROverlayToggle.test.js
 |   |   |       README.md
 |   |   |       XRScene3D.test.js
-|   |   |       
+|   |   |
 |   |   +---uploads
 |   |   |   |   ar-upload-manifest.json
 |   |   |   |   README.md
 |   |   |   |   user-ar-presets.json
-|   |   |   |   
+|   |   |   |
 |   |   |   \---custom-ar-assets
 |   |   |           custom-overlay.glb
 |   |   |           custom-pool.glb
 |   |   |           README.md
-|   |   |           
+|   |   |
 |   |   +---utils
 |   |   |       arDemoData.js
 |   |   |       arDeviceUtils.js
@@ -3452,7 +3452,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       arTestHelpers.js
 |   |   |       README.md
 |   |   |       xrSceneUtils.js
-|   |   |       
+|   |   |
 |   |   \---xr
 |   |       |   README.md
 |   |       |   xr-config.json
@@ -3461,22 +3461,22 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       |   XROrderbookDepth3D.jsx
 |   |       |   XRScene3D.jsx
 |   |       |   XRVolumeVisualization.jsx
-|   |       |   
+|   |       |
 |   |       \---XRAssets
 |   |               dashboard.glb
 |   |               metrics-cube.glb
 |   |               pool.glb
 |   |               README.md
-|   |               
+|   |
 |   +---backend
 |   |       README.md
-|   |       
+|   |
 |   +---charts
 |   |       README.md
-|   |       
+|   |
 |   +---components
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---ai
 |   |   |       AIChatBubble.jsx
 |   |   |       AIDecisionFlow.jsx
@@ -3487,7 +3487,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       SaliencyOverlay.jsx
 |   |   |       XAIHeatmapPanel.jsx
-|   |   |       
+|   |   |
 |   |   +---atomic
 |   |   |       Avatar.jsx
 |   |   |       Badge.jsx
@@ -3504,7 +3504,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       StatusIndicator.jsx
 |   |   |       ToggleSwitch.jsx
 |   |   |       Tooltip.jsx
-|   |   |       
+|   |   |
 |   |   +---charts
 |   |   |       AreaChart.jsx
 |   |   |       BarChart.jsx
@@ -3518,7 +3518,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       TradePathChart.jsx
 |   |   |       VolumeChart.jsx
-|   |   |       
+|   |   |
 |   |   +---dialogs
 |   |   |       AIExplainDialog.jsx
 |   |   |       ConfirmDialog.jsx
@@ -3529,7 +3529,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       ReportExportDialog.jsx
 |   |   |       SettingsDialog.jsx
-|   |   |       
+|   |   |
 |   |   +---forms
 |   |   |       CodeEditorInput.jsx
 |   |   |       DatePicker.jsx
@@ -3544,7 +3544,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       SelectInput.jsx
 |   |   |       TextInput.jsx
 |   |   |       ToggleGroup.jsx
-|   |   |       
+|   |   |
 |   |   +---layout
 |   |   |       AppLayout.jsx
 |   |   |       Breadcrumbs.jsx
@@ -3557,13 +3557,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       Sidebar.jsx
 |   |   |       SplitPaneLayout.jsx
 |   |   |       Topbar.jsx
-|   |   |       
+|   |   |
 |   |   +---loaders
 |   |   |       FullscreenLoader.jsx
 |   |   |       InlineSpinner.jsx
 |   |   |       README.md
 |   |   |       WidgetLoader.jsx
-|   |   |       
+|   |   |
 |   |   +---notifications
 |   |   |       InlineAlert.jsx
 |   |   |       NotificationBanner.jsx
@@ -3571,7 +3571,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       Snackbar.jsx
 |   |   |       ToastContainer.jsx
 |   |   |       WebhookAlert.jsx
-|   |   |       
+|   |   |
 |   |   +---operator
 |   |   |       AuditTimeline.jsx
 |   |   |       HealthStatusCard.jsx
@@ -3581,7 +3581,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       OperatorCommandBar.jsx
 |   |   |       README.md
 |   |   |       ShiftRosterPanel.jsx
-|   |   |       
+|   |   |
 |   |   +---overlays
 |   |   |       AlertBanner.jsx
 |   |   |       AROverlay.jsx
@@ -3591,7 +3591,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       RiskOverlay.jsx
 |   |   |       TradePathOverlay.jsx
 |   |   |       XAIOverlay.jsx
-|   |   |       
+|   |   |
 |   |   +---plugin
 |   |   |       PluginCard.jsx
 |   |   |       PluginConfigForm.jsx
@@ -3600,7 +3600,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       PluginStatusIndicator.jsx
 |   |   |       PluginToggle.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---sandbox
 |   |   |       ExperimentalChartPanel.jsx
 |   |   |       FeatureFlagToggle.jsx
@@ -3608,7 +3608,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       PlaygroundPanel.jsx
 |   |   |       README.md
 |   |   |       WidgetDevTools.jsx
-|   |   |       
+|   |   |
 |   |   +---tables
 |   |   |       AITable.jsx
 |   |   |       AlertHistoryTable.jsx
@@ -3620,7 +3620,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       SortableTable.jsx
 |   |   |       TablePagination.jsx
 |   |   |       TradeTable.jsx
-|   |   |       
+|   |   |
 |   |   +---theme
 |   |   |       ContrastModeSwitch.jsx
 |   |   |       README.md
@@ -3628,7 +3628,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ThemePreviewBox.jsx
 |   |   |       ThemeSelector.jsx
 |   |   |       ThemeToggle.jsx
-|   |   |       
+|   |   |
 |   |   +---utils
 |   |   |       BlockTimer.jsx
 |   |   |       CodeBlock.jsx
@@ -3640,7 +3640,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       StatusPill.jsx
 |   |   |       TimeAgo.jsx
 |   |   |       ValueChangeDelta.jsx
-|   |   |       
+|   |   |
 |   |   \---widgets
 |   |           AIDecisionScoreCard.jsx
 |   |           GasWidget.jsx
@@ -3656,7 +3656,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           TradeDeltaWidget.jsx
 |   |           TradeVolumeSparkline.jsx
 |   |           WatchdogStatus.jsx
-|   |           
+|   |
 |   +---context
 |   |       AIContext.js
 |   |       AIProvider.jsx
@@ -3713,7 +3713,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       WebsocketProvider.jsx
 |   |       XAIContext.js
 |   |       XAIProvider.jsx
-|   |       
+|   |
 |   +---data
 |   |   |   active-pools.json
 |   |   |   agent-scores.json
@@ -3733,14 +3733,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   state-history.log
 |   |   |   token-metadata.json
 |   |   |   trade-history.json
-|   |   |   
+|   |   |
 |   |   +---ai-feedback
 |   |   |       feedback-20250701.json
 |   |   |       feedback-20250715.json
 |   |   |       feedback-20250730.json
 |   |   |       model-update-requests.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---analytics
 |   |   |       ai-inference-20250701.json
 |   |   |       ai-inference-20250715.json
@@ -3753,7 +3753,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       trade-alpha-scores-20250701.json
 |   |   |       trade-alpha-scores-20250715.json
 |   |   |       trade-alpha-scores-20250730.json
-|   |   |       
+|   |   |
 |   |   +---audit-trails
 |   |   |       audit-20250701.log
 |   |   |       audit-20250715.log
@@ -3762,7 +3762,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       event-archive-20250715.json
 |   |   |       event-archive-20250730.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---compliance-archive
 |   |   |       kyc-report-20250701.pdf
 |   |   |       kyc-report-20250715.pdf
@@ -3771,7 +3771,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       sanctions-check-20250701.json
 |   |   |       sanctions-check-20250715.json
 |   |   |       sanctions-check-20250730.json
-|   |   |       
+|   |   |
 |   |   +---export
 |   |   |       ai-inference-export-20250701.json
 |   |   |       dashboard-report-20250730.pdf
@@ -3779,7 +3779,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       export-20250715.csv
 |   |   |       export-20250730.csv
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---forensics
 |   |   |       exploit-dump-20250701.json
 |   |   |       exploit-dump-20250715.json
@@ -3787,7 +3787,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       root-cause-analysis.md
 |   |   |       trade-anomaly-20250730.json
-|   |   |       
+|   |   |
 |   |   +---logs
 |   |   |       ai-agent-20250701.log
 |   |   |       ai-agent-20250715.log
@@ -3806,7 +3806,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       watchdog-20250701.log
 |   |   |       watchdog-20250715.log
 |   |   |       watchdog-20250730.log
-|   |   |       
+|   |   |
 |   |   +---operator-audit
 |   |   |       ai-review-20250715.json
 |   |   |       nlp-feedback-20250730.json
@@ -3814,7 +3814,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       operator-actions-20250715.json
 |   |   |       operator-actions-20250730.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---simulation-snapshots
 |   |   |       post-fork-sim-20250715.json
 |   |   |       pre-fork-sim-20250715.json
@@ -3823,7 +3823,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       snapshot-20250701.json
 |   |   |       snapshot-20250715.json
 |   |   |       snapshot-20250730.json
-|   |   |       
+|   |   |
 |   |   +---snapshots
 |   |   |       agents-20250701.json
 |   |   |       agents-20250715.json
@@ -3836,7 +3836,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       sim-20250701.json
 |   |   |       sim-20250715.json
 |   |   |       sim-20250730.json
-|   |   |       
+|   |   |
 |   |   \---synthetic-datasets
 |   |           deep-arb-ai-trainset.csv
 |   |           fake-arb-scenarios.json
@@ -3845,57 +3845,57 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           synthetic-prices-20250701.csv
 |   |           synthetic-prices-20250715.csv
 |   |           synthetic-profits-20250730.csv
-|   |           
+|   |
 |   +---deploy
 |   |   |   CHANGELOG.md
 |   |   |   patterns.md
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---ansible
 |   |   |   |   inventory.ini
 |   |   |   |   playbook.yml
 |   |   |   |   README.md
 |   |   |   |   secrets.yml
-|   |   |   |   
+|   |   |   |
 |   |   |   +---group_vars
 |   |   |   |       all.yml
 |   |   |   |       prod.yml
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   +---roles
 |   |   |   |   |   README.md
-|   |   |   |   |   
+|   |   |   |   |
 |   |   |   |   +---ai-modules
 |   |   |   |   |   |   README.md
-|   |   |   |   |   |   
+|   |   |   |   |   |
 |   |   |   |   |   +---backend
 |   |   |   |   |   |       README.md
-|   |   |   |   |   |       
+|   |   |   |   |   |
 |   |   |   |   |   +---dashboard
 |   |   |   |   |   |       README.md
-|   |   |   |   |   |       
+|   |   |   |   |   |
 |   |   |   |   |   \---operator
 |   |   |   |   |           README.md
-|   |   |   |   |           
+|   |   |   |   |
 |   |   |   |   +---backend
 |   |   |   |   |       README.md
-|   |   |   |   |       
+|   |   |   |   |
 |   |   |   |   +---dashboard
 |   |   |   |   |       README.md
-|   |   |   |   |       
+|   |   |   |   |
 |   |   |   |   \---operator
 |   |   |   |           README.md
-|   |   |   |           
+|   |   |   |
 |   |   |   \---scripts
 |   |   |           README.md
 |   |   |           run-all.sh
-|   |   |           
+|   |   |
 |   |   +---audit
 |   |   |       audit-checklist.md
 |   |   |       cloud-posture.md
 |   |   |       deploy-logs.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---docker
 |   |   |       ai-modules.Dockerfile
 |   |   |       backend.Dockerfile
@@ -3903,14 +3903,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       dashboard.Dockerfile
 |   |   |       operator.Dockerfile
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---docker-compose
 |   |   |       docker-compose.dev.yml
 |   |   |       docker-compose.override.yml
 |   |   |       docker-compose.prod.yml
 |   |   |       docker-compose.yml
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---environments
 |   |   |       .env.example
 |   |   |       dev.env
@@ -3922,16 +3922,16 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       staging.env
 |   |   |       testnet.env
 |   |   |       vault.env
-|   |   |       
+|   |   |
 |   |   +---helm
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   \---apex-protocol
 |   |   |       |   Chart.yaml
 |   |   |       |   NOTES.txt
 |   |   |       |   README.md
 |   |   |       |   values.yaml
-|   |   |       |   
+|   |   |       |
 |   |   |       \---templates
 |   |   |               configmap.yaml
 |   |   |               deployment.yaml
@@ -3940,10 +3940,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |               README.md
 |   |   |               secrets.yaml
 |   |   |               service.yaml
-|   |   |               
+|   |   |
 |   |   +---kubernetes
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   +---base
 |   |   |   |       ai-modules-deployment.yaml
 |   |   |   |       backend-deployment.yaml
@@ -3957,39 +3957,39 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       secrets.yaml
 |   |   |   |       service.yaml
 |   |   |   |       storage.yaml
-|   |   |   |       
+|   |   |   |
 |   |   |   +---overlays
 |   |   |   |   |   README.md
-|   |   |   |   |   
+|   |   |   |   |
 |   |   |   |   +---dev
 |   |   |   |   |       kustomization.yaml
 |   |   |   |   |       README.md
-|   |   |   |   |       
+|   |   |   |   |
 |   |   |   |   +---local
 |   |   |   |   |       kustomization.yaml
 |   |   |   |   |       README.md
-|   |   |   |   |       
+|   |   |   |   |
 |   |   |   |   +---prod
 |   |   |   |   |       kustomization.yaml
 |   |   |   |   |       README.md
-|   |   |   |   |       
+|   |   |   |   |
 |   |   |   |   +---staging
 |   |   |   |   |       kustomization.yaml
 |   |   |   |   |       README.md
-|   |   |   |   |       
+|   |   |   |   |
 |   |   |   |   \---testnet
 |   |   |   |           kustomization.yaml
 |   |   |   |           README.md
-|   |   |   |           
+|   |   |   |
 |   |   |   \---scripts
 |   |   |           cleanup.sh
 |   |   |           deploy.sh
 |   |   |           README.md
-|   |   |           
+|   |   |
 |   |   +---migration
 |   |   |       001-init.sql
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---scripts
 |   |   |       backup-db.sh
 |   |   |       deploy-all.sh
@@ -3998,13 +3998,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       restore-db.sh
 |   |   |       update-all.sh
-|   |   |       
+|   |   |
 |   |   +---secrets
 |   |   |       dev.secrets.enc
 |   |   |       example.secrets.yaml
 |   |   |       prod.secrets.enc
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---terraform
 |   |       |   main.tf
 |   |       |   outputs.tf
@@ -4013,27 +4013,27 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       |   secrets.auto.tfvars
 |   |       |   variables.tf
 |   |       |   versions.tf
-|   |       |   
+|   |       |
 |   |       +---modules
 |   |       |   |   README.md
-|   |       |   |   
+|   |       |   |
 |   |       |   +---db
 |   |       |   |       README.md
-|   |       |   |       
+|   |       |   |
 |   |       |   +---k8s
 |   |       |   |       README.md
-|   |       |   |       
+|   |       |   |
 |   |       |   +---storage
 |   |       |   |       README.md
-|   |       |   |       
+|   |       |   |
 |   |       |   \---vpc
 |   |       |           README.md
-|   |       |           
+|   |       |
 |   |       \---scripts
 |   |               apply.sh
 |   |               plan.sh
 |   |               README.md
-|   |               
+|   |
 |   +---docs
 |   |   |   ai-integration.md
 |   |   |   analytics.md
@@ -4100,7 +4100,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   user-guide.md
 |   |   |   widgets.md
 |   |   |   xai-guide.md
-|   |   |   
+|   |   |
 |   |   +---ai
 |   |   |       ai-engine.md
 |   |   |       ai-ml-pipeline.md
@@ -4109,7 +4109,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ai-testing-guide.md
 |   |   |       ai-upgradeability.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---api
 |   |   |       ai-engine-api.yaml
 |   |   |       backend-api.yaml
@@ -4118,13 +4118,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       plugin-api.yaml
 |   |   |       README.md
 |   |   |       simulation-api.yaml
-|   |   |       
+|   |   |
 |   |   +---audit
 |   |   |       audit-log-spec.md
 |   |   |       incident-review-checklist.md
 |   |   |       operator-audit-demo.csv
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---compliance
 |   |   |       aml-logs.md
 |   |   |       compliance-audit.md
@@ -4132,7 +4132,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       kyc-flow.md
 |   |   |       README.md
 |   |   |       sanctions-workflow.md
-|   |   |       
+|   |   |
 |   |   +---dashboard
 |   |   |       ai-dashboard.md
 |   |   |       dashboard-api.md
@@ -4142,7 +4142,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       overlays-integration.md
 |   |   |       plugin-status-panel.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---diagrams
 |   |   |       ai-integration.drawio
 |   |   |       ai-xai-pipeline.svg
@@ -4161,7 +4161,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       risk-flow.drawio
 |   |   |       simulation-workflow.drawio
 |   |   |       state-context-flow.png
-|   |   |       
+|   |   |
 |   |   +---formal
 |   |   |       ai-formal-verification.md
 |   |   |       contract-formal-verification.md
@@ -4169,14 +4169,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       invariants.md
 |   |   |       model-specs.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---legacy
 |   |   |       deprecated-architecture.md
 |   |   |       legacy-api.md
 |   |   |       legacy-upgrade-guide.md
 |   |   |       old-release-notes.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---migration
 |   |   |       ai-migration.md
 |   |   |       backend-migration.md
@@ -4184,7 +4184,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       db-migration.md
 |   |   |       plugin-migration.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---onboarding
 |   |   |       ai-module-onboarding.md
 |   |   |       auditor-onboarding.md
@@ -4193,7 +4193,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       operator-onboarding.md
 |   |   |       plugin-onboarding.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---playbooks
 |   |   |       disaster-recovery.md
 |   |   |       incident-playbook.md
@@ -4201,7 +4201,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       rollback-playbook.md
 |   |   |       upgrade-playbook.md
-|   |   |       
+|   |   |
 |   |   +---risk
 |   |   |       ai-risk.md
 |   |   |       bridge-risk.md
@@ -4213,7 +4213,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       risk-dashboard.md
 |   |   |       trade-risk.md
-|   |   |       
+|   |   |
 |   |   +---samples
 |   |   |       demo-user.csv
 |   |   |       onboarding-example.md
@@ -4221,14 +4221,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       sample-config.json
 |   |   |       sample-theme.json
-|   |   |       
+|   |   |
 |   |   \---templates
 |   |           context-provider-template.js
 |   |           operator-alert-template.md
 |   |           plugin-template.js
 |   |           README.md
 |   |           widget-template.jsx
-|   |           
+|   |
 |   +---extensions
 |   |   |   CHANGELOG.md
 |   |   |   extension-api.md
@@ -4237,13 +4237,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   manifest.json
 |   |   |   README.md
 |   |   |   registry.json
-|   |   |   
+|   |   |
 |   |   +---assets
 |   |   |       extension-banner-sample.png
 |   |   |       extension-icon-sample.svg
 |   |   |       extension-preview-theme.css
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---community
 |   |   |       CommunityDiscussionThread.jsx
 |   |   |       CommunityExtensionManifest.json
@@ -4252,13 +4252,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ExtensionSubmitForm.jsx
 |   |   |       README.md
 |   |   |       VotingWidget.jsx
-|   |   |       
+|   |   |
 |   |   +---core
 |   |   |       CoreExtensionLoader.js
 |   |   |       CoreExtensionSampleWidget.jsx
 |   |   |       CoreExtensionsRegistry.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---demo
 |   |   |       AnimationPlayground.jsx
 |   |   |       DarkModeDemoWidget.jsx
@@ -4267,7 +4267,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       ThemeDemoPanel.jsx
 |   |   |       UXFeedbackCollector.jsx
-|   |   |       
+|   |   |
 |   |   +---integration
 |   |   |       AnalyticsIntegrationPanel.jsx
 |   |   |       ARPluginIntegrationPanel.jsx
@@ -4278,7 +4278,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       WebhookBridgeExtension.jsx
 |   |   |       XAIExtensionAdapter.js
-|   |   |       
+|   |   |
 |   |   +---labs
 |   |   |       AdvancedStrategyLab.jsx
 |   |   |       AIPrototypePanel.jsx
@@ -4288,7 +4288,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       LabsLauncherPanel.jsx
 |   |   |       PatternExplorerLab.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---plugin
 |   |   |       AdvancedPluginDemo.jsx
 |   |   |       plugin-manifest.json
@@ -4297,7 +4297,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       PluginQuickStartSample.jsx
 |   |   |       PluginReadme.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---samples
 |   |   |       extension-onboarding.md
 |   |   |       extension-sample-api.js
@@ -4305,7 +4305,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       extension-sample-doc.md
 |   |   |       extension-sample-widget.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---tests
 |   |   |       AnalyticsIntegrationPanel.test.js
 |   |   |       CommunityGalleryPanel.test.js
@@ -4315,7 +4315,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       LabsLauncherPanel.test.js
 |   |   |       PluginQuickStartSample.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---utils
 |   |           extensionDevHelpers.js
 |   |           extensionHotReload.js
@@ -4324,11 +4324,11 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           extensionValidator.js
 |   |           README.md
 |   |           registerExtension.js
-|   |           
+|   |
 |   +---fixtures
 |   |   |   CHANGELOG.md
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---analytics
 |   |   |       anomaly-events-demo.csv
 |   |   |       gas-costs-demo.csv
@@ -4339,7 +4339,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       risk-profile-demo.json
 |   |   |       roi-demo.csv
 |   |   |       trade-history-demo.csv
-|   |   |       
+|   |   |
 |   |   +---api
 |   |   |       mock-ai-inference.json
 |   |   |       mock-analytics-data.json
@@ -4355,7 +4355,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       mock-user-session.json
 |   |   |       mock-websocket-events.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---ar
 |   |   |       ar-incident-demo.json
 |   |   |       ar-user-preset-demo.json
@@ -4363,7 +4363,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       live-pool-demo.json
 |   |   |       README.md
 |   |   |       xr-demo-assets.json
-|   |   |       
+|   |   |
 |   |   +---demo
 |   |   |       ai-widget-demo-data.json
 |   |   |       dashboard-demo-metrics.json
@@ -4375,14 +4375,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       sandbox-stories.json
 |   |   |       trade-volume-demo.json
 |   |   |       xai-overlay-demo.json
-|   |   |       
+|   |   |
 |   |   +---misc
 |   |   |       deprecated-demo.json
 |   |   |       migration-sample.json
 |   |   |       README.md
 |   |   |       seed-data.json
 |   |   |       test-data.json
-|   |   |       
+|   |   |
 |   |   +---notifications
 |   |   |       alert-demo.json
 |   |   |       banner-demo.json
@@ -4390,7 +4390,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       operator-notification-demo.json
 |   |   |       README.md
 |   |   |       webhook-demo.json
-|   |   |       
+|   |   |
 |   |   +---operator
 |   |   |       audit-timeline-demo.json
 |   |   |       escalation-demo.json
@@ -4398,26 +4398,26 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       kill-switch-events-demo.json
 |   |   |       README.md
 |   |   |       shift-demo-schedule.json
-|   |   |       
+|   |   |
 |   |   +---plugins
 |   |   |       extension-gallery-demo.json
 |   |   |       plugin-config-demo.json
 |   |   |       plugin-marketplace-demo.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---test-utils
 |   |   |       demo-api-client.js
 |   |   |       fixtures.test.js
 |   |   |       README.md
 |   |   |       sample-mock-store.js
-|   |   |       
+|   |   |
 |   |   \---user
 |   |           demo-locale-settings.json
 |   |           demo-user-profile.json
 |   |           onboarding-tour-demo.json
 |   |           README.md
 |   |           theme-preset-demo.json
-|   |           
+|   |
 |   +---hooks
 |   |       hooks.test.js
 |   |       index.js
@@ -4479,7 +4479,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       useWidgetTestHarness.js
 |   |       useXAI.js
 |   |       useXRScene.js
-|   |       
+|   |
 |   +---integration
 |   |       AlertSyncAdapter.js
 |   |       AnalyticsAdapter.js
@@ -4519,7 +4519,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       XAIAdapter.js
 |   |       XAIAdapter.test.js
 |   |       XRCanvasSync.js
-|   |       
+|   |
 |   +---layouts
 |   |       AppLayout.jsx
 |   |       ARLayout.jsx
@@ -4534,7 +4534,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       SplitPaneLayout.jsx
 |   |       StickyMenuBar.jsx
 |   |       Topbar.jsx
-|   |       
+|   |
 |   +---locales
 |   |   |   add-new-language.md
 |   |   |   ar.json
@@ -4573,13 +4573,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   translate-best-practices.md
 |   |   |   update-locale-cdn.js
 |   |   |   zh.json
-|   |   |   
+|   |   |
 |   |   \---custom
 |   |           custom-strings-demo.json
 |   |           onboarding-tour-hi.json
 |   |           operator-flows-ta.json
 |   |           README.md
-|   |           
+|   |
 |   +---mock
 |   |   |   api-handlers.js
 |   |   |   api-handlers.test.js
@@ -4602,7 +4602,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   scenario-switcher.js
 |   |   |   setup-mock-env.js
 |   |   |   socket-mock-server.js
-|   |   |   
+|   |   |
 |   |   +---api-responses
 |   |   |       mock-ai-inference.json
 |   |   |       mock-analytics-data.json
@@ -4618,7 +4618,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       mock-user-session.json
 |   |   |       mock-websocket-events.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---factories
 |   |   |       aiInferenceFactory.js
 |   |   |       analyticsFactory.js
@@ -4628,14 +4628,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       tradeFactory.js
 |   |   |       userFactory.js
-|   |   |       
+|   |   |
 |   |   \---scenario-presets
 |   |           ai-demo-state.json
 |   |           incident-demo-state.json
 |   |           operator-demo-state.json
 |   |           README.md
 |   |           trade-surge-state.json
-|   |           
+|   |
 |   +---modals
 |   |       AccountSwitchDialog.jsx
 |   |       AIExplainDialog.jsx
@@ -4673,7 +4673,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       TourDialog.jsx
 |   |       WelcomeDialog.jsx
 |   |       XAIOverlayDialog.jsx
-|   |       
+|   |
 |   +---notifications
 |   |   |   AIInsightAlert.jsx
 |   |   |   AlertBadge.jsx
@@ -4706,15 +4706,15 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   ToastContainer.jsx
 |   |   |   useNotifications.js
 |   |   |   WebhookAlert.jsx
-|   |   |   
+|   |   |
 |   |   \---testData
 |   |           demo-notifications.json
 |   |           incident-alerts-demo.json
 |   |           README.md
-|   |           
+|   |
 |   +---operator
 |   |       README.md
-|   |       
+|   |
 |   +---overlays
 |   |       AlertBanner.jsx
 |   |       ARIncidentOverlay.jsx
@@ -4744,7 +4744,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       TradePathOverlay.jsx
 |   |       XAIHeatmapOverlay.jsx
 |   |       XAIOverlay.jsx
-|   |       
+|   |
 |   +---pages
 |   |   |   404.js
 |   |   |   500.js
@@ -4815,10 +4815,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   xai.js
 |   |   |   [...slug].js
 |   |   |   _app.js
-|   |   |   _document.js
+|   |   |_document.js
 |   |   |   _error.js
-|   |   |   _middleware.js
-|   |   |   
+|   |   |_middleware.js
+|   |   |
 |   |   \---api
 |   |           ai.js
 |   |           arb.js
@@ -4832,7 +4832,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           README.md
 |   |           user.js
 |   |           webhook.js
-|   |           
+|   |
 |   +---plugins
 |   |   |   atomic-swap-batched.ts
 |   |   |   bridge-latency-sniper.ts
@@ -4893,7 +4893,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   PluginValidator.js
 |   |   |   PluginVersion.js
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---alpha-signal
 |   |   |   |   ai-signal-orchestrator.js
 |   |   |   |   alpha-nft-issuer.js
@@ -4906,7 +4906,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   trend-analyzer-v2.js
 |   |   |   |   trend-analyzer.js
 |   |   |   |   whale-signal.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       alerts-integration.md
 |   |   |   |       alpha-reputation-scores.md
@@ -4914,7 +4914,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       alpha-voting-protocol.md
 |   |   |   |       arb-patterns.md
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           ai-signal-orchestrator.test.js
 |   |   |           alpha-nft-issuer.test.js
@@ -4927,7 +4927,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           trend-analyzer-v2.test.js
 |   |   |           trend-analyzer.test.js
 |   |   |           whale-signal.test.js
-|   |   |           
+|   |   |
 |   |   +---bridge-adapters
 |   |   |   |   avalanche-adapter.js
 |   |   |   |   axelar-adapter.js
@@ -4941,7 +4941,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   relaychain-adapter.js
 |   |   |   |   symbiosis-adapter.js
 |   |   |   |   wormhole-adapter.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       avalanche-guide.md
 |   |   |   |       bridge-integrations.md
@@ -4949,7 +4949,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       polygon-zkevm-guide.md
 |   |   |   |       README.md
 |   |   |   |       relaychain-integration.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           avalanche-adapter.test.js
 |   |   |           axelar-adapter.test.js
@@ -4963,7 +4963,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           relaychain-adapter.test.js
 |   |   |           symbiosis-adapter.test.js
 |   |   |           wormhole-adapter.test.js
-|   |   |           
+|   |   |
 |   |   +---compliance
 |   |   |   |   adverse-media-scanner.js
 |   |   |   |   blacklist-module.js
@@ -4977,7 +4977,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   README.md
 |   |   |   |   sanctions-checker.js
 |   |   |   |   whitelist-module.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       compliance-checks.md
 |   |   |   |       forensics-guide.md
@@ -4985,7 +4985,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       kyc-flows.md
 |   |   |   |       README.md
 |   |   |   |       sanctions-lists.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           adverse-media-scanner.test.js
 |   |   |           blacklist-module.test.js
@@ -4999,7 +4999,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           README.md
 |   |   |           sanctions-checker.test.js
 |   |   |           whitelist-module.test.js
-|   |   |           
+|   |   |
 |   |   +---dex-adapters
 |   |   |   |   aggregator-adapter.js
 |   |   |   |   balancer-adapter.js
@@ -5020,7 +5020,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   uniswap-v3-adapter.js
 |   |   |   |   vertex-adapter.js
 |   |   |   |   woofi-adapter.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       adapter-development.md
 |   |   |   |       dex-architecture.md
@@ -5029,7 +5029,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       README.md
 |   |   |   |       slippage-models.md
 |   |   |   |       supported-dexes.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           aggregator-adapter.test.js
 |   |   |           balancer-adapter.test.js
@@ -5050,7 +5050,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           uniswap-v3-adapter.test.js
 |   |   |           vertex-adapter.test.js
 |   |   |           woofi-adapter.test.js
-|   |   |           
+|   |   |
 |   |   +---docs
 |   |   |       adapter-api.md
 |   |   |       alpha-patterns.md
@@ -5062,7 +5062,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       registry-guide.md
 |   |   |       smart-contract-integration.md
-|   |   |       
+|   |   |
 |   |   +---flashloan
 |   |   |   |   aave-adapter.js
 |   |   |   |   angle-adapter.js
@@ -5077,7 +5077,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   radiant-adapter.js
 |   |   |   |   README.md
 |   |   |   |   stargate-adapter.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       audit-log.md
 |   |   |   |       flashloan-architecture.md
@@ -5085,7 +5085,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       provider-integrations.md
 |   |   |   |       README.md
 |   |   |   |       upgrade-guide.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           aave-adapter.test.js
 |   |   |           angle-adapter.test.js
@@ -5100,7 +5100,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           radiant-adapter.test.js
 |   |   |           README.md
 |   |   |           stargate-adapter.test.js
-|   |   |           
+|   |   |
 |   |   +---insurance
 |   |   |   |   claim-auditor.js
 |   |   |   |   claim-verifier.js
@@ -5112,7 +5112,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   README.md
 |   |   |   |   risk-assessment-plugin.js
 |   |   |   |   risk-modeler.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       claim-workflow.md
 |   |   |   |       insurance-architecture.md
@@ -5120,7 +5120,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       README.md
 |   |   |   |       risk-assessment-methods.md
 |   |   |   |       risk-models.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           claim-auditor.test.js
 |   |   |           claim-verifier.test.js
@@ -5132,7 +5132,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           README.md
 |   |   |           risk-assessment-plugin.test.js
 |   |   |           risk-modeler.test.js
-|   |   |           
+|   |   |
 |   |   +---intent-solvers
 |   |   |   |   auction-intent-solver.js
 |   |   |   |   batch-intent-processor.js
@@ -5146,14 +5146,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   sandwich-intent-solver.js
 |   |   |   |   sniper-intent-solver.js
 |   |   |   |   uniswapx-intent-solver.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       auction-design.md
 |   |   |   |       eco-intents.md
 |   |   |   |       intent-architecture.md
 |   |   |   |       intent-merging.md
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           auction-intent-solver.test.js
 |   |   |           batch-intent-processor.test.js
@@ -5167,7 +5167,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           sandwich-intent-solver.test.js
 |   |   |           sniper-intent-solver.test.js
 |   |   |           uniswapx-intent-solver.test.js
-|   |   |           
+|   |   |
 |   |   +---internal
 |   |   |       interface-definitions.ts
 |   |   |       migration-tool.js
@@ -5177,7 +5177,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       registry.ts
 |   |   |       test-utils.js
-|   |   |       
+|   |   |
 |   |   +---marketplace
 |   |   |       governance-marketplace.js
 |   |   |       module-marketplace-registry.json
@@ -5185,7 +5185,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       plugin-marketplace-registry.json
 |   |   |       plugin-marketplace.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---model-marketplace
 |   |   |       ai-model-marketplace-registry.json
 |   |   |       ai-model-marketplace.js
@@ -5193,7 +5193,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       ai-model-proxy.js
 |   |   |       ai-model-validator.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---oracles
 |   |   |   |   ai-oracle.js
 |   |   |   |   chainlink-oracle.js
@@ -5206,14 +5206,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   time-weighted-oracle.js
 |   |   |   |   volatility-oracle.js
 |   |   |   |   zero-knowledge-oracle.js
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       data-sources.md
 |   |   |   |       oracle-integrations.md
 |   |   |   |       README.md
 |   |   |   |       risk-mitigation.md
 |   |   |   |       zk-proofs.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           ai-oracle.test.js
 |   |   |           chainlink-oracle.test.js
@@ -5226,14 +5226,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           time-weighted-oracle.test.js
 |   |   |           volatility-oracle.test.js
 |   |   |           zero-knowledge-oracle.test.js
-|   |   |           
+|   |   |
 |   |   +---samples
 |   |   |       demo-plugin-index.js
 |   |   |       demo-plugin-manifest.json
 |   |   |       demo-plugin-ui.jsx
 |   |   |       plugin-boilerplate.md
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---social-impact
 |   |   |   |   carbon-offset-module.js
 |   |   |   |   charity-oracle.js
@@ -5245,7 +5245,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   impact-scoring.js
 |   |   |   |   impact-voting.js
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   +---docs
 |   |   |   |       charity-protocols.md
 |   |   |   |       csr-programs.md
@@ -5253,7 +5253,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |       impact-scoring-models.md
 |   |   |   |       README.md
 |   |   |   |       social-impact-flows.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---tests
 |   |   |           carbon-offset-module.test.js
 |   |   |           charity-oracle.test.js
@@ -5265,14 +5265,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |           impact-scoring.test.js
 |   |   |           impact-voting.test.js
 |   |   |           README.md
-|   |   |           
+|   |   |
 |   |   +---template
 |   |   |       adapter-template.js
 |   |   |       model-template.js
 |   |   |       plugin-template.js
 |   |   |       README.md
 |   |   |       template-config.json
-|   |   |       
+|   |   |
 |   |   \---tests
 |   |           ai-model-marketplace.test.js
 |   |           atomic-swap-batched.test.ts
@@ -5286,7 +5286,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           plugins-integration.test.js
 |   |           README.md
 |   |           test-utils.js
-|   |           
+|   |
 |   +---presets
 |   |   |   advanced-presets.json
 |   |   |   ai-presets.json
@@ -5306,20 +5306,20 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   theme-presets.json
 |   |   |   ui-presets.json
 |   |   |   user-presets.json
-|   |   |   
+|   |   |
 |   |   +---custom-presets
 |   |   |       high-volatility-preset.json
 |   |   |       minimal-view-preset.json
 |   |   |       night-trading-preset.json
 |   |   |       README.md
 |   |   |       sample-operator-preset.json
-|   |   |       
+|   |   |
 |   |   \---templates
 |   |           dev-preset.json
 |   |           onboarding-preset.json
 |   |           preset-template.json
 |   |           README.md
-|   |           
+|   |
 |   +---preview
 |   |       CHANGELOG.md
 |   |       feature-flags.json
@@ -5351,7 +5351,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       useFeatureFlags.js
 |   |       usePreviewStatus.js
 |   |       webhook-handler.js
-|   |       
+|   |
 |   +---public
 |   |   |   .htaccess
 |   |   |   android-chrome-192x192.png
@@ -5388,41 +5388,41 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   tailwind.css
 |   |   |   theme.css
 |   |   |   twitter-card.png
-|   |   |   
+|   |   |
 |   |   +---backgrounds
 |   |   |       dark-bg.png
 |   |   |       dashboard-bg.svg
 |   |   |       landing-bg.jpg
 |   |   |       light-bg.png
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---banners
 |   |   |       beta-banner.svg
 |   |   |       incident-banner.svg
 |   |   |       promo-banner.png
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---brand
 |   |   |       alt-logo.svg
 |   |   |       full-logo.svg
 |   |   |       icon.svg
 |   |   |       README.md
 |   |   |       wordmark.svg
-|   |   |       
+|   |   |
 |   |   +---downloads
 |   |   |       apex-protocol-whitepaper.pdf
 |   |   |       quickstart.pdf
 |   |   |       README.md
 |   |   |       terms-and-conditions.pdf
 |   |   |       user-guide.pdf
-|   |   |       
+|   |   |
 |   |   +---fonts
 |   |   |       custom-icons.ttf
 |   |   |       Inter-Bold.woff2
 |   |   |       Inter-Regular.woff2
 |   |   |       README.md
 |   |   |       RobotoMono-Regular.woff2
-|   |   |       
+|   |   |
 |   |   +---icons
 |   |   |       ai-bot.png
 |   |   |       ai.svg
@@ -5437,7 +5437,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       settings.svg
 |   |   |       user.svg
 |   |   |       wallet.svg
-|   |   |       
+|   |   |
 |   |   \---onboarding
 |   |           ai-demo.svg
 |   |           operator.svg
@@ -5446,7 +5446,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           step2.svg
 |   |           step3.svg
 |   |           success.svg
-|   |           
+|   |
 |   +---sandbox
 |   |   |   AIOpsPlayground.jsx
 |   |   |   AISandbox.jsx
@@ -5470,7 +5470,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   StorybookPanel.jsx
 |   |   |   ThemeSandbox.jsx
 |   |   |   WidgetPlayground.jsx
-|   |   |   
+|   |   |
 |   |   +---demo-patterns
 |   |   |       ai-prompt-lab-demo.jsx
 |   |   |       data-viz-demo.jsx
@@ -5479,22 +5479,22 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       overlay-motion-demo.jsx
 |   |   |       README.md
 |   |   |       sandbox-patterns.md
-|   |   |       
+|   |   |
 |   |   \---presets
 |   |           ai-demo-preset.json
 |   |           README.md
 |   |           theme-preset.json
 |   |           widget-preset.json
-|   |           
+|   |
 |   +---scripts
 |   |       README.md
-|   |       
+|   |
 |   +---settings
 |   |       README.md
-|   |       
+|   |
 |   +---src
 |   |       README.md
-|   |       
+|   |
 |   +---state
 |   |   |   aiState.js
 |   |   |   analyticsState.js
@@ -5528,15 +5528,15 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   themeState.js
 |   |   |   tradesState.js
 |   |   |   userState.js
-|   |   |   
+|   |   |
 |   |   \---demo
 |   |           demo-state.json
 |   |           demo-userState.js
 |   |           README.md
-|   |           
+|   |
 |   +---stats
 |   |       README.md
-|   |       
+|   |
 |   +---styles
 |   |   |   ar.css
 |   |   |   CHANGELOG.md
@@ -5557,7 +5557,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   transitions.css
 |   |   |   utility-classes.css
 |   |   |   variables.scss
-|   |   |   
+|   |   |
 |   |   +---animations
 |   |   |       bounce.css
 |   |   |       expand.css
@@ -5566,7 +5566,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       slide.css
 |   |   |       spinner.css
-|   |   |       
+|   |   |
 |   |   +---components
 |   |   |       alert.css
 |   |   |       avatar.css
@@ -5584,7 +5584,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       timeline.css
 |   |   |       tooltip.css
 |   |   |       widget.css
-|   |   |       
+|   |   |
 |   |   \---palette
 |   |           accessibility.css
 |   |           custom-tokens.css
@@ -5593,16 +5593,16 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           operator.css
 |   |           README.md
 |   |           solarized.css
-|   |           
+|   |
 |   +---testData
 |   |       README.md
-|   |       
+|   |
 |   +---tests
 |   |   |   CHANGELOG.md
 |   |   |   patterns.md
 |   |   |   README.md
 |   |   |   test-best-practices.md
-|   |   |   
+|   |   |
 |   |   +---ai
 |   |   |       ai-dashboard-integration.test.py
 |   |   |       ai-module-smoke.test.py
@@ -5611,13 +5611,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       route-selection.test.py
 |   |   |       volatility-model.test.py
-|   |   |       
+|   |   |
 |   |   +---chaos
 |   |   |       incident-chaos.test.js
 |   |   |       node-crash-recovery.test.js
 |   |   |       README.md
 |   |   |       system-chaos.test.js
-|   |   |       
+|   |   |
 |   |   +---components
 |   |   |       Alert.test.jsx
 |   |   |       Avatar.test.jsx
@@ -5635,7 +5635,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       Timeline.test.jsx
 |   |   |       Tooltip.test.jsx
 |   |   |       Widget.test.jsx
-|   |   |       
+|   |   |
 |   |   +---contracts
 |   |   |       alpha-nft.test.js
 |   |   |       batch-executor.test.js
@@ -5650,7 +5650,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       reputation-oracle.test.js
 |   |   |       upgradable-proxy.test.js
 |   |   |       zk-proof.test.js
-|   |   |       
+|   |   |
 |   |   +---coverage
 |   |   |   |   ai-coverage.test.py
 |   |   |   |   backend-coverage.test.js
@@ -5660,10 +5660,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   |   lcov.info
 |   |   |   |   README.md
 |   |   |   |   summary.json
-|   |   |   |   
+|   |   |   |
 |   |   |   \---.nyc_output
 |   |   |           README.md
-|   |   |           
+|   |   |
 |   |   +---docs
 |   |   |       ai-testing.md
 |   |   |       chaos-testing.md
@@ -5675,7 +5675,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       snapshot-methods.md
 |   |   |       test-strategy.md
 |   |   |       test-troubleshooting.md
-|   |   |       
+|   |   |
 |   |   +---e2e
 |   |   |       ai-e2e.test.py
 |   |   |       ai-panel.e2e.js
@@ -5690,12 +5690,12 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       regression-suite.e2e.js
 |   |   |       theme-switch.e2e.js
-|   |   |       
+|   |   |
 |   |   +---fixtures
 |   |   |       example-analytics.json
 |   |   |       example-trades.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---flows
 |   |   |       AuthFlow.test.js
 |   |   |       NotificationFlow.test.js
@@ -5704,21 +5704,21 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       PresetSwitchFlow.test.js
 |   |   |       README.md
 |   |   |       TradeExecFlow.test.js
-|   |   |       
+|   |   |
 |   |   +---fork
 |   |   |       block-drift-fork.test.js
 |   |   |       mainnet-fork.test.js
 |   |   |       mempool-chaos.test.js
 |   |   |       README.md
 |   |   |       zk-sim-fork.test.js
-|   |   |       
+|   |   |
 |   |   +---fuzz
 |   |   |       ai-fuzz.test.py
 |   |   |       fork-fuzz.test.js
 |   |   |       fuzz-arb-paths.test.js
 |   |   |       plugin-fuzz.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---integration
 |   |   |       ai-integration.test.py
 |   |   |       contracts-integration.test.js
@@ -5729,25 +5729,25 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       storage-integration.test.js
 |   |   |       utils-integration.test.js
 |   |   |       watchdog-integration.test.js
-|   |   |       
+|   |   |
 |   |   +---legacy
 |   |   |       legacy-tests-summary.md
 |   |   |       migration-checks.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---migration
 |   |   |       contract-migration.test.js
 |   |   |       db-migration.test.js
 |   |   |       plugin-migration.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---mocks
 |   |   |       mock-api.js
 |   |   |       mock-plugin.json
 |   |   |       mock-theme.json
 |   |   |       mock-user.json
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---pages
 |   |   |       AiPage.test.jsx
 |   |   |       IndexPage.test.jsx
@@ -5757,13 +5757,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       SettingsPage.test.jsx
 |   |   |       TradesPage.test.jsx
-|   |   |       
+|   |   |
 |   |   +---performance
 |   |   |       ai-latency-benchmark.test.py
 |   |   |       fork-benchmark.test.js
 |   |   |       gas-benchmark.test.js
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---plugin
 |   |   |       alpha-signal-plugins.test.js
 |   |   |       bridge-adapters.test.js
@@ -5777,7 +5777,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       plugin-marketplace.test.js
 |   |   |       README.md
 |   |   |       template-plugins.test.js
-|   |   |       
+|   |   |
 |   |   +---python
 |   |   |       ai-agent-tests.py
 |   |   |       legacy-ml-tests.py
@@ -5785,7 +5785,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       README.md
 |   |   |       strategy-selection-tests.py
 |   |   |       token-score-tests.py
-|   |   |       
+|   |   |
 |   |   +---regression
 |   |   |       darkmode-regression.test.js
 |   |   |       failed-trade-replay.test.js
@@ -5796,19 +5796,19 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       snapshot.test.js
 |   |   |       upgrade-regression.test.js
 |   |   |       visual-regression.test.js
-|   |   |       
+|   |   |
 |   |   +---runner
 |   |   |       foundry.toml
 |   |   |       hardhat.config.js
 |   |   |       pytest.ini
 |   |   |       README.md
 |   |   |       test-runner.config.js
-|   |   |       
+|   |   |
 |   |   +---snapshot
 |   |   |       README.md
 |   |   |       snapshot-audit.test.js
 |   |   |       snapshot-compare.test.js
-|   |   |       
+|   |   |
 |   |   +---state
 |   |   |       aiState.test.js
 |   |   |       analyticsState.test.js
@@ -5828,7 +5828,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       themeState.test.js
 |   |   |       tradesState.test.js
 |   |   |       userState.test.js
-|   |   |       
+|   |   |
 |   |   +---unit
 |   |   |       ai-unit.test.py
 |   |   |       contracts-unit.test.js
@@ -5840,7 +5840,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       storage-unit.test.js
 |   |   |       utils-unit.test.js
 |   |   |       watchdog-unit.test.js
-|   |   |       
+|   |   |
 |   |   \---utils
 |   |           analytics-utils.test.js
 |   |           api-rate-limiter-utils.test.js
@@ -5866,7 +5866,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           stateful-cache-utils.test.js
 |   |           tx-bundle-utils.test.js
 |   |           volatility-watchdog-utils.test.js
-|   |           
+|   |
 |   +---theme
 |   |   |   CHANGELOG.md
 |   |   |   fontTokens.js
@@ -5888,18 +5888,18 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   themeUtils.js
 |   |   |   typography.js
 |   |   |   useTheme.js
-|   |   |   
+|   |   |
 |   |   +---demo
 |   |   |       README.md
 |   |   |       theme-demo.js
 |   |   |       theme-gallery.md
-|   |   |       
+|   |   |
 |   |   +---fonts
 |   |   |       custom-fonts.js
 |   |   |       Inter.js
 |   |   |       README.md
 |   |   |       RobotoMono.js
-|   |   |       
+|   |   |
 |   |   \---palettes
 |   |           accessibility.js
 |   |           custom.js
@@ -5908,36 +5908,36 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           operator.js
 |   |           README.md
 |   |           solarized.js
-|   |           
+|   |
 |   +---themes
 |   |       README.md
-|   |       
+|   |
 |   +---uploads
 |   |   |   CHANGELOG.md
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---csv
 |   |   |       ai-train-data.csv
 |   |   |       analytics-demo.csv
 |   |   |       custom-upload.csv
 |   |   |       README.md
 |   |   |       trade-log.csv
-|   |   |       
+|   |   |
 |   |   +---exports
 |   |   |       csv-export-2025-07-31.zip
 |   |   |       full-backup-2025-07-31.zip
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---logs
 |   |   |       ai-session-logs.log
 |   |   |       README.md
 |   |   |       upload-errors-2025-07-31.log
-|   |   |       
+|   |   |
 |   |   +---misc
 |   |   |       ai-result-report.docx
 |   |   |       onboarding-demo.pdf
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---model-weights
 |   |   |       custom-plugin-model.bin
 |   |   |       finGPT-7b.bin
@@ -5945,22 +5945,22 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       investlm-13b.bin
 |   |   |       README.md
 |   |   |       xai-tiny.onnx
-|   |   |       
+|   |   |
 |   |   +---presets
 |   |   |       custom-operator-preset.json
 |   |   |       night-trading-preset.json
 |   |   |       README.md
 |   |   |       user-backup-2025-07-31.json
-|   |   |       
+|   |   |
 |   |   \---users
 |   |       |   README.md
-|   |       |   
+|   |       |
 |   |       \---pavan_korukonda
 |   |               avatar.png
 |   |               custom-ai-data.csv
 |   |               README.md
 |   |               uploaded-preset.json
-|   |               
+|   |
 |   +---utils
 |   |       aiUtils.js
 |   |       analyticsUtils.js
@@ -5992,7 +5992,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       typeHelpers.js
 |   |       validators.js
 |   |       wsUtils.js
-|   |       
+|   |
 |   +---widgets
 |   |   |   AIInsightWidget.jsx
 |   |   |   AlertBannerWidget.jsx
@@ -6035,15 +6035,15 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   WidgetSettings.jsx
 |   |   |   WidgetTestPanel.jsx
 |   |   |   XAIWidget.jsx
-|   |   |   
+|   |   |
 |   |   +---ext
 |   |   |       CustomPartnerWidget.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---legacy
 |   |           OldPnLWidget.jsx
 |   |           README.md
-|   |           
+|   |
 |   \---xai
 |       |   AttentionMap.jsx
 |       |   CHANGELOG.md
@@ -6067,19 +6067,19 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |   xaiTokens.js
 |       |   XAIToolbar.jsx
 |       |   xaiUtils.js
-|       |   
+|       |
 |       +---demo
 |       |       README.md
 |       |       XAIOverlayDemo.md
 |       |       XAIWidgetDemo.jsx
-|       |       
+|       |
 |       \---ext
 |               PartnerXAIWidget.jsx
 |               README.md
-|               
+|
 +---data
 |   |   README.md
-|   |   
+|   |
 |   +---ai-feedback
 |   |       ai-decision-trace.json
 |   |       ai-feedback-format-history.md
@@ -6089,34 +6089,34 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       ai-operator-feedback.json
 |   |       ai-review-log.json
 |   |       README.md
-|   |       
+|   |
 |   +---analytics
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---ai-analysis
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---ai-explainer
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---anomaly
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---dashboards
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---performance
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---regression
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---timeseries
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---trade-metrics
 |   |           README.md
-|   |           
+|   |
 |   +---audit-trails
 |   |       asset-flows.json
 |   |       change-log.json
@@ -6130,32 +6130,32 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       schema-upgrade.json
 |   |       system-health-audit.json
 |   |       withdrawal-log.json
-|   |       
+|   |
 |   +---backups
 |   |   |   backup-meta.json
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---ai-model-weights
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---compliance-snapshots
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---config-dump
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---daily
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---db-dumps
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---monthly
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---weekly
 |   |           README.md
-|   |           
+|   |
 |   +---compliance-archive
 |   |       aml-logs.json
 |   |       audit-export-20250701.csv
@@ -6168,7 +6168,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       regulatory-changelog.json
 |   |       sanctions-checks.json
-|   |       
+|   |
 |   +---export
 |   |       ai-feedback-export.csv
 |   |       all-in-one-export.zip
@@ -6183,7 +6183,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       regulatory-export.csv
 |   |       simulation-export.csv
 |   |       trade-history.csv
-|   |       
+|   |
 |   +---forensics
 |   |       chain-events.json
 |   |       contract-events.json
@@ -6199,7 +6199,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       reorg-events.json
 |   |       snapshot-audit.json
 |   |       trace-report.json
-|   |       
+|   |
 |   +---logs
 |   |   |   ai-inference.log
 |   |   |   alerts.log
@@ -6222,7 +6222,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   upgrades.log
 |   |   |   user-action.log
 |   |   |   webhook.log
-|   |   |   
+|   |   |
 |   |   \---legacy
 |   |           dataset-format-history.md
 |   |           deprecated-benchmarks.csv
@@ -6233,21 +6233,21 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           old-synthetic-dataset.csv
 |   |           old-trade.log
 |   |           README.md
-|   |           
+|   |
 |   +---model-weights
 |   |   |   hashes.json
 |   |   |   README.md
 |   |   |   weights-metadata.json
-|   |   |   
+|   |   |
 |   |   +---archive
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---current
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---staging
 |   |           README.md
-|   |           
+|   |
 |   +---operator
 |   |       device-fingerprints.json
 |   |       escalation-records.json
@@ -6258,32 +6258,32 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       session-history.csv
 |   |       shift-roster.json
-|   |       
+|   |
 |   +---overlays
 |   |       ar-xai-events.json
 |   |       incident-overlays.json
 |   |       legacy-overlays.json
 |   |       overlays-session-log.json
 |   |       README.md
-|   |       
+|   |
 |   +---simulation-results
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---ai-batch
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---mainnet-fork
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---regression
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---scenarios
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---shadow-fork
 |   |           README.md
-|   |           
+|   |
 |   +---simulation-snapshots
 |   |       ai-sim-snapshot-20250701.json
 |   |       README.md
@@ -6291,7 +6291,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       snapshot-20250715.json
 |   |       snapshot-20250730.json
 |   |       state-format-history.md
-|   |       
+|   |
 |   \---synthetic-datasets
 |       |   ai-benchmark-set.csv
 |       |   dataset-log.json
@@ -6303,54 +6303,54 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |   synthetic-arb.csv
 |       |   synthetic-prices.csv
 |       |   test-scenarios.json
-|       |   
+|       |
 |       \---legacy
 |               dataset-format-history.md
 |               deprecated-benchmarks.csv
 |               old-synthetic-dataset.csv
 |               README.md
-|               
+|
 +---deploy
 |   |   CHANGELOG.md
 |   |   patterns.md
 |   |   README.md
-|   |   
+|   |
 |   +---ansible
 |   |   |   inventory.ini
 |   |   |   playbook.yml
 |   |   |   README.md
 |   |   |   secrets.yml
-|   |   |   
+|   |   |
 |   |   +---group_vars
 |   |   |       all.yml
 |   |   |       prod.yml
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   +---roles
 |   |   |   |   README.md
-|   |   |   |   
+|   |   |   |
 |   |   |   +---ai-modules
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   +---backend
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   +---dashboard
 |   |   |   |       README.md
-|   |   |   |       
+|   |   |   |
 |   |   |   \---operator
 |   |   |           README.md
-|   |   |           
+|   |   |
 |   |   \---scripts
 |   |           README.md
 |   |           run-all.sh
-|   |           
+|   |
 |   +---audit
 |   |       audit-checklist.md
 |   |       cloud-posture.md
 |   |       deploy-logs.md
 |   |       README.md
-|   |       
+|   |
 |   +---docker
 |   |       ai-modules.Dockerfile
 |   |       backend.Dockerfile
@@ -6358,14 +6358,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       dashboard.Dockerfile
 |   |       operator.Dockerfile
 |   |       README.md
-|   |       
+|   |
 |   +---docker-compose
 |   |       docker-compose.dev.yml
 |   |       docker-compose.override.yml
 |   |       docker-compose.prod.yml
 |   |       docker-compose.yml
 |   |       README.md
-|   |       
+|   |
 |   +---environments
 |   |       dev.env
 |   |       env.example
@@ -6377,16 +6377,16 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       staging.env
 |   |       testnet.env
 |   |       vault.env
-|   |       
+|   |
 |   +---helm
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   \---apex-protocol
 |   |       |   Chart.yaml
 |   |       |   NOTES.txt
 |   |       |   README.md
 |   |       |   values.yaml
-|   |       |   
+|   |       |
 |   |       \---templates
 |   |               configmap.yaml
 |   |               deployment.yaml
@@ -6395,10 +6395,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |               README.md
 |   |               secrets.yaml
 |   |               service.yaml
-|   |               
+|   |
 |   +---kubernetes
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---base
 |   |   |       ai-modules-deployment.yaml
 |   |   |       backend-deployment.yaml
@@ -6412,39 +6412,39 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       secrets.yaml
 |   |   |       service.yaml
 |   |   |       storage.yaml
-|   |   |       
+|   |   |
 |   |   \---overlays
 |   |       |   README.md
-|   |       |   
+|   |       |
 |   |       +---dev
 |   |       |       kustomization.yaml
 |   |       |       README.md
-|   |       |       
+|   |       |
 |   |       +---local
 |   |       |       kustomization.yaml
 |   |       |       README.md
-|   |       |       
+|   |       |
 |   |       +---prod
 |   |       |       kustomization.yaml
 |   |       |       README.md
-|   |       |       
+|   |       |
 |   |       +---scripts
 |   |       |       cleanup.sh
 |   |       |       deploy.sh
 |   |       |       README.md
-|   |       |       
+|   |       |
 |   |       +---staging
 |   |       |       kustomization.yaml
 |   |       |       README.md
-|   |       |       
+|   |       |
 |   |       \---testnet
 |   |               kustomization.yaml
 |   |               README.md
-|   |               
+|   |
 |   +---migration
 |   |       001-init.sql
 |   |       README.md
-|   |       
+|   |
 |   +---scripts
 |   |       backup-db.sh
 |   |       deploy-all.sh
@@ -6453,13 +6453,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       restore-db.sh
 |   |       update-all.sh
-|   |       
+|   |
 |   +---secrets
 |   |       dev.secrets.enc
 |   |       example.secrets.yaml
 |   |       prod.secrets.enc
 |   |       README.md
-|   |       
+|   |
 |   \---terraform
 |       |   main.tf
 |       |   outputs.tf
@@ -6468,27 +6468,27 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |   secrets.auto.tfvars
 |       |   variables.tf
 |       |   versions.tf
-|       |   
+|       |
 |       +---modules
 |       |   |   README.md
-|       |   |   
+|       |   |
 |       |   +---db
 |       |   |       README.md
-|       |   |       
+|       |   |
 |       |   +---k8s
 |       |   |       README.md
-|       |   |       
+|       |   |
 |       |   +---storage
 |       |   |       README.md
-|       |   |       
+|       |   |
 |       |   \---vpc
 |       |           README.md
-|       |           
+|       |
 |       \---scripts
 |               apply.sh
 |               plan.sh
 |               README.md
-|               
+|
 +---docs
 |   |   api-reference.md
 |   |   architecture.md
@@ -6532,7 +6532,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   user-guide.md
 |   |   wall-of-fame.md
 |   |   whitepaper.md
-|   |   
+|   |
 |   +---adr
 |   |       0001-foundation.md
 |   |       0002-ai-design.md
@@ -6540,7 +6540,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       0004-engine.md
 |   |       0005-mev-protection.md
 |   |       README.md
-|   |       
+|   |
 |   +---ai
 |   |       architecture.md
 |   |       finGPT.md
@@ -6552,21 +6552,21 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       roadmap.md
 |   |       scoring.md
 |   |       training.md
-|   |       
+|   |
 |   +---api
 |   |       auth.md
 |   |       endpoints.md
 |   |       patterns.md
 |   |       README.md
 |   |       schemas.md
-|   |       
+|   |
 |   +---audit
 |   |       bug-bounty.md
 |   |       compliance-checklist.md
 |   |       pentest-report.md
 |   |       README.md
 |   |       security-audit.md
-|   |       
+|   |
 |   +---dashboard
 |   |       onboarding.md
 |   |       overlays.md
@@ -6577,20 +6577,20 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       theme.md
 |   |       utils.md
 |   |       widgets.md
-|   |       
+|   |
 |   +---legal
 |   |       compliance.md
 |   |       disclaimers.md
 |   |       license.md
 |   |       README.md
-|   |       
+|   |
 |   +---onboarding
 |   |       auditor-onboarding.md
 |   |       dev-onboarding.md
 |   |       faq.md
 |   |       operator-onboarding.md
 |   |       README.md
-|   |       
+|   |
 |   \---patterns
 |           anti-patterns.md
 |           api-patterns.md
@@ -6600,7 +6600,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           infra-patterns.md
 |           operator-patterns.md
 |           README.md
-|           
+|
 +---examples
 |   |   cli-examples.txt
 |   |   cli-usage.md
@@ -6608,19 +6608,19 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   mainnet-fork-sim.md
 |   |   README.md
 |   |   testnet-sim.md
-|   |   
+|   |
 |   +---ai-examples
 |   |       finGPT-demo.ipynb
 |   |       investlm-demo.ipynb
 |   |       pattern-learner-demo.ipynb
 |   |       README.md
 |   |       trade-ai-demo.csv
-|   |       
+|   |
 |   +---audit-qa
 |   |       audit-checklist-demo.md
 |   |       README.md
 |   |       simulated-bug-report.md
-|   |       
+|   |
 |   +---configs
 |   |       ai-module-config.json
 |   |       ci-example-config.json
@@ -6629,7 +6629,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       mainnet-arb-config.json
 |   |       README.md
 |   |       testnet-arb-config.json
-|   |       
+|   |
 |   +---dashboard-screenshots
 |   |       ai-insight-widget.png
 |   |       dashboard-ar-overlay.png
@@ -6637,25 +6637,25 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       dashboard-settings.png
 |   |       dashboard-trades.png
 |   |       README.md
-|   |       
+|   |
 |   +---fuzzing-examples
 |   |       arb-fuzzing-seed.json
 |   |       fuzz-results.log
 |   |       README.md
-|   |       
+|   |
 |   +---onboarding
 |   |       auditor-walkthrough.md
 |   |       dev-walkthrough.md
 |   |       faq.md
 |   |       operator-walkthrough.md
 |   |       README.md
-|   |       
+|   |
 |   +---plugin-samples
 |   |       ai-operator-plugin.js
 |   |       custom-arb-plugin.js
 |   |       demo-dex-adapter.js
 |   |       README.md
-|   |       
+|   |
 |   +---simulation-runs
 |   |       cached-mempool-report.md
 |   |       event-stream.log
@@ -6663,205 +6663,205 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       simulated-arb-day.json
 |   |       trade-history-short.csv
-|   |       
+|   |
 |   \---trade-history-examples
 |           arb-winners-2025.csv
 |           README.md
 |           test-trades-2024-01.csv
-|           
+|
 +---logs
 |   |   README.md
-|   |   
+|   |
 |   +---ai-logs
 |   |       ai-inference.log
 |   |       ai-scoring.log
 |   |       ai-training.log
 |   |       model-updates.log
 |   |       README.md
-|   |       
+|   |
 |   +---analytics-logs
 |   |       market-analysis.log
 |   |       profit-loss-report.log
 |   |       README.md
 |   |       trade-performance.log
-|   |       
+|   |
 |   +---application
 |   |       api-requests.log
 |   |       app-events.log
 |   |       error-handling.log
 |   |       README.md
 |   |       user-interactions.log
-|   |       
+|   |
 |   +---audit-logs
 |   |       audit-trail.log
 |   |       compliance-check.log
 |   |       README.md
 |   |       regulatory-report.log
-|   |       
+|   |
 |   +---contract-logs
 |   |       contract-calls.log
 |   |       contract-deployment.log
 |   |       contract-errors.log
 |   |       contract-updates.log
 |   |       README.md
-|   |       
+|   |
 |   +---debug-logs
 |   |       debug-errors.log
 |   |       debug-event-stream.log
 |   |       debug-requests.log
 |   |       README.md
-|   |       
+|   |
 |   +---event-logs
 |   |       activity-logs.log
 |   |       process-events.log
 |   |       README.md
 |   |       system-events.log
-|   |       
+|   |
 |   +---performance-logs
 |   |       cpu-usage.log
 |   |       gas-usage.log
 |   |       memory-usage.log
 |   |       network-usage.log
 |   |       README.md
-|   |       
+|   |
 |   +---security-logs
 |   |       access-logs.log
 |   |       breach-detection.log
 |   |       login-attempts.log
 |   |       permission-errors.log
 |   |       README.md
-|   |       
+|   |
 |   +---system-logs
 |   |       crash-reports.log
 |   |       error-codes.log
 |   |       README.md
 |   |       system-diagnostics.log
 |   |       uptime-monitor.log
-|   |       
+|   |
 |   +---transaction-logs
 |   |       README.md
 |   |       tx-error.log
 |   |       tx-history.log
 |   |       tx-performance.log
-|   |       
+|   |
 |   \---user-logs
 |           README.md
 |           user-activity.log
 |           user-error.log
 |           user-login.log
-|           
+|
 +---manifest
 |   |   manifest.csv
 |   |   manifest.json
 |   |   manifest.md
 |   |   README.md
 |   |   tree.txt
-|   |   
+|   |
 |   +---checksums
 |   |       integrity-report.md
 |   |       md5sums.txt
 |   |       README.md
 |   |       sha256sums.txt
-|   |       
+|   |
 |   +---diffs
 |   |       diff-latest.md
 |   |       diff-latest.txt
 |   |       diff-summary.csv
 |   |       README.md
-|   |       
+|   |
 |   +---generator
 |   |       manifest-generator.js
 |   |       README.md
 |   |       update-manifest.sh
-|   |       
+|   |
 |   +---inventory
 |   |       inventory.csv
 |   |       inventory.json
 |   |       inventory.md
 |   |       README.md
-|   |       
+|   |
 |   +---metadata
 |   |       changelog-map.md
 |   |       file-metadata.json
 |   |       labels.yaml
 |   |       README.md
 |   |       repo-meta.json
-|   |       
+|   |
 |   +---stats
 |   |       README.md
 |   |       stats.csv
 |   |       stats.json
 |   |       stats.md
-|   |       
+|   |
 |   +---templates
 |   |       inventory-template.csv
 |   |       manifest-template.md
 |   |       README.md
-|   |       
+|   |
 |   \---validation
 |           check-integrity.sh
 |           manifest-validator.js
 |           README.md
-|           
+|
 +---migrations
 |   |   .keep
 |   |   changelog.md
 |   |   migration-history.json
 |   |   README.md
-|   |   
+|   |
 |   +---backup
 |   |       backup-after.sql
 |   |       backup-before.sql
 |   |       README.md
 |   |       restore.sql
-|   |       
+|   |
 |   +---contract
 |   |       001-deploy-core.js
 |   |       002-upgrade-v1.1.js
 |   |       003-add-arb-adapter.js
 |   |       010-safe-mode-patch.js
 |   |       README.md
-|   |       
+|   |
 |   +---data
 |   |       001-seed-operators.json
 |   |       002-demo-trades.json
 |   |       003-legacy-import.js
 |   |       README.md
-|   |       
+|   |
 |   +---flyway
 |   |       flyway.conf
 |   |       README.md
 |   |       V1__init.sql
-|   |       
+|   |
 |   +---plugin
 |   |       001-register-plugins.js
 |   |       002-upgrade-plugins.js
 |   |       README.md
-|   |       
+|   |
 |   +---prisma
 |   |   |   README.md
 |   |   |   schema.prisma
-|   |   |   
+|   |   |
 |   |   \---migrations
 |   |           README.md
-|   |           
+|   |
 |   +---schema
 |   |       001-init.sql
 |   |       002-add-operator.sql
 |   |       003-arb-session.sql
 |   |       010-ai-events.sql
 |   |       README.md
-|   |       
+|   |
 |   \---scripts
 |           check-status.sh
 |           migrate-dev.sh
 |           README.md
 |           revert-migrations.sh
 |           run-migrations.sh
-|           
+|
 +---overlays
 |   |   README.md
-|   |   
+|   |
 |   +---ar
 |   |   |   ar.test.js
 |   |   |   ARConfig.js
@@ -6871,16 +6871,16 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   ARPluginHook.jsx
 |   |   |   ARStatusBar.jsx
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---demo
 |   |   |       ARDemoScreenshots.md
 |   |   |       ARDemoWidget.jsx
 |   |   |       README.md
-|   |   |       
+|   |   |
 |   |   \---ext
 |   |           PartnerARWidget.jsx
 |   |           README.md
-|   |           
+|   |
 |   +---debug
 |   |   |   debug.test.js
 |   |   |   DebugConfig.js
@@ -6888,22 +6888,22 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   DebugOverlay.jsx
 |   |   |   DebugTracePanel.jsx
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   \---demo
 |   |           DebugDemo.md
 |   |           README.md
-|   |           
+|   |
 |   +---experimental
 |   |       .keep
 |   |       ObsOverlay.jsx
 |   |       OverlayLabs.md
 |   |       README.md
-|   |       
+|   |
 |   +---extension
 |   |       OverlayExtensionAPI.js
 |   |       OverlayExtensionDemo.jsx
 |   |       README.md
-|   |       
+|   |
 |   +---incident
 |   |   |   incident.test.js
 |   |   |   IncidentActionPanel.jsx
@@ -6912,11 +6912,11 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   IncidentOverlay.jsx
 |   |   |   IncidentTimeline.jsx
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   \---demo
 |   |           IncidentDemo.md
 |   |           README.md
-|   |           
+|   |
 |   +---operator
 |   |   |   operator.test.js
 |   |   |   OperatorBanner.jsx
@@ -6925,15 +6925,15 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |   OperatorProfilePanel.jsx
 |   |   |   OperatorQAOverlay.jsx
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   \---demo
 |   |           OperatorDemo.md
 |   |           README.md
-|   |           
+|   |
 |   +---test
 |   |       OverlayTestSuite.js
 |   |       README.md
-|   |       
+|   |
 |   \---xai
 |       |   AttentionMap.jsx
 |       |   CHANGELOG.md
@@ -6955,20 +6955,20 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |       |   xaiTokens.js
 |       |   XAIToolbar.jsx
 |       |   xaiUtils.js
-|       |   
+|       |
 |       +---demo
 |       |       README.md
 |       |       XAIOverlayDemo.md
 |       |       XAIWidgetDemo.jsx
-|       |       
+|       |
 |       \---ext
 |               PartnerXAIWidget.jsx
 |               README.md
-|               
+|
 +---presets
 |   |   changelog.md
 |   |   README.md
-|   |   
+|   |
 |   +---ai
 |   |       ai-arb-demo.json
 |   |       ai-scorer-preset.json
@@ -6978,14 +6978,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       ml-test-preset.json
 |   |       pattern-learner.json
 |   |       README.md
-|   |       
+|   |
 |   +---analytics
 |   |       daily-pnl-report.json
 |   |       dashboard-analytics.json
 |   |       gas-cost-analysis.json
 |   |       README.md
 |   |       volatility-alerts.json
-|   |       
+|   |
 |   +---dashboard
 |   |       analytics-widgets.json
 |   |       dark-mode.json
@@ -6993,16 +6993,16 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       minimal-layout.json
 |   |       night-trader-ui.json
 |   |       README.md
-|   |       
+|   |
 |   +---export
 |   |       backup-2025-07-31.json
 |   |       README.md
-|   |       
+|   |
 |   +---migration
 |   |       migrate-preset-v1-v2.js
 |   |       migrate-theme-v1-v2.js
 |   |       README.md
-|   |       
+|   |
 |   +---operator
 |   |       ai-operator-preset.json
 |   |       alerts-ui.json
@@ -7011,7 +7011,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       reporting-preset.json
 |   |       wallet-preset.json
-|   |       
+|   |
 |   +---quickstart
 |   |       default-quickstart.json
 |   |       demo-dryrun.json
@@ -7019,7 +7019,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       operator-quick-preset.json
 |   |       polygon-testnet.json
 |   |       README.md
-|   |       
+|   |
 |   +---strategies
 |   |       aggressive-arb.json
 |   |       fallback-arb.json
@@ -7029,21 +7029,21 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       strategy-pack-2025Q3.json
 |   |       usdc-weth-dai.json
-|   |       
+|   |
 |   +---templates
 |   |       ai-preset-template.json
 |   |       dashboard-template.json
 |   |       operator-template.json
 |   |       preset-template.json
 |   |       README.md
-|   |       
+|   |
 |   \---user-presets
 |           backup-user-preset-2025-07.json
 |           my-custom-arb.json
 |           my-dashboard-theme.json
 |           README.md
 |           saved-strategy-preset.json
-|           
+|
 +---public
 |   |   asset-manifest.json
 |   |   browserconfig.xml
@@ -7056,7 +7056,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   robots.txt
 |   |   service-worker.js
 |   |   site.webmanifest
-|   |   
+|   |
 |   +---brand
 |   |       banner.png
 |   |       icon.png
@@ -7068,7 +7068,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       symbol-only.svg
 |   |       wordmark.svg
-|   |       
+|   |
 |   +---css
 |   |       dark-theme.css
 |   |       light-theme.css
@@ -7076,13 +7076,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       overrides.css
 |   |       README.md
 |   |       theme-vars.css
-|   |       
+|   |
 |   +---extensions
 |   |       extension-sample-bg.jpg
 |   |       partner1-logo.svg
 |   |       partner2-logo.png
 |   |       README.md
-|   |       
+|   |
 |   +---fonts
 |   |       Inter-Bold.woff2
 |   |       Inter-Regular.woff2
@@ -7090,17 +7090,17 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       JetBrainsMono-Regular.woff2
 |   |       README.md
 |   |       RobotoMono-Regular.ttf
-|   |       
+|   |
 |   +---icons
 |   |   |   README.md
-|   |   |   
+|   |   |
 |   |   +---badges
 |   |   |       ai.svg
 |   |   |       dev.svg
 |   |   |       operator.svg
 |   |   |       README.md
 |   |   |       verified.svg
-|   |   |       
+|   |   |
 |   |   +---tokens
 |   |   |       arb.svg
 |   |   |       btc.svg
@@ -7111,7 +7111,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   |       usdc.svg
 |   |   |       usdt.svg
 |   |   |       weth.svg
-|   |   |       
+|   |   |
 |   |   \---ui
 |   |           alert.svg
 |   |           copy.svg
@@ -7124,7 +7124,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |           success.svg
 |   |           wallet.svg
 |   |           warning.svg
-|   |           
+|   |
 |   +---img
 |   |       avatar-default.png
 |   |       charts-sample.png
@@ -7137,7 +7137,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       operators.png
 |   |       README.md
 |   |       trade-bg.svg
-|   |       
+|   |
 |   +---legal
 |   |       cookies.html
 |   |       legal-disclaimer.txt
@@ -7145,7 +7145,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       security.txt
 |   |       terms-of-use.html
-|   |       
+|   |
 |   +---meta
 |   |       analytics.js
 |   |       meta-tags.html
@@ -7153,44 +7153,44 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       og-image.png
 |   |       preview-card.png
 |   |       README.md
-|   |       
+|   |
 |   +---static
 |   |       api-reference.pdf
 |   |       litepaper.pdf
 |   |       press-kit.zip
 |   |       README.md
 |   |       whitepaper.pdf
-|   |       
+|   |
 |   +---svg
 |   |       ai-insight.svg
 |   |       dashboard-bg.svg
 |   |       README.md
 |   |       trade-flow.svg
-|   |       
+|   |
 |   \---themes
 |           charts.json
 |           dark.json
 |           light.json
 |           operator-night.json
 |           README.md
-|           
+|
 +---research
 |   |   README.md
 |   |   roadmap.md
-|   |   
+|   |
 |   +---alphaNFT
 |   |       alpha-nft-demo-contract.sol
 |   |       alpha-nft-protocol.md
 |   |       alpha-nft-sim.ipynb
 |   |       README.md
-|   |       
+|   |
 |   +---compliance
 |   |       ai-ethics.md
 |   |       audit-trail-research.md
 |   |       data-privacy-research.md
 |   |       model-bias-analysis.md
 |   |       README.md
-|   |       
+|   |
 |   +---datasets
 |   |       ai-arb-examples.json
 |   |       ai-labels.json
@@ -7200,7 +7200,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       price-history-2025.json
 |   |       README.md
 |   |       synthetic-pool-dataset.csv
-|   |       
+|   |
 |   +---docs
 |   |       ai-arb-research-whitepaper.md
 |   |       experimental-protocols.md
@@ -7208,7 +7208,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       literature-review-2025.md
 |   |       README.md
 |   |       trading-sim-whitepaper.md
-|   |       
+|   |
 |   +---experiments
 |   |       ai-arb-strategy.ipynb
 |   |       ai-vs-human-arb-sim.md
@@ -7219,7 +7219,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       stealth-execution-lab.ipynb
 |   |       trade-pattern-learning.ipynb
-|   |       
+|   |
 |   +---innovation
 |   |       agent-autonomy-log.md
 |   |       experimental-ideas-2025.md
@@ -7227,13 +7227,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       proposal-ai-xai.md
 |   |       proposal-rust-backend.md
 |   |       README.md
-|   |       
+|   |
 |   +---logs
 |   |       ai-experiment-error.log
 |   |       data-pipeline-debug.log
 |   |       README.md
 |   |       research-run-log-2025-07-31.txt
-|   |       
+|   |
 |   +---notebooks
 |   |       agent-cooperation.ipynb
 |   |       ai-risk-score.ipynb
@@ -7244,14 +7244,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       quantum-sim-2025.ipynb
 |   |       README.md
 |   |       synthetic-data-gen.ipynb
-|   |       
+|   |
 |   +---quantum
 |   |       quantum-arb-sim.md
 |   |       quantum-experiment.ipynb
 |   |       quantum-safe-protocols.md
 |   |       README.md
 |   |       toy-qiskit-demo.py
-|   |       
+|   |
 |   +---results
 |   |       ai-experiment-leaderboard.md
 |   |       cross-chain-arb-results.json
@@ -7259,13 +7259,13 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       profit-predictor-results.csv
 |   |       README.md
 |   |       summary-2025Q3.md
-|   |       
+|   |
 |   \---swarm
 |           collaborative-llm-training.ipynb
 |           edge-ml-agent-research.md
 |           README.md
 |           swarm-arb-sim.ipynb
-|           
+|
 +---scripts
 |   |   backup-data.sh
 |   |   check-project-tree.js
@@ -7290,54 +7290,54 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |   update-plugins.sh
 |   |   verify-contract.js
 |   |   wallet-balance-check.js
-|   |   
+|   |
 |   +---automation
 |   |       clean-temp-files.sh
 |   |       nightly-backup.sh
 |   |       README.md
 |   |       sync-docker-images.sh
-|   |       
+|   |
 |   +---operator
 |   |       check-health.sh
 |   |       log-rotation.sh
 |   |       operator-alert.sh
 |   |       README.md
-|   |       
+|   |
 |   +---playbook
 |   |       emergency-shutdown.sh
 |   |       liquidity-reset.sh
 |   |       README.md
 |   |       restart-bot.sh
-|   |       
+|   |
 |   +---quickstart
 |   |       ci-build.sh
 |   |       demo-run.sh
 |   |       README.md
 |   |       start-dev.sh
 |   |       testnet-deploy.sh
-|   |       
+|   |
 |   +---setup
 |   |       configure-env.sh
 |   |       install-dependencies.sh
 |   |       node-setup.sh
 |   |       README.md
 |   |       setup-venv.sh
-|   |       
+|   |
 |   +---tree
 |   |       generate-tree.sh
 |   |       README.md
 |   |       update-manifest.sh
 |   |       validate-manifest.sh
-|   |       
+|   |
 |   \---update
 |           README.md
 |           update-ai-models.sh
 |           update-dex-lists.sh
 |           upgrade-contracts.sh
-|           
+|
 +---storage
 |   |   README.md
-|   |   
+|   |
 |   +---agent-snapshots
 |   |       agent-state-2025-07-31.json
 |   |       agent-state-2025-08-01.json
@@ -7348,7 +7348,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       reward-curve.png
 |   |       sim-snapshot-ai-trades-2025-07.json
 |   |       training-metrics-2025-07.log
-|   |       
+|   |
 |   +---key-vault
 |   |       README.md
 |   |       recovery-instructions.md
@@ -7356,7 +7356,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       vault-backup-2025-08-01.enc
 |   |       vault-temp.json
 |   |       vault.enc
-|   |       
+|   |
 |   +---secret-backups
 |   |       api-keys-backup-2025-07.json.enc
 |   |       config-secrets-2025-07.json.enc
@@ -7364,7 +7364,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       pgp-keyring-backup.asc
 |   |       README.md
 |   |       rotation-log.md
-|   |       
+|   |
 |   +---strat-archives
 |   |       arb-strat-v1-2025-07.json
 |   |       arb-strat-v2-2025-08.json
@@ -7374,7 +7374,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       strat-archive-2025-07-31.zip
 |   |       strat-archive-2025-08-01.zip
 |   |       strat-metadata.json
-|   |       
+|   |
 |   \---temp
 |           autosave-agent.tmp
 |           cache-temp.json
@@ -7384,14 +7384,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           unzipped-strategy-preview.json
 |           upload-queue.json
 |           validator-temp-matrix.csv
-|           
+|
 +---tests
 |   |   foundry.toml
 |   |   hardhat.config.test.js
 |   |   README.md
 |   |   test-entrypoint.sh
 |   |   test-runner.config.js
-|   |   
+|   |
 |   +---ai
 |   |       README.md
 |   |       test-agentModelOverfitting.py
@@ -7401,7 +7401,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       test-profitPredictorModel.py
 |   |       test-simulatedTradeForecast.py
 |   |       test-volatilityWatchdog.py
-|   |       
+|   |
 |   +---cli
 |   |       README.md
 |   |       test-botLaunchPrompt.js
@@ -7409,7 +7409,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       test-hotkeyExitAndResume.js
 |   |       test-interactiveSession.js
 |   |       test-modeSelectorInput.js
-|   |       
+|   |
 |   +---contracts
 |   |       arbExecutor.test.js
 |   |       eventEmitters.test.js
@@ -7418,10 +7418,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       proxyUpgradeFlow.test.js
 |   |       README.md
 |   |       strategyRegistry.test.js
-|   |       
+|   |
 |   +---coverage
 |   |       README.md
-|   |       
+|   |
 |   +---e2e
 |   |       README.md
 |   |       test-botLaunchToProfit.js
@@ -7429,11 +7429,11 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       test-profitWithdrawFlow.js
 |   |       test-reentryRecoveryFlow.js
 |   |       test-txnReversionSafeExit.js
-|   |       
+|   |
 |   +---error-snapshots
 |   |       crash-2025-07-30.json
 |   |       README.md
-|   |       
+|   |
 |   +---fuzz
 |   |       fuzz-parameterLimits.sol
 |   |       fuzz-reserveImbalance.py
@@ -7441,7 +7441,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       fuzz-tokenSequence.py
 |   |       fuzz-unusualPairRoutes.js
 |   |       README.md
-|   |       
+|   |
 |   +---integration
 |   |       README.md
 |   |       test-aiOracleIntegration.js
@@ -7450,7 +7450,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       test-dashboardToEngine.js
 |   |       test-dexArbFlow.js
 |   |       test-eventSyncBus.js
-|   |       
+|   |
 |   +---mocks
 |   |       mockBlockState.json
 |   |       mockDEXPair.json
@@ -7460,7 +7460,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       mockTokenList.json
 |   |       mockWalletConfig.json
 |   |       README.md
-|   |       
+|   |
 |   +---regression
 |   |       README.md
 |   |       regression-dexDesyncBug.test.js
@@ -7469,14 +7469,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       regression-simulationMismatch.test.js
 |   |       regression-slippageCapFailure.test.js
 |   |       regression-txRevertHistory.test.js
-|   |       
+|   |
 |   +---reports
 |   |       lint-and-test-status.json
 |   |       model-accuracy-report-2025-07.csv
 |   |       README.md
 |   |       test-coverage-summary.html
 |   |       test-report-2025-07.xml
-|   |       
+|   |
 |   +---snapshot
 |   |       data-snapshot-compare.test.py
 |   |       profitSnapshotChecker.js
@@ -7484,12 +7484,12 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       snapshotConsistencyChecker.js
 |   |       snapshotTrainerStability.test.py
 |   |       state-snapshot-restore.test.js
-|   |       
+|   |
 |   +---snapshots
 |   |       arb-engine-snapshot.json
 |   |       model-replay-checkpoint-75.json
 |   |       README.md
-|   |       
+|   |
 |   +---unit
 |   |       README.md
 |   |       test-arbEngine.spec.js
@@ -7501,7 +7501,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       test-tokenReputation.spec.js
 |   |       test-utils.spec.js
 |   |       test-watchdogTrigger.spec.js
-|   |       
+|   |
 |   \---watchdog
 |           README.md
 |           test-autoRestartLoop.js
@@ -7509,10 +7509,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           test-highGasSpikeRejection.js
 |           test-liquidityFailoverRoute.js
 |           test-spikeDetection.js
-|           
+|
 +---third-party
 |   |   README.md
-|   |   
+|   |
 |   +---adapters
 |   |       betswirl-dice-adapter.ts
 |   |       oneinch-split-router.ts
@@ -7521,7 +7521,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       stargate-liquidity-bridge.ts
 |   |       velodrome-v2-adapter.ts
 |   |       zksync-router-mock.ts
-|   |       
+|   |
 |   +---bots
 |   |       archer-relay-sim.js
 |   |       bloxroute-tx-broadcaster.js
@@ -7529,7 +7529,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       jito-relay-adapter.ts
 |   |       README.md
 |   |       starknet-bridge-simulator.js
-|   |       
+|   |
 |   +---compliance-hooks
 |   |       audit-log-exporter.js
 |   |       chainalysis-screening.ts
@@ -7537,7 +7537,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       safe-blocklist-fetcher.js
 |   |       trmlabs-sanctions-check.js
-|   |       
+|   |
 |   +---connectors
 |   |       balancer-v2-connector.js
 |   |       camelot-arbitrum.js
@@ -7546,7 +7546,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       sushiswap-v2-connector.js
 |   |       uniswap-v3-connector.js
-|   |       
+|   |
 |   +---oracles
 |   |       chainlink-aggregator.ts
 |   |       custom-infra-oracle.js
@@ -7555,7 +7555,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       oracle-validator-utils.js
 |   |       README.md
 |   |       redstone-adapter.js
-|   |       
+|   |
 |   +---patches
 |   |       aave-pool-interface-patch.sol
 |   |       deploy-skip-check.patch.js
@@ -7563,7 +7563,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       patched-ethers-provider.ts
 |   |       README.md
 |   |       redstone-feed-fix.ts
-|   |       
+|   |
 |   +---schemas
 |   |       ai-scorer-output-schema.json
 |   |       dex-liquidity-pool-schema.json
@@ -7573,7 +7573,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       oracle-feed-schema.json
 |   |       README.md
 |   |       token-schema.json
-|   |       
+|   |
 |   \---sdk
 |           aave-v3-sdk.js
 |           bloxroute-sdk-wrapper.js
@@ -7582,10 +7582,10 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           flashbots-provider.js
 |           polygon-zkevm-sdk.ts
 |           README.md
-|           
+|
 +---types
 |   |   README.md
-|   |   
+|   |
 |   +---abi
 |   |       ArbitrageExecutor.json
 |   |       ERC20.json
@@ -7594,7 +7594,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       TokenVault.json
 |   |       UpgradeableBeacon.json
-|   |       
+|   |
 |   +---json
 |   |       ai-score-example.json
 |   |       default-config-template.json
@@ -7603,7 +7603,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       route-cache-template.json
 |   |       test-oracle-response.json
 |   |       watchdog-trigger-template.json
-|   |       
+|   |
 |   +---py
 |   |       ai_prediction.py
 |   |       arb_model.py
@@ -7612,7 +7612,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       oracle_feed.py
 |   |       README.md
 |   |       schema_validator.py
-|   |       
+|   |
 |   +---schema
 |   |       ai-prediction.schema.json
 |   |       dashboard-settings.schema.json
@@ -7621,7 +7621,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       flashloan-request.schema.json
 |   |       README.md
 |   |       token.schema.json
-|   |       
+|   |
 |   +---ts
 |   |       ai.types.ts
 |   |       arb.types.ts
@@ -7634,7 +7634,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       oracle.types.ts
 |   |       README.md
 |   |       watchdog.types.ts
-|   |       
+|   |
 |   \---utils
 |           abi-type-parser.ts
 |           doc-generator.ts
@@ -7643,17 +7643,17 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           README.md
 |           schema-validator.ts
 |           ts-to-jsonschema.js
-|           
+|
 +---utils
 |   |   README.md
-|   |   
+|   |
 |   +---converter
 |   |       abiToSchema.js
 |   |       jsonSchemaToTypes.js
 |   |       jsonToAbi.js
 |   |       README.md
 |   |       tsToJsonSchema.js
-|   |       
+|   |
 |   +---devtools
 |   |       dependencyChecker.js
 |   |       fileTreePrinter.js
@@ -7661,14 +7661,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       presetLoader.js
 |   |       README.md
 |   |       testSeedGenerator.js
-|   |       
+|   |
 |   +---formatter
 |   |       executionSummaryPrinter.js
 |   |       percentFormatter.js
 |   |       README.md
 |   |       timeFormatter.js
 |   |       usdFormatter.js
-|   |       
+|   |
 |   +---gas
 |   |       gasBoostPlanner.js
 |   |       gasCostCalculator.js
@@ -7677,7 +7677,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       mevBoostFeeScanner.js
 |   |       README.md
 |   |       smartGasPredictor.js
-|   |       
+|   |
 |   +---helpers
 |   |       asyncQueue.js
 |   |       deepClone.js
@@ -7686,7 +7686,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       retryWithBackoff.js
 |   |       throttle.js
-|   |       
+|   |
 |   +---logs
 |   |       errorReporter.js
 |   |       logFormatter.js
@@ -7694,7 +7694,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       logReplayLoader.js
 |   |       logToSQLite.js
 |   |       README.md
-|   |       
+|   |
 |   +---math
 |   |       arbProfitMargin.js
 |   |       bnMath.js
@@ -7702,14 +7702,14 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       safeDivision.js
 |   |       slippageCalc.js
-|   |       
+|   |
 |   +---parser
 |   |       abiDecoder.js
 |   |       bytecodeAnalyzer.js
 |   |       calldataCompressor.js
 |   |       README.md
 |   |       txTraceParser.js
-|   |       
+|   |
 |   +---sim
 |   |       forkBlockFetcher.js
 |   |       priceDeltaChecker.js
@@ -7718,24 +7718,24 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       simRouteValidator.js
 |   |       simSnapSaver.js
 |   |       slippageGuard.js
-|   |       
+|   |
 |   +---validator
 |   |       chainHealthChecker.js
 |   |       configSanityChecker.js
 |   |       envVarChecker.js
 |   |       README.md
 |   |       routeSanityValidator.js
-|   |       
+|   |
 |   \---watchers
 |           errorSpikeWatcher.js
 |           liquidityWatcher.js
 |           mempoolWatcher.js
 |           priceDriftWatcher.js
 |           README.md
-|           
+|
 +---vendor
 |   |   README.md
-|   |   
+|   |
 |   +---abi
 |   |       aaveV3LendingPool.json
 |   |       arbExecutor.json
@@ -7746,7 +7746,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       uniswapV2Router.json
 |   |       uniswapV3Pool.json
-|   |       
+|   |
 |   +---binaries
 |   |       abi-parser.wasm
 |   |       bytecode-sigtool.wasm
@@ -7755,7 +7755,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       sqlite3.dll
 |   |       sqlite3.so
-|   |       
+|   |
 |   +---contracts
 |   |       AaveV3PoolInterface.sol
 |   |       BalancerVaultInterface.sol
@@ -7766,21 +7766,21 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       SafeMath.sol
 |   |       UniswapV2Library.sol
 |   |       UniV3TickMath.sol
-|   |       
+|   |
 |   +---datasets
 |   |       aave-historical-flashloan.csv
 |   |       chainlink-oracle-history.json
 |   |       mev-inspector-dataset.json
 |   |       profit-patterns.csv
 |   |       README.md
-|   |       
+|   |
 |   +---dex-liquidity-snapshots
 |   |       2025-07-27.json
 |   |       2025-07-28.json
 |   |       2025-07-29.json
 |   |       latest.json
 |   |       README.md
-|   |       
+|   |
 |   +---libs
 |   |       ajv.bundle.js
 |   |       ethers-v5.js
@@ -7789,7 +7789,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       moment-timezone.js
 |   |       multicall.js
 |   |       README.md
-|   |       
+|   |
 |   +---patches
 |   |       aave-interface-fix.sol
 |   |       ethers-provider-patch.js
@@ -7797,7 +7797,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       node-fetch-esm-patch.js
 |   |       README.md
 |   |       redstone-deviation-fix.js
-|   |       
+|   |
 |   \---scripts
 |           export-datasets.py
 |           fetch-mev-patterns.py
@@ -7805,11 +7805,11 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           integrity-hash-check.sh
 |           README.md
 |           update-abi-cache.js
-|           
+|
 +---wall-of-fame
 |   |   CONTRIBUTORS.md
 |   |   README.md
-|   |   
+|   |
 |   +---badges
 |   |       bug-slayer-badge.svg
 |   |       docs-champion-badge.svg
@@ -7820,7 +7820,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       README.md
 |   |       reviewer-badge.svg
 |   |       top-committer-badge.svg
-|   |       
+|   |
 |   +---recognition-events
 |   |       awards-ceremony-2025.md
 |   |       community-celebration-2025.md
@@ -7828,7 +7828,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       github-recognition-week.md
 |   |       README.md
 |   |       team-retreat-hackathon.md
-|   |       
+|   |
 |   +---recognitions
 |   |       ai-contribution-award.md
 |   |       excellence-in-innovation.md
@@ -7836,7 +7836,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |   |       open-source-evangelist.md
 |   |       outstanding-community-service.md
 |   |       README.md
-|   |       
+|   |
 |   \---testimonials
 |           ai-lead-reflection.md
 |           alice-jones-testimonial.md
@@ -7844,7 +7844,7 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
 |           jane-smith-testimonial.md
 |           john-doe-testimonial.md
 |           README.md
-|           
+|
 \---watchdog
         autoRestart.js
         circuitBreaker.js
@@ -7869,5 +7869,5 @@ C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAI
         watchdogConfig.json
         watchdogController.js
         watchdogHooks.js
-        
-```
+
+```	ext

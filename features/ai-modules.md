@@ -3,6 +3,7 @@
 ## Synthetic Datasets Feature
 
 ### Feature Files
+
 - deep-arb-ai-trainset.csv — AI model training dataset with arbitrage patterns
 - fake-arb-scenarios.json — Synthetic arbitrage opportunity scenarios
 - sim-synthetic-events.json — Simulated blockchain events for testing
@@ -12,6 +13,7 @@
 - README.md — Dataset documentation and usage guide
 
 ### Windows Implementation
+
 - Node service reads CSV/JSON files from AppData synthetic-datasets folder
 - Dashboard loads datasets via API for demo mode and testing
 - AI training scripts consume datasets during model retraining

@@ -568,10 +568,12 @@ gauge
    - Visual Studio Code with extensions
    - Git with GitHub credentials
 4. **📦 Clone Repository**:
+
    ```bash
    git clone https://github.com/pavan53732/Apex-Arbitrage-Multichain-bot-for-windows.git
    cd Apex-Arbitrage-Multichain-bot-for-windows
    ```
+
 5. **🎯 Choose Your Feature** - Select P0 feature to implement
 6. **📝 Use PROMPT.md** - Generate detailed specifications
 7. **💻 Implement & Test** - Follow feature development lifecycle
@@ -607,12 +609,14 @@ gauge
 ## 📞 Support & Community
 
 ### **Getting Help**
+
 - **📚 Documentation**: Complete guides in `docs.md`
 - **🐛 Bug Reports**: GitHub Issues with detailed templates
 - **💡 Feature Requests**: GitHub Discussions for new ideas
 - **🔧 Technical Support**: Community support through GitHub
 
 ### **Contributing**
+
 - **🔀 Fork Repository** - Create your own development branch
 - **📝 Follow Standards** - Use PROMPT.md for feature specifications
 - **🧪 Write Tests** - Comprehensive testing required

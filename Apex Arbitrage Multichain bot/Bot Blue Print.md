@@ -16,9 +16,11 @@
 All enabled networks are declared and toggled via `config/chains.json`; optional RPC overrides may be set in environment only as needed.
 
 ### Configuration flow
+
 chains.json → protocols.json → adapters resolve by chainId → optional env RPC overrides
 
 ### Architectural Principles
+
 - No hardcoded config—runtime must read `CHAINS_CONFIG`, `PROTOCOLS_CONFIG`, and `AI_CONFIG` from mounted files (compose/local dev), and must reject or warn if network IDs, RPC URLs, or protocol addresses are embedded in code paths; no hardcoded networks or addresses in code.
 
 ---
@@ -57,6 +59,7 @@ Defaults are the JS‑first council modules: `ai-engine.js`, `decisionMaker.js`,
 Every function must have a test in `tests/`. Every model/config/weight is documented in `README.md` per subfolder.
 
 #### Canonical AI paths
+
 - `ai-modules/aiConfig.json` (AI wiring, toggles, thresholds)
 - `ai-modules/models/modelWeights` (inference weights)
 - `ai-modules/models/trainingOutputs` (training/export artifacts)
@@ -64,6 +67,7 @@ Every function must have a test in `tests/`. Every model/config/weight is docume
 The council modules read configuration from `ai-modules/aiConfig.json` and must not assume hardcoded paths.
 
 #### Smoke test requirement
+
 At startup, a fixed scoring fixture must pass via `scoreArbOpportunity.js` to validate model load and path correctness (fails fast if weights/config paths are invalid).
 
 ---
@@ -155,6 +159,7 @@ Continuous runtime safety, failover, circuit breaker, kill switch, and anomaly r
 - Any fatal error auto-pauses execution, exports logs, and reports
 
 **Health & Drift Guards:**
+
 - Health probes enumerate enabled chains from `CHAINS_CONFIG` and verify RPC reachability, head movement, and latency thresholds on each run.
 - On startup, log enabled chains from `chains.json` and verify they match dashboard toggles and backend logs; fail fast or warn if divergent.
 
@@ -172,10 +177,11 @@ All chains, tokens, DEXes, strategy, risk, plugin, analytics, compliance, and pr
 - **No config value is hardcoded in code.**
 
 **Runtime mounts & env (compose/local dev):**
+
 - Backend (and UI if applicable) rely on compose mounts for `./config` and `./ai-modules` and the following environment variables:
-	- `CHAINS_CONFIG=/app/config/chains.json`
-	- `PROTOCOLS_CONFIG=/app/config/protocols.json`
-	- `AI_CONFIG=/app/ai-modules/aiConfig.json`
+ 	- `CHAINS_CONFIG=/app/config/chains.json`
+ 	- `PROTOCOLS_CONFIG=/app/config/protocols.json`
+ 	- `AI_CONFIG=/app/ai-modules/aiConfig.json`
 
 > Examples are illustrative; the actual set of enabled chains is read from `config/chains.json` at runtime.
 
@@ -194,9 +200,11 @@ Logs (trade, profit, alerts, errors, crash), operator state, audit, simulation r
 - All backup/restore/test hooks are automated (dashboard, scripts)
 
 #### Security & Operations Policies
+
 - RAM‑only secrets; no secrets in config JSON; do not back up `.env` offsite; backups must set `include_env_files=false` per root policy.
 
 #### Backups
+
 - Backups must include `ai-modules/aiConfig.json`, `ai-modules/models/modelWeights`, `ai-modules/models/trainingOutputs`, and canonical evidence stores `data/analytics`, `data/audit-trails`, `data/compliance-archive`.
 - Root SQLite mirrors are optional read‑only compaction artifacts.
 
@@ -205,6 +213,7 @@ Logs (trade, profit, alerts, errors, crash), operator state, audit, simulation r
 ### 2.8. `archive/`, `presets/`, `migrations/`, `benchmarks/`, `wall-of-fame/`
 
 **Purpose:**  
+
 - `/archive/`: All deprecated, old, or superseded modules/configs; must be recoverable
 - `/presets/`: Strategy/config templates, demo configs for onboarding
 - `/migrations/`: Contract/db/schema migration scripts, rollback and recovery
@@ -216,6 +225,7 @@ Logs (trade, profit, alerts, errors, crash), operator state, audit, simulation r
 ### 2.9. `tests/`, `docs/`, `.github/`, `ci/`, `scripts/`
 
 **Purpose:**  
+
 - `tests/`: Full coverage (unit, integration, E2E, fork, fuzz, AI, contract)
 - `docs/`: Whitepapers, playbooks, API refs, threat models, operator guides
 - `.github/`, `ci/`: All CI/CD/test runners, security, PR review, lint, coverage
@@ -257,7 +267,7 @@ UI architecture (layouts/locales/modals/overlays/pages/notifications) is documen
 ## 5. Author/Contact
 
 - **Name:** Korukonda Pavan Kumar (Apex Creator)
-- **Email:** pavan53732@gmail.com
+- **Email:** <pavan53732@gmail.com>
 - **Version:** 1.0.0
 - **License:** MIT
 

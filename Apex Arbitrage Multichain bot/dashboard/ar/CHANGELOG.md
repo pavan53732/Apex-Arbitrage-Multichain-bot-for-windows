@@ -1,7 +1,9 @@
 # AR Changelog
 
 ## [1.0.0] - 2025-01-31
+
 ### Added
+
 - Complete AR/XR folder structure
 - 15 AR components
 - 8 overlay components

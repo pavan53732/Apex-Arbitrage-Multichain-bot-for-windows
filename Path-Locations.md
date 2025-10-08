@@ -1,7 +1,7 @@
 ﻿# Path Files Inventory
 
-
 ## Locations
+
 1. Apex Arbitrage Multichain bot/.devcontainer/
 2. Apex Arbitrage Multichain bot/.github/ISSUE_TEMPLATE/
 3. Apex Arbitrage Multichain bot/.github/PULL_REQUEST_TEMPLATE/
