@@ -46,108 +46,131 @@ ACCESS-PROOF UPDATE repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.m
 
 ---
 
-## 🎯 Purpose
-Convert legacy components from your 6,165-file system into **Windows-first feature specifications** that clearly show:
-- **"What does this FEATURE do?"** → Clear feature description
-- **"Which MD file OWNS this FEATURE?"** → Primary specification file  
-- **"Which MD files REFERENCE this FEATURE?"** → Integration points
+# 🗂️ PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS)
 
-## 📝 How to Use This Prompt
-1. **START WITH ACCESS VERIFICATION** using commands above
-2. **Copy the entire "YOUR INPUT" template** below
-3. **Fill in your component details** 
-4. **Submit to AI** 
-5. **Receive clear guidance** on exactly which MD files to update
+## 🧠 MANDATORY ANALYSIS PROCESS:
+
+### **STEP 1: PARSE INPUT PATH**
+- Extract folder path from: `Apex Arbitrage Multichain bot/[folder-path]`
+
+### **STEP 2: LOOKUP ACTUAL FILES** 
+- Search `PROJECT TREE COMPLETE STRUCTURE .md` for exact folder path
+- Extract all actual files and subfolders found in that path
+- DO NOT use generic assumptions - USE REAL FILE ANALYSIS
+
+### **STEP 3: ANALYZE FILES FOR WINDOWS FEATURES**
+- Based on actual file names/extensions found, determine Windows desktop feature
+- Examples:
+  - `*.json presets` = Dashboard layout management
+  - `*.test.js` = Testing functionality
+  - `*-adapter.js` = Integration adapter
+  - `*.sol contracts` = Smart contract feature
+  - `*-engine.js` = Core engine functionality
+
+### **STEP 4: MAP TO .MD FILE**
+- Based on feature analysis, assign to appropriate Windows project .md file
+- Consider integration needs based on actual file dependencies
 
 ---
 
-# 🗂️ PATH-TO-FEATURE MAPPER MODE (SIMPLE 3-LINE MAPPING ONLY)
-
-## 🚀 CRITICAL: This mode returns EXACTLY 3 lines - NOTHING MORE!
-
-### Input Format:
+## 🎯 INPUT FORMAT:
 ```
 PATH-TO-FEATURE MAPPER
 
 Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 ```
 
-### 🚨 MANDATORY Output Format (AI MUST FOLLOW EXACTLY):
+## 🚨 MANDATORY OUTPUT FORMAT (EXACTLY 3 LINES):
 ```
 ✅ PATH-TO-FEATURE MAPPING COMPLETE
 
 🔍 "What does this FEATURE do?"
-→ [ONE sentence describing the feature - maximum 20 words]
+→ [Feature description based on ACTUAL FILES found in the path]
 
 📁 "Which MD file OWNS this FEATURE?"
-→ **[filename].md** ([short reason - maximum 10 words])
+→ **[filename].md** ([reason based on actual file analysis])
 
 🔗 "Which MD files REFERENCE this FEATURE?"
-→ **[file1].md**, **[file2].md**, **[file3].md** ([short reason for each])
+→ **[file1].md**, **[file2].md**, **[file3].md** ([reasons based on real integration needs])
 ```
 
-### ❌ FORBIDDEN in PATH-TO-FEATURE MAPPER:
+## ❌ ABSOLUTELY FORBIDDEN:
 - **NO detailed specifications**
-- **NO "PRIMARY SPECIFICATION" sections**
+- **NO "PRIMARY SPECIFICATION" sections**  
 - **NO "INTEGRATION NOTES" sections**
-- **NO acceptance criteria**
-- **NO performance targets**
+- **NO acceptance criteria or performance targets**
 - **NO Windows implementation details**
+- **NO generic responses - MUST analyze actual files**
 - **ONLY the 3-line mapping above**
 
-### Path Mapping Rules:
-- **backend/engine/** → backend.md
-- **backend/plugins/** → backend.md  
-- **backend/data/** → backend.md
-- **backend/gas/** → backend.md
-- **backend/mempool/** → backend.md
+---
+
+## 📋 INTELLIGENT MAPPING RULES (Based on Actual Files):
+
+### **File Pattern Analysis:**
+- **presets/*.json** → dashboard.md (UI configuration)
+- ***-adapter.js** → backend.md (integration adapters)
+- ***.test.js** → testing.md (test functionality)
+- ***-engine.js** → backend.md (core engine)
+- ***.sol** → contracts.md (smart contracts)
+- ***-config.json** → config.md (configuration)
+- ***-security.*|audit-*|logs/security** → security.md (security)
+- **docs/*|*.md** → docs.md (documentation)
+- **deploy/*|kubernetes/*|helm/*|terraform/*** → deployment.md (deployment)
+- **ai-*|models/*|train/*|datasets/*|notebooks/*** → ai-modules.md (AI/ML)
+
+### **Folder Pattern Analysis:**
 - **dashboard/** → dashboard.md
-- **dashboard/widgets/** → dashboard.md
-- **dashboard/overlays/** → dashboard.md
-- **dashboard/presets/** → dashboard.md
+- **backend/** → backend.md
 - **ai-modules/** → ai-modules.md
-- **ai-modules/models/** → ai-modules.md
 - **config/** → config.md
 - **contracts/** → contracts.md
-- **security/** → security.md
-- **logs/security/** → security.md
-- **logs/audit/** → security.md
+- **security/**, **logs/security** → security.md
 - **tests/** → testing.md
-- **deploy/installer/** → install-dependencies.md
+- **deploy/**, **scripts/** → deployment.md
 - **docs/** → docs.md
 
 ---
 
-# 🔄 FULL FEATURE MAPPING REQUEST TEMPLATE
+## 💡 CORRECT EXAMPLES (Using Real File Analysis):
 
-## YOUR INPUT (Copy and Fill This Section)
-
+### **Example 1: Dashboard Presets**
+**Input:** `Apex Arbitrage Multichain bot/dashboard/presets`
+**Files Found:** advanced-presets.json, ai-presets.json, layout-presets.json, theme-presets.json, user-presets.json
+**Output:**
 ```
-APEX WINDOWS FEATURE MAPPING REQUEST
+✅ PATH-TO-FEATURE MAPPING COMPLETE
 
-=== COMPONENT ANALYSIS ===
-Component Name: [Name of your legacy component or new feature idea]
-Component Type: [Feature | Subsystem | Adapter | Service | UI Widget | Config | Documentation]
-Original Purpose: [What did this do in your old system? Or what should this new feature do?]
-Priority Level: [P0-Critical | P1-High | P2-Medium | P3-Nice-to-have]
+🔍 "What does this FEATURE do?"
+→ Manages dashboard layout presets and themes for different user roles and scenarios
 
-=== WINDOWS IMPLEMENTATION ===
-Runtime Needs: [Electron Desktop | Node.js Service | Python Scripts | Windows Service]
-Data Storage: [SQLite Database | File Logs | Cache | Registry]
-User Interface: [Dashboard Widget | Configuration Panel | System Tray | None]
-Security Requirements: [API Key Storage | Wallet Integration | Log Redaction | Encryption]
-Performance Target: [Response time, throughput, or other measurable goals]
+📁 "Which MD file OWNS this FEATURE?"
+→ **dashboard.md** (UI presets and layouts belong to dashboard system)
 
-=== FEATURE MAPPING QUESTION ===
-Please tell me:
-1. "What does this FEATURE do?" → [Clear 1-sentence description]
-2. "Which MD file OWNS this FEATURE?" → [Primary file that contains the main specification]
-3. "Which MD files REFERENCE this FEATURE?" → [List of files that need integration notes]
+🔗 "Which MD files REFERENCE this FEATURE?"
+→ **config.md** (preset storage), **docs.md** (user guide), **testing.md** (preset switching tests), **security.md** (user permissions)
+```
+
+### **Example 2: Backend Engine Utils**
+**Input:** `Apex Arbitrage Multichain bot/backend/engine/utils`
+**Files Found:** math-utils.js, retry-helpers.js, timing-utils.js, serialization.js
+**Output:**
+```
+✅ PATH-TO-FEATURE MAPPING COMPLETE
+
+🔍 "What does this FEATURE do?"
+→ Provides core execution utilities for math operations, retries, timing, and data serialization
+
+📁 "Which MD file OWNS this FEATURE?"
+→ **backend.md** (engine utilities are core backend functionality)
+
+🔗 "Which MD files REFERENCE this FEATURE?"
+→ **testing.md** (utility testing), **docs.md** (API documentation), **config.md** (utility settings)
 ```
 
 ---
 
-## 📂 Available MD Files (Your Options)
+## 📂 Available MD Files for Windows Project:
 
 ### **Core Windows Features (P0-P1)**
 - **install-dependencies.md** - Windows installer, dependency management, bootstrap process
@@ -167,117 +190,6 @@ Please tell me:
 
 ---
 
-## 💡 Worked Examples
-
-### **Example 1: PATH-TO-FEATURE MAPPER (Simple)**
-
-**Your Input:**
-```
-PATH-TO-FEATURE MAPPER
-
-Legacy Path: Apex Arbitrage Multichain bot/logs/security-log
-```
-
-**AI Response (MUST BE EXACTLY THIS FORMAT):**
-```
-✅ PATH-TO-FEATURE MAPPING COMPLETE
-
-🔍 "What does this FEATURE do?"
-→ Tracks security events and authentication attempts for compliance monitoring
-
-📁 "Which MD file OWNS this FEATURE?"
-→ **security.md** (security logging belongs to security system)
-
-🔗 "Which MD files REFERENCE this FEATURE?"
-→ **backend.md** (generates events), **dashboard.md** (security alerts), **config.md** (log settings), **docs.md** (monitoring guide)
-```
-
-### **Example 2: PATH-TO-FEATURE MAPPER (Dashboard)**
-
-**Your Input:**
-```
-PATH-TO-FEATURE MAPPER
-
-Legacy Path: Apex Arbitrage Multichain bot/dashboard/presets
-```
-
-**AI Response (MUST BE EXACTLY THIS FORMAT):**
-```
-✅ PATH-TO-FEATURE MAPPING COMPLETE
-
-🔍 "What does this FEATURE do?"
-→ Manages pre-configured dashboard layouts and themes for different user types
-
-📁 "Which MD file OWNS this FEATURE?"
-→ **dashboard.md** (UI presets belong to dashboard system)
-
-🔗 "Which MD files REFERENCE this FEATURE?"
-→ **config.md** (preset storage), **docs.md** (usage guide), **testing.md** (preset switching tests)
-```
-
-### **Example 3: PATH-TO-FEATURE MAPPER (Backend)**
-
-**Your Input:**
-```
-PATH-TO-FEATURE MAPPER
-
-Legacy Path: Apex Arbitrage Multichain bot/backend/engine/utils
-```
-
-**AI Response (MUST BE EXACTLY THIS FORMAT):**
-```
-✅ PATH-TO-FEATURE MAPPING COMPLETE
-
-🔍 "What does this FEATURE do?"
-→ Provides core execution utilities for math, timing, and retry logic
-
-📁 "Which MD file OWNS this FEATURE?"
-→ **backend.md** (engine utilities belong to backend system)
-
-🔗 "Which MD files REFERENCE this FEATURE?"
-→ **testing.md** (unit tests), **docs.md** (API reference), **config.md** (utility settings)
-```
-
----
-
-## 🔍 Feature-Based Thinking Guide
-
-### **Instead of asking "Where does this folder go?"**
-Ask: **"What does this FEATURE do for Windows users?"**
-
-### **Instead of thinking about file paths**
-Think: **"Which MD file should OWN this functionality?"**
-
-### **Instead of complex integration**
-Focus: **"Which MD files need to REFERENCE this feature?"**
-
-### **Key Questions for Any Component:**
-1. **Purpose**: What value does this provide to users?
-2. **Owner**: Which MD file contains the main specification?
-3. **References**: Which other MD files need integration notes?
-4. **Implementation**: How does this work on Windows specifically?
-5. **Testing**: How do we validate this feature works correctly?
-
----
-
-## 📋 Quality Checklist
-
-### **For PATH-TO-FEATURE MAPPER:**
-- [ ] Input starts with "PATH-TO-FEATURE MAPPER"
-- [ ] Response is EXACTLY 3 lines (no more, no less)
-- [ ] No detailed specifications included
-- [ ] Owner file is from the allowed list
-- [ ] Reference files are from the allowed list
-
-### **For Full Feature Mapping:**
-- [ ] Component name is clear and descriptive
-- [ ] Priority level matches business importance
-- [ ] Windows implementation needs are specified
-- [ ] Performance targets are measurable
-- [ ] Security requirements are identified
-
----
-
 ## 🚀 Ready to Use!
 
 **ALWAYS START WITH ACCESS VERIFICATION:**
@@ -285,13 +197,11 @@ Focus: **"Which MD files need to REFERENCE this feature?"**
 ACCESS-PROOF WRITE repo=Apex-Arbitrage-Multichain-bot-for-windows branch=main nonce=<YOUR-RANDOM>
 ```
 
-**For quick path mapping, use PATH-TO-FEATURE MAPPER mode:**
+**For intelligent path mapping with real file analysis:**
 ```
 PATH-TO-FEATURE MAPPER
 
 Legacy Path: [your-folder-path]
 ```
 
-**For detailed feature specification, use the full template above.**
-
-**This approach transforms your complex 6,165-file system into manageable Windows desktop features, one path at a time!**
+**The AI will analyze the actual files in that path and give you precise Windows feature mapping!**
