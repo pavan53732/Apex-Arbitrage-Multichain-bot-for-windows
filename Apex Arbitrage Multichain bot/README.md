@@ -50,7 +50,7 @@ This project is config-first and multi-chain; networks and protocol addresses ar
 - Dashboard docs: [dashboard/README.md](dashboard/README.md)
 - Health checks: [health check.md](health check.md)
 
-> Note: Examples in this repository are illustartive; the actual set of enabled networks is always read from config/chains.json at runtime. No networks or protocol addresses should be hardcoded in code.
+> Note: Examples in this repository are illustrative; the actual set of enabled networks is always read from config/chains.json at runtime. No networks or protocol addresses should be hardcoded in code.
 
 ## Project Structure (synced)
 
@@ -134,7 +134,7 @@ This section is synchronized from 'PROJECT TREE COMPLETE STRUCTURE .md' and show
 ```
 <!-- END: SYNCED_PROJECT_TREE -->
 
-For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPLETE STRUCTURE .md'.
+For the complete nested tree (all sub-folders and files), see 'PROJECT TREE COMPLETE STRUCTURE .md'.
 
 ## Project Structure Overview
 
@@ -146,10 +146,10 @@ For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPL
 | `.vscode/`         | Workspace/editor settings, recommended extensions, launch configs              |
 | `ai-modules/`      | All AI/ML logic: scoring, pattern learning, council, data, notebooks, weights |
 | `archive/`         | Deprecated modules, legacy configs, migration logs, previous releases          |
-| `backend/`         | Bot/engine core, startegy logic, plugins, contract adapters, state, utils      |
+| `backend/`         | Bot/engine core, strategy logic, plugins, contract adapters, state, utils      |
 | `benchmarks/`      | Stress and perf tests: CPU, gas, mempool, datasets, results                   |
 | `ci/`              | External CI/CD integrations: Jenkins, GitLab, Buildkite scripts               |
-| `config/`          | All configs: tokens, chains, DEXes, startegies, analytics, compliance         |
+| `config/`          | All configs: tokens, chains, DEXes, strategies, analytics, compliance         |
 | `data/`            | Datasets, logs, backup, audit, ML data, operator state, simulation results    |
 | `dashboard/`       | Next.js/React UI: pages, widgets, analytics, overlays, public assets          |
 | `deploy/`          | Infra-as-code: k8s, Terraform, Ansible, Helm, cloud configs                   |
@@ -159,7 +159,7 @@ For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPL
 | `manifest/`        | Project manifest: inventory files (.json/.csv/.md/tree.txt)                   |
 | `migrations/`      | DB/schema/contract migration scripts and logs                                 |
 | `overlays/`        | UI overlays: AR, XAI, debug, incident response                                |
-| `presets/`         | User/startegy presets, templates, demo configs                                |
+| `presets/`         | User/strategy presets, templates, demo configs                                |
 | `public/`          | Static assets for dashboard (logos, SVG, themes)                              |
 | `research/`        | Experiments, notebooks, alpha, quantum/ML prototypes                          |
 | `scripts/`         | Automation: setup, quickstart, update, manifest/batch/py/PowerShell scripts         |
@@ -183,7 +183,7 @@ For the complete nested tree (all subfolders and files), see 'PROJECT TREE COMPL
 - **Infer intended file type, dependencies, and function**
 - **Wire with other folders strictly via public APIs/interfaces**
 - **Never cross-modify outside the assigned context without agent review**
-- **Prioritize runtime plugability, atomic execution, and hot-swap compatibility**
+- **Prioritize runtime pluggability, atomic execution, and hot-swap compatibility**
 
 ### Example integration flows
 
@@ -315,7 +315,7 @@ Dashboard Usage Map (Agent and Operator)
 
 All bot controls, logs, and plugins are accessible via the main dashboard at <http://localhost:3000>
 
-Plugins, chains, startegies, and AI modes can be hot-swapped live via the UI
+Plugins, chains, strategies, and AI modes can be hot-swapped live via the UI
 
 All runtime data (trades, profits, errors, alerts, test runs) stream in real-time and are exportable from dashboard
 
@@ -414,7 +414,7 @@ Backup and recovery scripts in /scripts/ and /data/backups/.
 
 ## Author
 
-Name: Korukonda Pavan Kumar (Apex Creator)
+Name: Pavan Kumar (Apex Creator)
 
 Email: [pavan53732@gmail.com](mailto:pavan53732@gmail.com)
 
