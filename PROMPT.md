@@ -1,4 +1,4 @@
-# APEX WINDOWS FEATURE MAPPING PROMPT
+# APEX WINDOWS FEATURE-MAPPING PROMPT (AI-OPTIMIZED)
 
 **Transform ANY legacy component into clear Windows feature specifications**
 
@@ -18,7 +18,47 @@ Convert legacy components from your 6,165-file system into **Windows-first featu
 
 ---
 
-# 🔄 FEATURE MAPPING REQUEST TEMPLATE
+# 🗂️ PATH-TO-FEATURE MAPPER MODE (NEW - SIMPLE 3-LINE MAPPING)
+
+## Quick Path Mapping
+**Just paste any legacy folder path and get instant feature mapping:**
+
+### Input Format:
+```
+PATH-TO-FEATURE MAPPER
+
+Legacy Path: Apex Arbitrage Multichain bot/backend/engine/utils/
+```
+
+### Expected Output:
+```
+✅ PATH-TO-FEATURE MAPPING COMPLETE
+
+🔍 "What does this FEATURE do?"
+→ Provides core execution utilities (math, serialization, retry helpers, timing functions) for the arbitrage engine
+
+📁 "Which MD file OWNS this FEATURE?"
+→ **backend.md** (engine internals and shared utilities belong to backend runtime)
+
+🔗 "Which MD files REFERENCE this FEATURE?"
+→ **testing.md** (unit + performance test coverage), **docs.md** (developer API documentation), **config.md** (tunable retry/backoff settings), **security.md** (prevent secret leakage in logs)
+```
+
+## Path Mapping Rules
+- **backend/engine/** → backend.md
+- **backend/plugins/** → backend.md  
+- **dashboard/** → dashboard.md
+- **ai-modules/** → ai-modules.md
+- **config/** → config.md
+- **contracts/** → contracts.md
+- **security/** → security.md
+- **tests/** → testing.md
+- **deploy/installer/** → install-dependencies.md
+- **docs/** → docs.md
+
+---
+
+# 🔄 FULL FEATURE MAPPING REQUEST TEMPLATE
 
 ## YOUR INPUT (Copy and Fill This Section)
 
@@ -121,118 +161,73 @@ Please tell me:
 
 ## 💡 Worked Examples
 
-### **Example 1: Batch Logging System**
+### **Example 1: Path Mapper Usage**
 
 **Your Input:**
 ```
-APEX WINDOWS FEATURE MAPPING REQUEST
+PATH-TO-FEATURE MAPPER
 
-=== COMPONENT ANALYSIS ===
-Component Name: Execution Batch Logging
-Component Type: Feature
-Original Purpose: Track arbitrage execution batches with performance metrics
-Priority Level: P0-Critical
-
-=== WINDOWS IMPLEMENTATION ===
-Runtime Needs: Node.js Service
-Data Storage: SQLite Database + File Logs
-User Interface: Dashboard Widget
-Security Requirements: Log Redaction
-Performance Target: Log 2000 events/second, query response < 50ms
+Legacy Path: Apex Arbitrage Multichain bot/dashboard/widgets/real-time-monitor/
 ```
 
 **AI Response:**
 ```
-✅ FEATURE ANALYSIS COMPLETE
+✅ PATH-TO-FEATURE MAPPING COMPLETE
 
 🔍 "What does this FEATURE do?"
-→ Tracks arbitrage execution batches with real-time logging and performance metrics
+→ Provides real-time monitoring widgets for arbitrage execution status and metrics
 
 📁 "Which MD file OWNS this FEATURE?"
-→ **backend.md** - Core execution logging belongs in the backend engine
+→ **dashboard.md** (UI widgets and real-time displays belong to dashboard system)
 
 🔗 "Which MD files REFERENCE this FEATURE?"
-→ **dashboard.md** - Real-time log viewer widget and export controls
-→ **config.md** - Log retention settings and file rotation policies
-→ **security.md** - Log redaction rules for sensitive data
-→ **testing.md** - Performance testing for 2k events/second
-→ **docs.md** - Operator guide for log analysis and troubleshooting
+→ **backend.md** (data APIs for real-time feeds), **config.md** (widget refresh rates and display settings), **testing.md** (UI automation tests), **docs.md** (widget usage guide)
 ```
 
-### **Example 2: Windows Installer**
+### **Example 2: Complex Backend Path**
 
 **Your Input:**
 ```
-APEX WINDOWS FEATURE MAPPING REQUEST
+PATH-TO-FEATURE MAPPER
 
-=== COMPONENT ANALYSIS ===
-Component Name: One-Click Installer
-Component Type: Feature
-Original Purpose: Install application with all dependencies automatically
-Priority Level: P0-Critical
-
-=== WINDOWS IMPLEMENTATION ===
-Runtime Needs: NSIS/Inno Setup
-Data Storage: Registry + %AppData%
-User Interface: Installation Wizard
-Security Requirements: Code Signing
-Performance Target: Complete installation in under 3 minutes
+Legacy Path: Apex Arbitrage Multichain bot/backend/plugins/dex-adapters/uniswap-v3/
 ```
 
 **AI Response:**
 ```
-✅ FEATURE ANALYSIS COMPLETE
+✅ PATH-TO-FEATURE MAPPING COMPLETE
 
 🔍 "What does this FEATURE do?"
-→ Provides one-click Windows installation with automatic dependency management
+→ Provides Uniswap V3 DEX integration for quote fetching and trade execution
 
 📁 "Which MD file OWNS this FEATURE?"
-→ **install-dependencies.md** - Primary installer specification and requirements
+→ **backend.md** (DEX adapters are core backend execution components)
 
 🔗 "Which MD files REFERENCE this FEATURE?"
-→ **deployment.md** - Packaging pipeline and distribution strategy
-→ **security.md** - Code signing certificates and validation
-→ **config.md** - Default configuration setup during installation
-→ **testing.md** - Silent installation testing and validation
-→ **docs.md** - Installation guide for end users
+→ **config.md** (Uniswap RPC settings and pool configurations), **contracts.md** (Uniswap V3 contract interfaces), **testing.md** (fork testing and integration tests), **security.md** (API key management), **docs.md** (DEX setup guide)
 ```
 
-### **Example 3: AI Decision Engine**
+### **Example 3: AI Module Path**
 
 **Your Input:**
 ```
-APEX WINDOWS FEATURE MAPPING REQUEST
+PATH-TO-FEATURE MAPPER
 
-=== COMPONENT ANALYSIS ===
-Component Name: Opportunity Detection AI
-Component Type: Subsystem
-Original Purpose: ML-based arbitrage opportunity identification
-Priority Level: P1-High
-
-=== WINDOWS IMPLEMENTATION ===
-Runtime Needs: Python Scripts + Node.js Bridge
-Data Storage: SQLite Database + Model Files
-User Interface: Dashboard Analytics Panel
-Security Requirements: Model Protection
-Performance Target: Scan opportunities in under 2 seconds
+Legacy Path: Apex Arbitrage Multichain bot/ai-modules/models/opportunity-scorer/
 ```
 
 **AI Response:**
 ```
-✅ FEATURE ANALYSIS COMPLETE
+✅ PATH-TO-FEATURE MAPPING COMPLETE
 
 🔍 "What does this FEATURE do?"
-→ Uses machine learning to identify profitable arbitrage opportunities in real-time
+→ Uses machine learning to score and rank arbitrage opportunities by profitability and risk
 
 📁 "Which MD file OWNS this FEATURE?"
-→ **ai-modules.md** - Primary AI/ML system specification and model management
+→ **ai-modules.md** (ML models and scoring algorithms belong to AI system)
 
 🔗 "Which MD files REFERENCE this FEATURE?"
-→ **backend.md** - AI integration points and opportunity data flow
-→ **dashboard.md** - AI insights panel and opportunity visualization
-→ **config.md** - AI model settings and performance tuning
-→ **testing.md** - Model accuracy testing and performance validation
-→ **docs.md** - AI system explanation for operators
+→ **backend.md** (opportunity data flow and scoring API integration), **dashboard.md** (opportunity ranking display), **config.md** (model parameters and thresholds), **testing.md** (model accuracy validation), **docs.md** (AI system explanation)
 ```
 
 ---
@@ -277,6 +272,12 @@ Focus: **"Which MD files need to REFERENCE this feature?"**
 
 ## 🚀 Ready to Use!
 
-**Copy the "YOUR INPUT" template above, fill in your component details, and submit to any AI assistant. You'll receive clear guidance on exactly which MD files to update with paste-ready specifications.**
+**Now you can simply paste ANY legacy folder path and get instant feature mapping guidance!**
 
-**This approach transforms your complex 6,165-file system into manageable Windows desktop features, one component at a time!**
+**Examples of paths you can use:**
+- `Apex Arbitrage Multichain bot/backend/engine/data/batch-logs/`
+- `Apex Arbitrage Multichain bot/dashboard/overlays/ar-vr/`
+- `Apex Arbitrage Multichain bot/ai-modules/inference/real-time/`
+- `Apex Arbitrage Multichain bot/contracts/governance/voting/`
+
+**This approach transforms your complex 6,165-file system into manageable Windows desktop features, one path at a time!**
