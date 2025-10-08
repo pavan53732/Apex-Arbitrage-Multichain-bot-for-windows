@@ -1,6 +1,6 @@
 # PROMPT
 
-<!-- cspell:ignore Multichain subfolders -->
+<!-- cspell:disable -->
 
 You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
 
