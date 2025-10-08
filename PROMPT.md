@@ -1,4 +1,4 @@
-# PROMPT
+
 
 You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
 
@@ -19,9 +19,9 @@ Given a legacy folder path, analyze actual files from the project tree, determin
 
 Access Verification (must be used before any repo edits):
 
-- Write-Proof: ACCESS-PROOF WRITE repo=Apex-Arbitrage-multi-chain-bot-for-windows branch=main nonce=[RANDOM]
-- Read-Proof: ACCESS-PROOF READ repo=Apex-Arbitrage-multi-chain-bot-for-windows path=PROMPT.md
-- Update-Proof: ACCESS-PROOF UPDATE repo=Apex-Arbitrage-multi-chain-bot-for-windows path=PROMPT.md nonce=[RANDOM]
+- Write-Proof: ACCESS-PROOF WRITE repo=Apex-Arbitrage-Multichain-bot-for-windows branch=main nonce=[RANDOM]
+- Read-Proof: ACCESS-PROOF READ repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.md
+- Update-Proof: ACCESS-PROOF UPDATE repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.md nonce=[RANDOM]
 
 If verification fails or is skipped, operate in paste-only mode.
 
@@ -90,9 +90,9 @@ Legacy Path: Apex Arbitrage multi-chain bot/[your-folder-path]
 - "HOW TO IMPLEMENT — OWNER FILE ([owner.md])" →
   Append this section to the end of features/[owner].md:
 
-  ## Feature Template (Placeholder)
+  ## Feature: <Feature Name> (from <legacy path>)
 
-  Source Path: [legacy path]
+  Source Path: <legacy path>
   Feature Files:
   - [filename] — [short description]
   - [filename] — [short description]
