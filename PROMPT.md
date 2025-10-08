@@ -63,19 +63,6 @@ After providing the 5-section analysis, AUTOMATICALLY:
 - ONLY update the existing features/ MD files with documentation
 - The real project files will be created later based on the MD specifications
 
-EXISTING FEATURES FOLDER STRUCTURE:
-- features/README.md ✅ (feature documentation)
-- features/ai-modules.md ✅ (empty, ready for content)
-- features/backend.md ✅ (empty, ready for content)
-- features/config.md ✅ (empty, ready for content)
-- features/contracts.md ✅ (empty, ready for content)
-- features/dashboard.md ✅ (empty, ready for content)
-- features/deployment.md ✅ (empty, ready for content)
-- features/docs.md ✅ (empty, ready for content)
-- features/install-dependencies.md ✅ (empty, ready for content)
-- features/security.md ✅ (empty, ready for content)
-- features/testing.md ✅ (empty, ready for content)
-
 ## INPUT FORMAT
 PATH-TO-FEATURE MAPPER
 Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
@@ -102,6 +89,28 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 - No external links
 - Do not include directory prefixes in file lists (filenames only)
 - DO NOT CREATE REAL PROJECT FILES - ONLY UPDATE features/ MD FILES
+
+## MODE: BATCH PATH-TO-FEATURE MAPPER (5–10 PATHS)
+
+### INPUT FORMAT
+BATCH PATH-TO-FEATURE MAPPER
+Legacy Paths:
+- Apex Arbitrage Multichain bot/[path-1]
+- Apex Arbitrage Multichain bot/[path-2]
+- Apex Arbitrage Multichain bot/[path-3]
+- Apex Arbitrage Multichain bot/[path-4]
+- Apex Arbitrage Multichain bot/[path-5]
+
+### OUTPUT RULES
+- For each path, output the same 5 sections (in order)
+- Separate features with a single line: ---
+- After all features, add:
+
+BATCH SUMMARY
+- Updated: features/<owner-a>.md, features/<owner-b>.md, features/<owner-c>.md
+- References updated: features/<ref-1>.md, features/<ref-2>.md, features/<ref-3>.md
+- Total features processed: <N>
+- Documentation-only: no real files or folders were created
 
 ## INTELLIGENT MAPPING RULES (Heuristics)
 
@@ -134,7 +143,7 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 
 ## GOLDEN EXAMPLES (STRICTLY FOLLOW OUTPUT FORMAT)
 
-### Example 1:
+### Example 1: Single Mode
 Input:
 PATH-TO-FEATURE MAPPER
 Legacy Path: Apex Arbitrage Multichain bot/logs/performance-logs
@@ -159,10 +168,12 @@ Output:
   - In features/config.md: Retention/sampling configured (see testing.md)
   - In features/docs.md: Operator monitoring guide (see testing.md)
 
-### Example 2:
+### Example 2: Batch Mode
 Input:
-PATH-TO-FEATURE MAPPER
-Legacy Path: Apex Arbitrage Multichain bot/manifest/checksums
+BATCH PATH-TO-FEATURE MAPPER
+Legacy Paths:
+- Apex Arbitrage Multichain bot/manifest/checksums
+- Apex Arbitrage Multichain bot/dashboard/presets
 
 Output:
 - "What does this FEATURE do?" → Validates file integrity and authenticity by storing MD5 and SHA256 checksums with integrity reports for tamper detection and verification
@@ -185,9 +196,34 @@ Output:
   - In features/docs.md: File integrity verification guide (see security.md)
   - In features/install-dependencies.md: Post-installation checksum verification (see security.md)
 
+---
+
+- "What does this FEATURE do?" → Provides preconfigured dashboard layouts, themes, and widget arrangements for different roles and scenarios
+- "Which MD file OWNS this FEATURE?" → dashboard.md (presets and layout management belong to the dashboard)
+- "Which MD files REFERENCE this FEATURE?" → config.md (load/save options), docs.md (operator guide), testing.md (preset switch tests), security.md (role permissions)
+- "HOW TO IMPLEMENT — OWNER FILE (features/dashboard.md)" →
+  Feature Files:
+  - advanced-presets.json — advanced layouts
+  - layout-presets.json — grid and panel arrangements
+  - theme-presets.json — color and typography themes
+  Windows Implementation (brief):
+  - Load preset JSON at startup
+  - Apply layout and theme to UI shell
+  - Provide preset switch with undo
+- "HOW TO IMPLEMENT — REFERENCES" →
+  - In features/config.md: Preset selection and storage (see dashboard.md)
+  - In features/testing.md: Preset switch tests (see dashboard.md)
+  - In features/docs.md: Operator preset guide (see dashboard.md)
+  - In features/security.md: Role permissions for preset changes (see dashboard.md)
+
+BATCH SUMMARY
+- Updated: features/security.md, features/dashboard.md
+- References updated: features/deployment.md, features/testing.md, features/docs.md, features/install-dependencies.md, features/config.md
+- Total features processed: 2
+- Documentation-only: no real files or folders were created
+
 # HOW TO USE
 1. Start with access verification (Write/Read/Update-Proof)
-2. Invoke the mode exactly:
-   PATH-TO-FEATURE MAPPER
-   Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
-3. The AI will automatically update ONLY the existing features/ folder MD files with documentation - NO real project files will be created until later
+2. Single mode: paste one Legacy Path, receive 5-section output + auto-update features/ MD files
+3. Batch mode: paste 5–10 Legacy Paths, receive multiple 5-section outputs + batch summary + auto-update features/ MD files
+4. Never create real files/folders in this phase - documentation-first only
