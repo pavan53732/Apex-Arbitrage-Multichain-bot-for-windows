@@ -1,271 +1,326 @@
-# APEX ARBITRAGE FEATURE MAPPING PROMPT
 
-**Master Template for Converting Legacy Components to Windows-First Architecture**
 
----
+# APEX WINDOWS FEATURE-MAPPING PROMPT (AI-OPTIMIZED)
 
-## Purpose
-Use this prompt to map any legacy component from your 6,165-file system into the new Windows-first, feature-driven architecture that lives inside the `features/` folder. The output will specify which MD file owns the feature, which files reference it, and how it's implemented on Windows.
+Goal
+Turn any idea or legacy component into a Windows-first feature spec that updates files under features/. Output must be deterministic, machine-parseable (JSON), and human-readable (Markdown).
 
-## How to Use
-1. Copy this entire prompt into a new request
-2. Fill in the fields under "Your Input" 
-3. Receive a complete, copy-paste specification for the relevant MD files
+Use
+- Provide the “Your Input” block exactly as described.
+- Select a Mode.
+- The AI returns one JSON block + one Markdown spec that you can paste into the correct features/*.md files.
 
----
+Modes
+- spec-only: Produce the primary spec + secondary integration notes.
+- spec-and-tasks: Spec + implementation tasks broken into 2–3 day chunks.
+- delta-update: Update an existing spec; include a clear change log.
+- quick-classify: Only return owner file and secondary refs with a 3-line rationale.
 
-# FEATURE MAPPING REQUEST TEMPLATE
+Allowed Owner Files (choose exactly one)
+- install-dependencies.md
+- config.md
+- backend.md
+- dashboard.md
+- ai-modules.md
+- docs.md
+- contracts.md
+- security.md
+- testing.md
+- deployment.md
 
-## Your Input (Fill These Fields)
+Allowed Secondary Refs (choose any)
+Same list as above.
 
-### 1) Original Component Analysis
-- **Component Name**: [Name of the legacy component or capability]
-- **Component Type**: [Feature | Subsystem | Adapter | Service | UI Widget | Config | Documentation]
-- **Original Purpose**: [Short description of what it did in the 6,165-file system]
-- **Criticality**: [P0 | P1 | P2 | P3] (P0=must-have for MVP, P3=nice-to-have)
+Priority Scale
+- P0: MVP-critical. Blocks release.
+- P1: High value. Next immediately after MVP.
+- P2: Important. Post-MVP.
+- P3: Nice-to-have.
 
-### 2) Feature Identification Request
-Map this component to the NEW Windows Desktop MD file architecture.
+Windows Constraints (pick/set as needed)
+- Runtime: Electron desktop, Node service, Python (optional), .NET (optional)
+- Service: Windows Service (background), Tray App (foreground)
+- Data: SQLite, rolling file logs, cache
+- Storage: %AppData%/ApexArbitrage, %LocalAppData%, encrypted at rest (optional)
+- Security: Windows Credential Manager, DPAPI, key redaction
+- Networking: localhost only by default; operator-approved RPCs
+- Packaging: Signed .exe, NSIS/Inno Setup, auto-update channel
 
-**PRIMARY OWNER (choose exactly one):**
-- [ ] install-dependencies.md
-- [ ] config.md
-- [ ] backend.md
-- [ ] dashboard.md
-- [ ] ai-modules.md
-- [ ] docs.md
-- [ ] contracts.md (if needed)
-- [ ] security.md (if needed)
-- [ ] testing.md (if needed)
-- [ ] deployment.md (if needed)
+Output Contract (always return JSON first, then Markdown)
+1) JSON (strict schema below)
+2) Markdown spec (paste-ready):
+   - Primary Owner section content
+   - Secondary integration notes sections
+   - Tasks (if requested)
+   - Change Log (for delta-update)
 
-**SECONDARY REFERENCES (choose any that apply):**
-- [ ] install-dependencies.md
-- [ ] config.md
-- [ ] backend.md
-- [ ] dashboard.md
-- [ ] ai-modules.md
-- [ ] docs.md
-- [ ] contracts.md
-- [ ] security.md
-- [ ] testing.md
-- [ ] deployment.md
+JSON Schema (strict)
+{
+  "ownerFile": "backend.md",
+  "featureName": "Execution Batch Logging",
+  "priority": "P0",
+  "purpose": "Short purpose in one sentence.",
+  "scope": { "in": [], "out": [] },
+  "windowsImpl": {
+    "runtime": ["Electron", "NodeService"],
+    "service": "WindowsService|TrayApp|None",
+    "data": ["SQLite", "FileLogs", "Cache"],
+    "storage": { "dbPath": "%AppData%/ApexArbitrage/db", "logsPath": "%AppData%/ApexArbitrage/logs" },
+    "security": ["Redaction", "DPAPI"],
+    "performance": { "eventAppendMs": 2, "queryP95Ms": 50 }
+  },
+  "interfaces": {
+    "apis": ["GET /health"],
+    "events": [],
+    "ipc": []
+  },
+  "dataModel": {
+    "tables": [],
+    "retentionDays": 30,
+    "rotation": { "fileMaxMB": 100, "dailyRotate": true }
+  },
+  "errorHandling": [],
+  "observability": {
+    "metrics": [],
+    "healthChecks": []
+  },
+  "acceptanceCriteria": [],
+  "secondaryFiles": {
+    "dashboard.md": [],
+    "config.md": [],
+    "testing.md": [],
+    "security.md": [],
+    "deployment.md": [],
+    "docs.md": []
+  },
+  "dependencies": {
+    "upstream": [],
+    "downstream": []
+  },
+  "failureModes": [],
+  "mitigations": [],
+  "mode": "spec-only",
+  "tasks": [],
+  "changeLog": [],
+  "extensions": {
+    "lint": { "passed": true, "errors": [], "warnings": [] }
+  }
+}
 
-### 3) Windows Implementation Constraints
-- **Runtime**: [Node/Electron, Python if needed, Windows Services]
-- **Data Storage**: [SQLite, file logs, cache, registry]
-- **Services**: [Windows Service, System Tray app, Event Log integration]
-- **File System**: [%AppData% usage, local folders, encryption requirements]
-- **Performance Target**: [latency/throughput requirements]
-- **Security Requirements**: [key handling, secrets management, permissions]
+Validation Rules (the AI must enforce)
+- Reject if ownerFile not in allowed list.
+- Reject if priority not in {P0,P1,P2,P3}.
+- Require at least one of windowsImpl.runtime or windowsImpl.service.
+- Never reference legacy paths; Windows-first only.
+- No external links.
+- Security: must include at least “Redaction” in security for any logging or credential-related feature.
+- Acceptance criteria must be measurable (numbers, durations, thresholds).
+- Secondary file keys must be a subset of the allowed files.
+- If mode = spec-and-tasks → tasks[] must have 2–6 items with estimates.
+- If mode = delta-update → changeLog[] required with date, change, reason, impact.
 
----
+Your Input (fill and send as-is)
 
-# OUTPUT FORMAT REQUIRED
+APEX WINDOWS FEATURE MAPPING REQUEST
 
-## A) Primary MD File Specification
-```markdown
-### Feature Name: [Clear, descriptive name]
-- **Purpose**: [What this feature accomplishes]
-- **Scope**: 
-  - **In**: [What's included in this feature]
-  - **Out**: [What's explicitly not included]
-- **Windows Implementation**: 
-  - [How this works on Windows desktop]
-  - [Technologies and approaches used]
-- **Key Functions**:
-  - [Function 1]: [Description]
-  - [Function 2]: [Description]
-  - [Function 3]: [Description]
-- **Data Model** (if applicable):
-  - [Database tables, file structures, etc.]
-- **Error Handling**:
-  - [How errors are caught and handled]
-- **Performance Targets**:
-  - [Speed/throughput requirements]
-- **Telemetry & Observability**:
-  - [Metrics, logging, monitoring]
-- **Acceptance Criteria (Definition of Done)**:
-  - [ ] [Criterion 1]
-  - [ ] [Criterion 2]
-  - [ ] [Criterion 3]
-```
+mode: spec-only | spec-and-tasks | delta-update | quick-classify
 
-## B) Secondary MD File Integration Notes
-For each referenced MD file, provide:
+Component
+- Name:
+- Type: Feature | Subsystem | Adapter | Service | UI | Config | Doc
+- Original purpose (if any):
+- Priority: P0 | P1 | P2 | P3
 
-```markdown
-### [filename].md — Integration Notes
-- **What to Expose/Consume**: [APIs, events, data]
-- **UI/UX Impact** (if dashboard.md): [Widget descriptions]
-- **Configuration Keys** (if config.md): [Settings needed]
-- **Tests to Add** (if testing.md): [Test scenarios]
-- **Security Controls** (if security.md): [Security measures]
-- **Deployment Impact** (if deployment.md): [Installation effects]
-- **Documentation Needed** (if docs.md): [User guides, references]
-```
+Ownership
+- Primary owner file (one of the allowed list):
+- Secondary files (any of the allowed list):
 
-## C) Dependencies & Interfaces
-- **Upstream Dependencies**: [What this feature needs]
-- **Downstream Consumers**: [What depends on this feature]
-- **Interfaces/APIs/Events**: [How components communicate]
-- **Failure Modes and Fallbacks**: [What happens when things break]
+Windows Constraints
+- Runtime (choose): Electron | NodeService | Python | .NET
+- Service: WindowsService | TrayApp | None
+- Data: SQLite | FileLogs | Cache
+- Storage: desired base path (default %AppData%/ApexArbitrage)
+- Security: CredentialManager | DPAPI | Redaction | AtRestEncryption
+- Performance target: [e.g., append <= 2ms; p95 query <= 50ms]
 
-## D) Priority & Development Milestones
-- **Priority**: [P0 | P1 | P2 | P3]
-- **Milestone 1** (2-3 days): [Initial implementation]
-- **Milestone 2** (2-3 days): [Integration and testing]
-- **Milestone 3** (2-3 days): [Polish and documentation]
-- **Rollout Plan**: [Feature flag | Internal testing | Beta | General availability]
+Interfaces (if known)
+- APIs:
+- Events:
+- IPC:
 
-## E) Risks & Mitigations
-- **Risk 1**: [Potential issue]
-  - **Mitigation**: [How to address it]
-- **Risk 2**: [Potential issue]
-  - **Mitigation**: [How to address it]
+Data Model (if known)
+- Tables/files:
+- Retention/rotation:
 
----
+Acceptance (Definition of Done)
+- List 3–6 measurable criteria
 
-# FULLY WORKED EXAMPLE
+Dependencies
+- Upstream:
+- Downstream:
 
-## Your Input (Example: Batch Logging)
+Risks
+- List major risks and mitigations
 
-### 1) Original Component Analysis
-- **Component Name**: Batch Logging & Execution Tracking
-- **Component Type**: Feature
-- **Original Purpose**: Track arbitrage execution batches, outcomes, and performance metrics from backend/engine/data/batch-logs/
-- **Criticality**: P0
+Style Rules (for all AI)
+- Start with JSON block exactly matching the schema, then Markdown spec.
+- No external links. No screenshots. No legacy paths.
+- Use simple, directive language. Avoid fluff.
+- Keep sections in a fixed order so they’re easy to diff.
+- Do not invent features outside the owner/secondary files list.
 
-### 2) Feature Identification Request
-**PRIMARY OWNER**: ✅ backend.md
+Change Management
+- For delta-update mode, include a “changeLog” with dated entries and impact tags (Spec|Config|API|Data).
+- Preserve field names; add new fields only under the “extensions” key.
 
-**SECONDARY REFERENCES**: 
-- ✅ dashboard.md
-- ✅ config.md
-- ✅ docs.md
-- ✅ testing.md
-- ✅ security.md
+Security Defaults
+- Never log private keys or seed phrases.
+- Mask API tokens by default.
+- Local-only endpoints unless explicitly requested.
 
-### 3) Windows Implementation Constraints
-- **Runtime**: Electron desktop app + backend Node service
-- **Data Storage**: SQLite for structured events + rolling file logs
-- **Services**: Optional Windows Service for continuous backend operation
-- **File System**: %AppData%/ApexArbitrage/logs (rotating), %AppData%/ApexArbitrage/db (SQLite)
-- **Performance Target**: Append logs <= 2ms per event; queries < 50ms for last 10k events
-- **Security Requirements**: Log redaction for secrets; role-based access to export
+Minimal Lint Checklist (AI MUST RUN BEFORE RETURNING OUTPUT)
+- Owner file is in allowed list.
+- Priority is P0/P1/P2/P3.
+- windowsImpl includes runtime or service (or both).
+- If feature touches logging, credentials, wallets, or RPC keys → windowsImpl.security contains “Redaction”.
+- acceptanceCriteria has 3–10 items, each measurable (contains a number or quantifiable threshold).
+- No legacy paths (e.g., backend/, contracts/ from old repo) appear anywhere.
+- No external links present.
+- secondaryFiles keys are a subset of the allowed files; values are short bullet items.
+- dataModel.retentionDays is an integer; rotation.fileMaxMB is a number.
+- If mode = spec-and-tasks → tasks count 2–6, each with estimateDays.
+- If mode = delta-update → changeLog has at least 1 entry with date, change, reason, impact.
+- Add extensions.lint with passed true/false and any errors/warnings.
 
-## Expected Output
+Worked Examples
 
-### A) backend.md — Primary Specification
-```markdown
-### Feature Name: Execution Batch Logging
-- **Purpose**: Provide durable, queryable, real-time visibility into trade batches, decisions, and outcomes for operations, analytics, compliance, and incident response.
-- **Scope**:
-  - **In**: Structured event capture, rotating file logs, SQLite aggregates, event streaming to dashboard
-  - **Out**: Strategy analytics, PnL attribution (covered by separate features)
-- **Windows Implementation**:
-  - Event capture in-process with async non-blocking writers
-  - Dual-write: SQLite (primary analytics) + rolling file logs (forensic/backup)
-  - Optional Windows Service for headless operation
-- **Key Functions**:
-  - `recordBatchStart()`: Initialize new batch tracking
-  - `recordTradeAttempt()`: Log trade execution attempts
-  - `recordBatchEnd()`: Complete batch with final status
-  - `queryRecentBatches(limit)`: Retrieve recent batch data
-  - `periodicCompaction()`: Manage log rotation and cleanup
-- **Data Model**:
-  - Tables: `batches(id, ts_start, ts_end, status, chain, strategy, pnl)`
-  - Tables: `events(id, batch_id, ts, severity, kind, payload_json)`
-- **Error Handling**:
-  - Circuit-breaker on DB errors with file-only fallback
-  - Backpressure handling when disk space low
-  - Automatic redaction of sensitive data in logs
-- **Performance Targets**:
-  - Sustained 2k events/sec on standard hardware
-  - <50ms p95 query time for recent aggregates
-- **Telemetry & Observability**:
-  - Metrics: events/sec, errors/sec, write latency, queue depth
-  - Health endpoint for dashboard monitoring
-- **Acceptance Criteria**:
-  - [ ] 95%+ test coverage on core writers
-  - [ ] 24h soak test without data loss
-  - [ ] Log rotation verified under load
-  - [ ] Export produces valid CSV/JSON output
-```
+Example A — Installer Bootstrap (install-dependencies.md, P0, spec-and-tasks)
+Your Input
+mode: spec-and-tasks
 
-### B) Secondary MD File Integration Notes
+Component
+- Name: Installer Bootstrap
+- Type: Feature
+- Original purpose (if any): One-click Windows installer with runtime checks
+- Priority: P0
 
-#### dashboard.md — Integration Notes
-- **What to Expose/Consume**: Real-time event stream via WebSocket, batch metrics API
-- **UI/UX Impact**: 
-  - "Batch Stream" widget with severity/chain/strategy filters
-  - Metrics cards: batches/hour, success rate, error rate, p95 latency
-  - Export button for CSV/JSON download
-  - Alert banners on error rate spikes
+Ownership
+- Primary owner file: install-dependencies.md
+- Secondary files: deployment.md, security.md, docs.md, testing.md
 
-#### config.md — Integration Notes
-- **Configuration Keys**:
-  - `logging.level` (debug|info|warn|error)
-  - `logging.retentionDays` (default: 30)
-  - `logging.dbPath` (default: %AppData%/ApexArbitrage/logs.db)
-  - `logging.maxFileMB` (default: 100)
-  - `logging.service.enabled` (default: false)
+Windows Constraints
+- Runtime: Electron
+- Service: WindowsService
+- Data: SQLite
+- Storage: %AppData%/ApexArbitrage
+- Security: DPAPI, Redaction
+- Performance target: Install < 2 minutes on typical hardware
 
-#### docs.md — Integration Notes
-- **Documentation Needed**:
-  - Troubleshooting guide: where to find logs, export procedures
-  - Operator runbook for incident response and log analysis
-  - Performance tuning guide for high-frequency scenarios
+Interfaces
+- APIs: GET /health (post-install validation)
+- Events: install.started, install.completed, install.failed
+- IPC: n/a
 
-#### testing.md — Integration Notes
-- **Tests to Add**:
-  - Unit tests: writer fallbacks, data redaction, rotation logic
-  - Integration tests: 2k events/sec soak test, database lock contention
-  - Performance tests: p95 latency validation, large aggregate queries
+Data Model
+- Tables/files: installer logs (rolling), config bootstrap file
+- Retention/rotation: retain last 5 installer logs
 
-#### security.md — Integration Notes
-- **Security Controls**:
-  - Automatic redaction of secrets and private keys in log payloads
-  - Optional AES encryption at rest for SQLite and log files
-  - Role-based access control for export and deletion operations
+Acceptance
+- Signed .exe installer runs offline; verifies runtimes; configures folders; creates shortcut; optional service registration; uninstall cleans up.
 
-### C) Dependencies & Interfaces
-- **Upstream Dependencies**: Backend execution engine, strategy modules, order routing system
-- **Downstream Consumers**: Dashboard widgets, analytics jobs, operator alert system
-- **Interfaces**: WebSocket event stream to dashboard; REST API for queries and exports
-- **Failure Modes**: DB unavailable → file-only mode; disk full → backpressure + operator alert
+Dependencies
+- Upstream: code-signing certificates
+- Downstream: backend service, dashboard app
 
-### D) Priority & Development Milestones
-- **Priority**: P0 (Critical for MVP)
-- **Milestone 1**: Database schema + basic writers + log rotation (3 days)
-- **Milestone 2**: Dashboard integration + query API + metrics (3 days)
-- **Milestone 3**: Testing suite + soak testing + export + documentation (3 days)
-- **Rollout Plan**: Feature flag → internal testing → default enabled
+Risks
+- AV false positives; incomplete uninstalls
+- Mitigations: code signing, clean uninstall scripts, clear rollback
 
-### E) Risks & Mitigations
-- **Risk 1**: High event volume causing UI lag and performance issues
-  - **Mitigation**: Implement ring buffer + sampling for UI; decouple display from storage
-- **Risk 2**: Uncontrolled disk growth from logging data
-  - **Mitigation**: Strict rotation policy + retention limits + disk usage monitoring + operator warnings
+Expected Output Summary
+- ownerFile: install-dependencies.md
+- Secondary integration notes for deployment.md (packaging pipeline), security.md (signing and DPAPI), docs.md (install guide), testing.md (silent install tests).
+- Tasks: author NSIS/Inno scripts, sign build, silent install test, uninstall validation.
 
----
+Example B — Config Engine (config.md, P0, spec-only)
+Your Input
+mode: spec-only
 
-# PRIORITY SCALE REFERENCE
+Component
+- Name: Config Engine (Typed + Safe)
+- Type: Feature
+- Original purpose (if any): Centralized app configuration with validation and safe persistence
+- Priority: P0
 
-- **P0**: Required for MVP stability and basic operability
-- **P1**: High business value, implement in near-term roadmap  
-- **P2**: Important functionality, can be implemented after core features
-- **P3**: Nice-to-have enhancements, implement when resources allow
+Ownership
+- Primary owner file: config.md
+- Secondary files: backend.md, dashboard.md, security.md, testing.md, docs.md, deployment.md
 
-# RESPONSE CONTRACT
+Windows Constraints
+- Runtime: NodeService, Electron
+- Service: WindowsService
+- Data: SQLite, FileLogs
+- Storage: %AppData%/ApexArbitrage
+- Security: DPAPI, Redaction
+- Performance target: Load/validate < 100 ms; hot-reload-safe updates
 
-**What you'll receive every time:**
-- One complete "Primary MD File Spec" ready to copy-paste into the target MD file
-- Short "Integration Notes" sections for every referenced secondary MD file
-- Clear Windows-specific implementation details and technical requirements
-- Complete dependencies, risks, milestones, and rollout planning
-- Acceptance criteria that define when the feature is complete and ready
+Interfaces
+- APIs: GET /config, PUT /config (validated)
+- Events: config.changed
+- IPC: subscribe to config updates
 
----
+Data Model
+- Tables/files: config.json (encrypted fields), schema.json
+- Retention/rotation: versioned backups (last 5)
 
-**Ready to use! Copy this prompt, fill in your component details, and receive complete Windows desktop feature specifications.**
+Acceptance
+- Typed schema with validation; defaults applied; secure persistence of secrets; rollback to last good config; audit of changes.
+
+Expected Output Summary
+- ownerFile: config.md
+- Secondary notes for backend.md (read-only cache + hot-reload edges), dashboard.md (UI editor with validation), security.md (fields encrypted via DPAPI), testing.md (schema validation tests), deployment.md (migrate on update), docs.md (operator guide).
+
+Example C — Dashboard Shell (dashboard.md, P0, spec-and-tasks)
+Your Input
+mode: spec-and-tasks
+
+Component
+- Name: Dashboard Shell + Streams
+- Type: UI
+- Original purpose (if any): Operator UI, real-time status, start/stop control
+- Priority: P0
+
+Ownership
+- Primary owner file: dashboard.md
+- Secondary files: backend.md, testing.md, security.md, docs.md
+
+Windows Constraints
+- Runtime: Electron
+- Service: TrayApp
+- Data: Cache
+- Storage: %AppData%/ApexArbitrage
+- Security: Redaction
+- Performance target: Connect to backend < 1s; live widgets update p95 < 200 ms
+
+Interfaces
+- APIs: GET /health, GET /metrics
+- Events: status.changed, alert.raised
+- IPC: ws://localhost:PORT/stream
+
+Data Model
+- Tables/files: UI state cache (in-memory or local storage)
+- Retention/rotation: n/a
+
+Acceptance
+- App shell with connectivity check; start/stop controls; live metrics widget; alert banner; tray icon; graceful reconnection.
+
+Expected Output Summary
+- ownerFile: dashboard.md
+- Secondary notes for backend.md (health, metrics, start/stop endpoints), testing.md (UI smoke/e2e, offline simulation), security.md (mask sensitive values), docs.md (operator walkthrough).
+- Tasks: shell scaffolding, connectivity & reconnection, core widgets, tray integration, e2e smoke tests.
+
+Response Contract (what you’ll get back every time)
+- One JSON “feature spec” conforming to the schema (with extensions.lint results).
+- One Markdown spec ready to paste into the owner and secondary files.
+- Clear Windows implementation details, dependencies, risks, and acceptance criteria.
+- Tasks and/or change log sections when requested by mode.
+
