@@ -20,7 +20,7 @@ If verification fails or is skipped, operate in paste-only mode.
 
 # INSTRUCTIONS
 
-## MODE: PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + IMPLEMENTATION)
+## MODE: PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + DOCUMENTATION)
 
 Always follow Steps 1–6 in order:
 
@@ -45,7 +45,7 @@ Always follow Steps 1–6 in order:
 - Show one-line additions for each reference .md
 - File lists must use filenames only (no directories or OS paths)
 
-### STEP 6: AUTO-UPDATE EXISTING FILES (MANDATORY)
+### STEP 6: UPDATE ONLY features/ MD FILES (MANDATORY)
 After providing the 5-section analysis, AUTOMATICALLY:
 
 1. **UPDATE OWNER .MD FILE**: features/[owner].md
@@ -57,10 +57,11 @@ After providing the 5-section analysis, AUTOMATICALLY:
    - Add the one-line references to each referenced .md file
    - Use GitHub MCP tools to update each file
 
-3. **CREATE FEATURE FOLDER**: [feature-name]/
-   - Create folder in project root for the feature files
-   - Create all the filenames listed in "Feature Files"
-   - Add basic content structure to each file
+**CRITICAL: DO NOT CREATE REAL PROJECT FILES OR FOLDERS**
+- DO NOT create actual feature folders in project root
+- DO NOT create the actual filenames listed in "Feature Files"
+- ONLY update the existing features/ MD files with documentation
+- The real project files will be created later based on the MD specifications
 
 EXISTING FEATURES FOLDER STRUCTURE:
 - features/README.md ✅ (feature documentation)
@@ -100,6 +101,7 @@ Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
 - No acceptance criteria, performance targets, or OS paths (e.g., %APPDATA%)
 - No external links
 - Do not include directory prefixes in file lists (filenames only)
+- DO NOT CREATE REAL PROJECT FILES - ONLY UPDATE features/ MD FILES
 
 ## INTELLIGENT MAPPING RULES (Heuristics)
 
@@ -188,4 +190,4 @@ Output:
 2. Invoke the mode exactly:
    PATH-TO-FEATURE MAPPER
    Legacy Path: Apex Arbitrage Multichain bot/[your-folder-path]
-3. The AI will automatically update the existing features/ folder files with the implementation
+3. The AI will automatically update ONLY the existing features/ folder MD files with documentation - NO real project files will be created until later
