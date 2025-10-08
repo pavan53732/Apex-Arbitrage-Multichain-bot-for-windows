@@ -1,0 +1,1 @@
+export default function XRScene3D() { return null; }

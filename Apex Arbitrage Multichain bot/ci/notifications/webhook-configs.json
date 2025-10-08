@@ -1,0 +1,14 @@
+{
+  "webhooks": [
+    {
+      "name": "slack",
+      "url": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL",
+      "enabled": true
+    },
+    {
+      "name": "discord",
+      "url": "https://discord.com/api/webhooks/YOUR/WEBHOOK",
+      "enabled": true
+    }
+  ]
+}

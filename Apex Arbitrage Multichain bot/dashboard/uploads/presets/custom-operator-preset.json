@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "Operator Mode",
+  "theme": "operator",
+  "layout": "operator",
+  "widgets": ["alerts", "incidents", "metrics"],
+  "settings": {
+    "highContrast": true,
+    "alertsEnabled": true
+  }
+}

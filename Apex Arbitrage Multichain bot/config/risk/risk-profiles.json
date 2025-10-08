@@ -1,0 +1,1 @@
+{"profiles":{"conservative":{"maxSlippage":0.005},"moderate":{"maxSlippage":0.01},"aggressive":{"maxSlippage":0.02}}}

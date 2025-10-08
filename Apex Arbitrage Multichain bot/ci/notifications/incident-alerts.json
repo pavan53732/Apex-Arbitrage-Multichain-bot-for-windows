@@ -1,0 +1,10 @@
+{
+  "severity_levels": ["critical", "high", "medium", "low"],
+  "alert_channels": {
+    "critical": ["pagerduty", "slack", "email"],
+    "high": ["slack", "email"],
+    "medium": ["slack"],
+    "low": ["email"]
+  },
+  "escalation_timeout": 300
+}

@@ -1,0 +1,17 @@
+name: 'Upload Artifact Action'
+description: 'Upload build artifacts to GitHub Actions'
+inputs:
+  artifact-name:
+    description: 'Name of the artifact'
+    required: true
+  path:
+    description: 'Path to artifact files'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ inputs.artifact-name }}
+        path: ${{ inputs.path }}

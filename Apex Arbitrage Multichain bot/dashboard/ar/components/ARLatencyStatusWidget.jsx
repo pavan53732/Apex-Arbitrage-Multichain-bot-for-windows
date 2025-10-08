@@ -1,0 +1,1 @@
+export default function ARLatencyStatusWidget() { return null; }

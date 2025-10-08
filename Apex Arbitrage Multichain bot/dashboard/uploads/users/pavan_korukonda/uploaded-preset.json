@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "My Custom Preset",
+  "theme": "dark",
+  "layout": "custom",
+  "widgets": ["trades", "analytics", "ai"],
+  "settings": {}
+}

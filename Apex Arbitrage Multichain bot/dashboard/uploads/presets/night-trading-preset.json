@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "Night Trading",
+  "theme": "night-mode",
+  "layout": "minimal",
+  "widgets": ["charts", "trades"],
+  "settings": {
+    "reducedBrightness": true,
+    "blueLight": "reduced"
+  }
+}

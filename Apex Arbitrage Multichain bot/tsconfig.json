@@ -1,0 +1,65 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"lib": ["dom", "dom.iterable", "ES2022"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"module": "esnext",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"composite": true,
+		"tsBuildInfoFile": "./tsconfig.tsbuildinfo",
+		"plugins": [{ "name": "next" }],
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"],
+			"@/components/*": ["./dashboard/src/components/*"],
+			"@/lib/*": ["./dashboard/src/lib/*"],
+			"@/utils/*": ["./utils/*"],
+			"@/types/*": ["./types/*"],
+			"@/backend/*": ["./backend/src/*"],
+			"@/plugins/*": ["./plugins/*"],
+			"@/contracts/*": ["./contracts/*"]
+		}
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"backend/**/*",
+		"dashboard/**/*",
+		"plugins/**/*",
+		"utils/**/*",
+		"contracts/**/*",
+		"tests/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"build",
+		".next",
+		"coverage",
+		"ai-modules",
+		"notebooks",
+		"archive",
+		"deprecated",
+		"examples",
+		"benchmarks"
+	],
+	"references": [
+		{ "path": "./backend/tsconfig.json" },
+		{ "path": "./dashboard/tsconfig.json" },
+		{ "path": "./contracts/tsconfig.json" },
+		{ "path": "./utils/tsconfig.json" }
+	]
+}
+

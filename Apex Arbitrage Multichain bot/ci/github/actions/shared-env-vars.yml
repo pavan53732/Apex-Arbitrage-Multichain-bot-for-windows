@@ -1,0 +1,11 @@
+name: 'Shared Environment Variables'
+description: 'Load shared environment variables for CI/CD'
+runs:
+  using: 'composite'
+  steps:
+    - name: Set shared env vars
+      shell: bash
+      run: |
+        echo "NODE_VERSION=18" >> $GITHUB_ENV
+        echo "PYTHON_VERSION=3.10" >> $GITHUB_ENV
+        echo "SOLIDITY_VERSION=0.8.19" >> $GITHUB_ENV
