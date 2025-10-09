@@ -225,3 +225,8 @@ Output:
 2. Paste one Legacy Path, receive 5-section output, append new ## Feature section to features/ MD files
 3. Never create real files/folders in this phase - documentation-first only
 4. All updates use APPEND-ONLY mode to preserve existing feature collections
+
+## INPUT TO PROCESS
+
+PATH-TO-FEATURE MAPPER
+Legacy Path: Apex Arbitrage multi-chain bot/[folder-path]
