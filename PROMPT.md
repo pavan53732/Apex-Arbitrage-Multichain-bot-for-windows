@@ -172,6 +172,20 @@ Legacy Path: Apex Arbitrage multi-chain bot/[your-folder-path]
 - ai-*| models/* | train/*| datasets/* | notebooks/* → ai-modules.md (AI/ML)
 - performance-*.log | metrics-*.log → testing.md (performance monitoring)
 - manifest/*| checksums/* → security.md (integrity validation)
+- *.py → ai-modules.md (Python ML scripts)
+- package.json | requirements.txt | *.lock → install-dependencies.md (dependency management)
+- .env* | secrets/* | vault/* → security.md (secrets and credentials)
+- migrations/* | schema/* → backend.md (database migrations)
+- plugins/* → backend.md (plugin system)
+- widgets/* | components/* → dashboard.md (UI components)
+- storage/* | backup/* | snapshots/* → backend.md (data persistence)
+- ci/* | .github/* | .gitlab/* → deployment.md (CI/CD pipelines)
+- benchmarks/* | profiling/* → testing.md (performance benchmarks)
+- scripts/* → deployment.md (automation scripts)
+- public/* | static/* | assets/* → dashboard.md (static assets)
+- types/* | interfaces/* → backend.md (type definitions)
+- utils/* | helpers/* → backend.md (utility functions)
+- vendor/* | third-party/* → install-dependencies.md (external dependencies)
 
 ### Folder patterns
 
@@ -186,6 +200,17 @@ Legacy Path: Apex Arbitrage multi-chain bot/[your-folder-path]
 - tests/* → testing.md
 - deploy/*, scripts/* → deployment.md
 - docs/* → docs.md
+- archive/* → docs.md (archived documentation)
+- examples/* → docs.md (example code and demos)
+- research/* → ai-modules.md (research and experiments)
+- data/* → backend.md (data storage)
+- migrations/* → backend.md (database migrations)
+- overlays/* → dashboard.md (UI overlays)
+- presets/* → dashboard.md (preset configurations)
+- public/* → dashboard.md (public assets)
+- storage/* → backend.md (persistent storage)
+- vendor/* → install-dependencies.md (third-party code)
+- watchdog/* → backend.md (monitoring and alerts)
 
 ### Feature Name Derivation (exact rules)
 
@@ -198,9 +223,96 @@ Legacy Path: Apex Arbitrage multi-chain bot/[your-folder-path]
   - dashboard/presets → Dashboard Presets
   - backend/engine/utils → Engine Utils
 
+## EDGE CASES & SPECIAL HANDLING
+
+### Empty Folders
+- If folder exists in Path-Locations.md but has no files in PROJECT TREE
+- Still create documentation noting "Scaffolded folder - awaiting implementation"
+- Analyze folder name and parent path to infer intended purpose
+
+### Multi-Purpose Folders
+- If folder contains mixed file types (e.g., .sol + .js + .py)
+- Choose owner based on MAJORITY file type or primary purpose
+- Reference ALL other relevant .md files for cross-feature integration
+- Example: backend/contracts (70% .sol, 30% .js) → owner: contracts.md, references: backend.md
+
+### Nested Deep Paths
+- For paths like backend/engine/modules/utils/helpers
+- Feature Name = "Helpers" (last segment only)
+- Include full path in "Source Path" field
+- Describe context in feature description (e.g., "Engine utility helpers")
+
+### Archived/Deprecated Folders
+- For archive/*, deprecated/*, legacy/* folders
+- Owner: docs.md (historical documentation)
+- Note deprecation status in feature description
+- Reference original owner .md if identifiable
+
+## POST-GENERATION VALIDATION
+
+Before writing files, verify:
+- [ ] All files from STEP 2 are represented in Feature Files list
+- [ ] Feature Name follows derivation rules exactly (Title Case, no special chars)
+- [ ] Owner .md choice matches folder/file patterns from heuristics
+- [ ] References make logical sense (actual integration points)
+- [ ] No OS-specific paths in Windows Implementation bullets (generic descriptions only)
+- [ ] Append-only: existing content preserved, new section added at END
+- [ ] File count matches: "Found [N] files" statement is accurate
+
+## ERROR HANDLING
+
+### Path Not Found
+Output: "ERROR: Path '[path]' not found in Path-Locations.md (842 directories)"
+Action: STOP - do not write any files, request user to verify path
+
+### PROJECT TREE Not Loaded
+Output: "ERROR: PROJECT TREE COMPLETE STRUCTURE.md not loaded or accessible"
+Action: STOP - request user to provide PROJECT TREE access first
+
+### File Count Mismatch
+If Path-Locations.md shows different count than 842:
+Output: "WARNING: Expected 842 directories, found [N] - proceeding with caution"
+Action: Continue but note discrepancy in output
+
+### Ambiguous Mapping
+If multiple owner .md files seem equally valid:
+Output: "AMBIGUOUS: Could map to [md1] or [md2]"
+Action: Choose based on PRIMARY file type majority, note alternative in references
+
+### Empty Feature Files List
+If folder has no files after enumeration:
+Output: Feature Files section with "(Scaffolded folder - no files yet)"
+Action: Infer purpose from folder name and parent context
+
+## WINDOWS IMPLEMENTATION GUIDELINES
+
+When writing "Windows Implementation (brief)" bullets, focus on:
+- **Storage**: Where data lives (Registry, AppData, SQLite, file system)
+- **Execution**: How it runs (Windows Service, Electron process, batch script, scheduled task)
+- **Integration**: What it connects to (IPC, WebSocket, REST API, named pipes)
+- **UI**: How users interact (dashboard widget, system tray, dialog, notification)
+
+Avoid:
+- Specific file paths (use generic descriptions like "application data directory")
+- Code snippets or technical implementation details
+- Performance numbers or specific metrics
+- External URLs or references
+
+Good examples:
+- "Store configuration in application data directory with JSON format"
+- "Run as Windows Service with automatic startup"
+- "Display real-time metrics in Electron dashboard widget"
+- "Integrate with backend via WebSocket for live updates"
+
+Bad examples:
+- "Store in C:\Users\%USERNAME%\AppData\Roaming\ApexArbitrage\config.json"
+- "Use Express.js server on port 3000 with Socket.io"
+- "Achieve < 100ms latency with Redis caching"
+- "See https://docs.example.com for details"
+
 ## GOLDEN EXAMPLES (STRICTLY FOLLOW OUTPUT FORMAT)
 
-### Example 1: Single Mode
+### Example 1: Performance Logs (Complete)
 
 Input:
 PATH-TO-FEATURE MAPPER
@@ -231,6 +343,72 @@ Output:
   - In features/dashboard.md: Performance Logs — see features/testing.md (from Apex Arbitrage multi-chain bot/logs/performance-logs)
   - In features/config.md: Performance Logs — see features/testing.md (from Apex Arbitrage multi-chain bot/logs/performance-logs)
   - In features/docs.md: Performance Logs — see features/testing.md (from Apex Arbitrage multi-chain bot/logs/performance-logs)
+
+### Example 2: Multi-file Complex Folder
+
+Input:
+PATH-TO-FEATURE MAPPER
+Legacy Path: Apex Arbitrage multi-chain bot/backend/plugins/dex-adapters
+
+Output:
+
+- "What does this FEATURE do?" → Provides standardized adapters for integrating with multiple DEX protocols (Uniswap, SushiSwap, Curve) for price discovery and trade execution
+- "Which MD file OWNS this FEATURE?" → backend.md (core integration adapters)
+- "Which MD files REFERENCE this FEATURE?" → contracts.md (DEX contract interfaces), config.md (DEX endpoint configuration), testing.md (adapter tests), docs.md (integration guide)
+- "HOW TO IMPLEMENT — OWNER FILE (backend.md)" →
+  Append this section to the end of features/backend.md:
+
+  ## Feature: Dex Adapters (from Apex Arbitrage multi-chain bot/backend/plugins/dex-adapters)
+
+  Source Path: Apex Arbitrage multi-chain bot/backend/plugins/dex-adapters
+  Feature Files:
+  - uniswap-v2-adapter.js — Uniswap V2 protocol integration
+  - uniswap-v3-adapter.js — Uniswap V3 protocol integration
+  - sushiswap-adapter.js — SushiSwap protocol integration
+  - curve-adapter.js — Curve Finance integration
+  - balancer-adapter.js — Balancer protocol integration
+  - adapter-base.js — Base adapter class with common functionality
+  - adapter-factory.js — Factory for creating adapter instances
+  - adapter-registry.js — Registry for managing available adapters
+  - adapter-config.json — Adapter configuration and endpoints
+  - adapter-utils.js — Utility functions for adapters
+  Windows Implementation (brief):
+  - Load adapters dynamically from plugin directory at service startup
+  - Register adapters with backend service for runtime access
+  - Configure DEX endpoints through configuration management system
+  - Expose adapter status and metrics via dashboard API
+- "HOW TO IMPLEMENT — REFERENCES" →
+  - In features/contracts.md: Dex Adapters — see features/backend.md (from Apex Arbitrage multi-chain bot/backend/plugins/dex-adapters)
+  - In features/config.md: Dex Adapters — see features/backend.md (from Apex Arbitrage multi-chain bot/backend/plugins/dex-adapters)
+  - In features/testing.md: Dex Adapters — see features/backend.md (from Apex Arbitrage multi-chain bot/backend/plugins/dex-adapters)
+  - In features/docs.md: Dex Adapters — see features/backend.md (from Apex Arbitrage multi-chain bot/backend/plugins/dex-adapters)
+
+### Example 3: Empty Scaffolded Folder
+
+Input:
+PATH-TO-FEATURE MAPPER
+Legacy Path: Apex Arbitrage multi-chain bot/archive/deprecated-modules
+
+Output:
+
+- "What does this FEATURE do?" → Archives deprecated and obsolete modules for historical reference and potential future restoration
+- "Which MD file OWNS this FEATURE?" → docs.md (historical documentation and archives)
+- "Which MD files REFERENCE this FEATURE?" → backend.md (references to deprecated backend modules), deployment.md (migration notes)
+- "HOW TO IMPLEMENT — OWNER FILE (docs.md)" →
+  Append this section to the end of features/docs.md:
+
+  ## Feature: Deprecated Modules (from Apex Arbitrage multi-chain bot/archive/deprecated-modules)
+
+  Source Path: Apex Arbitrage multi-chain bot/archive/deprecated-modules
+  Feature Files:
+  - (Scaffolded folder - no files yet)
+  Windows Implementation (brief):
+  - Maintain archive directory in application data for deprecated code
+  - Document deprecation reasons and migration paths in help system
+  - Provide archive browser in dashboard for historical reference
+- "HOW TO IMPLEMENT — REFERENCES" →
+  - In features/backend.md: Deprecated Modules — see features/docs.md (from Apex Arbitrage multi-chain bot/archive/deprecated-modules)
+  - In features/deployment.md: Deprecated Modules — see features/docs.md (from Apex Arbitrage multi-chain bot/archive/deprecated-modules)
 
 ## HOW TO USE
 
