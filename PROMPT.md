@@ -202,17 +202,135 @@ Still list EVERY file, just organize by category.
 - **FILE COMPLETENESS CHECK**: Feature Files list MUST include representation of ALL files found in STEP 2
 - **NO PARTIAL LISTINGS**: Never use "and more files" or "additional files" - be complete and specific
 - **SCAFFOLDED FILE ANALYSIS**: Empty files must be analyzed by filename patterns to determine intended purpose
+
+**INTELLIGENT FILE GROUPING BY PURPOSE:**
+
+Group Feature Files by actual function, not just extension:
+- **Core Logic**: *-engine.js, *-manager.js, *-handler.js, *-controller.js, *-service.js
+- **Adapters/Integrations**: *-adapter.js, *-connector.js, *-client.js, *-provider.js
+- **Configuration**: *-config.json, *-config.js, .env, settings.js, constants.js
+- **Tests**: *.test.js, *.spec.js, files in /tests/ or /test/ folders
+- **Utilities**: *-utils.js, *-helpers.js, *-tools.js, *-lib.js
+- **Types/Schemas**: *.d.ts, *-schema.json, *-types.ts, *-interface.ts
+- **Documentation**: *.md, README.*, CHANGELOG.*
+
+Example grouped output:
+```
+Feature Files:
+Core Logic (3 files):
+- arbitrage-engine.js — Main arbitrage engine
+- trade-manager.js — Trade management
+- execution-handler.js — Execution logic
+
+Adapters (5 files):
+- uniswap-adapter.js — Uniswap integration
+- sushiswap-adapter.js — SushiSwap integration
+...
+```
+
+**COMPLEXITY SCORING:**
+
+Calculate complexity based on file count:
+- 1-5 files = Simple ⭐
+- 6-15 files = Moderate ⭐⭐
+- 16-30 files = Complex ⭐⭐⭐
+- 31-50 files = Very Complex ⭐⭐⭐⭐
+- 51+ files = Highly Complex ⭐⭐⭐⭐⭐
+
+Add complexity to feature header:
+```
+## Feature: Dex Adapters ⭐⭐⭐ (Complex - 25 files)
+```
+
+**TECHNOLOGY STACK DETECTION:**
+
+Detect technologies from file extensions and patterns:
+- *.sol → Solidity (Smart Contracts)
+- *.jsx, *.tsx → React (UI Framework)
+- *.py → Python (likely ML/AI)
+- *.ipynb → Jupyter Notebooks (Data Science)
+- *.test.js, *.spec.js → Jest/Mocha (Testing)
+- *.yaml, *.yml → YAML configs (Deployment)
+- *.ts → TypeScript (Type-safe JavaScript)
+- *.css, *.scss → Stylesheets (UI Styling)
+- *.sql → SQL (Database)
+- *.wasm → WebAssembly (Performance)
+- *.glb → 3D Assets (AR/VR)
+
+Add technology line after Feature Files:
+```
+Technologies: React, Solidity, Web3.js, Jest
+```
+
+**WINDOWS COMPONENT MAPPING:**
+
+Map features to specific Windows technologies:
+
+**For Backend Services:**
+- Component: Windows Service (node-windows)
+- Process Manager: PM2 or node-windows-service
+- Auto-start: Windows Service Manager
+
+**For UI Components:**
+- Framework: Electron BrowserWindow
+- Renderer: Chromium-based rendering
+- IPC: Electron IPC (Main ↔ Renderer)
+
+**For Configuration:**
+- Registry: HKEY_CURRENT_USER\Software\ApexArbitrage
+- Files: %AppData%\ApexArbitrage\config.json
+- Hot-reload: fs.watch() on config files
+
+**For Data Storage:**
+- Database: SQLite (better-sqlite3)
+- Location: %AppData%\ApexArbitrage\data
+- Backup: Windows Task Scheduler
+
+**For Logging:**
+- System: Windows Event Log (Application)
+- Files: %AppData%\ApexArbitrage\logs
+- Rotation: winston or pino with rotation
+
+**For Security:**
+- Credentials: Windows Credential Manager
+- Encryption: AES-256 with node crypto
+- Certificates: Windows Certificate Store
+
+**For Notifications:**
+- Toast: Windows Toast Notifications
+- Tray: Electron system tray
+- Badges: Taskbar badge overlay
+
+**For Scheduling:**
+- Tasks: Windows Task Scheduler
+- Cron: node-cron for in-process scheduling
+- Triggers: Event-based or time-based
+
+Use specific component names in Windows Implementation bullets:
+```
+Windows Implementation:
+- Run as Windows Service using node-windows package
+- Store data in SQLite database at %AppData%\ApexArbitrage\data
+- Log to Windows Event Log (Application) and file logs
+- Display UI in Electron BrowserWindow with IPC communication
+```
 - **NEW FILE HEADER**: If creating a missing features/[owner].md, initialize with a single header and newline:
   - features/config.md → "# Configuration Features\n"
   - features/security.md → "# Security Features\n"
 - OWNER FILE APPEND (features/[owner].md):
   Append a new section at the END of the file (do not edit existing sections):
 
-  ## Feature: [Feature Name]
+  ## Feature: [Feature Name] ⭐⭐ (Moderate - [N] files)
 
   Feature Files:
+  [Grouped by purpose]
+  Core Logic ([N] files):
   - [filename] — [short description]
+  Adapters ([N] files):
   - [filename] — [short description]
+  
+  Technologies: [detected stack]
+  
   Windows Implementation:
   - [2–4 bullets, no OS paths]
 

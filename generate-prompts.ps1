@@ -24,9 +24,18 @@ foreach ($path in $paths) {
     $counter++
     $folderPath = $path -replace "Apex Arbitrage Multichain bot/", ""
 
-    # Replace placeholder in template (handle both hyphenated and non-hyphenated versions)
-    $customPrompt = $promptTemplate -replace "\[folder-path\]", $folderPath
-    $customPrompt = $customPrompt -replace "\[your-folder-path\]", $folderPath
+    # Replace the INPUT section with actual folder path
+    $customPrompt = $promptTemplate -replace "Legacy Path: Apex Arbitrage multi-chain bot/\[folder-path\]", "Legacy Path: Apex Arbitrage multi-chain bot/$folderPath"
+    $customPrompt = $customPrompt -replace "Legacy Path: Apex Arbitrage multi-chain bot/\[your-folder-path\]", "Legacy Path: Apex Arbitrage multi-chain bot/$folderPath"
+
+    # Add progress header to each prompt
+    $progressHeader = @"
+<!-- GENERATED PROMPT $counter of 842 -->
+<!-- PATH: $path -->
+<!-- GENERATED: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') -->
+
+"@
+    $customPrompt = $progressHeader + $customPrompt
 
     # Create filename from path (sanitize for filesystem)
     $fileName = $folderPath -replace "/", "-" -replace "\\", "-" -replace ":", "" -replace "<", "" -replace ">", "" -replace '"', "" -replace "\|", "" -replace "\?", "" -replace "\*", ""
@@ -38,4 +47,4 @@ foreach ($path in $paths) {
     Write-Host "Generated prompt $counter for: $path"
 }
 
-Write-Host "Generated $counter example prompt files in $outputDir directory"
+Write-Host "Generated $counter prompt files in $outputDir directory"

@@ -50,6 +50,15 @@ Example:
 ```
 Count: 3 features
 
+### STEP 2.5: ANALYZE COMPLEXITY SCORES
+
+Count features by complexity rating (⭐ symbols in feature headers):
+- ⭐ (1-5 files): Simple features
+- ⭐⭐ (6-15 files): Moderate features
+- ⭐⭐⭐ (16-30 files): Complex features
+- ⭐⭐⭐⭐ (31-50 files): Very complex features
+- ⭐⭐⭐⭐⭐ (51+ files): Extremely complex features
+
 ### STEP 3: ANALYZE COVERAGE
 
 Calculate:
@@ -115,12 +124,57 @@ After processing 842 legacy folders, we have documented [N] features for the Win
 3. **[Feature Name]** (features/[owner].md) - [N] files
 ...
 
+## Complexity Distribution
+
+| Complexity | Rating | Count | Percentage |
+|------------|--------|-------|------------|
+| Simple | ⭐ | [N] | [N]% |
+| Moderate | ⭐⭐ | [N] | [N]% |
+| Complex | ⭐⭐⭐ | [N] | [N]% |
+| Very Complex | ⭐⭐⭐⭐ | [N] | [N]% |
+| Extremely Complex | ⭐⭐⭐⭐⭐ | [N] | [N]% |
+
+## Technology Stack Detected
+
+### Frontend Technologies
+- **React**: [N] features
+- **Electron**: [N] features
+- **HTML/CSS**: [N] features
+- **TypeScript**: [N] features
+
+### Backend Technologies
+- **Node.js**: [N] features
+- **Python**: [N] features
+- **Go**: [N] features
+
+### Blockchain Technologies
+- **Solidity**: [N] features
+- **Web3.js**: [N] features
+- **Ethers.js**: [N] features
+
+### Storage Technologies
+- **SQLite**: [N] features
+- **Redis**: [N] features
+- **PostgreSQL**: [N] features
+
+### Testing Technologies
+- **Jest**: [N] features
+- **Mocha**: [N] features
+- **Playwright**: [N] features
+
 ## Documentation Quality Metrics
 
 - **Average Files per Feature**: [N]
 - **Features with 10+ Files**: [N]
 - **Features with 50+ Files**: [N]
 - **Empty/Scaffolded Features**: [N]
+
+## Quality Checks
+
+- **Features with No Files Listed**: [N] (needs review)
+- **Features with No Windows Implementation**: [N] (needs completion)
+- **Features with Placeholder Text**: [N] (needs detail)
+- **Features with Complete Documentation**: [N] ✅
 
 ## Windows Implementation Coverage
 
