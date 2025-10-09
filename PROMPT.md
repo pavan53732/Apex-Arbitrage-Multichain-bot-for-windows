@@ -43,6 +43,7 @@ Always follow Steps 1–6 in order:
 ### STEP 1: PARSE INPUT PATH
 
 - Expect: Apex Arbitrage multi-chain bot/[folder-path]
+- Also accept: Apex Arbitrage Multichain bot/[folder-path] (treat both roots as identical)
 - Extract [folder-path] only
 
 ### STEP 2: LOOKUP ACTUAL FILES (MANDATORY COMPLETE ENUMERATION)
@@ -54,6 +55,7 @@ Always follow Steps 1–6 in order:
 - **VERIFICATION**: Count total files found and state the count explicitly: "Found [N] files in [folder-path]"
 - **SCAFFOLDED FILES**: Even if files are empty placeholders, they MUST be analyzed for feature intent from filename patterns
 - **MINIMUM REQUIREMENT**: If folder has 50+ files, list ALL 50+ files by name
+- **NOT-FOUND GUARD**: If [folder-path] does not exist in PROJECT TREE, output "ERROR: Path not found in PROJECT TREE" and stop; do not write any files
 
 ### STEP 3: ANALYZE FILES FOR WINDOWS FEATURES
 
@@ -92,12 +94,14 @@ Always follow Steps 1–6 in order:
 ### STEP 6: ACTUALLY WRITE TO GITHUB FILES (STRICT APPEND-ONLY)
 
 - Use create_or_update_file tool to ACTUALLY WRITE to the features/*.md files in the GitHub repo
-- **CRITICAL RESTRICTION**: ONLY modify files inside features/ folder - NEVER create files outside features/
-- **NO NEW PROJECT FILES**: Never create .js, .py, .sol, .json, or any real implementation files
-- **NO NEW FOLDERS**: Never create directories or folders anywhere in the project
-- **APPEND-ONLY**: Read existing content first, then append new ## Feature section to the END
-- **PRESERVE EXISTING**: Never overwrite, replace, or delete existing content in features/*.md files
-- Repo: Apex-Arbitrage-Multichain-bot-for-windows, Owner: pavan53732, Branch: main
+- **CRITICAL RESTRICTION**: ONLY modify or create .md files inside features/ folder
+- **NO NEW PROJECT FILES**: Never create .js, .ts, .py, .sol, .json, or any executable/real implementation files
+- **NO NEW FOLDERS**: Never create directories anywhere in the project
+- **Creation rule**: If the owner/reference .md does not exist (e.g., config.md, security.md), CREATE features/[name].md and then append
+- **APPEND-ONLY**: Read existing content first, then append the new "## Feature:" section to the END
+- **Preserve all existing content**: never overwrite, replace, or delete
+- **Not-found guard**: If [folder-path] is NOT found in PROJECT TREE, output an error and DO NOT write any files
+- Repo: Apex-Arbitrage-Multichain-bot-for-windows (owner: pavan53732, branch: main)
 
 ## Input Format
 
@@ -131,11 +135,12 @@ Legacy Path: Apex Arbitrage multi-chain bot/[your-folder-path]
 - No acceptance criteria, performance targets, or OS paths (e.g., %APPDATA%)
 - No external links
 - Do not include directory prefixes in file lists (filenames only)
-- Do not create real (non-MD) files or folders
+- Do not create real (non-MD) files or folders anywhere in the project
+- Do not create .js, .ts, .py, .sol, .json, config files, or executable code
+- Only modify or create .md files in features/ folder
+- Creation allowed ONLY for missing owner/reference .md files required by the mapping (e.g., features/config.md, features/security.md)
+- No new directories outside features/
 - Do not modify or delete any existing content in features/*.md (append-only)
-- **ABSOLUTE PROHIBITION**: Never create .js, .ts, .py, .sol, .json, config files, or executable code
-- **FEATURES FOLDER ONLY**: Only modify existing .md files in features/ folder
-- **NO NEW DIRECTORIES**: Never create folders, subfolders, or directory structures
 
 ## EXISTING FEATURES FOLDER STRUCTURE
 
@@ -230,7 +235,7 @@ Output:
 ## HOW TO USE
 
 1. Start with access verification (Write/Read/Update-Proof)
-2. Paste one Legacy Path, receive 5-section output, append new ## Feature section to features/ MD files
+2. Paste one Legacy Path, receive 5-section output, and append the new ## Feature section(s) to features/ MD files
 3. ACTUALLY WRITE to existing features/*.md files - no new project files ever
 4. All updates use APPEND-ONLY mode to preserve existing feature collections
 
