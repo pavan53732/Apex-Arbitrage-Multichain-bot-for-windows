@@ -25,6 +25,17 @@ Access Verification (must be used before any repo edits):
 
 If verification fails or is skipped, operate in paste-only mode.
 
+## MANDATORY DOCUMENTATION PROTOCOL
+
+BEFORE processing ANY legacy path, you MUST execute this sequence:
+
+1. **FIRST**: Use search_files_v2 tool to READ "PROJECT TREE COMPLETE STRUCTURE.md" with LONG context budget
+2. **SECOND**: Cross-validate counts: MUST BE exactly 6,086 files and 842 directories  
+3. **THIRD**: Extract EXACT directory structure for the target folder from PROJECT TREE
+4. **FOURTH**: Only then proceed with feature mapping using REAL data from PROJECT TREE
+
+**FAILURE TO FOLLOW THIS PROTOCOL IS FORBIDDEN**: Never create documentation without reading source files first.
+
 ## INSTRUCTIONS
 
 ## MODE: PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + IMPLEMENTATION DOCS)
@@ -36,11 +47,15 @@ Always follow Steps 1–6 in order:
 - Expect: Apex Arbitrage multi-chain bot/[folder-path]
 - Extract [folder-path] only
 
-### STEP 2: LOOKUP ACTUAL FILES
+### STEP 2: LOOKUP ACTUAL FILES (MANDATORY COMPLETE ENUMERATION)
 
 - Search PROJECT TREE COMPLETE STRUCTURE.md for the exact [folder-path]
-- Collect real filenames and sub-folders found there
-- Do not guess; use only what's listed
+- **MUST LIST EVERY SINGLE FILE**: Enumerate ALL filenames found in the folder - no exceptions, no shortcuts, no sampling
+- **MUST LIST EVERY SINGLE SUBFOLDER**: Include all subfolders even if empty or containing only scaffolded files
+- **FORBIDDEN**: Do not guess, skip, summarize, or use "etc." - list EVERY filename explicitly
+- **VERIFICATION**: Count total files found and state the count explicitly: "Found [N] files in [folder-path]"
+- **SCAFFOLDED FILES**: Even if files are empty placeholders, they MUST be analyzed for feature intent from filename patterns
+- **MINIMUM REQUIREMENT**: If folder has 50+ files, list ALL 50+ files by name
 
 ### STEP 3: ANALYZE FILES FOR WINDOWS FEATURES
 
@@ -54,6 +69,9 @@ Always follow Steps 1–6 in order:
 ### STEP 5: IMPLEMENTATION GUIDE (FILENAME-ONLY, APPEND-ONLY)
 
 - Derive Feature Name from the last segment of the legacy path (see "Feature Name Derivation")
+- **FILE COMPLETENESS CHECK**: Feature Files list MUST include representation of ALL files found in STEP 2
+- **NO PARTIAL LISTINGS**: Never use "and more files" or "additional files" - be complete and specific
+- **SCAFFOLDED FILE ANALYSIS**: Empty files must be analyzed by filename patterns to determine intended purpose
 - OWNER FILE APPEND (features/[owner].md):
   Append a new section at the END of the file (do not edit existing sections):
 

@@ -3,105 +3,15 @@
 Generated:
 2025-10-04 06:32:06 +05:30
 Source Root: Apex Arbitrage Multi chain bot/
-File Count: 6165
-Directory Count: 849
+File Count: 6,086 Files
+Directory Count: 842
 
 C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAIN BOT
-|   .dockerignore
-|   .editorconfig
-|   .env
-|   .env.example
-|   .eslintrc
-|   .flake8
-|   .gitignore
-|   .prettierrc
-|   .stylelintrc
-|   ai-feedback.sqlite
-|   ai-training.sqlite
-|   analytics.sqlite
-|   api_reference.md
-|   audit-trail.sqlite
-|   backup-meta.json
+
 |   Bot Blue Print.md
-|   chains.json
-|   CHANGELOG.md
-|   CODE_OF_CONDUCT.md
-|   compliance.sqlite
-|   CONTRIBUTING.md
-|   docker-compose.yml
-|   forensics.sqlite
-|   hardhat.config.js
-|   HEALTHCHECK.md
-|   LEGAL.md
-|   LICENSE
-|   logs.sqlite
-|   Makefile
-|   manifest.csv
-|   manifest.json
-|   manifest.md
-|   operator-guide.md
-|   package.json
 |   PROJECT FILES AND FOLDERS DETAILS .MD
 |   PROJECT TREE COMPLETE STUCTURE .md
 |   README.md
-|   requirements.txt
-|   roadmap.md
-|   SECURITY.md
-|   tsconfig.json
-|   wall-of-fame.md
-|
-+---.devcontainer
-|       devcontainer.json
-|       Dockerfile
-|       env.example
-|       extensions.json
-|       postCreateCommand.sh
-|       README.md
-|       requirements.txt
-|       settings.json
-|
-+---.github
-|   |   CODEOWNERS
-|   |   dependabot.yml
-|   |   FUNDING.yml
-|   |   README.md
-|   |   SECURITY.md
-|   |   support.md
-|   |
-|   +---ISSUE_TEMPLATE
-|   |       bug_report.md
-|   |       feature_request.md
-|   |       general_question.md
-|   |       README.md
-|   |
-|   +---PULL_REQUEST_TEMPLATE
-|   |       pull_request.md
-|   |       README.md
-|   |
-|   \---workflows
-|           check-project-tree.yml
-|           ci.yml
-|           deploy.yml
-|           lint.yml
-|           monitor.yml
-|           README.md
-|           sync-fork.yml
-|           test.yml
-|
-+---.husky
-|       commit-msg
-|       commitlint.config.js
-|       lint-staged.config.js
-|       pre-commit
-|       pre-push
-|       README.md
-|
-+---.vscode
-|       extensions.json
-|       launch.json
-|       README.md
-|       settings.json
-|       tasks.json
 |
 +---ai-modules
 |   |   ai-engine.js
