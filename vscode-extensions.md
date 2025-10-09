@@ -1,6 +1,6 @@
-# Recommended VS Code Extensions for Apex Arbitrage Multichain Bot Project
+# Recommended  Extensions for Apex Arbitrage Multichain Bot Project
 
-This file lists all recommended VS Code extensions based on the project's file types and technologies. Install these for full syntax highlighting, IntelliSense, linting, and debugging support.
+This file lists all recommended  extensions based on the project's file types and technologies. Install these for full syntax highlighting, IntelliSense, linting, and debugging support.
 
 ## Installation
 
