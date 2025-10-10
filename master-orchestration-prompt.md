@@ -28,6 +28,7 @@ Processing scope and order
 - Enumerate files matching `generated-prompts/prompt-*.md` one at a time in numeric order (001 … 842).
 - Determine the next unprocessed prompt by scanning `generated-prompts/progress.md` Execution Log (or using the Completed count as an index).
 - Resume capability: on restart, skip prompts already logged as executed; continue from the next.
+- If file enumeration fails, derive the next filename from Completed+1 (zero-padded to 3 digits). If that file doesn’t exist, increment and check the next ID until an existing prompt file is found; then continue.
 
 Recommended mode/agent handoff
 
@@ -77,6 +78,7 @@ Failure handling (sequential run)
 
 - If a prompt fails, append a log entry with `Failed` and a brief reason (include a timestamp), increment Errors, and continue with the next prompt. Never delete or truncate files.
 - If `features/` directory is missing at any point, create it automatically and continue.
+- On a generic tool failure, retry the current step once. If it fails again, log the failure with a timestamp, increment Errors, and stop this run; resume from the next prompt on the next run.
 
 Execution steps (loop until all prompts are completed)
 
