@@ -199,6 +199,9 @@ Group Feature Files by actual function, not just extension:
 - **Utilities**: *-utils.js, *-helpers.js, *-tools.js, *-lib.js
 - **Types/Schemas**: *.d.ts, *-schema.json, *-types.ts, *-interface.ts
 - **Documentation**: *.md, README.*, CHANGELOG.*
+- **ML Models**: *-model.js, *-training.js, *-inference.js, *-prediction.js
+- **Blockchain**: *-blockchain.js, *-wallet.js, *-transaction.js, *-contract.js
+- **DeFi**: *-defi.js, *-dex.js, *-swap.js, *-liquidity.js, *-arbitrage.js
 
 Example grouped output:
 ```
@@ -247,6 +250,13 @@ Detect technologies from file extensions and patterns:
 - *.pkl, *.pickle â†’ Pickle (Serialized Data)
 - *.joblib â†’ Joblib (ML Persistence)
 - *.safetensors â†’ SafeTensors (ML Weights)
+- *.onnx â†’ ONNX (Cross-platform ML)
+- *.tflite â†’ TensorFlow Lite (Mobile ML)
+- *.pb â†’ Protocol Buffers (TensorFlow)
+- *.npy, *.npz â†’ NumPy Arrays (ML Data)
+- *.parquet â†’ Parquet (Big Data)
+- *.vy â†’ Vyper (Smart Contracts)
+- *.abi â†’ ABI (Contract Interface)
 
 Add technology line after Feature Files:
 ```
@@ -512,6 +522,13 @@ Legacy Path: Apex Arbitrage multi-chain bot/logs/user-logs
 - *.pkl, *.pickle â†’ Pickle (Serialized Data)
 - *.joblib â†’ Joblib (ML Persistence)
 - *.safetensors â†’ SafeTensors (ML Weights)
+- *.onnx â†’ ONNX (Cross-platform ML)
+- *.tflite â†’ TensorFlow Lite (Mobile ML)
+- *.pb â†’ Protocol Buffers (TensorFlow)
+- *.npy, *.npz â†’ NumPy Arrays (ML Data)
+- *.parquet â†’ Parquet (Big Data)
+- *.vy â†’ Vyper (Smart Contracts)
+- *.abi â†’ ABI (Contract Interface)
 - *.bin | *.dll | *.so | *.exe → install-dependencies.md (binaries)
 - *.log → SKIP (runtime logs)
 - *.zip | *.tar.gz | *.pdf | *.docx → SKIP (archives/documents)
