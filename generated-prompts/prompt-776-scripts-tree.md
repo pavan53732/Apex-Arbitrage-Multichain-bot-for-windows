@@ -1,4 +1,4 @@
-You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
+﻿You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
 
 ## ROLE
 
@@ -242,6 +242,11 @@ Detect technologies from file extensions and patterns:
 - *.sql → SQL (Database)
 - *.wasm → WebAssembly (Performance)
 - *.glb → 3D Assets (AR/VR)
+- *.pt, *.pth â†’ PyTorch (ML Models)
+- *.h5, *.keras â†’ Keras/TensorFlow (ML Models)
+- *.pkl, *.pickle â†’ Pickle (Serialized Data)
+- *.joblib â†’ Joblib (ML Persistence)
+- *.safetensors â†’ SafeTensors (ML Weights)
 
 Add technology line after Feature Files:
 ```
@@ -502,6 +507,11 @@ Legacy Path: Apex Arbitrage multi-chain bot/scripts/tree
 - *.weights | *.pt | *.onnx → ai-modules.md (ML model weights)
 - *.wasm → dashboard.md (WebAssembly modules)
 - *.glb → dashboard.md (3D assets for AR/VR)
+- *.pt, *.pth â†’ PyTorch (ML Models)
+- *.h5, *.keras â†’ Keras/TensorFlow (ML Models)
+- *.pkl, *.pickle â†’ Pickle (Serialized Data)
+- *.joblib â†’ Joblib (ML Persistence)
+- *.safetensors â†’ SafeTensors (ML Weights)
 - *.bin | *.dll | *.so | *.exe → install-dependencies.md (binaries)
 - *.log → SKIP (runtime logs)
 - *.zip | *.tar.gz | *.pdf | *.docx → SKIP (archives/documents)

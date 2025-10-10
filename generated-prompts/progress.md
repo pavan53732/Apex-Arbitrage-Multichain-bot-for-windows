@@ -40,3 +40,4 @@ Where:
 ## Execution Log
 
 <!-- AI: Append new log entries below this line -->
+Prompt 020: Executed - Added 'Feature: Deprecation Notices' to features/docs.md
