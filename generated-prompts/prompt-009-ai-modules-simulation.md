@@ -10,24 +10,6 @@ Given a legacy folder path, analyze actual files from the project tree, determin
 
 ## DATA SOURCES (CLARIFIED)
 
-- **PROJECT TREE COMPLETE STRUCTURE.md**: 
-  - **Full Path**: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\PROJECT TREE COMPLETE STRUCTURE.md`
-  - **Relative Path**: `PROJECT TREE COMPLETE STRUCTURE.md` (in repository root)
-  - **Repository**: Apex-Arbitrage-Multichain-bot-for-windows
-  - **GitHub Path**: `https://github.com/pavan53732/Apex-Arbitrage-Multichain-bot-for-windows/blob/main/PROJECT%20TREE%20COMPLETE%20STRUCTURE.md`
-  - **Format**: Markdown file with complete directory tree listing
-  - **Size**: Large file (~500KB+) containing all 6,086 files and 842 directories
-  - **Content**: Full paths for every file in the legacy "Apex Arbitrage Multichain bot" folder
-  - **Example format**:
-    ```
-    Apex Arbitrage Multichain bot/backend/plugins/dex-adapters/
-      ├── uniswap-v2-adapter.js
-      ├── sushiswap-adapter.js
-      └── tests/
-          └── adapter.test.js
-    ```
-  - **How to access**: Use your file reading tool (fsRead, search_files_v2, etc.) to read this file from the repository root
-
 - **Path-Locations.md**: 
   - **Location**: Repository root
   - **Contains**: List of all 842 directory paths (numbered 1-842)
