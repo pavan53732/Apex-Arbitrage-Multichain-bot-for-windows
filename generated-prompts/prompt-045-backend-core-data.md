@@ -135,6 +135,15 @@ Action: STOP - do not process or write any files
 
 ### STEP 2: LOOKUP ACTUAL FILES (MANDATORY COMPLETE ENUMERATION)
 
+**CRITICAL: Use PowerShell to verify path exists and enumerate ALL files:**
+
+Execute using executeBash tool:
+```powershell
+Get-ChildItem -Path "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\backend/core/data" -Recurse -File | Select-Object FullName
+```
+
+Then cross-reference with PROJECT TREE:
+
 - Search PROJECT TREE COMPLETE STRUCTURE.md for the exact [folder-path]
 - **MUST LIST EVERY SINGLE FILE**: Enumerate ALL filenames found in the folder - no exceptions, no shortcuts, no sampling
 - **MUST LIST EVERY SINGLE SUBFOLDER**: Include all subfolders even if empty or containing only scaffolded files
