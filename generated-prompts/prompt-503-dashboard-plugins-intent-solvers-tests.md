@@ -58,6 +58,18 @@ BEFORE processing ANY legacy path, you MUST:
 4. **FOURTH**: Only then proceed with feature mapping using REAL data from PROJECT TREE
 
 **FAILURE TO FOLLOW THIS PROTOCOL IS FORBIDDEN**: Never create documentation without reading source files first.
+---
+## PRE-EXECUTION CHECKPOINT
+
+**Before proceeding, check progress tracking:**
+
+1. Read `generated-prompts/progress.md`
+2. Search for "Prompt : Executed" in the Execution Log
+3. **If found**: STOP - This prompt already completed. Move to next prompt.
+4. **If not found**: Proceed with execution below.
+
+---
+
 
 ## INSTRUCTIONS
 
@@ -760,3 +772,21 @@ Output:
 PATH-TO-FEATURE MAPPER
 Legacy Path: Apex Arbitrage multi-chain bot/dashboard/plugins/intent-solvers/tests
 
+---
+## POST-EXECUTION CHECKPOINT
+
+**After completing all tasks above, update progress tracking:**
+
+1. Open `generated-prompts/progress.md`
+2. Increment "Completed" counter (X/842 -> X+1/842)
+3. Update "Last Updated" to today's date
+4. Update "Recent Completions" to: Prompt  (Feature: [Feature Name])
+5. Append to Execution Log:
+   ```
+   Prompt : Executed - Added 'Feature: [Feature Name]' to features/[owner].md
+   ```
+6. Save progress.md before moving to next prompt
+
+**Mark this prompt as COMPLETE.**
+
+---
