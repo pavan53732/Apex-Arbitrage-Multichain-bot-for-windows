@@ -63,3 +63,21 @@ Windows Implementation:
 - Store model weights and datasets in application data directory
 - Integrate AI predictions with backend via IPC messaging
 - Display AI insights and model performance in dashboard widgets
+
+## Feature: Datasets ⭐ (Simple - 5 files)
+
+Feature Files:
+Training Data (5 files):
+- ai-decision-corpus.json — AI decision training corpus
+- features.csv — Feature engineering dataset
+- profitLabels.json — Profit classification labels
+- trade-history.csv — Historical trade execution data
+- README.md — Dataset documentation
+
+Technologies: JSON, CSV
+
+Windows Implementation:
+- Store datasets in application data directory for AI model training
+- Load datasets into Python training scripts via file system access
+- Update datasets incrementally from live trade outcomes
+- Provide dataset management interface in dashboard for viewing and exporting
