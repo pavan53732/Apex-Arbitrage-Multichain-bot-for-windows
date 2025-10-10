@@ -1,203 +1,103 @@
-# MASTER ORCHESTRATION PROMPT: 842 Apex Prompts Processing Pipeline
-# Cursor IDE + Roo Code Extension (Code Supernova) Multi-Mode Multi-Agent Workflow
+<!-- markdownlint-disable MD041 -->
 
-## EXECUTION CONTEXT
-You are operating in Cursor IDE with Roo Code extension (Code Supernova) with access to:
-- MODES: Architect, Orchestra, Project Research, DevOps, Code Mode, and all available modes
-- AI AGENTS: Qwen 3 Coder, DeepSeek 3.1, Grok Code Fast 1, and all available AI agents
-- WORKSPACE: Apex-Arbitrage-Multichain-bot-for-windows repository
-- TARGET: Process all 842 generated prompts in generated-prompts/ directory
+You are operating in Cursor IDE with the Roo Code extension. Modes (Architect, Orchestra, Project Research, DevOps, Code) and agents (Qwen 3 Coder, DeepSeek 3.1, Grok Code Fast 1, etc.) are available.
 
-## CORE OBJECTIVE
-Automatically process 842 PATH-TO-FEATURE MAPPER prompts, converting legacy blockchain arbitrage components into Windows desktop features using intelligent mode switching and AI agent specialization.
+Objective
 
-## AUTO-MODE SWITCHING PROTOCOL
+- Process all prompts in `generated-prompts/` sequentially, one at a time. For each prompt: read it, execute its tasks, update `generated-prompts/progress.md`, then immediately continue to the next prompt. Do not read all prompts at once; enumerate and process one file at a time until all 842 are completed.
 
-### PRIMARY COORDINATOR: Orchestra Mode
-- **Always start and end in Orchestra Mode**
-- **Orchestrate the entire pipeline**
-- **Delegate tasks to specialized modes and agents**
-- **Monitor progress and quality**
-- **Handle error recovery and retries**
+Why 842 prompts?
+There are 842 prompt files in `generated-prompts/` (matching `prompt-*.md`). They define the complete scope of conversion work. The single-prompt flow runs them one-by-one to keep quality high and changes traceable.
 
-### MODE SWITCHING RULES
+Inputs (provide or extract if obvious)
 
-**SWITCH TO Architect Mode WHEN:**
-- Analyzing system architecture and feature mapping
-- Designing Windows desktop integration patterns
-- Creating high-level component relationships
-- Planning cross-feature dependencies
+- Prompt ID and filename (e.g., `generated-prompts/prompt-001-ai-modules.md`).
+- Target feature file to update (e.g., `features/ai-modules.md`).
+- Current working directory: workspace root (auto-detect).
+- Ensure `features/` exists; create if missing.
 
-**SWITCH TO Project Research Mode WHEN:**
-- Reading and analyzing PROJECT TREE COMPLETE STRUCTURE.md
-- Understanding legacy component functionality
-- Researching file patterns and naming conventions
-- Investigating existing codebase patterns
+Strict rules
 
-**SWITCH TO DevOps Mode WHEN:**
-- Managing batch processing pipelines
-- Tracking progress across 842 prompts
-- Setting up automated workflows
-- Monitoring processing metrics and KPIs
+- Process prompts strictly one at a time; no parallel or batch execution in memory.
+- Auto-switch modes/agents only within this one-prompt lifecycle.
+- Append-only edits; never delete or truncate existing content.
+- Update only these two files: the chosen `features/*.md` and `generated-prompts/progress.md`.
 
-**SWITCH TO Code Mode WHEN:**
-- Writing actual feature documentation to .md files
-- Implementing Windows desktop features
-- Generating code samples and configurations
-- Creating file structures and templates
+Processing scope and order
 
-## AUTO-AGENT SWITCHING PROTOCOL
+- Enumerate files matching `generated-prompts/prompt-*.md` one at a time in numeric order (001 … 842).
+- Determine the next unprocessed prompt by scanning `generated-prompts/progress.md` Execution Log (or using the Completed count as an index).
+- Resume capability: on restart, skip prompts already logged as executed; continue from the next.
 
-### AGENT SPECIALIZATION MATRIX
+Recommended mode/agent handoff
 
-**USE Qwen 3 Coder FOR:**
-- Complex AI/ML feature implementations
-- Algorithm conversions and optimizations
-- Multi-threaded Windows desktop code
-- Advanced data processing pipelines
+- Project Research Mode + DeepSeek 3.1: Understand the prompt, find referenced files/paths in the repo.
+- Architect Mode + Qwen 3 Coder: Translate legacy paths into a Windows desktop feature design.
+- Code Mode + Grok Code Fast 1: Append the feature section to the target `features/*.md`.
+- DevOps Mode: Update `generated-prompts/progress.md` counters and append one execution log line.
+- Return to Orchestra Mode and immediately continue to the next prompt without stopping. Do not wait for user confirmation. Process continuously until all 842 prompts are complete.
 
-**USE DeepSeek 3.1 FOR:**
-- Deep research and analysis of legacy components
-- Understanding blockchain protocols and arbitrage logic
-- Pattern recognition in large codebases
-- Technical specification analysis
+Feature output contract (append to target features file)
 
-**USE Grok Code Fast 1 FOR:**
-- Quick Windows desktop feature implementations
-- UI component generation
-- Configuration file creation
-- Fast prototyping and scaffolding
+- Section title: `### Prompt XXX – [Feature Name]`
+- Short summary: 2–4 bullets.
+- Source paths discovered: bulleted list.
+- Windows desktop implementation notes: 5–10 bullets.
+- Dependencies or follow-ups: optional.
 
-**USE [Other Available Agents] FOR:**
-- Domain-specific tasks (security, networking, databases, etc.)
-- Specialized implementations (Electron, Node.js, Python, etc.)
-- Quality assurance and testing
-- Documentation generation
+Progress update contract (edit `generated-prompts/progress.md`)
 
-### AGENT SELECTION LOGIC
-```
-IF task_type == "complex_ai_ml":
-    USE Qwen 3 Coder
-ELIF task_type == "research_analysis":
-    USE DeepSeek 3.1
-ELIF task_type == "quick_implementation":
-    USE Grok Code Fast 1
-ELIF task_type == "specialized_domain":
-    USE most_relevant_specialized_agent
-ELSE:
-    USE best_available_agent_for_task
-```
+- Update the counters block at the top using exactly this text layout:
+  - Total Prompts: 842
+  - Started: [Date already present or set if missing]
+  - Last Updated: today’s date
+  - Completed: X/842 (increment X by 1 for each successful prompt)
+  - Skipped: keep or increment if a prompt is intentionally skipped
+  - Errors: increment by 1 for each failure
+  - Status: In Progress (or Completed when X == 842)
+  - Recent Completions: Prompt XXX (Feature: [Feature Name])
 
-## EXECUTION WORKFLOW
+- Under “Execution Log”, append exactly:
+  `Prompt XXX: Executed - Added 'Feature: [Feature Name]' to features/YYY.md`
+ 
+Initialization
 
-### PHASE 1: INITIALIZATION (Orchestra Mode)
-1. **Inventory Assessment**: Count and validate all 842 prompts
-2. **Dependency Analysis**: Map prompt relationships and processing order
-3. **Resource Allocation**: Assign agents and modes to prompt categories
-4. **Progress Setup**: Initialize progress tracking in generated-prompts/progress.md
+- If `generated-prompts/progress.md` does not exist, create it with initial counters:
+  - Total Prompts: 842
+  - Started: today’s date
+  - Last Updated: today’s date
+  - Completed: 0/842
+  - Skipped: 0
+  - Errors: 0
+  - Status: In Progress
+  - Recent Completions: (none)
+  - Verify `generated-prompts/progress.md` is writable before starting.
 
-### PHASE 2: BATCH PROCESSING LOOP (Orchestrated Mode Switching)
+Failure handling (sequential run)
 
-**FOR each prompt in generated-prompts/prompt-XXX.md:**
+- If a prompt fails, append a log entry with `Failed` and a brief reason (include a timestamp), increment Errors, and continue with the next prompt. Never delete or truncate files.
+- If `features/` directory is missing at any point, create it automatically and continue.
 
-**STEP 1: Prompt Analysis (Project Research Mode + DeepSeek 3.1)**
-- Read prompt content and extract legacy path
-- Analyze PATH-TO-FEATURE MAPPER requirements
-- Determine processing complexity and agent requirements
+Execution steps (loop until all prompts are completed)
 
-**STEP 2: File Discovery (Project Research Mode + DeepSeek 3.1)**
-- Query PROJECT TREE COMPLETE STRUCTURE.md for exact file list
-- Validate file count and categorize by type
-- Identify feature patterns and integration points
+1. Discover next unprocessed prompt file (by numeric order and Execution Log/Completed count).
 
-**STEP 3: Architecture Design (Architect Mode + Qwen 3 Coder)**
-- Design Windows desktop feature integration
-- Map legacy components to modern architecture
-- Define component relationships and dependencies
+2. Read the complete prompt thoroughly and execute all tasks it specifies. Read every line from start to finish. Execute all tasks and instructions contained within the prompt. Follow the Feature output contract and map to the correct `features/*.md` based on filename/content; append-only. Generate all required outputs and updates (do not summarize instead of performing the work).
 
-**STEP 4: Implementation (Code Mode + Specialized Agent)**
-- Generate feature documentation following exact prompt template
-- Write to appropriate features/*.md files
-- Ensure append-only, non-destructive editing
+3. Discover referenced files.
 
-**STEP 5: Quality Assurance (DevOps Mode + Multiple Agents)**
-- Validate output format and completeness
-- Cross-reference with existing features
-- Update progress tracking
+4. Draft the feature design.
 
-**STEP 6: Progress Update (DevOps Mode)**
-- Update generated-prompts/progress.md with completion status
-- Log execution details and any issues
-- Calculate processing metrics
+5. Append the feature section to the correct `features/*.md`.
 
-### PHASE 3: COMPLETION & VERIFICATION (Orchestra Mode)
-1. **Final Validation**: Verify all 842 prompts processed
-2. **Cross-Reference Check**: Ensure all feature relationships documented
-3. **Quality Metrics**: Generate processing statistics and reports
-4. **Cleanup**: Finalize progress tracking and documentation
+6. Update `generated-prompts/progress.md` counters and append the execution log line.
 
-## PROGRESS TRACKING PROTOCOL
+7. Continue with the next prompt until all 842 are processed.
 
-### Progress File: generated-prompts/progress.md
-**Format:**
-```
-Total Prompts: 842
-Started: October 10, 2025
-Last Updated: [Current Date]
-Completed: X/842
-Skipped: Y
-Errors: Z
-Status: In Progress
-Recent Completions: Prompt XXX (Feature: [Feature Name])
-```
+Start now
 
-### Execution Log Format:
-```
-Prompt XXX: Executed - Added 'Feature: [Feature Name]' to features/YYY.md
-Agent: [Agent Name] | Mode: [Mode Name] | Duration: [Time]
-```
+Begin from the next unprocessed prompt (default 001 if none processed) and continue sequentially through all 842 without pausing.
 
-## ERROR HANDLING & RECOVERY
 
-### Automatic Retry Logic:
-- **On Agent Failure**: Switch to backup agent for same task type
-- **On Mode Failure**: Retry in Orchestra mode with manual override
-- **On File Write Failure**: Validate file permissions and retry
-- **On Validation Failure**: Flag for manual review, continue processing
 
-### Quality Gates:
-- **Pre-Processing**: Validate prompt format and file existence
-- **Post-Processing**: Verify output format and cross-references
-- **Batch Completion**: Full validation of all generated features
-
-## PERFORMANCE OPTIMIZATION
-
-### Parallel Processing:
-- Process prompts in batches of 10-20 simultaneously
-- Use different agent combinations for different prompt types
-- Monitor system resources and adjust batch sizes
-
-### Caching Strategy:
-- Cache PROJECT TREE analysis results
-- Reuse agent assignments for similar prompt patterns
-- Maintain session context across related prompts
-
-## EXECUTION COMMAND
-
-**START PROCESSING:**
-```
-Execute this orchestration prompt in Orchestra Mode with access to all agents and modes.
-Begin with Phase 1 initialization, then enter the main processing loop.
-Automatically switch modes and agents as defined in the protocols above.
-Process all 842 prompts in generated-prompts/ directory.
-```
-
-## SUCCESS CRITERIA
-- ✅ All 842 prompts processed
-- ✅ 842 feature sections added to features/*.md files
-- ✅ Progress tracking complete and accurate
-- ✅ Cross-references properly established
-- ✅ No file corruption or overwrites
-- ✅ Quality validation passed
-
-**INITIATE ORCHESTRATION NOW**
+ 
