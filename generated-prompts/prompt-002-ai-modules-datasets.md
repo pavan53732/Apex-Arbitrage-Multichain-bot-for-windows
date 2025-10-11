@@ -43,7 +43,7 @@ If verification fails or is skipped, operate in paste-only mode.
 
 ## MODE: PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + IMPLEMENTATION DOCS)
 
-Always follow Steps 1–6 in order:
+Always follow Steps 1ï¿½6 in order:
 
 ### STEP 1: PARSE INPUT PATH
 
@@ -61,8 +61,8 @@ Is path backend/*, dashboard/*, ai-modules/*, contracts/*, config/*, security/*,
 
 Is path tests/*, deploy/*, logs/*, data/*, migrations/*, scripts/*?
   +- YES ? Check if it's framework code (not data/logs)
-  ¦   +- Framework code ? PROCESS WITH CAUTION
-  ¦   +- Data/logs ? SKIP
+  ï¿½   +- Framework code ? PROCESS WITH CAUTION
+  ï¿½   +- Data/logs ? SKIP
   +- NO ? Continue checking...
 
 Is path archive/*, examples/*, research/*, benchmarks/*, ci/*?
@@ -107,17 +107,78 @@ Action: STOP - do not process or write any files
 
 Execute using executeBash tool:
 ```powershell
-$files = Get-ChildItem -Path "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\$folderPath" -Recurse -File -Force
-Write-Host "TOTAL FILES FOUND: $($files.Count)"
-Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
-if ($files.Count -le 500) {
-    $files | ForEach-Object { Write-Host $_.FullName }
-} else {
-    Write-Host "LARGE FOLDER: $($files.Count) files - listing first 100"
-    $files | Select-Object -First 100 | ForEach-Object { Write-Host $_.FullName }
-    Write-Host "... and $($files.Count - 100) more files"
+# ENHANCED FILE ENUMERATION WITH ERROR HANDLING
+try {
+    # Use quoted path to handle spaces
+    $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
+    $targetPath = Join-Path $basePath "$folderPath"
+    
+    Write-Host "Checking path: $targetPath"
+    
+    # Verify path exists
+    if (-not (Test-Path $targetPath)) {
+        Write-Host "ERROR: Path does not exist: $targetPath"
+        exit 1
+    }
+    
+    # Get all files with comprehensive enumeration
+    $files = Get-ChildItem -Path $targetPath -Recurse -File -Force -ErrorAction Stop
+    $folders = Get-ChildItem -Path $targetPath -Recurse -Directory -Force -ErrorAction Stop
+    
+    Write-Host "TOTAL FILES FOUND: $($files.Count)"
+    Write-Host "TOTAL FOLDERS FOUND: $($folders.Count)"
+    
+    # List all folders with complete nested structure
+    Write-Host "--- COMPLETE FOLDER STRUCTURE (ALL $($folders.Count) FOLDERS) ---"
+    $folders | Sort-Object FullName | ForEach-Object { 
+        $relativePath = $_.FullName.Replace($targetPath, "").TrimStart('\')
+        Write-Host $relativePath
+    }
+    Write-Host "--- END OF FOLDER STRUCTURE ---"
+    
+    # List all files with full paths
+    Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
+    $files | Sort-Object FullName | ForEach-Object { 
+        Write-Host $_.FullName 
+    }
+    Write-Host "--- END OF COMPLETE LIST ---"
+    
+} catch {
+    Write-Host "ERROR: $($_.Exception.Message)"
+    Write-Host "Failed to enumerate files in: $targetPath"
+    exit 1
 }
-Write-Host "--- END OF COMPLETE LIST ---"
+try {
+    # Use quoted path to handle spaces
+    $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
+    $targetPath = Join-Path $basePath "$folderPath"
+    
+    Write-Host "Checking path: $targetPath"
+    
+    # Verify path exists
+    if (-not (Test-Path $targetPath)) {
+        Write-Host "ERROR: Path does not exist: $targetPath"
+        exit 1
+    }
+    
+    # Get all files with comprehensive enumeration
+    $files = Get-ChildItem -Path $targetPath -Recurse -File -Force -ErrorAction Stop
+    
+    Write-Host "TOTAL FILES FOUND: $($files.Count)"
+    Write-Host "TOTAL FOLDERS FOUND: $((Get-ChildItem -Path $targetPath -Recurse -Directory -Force -ErrorAction Stop).Count)"
+    
+    # List all files with full paths
+    Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
+    $files | Sort-Object FullName | ForEach-Object { 
+        Write-Host $_.FullName 
+    }
+    Write-Host "--- END OF COMPLETE LIST ---"
+    
+} catch {
+    Write-Host "ERROR: $($_.Exception.Message)"
+    Write-Host "Failed to enumerate files in: $targetPath"
+    exit 1
+}
 ```
 Is path backend/*, dashboard/*, ai-modules/*, contracts/*, config/*, security/*, utils/*, types/*, plugins/*?
   +- YES ? PROCESS (go to STEP 2)
@@ -125,8 +186,8 @@ Is path backend/*, dashboard/*, ai-modules/*, contracts/*, config/*, security/*,
 
 Is path tests/*, deploy/*, logs/*, data/*, migrations/*, scripts/*?
   +- YES ? Check if it's framework code (not data/logs)
-  ¦   +- Framework code ? PROCESS WITH CAUTION
-  ¦   +- Data/logs ? SKIP
+  ï¿½   +- Framework code ? PROCESS WITH CAUTION
+  ï¿½   +- Data/logs ? SKIP
   +- NO ? Continue checking...
 
 Is path archive/*, examples/*, research/*, benchmarks/*, ci/*?
@@ -220,7 +281,7 @@ If verification fails or is skipped, operate in paste-only mode.
 
 ## MODE: PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + IMPLEMENTATION DOCS)
 
-Always follow Steps 1–6 in order:
+Always follow Steps 1ï¿½6 in order:
 
 ### STEP 1: PARSE INPUT PATH
 
@@ -238,8 +299,8 @@ Is path backend/*, dashboard/*, ai-modules/*, contracts/*, config/*, security/*,
 
 Is path tests/*, deploy/*, logs/*, data/*, migrations/*, scripts/*?
   +- YES ? Check if it's framework code (not data/logs)
-  ¦   +- Framework code ? PROCESS WITH CAUTION
-  ¦   +- Data/logs ? SKIP
+  ï¿½   +- Framework code ? PROCESS WITH CAUTION
+  ï¿½   +- Data/logs ? SKIP
   +- NO ? Continue checking...
 
 Is path archive/*, examples/*, research/*, benchmarks/*, ci/*?
@@ -366,7 +427,7 @@ Still list EVERY file, just organize by category.
 ### STEP 4: MAP TO .MD FILES
 
 - Choose the single owner .md from: install-dependencies.md, config.md, backend.md, dashboard.md, ai-modules.md, contracts.md, security.md, testing.md, deployment.md, docs.md
-- Choose 1–4 referencing .md files based on real integration needs
+- Choose 1ï¿½4 referencing .md files based on real integration needs
 
 ### STEP 5: IMPLEMENTATION GUIDE (FILENAME-ONLY, APPEND-ONLY)
 
@@ -394,13 +455,13 @@ Example grouped output:
 ```
 Feature Files:
 Core Logic (3 files):
-- arbitrage-engine.js — Main arbitrage engine
-- trade-manager.js — Trade management
-- execution-handler.js — Execution logic
+- arbitrage-engine.js ï¿½ Main arbitrage engine
+- trade-manager.js ï¿½ Trade management
+- execution-handler.js ï¿½ Execution logic
 
 Adapters (5 files):
-- uniswap-adapter.js — Uniswap integration
-- sushiswap-adapter.js — SushiSwap integration
+- uniswap-adapter.js ï¿½ Uniswap integration
+- sushiswap-adapter.js ï¿½ SushiSwap integration
 ...
 ```
 
@@ -529,14 +590,14 @@ Windows Implementation:
   Feature Files:
   [Grouped by purpose]
   Core Logic ([N] files):
-  - [filename] — [short description]
+  - [filename] ï¿½ [short description]
   Adapters ([N] files):
-  - [filename] — [short description]
+  - [filename] ï¿½ [short description]
   
   Technologies: [detected stack]
   
   Windows Implementation:
-  - [2–4 bullets, no OS paths]
+  - [2ï¿½4 bullets, no OS paths]
 
 **WINDOWS IMPLEMENTATION BULLET FORMAT:**
 
@@ -558,7 +619,7 @@ Each bullet should be ONE sentence describing:
 
 - REFERENCES APPEND (features/[ref].md):
   Append one new line at the END of each referenced file:
-  - [Feature Name] — see features/[owner].md
+  - [Feature Name] ï¿½ see features/[owner].md
 - If an owner/reference file does not exist, create features/[name].md (empty) and append the new section/line. Never edit or remove existing text anywhere
 
 ### STEP 6: ACTUALLY WRITE TO GITHUB FILES (STRICT APPEND-ONLY)
@@ -621,20 +682,20 @@ Legacy Path: Apex Arbitrage multi-chain bot/ai-modules/datasets
 - "What does this FEATURE do?" ? [your 1-2 line description]
 - "Which MD file OWNS this FEATURE?" ? [owner.md] ([reason])
 - "Which MD files REFERENCE this FEATURE?" ? [md1], [md2] ([reasons])
-- "HOW TO IMPLEMENT — OWNER FILE ([owner.md])" ?
+- "HOW TO IMPLEMENT ï¿½ OWNER FILE ([owner.md])" ?
   Append this section to the end of features/[owner].md:
 
   ## Feature: [Feature Name]
 
   Feature Files:
-  - [file1] — [description]
-  - [file2] — [description]
+  - [file1] ï¿½ [description]
+  - [file2] ï¿½ [description]
   Windows Implementation:
   - [bullet 1]
   - [bullet 2]
-- "HOW TO IMPLEMENT — REFERENCES" ?
-  - In features/[md1]: [Feature Name] — see features/[owner].md
-  - In features/[md2]: [Feature Name] — see features/[owner].md
+- "HOW TO IMPLEMENT ï¿½ REFERENCES" ?
+  - In features/[md1]: [Feature Name] ï¿½ see features/[owner].md
+  - In features/[md2]: [Feature Name] ï¿½ see features/[owner].md
 ```
 
 **DO NOT ADD:**
@@ -899,25 +960,25 @@ Output:
 - "What does this FEATURE do?" ? Captures system and execution performance metrics (CPU, memory, network, gas consumption) for monitoring and tuning
 - "Which MD file OWNS this FEATURE?" ? testing.md (performance monitoring belongs to testing/QA)
 - "Which MD files REFERENCE this FEATURE?" ? backend.md (emits metrics), dashboard.md (perf widgets), config.md (retention/sampling), docs.md (monitoring guide)
-- "HOW TO IMPLEMENT — OWNER FILE (testing.md)" ?
+- "HOW TO IMPLEMENT ï¿½ OWNER FILE (testing.md)" ?
   Append this section to the end of features/testing.md:
 
   ## Feature 1: Performance Logs
 
   Feature Files:
-  - cpu-usage.log — CPU utilization tracking
-  - memory-usage.log — Memory utilization data
-  - network-usage.log — Network performance metrics
-  - gas-usage.log — Gas consumption metrics
+  - cpu-usage.log ï¿½ CPU utilization tracking
+  - memory-usage.log ï¿½ Memory utilization data
+  - network-usage.log ï¿½ Network performance metrics
+  - gas-usage.log ï¿½ Gas consumption metrics
   Windows Implementation:
   - Node service writes JSON lines with timestamps
   - Rotate daily; keep last 30 files
   - Dashboard reads latest N lines for live charts
-- "HOW TO IMPLEMENT — REFERENCES" ?
-  - In features/backend.md: Performance Logs — see features/testing.md
-  - In features/dashboard.md: Performance Logs — see features/testing.md
-  - In features/config.md: Performance Logs — see features/testing.md
-  - In features/docs.md: Performance Logs — see features/testing.md
+- "HOW TO IMPLEMENT ï¿½ REFERENCES" ?
+  - In features/backend.md: Performance Logs ï¿½ see features/testing.md
+  - In features/dashboard.md: Performance Logs ï¿½ see features/testing.md
+  - In features/config.md: Performance Logs ï¿½ see features/testing.md
+  - In features/docs.md: Performance Logs ï¿½ see features/testing.md
 
 ### Example 2: Multi-file Complex Folder
 
@@ -930,32 +991,32 @@ Output:
 - "What does this FEATURE do?" ? Provides standardized adapters for integrating with multiple DEX protocols (Uniswap, SushiSwap, Curve) for price discovery and trade execution
 - "Which MD file OWNS this FEATURE?" ? backend.md (core integration adapters)
 - "Which MD files REFERENCE this FEATURE?" ? contracts.md (DEX contract interfaces), config.md (DEX endpoint configuration), testing.md (adapter tests), docs.md (integration guide)
-- "HOW TO IMPLEMENT — OWNER FILE (backend.md)" ?
+- "HOW TO IMPLEMENT ï¿½ OWNER FILE (backend.md)" ?
   Append this section to the end of features/backend.md:
 
   ## Feature 1: Dex Adapters
 
   Feature Files:
-  - uniswap-v2-adapter.js — Uniswap V2 protocol integration
-  - uniswap-v3-adapter.js — Uniswap V3 protocol integration
-  - sushiswap-adapter.js — SushiSwap protocol integration
-  - curve-adapter.js — Curve Finance integration
-  - balancer-adapter.js — Balancer protocol integration
-  - adapter-base.js — Base adapter class with common functionality
-  - adapter-factory.js — Factory for creating adapter instances
-  - adapter-registry.js — Registry for managing available adapters
-  - adapter-config.json — Adapter configuration and endpoints
-  - adapter-utils.js — Utility functions for adapters
+  - uniswap-v2-adapter.js ï¿½ Uniswap V2 protocol integration
+  - uniswap-v3-adapter.js ï¿½ Uniswap V3 protocol integration
+  - sushiswap-adapter.js ï¿½ SushiSwap protocol integration
+  - curve-adapter.js ï¿½ Curve Finance integration
+  - balancer-adapter.js ï¿½ Balancer protocol integration
+  - adapter-base.js ï¿½ Base adapter class with common functionality
+  - adapter-factory.js ï¿½ Factory for creating adapter instances
+  - adapter-registry.js ï¿½ Registry for managing available adapters
+  - adapter-config.json ï¿½ Adapter configuration and endpoints
+  - adapter-utils.js ï¿½ Utility functions for adapters
   Windows Implementation:
   - Load adapters dynamically from plugin directory at service startup
   - Register adapters with backend service for runtime access
   - Configure DEX endpoints through configuration management system
   - Expose adapter status and metrics via dashboard API
-- "HOW TO IMPLEMENT — REFERENCES" ?
-  - In features/contracts.md: Dex Adapters — see features/backend.md
-  - In features/config.md: Dex Adapters — see features/backend.md
-  - In features/testing.md: Dex Adapters — see features/backend.md
-  - In features/docs.md: Dex Adapters — see features/backend.md
+- "HOW TO IMPLEMENT ï¿½ REFERENCES" ?
+  - In features/contracts.md: Dex Adapters ï¿½ see features/backend.md
+  - In features/config.md: Dex Adapters ï¿½ see features/backend.md
+  - In features/testing.md: Dex Adapters ï¿½ see features/backend.md
+  - In features/docs.md: Dex Adapters ï¿½ see features/backend.md
 
 ### Example 3: Empty Scaffolded Folder
 
@@ -968,7 +1029,7 @@ Output:
 - "What does this FEATURE do?" ? Archives deprecated and obsolete modules for historical reference and potential future restoration
 - "Which MD file OWNS this FEATURE?" ? docs.md (historical documentation and archives)
 - "Which MD files REFERENCE this FEATURE?" ? backend.md (references to deprecated backend modules), deployment.md (migration notes)
-- "HOW TO IMPLEMENT — OWNER FILE (docs.md)" ?
+- "HOW TO IMPLEMENT ï¿½ OWNER FILE (docs.md)" ?
   Append this section to the end of features/docs.md:
 
   ## Feature 1: Deprecated Modules
@@ -979,9 +1040,9 @@ Output:
   - Maintain archive directory in application data for deprecated code
   - Document deprecation reasons and migration paths in help system
   - Provide archive browser in dashboard for historical reference
-- "HOW TO IMPLEMENT — REFERENCES" ?
-  - In features/backend.md: Deprecated Modules — see features/docs.md
-  - In features/deployment.md: Deprecated Modules — see features/docs.md
+- "HOW TO IMPLEMENT ï¿½ REFERENCES" ?
+  - In features/backend.md: Deprecated Modules ï¿½ see features/docs.md
+  - In features/deployment.md: Deprecated Modules ï¿½ see features/docs.md
 
 ## HOW TO USE
 
