@@ -111,7 +111,7 @@ Get-ChildItem -Path "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for
 ```
 
 - **MUST LIST EVERY SINGLE FILE**: Enumerate ALL filenames found in the folder - no exceptions, no shortcuts, no sampling
-- **MUST LIST EVERY SINGLE SUBFOLDER**: Include all subfolders even if empty or containing only scaffolded files
+- **MUST INCLUDE SUBFOLDER FILES**: Include all subfolders even if empty or containing only scaffolded files
 - **FORBIDDEN**: Do not guess, skip, summarize, or use "etc." - list EVERY filename explicitly
 - **VERIFICATION**: Count total files found and state the count explicitly: "Found [N] files in [folder-path]"
 - **SCAFFOLDED FILES**: Even if files are empty placeholders, they MUST be analyzed for feature intent from filename patterns
@@ -202,6 +202,7 @@ Group Feature Files by actual function, not just extension:
 - **ML Models**: *-model.js, *-training.js, *-inference.js, *-prediction.js
 - **Blockchain**: *-blockchain.js, *-wallet.js, *-transaction.js, *-contract.js
 - **DeFi**: *-defi.js, *-dex.js, *-swap.js, *-liquidity.js, *-arbitrage.js
+- **Other Files**: Files that don't match above categories
 
 Example grouped output:
 ```
@@ -250,7 +251,6 @@ Detect technologies from file extensions and patterns:
 - *.pkl, *.pickle â†’ Pickle (Serialized Data)
 - *.joblib â†’ Joblib (ML Persistence)
 - *.safetensors â†’ SafeTensors (ML Weights)
-- *.bin â†’ Binary model files (ML Models)
 - *.msi â†’ Windows Installer (Installation)
 - *.asar â†’ Electron Archive (Packaging)
 - *.appx â†’ Windows App Package (Distribution)
@@ -533,7 +533,6 @@ Legacy Path: Apex Arbitrage multi-chain bot/benchmarks/docs
 - *.pkl, *.pickle â†’ Pickle (Serialized Data)
 - *.joblib â†’ Joblib (ML Persistence)
 - *.safetensors â†’ SafeTensors (ML Weights)
-- *.bin â†’ Binary model files (ML Models)
 - *.msi â†’ Windows Installer (Installation)
 - *.asar â†’ Electron Archive (Packaging)
 - *.appx â†’ Windows App Package (Distribution)
@@ -552,7 +551,7 @@ Legacy Path: Apex Arbitrage multi-chain bot/benchmarks/docs
 - *.vy â†’ Vyper (Smart Contracts)
 - *.abi â†’ ABI (Contract Interface)
 - *.bin | *.dll | *.so | *.exe → install-dependencies.md (binaries)
-- *.log → SKIP (runtime logs)
+- *.log -> SKIP (runtime logs - EXCEPT logs/performance-logs and logs/security-logs)
 - *.zip | *.tar.gz | *.pdf | *.docx → SKIP (archives/documents)
 - Dockerfile | *.tf | *.tfvars | *.groovy → SKIP (not for Windows)
 - .gitignore | .prettierrc | .eslintrc → SKIP (dev configs)
@@ -640,10 +639,6 @@ Before writing files, verify:
 ### Path Not Found
 Output: "ERROR: Path '[path]' not found in Path-Locations.md (842 directories)"
 Action: STOP - do not write any files, request user to verify path
-
-### PROJECT TREE Not Loaded
-Output: "ERROR: PROJECT TREE COMPLETE STRUCTURE.md not loaded or accessible"
-Action: STOP - request user to provide PROJECT TREE access first
 
 ### File Count Mismatch
 If Path-Locations.md shows different count than 842:
