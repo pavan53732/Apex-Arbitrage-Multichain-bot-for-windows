@@ -167,3 +167,166 @@ Windows Implementation:
 - Process real-time market data through feature extraction pipeline for model input
 - Cache computed features in memory for improved prediction performance
 - Display feature statistics and performance metrics in Electron dashboard widgets
+
+
+## Feature 5: Models ⭐⭐ (Moderate - 10 files)
+
+Feature Files:
+ML Models (5 files):
+- decisionNet-v1.pt  PyTorch decision neural network weights
+- patternNet-v2.onnx  ONNX pattern recognition model
+- scorerModel.json  JSON-based scoring model configuration
+- volatilityClassifier.pkl  Pickle volatility classification model
+
+Training Outputs (4 files):
+- accuracy-report.txt  Model accuracy metrics and evaluation results
+- token-risk-score-histogram.png  Risk score distribution visualization
+- trade-learning-curve.png  Training progress and learning curve visualization
+- README.md  Training outputs documentation
+
+Documentation (1 file):
+- README.md  Models directory documentation
+
+Technologies: PyTorch, ONNX, Pickle, JSON, PNG
+
+Windows Implementation:
+- Load trained model weights from application data directory at AI service startup
+- Support multiple model formats including PyTorch, ONNX, and Pickle for cross-platform compatibility
+- Cache loaded models in memory for improved inference performance
+- Store model artifacts with version control in structured directory hierarchy
+- Display model performance metrics and training outputs in Electron dashboard widgets
+- Integrate model inference with backend trading engine via IPC communication
+- Log model loading and inference activities to Windows Event Log for monitoring
+- Provide model management interface through configuration system for version switching
+
+
+## Feature 6: Modelweights ⭐ (Simple - 5 files)
+
+Feature Files:
+ML Model Weights (4 files):
+- decisionNet-v1.pt  PyTorch decision neural network trained weights
+- patternNet-v2.onnx  ONNX format pattern recognition model weights
+- scorerModel.json  JSON-based scoring model parameters and configuration
+- volatilityClassifier.pkl  Pickle serialized volatility classification model
+
+Documentation (1 file):
+- README.md  Model weights documentation and usage instructions
+
+Technologies: PyTorch, ONNX, Pickle, JSON
+
+Windows Implementation:
+- Load model weight files from application data directory at AI service initialization
+- Support multiple serialization formats for cross-platform model compatibility
+- Validate model integrity using checksums before loading into inference engine
+- Cache loaded model weights in memory for improved prediction latency
+- Store model versions with metadata in structured directory hierarchy
+- Provide model weight management through configuration interface for version control
+- Log model loading activities to Windows Event Log for operational monitoring
+- Enable hot-swapping of model weights without service restart for continuous operation
+
+
+## Feature 7: Trainingoutputs ⭐ (Simple - 4 files)
+
+Feature Files:
+Training Reports (1 file):
+- accuracy-report.txt  Model accuracy metrics and evaluation results
+
+Visualizations (2 files):
+- token-risk-score-histogram.png  Risk score distribution visualization
+- trade-learning-curve.png  Training progress and learning curve visualization
+
+Documentation (1 file):
+- README.md  Training outputs documentation and usage instructions
+
+Technologies: Text reports, PNG images
+
+Windows Implementation:
+- Store training output files in application data directory with timestamp versioning
+- Generate accuracy reports automatically after each model training session
+- Create visualization charts using Python plotting libraries during training process
+- Display training metrics and visualizations in Electron dashboard for monitoring
+- Archive historical training outputs for model performance comparison
+- Provide training output viewer through dashboard interface for analysis
+- Log training completion events to Windows Event Log for audit trails
+- Enable export of training reports and visualizations for external analysis
+
+
+## Feature 8: Notebooks ⭐ (Simple - 5 files)
+
+Feature Files:
+Jupyter Notebooks (4 files):
+- latency-vs-profit.ipynb  Latency impact analysis on arbitrage profitability
+- model-training-logistics.ipynb  Model training workflow and logistics documentation
+- risk-surface-analysis.ipynb  Multi-dimensional risk surface exploration and visualization
+- trade-pattern-exploration.ipynb  Trading pattern discovery and analysis notebook
+
+Documentation (1 file):
+- README.md  Notebooks documentation and usage instructions
+
+Technologies: Jupyter Notebooks
+
+Windows Implementation:
+- Launch Jupyter Notebook server as background process for interactive analysis
+- Store notebook files in application data directory with version control
+- Integrate notebook execution with Python AI modules for data analysis
+- Display notebook outputs and visualizations in Electron dashboard viewer
+- Provide notebook management interface through dashboard for editing and execution
+- Export notebook results to PDF or HTML for reporting purposes
+- Log notebook execution activities to Windows Event Log for audit trails
+- Enable collaborative notebook sharing through file system synchronization
+
+
+## Feature 9: Simulation ⭐ (Simple - 4 files)
+
+Feature Files:
+Core Logic (3 files):
+- aiReplayValidator.js  AI decision replay and validation engine
+- analyzeAIErrorCases.js  Error case analysis and debugging tool
+- simulateAITrade.js  AI trade simulation and testing framework
+
+Documentation (1 file):
+- README.md  Simulation documentation and usage instructions
+
+Technologies: JavaScript
+
+Windows Implementation:
+- Run simulation engine as background process for strategy testing without real trades
+- Load historical trade data from application data directory for replay validation
+- Execute AI decision validation through isolated sandbox environment for safety
+- Store simulation results and error analysis in structured log files with timestamps
+- Display simulation metrics and error cases in Electron dashboard for debugging
+- Integrate simulation framework with backend trading engine via IPC for testing
+- Log simulation activities to Windows Event Log for operational monitoring
+- Provide simulation control interface through dashboard for manual testing scenarios
+
+- Tests  see features/testing.md
+
+
+## Feature 10: Train ⭐ (Simple - 6 files)
+
+Feature Files:
+Core Logic (3 files):
+- train.py  Main model training script with hyperparameter optimization
+- trainFineTune.py  Model fine-tuning script for transfer learning
+- evaluate.py  Model evaluation and validation script
+
+Data Processing (1 file):
+- preprocess.py  Data preprocessing and feature engineering pipeline
+
+Configuration (1 file):
+- config.yaml  Training configuration including hyperparameters and paths
+
+Documentation (1 file):
+- README.md  Training documentation and usage instructions
+
+Technologies: Python, YAML
+
+Windows Implementation:
+- Execute training scripts as scheduled tasks with GPU acceleration support
+- Load training configuration from YAML file in application data directory
+- Process training data through preprocessing pipeline before model training
+- Store trained model checkpoints in versioned directory structure
+- Display training progress and metrics in Electron dashboard with real-time updates
+- Integrate model evaluation results with backend for performance monitoring
+- Log training activities to Windows Event Log for operational tracking
+- Provide training control interface through dashboard for manual training triggers
