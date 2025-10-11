@@ -237,7 +237,7 @@ Calculate complexity based on file count:
 
 Add complexity to feature header:
 ```
-## Feature: Dex Adapters ⭐⭐⭐ (Complex - 25 files)
+## Feature 1: Dex Adapters ⭐⭐⭐ (Complex - 25 files)
 ```
 
 **TECHNOLOGY STACK DETECTION:**
@@ -334,6 +334,12 @@ Windows Implementation:
 - Log to Windows Event Log (Application) and file logs
 - Display UI in Electron BrowserWindow with IPC communication
 ```
+
+**FEATURE NUMBERING:**
+- Before appending, count existing "## Feature" headers in the target file
+- Number the new feature sequentially (e.g., if 5 features exist, new one is "## Feature 6:")
+- If file only has header (e.g., "# AI Modules Features"), start with "## Feature 1:"
+- Format: "## Feature [N]: [Feature Name] â­â­ (Moderate - [X] files)"
 - **NEW FILE HEADER**: If creating a missing features/[owner].md, initialize with a single header and newline:
   - features/config.md → "# Configuration Features\n"
   - features/security.md → "# Security Features\n"
@@ -718,7 +724,7 @@ Output:
 - "HOW TO IMPLEMENT — OWNER FILE (testing.md)" →
   Append this section to the end of features/testing.md:
 
-  ## Feature: Performance Logs
+  ## Feature 1: Performance Logs
 
   Feature Files:
   - cpu-usage.log — CPU utilization tracking
@@ -749,7 +755,7 @@ Output:
 - "HOW TO IMPLEMENT — OWNER FILE (backend.md)" →
   Append this section to the end of features/backend.md:
 
-  ## Feature: Dex Adapters
+  ## Feature 1: Dex Adapters
 
   Feature Files:
   - uniswap-v2-adapter.js — Uniswap V2 protocol integration
@@ -787,7 +793,7 @@ Output:
 - "HOW TO IMPLEMENT — OWNER FILE (docs.md)" →
   Append this section to the end of features/docs.md:
 
-  ## Feature: Deprecated Modules
+  ## Feature 1: Deprecated Modules
 
   Feature Files:
   - (Scaffolded folder - no files yet)
