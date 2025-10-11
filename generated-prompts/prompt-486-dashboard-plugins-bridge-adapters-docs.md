@@ -1046,8 +1046,10 @@ If ANY check fails: STOP and report issue
    Prompt 486: Executed - Added 'Feature: [Feature Name]' to features/[owner].md
    ```
 6. Save progress.md before moving to next prompt
+7. Clean up: Delete any temp_*.ps1 files created during this prompt execution
 
 **Mark this prompt as COMPLETE.**
 
 ---
+
 
