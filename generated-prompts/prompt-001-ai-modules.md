@@ -1003,7 +1003,18 @@ If ANY check fails: STOP and report issue
 
 ---
 
-## POST-GENERATION QUALITY CHECKS
+
+Before writing files, verify:
+1. All 5 output sections complete
+2. Feature Files list NOT empty (unless scaffolded)
+3. Windows Implementation has 2-4 bullets minimum
+4. Feature name valid (1-50 chars, Title Case)
+5. progress.md will be updated
+
+If ANY check fails: STOP and report issue
+
+---
+
 
 Before writing files, verify:
 1. All 5 output sections complete
@@ -1033,3 +1044,4 @@ If ANY check fails: STOP and report issue
 **Mark this prompt as COMPLETE.**
 
 ---
+

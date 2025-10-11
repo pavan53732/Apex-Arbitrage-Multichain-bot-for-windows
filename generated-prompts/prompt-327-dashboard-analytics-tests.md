@@ -1013,3 +1013,35 @@ Legacy Path: Apex Arbitrage multi-chain bot/dashboard/analytics/tests
 
 - presets/*.json ? dashboard.md (UI configuration)
 - *-adapter.js ? backend.md (integration adapters)
+
+
+## POST-GENERATION QUALITY CHECKS
+
+Before writing files, verify:
+1. All 5 output sections complete
+2. Feature Files list NOT empty (unless scaffolded)
+3. Windows Implementation has 2-4 bullets minimum
+4. Feature name valid (1-50 chars, Title Case)
+5. progress.md will be updated
+
+If ANY check fails: STOP and report issue
+
+---
+
+## POST-EXECUTION CHECKPOINT
+
+**After completing all tasks above, update progress tracking:**
+
+1. Open generated-prompts/progress.md
+2. Increment "Completed" counter (X/842 -> X+1/842)
+3. Update "Last Updated" to today's date
+4. Update "Recent Completions" to: Prompt XXX (Feature: [Feature Name])
+5. Append to Execution Log:
+   `
+   Prompt XXX: Executed - Added 'Feature: [Feature Name]' to features/[owner].md
+   `
+6. Save progress.md before moving to next prompt
+
+**Mark this prompt as COMPLETE.**
+
+---
