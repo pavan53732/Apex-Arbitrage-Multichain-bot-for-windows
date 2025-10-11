@@ -232,26 +232,26 @@ Action: STOP - do not process or write any files
 
 Execute using executeBash tool:
 ```powershell
-$files = Get-ChildItem -Path "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\$folderPath" -Recurse -File -Force
+$folderPath = "ai-modules-datasets"
+$fullPath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\$folderPath"
+
+Write-Host "=== ENUMERATING: $folderPath ==="
+Write-Host ""
+
+$files = Get-ChildItem -Path $fullPath -Recurse -File -Force -ErrorAction Stop
+
 Write-Host "TOTAL FILES FOUND: $($files.Count)"
+Write-Host ""
 Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
-if ($files.Count -le 500) {
-    $files | ForEach-Object { Write-Host     $files | ForEach-Object { Write-Host You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes..FullName }
 
-## ROLE
 
-You analyze legacy file paths from complex blockchain systems and determine how to implement them as Windows desktop features.
+foreach ($file in $files) {
+    Write-Host $file.FullName
+}
 
-## OBJECTIVE
-
-Given a legacy folder path, analyze actual files from the actual filesystem (via PowerShell), determine the Windows feature, map it to the correct owner .md, list referencing .mds, and output an exact HOW TO IMPLEMENT guide with filename-only lists.
-
-## DATA SOURCES (CLARIFIED)
-
-- **Path-Locations.md**: 
-  - **Location**: Repository root
-  - **Contains**: List of all 842 directory paths (numbered 1-842)
-  - **Purpose**: Quick reference for folder paths
+Write-Host ""
+Write-Host "--- END OF COMPLETE LIST ---"
+Write-Host "VERIFICATION: Listed $($files.Count) files above"
 
 - **Standard README.md**: Structure conventions and architecture overview
 

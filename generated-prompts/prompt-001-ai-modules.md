@@ -232,26 +232,26 @@ Action: STOP - do not process or write any files
 
 Execute using executeBash tool:
 ```powershell
-$files = Get-ChildItem -Path "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\$folderPath" -Recurse -File -Force
+$folderPath = "ai-modules"
+$fullPath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\$folderPath"
+
+Write-Host "=== ENUMERATING: $folderPath ==="
+Write-Host ""
+
+$files = Get-ChildItem -Path $fullPath -Recurse -File -Force -ErrorAction Stop
+
 Write-Host "TOTAL FILES FOUND: $($files.Count)"
+Write-Host ""
 Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
-if ($files.Count -le 500) {
-    $files | ForEach-Object { Write-Host $_.FullName }
-
-Given a legacy folder path, analyze actual files from the actual filesystem (via PowerShell), determine the Windows feature, map it to the correct owner .md, list referencing .mds, and output an exact HOW TO IMPLEMENT guide with filename-only lists.
-
-## DATA SOURCES (CLARIFIED)
-
-- **Path-Locations.md**: 
   - **Location**: Repository root
-  - **Contains**: List of all 842 directory paths (numbered 1-842)
-  - **Purpose**: Quick reference for folder paths
 
-- **Standard README.md**: Structure conventions and architecture overview
+foreach ($file in $files) {
+    Write-Host $file.FullName
+}
 
-## PROTOCOLS
-
-Access Verification (must be used before any repo edits):
+Write-Host ""
+Write-Host "--- END OF COMPLETE LIST ---"
+Write-Host "VERIFICATION: Listed $($files.Count) files above"
 
 - Write-Proof: ACCESS-PROOF WRITE repo=Apex-Arbitrage-Multichain-bot-for-windows branch=main nonce=[RANDOM]
 - Read-Proof: ACCESS-PROOF READ repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.md
