@@ -32,7 +32,7 @@ If verification fails or is skipped, operate in paste-only mode.
 **Before proceeding, check progress tracking:**
 
 1. Read `generated-prompts/progress.md`
-2. Search for "Prompt : Executed" in the Execution Log
+2. Search for "Prompt 391: Executed" in the Execution Log
 3. **If found**: STOP - This prompt already completed. Move to next prompt.
 4. **If not found**: Proceed with execution below.
 
@@ -819,10 +819,10 @@ Legacy Path: Apex Arbitrage multi-chain bot/dashboard/deploy/ansible
 1. Open `generated-prompts/progress.md`
 2. Increment "Completed" counter (X/842 -> X+1/842)
 3. Update "Last Updated" to today's date
-4. Update "Recent Completions" to: Prompt  (Feature: [Feature Name])
+4. Update "Recent Completions" to: Prompt 391 (Feature: [Feature Name])
 5. Append to Execution Log:
    ```
-   Prompt : Executed - Added 'Feature: [Feature Name]' to features/[owner].md
+   Prompt 391: Executed - Added 'Feature: [Feature Name]' to features/[owner].md
    ```
 6. Save progress.md before moving to next prompt
 
