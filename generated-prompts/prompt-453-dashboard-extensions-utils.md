@@ -6,7 +6,7 @@ You analyze legacy file paths from complex blockchain systems and determine how 
 
 ## OBJECTIVE
 
-Given a legacy folder path, analyze actual files from the project tree, determine the Windows feature, map it to the correct owner .md, list referencing .mds, and output an exact HOW TO IMPLEMENT guide with filename-only lists.
+Given a legacy folder path, analyze actual files from the actual filesystem (via PowerShell), determine the Windows feature, map it to the correct owner .md, list referencing .mds, and output an exact HOW TO IMPLEMENT guide with filename-only lists.
 
 ## DATA SOURCES (CLARIFIED)
 
@@ -110,13 +110,21 @@ Execute using executeBash tool:
 Get-ChildItem -Path "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\dashboard/extensions/utils" -Recurse -File | Select-Object FullName
 ```
 
+
+**VALIDATION REQUIRED:**
+- If PowerShell command fails or returns error, output "ERROR: Cannot access path - check permissions or path existence" and STOP
+- If command succeeds but returns 0 files, check if path exists as empty folder (valid) or path is wrong (error)
 - **MUST LIST EVERY SINGLE FILE**: Enumerate ALL filenames found in the folder - no exceptions, no shortcuts, no sampling
 - **MUST INCLUDE SUBFOLDER FILES**: Include all subfolders even if empty or containing only scaffolded files
 - **FORBIDDEN**: Do not guess, skip, summarize, or use "etc." - list EVERY filename explicitly
 - **VERIFICATION**: Count total files found and state the count explicitly: "Found [N] files in [folder-path]"
 - **SCAFFOLDED FILES**: Even if files are empty placeholders, they MUST be analyzed for feature intent from filename patterns
 - **MINIMUM REQUIREMENT**: If folder has 50+ files, list ALL 50+ files by name
-- **NOT-FOUND GUARD**: If [folder-path] does not exist in PROJECT TREE, output "ERROR: Path not found in PROJECT TREE" and stop; do not write any files
+**SYMBOLIC LINKS AND JUNCTIONS:**
+- PowerShell Get-ChildItem follows symbolic links and junctions by default
+- If circular reference detected (rare), PowerShell will error - treat as validation failure
+- Document symlinked files normally (they are valid files in the feature)
+- **NOT-FOUND GUARD**: If [folder-path] does not exist in actual filesystem (via PowerShell), output "ERROR: Path not found in actual filesystem (via PowerShell)" and stop; do not write any files
 
 **FILE ENUMERATION EXAMPLES:**
 
@@ -163,7 +171,7 @@ Still list EVERY file, just organize by category.
 
 ### STEP 2.5: SUBFOLDER HANDLING
 
-**Rule:** Process ONLY the specified folder, NOT its subfolders separately.
+**Rule:** Process the specified folder INCLUDING all files in its subfolders recursively, but treat them as ONE feature (do not create separate features for subfolders).
 
 **Example:**
 - Input: `backend/plugins/dex-adapters`
@@ -409,7 +417,11 @@ Each bullet should be ONE sentence describing:
 - **Creation rule**: If the owner/reference .md does not exist (e.g., config.md, security.md), CREATE features/[name].md and then append
 - **APPEND-ONLY**: Read existing content first, then append the new "## Feature:" section to the END
 - **Preserve all existing content**: never overwrite, replace, or delete
-- **Not-found guard**: If [folder-path] is NOT found in PROJECT TREE, output an error and DO NOT write any files
+**SYMBOLIC LINKS AND JUNCTIONS:**
+- PowerShell Get-ChildItem follows symbolic links and junctions by default
+- If circular reference detected (rare), PowerShell will error - treat as validation failure
+- Document symlinked files normally (they are valid files in the feature)
+- **Not-found guard**: If [folder-path] is NOT found in actual filesystem (via PowerShell), output an error and DO NOT write any files
 - Repo: Apex-Arbitrage-Multichain-bot-for-windows (owner: pavan53732, branch: main)
 
 ## Input Format
@@ -551,7 +563,7 @@ Legacy Path: Apex Arbitrage multi-chain bot/dashboard/extensions/utils
 - *.vy â†’ Vyper (Smart Contracts)
 - *.abi â†’ ABI (Contract Interface)
 - *.bin | *.dll | *.so | *.exe → install-dependencies.md (binaries)
-- *.log -> SKIP (runtime logs - EXCEPT logs/performance-logs and logs/security-logs)
+- *.log → SKIP (runtime logs - EXCEPT logs/performance-logs and logs/security-logs)
 - *.zip | *.tar.gz | *.pdf | *.docx → SKIP (archives/documents)
 - Dockerfile | *.tf | *.tfvars | *.groovy → SKIP (not for Windows)
 - .gitignore | .prettierrc | .eslintrc → SKIP (dev configs)
@@ -583,6 +595,10 @@ Legacy Path: Apex Arbitrage multi-chain bot/dashboard/extensions/utils
 
 ### Feature Name Derivation (STEP-BY-STEP)
 
+**VALIDATION:**
+- If last segment is empty or only special chars, use parent folder name
+- If derivation produces empty string, output ERROR and stop
+- Feature name must be 1-50 characters after Title Case conversion
 **Given path:** `backend/plugins/dex-adapters`
 
 Step 1: Extract last segment → `dex-adapters`
@@ -601,7 +617,7 @@ Final: `Dex Adapters`
 ## EDGE CASES & SPECIAL HANDLING
 
 ### Empty Folders
-- If folder exists in Path-Locations.md but has no files in PROJECT TREE
+- If folder exists in Path-Locations.md but has no files in actual filesystem (via PowerShell)
 - Still create documentation noting "Scaffolded folder - awaiting implementation"
 - Analyze folder name and parent path to infer intended purpose
 
@@ -650,6 +666,11 @@ If multiple owner .md files seem equally valid:
 Output: "AMBIGUOUS: Could map to [md1] or [md2]"
 Action: Choose based on PRIMARY file type majority, note alternative in references
 
+### Zero Files Found
+If PowerShell returns 0 files:
+- Verify path exists on disk (folder may be empty but valid)
+- If folder exists but empty: Document as scaffolded folder
+- If folder does not exist: Output ERROR and stop
 ### Empty Feature Files List
 If folder has no files after enumeration:
 Output: Feature Files section with "(Scaffolded folder - no files yet)"
