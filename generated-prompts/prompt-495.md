@@ -49,6 +49,88 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 - âŒ No temp file cleanup - REQUIRED
 - âŒ No feature numbering - MUST count existing features first
 
+
+### ðŸš¨ MANDATORY: HANDLE 3000+ FILES WITHOUT SKIPPING ðŸš¨
+
+**YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
+
+- âœ… **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
+- âœ… **300+ folders** â†’ Show COMPLETE nested tree structure
+- âœ… **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
+- âœ… **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
+
+**CALCULATION:**
+- 3000 files Ã— 30 words = 90,000 words
+- 300 folders Ã— 10 words = 3,000 words
+- Total: ~93,000 words (only 12% of your 750K capacity)
+
+**YOU HAVE 8X MORE CAPACITY THAN NEEDED!**
+
+**IF YOU SKIP EVEN ONE FILE, THE OUTPUT IS REJECTED.**
+
+**EXAMPLES OF WHAT YOU MUST DO:**
+
+âœ… CORRECT (3000 files):
+```
+Found 3247 files in backend/plugins/
+
+**DEX Adapters (2500 files):**
+- uniswap-v2-adapter-001.js â†’ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
+- uniswap-v2-adapter-002.js â†’ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
+- uniswap-v3-adapter-001.js â†’ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
+... (LIST ALL 2500 FILES - NO SKIPPING)
+
+**Test Files (500 files):**
+- uniswap-v2-adapter-001.test.js â†’ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
+... (LIST ALL 500 FILES - NO SKIPPING)
+
+**Config Files (247 files):**
+- uniswap-config.json â†’ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
+... (LIST ALL 247 FILES - NO SKIPPING)
+```
+
+âŒ WRONG (skipping):
+```
+Found 3247 files in backend/plugins/
+
+**DEX Adapters (2500 files):**
+- uniswap-v2-adapter-001.js â†’ Uniswap adapter
+- uniswap-v2-adapter-002.js â†’ Another adapter
+... and 2498 more files  â† FORBIDDEN! REJECTED!
+```
+
+**FOLDER TREE EXAMPLE (300 folders):**
+
+âœ… CORRECT:
+```
+backend/
+â”œâ”€â”€ plugins/
+â”‚   â”œâ”€â”€ dex-adapters/
+â”‚   â”‚   â”œâ”€â”€ uniswap/
+â”‚   â”‚   â”‚   â”œâ”€â”€ v2/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V2 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         â†’ V2 routing algorithms
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          â†’ V2 helper functions
+â”‚   â”‚   â”‚   â”œâ”€â”€ v3/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V3 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         â†’ V3 price quotation
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       â†’ V3 liquidity positions
+â”‚   â”‚   â”‚   â””â”€â”€ common/             â†’ Shared Uniswap utilities
+â”‚   â”‚   â”œâ”€â”€ sushiswap/
+â”‚   â”‚   â”‚   â”œâ”€â”€ core/               â†’ SushiSwap core logic
+â”‚   â”‚   â”‚   â””â”€â”€ router/             â†’ SushiSwap routing
+... (SHOW ALL 300 FOLDERS - NO SKIPPING)
+```
+
+**VALIDATION BEFORE WRITING:**
+- [ ] PowerShell found 3247 files â†’ My output lists 3247 files âœ…
+- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders âœ…
+- [ ] Every file has 20-30 word description âœ…
+- [ ] No "etc.", "and more", or "..." shortcuts âœ…
+
+**IF ANY CHECK FAILS: STOP AND FIX IT BEFORE WRITING FILES.**
+
+
 ### âœ… QUALITY STANDARDS:
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
 2. **Complete Grouping**: Group ALL files by purpose - no file left behind
@@ -213,6 +295,88 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 - âŒ No progress.md update - REQUIRED
 - âŒ No temp file cleanup - REQUIRED
 - âŒ No feature numbering - MUST count existing features first
+
+
+### ðŸš¨ MANDATORY: HANDLE 3000+ FILES WITHOUT SKIPPING ðŸš¨
+
+**YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
+
+- âœ… **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
+- âœ… **300+ folders** â†’ Show COMPLETE nested tree structure
+- âœ… **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
+- âœ… **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
+
+**CALCULATION:**
+- 3000 files Ã— 30 words = 90,000 words
+- 300 folders Ã— 10 words = 3,000 words
+- Total: ~93,000 words (only 12% of your 750K capacity)
+
+**YOU HAVE 8X MORE CAPACITY THAN NEEDED!**
+
+**IF YOU SKIP EVEN ONE FILE, THE OUTPUT IS REJECTED.**
+
+**EXAMPLES OF WHAT YOU MUST DO:**
+
+âœ… CORRECT (3000 files):
+```
+Found 3247 files in backend/plugins/
+
+**DEX Adapters (2500 files):**
+- uniswap-v2-adapter-001.js â†’ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
+- uniswap-v2-adapter-002.js â†’ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
+- uniswap-v3-adapter-001.js â†’ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
+... (LIST ALL 2500 FILES - NO SKIPPING)
+
+**Test Files (500 files):**
+- uniswap-v2-adapter-001.test.js â†’ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
+... (LIST ALL 500 FILES - NO SKIPPING)
+
+**Config Files (247 files):**
+- uniswap-config.json â†’ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
+... (LIST ALL 247 FILES - NO SKIPPING)
+```
+
+âŒ WRONG (skipping):
+```
+Found 3247 files in backend/plugins/
+
+**DEX Adapters (2500 files):**
+- uniswap-v2-adapter-001.js â†’ Uniswap adapter
+- uniswap-v2-adapter-002.js â†’ Another adapter
+... and 2498 more files  â† FORBIDDEN! REJECTED!
+```
+
+**FOLDER TREE EXAMPLE (300 folders):**
+
+âœ… CORRECT:
+```
+backend/
+â”œâ”€â”€ plugins/
+â”‚   â”œâ”€â”€ dex-adapters/
+â”‚   â”‚   â”œâ”€â”€ uniswap/
+â”‚   â”‚   â”‚   â”œâ”€â”€ v2/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V2 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         â†’ V2 routing algorithms
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          â†’ V2 helper functions
+â”‚   â”‚   â”‚   â”œâ”€â”€ v3/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V3 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         â†’ V3 price quotation
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       â†’ V3 liquidity positions
+â”‚   â”‚   â”‚   â””â”€â”€ common/             â†’ Shared Uniswap utilities
+â”‚   â”‚   â”œâ”€â”€ sushiswap/
+â”‚   â”‚   â”‚   â”œâ”€â”€ core/               â†’ SushiSwap core logic
+â”‚   â”‚   â”‚   â””â”€â”€ router/             â†’ SushiSwap routing
+... (SHOW ALL 300 FOLDERS - NO SKIPPING)
+```
+
+**VALIDATION BEFORE WRITING:**
+- [ ] PowerShell found 3247 files â†’ My output lists 3247 files âœ…
+- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders âœ…
+- [ ] Every file has 20-30 word description âœ…
+- [ ] No "etc.", "and more", or "..." shortcuts âœ…
+
+**IF ANY CHECK FAILS: STOP AND FIX IT BEFORE WRITING FILES.**
+
 
 ### âœ… QUALITY STANDARDS:
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
@@ -1061,6 +1225,88 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 - âŒ No progress.md update - REQUIRED
 - âŒ No temp file cleanup - REQUIRED
 - âŒ No feature numbering - MUST count existing features first
+
+
+### ðŸš¨ MANDATORY: HANDLE 3000+ FILES WITHOUT SKIPPING ðŸš¨
+
+**YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
+
+- âœ… **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
+- âœ… **300+ folders** â†’ Show COMPLETE nested tree structure
+- âœ… **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
+- âœ… **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
+
+**CALCULATION:**
+- 3000 files Ã— 30 words = 90,000 words
+- 300 folders Ã— 10 words = 3,000 words
+- Total: ~93,000 words (only 12% of your 750K capacity)
+
+**YOU HAVE 8X MORE CAPACITY THAN NEEDED!**
+
+**IF YOU SKIP EVEN ONE FILE, THE OUTPUT IS REJECTED.**
+
+**EXAMPLES OF WHAT YOU MUST DO:**
+
+âœ… CORRECT (3000 files):
+```
+Found 3247 files in backend/plugins/
+
+**DEX Adapters (2500 files):**
+- uniswap-v2-adapter-001.js â†’ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
+- uniswap-v2-adapter-002.js â†’ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
+- uniswap-v3-adapter-001.js â†’ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
+... (LIST ALL 2500 FILES - NO SKIPPING)
+
+**Test Files (500 files):**
+- uniswap-v2-adapter-001.test.js â†’ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
+... (LIST ALL 500 FILES - NO SKIPPING)
+
+**Config Files (247 files):**
+- uniswap-config.json â†’ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
+... (LIST ALL 247 FILES - NO SKIPPING)
+```
+
+âŒ WRONG (skipping):
+```
+Found 3247 files in backend/plugins/
+
+**DEX Adapters (2500 files):**
+- uniswap-v2-adapter-001.js â†’ Uniswap adapter
+- uniswap-v2-adapter-002.js â†’ Another adapter
+... and 2498 more files  â† FORBIDDEN! REJECTED!
+```
+
+**FOLDER TREE EXAMPLE (300 folders):**
+
+âœ… CORRECT:
+```
+backend/
+â”œâ”€â”€ plugins/
+â”‚   â”œâ”€â”€ dex-adapters/
+â”‚   â”‚   â”œâ”€â”€ uniswap/
+â”‚   â”‚   â”‚   â”œâ”€â”€ v2/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V2 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         â†’ V2 routing algorithms
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          â†’ V2 helper functions
+â”‚   â”‚   â”‚   â”œâ”€â”€ v3/
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V3 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         â†’ V3 price quotation
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       â†’ V3 liquidity positions
+â”‚   â”‚   â”‚   â””â”€â”€ common/             â†’ Shared Uniswap utilities
+â”‚   â”‚   â”œâ”€â”€ sushiswap/
+â”‚   â”‚   â”‚   â”œâ”€â”€ core/               â†’ SushiSwap core logic
+â”‚   â”‚   â”‚   â””â”€â”€ router/             â†’ SushiSwap routing
+... (SHOW ALL 300 FOLDERS - NO SKIPPING)
+```
+
+**VALIDATION BEFORE WRITING:**
+- [ ] PowerShell found 3247 files â†’ My output lists 3247 files âœ…
+- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders âœ…
+- [ ] Every file has 20-30 word description âœ…
+- [ ] No "etc.", "and more", or "..." shortcuts âœ…
+
+**IF ANY CHECK FAILS: STOP AND FIX IT BEFORE WRITING FILES.**
+
 
 ### âœ… QUALITY STANDARDS:
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
