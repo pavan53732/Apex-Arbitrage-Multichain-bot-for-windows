@@ -159,6 +159,12 @@ try {
 - **MUST INCLUDE SUBFOLDER FILES**: Include all subfolders and nested files
 - **FORBIDDEN**: Do not guess, skip, summarize, or use "etc." - list EVERY filename explicitly
 - **VERIFICATION**: Count total files found and state the count explicitly: "Found [N] files in [folder-path]"
+- **FEATURE NUMBERING**: Always start with "Feature #X:" where X is the prompt number
+- **COMPLETE COUNTING**: State exact counts: "Total Files: [N], Total Folders: [M], Total Nested Levels: [L]"
+- **SUMMARY FORMAT**: Begin analysis with: "Feature #[X]: [Feature Name] - Found [N] files across [M] folders"
+- **MANDATORY COUNTS**: PowerShell already shows counts, but AI must restate them in analysis
+- **STRUCTURED OUTPUT**: Format all analysis as numbered features with complete file/folder counts
+- **VERIFICATION CHECKLIST**: Before writing files, verify counts match PowerShell output exactly
 - **SCAFFOLDED FILES**: Even if files are empty placeholders, they MUST be analyzed for feature intent from filename patterns
 - **MINIMUM REQUIREMENT**: If folder has 50+ files, list ALL 50+ files by name
 
