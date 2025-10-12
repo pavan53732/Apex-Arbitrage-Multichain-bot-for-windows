@@ -104,11 +104,17 @@ Action: STOP - do not process or write any files
 
 **CRITICAL: Use PowerShell to verify path exists and enumerate ALL files:**
 
-Execute using executeBash tool:
+**EXECUTION INSTRUCTIONS:**
+1. Copy the PowerShell code block below EXACTLY as written
+2. Execute using run_terminal_cmd tool with PowerShell
+3. Do NOT modify, interpret, or break up the code
+4. Execute the ENTIRE block as ONE command
+
+**POWERSHELL COMMAND TO EXECUTE:**
 ```powershell
 try {
     $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
-    $targetPath = Join-Path $basePath "Apex Arbitrage Multichain bot/ai-modules"
+    $targetPath = Join-Path $basePath "ai-modules"
     
     Write-Host "Checking path: $targetPath"
     
@@ -142,6 +148,8 @@ try {
     exit 1
 }
 ```
+
+**IMPORTANT:** Execute this PowerShell script using run_terminal_cmd tool. Do NOT break it into individual characters or lines.
 
 **VALIDATION REQUIRED:**
 - If PowerShell command fails or returns error, output "ERROR: Cannot access path" and STOP

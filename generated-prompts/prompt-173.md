@@ -108,7 +108,7 @@ Execute using executeBash tool:
 ```powershell
 try {
     $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
-    $targetPath = Join-Path $basePath "Apex Arbitrage Multichain bot/backend/research/economics"
+    $targetPath = Join-Path $basePath "backend/research/economics"
     
     Write-Host "Checking path: $targetPath"
     
@@ -547,5 +547,6 @@ If ANY check fails: STOP and report issue
 **Mark this prompt as COMPLETE.**
 
 ---
+
 
 
