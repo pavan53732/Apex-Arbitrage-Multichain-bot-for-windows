@@ -1,18 +1,18 @@
 ﻿---
-## ðŸŽ¯ DELEGATION FLOW: COMPLETE ALL STEPS
+## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
 You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
-1. âœ… **Ask mode** â†’ Read progress.md, check if prompt already executed
-2. âœ… **DevOps mode** â†’ Execute PowerShell to enumerate files
-3. âœ… **Project Research mode** â†’ Analyze file names and project structure
-4. âœ… **Ask mode** â†’ Read existing features/*.md files to count features
-5. âœ… **Write mode** â†’ Write complete feature documentation
-6. âœ… **Ask mode** â†’ Update progress.md
-7. âœ… **DevOps mode** â†’ Delete temp files
+1. ✅ **Ask mode** â†’ Read progress.md, check if prompt already executed
+2. ✅ **DevOps mode** â†’ Execute PowerShell to enumerate files
+3. ✅ **Project Research mode** â†’ Analyze file names and project structure
+4. ✅ **Ask mode** â†’ Read existing features/*.md files to count features
+5. ✅ **Write mode** â†’ Write complete feature documentation
+6. ✅ **Ask mode** â†’ Update progress.md
+7. ✅ **DevOps mode** â†’ Delete temp files
 
 **DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
 
@@ -54,10 +54,10 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
 
-- âœ… **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
-- âœ… **300+ folders** â†’ Show COMPLETE nested tree structure
-- âœ… **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
-- âœ… **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
+- ✅ **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
+- ✅ **300+ folders** â†’ Show COMPLETE nested tree structure
+- ✅ **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
+- ✅ **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
 
 **CALCULATION:**
 - 3000 files Ã— 30 words = 90,000 words
@@ -70,7 +70,7 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **EXAMPLES OF WHAT YOU MUST DO:**
 
-âœ… CORRECT (3000 files):
+✅ CORRECT (3000 files):
 ```
 Found 3247 files in backend/plugins/
 
@@ -101,7 +101,7 @@ Found 3247 files in backend/plugins/
 
 **FOLDER TREE EXAMPLE (300 folders):**
 
-âœ… CORRECT:
+✅ CORRECT:
 ```
 backend/
 â”œâ”€â”€ plugins/
@@ -123,15 +123,15 @@ backend/
 ```
 
 **VALIDATION BEFORE WRITING:**
-- [ ] PowerShell found 3247 files â†’ My output lists 3247 files âœ…
-- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders âœ…
-- [ ] Every file has 20-30 word description âœ…
-- [ ] No "etc.", "and more", or "..." shortcuts âœ…
+- [ ] PowerShell found 3247 files â†’ My output lists 3247 files ✅
+- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders ✅
+- [ ] Every file has 20-30 word description ✅
+- [ ] No "etc.", "and more", or "..." shortcuts ✅
 
 **IF ANY CHECK FAILS: STOP AND FIX IT BEFORE WRITING FILES.**
 
 
-### âœ… QUALITY STANDARDS:
+### ✅ QUALITY STANDARDS:
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
 2. **Complete Grouping**: Group ALL files by purpose - no file left behind
 3. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
@@ -246,20 +246,20 @@ try {
     
     Write-Host "--- COMPLETE FILE LIST ---"
     $files | Sort-Object FullName | ForEach-Object { Write-Host ---
-## ðŸŽ¯ DELEGATION FLOW: COMPLETE ALL STEPS
+## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
 You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
-1. âœ… **Ask mode** â†’ Read progress.md, check if prompt already executed
-2. âœ… **DevOps mode** â†’ Execute PowerShell to enumerate files
-3. âœ… **Project Research mode** â†’ Analyze file names and project structure
-4. âœ… **Ask mode** â†’ Read existing features/*.md files to count features
-5. âœ… **Write mode** â†’ Write complete feature documentation
-6. âœ… **Ask mode** â†’ Update progress.md
-7. âœ… **DevOps mode** â†’ Delete temp files
+1. ✅ **Ask mode** â†’ Read progress.md, check if prompt already executed
+2. ✅ **DevOps mode** â†’ Execute PowerShell to enumerate files
+3. ✅ **Project Research mode** â†’ Analyze file names and project structure
+4. ✅ **Ask mode** â†’ Read existing features/*.md files to count features
+5. ✅ **Write mode** â†’ Write complete feature documentation
+6. ✅ **Ask mode** â†’ Update progress.md
+7. ✅ **DevOps mode** â†’ Delete temp files
 
 **DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
 
@@ -301,10 +301,10 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
 
-- âœ… **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
-- âœ… **300+ folders** â†’ Show COMPLETE nested tree structure
-- âœ… **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
-- âœ… **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
+- ✅ **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
+- ✅ **300+ folders** â†’ Show COMPLETE nested tree structure
+- ✅ **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
+- ✅ **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
 
 **CALCULATION:**
 - 3000 files Ã— 30 words = 90,000 words
@@ -317,7 +317,7 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **EXAMPLES OF WHAT YOU MUST DO:**
 
-âœ… CORRECT (3000 files):
+✅ CORRECT (3000 files):
 ```
 Found 3247 files in backend/plugins/
 
@@ -348,7 +348,7 @@ Found 3247 files in backend/plugins/
 
 **FOLDER TREE EXAMPLE (300 folders):**
 
-âœ… CORRECT:
+✅ CORRECT:
 ```
 backend/
 â”œâ”€â”€ plugins/
@@ -370,15 +370,15 @@ backend/
 ```
 
 **VALIDATION BEFORE WRITING:**
-- [ ] PowerShell found 3247 files â†’ My output lists 3247 files âœ…
-- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders âœ…
-- [ ] Every file has 20-30 word description âœ…
-- [ ] No "etc.", "and more", or "..." shortcuts âœ…
+- [ ] PowerShell found 3247 files â†’ My output lists 3247 files ✅
+- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders ✅
+- [ ] Every file has 20-30 word description ✅
+- [ ] No "etc.", "and more", or "..." shortcuts ✅
 
 **IF ANY CHECK FAILS: STOP AND FIX IT BEFORE WRITING FILES.**
 
 
-### âœ… QUALITY STANDARDS:
+### ✅ QUALITY STANDARDS:
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
 2. **Complete Grouping**: Group ALL files by purpose - no file left behind
 3. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
@@ -1306,20 +1306,20 @@ if (Test-Path $targetFile) {
     Write-Host "--- END OF COMPLETE LIST ---"
 } catch {
     Write-Host "ERROR: $(---
-## ðŸŽ¯ DELEGATION FLOW: COMPLETE ALL STEPS
+## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
 You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
-1. âœ… **Ask mode** â†’ Read progress.md, check if prompt already executed
-2. âœ… **DevOps mode** â†’ Execute PowerShell to enumerate files
-3. âœ… **Project Research mode** â†’ Analyze file names and project structure
-4. âœ… **Ask mode** â†’ Read existing features/*.md files to count features
-5. âœ… **Write mode** â†’ Write complete feature documentation
-6. âœ… **Ask mode** â†’ Update progress.md
-7. âœ… **DevOps mode** â†’ Delete temp files
+1. ✅ **Ask mode** â†’ Read progress.md, check if prompt already executed
+2. ✅ **DevOps mode** â†’ Execute PowerShell to enumerate files
+3. ✅ **Project Research mode** â†’ Analyze file names and project structure
+4. ✅ **Ask mode** â†’ Read existing features/*.md files to count features
+5. ✅ **Write mode** â†’ Write complete feature documentation
+6. ✅ **Ask mode** â†’ Update progress.md
+7. ✅ **DevOps mode** â†’ Delete temp files
 
 **DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
 
@@ -1361,10 +1361,10 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
 
-- âœ… **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
-- âœ… **300+ folders** â†’ Show COMPLETE nested tree structure
-- âœ… **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
-- âœ… **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
+- ✅ **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
+- ✅ **300+ folders** â†’ Show COMPLETE nested tree structure
+- ✅ **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
+- ✅ **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
 
 **CALCULATION:**
 - 3000 files Ã— 30 words = 90,000 words
@@ -1377,7 +1377,7 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **EXAMPLES OF WHAT YOU MUST DO:**
 
-âœ… CORRECT (3000 files):
+✅ CORRECT (3000 files):
 ```
 Found 3247 files in backend/plugins/
 
@@ -1408,7 +1408,7 @@ Found 3247 files in backend/plugins/
 
 **FOLDER TREE EXAMPLE (300 folders):**
 
-âœ… CORRECT:
+✅ CORRECT:
 ```
 backend/
 â”œâ”€â”€ plugins/
@@ -1430,15 +1430,15 @@ backend/
 ```
 
 **VALIDATION BEFORE WRITING:**
-- [ ] PowerShell found 3247 files â†’ My output lists 3247 files âœ…
-- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders âœ…
-- [ ] Every file has 20-30 word description âœ…
-- [ ] No "etc.", "and more", or "..." shortcuts âœ…
+- [ ] PowerShell found 3247 files â†’ My output lists 3247 files ✅
+- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders ✅
+- [ ] Every file has 20-30 word description ✅
+- [ ] No "etc.", "and more", or "..." shortcuts ✅
 
 **IF ANY CHECK FAILS: STOP AND FIX IT BEFORE WRITING FILES.**
 
 
-### âœ… QUALITY STANDARDS:
+### ✅ QUALITY STANDARDS:
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
 2. **Complete Grouping**: Group ALL files by purpose - no file left behind
 3. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
@@ -2373,9 +2373,9 @@ if (Test-Path $targetFile) {
 - âŒ Relative paths like "Apex Arbitrage Multichain bot/ai-modules"
 
 **MUST USE:**
-- âœ… executeBash tool
-- âœ… PowerShell commands
-- âœ… Full Windows paths with C:\
+- ✅ executeBash tool
+- ✅ PowerShell commands
+- ✅ Full Windows paths with C:\
 
 **IF TOOL FAILS 2 TIMES: STOP and report error. DO NOT retry same command 3+ times.**
 
