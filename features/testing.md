@@ -1,3 +1,4 @@
 - Features → see features/ai-modules.md
 - Integration → see features/ai-modules.md
 - Models → see features/ai-modules.md
+- Model Weights → see features/ai-modules.md

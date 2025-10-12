@@ -213,3 +213,31 @@ Windows Implementation:
 - **Backup Model Files:** Set up automated backup of model weights and training outputs to prevent data loss
 - **Validate Model Integrity:** Implement checksum validation for model files to ensure data integrity and prevent corruption
 - **Export Model Metrics:** Create Windows-compatible reporting system for model accuracy and performance visualization
+
+## Feature 6: Model Weights ⭐ (Simple - 5 files)
+
+Feature Files:
+ML Model Files (4 files):
+- decisionNet-v1.pt → PyTorch neural network model weights for core decision-making algorithms
+- patternNet-v2.onnx → ONNX cross-platform model weights for pattern recognition and analysis
+- scorerModel.json → JSON configuration file containing model parameters for arbitrage opportunity scoring
+- volatilityClassifier.pkl → Pickle-serialized Scikit-learn model weights for market volatility classification
+
+Documentation (1 file):
+- README.md → Documentation for model weight files, loading procedures, and usage instructions
+
+Technologies: PyTorch, ONNX, Scikit-learn, Pickle, JSON, Markdown
+
+Windows Implementation:
+- **Install PyTorch Runtime:** Install PyTorch for Windows with CPU/GPU support using pip in isolated virtual environment
+- **Install ONNX Runtime:** Set up ONNX Runtime for Windows to load and execute cross-platform model weights efficiently
+- **Configure Model Storage:** Store model weight files in application data directory with version control and backup mechanisms
+- **Set Up Model Loading:** Implement dynamic model loading system using Windows file system APIs for seamless weight switching
+- **Enable Model Caching:** Cache loaded model weights in memory using Windows memory management for improved inference performance
+- **Create Model Registry:** Implement model registry system in Windows Registry to track weight versions and metadata
+- **Schedule Model Updates:** Configure Windows Task Scheduler for automated model weight retraining and deployment workflows
+- **Integrate with AI Engine:** Connect model weight loading to main AI engine via Windows IPC for real-time decision making
+- **Monitor Model Performance:** Use Windows Performance Counters to track model weight loading times and resource utilization
+- **Backup Model Weights:** Set up automated backup of model weight files to prevent data loss during system updates
+- **Validate Model Integrity:** Implement checksum validation for model weight files to ensure data integrity and prevent corruption
+- **Export Model Metrics:** Create Windows-compatible reporting system for model weight performance and accuracy visualization
