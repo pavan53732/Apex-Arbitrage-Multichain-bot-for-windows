@@ -1,4 +1,4 @@
-You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
+﻿You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
 
 ## ROLE
 
@@ -107,7 +107,7 @@ Action: STOP - do not process or write any files
 Execute using executeBash tool:
 ```powershell
 try {
-    $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
+    $basePath$logEntry = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
     $targetPath = Join-Path $basePath "archive/deprecated-modules"
     
     Write-Host "Checking path: $targetPath"
@@ -167,7 +167,7 @@ try {
 Found 10 files in backend/plugins/dex-adapters:
 - uniswap-v2-adapter.js
 - sushiswap-adapter.js
-- ... (8 more files)  ?� FORBIDDEN!
+- ... (8 more files)  ?� FORBIDDEN!
 ```
 
 **CORRECT (Complete):**
@@ -304,7 +304,7 @@ Map features to specific Windows technologies:
 **For UI Components:**
 - Framework: Electron BrowserWindow
 - Renderer: Chromium-based rendering
-- IPC: Electron IPC (Main ?� Renderer)
+- IPC: Electron IPC (Main ?� Renderer)
 
 **For Configuration:**
 - Registry: HKEY_CURRENT_USER\Software\ApexArbitrage
@@ -613,91 +613,40 @@ If ANY check fails: STOP and report issue
 
 **After completing all tasks above, update progress tracking:**
 
-### ATOMIC PROGRESS UPDATE (CORRUPTION-PROOF)
 
-**Step 1: Create Backup**
-`powershell
-# Create atomic backup before any changes
-$backupFile = "generated-prompts/progress.md.backup.$(Get-Date -Format 'yyyyMMdd-HHmmss')"
-Copy-Item "generated-prompts/progress.md" $backupFile
-Write-Host "Backup created: $backupFile"
-`
+### SIMPLIFIED PROGRESS UPDATE
 
-**Step 2: Atomic Update Process**
+**Step 1: Update Progress**
 `powershell
 # Read current progress
 $progressContent = Get-Content "generated-prompts/progress.md" -Raw
 
-# Perform atomic updates
-$newContent = $progressContent -replace "Completed: \d+/842", "Completed: 015/842"
+# Update completion count
+$newContent = $progressContent -replace "Completed: \d+/842", "Completed: $($file.BaseName -replace 'prompt-', '')/842"
 $newContent = $newContent -replace "Last Updated: [^
-]*", "Last Updated: $(Get-Date -Format 'MMMM dd, yyyy')"
-$newContent = $newContent -replace "Recent Completions: [^
-]*", "Recent Completions: Prompt 015 (Feature: [Feature Name])"
+]]*", "Last Updated: $(Get-Date -Format 'MMMM dd, yyyy')"
 
 # Add execution log entry
 $logEntry = "
-Prompt 015: Executed - Added 'Feature: [Feature Name]' to features/[owner].md"
+prompt-015: Executed - Added 'Feature: [Feature Name]' to features/[owner].md"
 $newContent = $newContent -replace "<!-- AI: Append new log entries below this line -->", "<!-- AI: Append new log entries below this line -->$logEntry"
 
-# Write atomically
-$tempFile = "generated-prompts/progress.md.tmp"
-Set-Content $tempFile $newContent -NoNewline
-Move-Item $tempFile "generated-prompts/progress.md"
-Write-Host "Progress updated atomically"
+# Write updated content
+Set-Content "generated-prompts/progress.md" $newContent -NoNewline
+Write-Host "Progress updated successfully"
 `
 
-**Step 3: Validation**
+**Step 2: Cleanup**
 `powershell
-# Verify update succeeded
-$verifyContent = Get-Content "generated-prompts/progress.md" -Raw
-if ($verifyContent -match "Completed: 015/842") {
-    Write-Host "✅ Progress update verified"
-} else {
-    Write-Host "❌ Progress update failed - restoring backup"
-    Copy-Item $backupFile "generated-prompts/progress.md"
-    exit 1
-}
-`
-
-**Step 4: Cleanup**
-`powershell
-# Clean up backup and temp files
-Remove-Item $backupFile -ErrorAction SilentlyContinue
-Remove-Item "generated-prompts/progress.md.tmp" -ErrorAction SilentlyContinue
+# Delete any temp PowerShell files created during execution
+Get-ChildItem "temp_*.ps1" -ErrorAction SilentlyContinue | Remove-Item -Force
 Write-Host "Cleanup completed"
 `
-
-### ROLLBACK MECHANISM (FAILURE RECOVERY)
-
-**If ANY step fails, execute rollback:**
-`powershell
-# Automatic rollback on failure
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "🔄 Executing rollback..."
-    
-    # Restore progress.md from backup
-    $latestBackup = Get-ChildItem "generated-prompts/progress.md.backup.*" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
-    if ($latestBackup) {
-        Copy-Item $latestBackup.FullName "generated-prompts/progress.md"
-        Write-Host "✅ Progress restored from backup"
-    }
-    
-    # Clean up any partial files
-    Remove-Item "generated-prompts/progress.md.tmp" -ErrorAction SilentlyContinue
-    
-    # Report failure
-    Write-Host "❌ Prompt execution failed - rolled back to previous state"
-    exit 1
-}
-`
-
-### AUTOMATED .MD VALIDATION
 
 **Before marking complete, validate generated files:**
 `powershell
 # Validate generated .md file
-$targetFile = "features/[owner].md"
+$targetFile$logEntry = "features/[owner].md"
 if (Test-Path $targetFile) {
     $content = Get-Content $targetFile -Raw
     
