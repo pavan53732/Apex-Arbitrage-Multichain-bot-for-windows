@@ -1,7 +1,0 @@
-{
-  "amazonQ.autoApprove": true,
-  "amazonQ.continueOnDelegation": true,
-  "amazonQ.defaultShell": "powershell.exe",
-  "amazonQ.workflowMode": "continuous",
-  "terminal.integrated.defaultProfile.windows": "PowerShell"
-}
