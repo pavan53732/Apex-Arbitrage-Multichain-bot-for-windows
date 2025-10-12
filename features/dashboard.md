@@ -1,1 +1,3 @@
 - Ai Modules → see features/ai-modules.md
+- Features → see features/ai-modules.md
+- Integration → see features/ai-modules.md
