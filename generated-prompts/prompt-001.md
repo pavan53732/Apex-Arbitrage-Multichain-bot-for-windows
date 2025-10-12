@@ -227,6 +227,130 @@ Still list EVERY file, just organize by category.
 
 - Infer the feature from filenames/extensions and naming patterns
 
+### DECISION TREES FOR COMPLEX SCENARIOS
+
+**Scenario A: Multiple File Types in Same Folder**
+```
+IF folder contains: .js + .json + .md files
+THEN: Primary feature = JavaScript functionality
+     Secondary features = Configuration + Documentation
+     Owner = Based on primary functionality
+     References = Mention secondary features
+
+EXAMPLE: backend/plugins/dex-adapters/
+- adapter.js (primary) → Dex Adapters feature
+- config.json (secondary) → Configuration
+- README.md (secondary) → Documentation
+```
+
+**Scenario B: Empty or Scaffolded Folders**
+```
+IF folder exists but PowerShell finds 0 files
+THEN: Feature = Scaffolded [Folder Name]
+     Owner = Based on parent path context
+     Implementation = "Awaiting development"
+
+EXAMPLE: ai-modules/models/training/
+- Empty folder → Scaffolded Training Models feature
+- Owner = ai-modules.md (based on parent path)
+```
+
+**Scenario C: Mixed Legacy/Windows Files**
+```
+IF folder contains both legacy + Windows files
+THEN: Focus on Windows-compatible files
+     Legacy files = Reference only
+     Owner = Windows functionality
+
+EXAMPLE: dashboard/components/
+- legacy-component.js (legacy) → Reference only
+- windows-component.tsx (Windows) → Primary feature
+```
+
+**Scenario D: Deeply Nested Structures**
+```
+IF folder has 3+ levels of nesting
+THEN: Process as single feature (not separate sub-features)
+     Include all nested files in analysis
+     Owner = Based on root folder purpose
+
+EXAMPLE: backend/engine/core/adapters/dex/
+- All files belong to "Dex Adapters" feature
+- Do not create separate features for each level
+```
+
+### CLEAR EXAMPLES: CORRECT vs INCORRECT OUTPUTS
+
+**CORRECT Output Example:**
+```
+Feature #1: Ai Modules - Found 54 files across 10 folders
+
+- "What does this FEATURE do?" → Provides AI-powered trading modules and machine learning capabilities
+- "Which MD file OWNS this FEATURE?" → ai-modules.md (core AI functionality)
+- "Which MD files REFERENCE this FEATURE?" → backend.md (integration), dashboard.md (UI)
+- "HOW TO IMPLEMENT → OWNER FILE (ai-modules.md)" →
+  Append this section to the end of features/ai-modules.md:
+
+  ## Feature: Ai Modules
+
+  Feature Files:
+  - ai-engine.js → Core AI processing engine
+  - ml-models.json → Machine learning model configurations
+  - training-data.csv → Training datasets for AI models
+  
+  Windows Implementation:
+  - Implement as Windows Service for background AI processing
+  - Use Windows ML for local model inference
+  - Integrate with Windows Task Scheduler for periodic retraining
+
+- "HOW TO IMPLEMENT → REFERENCES" →
+  - In features/backend.md: Ai Modules → see features/ai-modules.md
+  - In features/dashboard.md: Ai Modules → see features/ai-modules.md
+```
+
+**INCORRECT Output Example:**
+```
+❌ WRONG - Missing feature numbering
+Ai Modules Analysis
+
+❌ WRONG - Incomplete file listing
+Found some files in ai-modules:
+- ai-engine.js
+- ... (other files)  ← FORBIDDEN!
+
+❌ WRONG - Missing counts
+Feature has various files across multiple folders
+
+❌ WRONG - Vague implementation
+Windows Implementation:
+- Make it work on Windows  ← TOO VAGUE!
+
+❌ WRONG - Missing structured format
+The ai-modules feature should be implemented by adding files to the appropriate location and ensuring compatibility with the Windows environment.
+```
+
+**CONFIDENCE SCORING EXAMPLES:**
+
+**High Confidence (9-10):**
+- PowerShell found exact expected file count
+- Feature name clearly matches folder purpose
+- Owner file assignment is obvious
+- All validation checks pass
+
+**Medium Confidence (6-8):**
+- PowerShell found most expected files
+- Feature name requires some interpretation
+- Owner file assignment has alternatives
+- Most validation checks pass
+
+**Low Confidence (1-5):**
+- PowerShell found significantly fewer files than expected
+- Feature name is unclear or ambiguous
+- Owner file assignment is uncertain
+- Validation checks fail
+
+**If confidence < 7: STOP and request clarification before proceeding**
+
 ### STEP 4: MAP TO .MD FILES
 
 - Choose the single owner .md from: install-dependencies.md, config.md, backend.md, dashboard.md, ai-modules.md, contracts.md, security.md, testing.md, deployment.md, docs.md
@@ -547,18 +671,130 @@ If ANY check fails: STOP and report issue
 
 **After completing all tasks above, update progress tracking:**
 
-1. Open `generated-prompts/progress.md`
-2. Increment "Completed" counter (X/842 -> X+1/842)
-3. Update "Last Updated" to today's date
-4. Update "Recent Completions" to: Prompt 1 (Feature: [Feature Name])
-5. Append to Execution Log:
-   ```
-   Prompt 1: Executed - Added 'Feature: [Feature Name]' to features/[owner].md
-   ```
-6. Save progress.md before moving to next prompt
-7. Clean up: Delete any temp_*.ps1 files created during this prompt execution
+### ATOMIC PROGRESS UPDATE (CORRUPTION-PROOF)
 
-**Mark this prompt as COMPLETE.**
+**Step 1: Create Backup**
+```powershell
+# Create atomic backup before any changes
+$backupFile = "generated-prompts/progress.md.backup.$(Get-Date -Format 'yyyyMMdd-HHmmss')"
+Copy-Item "generated-prompts/progress.md" $backupFile
+Write-Host "Backup created: $backupFile"
+```
+
+**Step 2: Atomic Update Process**
+```powershell
+# Read current progress
+$progressContent = Get-Content "generated-prompts/progress.md" -Raw
+
+# Perform atomic updates
+$newContent = $progressContent -replace "Completed: \d+/842", "Completed: 1/842"
+$newContent = $newContent -replace "Last Updated: [^`n]*", "Last Updated: $(Get-Date -Format 'MMMM dd, yyyy')"
+$newContent = $newContent -replace "Recent Completions: [^`n]*", "Recent Completions: Prompt 1 (Feature: [Feature Name])"
+
+# Add execution log entry
+$logEntry = "`nPrompt 1: Executed - Added 'Feature: [Feature Name]' to features/[owner].md"
+$newContent = $newContent -replace "<!-- AI: Append new log entries below this line -->", "<!-- AI: Append new log entries below this line -->$logEntry"
+
+# Write atomically
+$tempFile = "generated-prompts/progress.md.tmp"
+Set-Content $tempFile $newContent -NoNewline
+Move-Item $tempFile "generated-prompts/progress.md"
+Write-Host "Progress updated atomically"
+```
+
+**Step 3: Validation**
+```powershell
+# Verify update succeeded
+$verifyContent = Get-Content "generated-prompts/progress.md" -Raw
+if ($verifyContent -match "Completed: 1/842") {
+    Write-Host "✅ Progress update verified"
+} else {
+    Write-Host "❌ Progress update failed - restoring backup"
+    Copy-Item $backupFile "generated-prompts/progress.md"
+    exit 1
+}
+```
+
+**Step 4: Cleanup**
+```powershell
+# Clean up backup and temp files
+Remove-Item $backupFile -ErrorAction SilentlyContinue
+Remove-Item "generated-prompts/progress.md.tmp" -ErrorAction SilentlyContinue
+Write-Host "Cleanup completed"
+```
+
+### ROLLBACK MECHANISM (FAILURE RECOVERY)
+
+**If ANY step fails, execute rollback:**
+```powershell
+# Automatic rollback on failure
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "🔄 Executing rollback..."
+    
+    # Restore progress.md from backup
+    $latestBackup = Get-ChildItem "generated-prompts/progress.md.backup.*" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+    if ($latestBackup) {
+        Copy-Item $latestBackup.FullName "generated-prompts/progress.md"
+        Write-Host "✅ Progress restored from backup"
+    }
+    
+    # Clean up any partial files
+    Remove-Item "generated-prompts/progress.md.tmp" -ErrorAction SilentlyContinue
+    
+    # Report failure
+    Write-Host "❌ Prompt execution failed - rolled back to previous state"
+    exit 1
+}
+```
+
+### AUTOMATED .MD VALIDATION
+
+**Before marking complete, validate generated files:**
+```powershell
+# Validate generated .md file
+$targetFile = "features/[owner].md"
+if (Test-Path $targetFile) {
+    $content = Get-Content $targetFile -Raw
+    
+    # Check required elements
+    $checks = @{
+        "Feature header" = $content -match "## Feature:"
+        "Feature files list" = $content -match "Feature Files:"
+        "Windows implementation" = $content -match "Windows Implementation:"
+        "Minimum bullets" = ($content | Select-String "^- ").Count -ge 2
+    }
+    
+    $allPassed = $true
+    foreach ($check in $checks.GetEnumerator()) {
+        if (-not $check.Value) {
+            Write-Host "❌ Validation failed: $($check.Key)"
+            $allPassed = $false
+        } else {
+            Write-Host "✅ $($check.Key): Passed"
+        }
+    }
+    
+    if (-not $allPassed) {
+        Write-Host "❌ .md validation failed - prompt incomplete"
+        exit 1
+    }
+} else {
+    Write-Host "❌ Target file not found: $targetFile"
+    exit 1
+}
+```
+
+### CONFIDENCE SCORING (AI SELF-ASSESSMENT)
+
+**Rate your confidence in this execution (1-10):**
+- **File enumeration accuracy**: [Score] - Did PowerShell find all expected files?
+- **Feature mapping correctness**: [Score] - Is the feature correctly identified?
+- **Owner file assignment**: [Score] - Is the owner .md file correct?
+- **Implementation completeness**: [Score] - Are all required elements present?
+
+**If any score < 7: STOP and review before proceeding**
+
+**Mark this prompt as COMPLETE only after all validations pass.**
 
 ---
 
