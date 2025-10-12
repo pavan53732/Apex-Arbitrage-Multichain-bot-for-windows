@@ -6,13 +6,13 @@
 You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
-1. ✅ **Ask mode** â†’ Read progress.md, check if prompt already executed
-2. ✅ **DevOps mode** â†’ Execute PowerShell to enumerate files
-3. ✅ **Project Research mode** â†’ Analyze file names and project structure
-4. ✅ **Ask mode** â†’ Read existing features/*.md files to count features
-5. ✅ **Write mode** â†’ Write complete feature documentation
-6. ✅ **Ask mode** â†’ Update progress.md
-7. ✅ **DevOps mode** â†’ Delete temp files
+1. ✅ **Ask mode** →’ Read progress.md, check if prompt already executed
+2. ✅ **DevOps mode** →’ Execute PowerShell to enumerate files
+3. ✅ **Project Research mode** →’ Analyze file names and project structure
+4. ✅ **Ask mode** →’ Read existing features/*.md files to count features
+5. ✅ **Write mode** →’ Write complete feature documentation
+6. ✅ **Ask mode** →’ Update progress.md
+7. ✅ **DevOps mode** →’ Delete temp files
 
 **DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
 
@@ -54,10 +54,10 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
 
-- ✅ **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
-- ✅ **300+ folders** â†’ Show COMPLETE nested tree structure
-- ✅ **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
-- ✅ **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
+- ✅ **3000+ files** →’ List EVERY SINGLE file with 20-30 word description
+- ✅ **300+ folders** →’ Show COMPLETE nested tree structure
+- ✅ **NO SHORTCUTS** →’ FORBIDDEN to skip, summarize, or use "etc."
+- ✅ **NO TOKEN EXCUSES** →’ You have 1M token context window (750K words capacity)
 
 **CALCULATION:**
 - 3000 files Ã— 30 words = 90,000 words
@@ -75,17 +75,17 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 Found 3247 files in backend/plugins/
 
 **DEX Adapters (2500 files):**
-- uniswap-v2-adapter-001.js â†’ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
-- uniswap-v2-adapter-002.js â†’ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
-- uniswap-v3-adapter-001.js â†’ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
+- uniswap-v2-adapter-001.js →’ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
+- uniswap-v2-adapter-002.js →’ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
+- uniswap-v3-adapter-001.js →’ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
 ... (LIST ALL 2500 FILES - NO SKIPPING)
 
 **Test Files (500 files):**
-- uniswap-v2-adapter-001.test.js â†’ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
+- uniswap-v2-adapter-001.test.js →’ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
 ... (LIST ALL 500 FILES - NO SKIPPING)
 
 **Config Files (247 files):**
-- uniswap-config.json â†’ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
+- uniswap-config.json →’ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
 ... (LIST ALL 247 FILES - NO SKIPPING)
 ```
 
@@ -94,9 +94,9 @@ Found 3247 files in backend/plugins/
 Found 3247 files in backend/plugins/
 
 **DEX Adapters (2500 files):**
-- uniswap-v2-adapter-001.js â†’ Uniswap adapter
-- uniswap-v2-adapter-002.js â†’ Another adapter
-... and 2498 more files  â† FORBIDDEN! REJECTED!
+- uniswap-v2-adapter-001.js →’ Uniswap adapter
+- uniswap-v2-adapter-002.js →’ Another adapter
+... and 2498 more files  → FORBIDDEN! REJECTED!
 ```
 
 **FOLDER TREE EXAMPLE (300 folders):**
@@ -108,23 +108,23 @@ backend/
 â”‚   â”œâ”€â”€ dex-adapters/
 â”‚   â”‚   â”œâ”€â”€ uniswap/
 â”‚   â”‚   â”‚   â”œâ”€â”€ v2/
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V2 swap logic
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         â†’ V2 routing algorithms
-â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          â†’ V2 helper functions
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           →’ Core V2 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         →’ V2 routing algorithms
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          →’ V2 helper functions
 â”‚   â”‚   â”‚   â”œâ”€â”€ v3/
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V3 swap logic
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         â†’ V3 price quotation
-â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       â†’ V3 liquidity positions
-â”‚   â”‚   â”‚   â””â”€â”€ common/             â†’ Shared Uniswap utilities
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           →’ Core V3 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         →’ V3 price quotation
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       →’ V3 liquidity positions
+â”‚   â”‚   â”‚   â””â”€â”€ common/             →’ Shared Uniswap utilities
 â”‚   â”‚   â”œâ”€â”€ sushiswap/
-â”‚   â”‚   â”‚   â”œâ”€â”€ core/               â†’ SushiSwap core logic
-â”‚   â”‚   â”‚   â””â”€â”€ router/             â†’ SushiSwap routing
+â”‚   â”‚   â”‚   â”œâ”€â”€ core/               →’ SushiSwap core logic
+â”‚   â”‚   â”‚   â””â”€â”€ router/             →’ SushiSwap routing
 ... (SHOW ALL 300 FOLDERS - NO SKIPPING)
 ```
 
 **VALIDATION BEFORE WRITING:**
-- [ ] PowerShell found 3247 files â†’ My output lists 3247 files ✅
-- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders ✅
+- [ ] PowerShell found 3247 files →’ My output lists 3247 files ✅
+- [ ] PowerShell found 312 folders →’ My folder tree shows 312 folders ✅
 - [ ] Every file has 20-30 word description ✅
 - [ ] No "etc.", "and more", or "..." shortcuts ✅
 
@@ -160,11 +160,11 @@ Ask yourself:
 
 Feature Files:
 Core Logic (5 files):
-- ai-engine.js â†’ Core AI processing
-- decisionMaker.js â†’ Decision logic
-- patternLearner.js â†’ Pattern recognition
-- scoreArbOpportunity.js â†’ Scoring
-- modelRouter.js â†’ Model routing
+- ai-engine.js →’ Core AI processing
+- decisionMaker.js →’ Decision logic
+- patternLearner.js →’ Pattern recognition
+- scoreArbOpportunity.js →’ Scoring
+- modelRouter.js →’ Model routing
 
 [... LIST ALL OTHER 49 FILES IN GROUPS ...]
 
@@ -253,13 +253,13 @@ try {
 You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
-1. ✅ **Ask mode** â†’ Read progress.md, check if prompt already executed
-2. ✅ **DevOps mode** â†’ Execute PowerShell to enumerate files
-3. ✅ **Project Research mode** â†’ Analyze file names and project structure
-4. ✅ **Ask mode** â†’ Read existing features/*.md files to count features
-5. ✅ **Write mode** â†’ Write complete feature documentation
-6. ✅ **Ask mode** â†’ Update progress.md
-7. ✅ **DevOps mode** â†’ Delete temp files
+1. ✅ **Ask mode** →’ Read progress.md, check if prompt already executed
+2. ✅ **DevOps mode** →’ Execute PowerShell to enumerate files
+3. ✅ **Project Research mode** →’ Analyze file names and project structure
+4. ✅ **Ask mode** →’ Read existing features/*.md files to count features
+5. ✅ **Write mode** →’ Write complete feature documentation
+6. ✅ **Ask mode** →’ Update progress.md
+7. ✅ **DevOps mode** →’ Delete temp files
 
 **DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
 
@@ -301,10 +301,10 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
 
-- ✅ **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
-- ✅ **300+ folders** â†’ Show COMPLETE nested tree structure
-- ✅ **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
-- ✅ **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
+- ✅ **3000+ files** →’ List EVERY SINGLE file with 20-30 word description
+- ✅ **300+ folders** →’ Show COMPLETE nested tree structure
+- ✅ **NO SHORTCUTS** →’ FORBIDDEN to skip, summarize, or use "etc."
+- ✅ **NO TOKEN EXCUSES** →’ You have 1M token context window (750K words capacity)
 
 **CALCULATION:**
 - 3000 files Ã— 30 words = 90,000 words
@@ -322,17 +322,17 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 Found 3247 files in backend/plugins/
 
 **DEX Adapters (2500 files):**
-- uniswap-v2-adapter-001.js â†’ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
-- uniswap-v2-adapter-002.js â†’ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
-- uniswap-v3-adapter-001.js â†’ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
+- uniswap-v2-adapter-001.js →’ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
+- uniswap-v2-adapter-002.js →’ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
+- uniswap-v3-adapter-001.js →’ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
 ... (LIST ALL 2500 FILES - NO SKIPPING)
 
 **Test Files (500 files):**
-- uniswap-v2-adapter-001.test.js â†’ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
+- uniswap-v2-adapter-001.test.js →’ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
 ... (LIST ALL 500 FILES - NO SKIPPING)
 
 **Config Files (247 files):**
-- uniswap-config.json â†’ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
+- uniswap-config.json →’ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
 ... (LIST ALL 247 FILES - NO SKIPPING)
 ```
 
@@ -341,9 +341,9 @@ Found 3247 files in backend/plugins/
 Found 3247 files in backend/plugins/
 
 **DEX Adapters (2500 files):**
-- uniswap-v2-adapter-001.js â†’ Uniswap adapter
-- uniswap-v2-adapter-002.js â†’ Another adapter
-... and 2498 more files  â† FORBIDDEN! REJECTED!
+- uniswap-v2-adapter-001.js →’ Uniswap adapter
+- uniswap-v2-adapter-002.js →’ Another adapter
+... and 2498 more files  → FORBIDDEN! REJECTED!
 ```
 
 **FOLDER TREE EXAMPLE (300 folders):**
@@ -355,23 +355,23 @@ backend/
 â”‚   â”œâ”€â”€ dex-adapters/
 â”‚   â”‚   â”œâ”€â”€ uniswap/
 â”‚   â”‚   â”‚   â”œâ”€â”€ v2/
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V2 swap logic
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         â†’ V2 routing algorithms
-â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          â†’ V2 helper functions
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           →’ Core V2 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         →’ V2 routing algorithms
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          →’ V2 helper functions
 â”‚   â”‚   â”‚   â”œâ”€â”€ v3/
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V3 swap logic
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         â†’ V3 price quotation
-â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       â†’ V3 liquidity positions
-â”‚   â”‚   â”‚   â””â”€â”€ common/             â†’ Shared Uniswap utilities
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           →’ Core V3 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         →’ V3 price quotation
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       →’ V3 liquidity positions
+â”‚   â”‚   â”‚   â””â”€â”€ common/             →’ Shared Uniswap utilities
 â”‚   â”‚   â”œâ”€â”€ sushiswap/
-â”‚   â”‚   â”‚   â”œâ”€â”€ core/               â†’ SushiSwap core logic
-â”‚   â”‚   â”‚   â””â”€â”€ router/             â†’ SushiSwap routing
+â”‚   â”‚   â”‚   â”œâ”€â”€ core/               →’ SushiSwap core logic
+â”‚   â”‚   â”‚   â””â”€â”€ router/             →’ SushiSwap routing
 ... (SHOW ALL 300 FOLDERS - NO SKIPPING)
 ```
 
 **VALIDATION BEFORE WRITING:**
-- [ ] PowerShell found 3247 files â†’ My output lists 3247 files ✅
-- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders ✅
+- [ ] PowerShell found 3247 files →’ My output lists 3247 files ✅
+- [ ] PowerShell found 312 folders →’ My folder tree shows 312 folders ✅
 - [ ] Every file has 20-30 word description ✅
 - [ ] No "etc.", "and more", or "..." shortcuts ✅
 
@@ -407,11 +407,11 @@ Ask yourself:
 
 Feature Files:
 Core Logic (5 files):
-- ai-engine.js â†’ Core AI processing
-- decisionMaker.js â†’ Decision logic
-- patternLearner.js â†’ Pattern recognition
-- scoreArbOpportunity.js â†’ Scoring
-- modelRouter.js â†’ Model routing
+- ai-engine.js →’ Core AI processing
+- decisionMaker.js →’ Decision logic
+- patternLearner.js →’ Pattern recognition
+- scoreArbOpportunity.js →’ Scoring
+- modelRouter.js →’ Model routing
 
 [... LIST ALL OTHER 49 FILES IN GROUPS ...]
 
@@ -794,13 +794,13 @@ Generate visual tree showing ALL nested folders with purposes.
 Example:
 ```
 ai-modules/
-â”œâ”€â”€ core/                    â†’ Core AI engine components
-â”‚   â”œâ”€â”€ engine.js           â†’ Main processing
-â”‚   â””â”€â”€ router.js           â†’ Model routing
-â”œâ”€â”€ models/                  â†’ ML model definitions
-â”‚   â”œâ”€â”€ training/           â†’ Training scripts
-â”‚   â””â”€â”€ inference/          â†’ Inference engines
-â””â”€â”€ utils/                  â†’ Helper utilities
+â”œâ”€â”€ core/                    →’ Core AI engine components
+â”‚   â”œâ”€â”€ engine.js           →’ Main processing
+â”‚   â””â”€â”€ router.js           →’ Model routing
+â”œâ”€â”€ models/                  →’ ML model definitions
+â”‚   â”œâ”€â”€ training/           →’ Training scripts
+â”‚   â””â”€â”€ inference/          →’ Inference engines
+â””â”€â”€ utils/                  →’ Helper utilities
 ```
 
 Rules:
@@ -819,8 +819,8 @@ Each file MUST have 20-30 word description including:
 Example:
 ```
 **Core Engine (5 files):**
-- core/engine.js â†’ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
-- core/router.js â†’ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
+- core/engine.js →’ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
+- core/router.js →’ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
 ```
 
 FORBIDDEN:
@@ -1313,13 +1313,13 @@ if (Test-Path $targetFile) {
 You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
-1. ✅ **Ask mode** â†’ Read progress.md, check if prompt already executed
-2. ✅ **DevOps mode** â†’ Execute PowerShell to enumerate files
-3. ✅ **Project Research mode** â†’ Analyze file names and project structure
-4. ✅ **Ask mode** â†’ Read existing features/*.md files to count features
-5. ✅ **Write mode** â†’ Write complete feature documentation
-6. ✅ **Ask mode** â†’ Update progress.md
-7. ✅ **DevOps mode** â†’ Delete temp files
+1. ✅ **Ask mode** →’ Read progress.md, check if prompt already executed
+2. ✅ **DevOps mode** →’ Execute PowerShell to enumerate files
+3. ✅ **Project Research mode** →’ Analyze file names and project structure
+4. ✅ **Ask mode** →’ Read existing features/*.md files to count features
+5. ✅ **Write mode** →’ Write complete feature documentation
+6. ✅ **Ask mode** →’ Update progress.md
+7. ✅ **DevOps mode** →’ Delete temp files
 
 **DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
 
@@ -1361,10 +1361,10 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
 
-- ✅ **3000+ files** â†’ List EVERY SINGLE file with 20-30 word description
-- ✅ **300+ folders** â†’ Show COMPLETE nested tree structure
-- ✅ **NO SHORTCUTS** â†’ FORBIDDEN to skip, summarize, or use "etc."
-- ✅ **NO TOKEN EXCUSES** â†’ You have 1M token context window (750K words capacity)
+- ✅ **3000+ files** →’ List EVERY SINGLE file with 20-30 word description
+- ✅ **300+ folders** →’ Show COMPLETE nested tree structure
+- ✅ **NO SHORTCUTS** →’ FORBIDDEN to skip, summarize, or use "etc."
+- ✅ **NO TOKEN EXCUSES** →’ You have 1M token context window (750K words capacity)
 
 **CALCULATION:**
 - 3000 files Ã— 30 words = 90,000 words
@@ -1382,17 +1382,17 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 Found 3247 files in backend/plugins/
 
 **DEX Adapters (2500 files):**
-- uniswap-v2-adapter-001.js â†’ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
-- uniswap-v2-adapter-002.js â†’ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
-- uniswap-v3-adapter-001.js â†’ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
+- uniswap-v2-adapter-001.js →’ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
+- uniswap-v2-adapter-002.js →’ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
+- uniswap-v3-adapter-001.js →’ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
 ... (LIST ALL 2500 FILES - NO SKIPPING)
 
 **Test Files (500 files):**
-- uniswap-v2-adapter-001.test.js â†’ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
+- uniswap-v2-adapter-001.test.js →’ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
 ... (LIST ALL 500 FILES - NO SKIPPING)
 
 **Config Files (247 files):**
-- uniswap-config.json â†’ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
+- uniswap-config.json →’ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
 ... (LIST ALL 247 FILES - NO SKIPPING)
 ```
 
@@ -1401,9 +1401,9 @@ Found 3247 files in backend/plugins/
 Found 3247 files in backend/plugins/
 
 **DEX Adapters (2500 files):**
-- uniswap-v2-adapter-001.js â†’ Uniswap adapter
-- uniswap-v2-adapter-002.js â†’ Another adapter
-... and 2498 more files  â† FORBIDDEN! REJECTED!
+- uniswap-v2-adapter-001.js →’ Uniswap adapter
+- uniswap-v2-adapter-002.js →’ Another adapter
+... and 2498 more files  → FORBIDDEN! REJECTED!
 ```
 
 **FOLDER TREE EXAMPLE (300 folders):**
@@ -1415,23 +1415,23 @@ backend/
 â”‚   â”œâ”€â”€ dex-adapters/
 â”‚   â”‚   â”œâ”€â”€ uniswap/
 â”‚   â”‚   â”‚   â”œâ”€â”€ v2/
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V2 swap logic
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         â†’ V2 routing algorithms
-â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          â†’ V2 helper functions
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           →’ Core V2 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         →’ V2 routing algorithms
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          →’ V2 helper functions
 â”‚   â”‚   â”‚   â”œâ”€â”€ v3/
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           â†’ Core V3 swap logic
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         â†’ V3 price quotation
-â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       â†’ V3 liquidity positions
-â”‚   â”‚   â”‚   â””â”€â”€ common/             â†’ Shared Uniswap utilities
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           →’ Core V3 swap logic
+â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         →’ V3 price quotation
+â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       →’ V3 liquidity positions
+â”‚   â”‚   â”‚   â””â”€â”€ common/             →’ Shared Uniswap utilities
 â”‚   â”‚   â”œâ”€â”€ sushiswap/
-â”‚   â”‚   â”‚   â”œâ”€â”€ core/               â†’ SushiSwap core logic
-â”‚   â”‚   â”‚   â””â”€â”€ router/             â†’ SushiSwap routing
+â”‚   â”‚   â”‚   â”œâ”€â”€ core/               →’ SushiSwap core logic
+â”‚   â”‚   â”‚   â””â”€â”€ router/             →’ SushiSwap routing
 ... (SHOW ALL 300 FOLDERS - NO SKIPPING)
 ```
 
 **VALIDATION BEFORE WRITING:**
-- [ ] PowerShell found 3247 files â†’ My output lists 3247 files ✅
-- [ ] PowerShell found 312 folders â†’ My folder tree shows 312 folders ✅
+- [ ] PowerShell found 3247 files →’ My output lists 3247 files ✅
+- [ ] PowerShell found 312 folders →’ My folder tree shows 312 folders ✅
 - [ ] Every file has 20-30 word description ✅
 - [ ] No "etc.", "and more", or "..." shortcuts ✅
 
@@ -1467,11 +1467,11 @@ Ask yourself:
 
 Feature Files:
 Core Logic (5 files):
-- ai-engine.js â†’ Core AI processing
-- decisionMaker.js â†’ Decision logic
-- patternLearner.js â†’ Pattern recognition
-- scoreArbOpportunity.js â†’ Scoring
-- modelRouter.js â†’ Model routing
+- ai-engine.js →’ Core AI processing
+- decisionMaker.js →’ Decision logic
+- patternLearner.js →’ Pattern recognition
+- scoreArbOpportunity.js →’ Scoring
+- modelRouter.js →’ Model routing
 
 [... LIST ALL OTHER 49 FILES IN GROUPS ...]
 
@@ -1854,13 +1854,13 @@ Generate visual tree showing ALL nested folders with purposes.
 Example:
 ```
 ai-modules/
-â”œâ”€â”€ core/                    â†’ Core AI engine components
-â”‚   â”œâ”€â”€ engine.js           â†’ Main processing
-â”‚   â””â”€â”€ router.js           â†’ Model routing
-â”œâ”€â”€ models/                  â†’ ML model definitions
-â”‚   â”œâ”€â”€ training/           â†’ Training scripts
-â”‚   â””â”€â”€ inference/          â†’ Inference engines
-â””â”€â”€ utils/                  â†’ Helper utilities
+â”œâ”€â”€ core/                    →’ Core AI engine components
+â”‚   â”œâ”€â”€ engine.js           →’ Main processing
+â”‚   â””â”€â”€ router.js           →’ Model routing
+â”œâ”€â”€ models/                  →’ ML model definitions
+â”‚   â”œâ”€â”€ training/           →’ Training scripts
+â”‚   â””â”€â”€ inference/          →’ Inference engines
+â””â”€â”€ utils/                  →’ Helper utilities
 ```
 
 Rules:
@@ -1879,8 +1879,8 @@ Each file MUST have 20-30 word description including:
 Example:
 ```
 **Core Engine (5 files):**
-- core/engine.js â†’ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
-- core/router.js â†’ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
+- core/engine.js →’ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
+- core/router.js →’ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
 ```
 
 FORBIDDEN:
@@ -2705,13 +2705,13 @@ Generate visual tree showing ALL nested folders with purposes.
 Example:
 ```
 ai-modules/
-â”œâ”€â”€ core/                    â†’ Core AI engine components
-â”‚   â”œâ”€â”€ engine.js           â†’ Main processing
-â”‚   â””â”€â”€ router.js           â†’ Model routing
-â”œâ”€â”€ models/                  â†’ ML model definitions
-â”‚   â”œâ”€â”€ training/           â†’ Training scripts
-â”‚   â””â”€â”€ inference/          â†’ Inference engines
-â””â”€â”€ utils/                  â†’ Helper utilities
+â”œâ”€â”€ core/                    →’ Core AI engine components
+â”‚   â”œâ”€â”€ engine.js           →’ Main processing
+â”‚   â””â”€â”€ router.js           →’ Model routing
+â”œâ”€â”€ models/                  →’ ML model definitions
+â”‚   â”œâ”€â”€ training/           →’ Training scripts
+â”‚   â””â”€â”€ inference/          →’ Inference engines
+â””â”€â”€ utils/                  →’ Helper utilities
 ```
 
 Rules:
@@ -2730,8 +2730,8 @@ Each file MUST have 20-30 word description including:
 Example:
 ```
 **Core Engine (5 files):**
-- core/engine.js â†’ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
-- core/router.js â†’ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
+- core/engine.js →’ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
+- core/router.js →’ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
 ```
 
 FORBIDDEN:

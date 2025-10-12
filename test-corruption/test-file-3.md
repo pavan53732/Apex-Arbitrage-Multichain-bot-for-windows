@@ -1,0 +1,1 @@
+Clean file without any corruption.

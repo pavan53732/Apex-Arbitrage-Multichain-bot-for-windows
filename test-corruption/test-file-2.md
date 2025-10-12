@@ -1,0 +1,1 @@
+Another test file â† with multiple â† corrupted sequences â† that need fixing.
