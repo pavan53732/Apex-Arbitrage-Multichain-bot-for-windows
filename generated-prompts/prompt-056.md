@@ -1,4 +1,4 @@
-You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
+﻿You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
 
 ## ROLE
 
@@ -32,7 +32,7 @@ If verification fails or is skipped, operate in paste-only mode.
 **Before proceeding, check progress tracking:**
 
 1. Read `generated-prompts/progress.md`
-2. Search for "Prompt {PROMPT_NUMBER}: Executed" in the Execution Log
+2. Search for "Prompt 56: Executed" in the Execution Log
 3. **If found**: STOP - This prompt already completed. Move to next prompt.
 4. **If not found**: Proceed with execution below.
 
@@ -55,46 +55,46 @@ Always follow Steps 1-6 in order:
 **DECISION TREE:**
 ```
 Is path backend/*, dashboard/*, ai-modules/*, contracts/*, config/*, security/*, utils/*, types/*, plugins/*?
-  +- YES → PROCESS (go to STEP 2)
-  +- NO → Continue checking...
+  +- YES â†’ PROCESS (go to STEP 2)
+  +- NO â†’ Continue checking...
 
 Is path tests/*, deploy/*, logs/*, data/*, migrations/*, scripts/*?
-  +- YES → Check if it's framework code (not data/logs)
-     +- Framework code → PROCESS WITH CAUTION
-     +- Data/logs → SKIP
-  +- NO → Continue checking...
+  +- YES â†’ Check if it's framework code (not data/logs)
+     +- Framework code â†’ PROCESS WITH CAUTION
+     +- Data/logs â†’ SKIP
+  +- NO â†’ Continue checking...
 
 Is path archive/*, examples/*, research/*, benchmarks/*, ci/*?
-  +- YES → SKIP (output SKIPPED message)
-  +- NO → PROCESS (default: when in doubt, process)
+  +- YES â†’ SKIP (output SKIPPED message)
+  +- NO â†’ PROCESS (default: when in doubt, process)
 ```
 
 **PROCESS (Windows App Features)**
-- backend/* → Core engine features
-- dashboard/* → UI features
-- ai-modules/* → ML features
-- contracts/* → Smart contract features
-- config/* → Configuration features
-- security/* → Security features
-- utils/* | types/* | plugins/* → Supporting features
+- backend/* â†’ Core engine features
+- dashboard/* â†’ UI features
+- ai-modules/* â†’ ML features
+- contracts/* â†’ Smart contract features
+- config/* â†’ Configuration features
+- security/* â†’ Security features
+- utils/* | types/* | plugins/* â†’ Supporting features
 
 **PROCESS WITH CAUTION (Framework Only)**
-- tests/* → Only if test framework code, NOT test data
-- deploy/* → Only if Windows installer code, NOT Kubernetes/Docker
-- logs/* → Only if logging framework, NOT .log files
-- data/* → Only if data structure code, NOT datasets
-- migrations/* → Only if migration framework, NOT old migrations
-- scripts/* → Only if Windows scripts, NOT CI/CD scripts
+- tests/* â†’ Only if test framework code, NOT test data
+- deploy/* â†’ Only if Windows installer code, NOT Kubernetes/Docker
+- logs/* â†’ Only if logging framework, NOT .log files
+- data/* â†’ Only if data structure code, NOT datasets
+- migrations/* â†’ Only if migration framework, NOT old migrations
+- scripts/* â†’ Only if Windows scripts, NOT CI/CD scripts
 
 **SKIP (Not Relevant for Windows App)**
-- archive/* | legacy/* | deprecated/* → Old code
-- examples/* | demo/* → Demo code
-- research/* → Experimental code
-- benchmarks/* → Performance testing
-- ci/* | .github/* | .gitlab/* → CI/CD infrastructure
-- vendor/datasets/* → Large data files
-- */coverage/* | */snapshots/* → Test artifacts
-- */backup/* | */temp/* → Runtime files
+- archive/* | legacy/* | deprecated/* â†’ Old code
+- examples/* | demo/* â†’ Demo code
+- research/* â†’ Experimental code
+- benchmarks/* â†’ Performance testing
+- ci/* | .github/* | .gitlab/* â†’ CI/CD infrastructure
+- vendor/datasets/* â†’ Large data files
+- */coverage/* | */snapshots/* â†’ Test artifacts
+- */backup/* | */temp/* â†’ Runtime files
 
 **If path should be SKIPPED:**
 Output: "SKIPPED: Path '[path]' is not relevant for Windows desktop app (reason: [category])"
@@ -108,7 +108,7 @@ Execute using executeBash tool:
 ```powershell
 try {
     $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
-    $targetPath = Join-Path $basePath "{FOLDER_PATH}"
+    $targetPath = Join-Path $basePath "Apex Arbitrage Multichain bot/backend/data/audit-trails"
     
     Write-Host "Checking path: $targetPath"
     
@@ -161,7 +161,7 @@ try {
 Found 10 files in backend/plugins/dex-adapters:
 - uniswap-v2-adapter.js
 - sushiswap-adapter.js
-- ... (8 more files)  ← FORBIDDEN!
+- ... (8 more files)  â† FORBIDDEN!
 ```
 
 **CORRECT (Complete):**
@@ -243,48 +243,48 @@ Group Feature Files by actual function, not just extension:
 **COMPLEXITY SCORING:**
 
 Calculate complexity based on file count:
-- 1-5 files = Simple ⭐
-- 6-15 files = Moderate ⭐⭐
-- 16-30 files = Complex ⭐⭐⭐
-- 31-50 files = Very Complex ⭐⭐⭐⭐
-- 51+ files = Highly Complex ⭐⭐⭐⭐⭐
+- 1-5 files = Simple â­
+- 6-15 files = Moderate â­â­
+- 16-30 files = Complex â­â­â­
+- 31-50 files = Very Complex â­â­â­â­
+- 51+ files = Highly Complex â­â­â­â­â­
 
 **TECHNOLOGY STACK DETECTION:**
 
 Detect technologies from file extensions and patterns:
-- *.sol → Solidity (Smart Contracts)
-- *.jsx, *.tsx → React (UI Framework)
-- *.py → Python (likely ML/AI)
-- *.ipynb → Jupyter Notebooks (Data Science)
-- *.test.js, *.spec.js → Jest/Mocha (Testing)
-- *.yaml, *.yml → YAML configs (Deployment)
-- *.ts → TypeScript (Type-safe JavaScript)
-- *.css, *.scss → Stylesheets (UI Styling)
-- *.sql → SQL (Database)
-- *.wasm → WebAssembly (Performance)
-- *.glb → 3D Assets (AR/VR)
-- *.pt, *.pth → PyTorch (ML Models)
-- *.h5, *.keras → Keras/TensorFlow (ML Models)
-- *.pkl, *.pickle → Pickle (Serialized Data)
-- *.joblib → Joblib (ML Persistence)
-- *.safetensors → SafeTensors (ML Weights)
-- *.msi → Windows Installer (Installation)
-- *.asar → Electron Archive (Packaging)
-- *.appx → Windows App Package (Distribution)
-- *.ckpt → TensorFlow Checkpoints (ML Models)
-- *.hdf5 → HDF5 (ML Data)
-- *.feather → Feather (ML Data)
-- *.arrow → Arrow (ML Data)
-- *.caffemodel → Caffe Models (ML Models)
-- *.sqlite3 → SQLite3 (Database)
-- *.db → Database (Database)
-- *.onnx → ONNX (Cross-platform ML)
-- *.tflite → TensorFlow Lite (Mobile ML)
-- *.pb → Protocol Buffers (TensorFlow)
-- *.npy, *.npz → NumPy Arrays (ML Data)
-- *.parquet → Parquet (Big Data)
-- *.vy → Vyper (Smart Contracts)
-- *.abi → ABI (Contract Interface)
+- *.sol â†’ Solidity (Smart Contracts)
+- *.jsx, *.tsx â†’ React (UI Framework)
+- *.py â†’ Python (likely ML/AI)
+- *.ipynb â†’ Jupyter Notebooks (Data Science)
+- *.test.js, *.spec.js â†’ Jest/Mocha (Testing)
+- *.yaml, *.yml â†’ YAML configs (Deployment)
+- *.ts â†’ TypeScript (Type-safe JavaScript)
+- *.css, *.scss â†’ Stylesheets (UI Styling)
+- *.sql â†’ SQL (Database)
+- *.wasm â†’ WebAssembly (Performance)
+- *.glb â†’ 3D Assets (AR/VR)
+- *.pt, *.pth â†’ PyTorch (ML Models)
+- *.h5, *.keras â†’ Keras/TensorFlow (ML Models)
+- *.pkl, *.pickle â†’ Pickle (Serialized Data)
+- *.joblib â†’ Joblib (ML Persistence)
+- *.safetensors â†’ SafeTensors (ML Weights)
+- *.msi â†’ Windows Installer (Installation)
+- *.asar â†’ Electron Archive (Packaging)
+- *.appx â†’ Windows App Package (Distribution)
+- *.ckpt â†’ TensorFlow Checkpoints (ML Models)
+- *.hdf5 â†’ HDF5 (ML Data)
+- *.feather â†’ Feather (ML Data)
+- *.arrow â†’ Arrow (ML Data)
+- *.caffemodel â†’ Caffe Models (ML Models)
+- *.sqlite3 â†’ SQLite3 (Database)
+- *.db â†’ Database (Database)
+- *.onnx â†’ ONNX (Cross-platform ML)
+- *.tflite â†’ TensorFlow Lite (Mobile ML)
+- *.pb â†’ Protocol Buffers (TensorFlow)
+- *.npy, *.npz â†’ NumPy Arrays (ML Data)
+- *.parquet â†’ Parquet (Big Data)
+- *.vy â†’ Vyper (Smart Contracts)
+- *.abi â†’ ABI (Contract Interface)
 
 **WINDOWS COMPONENT MAPPING:**
 
@@ -298,7 +298,7 @@ Map features to specific Windows technologies:
 **For UI Components:**
 - Framework: Electron BrowserWindow
 - Renderer: Chromium-based rendering
-- IPC: Electron IPC (Main ↔ Renderer)
+- IPC: Electron IPC (Main â†” Renderer)
 
 **For Configuration:**
 - Registry: HKEY_CURRENT_USER\Software\ApexArbitrage
@@ -340,13 +340,13 @@ Each bullet should be ONE sentence describing:
 **Template:** "[Action] [in/via/using] [Component] [for/to] [Purpose]"
 
 **Examples:**
-✓ "Load adapters dynamically from plugin directory at service startup"
-✓ "Store configuration in application data directory with JSON format"
-✓ "Display real-time metrics in Electron dashboard widget"
+âœ“ "Load adapters dynamically from plugin directory at service startup"
+âœ“ "Store configuration in application data directory with JSON format"
+âœ“ "Display real-time metrics in Electron dashboard widget"
 
-✗ "The system will load the adapters" (too vague)
-✗ "Load adapters from C:\Program Files\..." (specific path)
-✗ "Use dynamic loading with require() and fs.readdir()" (too technical)
+âœ— "The system will load the adapters" (too vague)
+âœ— "Load adapters from C:\Program Files\..." (specific path)
+âœ— "Use dynamic loading with require() and fs.readdir()" (too technical)
 
 ### STEP 6: ACTUALLY WRITE TO GITHUB FILES (STRICT APPEND-ONLY)
 
@@ -377,32 +377,32 @@ Each bullet should be ONE sentence describing:
 ## Input Format
 
 PATH-TO-FEATURE MAPPER
-Legacy Path: Apex Arbitrage multi-chain bot/{FOLDER_PATH}
+Legacy Path: Apex Arbitrage multi-chain bot/Apex Arbitrage Multichain bot/backend/data/audit-trails
 
 ## OUTPUT FORMAT (EXACT TEMPLATE - DO NOT DEVIATE)
 
 **Copy this template EXACTLY and fill in the values:**
 
 ```
-- "What does this FEATURE do?" → [your 1-2 line description]
-- "Which MD file OWNS this FEATURE?" → [owner.md] ([reason])
-- "Which MD files REFERENCE this FEATURE?" → [md1], [md2] ([reasons])
-- "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
+- "What does this FEATURE do?" â†’ [your 1-2 line description]
+- "Which MD file OWNS this FEATURE?" â†’ [owner.md] ([reason])
+- "Which MD files REFERENCE this FEATURE?" â†’ [md1], [md2] ([reasons])
+- "HOW TO IMPLEMENT â†’ OWNER FILE ([owner].md)" â†’
   Append this section to the end of features/[owner].md:
 
   ## Feature: [Feature Name]
 
   Feature Files:
-  - [file1] → [description]
-  - [file2] → [description]
+  - [file1] â†’ [description]
+  - [file2] â†’ [description]
   
   Windows Implementation:
   - [bullet 1]
   - [bullet 2]
   
-- "HOW TO IMPLEMENT → REFERENCES" →
-  - In features/[md1]: [Feature Name] → see features/[owner].md
-  - In features/[md2]: [Feature Name] → see features/[owner].md
+- "HOW TO IMPLEMENT â†’ REFERENCES" â†’
+  - In features/[md1]: [Feature Name] â†’ see features/[owner].md
+  - In features/[md2]: [Feature Name] â†’ see features/[owner].md
 ```
 
 **DO NOT ADD:**
@@ -427,84 +427,84 @@ Legacy Path: Apex Arbitrage multi-chain bot/{FOLDER_PATH}
 
 ## EXISTING FEATURES FOLDER STRUCTURE
 
-- features/README.md → (feature documentation)
-- features/ai-modules.md → (ready for content)
-- features/backend.md → (ready for content)
-- features/config.md → (ready for content)
-- features/contracts.md → (ready for content)
-- features/dashboard.md → (ready for content)
-- features/deployment.md → (ready for content)
-- features/docs.md → (ready for content)
-- features/install-dependencies.md → (ready for content)
-- features/security.md → (ready for content)
-- features/testing.md → (ready for content)
+- features/README.md â†’ (feature documentation)
+- features/ai-modules.md â†’ (ready for content)
+- features/backend.md â†’ (ready for content)
+- features/config.md â†’ (ready for content)
+- features/contracts.md â†’ (ready for content)
+- features/dashboard.md â†’ (ready for content)
+- features/deployment.md â†’ (ready for content)
+- features/docs.md â†’ (ready for content)
+- features/install-dependencies.md â†’ (ready for content)
+- features/security.md â†’ (ready for content)
+- features/testing.md â†’ (ready for content)
 
 ## INTELLIGENT MAPPING RULES (Heuristics)
 
 ### File patterns
 
-- presets/*.json → dashboard.md (UI configuration)
-- *-adapter.js → backend.md (integration adapters)
-- *.test.js → testing.md (tests)
-- *-engine.js → backend.md (engine internals)
-- *.sol → contracts.md (smart contracts)
-- *-config.json → config.md (configuration)
-- *-security.* | audit-*| logs/security* → security.md (security)
-- docs/*|*.md → docs.md (documentation)
-- deploy/*| kubernetes/* | helm/*| terraform/* → deployment.md (deployment)
-- ai-*| models/* | train/*| datasets/* | notebooks/* → ai-modules.md (AI/ML)
-- *.py → ai-modules.md (Python ML scripts)
-- package.json | requirements.txt | *.lock → install-dependencies.md (dependency management)
-- .env* | secrets/* | vault/* → security.md (secrets and credentials)
-- migrations/* | schema/* → backend.md (database migrations)
-- plugins/* → backend.md (plugin system)
-- widgets/* | components/* → dashboard.md (UI components)
-- storage/* | backup/* | snapshots/* → backend.md (data persistence)
-- ci/* | .github/* | .gitlab/* → deployment.md (CI/CD pipelines)
-- benchmarks/* | profiling/* → testing.md (performance benchmarks)
-- scripts/* → deployment.md (automation scripts)
-- public/* | static/* | assets/* → dashboard.md (static assets)
-- types/* | interfaces/* → backend.md (type definitions)
-- utils/* | helpers/* → backend.md (utility functions)
-- vendor/* | third-party/* → install-dependencies.md (external dependencies)
+- presets/*.json â†’ dashboard.md (UI configuration)
+- *-adapter.js â†’ backend.md (integration adapters)
+- *.test.js â†’ testing.md (tests)
+- *-engine.js â†’ backend.md (engine internals)
+- *.sol â†’ contracts.md (smart contracts)
+- *-config.json â†’ config.md (configuration)
+- *-security.* | audit-*| logs/security* â†’ security.md (security)
+- docs/*|*.md â†’ docs.md (documentation)
+- deploy/*| kubernetes/* | helm/*| terraform/* â†’ deployment.md (deployment)
+- ai-*| models/* | train/*| datasets/* | notebooks/* â†’ ai-modules.md (AI/ML)
+- *.py â†’ ai-modules.md (Python ML scripts)
+- package.json | requirements.txt | *.lock â†’ install-dependencies.md (dependency management)
+- .env* | secrets/* | vault/* â†’ security.md (secrets and credentials)
+- migrations/* | schema/* â†’ backend.md (database migrations)
+- plugins/* â†’ backend.md (plugin system)
+- widgets/* | components/* â†’ dashboard.md (UI components)
+- storage/* | backup/* | snapshots/* â†’ backend.md (data persistence)
+- ci/* | .github/* | .gitlab/* â†’ deployment.md (CI/CD pipelines)
+- benchmarks/* | profiling/* â†’ testing.md (performance benchmarks)
+- scripts/* â†’ deployment.md (automation scripts)
+- public/* | static/* | assets/* â†’ dashboard.md (static assets)
+- types/* | interfaces/* â†’ backend.md (type definitions)
+- utils/* | helpers/* â†’ backend.md (utility functions)
+- vendor/* | third-party/* â†’ install-dependencies.md (external dependencies)
 
 ### Folder patterns
 
-- dashboard/* → dashboard.md
-- backend/* → backend.md
-- ai-modules/* → ai-modules.md
-- config/* → config.md
-- contracts/* → contracts.md
-- security/*, logs/security-* → security.md
-- tests/* → testing.md
-- deploy/*, scripts/* → deployment.md
-- docs/* → docs.md
-- archive/* → docs.md (archived documentation)
-- examples/* → docs.md (example code and demos)
-- research/* → ai-modules.md (research and experiments)
-- data/* → backend.md (data storage)
-- migrations/* → backend.md (database migrations)
-- overlays/* → dashboard.md (UI overlays)
-- presets/* → dashboard.md (preset configurations)
-- public/* → dashboard.md (public assets)
-- storage/* → backend.md (persistent storage)
-- vendor/* → install-dependencies.md (third-party code)
-- watchdog/* → backend.md (monitoring and alerts)
+- dashboard/* â†’ dashboard.md
+- backend/* â†’ backend.md
+- ai-modules/* â†’ ai-modules.md
+- config/* â†’ config.md
+- contracts/* â†’ contracts.md
+- security/*, logs/security-* â†’ security.md
+- tests/* â†’ testing.md
+- deploy/*, scripts/* â†’ deployment.md
+- docs/* â†’ docs.md
+- archive/* â†’ docs.md (archived documentation)
+- examples/* â†’ docs.md (example code and demos)
+- research/* â†’ ai-modules.md (research and experiments)
+- data/* â†’ backend.md (data storage)
+- migrations/* â†’ backend.md (database migrations)
+- overlays/* â†’ dashboard.md (UI overlays)
+- presets/* â†’ dashboard.md (preset configurations)
+- public/* â†’ dashboard.md (public assets)
+- storage/* â†’ backend.md (persistent storage)
+- vendor/* â†’ install-dependencies.md (third-party code)
+- watchdog/* â†’ backend.md (monitoring and alerts)
 
 ### Feature Name Derivation (STEP-BY-STEP)
 
 **Given path:** `backend/plugins/dex-adapters`
 
-Step 1: Extract last segment → `dex-adapters`
-Step 2: Replace hyphens with spaces → `dex adapters`
-Step 3: Title Case each word → `Dex Adapters`
+Step 1: Extract last segment â†’ `dex-adapters`
+Step 2: Replace hyphens with spaces â†’ `dex adapters`
+Step 3: Title Case each word â†’ `Dex Adapters`
 Final: `Dex Adapters`
 
 **More examples:**
-- `backend/engine/core` → `Core`
-- `dashboard/components/charts` → `Charts`
-- `ai-modules/models/training` → `Training`
-- `config/chains/ethereum` → `Ethereum`
+- `backend/engine/core` â†’ `Core`
+- `dashboard/components/charts` â†’ `Charts`
+- `ai-modules/models/training` â†’ `Training`
+- `config/chains/ethereum` â†’ `Ethereum`
 
 ## EDGE CASES & SPECIAL HANDLING
 
@@ -536,13 +536,14 @@ If ANY check fails: STOP and report issue
 1. Open `generated-prompts/progress.md`
 2. Increment "Completed" counter (X/842 -> X+1/842)
 3. Update "Last Updated" to today's date
-4. Update "Recent Completions" to: Prompt {PROMPT_NUMBER} (Feature: [Feature Name])
+4. Update "Recent Completions" to: Prompt 56 (Feature: [Feature Name])
 5. Append to Execution Log:
    ```
-   Prompt {PROMPT_NUMBER}: Executed - Added 'Feature: [Feature Name]' to features/[owner].md
+   Prompt 56: Executed - Added 'Feature: [Feature Name]' to features/[owner].md
    ```
 6. Save progress.md before moving to next prompt
 
 **Mark this prompt as COMPLETE.**
 
 ---
+
