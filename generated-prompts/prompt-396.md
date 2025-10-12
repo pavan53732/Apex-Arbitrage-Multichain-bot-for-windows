@@ -1,18 +1,18 @@
----
-## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
+﻿---
+## ðŸŽ¯ DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
 You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
-1. ✅ **Ask mode** → Read progress.md, check if prompt already executed
-2. ✅ **DevOps mode** → Execute PowerShell to enumerate files
-3. ✅ **Project Research mode** → Analyze file names and project structure
-4. ✅ **Ask mode** → Read existing features/*.md files to count features
-5. ✅ **Write mode** → Write complete feature documentation
-6. ✅ **Ask mode** → Update progress.md
-7. ✅ **DevOps mode** → Delete temp files
+1. âœ… **Ask mode** â†’ Read progress.md, check if prompt already executed
+2. âœ… **DevOps mode** â†’ Execute PowerShell to enumerate files
+3. âœ… **Project Research mode** â†’ Analyze file names and project structure
+4. âœ… **Ask mode** â†’ Read existing features/*.md files to count features
+5. âœ… **Write mode** â†’ Write complete feature documentation
+6. âœ… **Ask mode** â†’ Update progress.md
+7. âœ… **DevOps mode** â†’ Delete temp files
 
 **DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
 
@@ -33,23 +33,23 @@ Given a legacy folder path, analyze actual files from the actual filesystem (via
 
 ---
 
-## ⚠️ CRITICAL STOP-CHECK BEFORE EXECUTION ⚠️
+## âš ï¸ CRITICAL STOP-CHECK BEFORE EXECUTION âš ï¸
 
 **READ THIS FIRST - DO NOT SKIP:**
 
 Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** that CANNOT be skipped or simplified:
 
-### ❌ FORBIDDEN SHORTCUTS:
-- ❌ "and more files..." or "etc." - MUST list EVERY file
-- ❌ Incomplete file counts - PowerShell shows 54 files? List ALL 54
-- ❌ Missing Technologies section - REQUIRED
-- ❌ Less than 8 Windows Implementation bullets - MINIMUM 8-12
-- ❌ No references to other .md files - REQUIRED
-- ❌ No progress.md update - REQUIRED
-- ❌ No temp file cleanup - REQUIRED
-- ❌ No feature numbering - MUST count existing features first
+### âŒ FORBIDDEN SHORTCUTS:
+- âŒ "and more files..." or "etc." - MUST list EVERY file
+- âŒ Incomplete file counts - PowerShell shows 54 files? List ALL 54
+- âŒ Missing Technologies section - REQUIRED
+- âŒ Less than 8 Windows Implementation bullets - MINIMUM 8-12
+- âŒ No references to other .md files - REQUIRED
+- âŒ No progress.md update - REQUIRED
+- âŒ No temp file cleanup - REQUIRED
+- âŒ No feature numbering - MUST count existing features first
 
-### ✅ QUALITY STANDARDS:
+### âœ… QUALITY STANDARDS:
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
 2. **Complete Grouping**: Group ALL files by purpose - no file left behind
 3. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
@@ -59,7 +59,7 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 7. **Progress Update**: Increment counter, update date, add log entry
 8. **Cleanup**: Delete temp_*.ps1 files you created
 
-### 🔍 SELF-CHECK BEFORE WRITING:
+### ðŸ” SELF-CHECK BEFORE WRITING:
 Ask yourself:
 - [ ] Did I list EVERY file from PowerShell output?
 - [ ] Did I count existing features in target .md file?
@@ -71,18 +71,18 @@ Ask yourself:
 
 **If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
 
-### 📊 EXAMPLE OF COMPLETE OUTPUT:
+### ðŸ“Š EXAMPLE OF COMPLETE OUTPUT:
 
 ```
-## Feature 3: Ai Modules ⭐⭐⭐⭐⭐ (Highly Complex - 54 files)
+## Feature 3: Ai Modules â­â­â­â­â­ (Highly Complex - 54 files)
 
 Feature Files:
 Core Logic (5 files):
-- ai-engine.js → Core AI processing
-- decisionMaker.js → Decision logic
-- patternLearner.js → Pattern recognition
-- scoreArbOpportunity.js → Scoring
-- modelRouter.js → Model routing
+- ai-engine.js â†’ Core AI processing
+- decisionMaker.js â†’ Decision logic
+- patternLearner.js â†’ Pattern recognition
+- scoreArbOpportunity.js â†’ Scoring
+- modelRouter.js â†’ Model routing
 
 [... LIST ALL OTHER 49 FILES IN GROUPS ...]
 
@@ -141,7 +141,7 @@ If verification fails or is skipped, operate in paste-only mode.
 
 
 ---
-## 🔧 CRITICAL TOOL USAGE INSTRUCTIONS
+## ðŸ”§ CRITICAL TOOL USAGE INSTRUCTIONS
 
 **STEP 2 REQUIRES executeBash TOOL - NOT list_dir:**
 
@@ -164,20 +164,20 @@ try {
     
     Write-Host "--- COMPLETE FILE LIST ---"
     $files | Sort-Object FullName | ForEach-Object { Write-Host ---
-## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
+## ðŸŽ¯ DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
 You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
-1. ✅ **Ask mode** → Read progress.md, check if prompt already executed
-2. ✅ **DevOps mode** → Execute PowerShell to enumerate files
-3. ✅ **Project Research mode** → Analyze file names and project structure
-4. ✅ **Ask mode** → Read existing features/*.md files to count features
-5. ✅ **Write mode** → Write complete feature documentation
-6. ✅ **Ask mode** → Update progress.md
-7. ✅ **DevOps mode** → Delete temp files
+1. âœ… **Ask mode** â†’ Read progress.md, check if prompt already executed
+2. âœ… **DevOps mode** â†’ Execute PowerShell to enumerate files
+3. âœ… **Project Research mode** â†’ Analyze file names and project structure
+4. âœ… **Ask mode** â†’ Read existing features/*.md files to count features
+5. âœ… **Write mode** â†’ Write complete feature documentation
+6. âœ… **Ask mode** â†’ Update progress.md
+7. âœ… **DevOps mode** â†’ Delete temp files
 
 **DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
 
@@ -198,23 +198,23 @@ Given a legacy folder path, analyze actual files from the actual filesystem (via
 
 ---
 
-## ⚠️ CRITICAL STOP-CHECK BEFORE EXECUTION ⚠️
+## âš ï¸ CRITICAL STOP-CHECK BEFORE EXECUTION âš ï¸
 
 **READ THIS FIRST - DO NOT SKIP:**
 
 Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** that CANNOT be skipped or simplified:
 
-### ❌ FORBIDDEN SHORTCUTS:
-- ❌ "and more files..." or "etc." - MUST list EVERY file
-- ❌ Incomplete file counts - PowerShell shows 54 files? List ALL 54
-- ❌ Missing Technologies section - REQUIRED
-- ❌ Less than 8 Windows Implementation bullets - MINIMUM 8-12
-- ❌ No references to other .md files - REQUIRED
-- ❌ No progress.md update - REQUIRED
-- ❌ No temp file cleanup - REQUIRED
-- ❌ No feature numbering - MUST count existing features first
+### âŒ FORBIDDEN SHORTCUTS:
+- âŒ "and more files..." or "etc." - MUST list EVERY file
+- âŒ Incomplete file counts - PowerShell shows 54 files? List ALL 54
+- âŒ Missing Technologies section - REQUIRED
+- âŒ Less than 8 Windows Implementation bullets - MINIMUM 8-12
+- âŒ No references to other .md files - REQUIRED
+- âŒ No progress.md update - REQUIRED
+- âŒ No temp file cleanup - REQUIRED
+- âŒ No feature numbering - MUST count existing features first
 
-### ✅ QUALITY STANDARDS:
+### âœ… QUALITY STANDARDS:
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
 2. **Complete Grouping**: Group ALL files by purpose - no file left behind
 3. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
@@ -224,7 +224,7 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 7. **Progress Update**: Increment counter, update date, add log entry
 8. **Cleanup**: Delete temp_*.ps1 files you created
 
-### 🔍 SELF-CHECK BEFORE WRITING:
+### ðŸ” SELF-CHECK BEFORE WRITING:
 Ask yourself:
 - [ ] Did I list EVERY file from PowerShell output?
 - [ ] Did I count existing features in target .md file?
@@ -236,18 +236,18 @@ Ask yourself:
 
 **If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
 
-### 📊 EXAMPLE OF COMPLETE OUTPUT:
+### ðŸ“Š EXAMPLE OF COMPLETE OUTPUT:
 
 ```
-## Feature 3: Ai Modules ⭐⭐⭐⭐⭐ (Highly Complex - 54 files)
+## Feature 3: Ai Modules â­â­â­â­â­ (Highly Complex - 54 files)
 
 Feature Files:
 Core Logic (5 files):
-- ai-engine.js → Core AI processing
-- decisionMaker.js → Decision logic
-- patternLearner.js → Pattern recognition
-- scoreArbOpportunity.js → Scoring
-- modelRouter.js → Model routing
+- ai-engine.js â†’ Core AI processing
+- decisionMaker.js â†’ Decision logic
+- patternLearner.js â†’ Pattern recognition
+- scoreArbOpportunity.js â†’ Scoring
+- modelRouter.js â†’ Model routing
 
 [... LIST ALL OTHER 49 FILES IN GROUPS ...]
 
@@ -488,7 +488,56 @@ Still list EVERY file, just organize by category.
 - Choose the single owner .md from: install-dependencies.md, config.md, backend.md, dashboard.md, ai-modules.md, contracts.md, security.md, testing.md, deployment.md, docs.md
 - Choose 1-4 referencing .md files based on real integration needs
 
-### STEP 5: IMPLEMENTATION GUIDE (FILENAME-ONLY, APPEND-ONLY)
+### STEP 5: IMPLEMENTATION GUIDE
+
+**ENHANCED OUTPUT FORMAT WITH FOLDER TREE AND DETAILED DESCRIPTIONS:**
+
+### Folder Structure Section:
+Generate visual tree showing ALL nested folders with purposes.
+
+Example:
+```
+ai-modules/
+â”œâ”€â”€ core/                    â†’ Core AI engine components
+â”‚   â”œâ”€â”€ engine.js           â†’ Main processing
+â”‚   â””â”€â”€ router.js           â†’ Model routing
+â”œâ”€â”€ models/                  â†’ ML model definitions
+â”‚   â”œâ”€â”€ training/           â†’ Training scripts
+â”‚   â””â”€â”€ inference/          â†’ Inference engines
+â””â”€â”€ utils/                  â†’ Helper utilities
+```
+
+Rules:
+- Show COMPLETE nesting hierarchy
+- Add arrow with folder purpose
+- Include files with brief purpose
+- Use tree characters properly
+
+### Detailed File Descriptions:
+
+Each file MUST have 20-30 word description including:
+1. WHAT it does (primary function)
+2. WHY it exists (business purpose)
+3. HOW it integrates (connections)
+
+Example:
+```
+**Core Engine (5 files):**
+- core/engine.js â†’ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
+- core/router.js â†’ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
+```
+
+FORBIDDEN:
+- Generic descriptions like "Core AI processing"
+- Single-word purposes like "Configuration"
+- Missing integration details
+
+REQUIRED:
+- 20-30 words per file minimum
+- Specific technical details
+- Integration information
+- Business value explanation
+ (FILENAME-ONLY, APPEND-ONLY)
 
 - Derive Feature Name from the last segment of the legacy path (see "Feature Name Derivation")
 - **FILE COMPLETENESS CHECK**: Feature Files list MUST include representation of ALL files found in STEP 2
@@ -963,20 +1012,20 @@ if (Test-Path $targetFile) {
     Write-Host "--- END OF COMPLETE LIST ---"
 } catch {
     Write-Host "ERROR: $(---
-## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
+## ðŸŽ¯ DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
 You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
-1. ✅ **Ask mode** → Read progress.md, check if prompt already executed
-2. ✅ **DevOps mode** → Execute PowerShell to enumerate files
-3. ✅ **Project Research mode** → Analyze file names and project structure
-4. ✅ **Ask mode** → Read existing features/*.md files to count features
-5. ✅ **Write mode** → Write complete feature documentation
-6. ✅ **Ask mode** → Update progress.md
-7. ✅ **DevOps mode** → Delete temp files
+1. âœ… **Ask mode** â†’ Read progress.md, check if prompt already executed
+2. âœ… **DevOps mode** â†’ Execute PowerShell to enumerate files
+3. âœ… **Project Research mode** â†’ Analyze file names and project structure
+4. âœ… **Ask mode** â†’ Read existing features/*.md files to count features
+5. âœ… **Write mode** â†’ Write complete feature documentation
+6. âœ… **Ask mode** â†’ Update progress.md
+7. âœ… **DevOps mode** â†’ Delete temp files
 
 **DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
 
@@ -997,23 +1046,23 @@ Given a legacy folder path, analyze actual files from the actual filesystem (via
 
 ---
 
-## ⚠️ CRITICAL STOP-CHECK BEFORE EXECUTION ⚠️
+## âš ï¸ CRITICAL STOP-CHECK BEFORE EXECUTION âš ï¸
 
 **READ THIS FIRST - DO NOT SKIP:**
 
 Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** that CANNOT be skipped or simplified:
 
-### ❌ FORBIDDEN SHORTCUTS:
-- ❌ "and more files..." or "etc." - MUST list EVERY file
-- ❌ Incomplete file counts - PowerShell shows 54 files? List ALL 54
-- ❌ Missing Technologies section - REQUIRED
-- ❌ Less than 8 Windows Implementation bullets - MINIMUM 8-12
-- ❌ No references to other .md files - REQUIRED
-- ❌ No progress.md update - REQUIRED
-- ❌ No temp file cleanup - REQUIRED
-- ❌ No feature numbering - MUST count existing features first
+### âŒ FORBIDDEN SHORTCUTS:
+- âŒ "and more files..." or "etc." - MUST list EVERY file
+- âŒ Incomplete file counts - PowerShell shows 54 files? List ALL 54
+- âŒ Missing Technologies section - REQUIRED
+- âŒ Less than 8 Windows Implementation bullets - MINIMUM 8-12
+- âŒ No references to other .md files - REQUIRED
+- âŒ No progress.md update - REQUIRED
+- âŒ No temp file cleanup - REQUIRED
+- âŒ No feature numbering - MUST count existing features first
 
-### ✅ QUALITY STANDARDS:
+### âœ… QUALITY STANDARDS:
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
 2. **Complete Grouping**: Group ALL files by purpose - no file left behind
 3. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
@@ -1023,7 +1072,7 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 7. **Progress Update**: Increment counter, update date, add log entry
 8. **Cleanup**: Delete temp_*.ps1 files you created
 
-### 🔍 SELF-CHECK BEFORE WRITING:
+### ðŸ” SELF-CHECK BEFORE WRITING:
 Ask yourself:
 - [ ] Did I list EVERY file from PowerShell output?
 - [ ] Did I count existing features in target .md file?
@@ -1035,18 +1084,18 @@ Ask yourself:
 
 **If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
 
-### 📊 EXAMPLE OF COMPLETE OUTPUT:
+### ðŸ“Š EXAMPLE OF COMPLETE OUTPUT:
 
 ```
-## Feature 3: Ai Modules ⭐⭐⭐⭐⭐ (Highly Complex - 54 files)
+## Feature 3: Ai Modules â­â­â­â­â­ (Highly Complex - 54 files)
 
 Feature Files:
 Core Logic (5 files):
-- ai-engine.js → Core AI processing
-- decisionMaker.js → Decision logic
-- patternLearner.js → Pattern recognition
-- scoreArbOpportunity.js → Scoring
-- modelRouter.js → Model routing
+- ai-engine.js â†’ Core AI processing
+- decisionMaker.js â†’ Decision logic
+- patternLearner.js â†’ Pattern recognition
+- scoreArbOpportunity.js â†’ Scoring
+- modelRouter.js â†’ Model routing
 
 [... LIST ALL OTHER 49 FILES IN GROUPS ...]
 
@@ -1287,7 +1336,56 @@ Still list EVERY file, just organize by category.
 - Choose the single owner .md from: install-dependencies.md, config.md, backend.md, dashboard.md, ai-modules.md, contracts.md, security.md, testing.md, deployment.md, docs.md
 - Choose 1-4 referencing .md files based on real integration needs
 
-### STEP 5: IMPLEMENTATION GUIDE (FILENAME-ONLY, APPEND-ONLY)
+### STEP 5: IMPLEMENTATION GUIDE
+
+**ENHANCED OUTPUT FORMAT WITH FOLDER TREE AND DETAILED DESCRIPTIONS:**
+
+### Folder Structure Section:
+Generate visual tree showing ALL nested folders with purposes.
+
+Example:
+```
+ai-modules/
+â”œâ”€â”€ core/                    â†’ Core AI engine components
+â”‚   â”œâ”€â”€ engine.js           â†’ Main processing
+â”‚   â””â”€â”€ router.js           â†’ Model routing
+â”œâ”€â”€ models/                  â†’ ML model definitions
+â”‚   â”œâ”€â”€ training/           â†’ Training scripts
+â”‚   â””â”€â”€ inference/          â†’ Inference engines
+â””â”€â”€ utils/                  â†’ Helper utilities
+```
+
+Rules:
+- Show COMPLETE nesting hierarchy
+- Add arrow with folder purpose
+- Include files with brief purpose
+- Use tree characters properly
+
+### Detailed File Descriptions:
+
+Each file MUST have 20-30 word description including:
+1. WHAT it does (primary function)
+2. WHY it exists (business purpose)
+3. HOW it integrates (connections)
+
+Example:
+```
+**Core Engine (5 files):**
+- core/engine.js â†’ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
+- core/router.js â†’ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
+```
+
+FORBIDDEN:
+- Generic descriptions like "Core AI processing"
+- Single-word purposes like "Configuration"
+- Missing integration details
+
+REQUIRED:
+- 20-30 words per file minimum
+- Specific technical details
+- Integration information
+- Business value explanation
+ (FILENAME-ONLY, APPEND-ONLY)
 
 - Derive Feature Name from the last segment of the legacy path (see "Feature Name Derivation")
 - **FILE COMPLETENESS CHECK**: Feature Files list MUST include representation of ALL files found in STEP 2
@@ -1764,14 +1862,14 @@ if (Test-Path $targetFile) {
 `
 
 **DO NOT USE:**
-- ❌ list_dir tool
-- ❌ read_file for enumeration
-- ❌ Relative paths like "Apex Arbitrage Multichain bot/ai-modules"
+- âŒ list_dir tool
+- âŒ read_file for enumeration
+- âŒ Relative paths like "Apex Arbitrage Multichain bot/ai-modules"
 
 **MUST USE:**
-- ✅ executeBash tool
-- ✅ PowerShell commands
-- ✅ Full Windows paths with C:\
+- âœ… executeBash tool
+- âœ… PowerShell commands
+- âœ… Full Windows paths with C:\
 
 **IF TOOL FAILS 2 TIMES: STOP and report error. DO NOT retry same command 3+ times.**
 
@@ -1959,7 +2057,56 @@ Still list EVERY file, just organize by category.
 - Choose the single owner .md from: install-dependencies.md, config.md, backend.md, dashboard.md, ai-modules.md, contracts.md, security.md, testing.md, deployment.md, docs.md
 - Choose 1-4 referencing .md files based on real integration needs
 
-### STEP 5: IMPLEMENTATION GUIDE (FILENAME-ONLY, APPEND-ONLY)
+### STEP 5: IMPLEMENTATION GUIDE
+
+**ENHANCED OUTPUT FORMAT WITH FOLDER TREE AND DETAILED DESCRIPTIONS:**
+
+### Folder Structure Section:
+Generate visual tree showing ALL nested folders with purposes.
+
+Example:
+```
+ai-modules/
+â”œâ”€â”€ core/                    â†’ Core AI engine components
+â”‚   â”œâ”€â”€ engine.js           â†’ Main processing
+â”‚   â””â”€â”€ router.js           â†’ Model routing
+â”œâ”€â”€ models/                  â†’ ML model definitions
+â”‚   â”œâ”€â”€ training/           â†’ Training scripts
+â”‚   â””â”€â”€ inference/          â†’ Inference engines
+â””â”€â”€ utils/                  â†’ Helper utilities
+```
+
+Rules:
+- Show COMPLETE nesting hierarchy
+- Add arrow with folder purpose
+- Include files with brief purpose
+- Use tree characters properly
+
+### Detailed File Descriptions:
+
+Each file MUST have 20-30 word description including:
+1. WHAT it does (primary function)
+2. WHY it exists (business purpose)
+3. HOW it integrates (connections)
+
+Example:
+```
+**Core Engine (5 files):**
+- core/engine.js â†’ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
+- core/router.js â†’ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
+```
+
+FORBIDDEN:
+- Generic descriptions like "Core AI processing"
+- Single-word purposes like "Configuration"
+- Missing integration details
+
+REQUIRED:
+- 20-30 words per file minimum
+- Specific technical details
+- Integration information
+- Business value explanation
+ (FILENAME-ONLY, APPEND-ONLY)
 
 - Derive Feature Name from the last segment of the legacy path (see "Feature Name Derivation")
 - **FILE COMPLETENESS CHECK**: Feature Files list MUST include representation of ALL files found in STEP 2
