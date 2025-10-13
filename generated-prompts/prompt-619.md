@@ -555,12 +555,17 @@ The ai-modules feature should be implemented by adding files to the appropriate 
 
 **ENHANCED OUTPUT FORMAT WITH FOLDER TREE AND DETAILED DESCRIPTIONS:**
 
-### Folder Structure Section:
+### 🚨 MANDATORY FOLDER TREE SECTION 🚨
 
-Generate visual tree showing ALL nested folders with purposes.
+**CRITICAL**: You MUST include a complete folder tree structure showing ALL nested folders.
 
-Example:
+**FORBIDDEN**: Skipping the folder tree section will result in REJECTED output.
+
+**REQUIRED FORMAT:**
+
 ```
+Folder Structure:
+
 ai-modules/
 ├── core/                    → Core AI engine components
 │   ├── engine.js           → Main processing
@@ -571,11 +576,16 @@ ai-modules/
 └── utils/                  → Helper utilities
 ```
 
-Rules:
-- Show COMPLETE nesting hierarchy
-- Add arrow with folder purpose
-- Include files with brief purpose
-- Use tree characters properly
+**MANDATORY RULES:**
+- ✅ Show COMPLETE nesting hierarchy for ALL subfolders
+- ✅ Add arrow (→) with folder purpose for EVERY folder
+- ✅ Include representative files with brief purpose
+- ✅ Use tree characters properly (├──, │, └──)
+- ✅ If PowerShell shows 10 folders, your tree MUST show all 10 folders
+- ❌ FORBIDDEN: Skipping folders or using "and more folders"
+- ❌ FORBIDDEN: Not including the folder tree section
+
+**VERIFICATION**: Count folders in your tree. Must match PowerShell folder count.
 
 ### Detailed File Descriptions:
 
@@ -791,6 +801,7 @@ Each bullet should be ONE sentence describing:
 **VALIDATION CHECKLIST:**
 - [ ] Feature number is sequential (counted existing features)
 - [ ] Complexity score matches file count
+- [ ] Folder tree structure included showing ALL nested folders
 - [ ] ALL files from PowerShell are listed
 - [ ] Technologies section present
 - [ ] 8-12 Windows Implementation bullets
