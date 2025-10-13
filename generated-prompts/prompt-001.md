@@ -125,7 +125,6 @@ Found 3247 files in backend/plugins/
 ```
 
 
-
 - uniswap-v2-adapter-001.js →’ Uniswap adapter
 
 - uniswap-v2-adapter-002.js →’ Another adapter
@@ -354,7 +353,6 @@ Is path tests/*, deploy/*, logs/*, data/*, migrations/*, scripts/*?
 
      +- Data/logs ? SKIP
 
-
 Is path archive/*, examples/*, research/*, benchmarks/*, ci/*?
 
   +- YES ? SKIP (output SKIPPED message)
@@ -441,11 +439,7 @@ try {
 
     $targetPath = Join-Path $basePath "ai-modules"
 
-    
-
     Write-Host "Checking path: $targetPath"
-
-    
 
     if (-not (Test-Path $targetPath)) {
 
@@ -455,19 +449,13 @@ try {
 
     }
 
-    
-
     $files = Get-ChildItem -Path $targetPath -Recurse -File -Force -ErrorAction Stop
 
     $folders = Get-ChildItem -Path $targetPath -Recurse -Directory -Force -ErrorAction Stop
 
-    
-
     Write-Host "TOTAL FILES FOUND: $($files.Count)"
 
     Write-Host "TOTAL FOLDERS FOUND: $($folders.Count)"
-
-    
 
     Write-Host "--- COMPLETE FOLDER STRUCTURE (ALL $($folders.Count) FOLDERS) ---"
 
@@ -481,8 +469,6 @@ try {
 
     Write-Host "--- END OF FOLDER STRUCTURE ---"
 
-    
-
     Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
 
     $files | Sort-Object FullName | ForEach-Object { 
@@ -492,8 +478,6 @@ try {
     }
 
     Write-Host "--- END OF COMPLETE LIST ---"
-
-    
 
 } catch {
 
@@ -560,7 +544,6 @@ Found 10 files in backend/plugins/dex-adapters:
 **CORRECT (Complete):**
 
 ```
-
 
 
 - uniswap-v3-adapter.js
@@ -741,8 +724,6 @@ Feature #1: Ai Modules - Found 54 files across 10 folders
   - ml-models.json ? Machine learning model configurations
 
   - training-data.csv ? Training datasets for AI models
-
-  
 
 
   - Implement as Windows Service for background AI processing
@@ -1304,14 +1285,10 @@ Legacy Path: Apex Arbitrage multi-chain bot/Apex Arbitrage Multichain bot/ai-mod
 
   - [file2] ? [description]
 
-  
-
 
   - [bullet 1]
 
   - [bullet 2]
-
-  
 
 
   - In features/[md1]: [Feature Name] ? see features/[owner].md
@@ -1590,7 +1567,6 @@ if (Test-Path $targetFile) {
 
     $content = Get-Content $targetFile -Raw
 
-    
 
     # Check required elements
 
@@ -1605,8 +1581,6 @@ if (Test-Path $targetFile) {
         "Minimum bullets" = ($content | Select-String "^- ").Count -ge 2
 
     }
-
-    
 
     $allPassed = $true
 
@@ -1625,8 +1599,6 @@ if (Test-Path $targetFile) {
         }
 
     }
-
-    
 
     if (-not $allPassed) {
 
@@ -1693,111 +1665,27 @@ if (Test-Path $targetFile) {
 ---## MODE: PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + IMPLEMENTATION DOCS)
 
 
-
-
-
-
-
 **DECISION TREE:**
 
 ```
 
-
-
-
-
-
-
      +- Data/logs ? SKIP
 
-
-
-
-
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```powershell
 
 try {
 
-
-
-    
-
-
-    
-
-
-
         exit 1
 
     }
 
-    
-
-
-
-    
-
-
-
-    
-
-
-
-
-
     }
 
-
-    
-
-
-
-
     }
-
-
-    
 
 } catch {
-
-
 
     exit 1
 
@@ -1805,38 +1693,11 @@ try {
 
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 ```
 
-
-
-
-
 ```
-
-
-```
-
-
-
 
 
 - curve-adapter.js
@@ -1847,160 +1708,51 @@ try {
 - adapter-factory.js
 
 
-
 - adapter-utils.js
 
 ```
 
-
-
-
 ```
-
-
-
 
 Test files (20):
 
-
 Config files (10):
 
-
 ```
-
-
 
 
 **Example:**
 
-
-
-
-
-
-
-
-
+```
 
 ```
 
-
-
-
-
-
-
-
-
+```
 
 ```
 
+```
 
 ```
 
-
-
-
-
-
-
+```
 
 ```
 
-
 ```
-
-
-
-
-
-
-
-
-```
-
-
-```
-
-
-
-
-
-
-
-
-```
-
-
-
-```
-
-
-
-
-
-
-
 
   Feature Files:
 
-
-
-
-  
-
-
-
-
-
-
-
-
 ```
 
-
 ```
-
 
 Ai Modules Analysis
 
 
-
 - ai-engine.js
 
-
-
-
-
-
-
-
-
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Example:
 
@@ -2008,400 +1760,80 @@ Example:
 
 ai-modules/
 
-
-
-
-
-
-
-
 ```
 
 Rules:
-
-
-
-
-
-
-
-
-
 
 Example:
 
 ```
 
-
-
-
 ```
 
 FORBIDDEN:
 
-
-
-
 REQUIRED:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 **For Logging:**
 
 
-
-
 **For Security:**
-
-
-
-
-
-
 
 
 **For Scheduling:**
 
 
-
-
-
-
-
-
-
-
 **Examples:**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
-
 
 Feature Files:
 
-
-
-
 ...
 
-
-
-
-
-
-
-
-
-
-
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Input Format
 
-
-
-
-
 ```
 
-
-
-
-
-
-
   Feature Files:
-
-
-
-  
 
 
   - [bullet 1]
 
   - [bullet 2]
 
-  
-
-
-
-
 ```
 
 **DO NOT ADD:**
 
 
-
 - Extra blank lines
-
-
-
-
 
 
 - No external links
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### File patterns
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ### Folder patterns
 
 
-
-
-
-
-
-
-
 - docs/* ? docs.md
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 **More examples:**
 
 
-
-
-
-
 ### Empty Folders
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 `powershell
 
-
-
-
-
-
-
-
 $logEntry = "
-
-
-
-
-
 
 `
 
@@ -2409,48 +1841,23 @@ $logEntry = "
 
 `powershell
 
-
-
-
 `
-
 
 ```powershell
 
-
-
-
-
-    
-
-
     $checks = @{
-
-
-
-
 
     }
 
-    
-
     $allPassed = $true
-
-
-
 
             $allPassed = $false
 
         } else {
 
-
         }
 
     }
-
-    
-
-
 
         exit 1
 
@@ -2458,19 +1865,11 @@ $logEntry = "
 
 } else {
 
-
     exit 1
 
 }
 
 ```
-
-
-
-
-
-
-
 
 
 ---
