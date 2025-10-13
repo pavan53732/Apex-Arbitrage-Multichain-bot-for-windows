@@ -8,7 +8,7 @@ You WILL need to delegate to specialized modes. That's CORRECT. But you MUST com
 
 1. ✅ **Ask mode** → Read progress.md, check if prompt already executed
 
-2. ✅ **DevOps mode** → Execute PowerShell to enumerate files
+2. ✅ **DevOps mode** → Execute run_terminal_cmd tool to enumerate files
 
 3. ✅ **Project Research mode** → Analyze file names and project structure
 
@@ -239,24 +239,10 @@ Windows Implementation:
 - Enable real-time model interpretation updates
 - Monitor explanation performance with Windows Performance Counters
 
-## DATA SOURCES (CLARIFIED)
+## DATA SOURCES
 
-- **Path-Locations.md**: 
-  - **Location**: Repository root
-  - **Contains**: List of all 842 directory paths (numbered 1-842)
-  - **Purpose**: Quick reference for folder paths
-
+- **Path-Locations.md**: List of all 842 directory paths (numbered 1-842)
 - **Standard README.md**: Structure conventions and architecture overview
-
-## PROTOCOLS
-
-Access Verification (must be used before any repo edits):
-
-- Write-Proof: ACCESS-PROOF WRITE repo=Apex-Arbitrage-Multichain-bot-for-windows branch=main nonce=[RANDOM]
-- Read-Proof: ACCESS-PROOF READ repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.md
-- Update-Proof: ACCESS-PROOF UPDATE repo=Apex-Arbitrage-Multichain-bot-for-windows path=PROMPT.md nonce=[RANDOM]
-
-If verification fails or is skipped, operate in paste-only mode.
 
 ## PRE-EXECUTION CHECKPOINT
 
@@ -322,7 +308,7 @@ Is path archive/*, examples/*, research/*, benchmarks/*, ci/*?
 - examples/* | demo/* → Demo code
 - research/* → Experimental code
 - benchmarks/* → Performance testing
-- ci/* | .github/* | .gitlab/* → CI/CD infrastructure
+- ci/* | .gitlab/* → CI/CD infrastructure
 - vendor/datasets/* → Large data files
 - */coverage/* | */snapshots/* → Test artifacts
 - */backup/* | */temp/* → Runtime files
@@ -338,7 +324,7 @@ Action: STOP - do not process or write any files
 **EXECUTION INSTRUCTIONS:**
 
 1. Copy the PowerShell code block below EXACTLY as written
-2. Execute using run_terminal_cmd tool with PowerShell
+2. Execute using run_terminal_cmd tool (PowerShell)
 3. Do NOT modify, interpret, or break up the code
 4. Execute the ENTIRE block as ONE command
 
@@ -840,7 +826,7 @@ Each bullet should be ONE sentence describing:
 
 **If ANY element is missing, your output is INCOMPLETE and MUST be revised.**
 
-### STEP 6: ACTUALLY WRITE TO GITHUB FILES (STRICT APPEND-ONLY)
+### STEP 6: ACTUALLY WRITE TO FILES (STRICT APPEND-ONLY)
 
 **CRITICAL: APPEND-ONLY BEHAVIOR**
 
@@ -986,36 +972,12 @@ Each bullet should be ONE sentence describing:
 ✗ "Load adapters from C:\Program Files\..." (specific path)
 ✗ "Use dynamic loading with require() and fs.readdir()" (too technical)
 
-### STEP 7: ACTUALLY WRITE TO GITHUB FILES (STRICT APPEND-ONLY)
 
-**CRITICAL: APPEND-ONLY BEHAVIOR**
-
-**Steps to ensure append-only:**
-1. Read existing file content FIRST
-2. Keep ALL existing content unchanged
-3. Add new "## Feature:" section at the VERY END
-4. Write the combined content back
-
-**DUPLICATE FEATURE NAME HANDLING:**
-- Before writing, check if "## Feature: [Name]" already exists in target file
-- If EXISTS: Skip writing (feature already documented)
-- If NOT EXISTS: Append new section
-- Output: "SKIPPED: Feature '[Name]' already exists in features/[owner].md"
-
-**File Writing Rules:**
-- Use create_or_update_file tool to ACTUALLY WRITE to the features/*.md files in the GitHub repo
-- **CRITICAL RESTRICTION**: ONLY modify or create .md files inside features/ folder
-- **NO NEW PROJECT FILES**: Never create .js, .ts, .py, .sol, .json, or any executable/real implementation files
-- **NO NEW FOLDERS**: Never create directories anywhere in the project
-- **Creation rule**: If the owner/reference .md does not exist (e.g., config.md, security.md), CREATE features/[name].md and then append
-- **APPEND-ONLY**: Read existing content first, then append the new "## Feature:" section to the END
-- **Preserve all existing content**: never overwrite, replace, or delete
-- Repo: Apex-Arbitrage-Multichain-bot-for-windows (owner: pavan53732, branch: main)
 
 ## Input Format
 
 PATH-TO-FEATURE MAPPER
-Legacy Path: Apex Arbitrage multi-chain bot/Apex Arbitrage Multichain bot/{FOLDER_PATH}
+Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\{FOLDER_PATH}
 
 ## OUTPUT FORMAT (EXACT TEMPLATE - DO NOT DEVIATE)
 
@@ -1098,7 +1060,7 @@ Legacy Path: Apex Arbitrage multi-chain bot/Apex Arbitrage Multichain bot/{FOLDE
 - plugins/* → backend.md (plugin system)
 - widgets/* | components/* → dashboard.md (UI components)
 - storage/* | backup/* | snapshots/* → backend.md (data persistence)
-- ci/* | .github/* | .gitlab/* → deployment.md (CI/CD pipelines)
+- ci/* | .gitlab/* → deployment.md (CI/CD pipelines)
 - benchmarks/* | profiling/* → testing.md (performance benchmarks)
 - scripts/* → deployment.md (automation scripts)
 - public/* | static/* | assets/* → dashboard.md (static assets)
@@ -1303,8 +1265,7 @@ if (Test-Path $targetFile) {
 - ❌ Relative paths like "Apex Arbitrage Multichain bot/ai-modules"
 
 **MUST USE:**
-- ✅ executeBash tool
-- ✅ PowerShell commands
+- ✅ run_terminal_cmd tool (PowerShell)
 - ✅ Full Windows paths with C:\
 
 **IF TOOL FAILS 2 TIMES: STOP and report error. DO NOT retry same command 3+ times.**
