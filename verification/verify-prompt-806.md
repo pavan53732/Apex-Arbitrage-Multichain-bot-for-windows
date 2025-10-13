@@ -1,94 +1,79 @@
-﻿# Verification Prompt for Prompt 806
+﻿# Verification for Prompt 806
 
-## Your Task: Verify Execution of Prompt 806
+## Task: Verify that Prompt 806 executed correctly
 
-You are verifying that **Prompt 806** was executed correctly.
+**Folder that was processed:** `third-party\\patches`
+**Expected feature name:** `Patches`
 
-### What Prompt 806 Should Have Done:
+---
 
-**Folder Analyzed:** `third-party\\patches`
-**Expected Feature Name:** `Patches`
+## Verification Steps
 
-### Verification Checklist:
+### Step 1: Read progress.md
+Read the file `generated-prompts/progress.md` and check:
+- Does it contain "Prompt 806: Executed"?
+- Is the completion count updated?
 
-Execute these checks in order:
+### Step 2: Identify which .md file should own this feature
+Based on the folder path `third-party\\patches`, determine the owner:
+- `ai-modules/*` → features/ai-modules.md
+- `backend/*` → features/backend.md
+- `dashboard/*` → features/dashboard.md
+- `config/*` → features/config.md
+- `contracts/*` → features/contracts.md
+- `security/*` → features/security.md
+- `tests/*` → features/testing.md
+- `deploy/*` → features/deployment.md
+- `docs/*` → features/docs.md
 
-#### 1. Check progress.md
-```powershell
-Get-Content "generated-prompts\progress.md" | Select-String "Prompt 806:"
-```
-**Expected:** Should find entry like "Prompt 806: Executed - Added 'Feature: [Name]' to features/[owner].md"
+### Step 3: Read the owner .md file
+Read the identified owner file and verify:
+- Does it contain a new "## Feature" section?
+- Does the feature name match or relate to "Patches"?
 
-#### 2. Identify Owner File
-Based on folder path `third-party\\patches`, determine which .md file should own this feature:
-- ai-modules/* → ai-modules.md
-- backend/* → backend.md
-- dashboard/* → dashboard.md
-- config/* → config.md
-- contracts/* → contracts.md
-- security/* → security.md
-- tests/* → testing.md
-- deploy/* → deployment.md
-- docs/* → docs.md
+### Step 4: Check feature content completeness
+In the new feature section, verify these sections exist:
+- [ ] "Feature Files:" section with file listings
+- [ ] "Technologies:" section with detected tech stack
+- [ ] "Windows Implementation:" section with implementation bullets
 
-#### 3. Check Owner File Has New Feature
-```powershell
-$ownerFile = "features\[owner].md"  # Replace [owner] with actual owner
-Get-Content $ownerFile | Select-String "## Feature.*Patches"
-```
-**Expected:** Should find feature section with name containing "Patches"
+### Step 5: Count implementation bullets
+Count the bullets in "Windows Implementation:" section:
+- Must have at least 8 bullets
+- Each bullet should describe WHAT, WHERE, HOW
 
-#### 4. Verify Feature Content
-```powershell
-$content = Get-Content "features\[owner].md" -Raw
-# Check for required sections
-$content -match "Feature Files:"
-$content -match "Technologies:"
-$content -match "Windows Implementation:"
-```
-**Expected:** All three sections should exist
+### Step 6: Check reference files
+Check if 1-4 other .md files were updated with cross-references to this feature.
 
-#### 5. Count Implementation Bullets
-```powershell
-$content = Get-Content "features\[owner].md" -Raw
-$lastFeature = ($content -split "## Feature")[-1]
-($lastFeature | Select-String "^- " -AllMatches).Matches.Count
-```
-**Expected:** Should be >= 8 bullets
+---
 
-#### 6. Check Reference Files Updated
-Based on feature type, check if 1-4 reference files were updated with cross-references.
+## Verification Report
 
-### Validation Report Format:
-
-After running all checks, provide this report:
+Provide this exact format:
 
 ```
 VERIFICATION REPORT - PROMPT 806
-================================
+==========================================
 
-✅/❌ Progress.md updated
-✅/❌ Owner file identified: [owner].md
-✅/❌ Feature section added
+✅/❌ Progress.md contains "Prompt 806: Executed"
+✅/❌ Owner file identified: [name].md
+✅/❌ New feature section added
 ✅/❌ Feature Files section present
-✅/❌ Technologies section present
+✅/❌ Technologies section present  
 ✅/❌ Windows Implementation section present
-✅/❌ Minimum 8 implementation bullets
-✅/❌ Reference files updated
+✅/❌ Has >= 8 implementation bullets (found: X)
+✅/❌ Reference files updated (found: X files)
 
 OVERALL: ✅ PASSED / ❌ FAILED
 
-Issues Found (if any):
-- [List any issues]
+Issues (if any):
+- [List specific issues]
 ```
 
-### If Verification FAILS:
+---
 
-Provide specific details:
-1. What was missing
-2. What was incorrect
-3. Suggested fix
+## If PASSED
+Say: "✅ Prompt 806 verified successfully. Ready for Prompt 807."
 
-### If Verification PASSES:
-
-Confirm: "Prompt 806 executed correctly. Ready for Prompt 807."
+## If FAILED
+List what needs to be fixed and suggest re-running Prompt 806.
