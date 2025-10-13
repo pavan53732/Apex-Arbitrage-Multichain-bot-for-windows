@@ -370,8 +370,10 @@ try {
     Write-Host "--- END OF FOLDER STRUCTURE ---"
     
     Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
+    $fileIndex = 1
     $files | Sort-Object FullName | ForEach-Object { 
-        Write-Host $_.FullName 
+        Write-Host "FILE $fileIndex/$($files.Count): $($_.FullName)"
+        $fileIndex++
     }
     Write-Host "--- END OF COMPLETE LIST ---"
     
@@ -648,9 +650,44 @@ REQUIRED:
 - **NO PARTIAL LISTINGS**: Never use "and more files" or "additional files" - be complete and specific
 - **SCAFFOLDED FILE ANALYSIS**: Empty files must be analyzed by filename patterns to determine intended purpose
 
+**FUNCTIONAL ANALYSIS MATRIX (PRE-GROUPING INTELLIGENCE):**
+
+Before grouping files, analyze EACH file across 5 dimensions:
+
+**1. Data Flow Role:**
+- Input → Receives external data (RPC calls, API responses, user input)
+- Processing → Transforms/analyzes data (calculations, ML inference, routing)
+- Output → Sends data externally (transactions, API calls, UI updates)
+- Storage → Persists data (database writes, file saves, cache updates)
+
+**2. Execution Context:**
+- Main Thread → Runs in primary application process (UI rendering, user interactions)
+- Background → Runs in separate process/worker (heavy computations, monitoring)
+- Scheduled → Triggered by time/cron (periodic tasks, cleanup, retraining)
+- Event-Driven → Triggered by events (blockchain events, price changes, alerts)
+
+**3. Dependencies (What It Requires):**
+- External Services → RPC nodes, APIs, databases, file systems
+- Internal Modules → Other project files it imports/requires
+- Configuration → Settings, secrets, environment variables
+- Runtime → Node.js version, Python packages, system libraries
+
+**4. Dependents (What Depends On It):**
+- Direct Consumers → Files that import/call this file
+- Indirect Consumers → Features that rely on its functionality
+- UI Components → Dashboard elements displaying its data
+- External Systems → Blockchain contracts, APIs consuming its output
+
+**5. Windows Integration Point:**
+- Service → Runs as Windows Service (backend engines, monitors)
+- UI → Electron renderer process (dashboard components, charts)
+- Storage → File system/registry/database (configs, logs, data)
+- Config → Settings management (registry, JSON files, env vars)
+- Security → Credential Manager, encryption, certificates
+
 **INTELLIGENT FILE GROUPING BY PURPOSE:**
 
-Group Feature Files by actual function, not just extension:
+After functional analysis, group files by actual function, not just extension:
 
 - **Core Logic**: *-engine.js, *-manager.js, *-handler.js, *-controller.js, *-service.js
 - **Adapters/Integrations**: *-adapter.js, *-connector.js, *-client.js, *-provider.js
@@ -1201,6 +1238,46 @@ if (Test-Path $targetFile) {
 ```
 
 **Mark this prompt as COMPLETE only after all validations pass.**
+
+### 20-POINT VALIDATION MATRIX (SYSTEMATIC QUALITY ASSURANCE)
+
+**Execute this checklist before marking prompt complete:**
+
+**File Enumeration (5 points):**
+- [ ] 1. PowerShell executed successfully without errors
+- [ ] 2. All files enumerated with "FILE X/Y" format showing progress
+- [ ] 3. File count matches PowerShell output exactly
+- [ ] 4. No files skipped or summarized with "etc."
+- [ ] 5. Subfolder files included recursively
+
+**Feature Analysis (5 points):**
+- [ ] 6. Feature number is sequential (counted existing features)
+- [ ] 7. Complexity score matches file count (⭐ to ⭐⭐⭐⭐⭐)
+- [ ] 8. Technologies section present with detected stack
+- [ ] 9. Files grouped by purpose (Core Logic, Tests, etc.)
+- [ ] 10. Each file has 20-30 word description
+
+**Windows Implementation (5 points):**
+- [ ] 11. Minimum 8-12 implementation bullets present
+- [ ] 12. Each bullet follows "Action + Component + Purpose" format
+- [ ] 13. No OS-specific paths (no C:\, %AppData% literals)
+- [ ] 14. Windows components mapped correctly (Service, Electron, etc.)
+- [ ] 15. Integration points clearly described
+
+**File Operations (5 points):**
+- [ ] 16. Owner .md file updated with append-only behavior
+- [ ] 17. Reference .md files updated with cross-references
+- [ ] 18. progress.md updated with prompt number and date
+- [ ] 19. Temp PowerShell files deleted (temp_*.ps1)
+- [ ] 20. No duplicate feature names in target files
+
+**SCORING:**
+- 20/20 = ✅ PERFECT - Mark complete
+- 18-19/20 = ✅ ACCEPTABLE - Mark complete with notes
+- 15-17/20 = ⚠️ NEEDS REVIEW - Fix issues before completing
+- <15/20 = ❌ FAILED - Do not mark complete, restart execution
+
+**If score < 18: STOP and fix all failing checks before proceeding**
 
 ---
 
