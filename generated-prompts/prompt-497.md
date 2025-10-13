@@ -144,35 +144,35 @@ Found 3247 files in backend/plugins/
 
 backend/
 
-â”œâ”€â”€ plugins/
++-- plugins/
 
-â”‚   â”œâ”€â”€ dex-adapters/
+|   +-- dex-adapters/
 
-â”‚   â”‚   â”œâ”€â”€ uniswap/
+|   |   +-- uniswap/
 
-â”‚   â”‚   â”‚   â”œâ”€â”€ v2/
+|   |   |   +-- v2/
 
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           →’ Core V2 swap logic
+|   |   |   |   +-- core/           →’ Core V2 swap logic
 
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ router/         →’ V2 routing algorithms
+|   |   |   |   +-- router/         →’ V2 routing algorithms
 
-â”‚   â”‚   â”‚   â”‚   â””â”€â”€ utils/          →’ V2 helper functions
+|   |   |   |   +-- utils/          →’ V2 helper functions
 
-â”‚   â”‚   â”‚   â”œâ”€â”€ v3/
+|   |   |   +-- v3/
 
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ core/           →’ Core V3 swap logic
+|   |   |   |   +-- core/           →’ Core V3 swap logic
 
-â”‚   â”‚   â”‚   â”‚   â”œâ”€â”€ quoter/         →’ V3 price quotation
+|   |   |   |   +-- quoter/         →’ V3 price quotation
 
-â”‚   â”‚   â”‚   â”‚   â””â”€â”€ position/       →’ V3 liquidity positions
+|   |   |   |   +-- position/       →’ V3 liquidity positions
 
-â”‚   â”‚   â”‚   â””â”€â”€ common/             →’ Shared Uniswap utilities
+|   |   |   +-- common/             →’ Shared Uniswap utilities
 
-â”‚   â”‚   â”œâ”€â”€ sushiswap/
+|   |   +-- sushiswap/
 
-â”‚   â”‚   â”‚   â”œâ”€â”€ core/               →’ SushiSwap core logic
+|   |   |   +-- core/               →’ SushiSwap core logic
 
-â”‚   â”‚   â”‚   â””â”€â”€ router/             →’ SushiSwap routing
+|   |   |   +-- router/             →’ SushiSwap routing
 
 ... (SHOW ALL 300 FOLDERS - NO SKIPPING)
 
@@ -642,19 +642,19 @@ Example:
 
 ai-modules/
 
-â”œâ”€â”€ core/                    →’ Core AI engine components
++-- core/                    →’ Core AI engine components
 
-â”‚   â”œâ”€â”€ engine.js           →’ Main processing
+|   +-- engine.js           →’ Main processing
 
-â”‚   â””â”€â”€ router.js           →’ Model routing
+|   +-- router.js           →’ Model routing
 
-â”œâ”€â”€ models/                  →’ ML model definitions
++-- models/                  →’ ML model definitions
 
-â”‚   â”œâ”€â”€ training/           →’ Training scripts
+|   +-- training/           →’ Training scripts
 
-â”‚   â””â”€â”€ inference/          →’ Inference engines
+|   +-- inference/          →’ Inference engines
 
-â””â”€â”€ utils/                  →’ Helper utilities
++-- utils/                  →’ Helper utilities
 
 ```
 
