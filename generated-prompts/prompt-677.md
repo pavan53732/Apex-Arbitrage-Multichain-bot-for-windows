@@ -1,4 +1,4 @@
-﻿## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
+## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
@@ -267,55 +267,17 @@ Always follow Steps 1-6 in order:
 - Also accept: Apex Arbitrage Multichain bot/[folder-path] (treat both roots as identical)
 - Extract [folder-path] only
 
-### STEP 1.5: PATH FILTERING DECISION (WINDOWS APP RELEVANCE)
+### STEP 1.5: MANDATORY PROCESSING REQUIREMENT
 
-**DECISION TREE:**
+**CRITICAL**: ALL folders MUST be processed for complete feature collection.
+
 ```
-Is path backend/*, dashboard/*, ai-modules/*, contracts/*, config/*, security/*, utils/*, types/*, plugins/*?
-  +- YES → PROCESS (go to STEP 2)
-  +- NO → Continue checking...
-
-Is path tests/*, deploy/*, logs/*, data/*, migrations/*, scripts/*?
-  +- YES → Check if it's framework code (not data/logs)
-     +- Framework code → PROCESS WITH CAUTION
-     +- Data/logs → SKIP
-  +- NO → Continue checking...
-
-Is path archive/*, examples/*, research/*, benchmarks/*, ci/*?
-  +- YES → SKIP (output SKIPPED message)
-  +- NO → PROCESS (default: when in doubt, process)
+examples\\configs
 ```
 
-**PROCESS (Windows App Features)**
-- backend/* → Core engine features
-- dashboard/* → UI features
-- ai-modules/* → ML features
-- contracts/* → Smart contract features
-- config/* → Configuration features
-- security/* → Security features
-- utils/* | types/* | plugins/* → Supporting features
+**NO EXCEPTIONS**: Every folder (including archive, examples, research, benchmarks, ci, tests, data, logs, etc.) contains valuable features that must be documented.
 
-**PROCESS WITH CAUTION (Framework Only)**
-- tests/* → Only if test framework code, NOT test data
-- deploy/* → Only if Windows installer code, NOT Kubernetes/Docker
-- logs/* → Only if logging framework, NOT .log files
-- data/* → Only if data structure code, NOT datasets
-- migrations/* → Only if migration framework, NOT old migrations
-- scripts/* → Only if Windows scripts, NOT CI/CD scripts
-
-**SKIP (Not Relevant for Windows App)**
-- archive/* | legacy/* | deprecated/* → Old code
-- examples/* | demo/* → Demo code
-- research/* → Experimental code
-- benchmarks/* → Performance testing
-- ci/* | .gitlab/* → CI/CD infrastructure
-- vendor/datasets/* → Large data files
-- */coverage/* | */snapshots/* → Test artifacts
-- */backup/* | */temp/* → Runtime files
-
-**If path should be SKIPPED:**
-Output: "SKIPPED: Path '[path]' is not relevant for Windows desktop app (reason: [category])"
-Action: STOP - do not process or write any files
+**PROCEED TO STEP 2** - No skipping allowed.
 
 ### STEP 2: LOOKUP ACTUAL FILES (MANDATORY COMPLETE ENUMERATION)
 
@@ -378,8 +340,9 @@ try {
 - **MUST READ UNTIL "END OF COMPLETE LIST"**: Do not stop reading until you see the end marker
 - **MUST LIST EVERY SINGLE FILE**: Enumerate ALL filenames found - no exceptions, no shortcuts
 - **MUST INCLUDE SUBFOLDER FILES**: Include all subfolders and nested files
-- **FORBIDDEN**: Do not guess, skip, summarize, or use "etc." - list EVERY filename explicitly
+- **FORBIDDEN**: Do not guess, skip, summarize, or use "etc.", "...", "and more files", "additional files", "similar files", "plus X more" - list EVERY filename explicitly
 - **VERIFICATION**: Count total files found and state the count explicitly: "Found [N] files in [folder-path]"
+- **COUNT MATCHING**: Your file list count MUST match PowerShell count exactly or you FAILED
 - **FEATURE NUMBERING**: Always start with "Feature #X:" where X is the prompt number
 - **COMPLETE COUNTING**: State exact counts: "Total Files: [N], Total Folders: [M], Total Nested Levels: [L]"
 - **SUMMARY FORMAT**: Begin analysis with: "Feature #[X]: [Feature Name] - Found [N] files across [M] folders"
@@ -388,6 +351,7 @@ try {
 - **VERIFICATION CHECKLIST**: Before writing files, verify counts match PowerShell output exactly
 - **SCAFFOLDED FILES**: Even if files are empty placeholders, they MUST be analyzed for feature intent from filename patterns
 - **MINIMUM REQUIREMENT**: If folder has 50+ files, list ALL 50+ files by name
+- **NO SHORTCUTS ALLOWED**: If PowerShell shows 60 files, you MUST list all 60 files individually with descriptions
 
 **FILE ENUMERATION EXAMPLES:**
 
@@ -397,6 +361,9 @@ Found 10 files in backend/plugins/dex-adapters:
 - uniswap-v2-adapter.js
 - sushiswap-adapter.js
 - ... (8 more files)  ← FORBIDDEN!
+- and more files  ← FORBIDDEN!
+- plus 8 additional files  ← FORBIDDEN!
+- similar files  ← FORBIDDEN!
 ```
 
 **CORRECT (Complete):**
@@ -414,7 +381,7 @@ Found 10 files in backend/plugins/dex-adapters:
 - adapter-utils.js
 ```
 
-**Rule:** List EVERY SINGLE file by name. No shortcuts. No "etc." No "and more".
+**Rule:** List EVERY SINGLE file by name. No shortcuts. No "etc." No "and more". No "...". No "additional files". No "similar files". No "plus X more". COUNT MUST MATCH POWERSHELL OUTPUT EXACTLY.
 
 **LARGE FOLDER HANDLING (100+ files):**
 If folder has 100+ files, list ALL files but group by type for readability:
@@ -422,15 +389,22 @@ If folder has 100+ files, list ALL files but group by type for readability:
 Found 150 files in backend/plugins:
 
 JavaScript files (120):
-- adapter-1.js, adapter-2.js, adapter-3.js... (list all 120)
+- adapter-1.js → Description
+- adapter-2.js → Description
+- adapter-3.js → Description
+... (list ALL 120 files individually with descriptions)
 
 Test files (20):
-- test-1.test.js, test-2.test.js... (list all 20)
+- test-1.test.js → Description
+- test-2.test.js → Description
+... (list ALL 20 files individually with descriptions)
 
 Config files (10):
-- config-1.json, config-2.json... (list all 10)
+- config-1.json → Description
+- config-2.json → Description
+... (list ALL 10 files individually with descriptions)
 ```
-Still list EVERY file, just organize by category.
+Still list EVERY file individually with descriptions. FORBIDDEN to use "etc." or "and more files". Your count MUST equal 150 total entries.
 
 ### STEP 2.5: SUBFOLDER HANDLING
 
