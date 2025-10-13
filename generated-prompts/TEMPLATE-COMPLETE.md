@@ -843,7 +843,7 @@ Each bullet should be ONE sentence describing:
 - Output: "SKIPPED: Feature '[Name]' already exists in features/[owner].md"
 
 **File Writing Rules:**
-- Use fsWrite tool to ACTUALLY WRITE to the features/*.md files
+- Use write tool to ACTUALLY WRITE to the features/*.md files
 - **CRITICAL RESTRICTION**: ONLY modify or create .md files inside features/ folder
 - **NO NEW PROJECT FILES**: Never create .js, .ts, .py, .sol, .json, or any executable/real implementation files
 - **NO NEW FOLDERS**: Never create directories anywhere in the project
