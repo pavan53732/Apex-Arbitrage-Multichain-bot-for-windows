@@ -33,7 +33,7 @@ Given a legacy folder path, analyze actual files from the actual filesystem (via
 
 ---
 
-## âš ï¸ CRITICAL STOP-CHECK BEFORE EXECUTION âš ï¸
+## ⚠️ CRITICAL STOP-CHECK BEFORE EXECUTION ⚠️
 
 **READ THIS FIRST - DO NOT SKIP:**
 
@@ -141,7 +141,7 @@ backend/
 7. **Progress Update**: Increment counter, update date, add log entry
 8. **Cleanup**: Delete temp_*.ps1 files you created
 
-### ðŸ” SELF-CHECK BEFORE WRITING:
+### 📍 SELF-CHECK BEFORE WRITING:
 Ask yourself:
 - [ ] Did I list EVERY file from PowerShell output?
 - [ ] Did I count existing features in target .md file?
@@ -153,7 +153,7 @@ Ask yourself:
 
 **If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
 
-### ðŸ“Š EXAMPLE OF COMPLETE OUTPUT:
+### 📊 EXAMPLE OF COMPLETE OUTPUT:
 
 ```
 ## Feature 3: Ai Modules ⭐⭐⭐⭐⭐ (Highly Complex - 54 files)
@@ -223,7 +223,7 @@ If verification fails or is skipped, operate in paste-only mode.
 
 
 ---
-## ðŸ”§ CRITICAL TOOL USAGE INSTRUCTIONS
+## 📧 CRITICAL TOOL USAGE INSTRUCTIONS
 
 **STEP 2 REQUIRES executeBash TOOL - NOT list_dir:**
 
@@ -280,7 +280,7 @@ Given a legacy folder path, analyze actual files from the actual filesystem (via
 
 ---
 
-## âš ï¸ CRITICAL STOP-CHECK BEFORE EXECUTION âš ï¸
+## ⚠️ CRITICAL STOP-CHECK BEFORE EXECUTION ⚠️
 
 **READ THIS FIRST - DO NOT SKIP:**
 
@@ -388,7 +388,7 @@ backend/
 7. **Progress Update**: Increment counter, update date, add log entry
 8. **Cleanup**: Delete temp_*.ps1 files you created
 
-### ðŸ” SELF-CHECK BEFORE WRITING:
+### 📍 SELF-CHECK BEFORE WRITING:
 Ask yourself:
 - [ ] Did I list EVERY file from PowerShell output?
 - [ ] Did I count existing features in target .md file?
@@ -400,7 +400,7 @@ Ask yourself:
 
 **If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
 
-### ðŸ“Š EXAMPLE OF COMPLETE OUTPUT:
+### 📊 EXAMPLE OF COMPLETE OUTPUT:
 
 ```
 ## Feature 3: Ai Modules ⭐⭐⭐⭐⭐ (Highly Complex - 54 files)
@@ -1210,7 +1210,7 @@ Given a legacy folder path, analyze actual files from the actual filesystem (via
 
 ---
 
-## âš ï¸ CRITICAL STOP-CHECK BEFORE EXECUTION âš ï¸
+## ⚠️ CRITICAL STOP-CHECK BEFORE EXECUTION ⚠️
 
 **READ THIS FIRST - DO NOT SKIP:**
 
@@ -1318,7 +1318,7 @@ backend/
 7. **Progress Update**: Increment counter, update date, add log entry
 8. **Cleanup**: Delete temp_*.ps1 files you created
 
-### ðŸ” SELF-CHECK BEFORE WRITING:
+### 📍 SELF-CHECK BEFORE WRITING:
 Ask yourself:
 - [ ] Did I list EVERY file from PowerShell output?
 - [ ] Did I count existing features in target .md file?
@@ -1330,7 +1330,7 @@ Ask yourself:
 
 **If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
 
-### ðŸ“Š EXAMPLE OF COMPLETE OUTPUT:
+### 📊 EXAMPLE OF COMPLETE OUTPUT:
 
 ```
 ## Feature 3: Ai Modules ⭐⭐⭐⭐⭐ (Highly Complex - 54 files)
