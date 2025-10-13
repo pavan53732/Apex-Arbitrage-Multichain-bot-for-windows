@@ -76,6 +76,69 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 
 **IF YOU SKIP EVEN ONE FILE, THE OUTPUT IS REJECTED.**
 
+**EXAMPLES OF WHAT YOU MUST DO:**
+
+✅ CORRECT (3000 files):
+
+```
+Found 3247 files in backend/plugins/
+
+**DEX Adapters (2500 files):**
+- uniswap-v2-adapter-001.js → Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
+- uniswap-v2-adapter-002.js → Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
+- uniswap-v3-adapter-001.js → Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
+... (LIST ALL 2500 FILES - NO SKIPPING)
+
+**Test Files (500 files):**
+- uniswap-v2-adapter-001.test.js → Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
+... (LIST ALL 500 FILES - NO SKIPPING)
+
+**Config Files (247 files):**
+- uniswap-config.json → Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
+... (LIST ALL 247 FILES - NO SKIPPING)
+```
+
+❌ WRONG (skipping):
+
+```
+- uniswap-v2-adapter-001.js → Uniswap adapter
+- uniswap-v2-adapter-002.js → Another adapter
+... and 2498 more files  ← FORBIDDEN! REJECTED!
+```
+
+**FOLDER TREE EXAMPLE (300 folders):**
+
+✅ CORRECT:
+
+```
+backend/
++-- plugins/
+|   +-- dex-adapters/
+|   |   +-- uniswap/
+|   |   |   +-- v2/
+|   |   |   |   +-- core/           → Core V2 swap logic
+|   |   |   |   +-- router/         → V2 routing algorithms
+|   |   |   |   +-- utils/          → V2 helper functions
+|   |   |   +-- v3/
+|   |   |   |   +-- core/           → Core V3 swap logic
+|   |   |   |   +-- quoter/         → V3 price quotation
+|   |   |   |   +-- position/       → V3 liquidity positions
+|   |   |   +-- common/             → Shared Uniswap utilities
+|   |   +-- sushiswap/
+|   |   |   +-- core/               → SushiSwap core logic
+|   |   |   +-- router/             → SushiSwap routing
+... (SHOW ALL 300 FOLDERS - NO SKIPPING)
+```
+
+**VALIDATION BEFORE WRITING:**
+
+- [ ] PowerShell found 3247 files → My output lists 3247 files ✅
+- [ ] PowerShell found 312 folders → My folder tree shows 312 folders ✅
+- [ ] Every file has 20-30 word description ✅
+- [ ] No "etc.", "and more", or "..." shortcuts ✅
+
+**IF ANY CHECK FAILS: STOP AND FIX IT BEFORE WRITING FILES.**
+
 ### ✅ QUALITY STANDARDS:
 
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
@@ -104,7 +167,7 @@ Ask yourself:
 ### 📊 EXAMPLE OF COMPLETE OUTPUT:
 
 ```
-## Feature 3: Ai Modules ⭐⭐⭐⭐⭐ (Highly Complex - 54 files)
+## Feature 1: Ai Modules ⭐⭐⭐⭐⭐ (Highly Complex - 54 files)
 
 Feature Files:
 
@@ -135,6 +198,46 @@ Windows Implementation:
 ```
 
 **This is the MINIMUM acceptable quality. Anything less is INCOMPLETE.**
+
+## Feature 2: Explainability ⭐⭐ (Moderate - 12 files)
+
+Feature Files:
+
+Core Logic (3 files):
+- shap-explainer.py → SHAP value calculation
+- lime-interpreter.py → LIME interpretation
+- feature-importance.py → Feature importance analysis
+
+Visualization (4 files):
+- explanation-charts.js → Interactive explanation charts
+- model-insights.html → Explanation dashboard
+- report-generator.py → PDF report generation
+- visualization-utils.js → Chart utilities
+
+Configuration (2 files):
+- explainability-config.json → Explanation settings
+- model-metadata.json → Model information
+
+Tests (3 files):
+- test-shap.py → SHAP explanation tests
+- test-lime.py → LIME explanation tests
+- test-visualization.js → Chart rendering tests
+
+Technologies: Python, SHAP, LIME, Matplotlib, JavaScript, HTML
+
+Windows Implementation:
+- Install Python ML libraries via pip in isolated virtual environment
+- Store explanation outputs in application data directory
+- Generate visualizations using matplotlib with Windows-compatible backends
+- Integrate with dashboard via REST API for real-time explanations
+- Cache SHAP values in SQLite database for performance
+- Schedule batch explanation jobs using Windows Task Scheduler
+- Log explanation requests to Windows Event Log
+- Provide explanation export in PDF format using reportlab
+- Display interactive charts in Electron dashboard
+- Secure explanation data using Windows Credential Manager
+- Enable real-time model interpretation updates
+- Monitor explanation performance with Windows Performance Counters
 
 ## DATA SOURCES (CLARIFIED)
 
@@ -279,6 +382,12 @@ try {
 - **MUST INCLUDE SUBFOLDER FILES**: Include all subfolders and nested files
 - **FORBIDDEN**: Do not guess, skip, summarize, or use "etc." - list EVERY filename explicitly
 - **VERIFICATION**: Count total files found and state the count explicitly: "Found [N] files in [folder-path]"
+- **FEATURE NUMBERING**: Always start with "Feature #X:" where X is the prompt number
+- **COMPLETE COUNTING**: State exact counts: "Total Files: [N], Total Folders: [M], Total Nested Levels: [L]"
+- **SUMMARY FORMAT**: Begin analysis with: "Feature #[X]: [Feature Name] - Found [N] files across [M] folders"
+- **MANDATORY COUNTS**: PowerShell already shows counts, but AI must restate them in analysis
+- **STRUCTURED OUTPUT**: Format all analysis as numbered features with complete file/folder counts
+- **VERIFICATION CHECKLIST**: Before writing files, verify counts match PowerShell output exactly
 - **SCAFFOLDED FILES**: Even if files are empty placeholders, they MUST be analyzed for feature intent from filename patterns
 - **MINIMUM REQUIREMENT**: If folder has 50+ files, list ALL 50+ files by name
 
@@ -405,7 +514,7 @@ Feature #{PROMPT_NUMBER}: Ai Modules - Found 54 files across 10 folders
 - "HOW TO IMPLEMENT → OWNER FILE (ai-modules.md)" →
   Append this section to the end of features/ai-modules.md:
   
-  ## Feature: Ai Modules
+  ## Feature 1: Ai Modules
   
   Feature Files:
   - ai-engine.js → Core AI processing engine
@@ -641,7 +750,7 @@ Each bullet should be ONE sentence describing:
 
 1. ✅ **Feature Number**: Count existing "## Feature" headers in target file, then use next number
    - Format: `## Feature [N]: [Feature Name]`
-   - Example: If file has 3 features, new one is `## Feature 4:`
+   - Example: If file has 2 features, new one is `## Feature 3:`
 
 2. ✅ **Complexity Score**: Based on file count
    - 1-5 files = ⭐ (Simple)
@@ -707,7 +816,9 @@ Each bullet should be ONE sentence describing:
 - **NO NEW FOLDERS**: Never create directories anywhere in the project
 - **Creation rule**: If the owner/reference .md does not exist (e.g., config.md, security.md), CREATE features/[name].md and then append
 - **APPEND-ONLY**: Read existing content first, then append the new "## Feature:" section to the END
-- **Preserve all existing content**: never overwrite, replace, or deleteiles by actual function, not just extension:
+- **Preserve all existing content**: never overwrite, replace, or delete
+
+**Group files by actual function, not just extension:**
 - **Core Logic**: *-engine.js, *-manager.js, *-handler.js, *-controller.js, *-service.js
 - **Adapters/Integrations**: *-adapter.js, *-connector.js, *-client.js, *-provider.js
 - **Configuration**: *-config.json, *-config.js, .env, settings.js, constants.js
@@ -828,7 +939,7 @@ Each bullet should be ONE sentence describing:
 ✗ "Load adapters from C:\Program Files\..." (specific path)
 ✗ "Use dynamic loading with require() and fs.readdir()" (too technical)
 
-### STEP 6: ACTUALLY WRITE TO GITHUB FILES (STRICT APPEND-ONLY)
+### STEP 7: ACTUALLY WRITE TO GITHUB FILES (STRICT APPEND-ONLY)
 
 **CRITICAL: APPEND-ONLY BEHAVIOR**
 
@@ -857,7 +968,7 @@ Each bullet should be ONE sentence describing:
 ## Input Format
 
 PATH-TO-FEATURE MAPPER
-Legacy Path: Apex Arbitrage multi-chain bot/{FOLDER_PATH}
+Legacy Path: Apex Arbitrage multi-chain bot/Apex Arbitrage Multichain bot/{FOLDER_PATH}
 
 ## OUTPUT FORMAT (EXACT TEMPLATE - DO NOT DEVIATE)
 
@@ -870,7 +981,7 @@ Legacy Path: Apex Arbitrage multi-chain bot/{FOLDER_PATH}
 - "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
   Append this section to the end of features/[owner].md:
 
-  ## Feature: [Feature Name]
+  ## Feature [N]: [Feature Name]
 
   Feature Files:
   - [file1] → [description]
