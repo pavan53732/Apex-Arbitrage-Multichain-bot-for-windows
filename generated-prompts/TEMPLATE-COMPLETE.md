@@ -335,7 +335,15 @@ Action: STOP - do not process or write any files
 
 **CRITICAL: Use PowerShell to verify path exists and enumerate ALL files:**
 
-Execute using executeBash tool:
+**EXECUTION INSTRUCTIONS:**
+
+1. Copy the PowerShell code block below EXACTLY as written
+2. Execute using run_terminal_cmd tool with PowerShell
+3. Do NOT modify, interpret, or break up the code
+4. Execute the ENTIRE block as ONE command
+
+**POWERSHELL COMMAND TO EXECUTE:**
+
 ```powershell
 try {
     $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
@@ -374,7 +382,9 @@ try {
 }
 ```
 
-**VALIDATION REQUIRED:**
+**IMPORTANT:** Execute this PowerShell script using run_terminal_cmd tool. Do NOT break it into individual characters or lines.
+
+**VALIDATION REQUIRED:
 - If PowerShell command fails or returns error, output "ERROR: Cannot access path" and STOP
 - If command succeeds but returns 0 files, check if path exists as empty folder (valid) or path is wrong (error)
 - **MUST READ UNTIL "END OF COMPLETE LIST"**: Do not stop reading until you see the end marker
@@ -1124,17 +1134,73 @@ If ANY check fails: STOP and report issue
 
 **After completing all tasks above, update progress tracking:**
 
-1. Open `generated-prompts/progress.md`
-2. Increment "Completed" counter (X/842 -> X+1/842)
-3. Update "Last Updated" to today's date
-4. Update "Recent Completions" to: Prompt {PROMPT_NUMBER} (Feature: [Feature Name])
-5. Append to Execution Log:
-   ```
-   Prompt {PROMPT_NUMBER}: Executed - Added 'Feature: [Feature Name]' to features/[owner].md
-   ```
-6. Save progress.md before moving to next prompt
+### SIMPLIFIED PROGRESS UPDATE
 
-**Mark this prompt as COMPLETE.**
+**Step 1: Update Progress**
+
+```powershell
+# Read current progress
+$progressContent = Get-Content "generated-prompts/progress.md" -Raw
+
+# Update completion count
+$newContent = $progressContent -replace "Completed: \d+/842", "Completed: {PROMPT_NUMBER}/842"
+$newContent = $newContent -replace "Last Updated: [^\r\n]*", "Last Updated: $(Get-Date -Format 'MMMM dd, yyyy')"
+
+# Add execution log entry
+$logEntry = "`nPrompt {PROMPT_NUMBER}: Executed - Added 'Feature: [Feature Name]' to features/[owner].md"
+$newContent = $newContent -replace "<!-- AI: Append new log entries below this line -->", "<!-- AI: Append new log entries below this line -->$logEntry"
+
+# Write updated content
+Set-Content "generated-prompts/progress.md" $newContent -NoNewline
+Write-Host "Progress updated successfully"
+```
+
+**Step 2: Cleanup**
+
+```powershell
+# Delete any temp PowerShell files created during execution
+Get-ChildItem "temp_*.ps1" -ErrorAction SilentlyContinue | Remove-Item -Force
+Write-Host "Cleanup completed"
+```
+
+**Before marking complete, validate generated files:**
+
+```powershell
+# Validate generated .md file
+$targetFile = "features/[owner].md"
+
+if (Test-Path $targetFile) {
+    $content = Get-Content $targetFile -Raw
+    
+    # Check required elements
+    $checks = @{
+        "Feature header" = $content -match "## Feature:"
+        "Feature files list" = $content -match "Feature Files:"
+        "Windows implementation" = $content -match "Windows Implementation:"
+        "Minimum bullets" = ($content | Select-String "^- ").Count -ge 8
+    }
+    
+    $allPassed = $true
+    foreach ($check in $checks.GetEnumerator()) {
+        if (-not $check.Value) {
+            Write-Host "❌ Validation failed: $($check.Key)"
+            $allPassed = $false
+        } else {
+            Write-Host "✅ $($check.Key): Passed"
+        }
+    }
+    
+    if (-not $allPassed) {
+        Write-Host "❌ .md validation failed - prompt incomplete"
+        exit 1
+    }
+} else {
+    Write-Host "❌ Target file not found: $targetFile"
+    exit 1
+}
+```
+
+**Mark this prompt as COMPLETE only after all validations pass.**
 
 ---
 
