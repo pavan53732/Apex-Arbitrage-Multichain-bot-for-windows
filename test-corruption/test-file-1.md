@@ -1,1 +1,0 @@
-This is a test file with â† corrupted arrows that should be fixed â† to proper right arrows →.

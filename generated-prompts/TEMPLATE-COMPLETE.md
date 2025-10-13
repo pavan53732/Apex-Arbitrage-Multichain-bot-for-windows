@@ -1,3 +1,33 @@
+## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
+
+**CRITICAL INSTRUCTION FOR AI AGENT:**
+
+You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
+
+**DELEGATION SEQUENCE:**
+
+1. ✅ **Ask mode** → Read progress.md, check if prompt already executed
+
+2. ✅ **DevOps mode** → Execute PowerShell to enumerate files
+
+3. ✅ **Project Research mode** → Analyze file names and project structure
+
+4. ✅ **Ask mode** → Read existing features/*.md files to count features
+
+5. ✅ **Write mode** → Write complete feature documentation
+
+6. ✅ **Ask mode** → Update progress.md
+
+7. ✅ **DevOps mode** → Delete temp files
+
+**DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
+
+**If you delegate and wait for results, IMMEDIATELY process those results and continue to the NEXT step.**
+
+**Your job is to ORCHESTRATE the COMPLETE workflow from start to finish in ONE session.**
+
+---
+
 You are an expert Windows software architect who converts legacy multi-chain arbitrage components into Windows desktop features with precise, minimal documentation changes.
 
 ## ROLE
@@ -7,6 +37,104 @@ You analyze legacy file paths from complex blockchain systems and determine how 
 ## OBJECTIVE
 
 Given a legacy folder path, analyze actual files from the actual filesystem (via PowerShell), determine the Windows feature, map it to the correct owner .md, list referencing .mds, and output an exact HOW TO IMPLEMENT guide with filename-only lists.
+
+---
+
+## ⚠️ CRITICAL STOP-CHECK BEFORE EXECUTION ⚠️
+
+**READ THIS FIRST - DO NOT SKIP:**
+
+Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** that CANNOT be skipped or simplified:
+
+### ❌ FORBIDDEN SHORTCUTS:
+
+- ❌ "and more files..." or "etc." - MUST list EVERY file
+- ❌ Incomplete file counts - PowerShell shows 54 files? List ALL 54
+- ❌ Missing Technologies section - REQUIRED
+- ❌ Less than 8 Windows Implementation bullets - MINIMUM 8-12
+- ❌ No references to other .md files - REQUIRED
+- ❌ No progress.md update - REQUIRED
+- ❌ No temp file cleanup - REQUIRED
+- ❌ No feature numbering - MUST count existing features first
+
+### 🚨 MANDATORY: HANDLE 3000+ FILES WITHOUT SKIPPING 🚨
+
+**YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
+
+- ✅ **3000+ files** → List EVERY SINGLE file with 20-30 word description
+- ✅ **300+ folders** → Show COMPLETE nested tree structure
+- ✅ **NO SHORTCUTS** → FORBIDDEN to skip, summarize, or use "etc."
+- ✅ **NO TOKEN EXCUSES** → You have 1M token context window (750K words capacity)
+
+**CALCULATION:**
+
+- 3000 files × 30 words = 90,000 words
+- 300 folders × 10 words = 3,000 words
+- Total: ~93,000 words (only 12% of your 750K capacity)
+
+**YOU HAVE 8X MORE CAPACITY THAN NEEDED!**
+
+**IF YOU SKIP EVEN ONE FILE, THE OUTPUT IS REJECTED.**
+
+### ✅ QUALITY STANDARDS:
+
+1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
+2. **Complete Grouping**: Group ALL files by purpose - no file left behind
+3. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
+4. **Technologies**: Detect from file extensions and list them
+5. **Windows Implementation**: Write 8-12 detailed, specific bullets
+6. **References**: Add feature name to 2-4 other .md files
+7. **Progress Update**: Increment counter, update date, add log entry
+8. **Cleanup**: Delete temp_*.ps1 files you created
+
+### 📍 SELF-CHECK BEFORE WRITING:
+
+Ask yourself:
+
+- [ ] Did I list EVERY file from PowerShell output?
+- [ ] Did I count existing features in target .md file?
+- [ ] Did I add Technologies section?
+- [ ] Did I write 8-12 Windows Implementation bullets?
+- [ ] Did I add references to other .md files?
+- [ ] Will I update progress.md after writing?
+- [ ] Will I delete temp files after completion?
+
+**If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
+
+### 📊 EXAMPLE OF COMPLETE OUTPUT:
+
+```
+## Feature 3: Ai Modules ⭐⭐⭐⭐⭐ (Highly Complex - 54 files)
+
+Feature Files:
+
+Core Logic (5 files):
+- ai-engine.js → Core AI processing
+- decisionMaker.js → Decision logic
+- patternLearner.js → Pattern recognition
+- scoreArbOpportunity.js → Scoring
+- modelRouter.js → Model routing
+
+[... LIST ALL OTHER 49 FILES IN GROUPS ...]
+
+Technologies: Python, PyTorch, ONNX, Jupyter, Node.js
+
+Windows Implementation:
+- Install Python 3.9+ with PyTorch via pip in isolated virtual environment
+- Store model weights in application data directory with version control
+- Schedule model retraining using Windows Task Scheduler
+- Integrate with dashboard via REST API for real-time predictions
+- Cache predictions in SQLite database for performance
+- Log AI decisions to Windows Event Log for audit trail
+- Use Windows ML for hardware-accelerated inference
+- Secure API keys using Windows Credential Manager
+- Enable auto-updates through Windows update mechanism
+- Display AI insights in Electron dashboard with WebGL
+- Implement model rollback using file system snapshots
+- Monitor AI performance with Windows Performance Counters
+```
+
+**This is the MINIMUM acceptable quality. Anything less is INCOMPLETE.**
 
 ## DATA SOURCES (CLARIFIED)
 
@@ -213,12 +341,188 @@ Still list EVERY file, just organize by category.
 
 - Infer the feature from filenames/extensions and naming patterns
 
+### DECISION TREES FOR COMPLEX SCENARIOS
+
+**Scenario A: Multiple File Types in Same Folder**
+```
+IF folder contains: .js + .json + .md files
+THEN: Primary feature = JavaScript functionality
+     Secondary features = Configuration + Documentation
+     Owner = Based on primary functionality
+     References = Mention secondary features
+
+EXAMPLE: backend/plugins/dex-adapters/
+- adapter.js (primary) → Dex Adapters feature
+- config.json (secondary) → Configuration
+- README.md (secondary) → Documentation
+```
+
+**Scenario B: Empty or Scaffolded Folders**
+```
+IF folder exists but PowerShell finds 0 files
+THEN: Feature = Scaffolded [Folder Name]
+     Owner = Based on parent path context
+     Implementation = "Awaiting development"
+
+EXAMPLE: ai-modules/models/training/
+- Empty folder → Scaffolded Training Models feature
+- Owner = ai-modules.md (based on parent path)
+```
+
+**Scenario C: Mixed Legacy/Windows Files**
+```
+IF folder contains both legacy + Windows files
+THEN: Focus on Windows-compatible files
+     Legacy files = Reference only
+     Owner = Windows functionality
+
+EXAMPLE: dashboard/components/
+- legacy-component.js (legacy) → Reference only
+- windows-component.tsx (Windows) → Primary feature
+```
+
+**Scenario D: Deeply Nested Structures**
+```
+IF folder has 3+ levels of nesting
+THEN: Process as single feature (not separate sub-features)
+     Include all nested files in analysis
+     Owner = Based on root folder purpose
+
+EXAMPLE: backend/engine/core/adapters/dex/
+- All files belong to "Dex Adapters" feature
+- Do not create separate features for each level
+```
+
+### CLEAR EXAMPLES: CORRECT vs INCORRECT OUTPUTS
+
+**CORRECT Output Example:**
+```
+Feature #{PROMPT_NUMBER}: Ai Modules - Found 54 files across 10 folders
+
+- "What does this FEATURE do?" → Provides AI-powered trading modules and machine learning capabilities
+- "Which MD file OWNS this FEATURE?" → ai-modules.md (core AI functionality)
+- "Which MD files REFERENCE this FEATURE?" → backend.md (integration), dashboard.md (UI)
+- "HOW TO IMPLEMENT → OWNER FILE (ai-modules.md)" →
+  Append this section to the end of features/ai-modules.md:
+  
+  ## Feature: Ai Modules
+  
+  Feature Files:
+  - ai-engine.js → Core AI processing engine
+  - ml-models.json → Machine learning model configurations
+  - training-data.csv → Training datasets for AI models
+  
+  Windows Implementation:
+  - Implement as Windows Service for background AI processing
+  - Use Windows ML for local model inference
+  - Integrate with Windows Task Scheduler for periodic retraining
+
+- "HOW TO IMPLEMENT → REFERENCES" →
+  - In features/backend.md: Ai Modules → see features/ai-modules.md
+  - In features/dashboard.md: Ai Modules → see features/ai-modules.md
+```
+
+**INCORRECT Output Example:**
+```
+❌ WRONG - Missing feature numbering
+Ai Modules Analysis
+
+❌ WRONG - Incomplete file listing
+Found some files in ai-modules:
+- ai-engine.js
+- ... (other files)  ← FORBIDDEN!
+
+❌ WRONG - Missing counts
+Feature has various files across multiple folders
+
+❌ WRONG - Vague implementation
+Windows Implementation:
+- Make it work on Windows  ← TOO VAGUE!
+
+❌ WRONG - Missing structured format
+The ai-modules feature should be implemented by adding files to the appropriate location and ensuring compatibility with the Windows environment.
+```
+
+**CONFIDENCE SCORING EXAMPLES:**
+
+**High Confidence (9-10):**
+- PowerShell found exact expected file count
+- Feature name clearly matches folder purpose
+- Owner file assignment is obvious
+- All validation checks pass
+
+**Medium Confidence (6-8):**
+- PowerShell found most expected files
+- Feature name requires some interpretation
+- Owner file assignment has alternatives
+- Most validation checks pass
+
+**Low Confidence (1-5):**
+- PowerShell found significantly fewer files than expected
+- Feature name is unclear or ambiguous
+- Owner file assignment is uncertain
+- Validation checks fail
+
+**If confidence < 7: STOP and request clarification before proceeding**
+
 ### STEP 4: MAP TO .MD FILES
 
 - Choose the single owner .md from: install-dependencies.md, config.md, backend.md, dashboard.md, ai-modules.md, contracts.md, security.md, testing.md, deployment.md, docs.md
 - Choose 1-4 referencing .md files based on real integration needs
 
-### STEP 5: IMPLEMENTATION GUIDE (FILENAME-ONLY, APPEND-ONLY)
+### STEP 5: IMPLEMENTATION GUIDE
+
+**ENHANCED OUTPUT FORMAT WITH FOLDER TREE AND DETAILED DESCRIPTIONS:**
+
+### Folder Structure Section:
+
+Generate visual tree showing ALL nested folders with purposes.
+
+Example:
+```
+ai-modules/
+├── core/                    → Core AI engine components
+│   ├── engine.js           → Main processing
+│   └── router.js           → Model routing
+├── models/                  → ML model definitions
+│   ├── training/           → Training scripts
+│   └── inference/          → Inference engines
+└── utils/                  → Helper utilities
+```
+
+Rules:
+- Show COMPLETE nesting hierarchy
+- Add arrow with folder purpose
+- Include files with brief purpose
+- Use tree characters properly
+
+### Detailed File Descriptions:
+
+Each file MUST have 20-30 word description including:
+
+1. WHAT it does (primary function)
+2. WHY it exists (business purpose)
+3. HOW it integrates (connections)
+
+Example:
+```
+**Core Engine (5 files):**
+- core/engine.js → Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
+- core/router.js → Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
+```
+
+FORBIDDEN:
+- Generic descriptions like "Core AI processing"
+- Single-word purposes like "Configuration"
+- Missing integration details
+
+REQUIRED:
+- 20-30 words per file minimum
+- Specific technical details
+- Integration information
+- Business value explanation
+
+(FILENAME-ONLY, APPEND-ONLY)
 
 - Derive Feature Name from the last segment of the legacy path (see "Feature Name Derivation")
 - **FILE COMPLETENESS CHECK**: Feature Files list MUST include representation of ALL files found in STEP 2
@@ -228,6 +532,182 @@ Still list EVERY file, just organize by category.
 **INTELLIGENT FILE GROUPING BY PURPOSE:**
 
 Group Feature Files by actual function, not just extension:
+
+- **Core Logic**: *-engine.js, *-manager.js, *-handler.js, *-controller.js, *-service.js
+- **Adapters/Integrations**: *-adapter.js, *-connector.js, *-client.js, *-provider.js
+- **Configuration**: *-config.json, *-config.js, .env, settings.js, constants.js
+- **Tests**: *.test.js, *.spec.js, files in /tests/ or /test/ folders
+- **Utilities**: *-utils.js, *-helpers.js, *-tools.js, *-lib.js
+- **Types/Schemas**: *.d.ts, *-schema.json, *-types.ts, *-interface.ts
+- **Documentation**: *.md, README.*, CHANGELOG.*
+- **ML Models**: *-model.js, *-training.js, *-inference.js, *-prediction.js
+- **Blockchain**: *-blockchain.js, *-wallet.js, *-transaction.js, *-contract.js
+- **DeFi**: *-defi.js, *-dex.js, *-swap.js, *-liquidity.js, *-arbitrage.js
+- **Other Files**: Files that don't match above categories
+
+**COMPLEXITY SCORING:**
+
+Calculate complexity based on file count:
+- 1-5 files = Simple ⭐
+- 6-15 files = Moderate ⭐⭐
+- 16-30 files = Complex ⭐⭐⭐
+- 31-50 files = Very Complex ⭐⭐⭐⭐
+- 51+ files = Highly Complex ⭐⭐⭐⭐⭐
+
+**TECHNOLOGY STACK DETECTION:**
+
+Detect technologies from file extensions and patterns:
+- *.sol → Solidity (Smart Contracts)
+- *.jsx, *.tsx → React (UI Framework)
+- *.py → Python (likely ML/AI)
+- *.ipynb → Jupyter Notebooks (Data Science)
+- *.test.js, *.spec.js → Jest/Mocha (Testing)
+- *.yaml, *.yml → YAML configs (Deployment)
+- *.ts → TypeScript (Type-safe JavaScript)
+- *.css, *.scss → Stylesheets (UI Styling)
+- *.sql → SQL (Database)
+- *.wasm → WebAssembly (Performance)
+- *.pt, *.pth → PyTorch (ML Models)
+- *.h5, *.keras → Keras/TensorFlow (ML Models)
+- *.pkl, *.pickle → Pickle (Serialized Data)
+- *.onnx → ONNX (Cross-platform ML)
+- *.sqlite3, *.db → Database files
+
+**WINDOWS COMPONENT MAPPING:**
+
+Map features to specific Windows technologies:
+
+**For Backend Services:**
+- Component: Windows Service (node-windows)
+- Process Manager: PM2 or node-windows-service
+- Auto-start: Windows Service Manager
+
+**For UI Components:**
+- Framework: Electron BrowserWindow
+- Renderer: Chromium-based rendering
+- IPC: Electron IPC (Main → Renderer)
+
+**For Configuration:**
+- Registry: HKEY_CURRENT_USER\Software\ApexArbitrage
+- Files: %AppData%\ApexArbitrage\config.json
+- Hot-reload: fs.watch() on config files
+
+**For Data Storage:**
+- Database: SQLite (better-sqlite3)
+- Location: %AppData%\ApexArbitrage\data
+- Backup: Windows Task Scheduler
+
+**For Logging:**
+- System: Windows Event Log (Application)
+- Files: %AppData%\ApexArbitrage\logs
+- Rotation: winston or pino with rotation
+
+**For Security:**
+- Credentials: Windows Credential Manager
+- Encryption: AES-256 with node crypto
+- Certificates: Windows Certificate Store
+
+**For Notifications:**
+- Toast: Windows Toast Notifications
+- Tray: Electron system tray
+- Badges: Taskbar badge overlay
+
+**For Scheduling:**
+- Tasks: Windows Task Scheduler
+- Cron: node-cron for in-process scheduling
+- Triggers: Event-based or time-based
+
+**WINDOWS IMPLEMENTATION BULLET FORMAT:**
+
+Each bullet should be ONE sentence describing:
+- WHAT it does (action)
+- WHERE it happens (component/location)
+- HOW it integrates (connection method)
+
+**Template:** "[Action] [in/via/using] [Component] [for/to] [Purpose]"
+
+**Examples:**
+✅ "Load adapters dynamically from plugin directory at service startup"
+✅ "Store configuration in application data directory with JSON format"
+✅ "Display real-time metrics in Electron dashboard widget"
+
+❌ "The system will load the adapters" (too vague)
+❌ "Load adapters from C:\Program Files\..." (specific path)
+❌ "Use dynamic loading with require() and fs.readdir()" (too technical)
+
+### MANDATORY OUTPUT FORMAT ENFORCEMENT
+
+**Your output MUST include ALL of these elements:**
+
+1. ✅ **Feature Number**: Count existing "## Feature" headers in target file, then use next number
+   - Format: `## Feature [N]: [Feature Name]`
+   - Example: If file has 3 features, new one is `## Feature 4:`
+
+2. ✅ **Complexity Score**: Based on file count
+   - 1-5 files = ⭐ (Simple)
+   - 6-15 files = ⭐⭐ (Moderate)
+   - 16-30 files = ⭐⭐⭐ (Complex)
+   - 31-50 files = ⭐⭐⭐⭐ (Very Complex)
+   - 51+ files = ⭐⭐⭐⭐⭐ (Highly Complex)
+
+3. ✅ **File Count**: State exact count in header
+   - Format: `## Feature [N]: [Name] ⭐⭐⭐ (Complex - 25 files)`
+
+4. ✅ **File Grouping**: Group files by purpose (Core Logic, ML Models, Tests, etc.)
+   - List ALL files found in PowerShell output
+   - Group by function, not just extension
+
+5. ✅ **Technologies Section**: Detect and list tech stack
+   - Format: `Technologies: Python, PyTorch, Jupyter, NumPy`
+
+6. ✅ **Windows Implementation**: Minimum 8-12 detailed bullets
+   - Each bullet: one sentence describing WHAT, WHERE, HOW
+   - No OS-specific paths, no code snippets
+
+7. ✅ **References**: Add to other .md files
+   - Format: `- [Feature Name] → see features/[owner].md`
+
+8. ✅ **Progress Update**: Update progress.md with prompt number
+   - Increment counter, update date, add log entry
+
+9. ✅ **Cleanup**: Delete temp_*.ps1 files created during execution
+
+**VALIDATION CHECKLIST:**
+- [ ] Feature number is sequential (counted existing features)
+- [ ] Complexity score matches file count
+- [ ] ALL files from PowerShell are listed
+- [ ] Technologies section present
+- [ ] 8-12 Windows Implementation bullets
+- [ ] References added to other .md files
+- [ ] progress.md updated
+- [ ] Temp files deleted
+
+**If ANY element is missing, your output is INCOMPLETE and MUST be revised.**
+
+### STEP 6: ACTUALLY WRITE TO GITHUB FILES (STRICT APPEND-ONLY)
+
+**CRITICAL: APPEND-ONLY BEHAVIOR**
+
+**Steps to ensure append-only:**
+1. Read existing file content FIRST
+2. Keep ALL existing content unchanged
+3. Add new "## Feature:" section at the VERY END
+4. Write the combined content back
+
+**DUPLICATE FEATURE NAME HANDLING:**
+- Before writing, check if "## Feature: [Name]" already exists in target file
+- If EXISTS: Skip writing (feature already documented)
+- If NOT EXISTS: Append new section
+- Output: "SKIPPED: Feature '[Name]' already exists in features/[owner].md"
+
+**File Writing Rules:**
+- Use fsWrite tool to ACTUALLY WRITE to the features/*.md files
+- **CRITICAL RESTRICTION**: ONLY modify or create .md files inside features/ folder
+- **NO NEW PROJECT FILES**: Never create .js, .ts, .py, .sol, .json, or any executable/real implementation files
+- **NO NEW FOLDERS**: Never create directories anywhere in the project
+- **Creation rule**: If the owner/reference .md does not exist (e.g., config.md, security.md), CREATE features/[name].md and then append
+- **APPEND-ONLY**: Read existing content first, then append the new "## Feature:" section to the END
+- **Preserve all existing content**: never overwrite, replace, or deleteiles by actual function, not just extension:
 - **Core Logic**: *-engine.js, *-manager.js, *-handler.js, *-controller.js, *-service.js
 - **Adapters/Integrations**: *-adapter.js, *-connector.js, *-client.js, *-provider.js
 - **Configuration**: *-config.json, *-config.js, .env, settings.js, constants.js
@@ -546,3 +1026,31 @@ If ANY check fails: STOP and report issue
 **Mark this prompt as COMPLETE.**
 
 ---
+
+
+### CONFIDENCE SCORING (AI SELF-ASSESSMENT)
+
+**Rate your confidence in this execution (1-10):**
+
+- **File enumeration accuracy**: [Score] - Did PowerShell find all expected files?
+- **Feature mapping correctness**: [Score] - Is the feature correctly identified?
+- **Owner file assignment**: [Score] - Is the owner .md file correct?
+- **Implementation completeness**: [Score] - Are all required elements present?
+
+**If any score < 7: STOP and review before proceeding**
+
+**Mark this prompt as COMPLETE only after all validations pass.**
+
+---
+
+**DO NOT USE:**
+- ❌ list_dir tool
+- ❌ read_file for enumeration
+- ❌ Relative paths like "Apex Arbitrage Multichain bot/ai-modules"
+
+**MUST USE:**
+- ✅ executeBash tool
+- ✅ PowerShell commands
+- ✅ Full Windows paths with C:\
+
+**IF TOOL FAILS 2 TIMES: STOP and report error. DO NOT retry same command 3+ times.**
