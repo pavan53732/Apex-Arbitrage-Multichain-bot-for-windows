@@ -25,7 +25,7 @@ CONTINUE LISTING until EVERY file is documented.
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
-You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
+You WILL need to delegate to specialized modes. That's CORRECT. But you MUST COMPLETE the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
 
@@ -35,10 +35,9 @@ You WILL need to delegate to specialized modes. That's CORRECT. But you MUST com
 
 3. ✅ **Ask mode** → Read existing features/*.md files to count features
 
-4. ✅ **Write mode** → Write complete feature documentation
+4. ✅ **Write mode** → Write COMPLETE feature documentation
 
-
-4. **DevOps mode** - Delete temp files
+5. **DevOps mode** - Delete temp files
 
 **DO NOT STOP after step 1! COMPLETE ALL 5 STEPS!**
 
@@ -84,8 +83,6 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 If you skip even 1 file out of 5000, YOU HAVE FAILED.
 There is NO acceptable reason to not list a file.
 CONTINUE LISTING until EVERY file is documented.
-
-Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** that CANNOT be skipped or simplified:
 
 ### ❌ FORBIDDEN SHORTCUTS:
 
@@ -140,21 +137,11 @@ Found 3247 files in backend/plugins/
 - uniswap-v2-adapter-001.test.js → Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
 ... (LIST ALL 500 FILES - NO SKIPPING)
 
-**MANDATORY: Every single file MUST have:**
-- Full filename with extension
-- Arrow separator (→)
-- 20-30 word technical description
-- NO shortcuts, NO summaries, NO grouping
 
 **Config Files (247 files):**
 - uniswap-config.json → Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
 ... (LIST ALL 247 FILES - NO SKIPPING)
 
-**MANDATORY: Every single file MUST have:**
-- Full filename with extension
-- Arrow separator (→)
-- 20-30 word technical description
-- NO shortcuts, NO summaries, NO grouping
 ```
 
 ❌ WRONG (skipping):
@@ -209,7 +196,7 @@ backend/
 ### ✅ QUALITY STANDARDS:
 
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
-1. **Complete Grouping**: Group ALL files by purpose - no file left behind
+1. **COMPLETE Grouping**: Group ALL files by purpose - no file left behind
 2. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
 3. **Technologies**: Detect from file extensions and list them
 4. **Windows Implementation**: Write 8-12 detailed, specific bullets
@@ -228,7 +215,7 @@ Ask yourself:
 - [ ] Did I add references to other .md files?
 - [ ] Will I delete temp files after completion?
 
-**If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
+**If you answer NO to ANY question above, DO NOT PROCEED. Go back and COMPLETE it.**
 
 ### 📊 EXAMPLE OF COMPLETE OUTPUT:
 
@@ -326,7 +313,7 @@ Always follow Steps 1-5 in order:
 
 ### STEP 1.5: MANDATORY PROCESSING REQUIREMENT
 
-**CRITICAL**: ALL folders MUST be processed for complete feature collection.
+**CRITICAL**: ALL folders MUST be processed for COMPLETE feature collection.
 
 ```
 C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\backend\research\quantum
@@ -378,9 +365,7 @@ try {
     if ($files.Count -gt 500) {
         Write-Host "LARGE FOLDER: $($files.Count) files - Processing in chunks"
     }
-    Write-Host "REMINDER: Must list EVERY file - Use CHUNKS if needed"
-Write-Host "REMINDER: Must list EVERY file - Use CHUNKS if needed"
-Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
+    Write-Host "REMINDER: Must list EVERY file - Use CHUNKS if needed"`nWrite-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
     $fileIndex = 1
     $files | Sort-Object FullName | ForEach-Object { 
         Write-Host "FILE $fileIndex/$($files.Count): $($_.FullName)"
@@ -410,16 +395,8 @@ Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
 - **COMPLETE COUNTING**: State exact counts: "Total Files: [N], Total Folders: [M], Total Nested Levels: [L]"
 - **SUMMARY FORMAT**: Begin analysis with: "Feature #[X]: [Feature Name] - Found [N] files across [M] folders"
 - **MANDATORY COUNTS**: PowerShell already shows counts, but AI must restate them in analysis
-- **STRUCTURED OUTPUT**: Format all analysis as numbered features with complete file/folder counts
+- **STRUCTURED OUTPUT**: Format all analysis as numbered features with COMPLETE file/folder counts
 - **VERIFICATION CHECKLIST**: 
-### VALIDATION LOOP REQUIREMENT
-
-After EVERY 100 files:
-1. COUNT what you listed
-2. VERIFY against PowerShell count
-3. If mismatch, GO BACK and fix
-4. DO NOT proceed until counts match
-Before writing files, verify counts match PowerShell output exactly
 - **SCAFFOLDED FILES**: Even if files are empty placeholders, they MUST be analyzed for feature intent from filename patterns
 - **MINIMUM REQUIREMENT**: If folder has 50+ files, list ALL 50+ files by name
 - **NO SHORTCUTS ALLOWED**: If PowerShell shows 60 files, you MUST list all 60 files individually with descriptions
@@ -437,7 +414,7 @@ Found 10 files in backend/plugins/dex-adapters:
 - similar files  ← FORBIDDEN!
 ```
 
-**CORRECT (Complete):**
+**CORRECT (COMPLETE):**
 ```
 Found 10 files in backend/plugins/dex-adapters:
 - uniswap-v2-adapter.js
@@ -628,7 +605,7 @@ The ai-modules feature MUST be implemented by adding files to the appropriate lo
 
 ### 🚨 MANDATORY FOLDER TREE SECTION 🚨
 
-**CRITICAL**: You MUST include a complete folder tree structure showing ALL nested folders AND ALL FILES.
+**CRITICAL**: You MUST include a COMPLETE folder tree structure showing ALL nested folders AND ALL FILES.
 
 **FORBIDDEN**: Skipping the folder tree section will result in REJECTED output.
 
@@ -785,7 +762,7 @@ REQUIRED:
 
 - Derive Feature Name from the last segment of the legacy path (see "Feature Name Derivation")
 - **FILE COMPLETENESS CHECK**: Feature Files list MUST include representation of ALL files found in STEP 2
-- **NO PARTIAL LISTINGS**: Never use "and more files" or "additional files" - be complete and specific
+- **NO PARTIAL LISTINGS**: Never use "and more files" or "additional files" - be COMPLETE and specific
 - **SCAFFOLDED FILE ANALYSIS**: Empty files must be analyzed by filename patterns to determine intended purpose
 
 **FUNCTIONAL ANALYSIS MATRIX (PRE-GROUPING INTELLIGENCE):**
@@ -1164,7 +1141,6 @@ Each bullet MUST be ONE sentence describing:
 ✗ "Use dynamic loading with require() and fs.readdir()" (too technical)
 
 
-
 ## Input Format
 
 PATH-TO-FEATURE MAPPER
@@ -1320,7 +1296,7 @@ After EVERY 100 files:
 3. If mismatch, GO BACK and fix
 4. DO NOT proceed until counts match
 Before writing files, verify:
-1. All 5 output sections complete
+1. All 5 output sections COMPLETE
 1. Feature Files list NOT empty (unless scaffolded)
 2. Windows Implementation has 2-4 bullets minimum
 3. Feature name valid (1-50 chars, Title Case)
@@ -1362,10 +1338,9 @@ If ANY check fails: STOP and report issue
 ```
 
 
-
 ### 20-POINT VALIDATION MATRIX (SYSTEMATIC QUALITY ASSURANCE)
 
-**Execute this checklist before marking prompt complete:**
+**Execute this checklist before marking prompt COMPLETE:**
 
 **File Enumeration (5 points):**
 - [ ] 1. PowerShell executed successfully without errors
@@ -1395,10 +1370,10 @@ If ANY check fails: STOP and report issue
 - [ ] 20. No duplicate feature names in target files
 
 **SCORING:**
-- 20/20 = ✅ PERFECT - Mark complete
-- 18-19/20 = ✅ ACCEPTABLE - Mark complete with notes
+- 20/20 = ✅ PERFECT - Mark COMPLETE
+- 18-19/20 = ✅ ACCEPTABLE - Mark COMPLETE with notes
 - 15-17/20 = ⚠️ NEEDS REVIEW - Fix issues before completing
-- <15/20 = ❌ FAILED - Do not mark complete, restart execution
+- <15/20 = ❌ FAILED - Do not mark COMPLETE, restart execution
 
 **If score < 18: STOP and fix all failing checks before proceeding**
 
@@ -1417,7 +1392,6 @@ If ANY check fails: STOP and report issue
 **If any score < 7: STOP and review before proceeding**
 
 
-
 ## STEP 6.5: ERROR RECOVERY PROTOCOL 🔧
 
 IF YOU DISCOVER DURING VALIDATION THAT FILES WERE SKIPPED:
@@ -1431,7 +1405,7 @@ IF YOU DISCOVER DURING VALIDATION THAT FILES WERE SKIPPED:
 3. **IDENTIFY GAPS** - List which files are missing
 4. **ADD MISSING FILES** - Update both folder tree AND Feature Files sections
 6. **RE-VALIDATE** - Run through validation checklist again
-7. **ONLY THEN** - Write the complete .md file
+7. **ONLY THEN** - Write the COMPLETE .md file
 
 **Common Mistakes to Fix**:
 - Missing files in deeply nested subfolders (check 8+ levels deep)
