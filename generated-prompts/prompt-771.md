@@ -272,7 +272,7 @@ Always follow Steps 1-6 in order:
 **CRITICAL**: ALL folders MUST be processed for complete feature collection.
 
 ```
-771. C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\scripts\\automation
+C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\scripts\\automation
 ```
 
 **NO EXCEPTIONS**: Every folder (including archive, examples, research, benchmarks, ci, tests, data, logs, etc.) contains valuable features that must be documented.
@@ -295,7 +295,7 @@ Always follow Steps 1-6 in order:
 ```powershell
 try {
     $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
-    $targetPath = Join-Path $basePath "771. C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\scripts\\automation"
+    $targetPath = Join-Path $basePath "C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\scripts\\automation"
     
     Write-Host "Checking path: $targetPath"
     
@@ -1084,7 +1084,7 @@ Each bullet should be ONE sentence describing:
 ## Input Format
 
 PATH-TO-FEATURE MAPPER
-Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\771. C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\scripts\\automation
+Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\scripts\\automation
 
 ## OUTPUT FORMAT (EXACT TEMPLATE - DO NOT DEVIATE)
 
