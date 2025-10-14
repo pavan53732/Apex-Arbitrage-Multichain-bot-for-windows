@@ -610,6 +610,21 @@ ai-modules/
 - Count folders in your tree → Must match PowerShell folder count
 - Count files in your tree → Must match PowerShell file count
 
+### 🚨 MANDATORY FEATURE FILES SECTION 🚨
+
+**CRITICAL**: You MUST list EVERY SINGLE FILE in the Feature Files section with detailed descriptions.
+
+**ULTRA-MANDATORY RULES:**
+- ✅ List EVERY file that PowerShell found
+- ✅ Group files by purpose (Core Logic, Tests, Config, etc.)
+- ✅ Each file gets 20-30 word description
+- ✅ If PowerShell shows 54 files, Feature Files section MUST list all 54 files
+- ❌ FORBIDDEN: Skipping files or using "and more files"
+- ❌ FORBIDDEN: Using "[LIST ALL OTHER FILES]" without actually listing them
+- ❌ FORBIDDEN: Summarizing with "etc." or "..."
+
+**VERIFICATION**: Count files in Feature Files section → Must match PowerShell file count exactly
+
 ### Detailed File Descriptions:
 
 Each file MUST have 20-30 word description including:
@@ -623,18 +638,23 @@ Example:
 **Core Engine (5 files):**
 - core/engine.js → Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
 - core/router.js → Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
+- core/processor.js → [MUST LIST ALL 5 FILES - NO SKIPPING]
+- core/validator.js → [MUST LIST ALL 5 FILES - NO SKIPPING]
+- core/optimizer.js → [MUST LIST ALL 5 FILES - NO SKIPPING]
 ```
 
 FORBIDDEN:
 - Generic descriptions like "Core AI processing"
 - Single-word purposes like "Configuration"
 - Missing integration details
+- Skipping files with "and more files"
 
 REQUIRED:
 - 20-30 words per file minimum
 - Specific technical details
 - Integration information
 - Business value explanation
+- EVERY SINGLE FILE listed
 
 (FILENAME-ONLY, APPEND-ONLY)
 
@@ -827,7 +847,9 @@ Each bullet should be ONE sentence describing:
 - [ ] Folder tree structure included showing ALL nested folders AND ALL FILES
 - [ ] Folder tree file count matches PowerShell file count exactly
 - [ ] Folder tree folder count matches PowerShell folder count exactly
-- [ ] ALL files from PowerShell are listed in Feature Files section
+- [ ] Feature Files section lists EVERY SINGLE FILE with 20-30 word descriptions
+- [ ] Feature Files section file count matches PowerShell file count exactly
+- [ ] NO files skipped with "and more files" or "etc."
 - [ ] Technologies section present
 - [ ] 8-12 Windows Implementation bullets
 - [ ] References added to other .md files
