@@ -557,7 +557,7 @@ The ai-modules feature should be implemented by adding files to the appropriate 
 
 ### 🚨 MANDATORY FOLDER TREE SECTION 🚨
 
-**CRITICAL**: You MUST include a complete folder tree structure showing ALL nested folders.
+**CRITICAL**: You MUST include a complete folder tree structure showing ALL nested folders AND ALL FILES.
 
 **FORBIDDEN**: Skipping the folder tree section will result in REJECTED output.
 
@@ -567,25 +567,48 @@ The ai-modules feature should be implemented by adding files to the appropriate 
 Folder Structure:
 
 ai-modules/
-├── core/                    → Core AI engine components
-│   ├── engine.js           → Main processing
-│   └── router.js           → Model routing
-├── models/                  → ML model definitions
-│   ├── training/           → Training scripts
-│   └── inference/          → Inference engines
-└── utils/                  → Helper utilities
+├── datasets/
+│   ├── ai-decision-corpus.json
+│   ├── features.csv
+│   ├── profitLabels.json
+│   ├── trade-history.csv
+│   └── README.md
+├── features/
+│   ├── featureExtractor.js
+│   ├── gasFeeSpikeFeature.js
+│   ├── latencyProfileFeature.js
+│   ├── priceDeltaFeature.js
+│   └── README.md
+├── models/
+│   ├── modelWeights/
+│   │   ├── decisionNet-v1.pt
+│   │   ├── patternNet-v2.onnx
+│   │   ├── scorerModel.json
+│   │   ├── volatilityClassifier.pkl
+│   │   └── README.md
+│   ├── trainingOutputs/
+│   │   ├── accuracy-report.txt
+│   │   ├── token-risk-score-histogram.png
+│   │   ├── trade-learning-curve.png
+│   │   └── README.md
+│   └── README.md
+└── [LIST ALL OTHER FOLDERS AND FILES]
 ```
 
-**MANDATORY RULES:**
+**ULTRA-MANDATORY RULES:**
 - ✅ Show COMPLETE nesting hierarchy for ALL subfolders
-- ✅ Add arrow (→) with folder purpose for EVERY folder
-- ✅ Include representative files with brief purpose
+- ✅ List EVERY SINGLE FILE in EVERY folder
 - ✅ Use tree characters properly (├──, │, └──)
 - ✅ If PowerShell shows 10 folders, your tree MUST show all 10 folders
+- ✅ If PowerShell shows 54 files, your tree MUST show all 54 files
 - ❌ FORBIDDEN: Skipping folders or using "and more folders"
+- ❌ FORBIDDEN: Skipping files or using "and more files"
 - ❌ FORBIDDEN: Not including the folder tree section
+- ❌ FORBIDDEN: Using "[LIST ALL OTHER FILES]" without actually listing them
 
-**VERIFICATION**: Count folders in your tree. Must match PowerShell folder count.
+**VERIFICATION**: 
+- Count folders in your tree → Must match PowerShell folder count
+- Count files in your tree → Must match PowerShell file count
 
 ### Detailed File Descriptions:
 
@@ -801,8 +824,10 @@ Each bullet should be ONE sentence describing:
 **VALIDATION CHECKLIST:**
 - [ ] Feature number is sequential (counted existing features)
 - [ ] Complexity score matches file count
-- [ ] Folder tree structure included showing ALL nested folders
-- [ ] ALL files from PowerShell are listed
+- [ ] Folder tree structure included showing ALL nested folders AND ALL FILES
+- [ ] Folder tree file count matches PowerShell file count exactly
+- [ ] Folder tree folder count matches PowerShell folder count exactly
+- [ ] ALL files from PowerShell are listed in Feature Files section
 - [ ] Technologies section present
 - [ ] 8-12 Windows Implementation bullets
 - [ ] References added to other .md files
