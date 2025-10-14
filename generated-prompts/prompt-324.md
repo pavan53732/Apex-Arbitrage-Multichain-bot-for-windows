@@ -1018,6 +1018,53 @@ Before writing .md file, perform MANDATORY cross-checks:
 - **Creation rule**: If the owner/reference .md does not exist (e.g., config.md, security.md), CREATE features/[name].md and then append
 - **APPEND-ONLY**: Read existing content first, then append the new "## Feature:" section to the END
 - **Preserve all existing content**: never overwrite, replace, or delete
+**MANDATORY TOOL EXECUTION & VERIFICATION**
+
+**REQUIRED: Use these exact tools in this exact order:**
+
+1. **READ EXISTING FILE FIRST** (MANDATORY):
+   `
+   Use read_file tool with:
+   - filePath: "c:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\features\[owner].md"
+   - Read entire file to preserve existing content
+   `
+
+2. **WRITE/CREATE OWNER FILE** (MANDATORY):
+   `
+   Use create_file tool with:
+   - filePath: "c:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\features\[owner].md" 
+   - content: [FULL existing content + new "## Feature:" section appended at end]
+   `
+
+3. **WRITE CROSS-REFERENCES TO REFERENCE FILES** (MANDATORY):
+   `
+   For each reference file, use insert_edit_into_file tool with:
+   - filePath: "c:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\features\[reference].md"
+   - code: "Append cross-reference line at end of file"
+   `
+
+**MANDATORY VERIFICATION STEPS** (Execute AFTER each file write):
+
+1. **IMMEDIATE READ-BACK VERIFICATION**:
+   `
+   Use read_file tool to read the target file and CONFIRM the new content exists
+   `
+
+2. **SUCCESS CRITERIA - File writing is NOT complete until:**
+   -  You can read back the full "## Feature [N]: [Name]" section
+   -  Feature Files list is present and complete  
+   -  Windows Implementation bullets are present
+   -  Cross-reference lines exist in reference files
+
+3. **FAILURE RECOVERY**:
+   - If read-back fails: Retry the write operation
+   - If still fails after 2 attempts: STOP and report "FILE WRITE FAILED"
+
+**CRITICAL ORDER ENFORCEMENT:**
+- **STEP 6 MUST complete ALL file writing BEFORE any cross-references**
+- **NO cross-references until owner file write is verified successful**
+- **Output "FILE WRITING COMPLETE" only after all verifications pass**
+
 
 **Group files by actual function, not just extension:**
 - **Core Logic**: *-engine.js, *-manager.js, *-handler.js, *-controller.js, *-service.js
@@ -1205,6 +1252,26 @@ Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\A
 - features/install-dependencies.md → (ready for content)
 - features/security.md → (ready for content)
 - features/testing.md → (ready for content)
+
+##  FILE ROUTING QUICK REFERENCE
+
+**CRITICAL**: Write analysis to `features/*.md` based on content type found:
+
+- `.sol` files, smart contracts  `features/contracts.md`
+- Backend APIs, servers, `package.json`  `features/backend.md`
+- React, dashboard, UI components  `features/dashboard.md`
+- Test files, `*.test.js`, `*.spec.js`  `features/testing.md`
+- Docker, CI/CD, deployment scripts  `features/deployment.md`
+- Config files, `.env`, settings  `features/config.md`
+- Security, encryption, auth code  `features/security.md`
+- AI/ML models, training scripts  `features/ai-modules.md`
+- Documentation, guides, README  `features/docs.md`
+- Installers, setup scripts  `features/install-dependencies.md`
+- Archives, deprecated code  `features/archive.md`
+
+**If multiple types found**: Write to PRIMARY type file, add cross-references to others.
+
+---
 
 ## INTELLIGENT MAPPING RULES (Heuristics)
 
