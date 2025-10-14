@@ -272,7 +272,7 @@ Always follow Steps 1-6 in order:
 **CRITICAL**: ALL folders MUST be processed for complete feature collection.
 
 ```
-config\\compliance
+267. C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\config\\compliance
 ```
 
 **NO EXCEPTIONS**: Every folder (including archive, examples, research, benchmarks, ci, tests, data, logs, etc.) contains valuable features that must be documented.
@@ -295,7 +295,7 @@ config\\compliance
 ```powershell
 try {
     $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
-    $targetPath = Join-Path $basePath "config\\compliance"
+    $targetPath = Join-Path $basePath "267. C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\config\\compliance"
     
     Write-Host "Checking path: $targetPath"
     
@@ -610,6 +610,51 @@ ai-modules/
 - Count folders in your tree → Must match PowerShell folder count
 - Count files in your tree → Must match PowerShell file count
 
+🔍 **NESTED FOLDER DEPTH VERIFICATION:**
+- Count folder depth levels in your tree structure
+- Compare against PowerShell output showing deepest path
+- If PowerShell shows 8-level nesting, your tree MUST show all 8 levels
+- FORBIDDEN: Collapsing nested folders like "parent/child/grandchild" into single line
+- REQUIRED: Full tree expansion showing every subfolder at every level
+
+### 📋 OUTPUT QUALITY EXAMPLES
+
+❌ **INCORRECT - FORBIDDEN**:
+```
+## Folder Structure
+- src/
+  - Multiple configuration files
+  - Various utility scripts (15 files)
+  - And more...
+```
+
+✅ **CORRECT - REQUIRED**:
+```
+## Folder Structure
+src/
+├── config/
+│   ├── database.config.js
+│   ├── api.config.js
+│   ├── security.config.js
+├── utils/
+│   ├── logger.util.js
+│   ├── validator.util.js
+│   ├── formatter.util.js
+[... continues for ALL files]
+```
+
+❌ **INCORRECT - FORBIDDEN**:
+```
+### database.config.js
+Configuration file for database settings.
+```
+
+✅ **CORRECT - REQUIRED**:
+```
+### database.config.js (23 words)
+Manages SQLite database connection pooling, query timeout configurations, transaction isolation levels, automatic backup scheduling, and Windows-specific file locking mechanisms for concurrent access prevention in multi-threaded arbitrage operations.
+```
+
 ### 🚨 MANDATORY FEATURE FILES SECTION 🚨
 
 **CRITICAL**: You MUST list EVERY SINGLE FILE in the Feature Files section with detailed descriptions.
@@ -625,6 +670,13 @@ ai-modules/
 
 **VERIFICATION**: Count files in Feature Files section → Must match PowerShell file count exactly
 
+📏 **DESCRIPTION LENGTH REQUIREMENTS:**
+- MINIMUM: 20 words per file
+- MAXIMUM: 30 words per file
+- FORBIDDEN: Generic descriptions like "configuration file" or "helper utilities"
+- REQUIRED: Specific purpose, key functions, dependencies, Windows integration details
+- VERIFICATION: Count words in each description - must be 20-30 words
+
 ### Detailed File Descriptions:
 
 Each file MUST have 20-30 word description including:
@@ -636,25 +688,27 @@ Each file MUST have 20-30 word description including:
 Example:
 ```
 **Core Engine (5 files):**
-- core/engine.js → Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold
-- core/router.js → Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances
-- core/processor.js → [MUST LIST ALL 5 FILES - NO SKIPPING]
-- core/validator.js → [MUST LIST ALL 5 FILES - NO SKIPPING]
-- core/optimizer.js → [MUST LIST ALL 5 FILES - NO SKIPPING]
+- core/engine.js → Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold (25 words)
+- core/router.js → Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances (24 words)
+- core/processor.js → Processes raw blockchain data into normalized feature vectors for ML model consumption, handles data validation, type conversion, and missing value imputation (25 words)
+- core/validator.js → Validates model predictions against business rules, checks confidence thresholds, filters low-quality predictions, and logs validation failures for model retraining (23 words)
+- core/optimizer.js → Optimizes model inference performance through batch processing, caching frequently requested predictions, and dynamically adjusting model parameters based on system load (23 words)
 ```
 
 FORBIDDEN:
-- Generic descriptions like "Core AI processing"
-- Single-word purposes like "Configuration"
-- Missing integration details
-- Skipping files with "and more files"
+- Generic descriptions like "Core AI processing" (too vague)
+- Single-word purposes like "Configuration" (insufficient detail)
+- Missing integration details (no connections mentioned)
+- Skipping files with "and more files" (incomplete)
+- Descriptions under 20 words (too short)
+- Descriptions over 30 words (too long)
 
 REQUIRED:
-- 20-30 words per file minimum
-- Specific technical details
-- Integration information
-- Business value explanation
-- EVERY SINGLE FILE listed
+- 20-30 words per file minimum (count them!)
+- Specific technical details (not generic)
+- Integration information (how it connects)
+- Business value explanation (why it matters)
+- EVERY SINGLE FILE listed (no exceptions)
 
 (FILENAME-ONLY, APPEND-ONLY)
 
@@ -858,6 +912,27 @@ Each bullet should be ONE sentence describing:
 
 **If ANY element is missing, your output is INCOMPLETE and MUST be revised.**
 
+## STEP 5.5: CROSS-REFERENCE VALIDATION 🔗
+
+Before writing .md file, perform MANDATORY cross-checks:
+
+✅ **File Count Matching**:
+- PowerShell enumeration count: ___ files
+- Folder tree structure count: ___ files  
+- Feature Files section count: ___ files
+- ❌ IF COUNTS DON'T MATCH → STOP AND RECOUNT
+
+✅ **File Name Matching**:
+- Extract all filenames from folder tree
+- Extract all filenames from Feature Files section
+- Compare lists - MUST BE IDENTICAL
+- ❌ IF ANY FILE MISSING FROM EITHER SECTION → ADD IT
+
+✅ **Path Consistency**:
+- Every file in Feature Files must appear in folder tree
+- Every file in folder tree must appear in Feature Files
+- No orphaned files in either section
+
 ### STEP 6: ACTUALLY WRITE TO FILES (STRICT APPEND-ONLY)
 
 **CRITICAL: APPEND-ONLY BEHAVIOR**
@@ -1009,7 +1084,7 @@ Each bullet should be ONE sentence describing:
 ## Input Format
 
 PATH-TO-FEATURE MAPPER
-Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\config\\compliance
+Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\267. C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\config\\compliance
 
 ## OUTPUT FORMAT (EXACT TEMPLATE - DO NOT DEVIATE)
 
@@ -1288,6 +1363,38 @@ if (Test-Path $targetFile) {
 **If any score < 7: STOP and review before proceeding**
 
 **Mark this prompt as COMPLETE only after all validations pass.**
+
+## STEP 6.5: ERROR RECOVERY PROTOCOL 🔧
+
+IF YOU DISCOVER DURING VALIDATION THAT FILES WERE SKIPPED:
+
+🚨 **DO NOT SUBMIT INCOMPLETE .md FILE**
+
+**Recovery Steps**:
+1. **STOP** - Do not write the .md file yet
+2. **RECOUNT** - Re-run PowerShell enumeration command
+3. **COMPARE** - Check your folder tree vs PowerShell output
+4. **IDENTIFY GAPS** - List which files are missing
+5. **ADD MISSING FILES** - Update both folder tree AND Feature Files sections
+6. **RE-VALIDATE** - Run through validation checklist again
+7. **ONLY THEN** - Write the complete .md file
+
+**Common Mistakes to Fix**:
+- Missing files in deeply nested subfolders (check 8+ levels deep)
+- Skipped hidden files or files with special characters
+- Incomplete file descriptions (check word count 20-30)
+- Folder tree shows files but Feature Files section missing them
+- Feature Files section shows files but folder tree missing them
+- Count mismatch between PowerShell output and your sections
+
+**Self-Check Questions**:
+- [ ] Did I list EVERY file from PowerShell output in folder tree?
+- [ ] Did I list EVERY file from PowerShell output in Feature Files?
+- [ ] Do both sections have IDENTICAL file counts?
+- [ ] Does each file description have 20-30 words?
+- [ ] Are all nested folders expanded fully in tree structure?
+
+**If you answer NO to ANY question: DO NOT WRITE FILES. Fix the issue first.**
 
 ---
 
