@@ -6,21 +6,18 @@ You WILL need to delegate to specialized modes. That's CORRECT. But you MUST com
 
 **DELEGATION SEQUENCE:**
 
-1. ✅ **Ask mode** → Read progress.md, check if prompt already executed
+1. ✅ **DevOps mode** → Execute run_terminal_cmd tool to enumerate files
 
-2. ✅ **DevOps mode** → Execute run_terminal_cmd tool to enumerate files
+2. ✅ **Project Research mode** → Analyze file names and project structure
 
-3. ✅ **Project Research mode** → Analyze file names and project structure
+3. ✅ **Ask mode** → Read existing features/*.md files to count features
 
-4. ✅ **Ask mode** → Read existing features/*.md files to count features
+4. ✅ **Write mode** → Write complete feature documentation
 
-5. ✅ **Write mode** → Write complete feature documentation
 
-6. ✅ **Ask mode** → Update progress.md
+4. **DevOps mode** - Delete temp files
 
-7. ✅ **DevOps mode** → Delete temp files
-
-**DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
+**DO NOT STOP after step 1! COMPLETE ALL 5 STEPS!**
 
 **If you delegate and wait for results, IMMEDIATELY process those results and continue to the NEXT step.**
 
@@ -53,7 +50,7 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 - ❌ Missing Technologies section - REQUIRED
 - ❌ Less than 8 Windows Implementation bullets - MINIMUM 8-12
 - ❌ No references to other .md files - REQUIRED
-- ❌ No progress.md update - REQUIRED
+- ❌ No features documentation update - REQUIRED
 - ❌ No temp file cleanup - REQUIRED
 - ❌ No feature numbering - MUST count existing features first
 
@@ -142,10 +139,10 @@ backend/
 ### ✅ QUALITY STANDARDS:
 
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
-2. **Complete Grouping**: Group ALL files by purpose - no file left behind
-3. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
-4. **Technologies**: Detect from file extensions and list them
-5. **Windows Implementation**: Write 8-12 detailed, specific bullets
+1. **Complete Grouping**: Group ALL files by purpose - no file left behind
+2. **Accurate Counts**: "Core Logic (5 files)" means list exactly 5 files in that group
+3. **Technologies**: Detect from file extensions and list them
+4. **Windows Implementation**: Write 8-12 detailed, specific bullets
 6. **References**: Add feature name to 2-4 other .md files
 7. **Progress Update**: Increment counter, update date, add log entry
 8. **Cleanup**: Delete temp_*.ps1 files you created
@@ -159,7 +156,6 @@ Ask yourself:
 - [ ] Did I add Technologies section?
 - [ ] Did I write 8-12 Windows Implementation bullets?
 - [ ] Did I add references to other .md files?
-- [ ] Will I update progress.md after writing?
 - [ ] Will I delete temp files after completion?
 
 **If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
@@ -244,22 +240,13 @@ Windows Implementation:
 - **Path-Locations.md**: List of all 842 directory paths (numbered 1-842)
 - **Standard README.md**: Structure conventions and architecture overview
 
-## PRE-EXECUTION CHECKPOINT
-
-**Before proceeding, check progress tracking:**
-
-1. Read `generated-prompts/progress.md`
-2. Search for "Prompt 633: Executed" in the Execution Log
-3. **If found**: STOP - This prompt already completed. Move to next prompt.
-4. **If not found**: Proceed with execution below.
-
 ---
 
 ## INSTRUCTIONS
 
 ## MODE: PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + IMPLEMENTATION DOCS)
 
-Always follow Steps 1-6 in order:
+Always follow Steps 1-5 in order:
 
 ### STEP 1: PARSE INPUT PATH
 
@@ -286,9 +273,9 @@ C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitra
 **EXECUTION INSTRUCTIONS:**
 
 1. Copy the PowerShell code block below EXACTLY as written
-2. Execute using run_terminal_cmd tool (PowerShell)
-3. Do NOT modify, interpret, or break up the code
-4. Execute the ENTIRE block as ONE command
+1. Execute using run_terminal_cmd tool (PowerShell)
+2. Do NOT modify, interpret, or break up the code
+3. Execute the ENTIRE block as ONE command
 
 **POWERSHELL COMMAND TO EXECUTE:**
 
@@ -682,8 +669,8 @@ Manages SQLite database connection pooling, query timeout configurations, transa
 Each file MUST have 20-30 word description including:
 
 1. WHAT it does (primary function)
-2. WHY it exists (business purpose)
-3. HOW it integrates (connections)
+1. WHY it exists (business purpose)
+2. HOW it integrates (connections)
 
 Example:
 ```
@@ -727,25 +714,25 @@ Before grouping files, analyze EACH file across 5 dimensions:
 - Output → Sends data externally (transactions, API calls, UI updates)
 - Storage → Persists data (database writes, file saves, cache updates)
 
-**2. Execution Context:**
+**1. Execution Context:**
 - Main Thread → Runs in primary application process (UI rendering, user interactions)
 - Background → Runs in separate process/worker (heavy computations, monitoring)
 - Scheduled → Triggered by time/cron (periodic tasks, cleanup, retraining)
 - Event-Driven → Triggered by events (blockchain events, price changes, alerts)
 
-**3. Dependencies (What It Requires):**
+**2. Dependencies (What It Requires):**
 - External Services → RPC nodes, APIs, databases, file systems
 - Internal Modules → Other project files it imports/requires
 - Configuration → Settings, secrets, environment variables
 - Runtime → Node.js version, Python packages, system libraries
 
-**4. Dependents (What Depends On It):**
+**3. Dependents (What Depends On It):**
 - Direct Consumers → Files that import/call this file
 - Indirect Consumers → Features that rely on its functionality
 - UI Components → Dashboard elements displaying its data
 - External Systems → Blockchain contracts, APIs consuming its output
 
-**5. Windows Integration Point:**
+**4. Windows Integration Point:**
 - Service → Runs as Windows Service (backend engines, monitors)
 - UI → Electron renderer process (dashboard components, charts)
 - Storage → File system/registry/database (configs, logs, data)
@@ -866,21 +853,21 @@ Each bullet should be ONE sentence describing:
    - Format: `## Feature [N]: [Feature Name]`
    - Example: If file has 2 features, new one is `## Feature 3:`
 
-2. ✅ **Complexity Score**: Based on file count
+1. ✅ **Complexity Score**: Based on file count
    - 1-5 files = ⭐ (Simple)
    - 6-15 files = ⭐⭐ (Moderate)
    - 16-30 files = ⭐⭐⭐ (Complex)
    - 31-50 files = ⭐⭐⭐⭐ (Very Complex)
    - 51+ files = ⭐⭐⭐⭐⭐ (Highly Complex)
 
-3. ✅ **File Count**: State exact count in header
+2. ✅ **File Count**: State exact count in header
    - Format: `## Feature [N]: [Name] ⭐⭐⭐ (Complex - 25 files)`
 
-4. ✅ **File Grouping**: Group files by purpose (Core Logic, ML Models, Tests, etc.)
+3. ✅ **File Grouping**: Group files by purpose (Core Logic, ML Models, Tests, etc.)
    - List ALL files found in PowerShell output
    - Group by function, not just extension
 
-5. ✅ **Technologies Section**: Detect and list tech stack
+4. ✅ **Technologies Section**: Detect and list tech stack
    - Format: `Technologies: Python, PyTorch, Jupyter, NumPy`
 
 6. ✅ **Windows Implementation**: Minimum 8-12 detailed bullets
@@ -890,7 +877,7 @@ Each bullet should be ONE sentence describing:
 7. ✅ **References**: Add to other .md files
    - Format: `- [Feature Name] → see features/[owner].md`
 
-8. ✅ **Progress Update**: Update progress.md with prompt number
+8. ✅ **Progress Update**: Update features documentation with prompt number
    - Increment counter, update date, add log entry
 
 9. ✅ **Cleanup**: Delete temp_*.ps1 files created during execution
@@ -907,7 +894,6 @@ Each bullet should be ONE sentence describing:
 - [ ] Technologies section present
 - [ ] 8-12 Windows Implementation bullets
 - [ ] References added to other .md files
-- [ ] progress.md updated
 - [ ] Temp files deleted
 
 **If ANY element is missing, your output is INCOMPLETE and MUST be revised.**
@@ -939,9 +925,9 @@ Before writing .md file, perform MANDATORY cross-checks:
 
 **Steps to ensure append-only:**
 1. Read existing file content FIRST
-2. Keep ALL existing content unchanged
-3. Add new "## Feature:" section at the VERY END
-4. Write the combined content back
+1. Keep ALL existing content unchanged
+2. Add new "## Feature:" section at the VERY END
+3. Write the combined content back
 
 **DUPLICATE FEATURE NAME HANDLING:**
 - Before writing, check if "## Feature: [Name]" already exists in target file
@@ -1229,58 +1215,14 @@ Final: `Dex Adapters`
 
 Before writing files, verify:
 1. All 5 output sections complete
-2. Feature Files list NOT empty (unless scaffolded)
-3. Windows Implementation has 2-4 bullets minimum
-4. Feature name valid (1-50 chars, Title Case)
-5. progress.md will be updated
+1. Feature Files list NOT empty (unless scaffolded)
+2. Windows Implementation has 2-4 bullets minimum
+3. Feature name valid (1-50 chars, Title Case)
+4. features documentation will be updated
 
 If ANY check fails: STOP and report issue
 
-## POST-EXECUTION CHECKPOINT
-
-**After completing all tasks above, update progress tracking:**
-
-### SIMPLIFIED PROGRESS UPDATE
-
-**Step 1: Update Progress**
-
-```powershell
-# Read current progress
-$progressContent = Get-Content "generated-prompts/progress.md" -Raw
-
-# Update completion count
-$newContent = $progressContent -replace "Completed: \d+/842", "Completed: 633/842"
-$newContent = $newContent -replace "Last Updated: [^\r\n]*", "Last Updated: $(Get-Date -Format 'MMMM dd, yyyy')"
-
-# Add execution log entry
-$logEntry = "`nPrompt 633: Executed - Added 'Feature: [Feature Name]' to features/[owner].md"
-$newContent = $newContent -replace "<!-- AI: Append new log entries below this line -->", "<!-- AI: Append new log entries below this line -->$logEntry"
-
-# Write updated content
-Set-Content "generated-prompts/progress.md" $newContent -NoNewline
-Write-Host "Progress updated successfully"
-```
-
-**Step 2: Cleanup**
-
-```powershell
-# Delete any temp PowerShell files created during execution
-Get-ChildItem "temp_*.ps1" -ErrorAction SilentlyContinue | Remove-Item -Force
-Write-Host "Cleanup completed"
-```
-
-**Before marking complete, validate generated files:**
-
-```powershell
-# Validate generated .md file
-$targetFile = "features/[owner].md"
-
-if (Test-Path $targetFile) {
-    $content = Get-Content $targetFile -Raw
-    
-    # Check required elements
-    $checks = @{
-        "Feature header" = $content -match "## Feature:"
+## Feature:"
         "Feature files list" = $content -match "Feature Files:"
         "Windows implementation" = $content -match "Windows Implementation:"
         "Minimum bullets" = ($content | Select-String "^- ").Count -ge 8
@@ -1306,7 +1248,7 @@ if (Test-Path $targetFile) {
 }
 ```
 
-**Mark this prompt as COMPLETE only after all validations pass.**
+
 
 ### 20-POINT VALIDATION MATRIX (SYSTEMATIC QUALITY ASSURANCE)
 
@@ -1314,10 +1256,10 @@ if (Test-Path $targetFile) {
 
 **File Enumeration (5 points):**
 - [ ] 1. PowerShell executed successfully without errors
-- [ ] 2. All files enumerated with "FILE X/Y" format showing progress
-- [ ] 3. File count matches PowerShell output exactly
-- [ ] 4. No files skipped or summarized with "etc."
-- [ ] 5. Subfolder files included recursively
+- [ ] 1. All files enumerated with "FILE X/Y" format showing progress
+- [ ] 2. File count matches PowerShell output exactly
+- [ ] 3. No files skipped or summarized with "etc."
+- [ ] 4. Subfolder files included recursively
 
 **Feature Analysis (5 points):**
 - [ ] 6. Feature number is sequential (counted existing features)
@@ -1328,15 +1270,14 @@ if (Test-Path $targetFile) {
 
 **Windows Implementation (5 points):**
 - [ ] 11. Minimum 8-12 implementation bullets present
-- [ ] 12. Each bullet follows "Action + Component + Purpose" format
-- [ ] 13. No OS-specific paths (no C:\, %AppData% literals)
-- [ ] 14. Windows components mapped correctly (Service, Electron, etc.)
-- [ ] 15. Integration points clearly described
+- [ ] 11. Each bullet follows "Action + Component + Purpose" format
+- [ ] 12. No OS-specific paths (no C:\, %AppData% literals)
+- [ ] 13. Windows components mapped correctly (Service, Electron, etc.)
+- [ ] 14. Integration points clearly described
 
 **File Operations (5 points):**
 - [ ] 16. Owner .md file updated with append-only behavior
 - [ ] 17. Reference .md files updated with cross-references
-- [ ] 18. progress.md updated with prompt number and date
 - [ ] 19. Temp PowerShell files deleted (temp_*.ps1)
 - [ ] 20. No duplicate feature names in target files
 
@@ -1362,7 +1303,7 @@ if (Test-Path $targetFile) {
 
 **If any score < 7: STOP and review before proceeding**
 
-**Mark this prompt as COMPLETE only after all validations pass.**
+
 
 ## STEP 6.5: ERROR RECOVERY PROTOCOL 🔧
 
@@ -1372,10 +1313,10 @@ IF YOU DISCOVER DURING VALIDATION THAT FILES WERE SKIPPED:
 
 **Recovery Steps**:
 1. **STOP** - Do not write the .md file yet
-2. **RECOUNT** - Re-run PowerShell enumeration command
-3. **COMPARE** - Check your folder tree vs PowerShell output
-4. **IDENTIFY GAPS** - List which files are missing
-5. **ADD MISSING FILES** - Update both folder tree AND Feature Files sections
+1. **RECOUNT** - Re-run PowerShell enumeration command
+2. **COMPARE** - Check your folder tree vs PowerShell output
+3. **IDENTIFY GAPS** - List which files are missing
+4. **ADD MISSING FILES** - Update both folder tree AND Feature Files sections
 6. **RE-VALIDATE** - Run through validation checklist again
 7. **ONLY THEN** - Write the complete .md file
 

@@ -2,25 +2,21 @@
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
-You WILL need to delegate to specialized modes. That's CORRECT. But you MUST complete the ENTIRE workflow:
+You MUST complete the ENTIRE workflow:
 
 **DELEGATION SEQUENCE:**
 
-1. ✅ **Ask mode** → Read progress.md, check if prompt already executed
+1. ✅ **DevOps mode** → Execute run_terminal_cmd tool to enumerate files
 
-2. ✅ **DevOps mode** → Execute run_terminal_cmd tool to enumerate files
+2. ✅ **Project Research mode** → Analyze file names and project structure
 
-3. ✅ **Project Research mode** → Analyze file names and project structure
+3. ✅ **Ask mode** → Read existing features/*.md files to count features
 
-4. ✅ **Ask mode** → Read existing features/*.md files to count features
+4. ✅ **Write mode** → Write complete feature documentation
 
-5. ✅ **Write mode** → Write complete feature documentation
+5. ✅ **DevOps mode** → Delete temp files
 
-6. ✅ **Ask mode** → Update progress.md
-
-7. ✅ **DevOps mode** → Delete temp files
-
-**DO NOT STOP after step 1 or 2! COMPLETE ALL 7 STEPS!**
+**DO NOT STOP after step 1! COMPLETE ALL 5 STEPS!**
 
 **If you delegate and wait for results, IMMEDIATELY process those results and continue to the NEXT step.**
 
@@ -53,7 +49,6 @@ Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** tha
 - ❌ Missing Technologies section - REQUIRED
 - ❌ Less than 8 Windows Implementation bullets - MINIMUM 8-12
 - ❌ No references to other .md files - REQUIRED
-- ❌ No progress.md update - REQUIRED
 - ❌ No temp file cleanup - REQUIRED
 - ❌ No feature numbering - MUST count existing features first
 
@@ -147,8 +142,7 @@ backend/
 4. **Technologies**: Detect from file extensions and list them
 5. **Windows Implementation**: Write 8-12 detailed, specific bullets
 6. **References**: Add feature name to 2-4 other .md files
-7. **Progress Update**: Increment counter, update date, add log entry
-8. **Cleanup**: Delete temp_*.ps1 files you created
+7. **Cleanup**: Delete temp_*.ps1 files you created
 
 ### 📍 SELF-CHECK BEFORE WRITING:
 
@@ -159,7 +153,6 @@ Ask yourself:
 - [ ] Did I add Technologies section?
 - [ ] Did I write 8-12 Windows Implementation bullets?
 - [ ] Did I add references to other .md files?
-- [ ] Will I update progress.md after writing?
 - [ ] Will I delete temp files after completion?
 
 **If you answer NO to ANY question above, DO NOT PROCEED. Go back and complete it.**
@@ -244,22 +237,13 @@ Windows Implementation:
 - **Path-Locations.md**: List of all 842 directory paths (numbered 1-842)
 - **Standard README.md**: Structure conventions and architecture overview
 
-## PRE-EXECUTION CHECKPOINT
-
-**Before proceeding, check progress tracking:**
-
-1. Read `generated-prompts/progress.md`
-2. Search for "Prompt {PROMPT_NUMBER}: Executed" in the Execution Log
-3. **If found**: STOP - This prompt already completed. Move to next prompt.
-4. **If not found**: Proceed with execution below.
-
 ---
 
 ## INSTRUCTIONS
 
 ## MODE: PATH-TO-FEATURE MAPPER (INTELLIGENT FILE ANALYSIS + IMPLEMENTATION DOCS)
 
-Always follow Steps 1-6 in order:
+Always follow Steps 1-5 in order:
 
 ### STEP 1: PARSE INPUT PATH
 
@@ -890,10 +874,7 @@ Each bullet should be ONE sentence describing:
 7. ✅ **References**: Add to other .md files
    - Format: `- [Feature Name] → see features/[owner].md`
 
-8. ✅ **Progress Update**: Update progress.md with prompt number
-   - Increment counter, update date, add log entry
-
-9. ✅ **Cleanup**: Delete temp_*.ps1 files created during execution
+8. ✅ **Cleanup**: Delete temp_*.ps1 files created during execution
 
 **VALIDATION CHECKLIST:**
 - [ ] Feature number is sequential (counted existing features)
@@ -907,7 +888,6 @@ Each bullet should be ONE sentence describing:
 - [ ] Technologies section present
 - [ ] 8-12 Windows Implementation bullets
 - [ ] References added to other .md files
-- [ ] progress.md updated
 - [ ] Temp files deleted
 
 **If ANY element is missing, your output is INCOMPLETE and MUST be revised.**
@@ -1232,36 +1212,14 @@ Before writing files, verify:
 2. Feature Files list NOT empty (unless scaffolded)
 3. Windows Implementation has 2-4 bullets minimum
 4. Feature name valid (1-50 chars, Title Case)
-5. progress.md will be updated
 
 If ANY check fails: STOP and report issue
 
-## POST-EXECUTION CHECKPOINT
+## POST-EXECUTION CLEANUP
 
-**After completing all tasks above, update progress tracking:**
+**After completing all tasks above:**
 
-### SIMPLIFIED PROGRESS UPDATE
-
-**Step 1: Update Progress**
-
-```powershell
-# Read current progress
-$progressContent = Get-Content "generated-prompts/progress.md" -Raw
-
-# Update completion count
-$newContent = $progressContent -replace "Completed: \d+/842", "Completed: {PROMPT_NUMBER}/842"
-$newContent = $newContent -replace "Last Updated: [^\r\n]*", "Last Updated: $(Get-Date -Format 'MMMM dd, yyyy')"
-
-# Add execution log entry
-$logEntry = "`nPrompt {PROMPT_NUMBER}: Executed - Added 'Feature: [Feature Name]' to features/[owner].md"
-$newContent = $newContent -replace "<!-- AI: Append new log entries below this line -->", "<!-- AI: Append new log entries below this line -->$logEntry"
-
-# Write updated content
-Set-Content "generated-prompts/progress.md" $newContent -NoNewline
-Write-Host "Progress updated successfully"
-```
-
-**Step 2: Cleanup**
+### Cleanup
 
 ```powershell
 # Delete any temp PowerShell files created during execution
@@ -1269,7 +1227,7 @@ Get-ChildItem "temp_*.ps1" -ErrorAction SilentlyContinue | Remove-Item -Force
 Write-Host "Cleanup completed"
 ```
 
-**Before marking complete, validate generated files:**
+**Validate generated files:**
 
 ```powershell
 # Validate generated .md file
@@ -1306,8 +1264,6 @@ if (Test-Path $targetFile) {
 }
 ```
 
-**Mark this prompt as COMPLETE only after all validations pass.**
-
 ### 20-POINT VALIDATION MATRIX (SYSTEMATIC QUALITY ASSURANCE)
 
 **Execute this checklist before marking prompt complete:**
@@ -1336,9 +1292,9 @@ if (Test-Path $targetFile) {
 **File Operations (5 points):**
 - [ ] 16. Owner .md file updated with append-only behavior
 - [ ] 17. Reference .md files updated with cross-references
-- [ ] 18. progress.md updated with prompt number and date
-- [ ] 19. Temp PowerShell files deleted (temp_*.ps1)
-- [ ] 20. No duplicate feature names in target files
+- [ ] 18. Temp PowerShell files deleted (temp_*.ps1)
+- [ ] 19. No duplicate feature names in target files
+- [ ] 20. All validation checks passed
 
 **SCORING:**
 - 20/20 = ✅ PERFECT - Mark complete
@@ -1361,8 +1317,6 @@ if (Test-Path $targetFile) {
 - **Implementation completeness**: [Score] - Are all required elements present?
 
 **If any score < 7: STOP and review before proceeding**
-
-**Mark this prompt as COMPLETE only after all validations pass.**
 
 ## STEP 6.5: ERROR RECOVERY PROTOCOL 🔧
 
