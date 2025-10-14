@@ -1,4 +1,4 @@
-## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
+﻿## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
@@ -1121,7 +1121,7 @@ Each bullet MUST be ONE sentence describing:
 ## Input Format
 
 PATH-TO-FEATURE MAPPER
-Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\archive\old-configs
+Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\archive\old-configs
 
 ## OUTPUT FORMAT (EXACT TEMPLATE - DO NOT DEVIATE)
 
