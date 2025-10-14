@@ -21,25 +21,30 @@ foreach ($file in $promptFiles) {
     # This is WRONG because it's joining a base path with a FULL path
     
     # Find and replace the broken path pattern
-    $content = $content -replace '\$targetPath = Join-Path \$basePath "C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\([^"]+)"', '$targetPath = Join-Path $basePath "$1"'
+    $oldPattern = '\$targetPath = Join-Path \$basePath "C:\\Users\\Pavan pc\\Desktop\\Apex Arbitrage Multichain bot for windows\\Apex-Arbitrage-Multichain-bot-for-windows\\Apex Arbitrage Multichain bot\\'
+    if ($content -match $oldPattern) {
+        $content = $content -replace ($oldPattern + '([^"]+)"'), '$targetPath = Join-Path $basePath "$1"'
+    }
     
     # Fix 2: Add proper path validation
-    $content = $content -replace '(Write-Host "Checking path: \$targetPath")', @'
+    $pathValidation = @'
 Write-Host "Checking path: $targetPath"
     if ($targetPath -like "*\*\*") {
         # Fix double path issue
         $targetPath = $targetPath -replace ".*\\Apex Arbitrage Multichain bot\\", "$basePath\"
     }
 '@
+    $content = $content -replace 'Write-Host "Checking path: \$targetPath"', $pathValidation
     
     # Fix 3: Add file listing continuation enforcement
-    $content = $content -replace '(Write-Host "--- COMPLETE FILE LIST \(ALL \$\(\$files\.Count\) FILES\) ---")', @'
+    $enforcementText = @'
 Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
     Write-Host "MANDATORY: ALL FILES MUST BE LISTED - NO EXCEPTIONS"
 '@
+    $content = $content -replace 'Write-Host "--- COMPLETE FILE LIST \(ALL \$\(\$files\.Count\) FILES\) ---"', $enforcementText
     
     # Fix 4: Add chunking for large file lists
-    $content = $content -replace '(\$files \| Sort-Object FullName \| ForEach-Object {)', @'
+    $chunkingCode = @'
 # Process files in chunks if more than 500
     if ($files.Count -gt 500) {
         Write-Host "LARGE FOLDER DETECTED: Processing in chunks of 500 files"
@@ -58,17 +63,19 @@ Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
     } else {
         $files | Sort-Object FullName | ForEach-Object {
 '@
+    $content = $content -replace '\$files \| Sort-Object FullName \| ForEach-Object \{', $chunkingCode
     
     # Fix 5: Close the else block properly
-    $content = $content -replace '(\$fileIndex\+\+\s*}\s*Write-Host "--- END OF COMPLETE LIST ---")', @'
+    $closeBlock = @'
 $fileIndex++
         }
     }
     Write-Host "--- END OF COMPLETE LIST ---"
 '@
+    $content = $content -replace '\$fileIndex\+\+\s*\}\s*Write-Host "--- END OF COMPLETE LIST ---"', $closeBlock
     
     # Fix 6: Add completion enforcement messages
-    $content = $content -replace '(\*\*VALIDATION REQUIRED:)', @'
+    $enforcementMsg = @'
 **🚨 CRITICAL ENFORCEMENT 🚨**
 - YOU MUST LIST EVERY SINGLE FILE - NO EXCEPTIONS
 - IF INTERRUPTED, YOU MUST CONTINUE FROM WHERE YOU STOPPED
@@ -77,22 +84,26 @@ $fileIndex++
 
 **VALIDATION REQUIRED:
 '@
+    $content = $content -replace '\*\*VALIDATION REQUIRED:', $enforcementMsg
     
     # Fix 7: Add stronger language for file listing requirements
-    $content = $content -replace 'list EVERY filename explicitly', @'list EVERY filename explicitly
+    $strongerLang = 'list EVERY filename explicitly
 - **CONTINUATION REQUIRED**: If output is truncated, IMMEDIATELY continue listing from the last file
 - **NO COMPLETION WITHOUT FULL LISTING**: Do not move to next step until ALL files are documented
-- **CHUNK MARKERS**: For folders with 500+ files, use "CHUNK X OF Y" markers'@
+- **CHUNK MARKERS**: For folders with 500+ files, use "CHUNK X OF Y" markers'
+    $content = $content -replace 'list EVERY filename explicitly', $strongerLang
     
     # Fix 8: Add validation loop requirements
-    $content = $content -replace '(\*\*If ANY element is missing, your output is INCOMPLETE and MUST be revised\.\*\*)', @'
+    $validationLoop = @'
 **If ANY element is missing, your output is INCOMPLETE and MUST be revised.**
 
 **🔄 CONTINUOUS VALIDATION LOOP:**
 - After every 100 files listed → Verify count matches PowerShell
 - At each folder boundary → Confirm all files in folder are listed
 - Before writing .md files → Triple-check ALL files are documented
-- If ANY file is missing → STOP and add missing files IMMEDIATELY'@
+- If ANY file is missing → STOP and add missing files IMMEDIATELY
+'@
+    $content = $content -replace '\*\*If ANY element is missing, your output is INCOMPLETE and MUST be revised\.\*\*', $validationLoop
     
     # Check if content was modified
     if ($content -ne $originalContent) {

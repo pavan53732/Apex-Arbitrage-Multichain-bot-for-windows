@@ -282,7 +282,7 @@ C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitra
 ```powershell
 try {
     $basePath = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
-    $targetPath = Join-Path $basePath "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\archive\archived-tests"
+    $targetPath = Join-Path $basePath "archive\archived-tests"
     
     Write-Host "Checking path: $targetPath"
     
@@ -304,6 +304,10 @@ try {
     }
     Write-Host "--- END OF FOLDER STRUCTURE ---"
     
+    # Check if we need chunking for large folders
+    if ($files.Count -gt 500) {
+        Write-Host "LARGE FOLDER: $($files.Count) files - Processing in chunks"
+    }
     Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
     $fileIndex = 1
     $files | Sort-Object FullName | ForEach-Object { 
@@ -1221,6 +1225,13 @@ Before writing files, verify:
 4. features documentation will be updated
 
 If ANY check fails: STOP and report issue
+
+**CRITICAL VALIDATION POINTS:**
+1. After PowerShell enumeration → Count files
+2. After folder tree creation → Verify all files present
+3. After Feature Files section → Double-check counts match
+4. Before writing .md files → Triple-check completeness
+5. If ANY discrepancy → STOP and fix immediately
 
 ## Feature:"
         "Feature files list" = $content -match "Feature Files:"
