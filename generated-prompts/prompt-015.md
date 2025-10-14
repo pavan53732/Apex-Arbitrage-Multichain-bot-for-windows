@@ -43,6 +43,27 @@ Given a legacy folder path, analyze actual files from the actual filesystem (via
 
 Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** that CANNOT be skipped or simplified:
 
+### MANDATORY COMPLIANCE - ZERO TOLERANCE POLICY
+
+**ABSOLUTE REQUIREMENTS:**
+- LIST ALL 5000+ FILES (NO EXCEPTIONS)
+- LIST ALL 1000+ FOLDERS (NO EXCEPTIONS)  
+- WRITE 20-30 WORDS PER FILE (NO EXCEPTIONS)
+- CONTINUE UNTIL 100% COMPLETE (NO EXCEPTIONS)
+
+**INSTANT FAILURE CONDITIONS:**
+- Using ... or etc = IMMEDIATE FAIL
+- Using "and more" = IMMEDIATE FAIL
+- Stopping early = IMMEDIATE FAIL
+- Skipping ANY file = IMMEDIATE FAIL
+
+**ENFORCEMENT:**
+If you skip even 1 file out of 5000, YOU HAVE FAILED.
+There is NO acceptable reason to not list a file.
+CONTINUE LISTING until EVERY file is documented.
+
+Before you begin, understand that this prompt has **MANDATORY REQUIREMENTS** that CANNOT be skipped or simplified:
+
 ### ❌ FORBIDDEN SHORTCUTS:
 
 - ❌ "and more files..." or "etc." - MUST list EVERY file
@@ -86,13 +107,31 @@ Found 3247 files in backend/plugins/
 - uniswap-v3-adapter-001.js → Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
 ... (LIST ALL 2500 FILES - NO SKIPPING)
 
+**MANDATORY: Every single file MUST have:**
+- Full filename with extension
+- Arrow separator (→)
+- 20-30 word technical description
+- NO shortcuts, NO summaries, NO grouping
+
 **Test Files (500 files):**
 - uniswap-v2-adapter-001.test.js → Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
 ... (LIST ALL 500 FILES - NO SKIPPING)
 
+**MANDATORY: Every single file MUST have:**
+- Full filename with extension
+- Arrow separator (→)
+- 20-30 word technical description
+- NO shortcuts, NO summaries, NO grouping
+
 **Config Files (247 files):**
 - uniswap-config.json → Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
 ... (LIST ALL 247 FILES - NO SKIPPING)
+
+**MANDATORY: Every single file MUST have:**
+- Full filename with extension
+- Arrow separator (→)
+- 20-30 word technical description
+- NO shortcuts, NO summaries, NO grouping
 ```
 
 ❌ WRONG (skipping):
@@ -127,7 +166,15 @@ backend/
 ... (SHOW ALL 300 FOLDERS - NO SKIPPING)
 ```
 
-**VALIDATION BEFORE WRITING:**
+**VALIDATION BEFORE WRITING:
+
+**CHUNKING STRATEGY FOR MASSIVE LISTS:**
+- If output exceeds response limit, use CHUNKS
+- Chunk 1: Files 1-500 with marker [CONTINUING IN NEXT RESPONSE]
+- Chunk 2: Files 501-1000 with marker [CONTINUING FROM PREVIOUS]
+- Continue until ALL files are listed
+- NEVER skip files between chunks
+**
 
 - [ ] PowerShell found 3247 files → My output lists 3247 files ✅
 - [ ] PowerShell found 312 folders → My folder tree shows 312 folders ✅
@@ -308,7 +355,9 @@ try {
     if ($files.Count -gt 500) {
         Write-Host "LARGE FOLDER: $($files.Count) files - Processing in chunks"
     }
-    Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
+    Write-Host "REMINDER: Must list EVERY file - Use CHUNKS if needed"
+Write-Host "REMINDER: Must list EVERY file - Use CHUNKS if needed"
+Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
     $fileIndex = 1
     $files | Sort-Object FullName | ForEach-Object { 
         Write-Host "FILE $fileIndex/$($files.Count): $($_.FullName)"
@@ -339,7 +388,15 @@ try {
 - **SUMMARY FORMAT**: Begin analysis with: "Feature #[X]: [Feature Name] - Found [N] files across [M] folders"
 - **MANDATORY COUNTS**: PowerShell already shows counts, but AI must restate them in analysis
 - **STRUCTURED OUTPUT**: Format all analysis as numbered features with complete file/folder counts
-- **VERIFICATION CHECKLIST**: Before writing files, verify counts match PowerShell output exactly
+- **VERIFICATION CHECKLIST**: 
+### VALIDATION LOOP REQUIREMENT
+
+After EVERY 100 files:
+1. COUNT what you listed
+2. VERIFY against PowerShell count
+3. If mismatch, GO BACK and fix
+4. DO NOT proceed until counts match
+Before writing files, verify counts match PowerShell output exactly
 - **SCAFFOLDED FILES**: Even if files are empty placeholders, they MUST be analyzed for feature intent from filename patterns
 - **MINIMUM REQUIREMENT**: If folder has 50+ files, list ALL 50+ files by name
 - **NO SHORTCUTS ALLOWED**: If PowerShell shows 60 files, you MUST list all 60 files individually with descriptions
@@ -512,7 +569,7 @@ Windows Implementation:
 - Make it work on Windows  ← TOO VAGUE!
 
 ❌ WRONG - Missing structured format
-The ai-modules feature should be implemented by adding files to the appropriate location and ensuring compatibility with the Windows environment.
+The ai-modules feature MUST be implemented by adding files to the appropriate location and ensuring compatibility with the Windows environment.
 ```
 
 **CONFIDENCE SCORING EXAMPLES:**
@@ -833,7 +890,7 @@ Map features to specific Windows technologies:
 
 **WINDOWS IMPLEMENTATION BULLET FORMAT:**
 
-Each bullet should be ONE sentence describing:
+Each bullet MUST be ONE sentence describing:
 - WHAT it does (action)
 - WHERE it happens (component/location)
 - HOW it integrates (connection method)
@@ -900,7 +957,21 @@ Each bullet should be ONE sentence describing:
 - [ ] References added to other .md files
 - [ ] Temp files deleted
 
-**If ANY element is missing, your output is INCOMPLETE and MUST be revised.**
+**If ANY element is missing
+
+**CONTINUATION PROTOCOL:**
+- If interrupted at file 500 of 5000
+- IMMEDIATELY continue from file 501
+- DO NOT restart from beginning
+- COMPLETE the remaining 4500 files
+- NO EXCUSES ACCEPTED
+
+**CONTINUATION PROTOCOL:**
+- If interrupted at file 500 of 5000
+- IMMEDIATELY continue from file 501
+- DO NOT restart from beginning
+- COMPLETE the remaining 4500 files
+- NO EXCUSES ACCEPTED, your output is INCOMPLETE and MUST be revised.**
 
 ## STEP 5.5: CROSS-REFERENCE VALIDATION 🔗
 
@@ -1053,7 +1124,7 @@ Map features to specific Windows technologies:
 
 **WINDOWS IMPLEMENTATION BULLET FORMAT:**
 
-Each bullet should be ONE sentence describing:
+Each bullet MUST be ONE sentence describing:
 - WHAT it does (action)
 - WHERE it happens (component/location)
 - HOW it integrates (connection method)
@@ -1217,6 +1288,14 @@ Final: `Dex Adapters`
 
 ## POST-GENERATION QUALITY CHECKS
 
+
+### VALIDATION LOOP REQUIREMENT
+
+After EVERY 100 files:
+1. COUNT what you listed
+2. VERIFY against PowerShell count
+3. If mismatch, GO BACK and fix
+4. DO NOT proceed until counts match
 Before writing files, verify:
 1. All 5 output sections complete
 1. Feature Files list NOT empty (unless scaffolded)
