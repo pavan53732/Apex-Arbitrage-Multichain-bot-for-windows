@@ -20,11 +20,7 @@ $replacementLine = '- Enforce numbering rules: per-level reset, separate folder/
 
 foreach ($f in $slice) {
   $i++
-  try {
-    $orig = Get-Content -LiteralPath $f.FullName -Raw -Encoding UTF8
-  } catch {
-    $orig = Get-Content -LiteralPath $f.FullName -Raw
-  }
+  $orig = Get-Content -LiteralPath $f.FullName -Raw
 
   # Replace any enforcement bullet line (with any preceding symbols) to a clean ASCII-only line
   $content = [System.Text.RegularExpressions.Regex]::Replace(
@@ -33,8 +29,15 @@ foreach ($f in $slice) {
     $replacementLine
   )
 
-  # Replace ellipsis mojibake: E2 80 A6 mis-decoded as U+00E2 U+20AC U+00A6
-  $content = [System.Text.RegularExpressions.Regex]::Replace($content, "\x{00E2}\x{20AC}\x{00A6}", "...")
+  # Replace common mis-decoded UTF-8 sequences (ASCII-safe via \u escapes)
+  # Ellipsis … (UTF-8 E2 80 A6) mis-decoded as â€¦ (U+00E2 U+20AC U+00A6)
+  $content = $content -replace "\u00E2\u20AC\u00A6", "..."
+
+  # Fallback using explicit codepoints concatenation (no literal mojibake in script)
+  $ellipsisMojibake = ([char]0x00E2).ToString() + ([char]0x20AC).ToString() + ([char]0x00A6).ToString()
+  if ($content.Contains($ellipsisMojibake)) {
+    $content = $content.Replace($ellipsisMojibake, "...")
+  }
 
   if ($content -ne $orig) {
     # Normalize to LF endings and write UTF-8 without BOM
