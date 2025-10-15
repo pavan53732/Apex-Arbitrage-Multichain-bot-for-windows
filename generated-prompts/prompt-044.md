@@ -588,6 +588,38 @@ The ai-modules feature MUST be implemented by adding files to the appropriate lo
 **FORBIDDEN**: Skipping the folder tree section will result in REJECTED output.
 
 **REQUIRED FORMAT:**
+###  MANDATORY NUMBERING FORMAT
+
+####  FOLDER NUMBERING FORMAT
+- **FOLDER X/Y: foldername/** - Number folders sequentially within each level using X/Y notation where X is the current level's position and Y is the total count at that level
+- **FILE X/Y: filename.ext** - Number files sequentially within each folder using X/Y notation where X is the file's position and Y is the total file count in that folder
+
+####  NUMBERING EXAMPLES
+`
+FOLDER 1/3: ai-modules/
+ FOLDER 1/2: datasets/
+    FILE 1/5: ai-decision-corpus.json
+    FILE 2/5: features.csv
+    FILE 3/5: profitLabels.json
+    FILE 4/5: trade-history.csv
+    FILE 5/5: README.md
+ FOLDER 2/2: features/
+     FILE 1/5: featureExtractor.js
+     [additional files numbered 2/5 through 5/5]
+`
+
+####  NUMBERING RULES
+- **Hierarchical numbering**: Each level resets numbering (1/3, 1/2, not 1/3, 4/5)
+- **Sequential within level**: Files and folders numbered 1, 2, 3... within their container
+- **Total count**: Y represents the total number of items at that level
+- **Consistent format**: Always use "FOLDER X/Y:" or "FILE X/Y:" prefixes
+
+####  CRITICAL REQUIREMENTS
+- **MANDATORY**: All folder and file listings MUST use this numbering format
+- **FORBIDDEN**: Using generic terms like "Multiple files" or "Various folders"
+- **REQUIRED**: Every single folder and file must be individually numbered
+- **VERIFICATION**: AI agents must validate numbering accuracy before output
+
 
 ```
 Folder Structure:
@@ -1481,4 +1513,5 @@ IF YOU DISCOVER DURING VALIDATION THAT FILES WERE SKIPPED:
 - ✅ Full Windows paths with C:\
 
 **IF TOOL FAILS 2 TIMES: STOP and report error. DO NOT retry same command 3+ times.**
+
 
