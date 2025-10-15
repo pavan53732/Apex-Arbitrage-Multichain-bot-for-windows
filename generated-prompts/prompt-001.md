@@ -1,4 +1,4 @@
-## Ã°Å¸Å½Â¯ DELEGATION FLOW: COMPLETE ALL STEPS
+## ðŸŽ¯ DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
@@ -6,13 +6,13 @@ You WILL need to delegate to specialized modes. That's CORRECT. But you MUST COM
 
 **DELEGATION SEQUENCE:**
 
-1. Ã¢Å“... **DevOps mode** Ã¢â€ â€™ Execute run_terminal_cmd tool to enumerate files
+1. âœ... **DevOps mode** â†' Execute run_terminal_cmd tool to enumerate files
 
-2. Ã¢Å“... **Project Research mode** Ã¢â€ â€™ Analyze file names and project structure
+2. âœ... **Project Research mode** â†' Analyze file names and project structure
 
-3. Ã¢Å“... **Ask mode** Ã¢â€ â€™ Read existing features/*.md files to count features
+3. âœ... **Ask mode** â†' Read existing features/*.md files to count features
 
-4. Ã¢Å“... **Write mode** Ã¢â€ â€™ Write COMPLETE feature documentation
+4. âœ... **Write mode** â†' Write COMPLETE feature documentation
 
 5. **DevOps mode** - Delete temp files
 
@@ -36,7 +36,7 @@ Given a legacy folder path, analyze actual files from the actual filesystem (via
 
 ---
 
-## Ã¢Å¡Â Ã¯Â¸Â CRITICAL STOP-CHECK BEFORE EXECUTION Ã¢Å¡Â Ã¯Â¸Â
+## âš ï¸ CRITICAL STOP-CHECK BEFORE EXECUTION âš ï¸
 
 **READ THIS FIRST - DO NOT SKIP:**
 
@@ -61,30 +61,30 @@ If you skip even 1 file out of 5000, YOU HAVE FAILED.
 There is NO acceptable reason to not list a file.
 CONTINUE LISTING until EVERY file is documented.
 
-### Ã¢ÂÅ’ FORBIDDEN SHORTCUTS:
+### âŒ FORBIDDEN SHORTCUTS:
 
-- Ã¢ÂÅ’ "and more files..." or "etc." - MUST list EVERY file
-- Ã¢ÂÅ’ Incomplete file counts - PowerShell shows 54 files? List ALL 54
-- Ã¢ÂÅ’ Missing Technologies section - REQUIRED
-- Ã¢ÂÅ’ Less than 8 Windows Implementation bullets - MINIMUM 8-12
-- Ã¢ÂÅ’ No references to other .md files - REQUIRED
-- Ã¢ÂÅ’ No features documentation update - REQUIRED
-- Ã¢ÂÅ’ No temp file cleanup - REQUIRED
-- Ã¢ÂÅ’ No feature numbering - MUST count existing features first
+- âŒ "and more files..." or "etc." - MUST list EVERY file
+- âŒ Incomplete file counts - PowerShell shows 54 files? List ALL 54
+- âŒ Missing Technologies section - REQUIRED
+- âŒ Less than 8 Windows Implementation bullets - MINIMUM 8-12
+- âŒ No references to other .md files - REQUIRED
+- âŒ No features documentation update - REQUIRED
+- âŒ No temp file cleanup - REQUIRED
+- âŒ No feature numbering - MUST count existing features first
 
-### Ã°Å¸Å¡Â¨ MANDATORY: HANDLE 3000+ FILES WITHOUT SKIPPING Ã°Å¸Å¡Â¨
+### ðŸš¨ MANDATORY: HANDLE 3000+ FILES WITHOUT SKIPPING ðŸš¨
 
 **YOUR PROMPTS MUST HANDLE MASSIVE FOLDERS:**
 
-- Ã¢Å“... **3000+ files** Ã¢â€ â€™ List EVERY SINGLE file with 20-30 word description
-- Ã¢Å“... **300+ folders** Ã¢â€ â€™ Show COMPLETE nested tree structure
-- Ã¢Å“... **NO SHORTCUTS** Ã¢â€ â€™ FORBIDDEN to skip, summarize, or use "etc."
-- Ã¢Å“... **NO TOKEN EXCUSES** Ã¢â€ â€™ You have 1M token context window (750K words capacity)
+- âœ... **3000+ files** â†' List EVERY SINGLE file with 20-30 word description
+- âœ... **300+ folders** â†' Show COMPLETE nested tree structure
+- âœ... **NO SHORTCUTS** â†' FORBIDDEN to skip, summarize, or use "etc."
+- âœ... **NO TOKEN EXCUSES** â†' You have 1M token context window (750K words capacity)
 
 **CALCULATION:**
 
-- 3000 files Ãƒâ€” 30 words = 90,000 words
-- 300 folders Ãƒâ€” 10 words = 3,000 words
+- 3000 files Ã-- 30 words = 90,000 words
+- 300 folders Ã-- 10 words = 3,000 words
 - Total: ~93,000 words (only 12% of your 750K capacity)
 
 **YOU HAVE 8X MORE CAPACITY THAN NEEDED!**
@@ -93,45 +93,45 @@ CONTINUE LISTING until EVERY file is documented.
 
 **EXAMPLES OF WHAT YOU MUST DO:**
 
-Ã¢Å“... CORRECT (3000 files):
+âœ... CORRECT (3000 files):
 
 ```
 Found 3247 files in backend/plugins/
 
 **DEX Adapters (2500 files):**
-- uniswap-v2-adapter-001.js Ã¢â€ â€™ Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
-- uniswap-v2-adapter-002.js Ã¢â€ â€™ Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
-- uniswap-v3-adapter-001.js Ã¢â€ â€™ Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
+- uniswap-v2-adapter-001.js â†' Connects to Uniswap V2 mainnet contracts, handles swap routing through optimal pools, manages slippage protection with configurable thresholds, caches pool states in Redis for 30-second intervals to reduce RPC calls
+- uniswap-v2-adapter-002.js â†' Implements batch swap functionality for Uniswap V2, aggregates multiple trades into single transaction, optimizes gas costs through multicall patterns, validates token approvals before execution
+- uniswap-v3-adapter-001.js â†' Uniswap V3 adapter with concentrated liquidity support, tick-based pricing calculations, multi-hop routing optimization across fee tiers, real-time fee selection based on volatility metrics
 ... (LIST ALL 2500 FILES - NO SKIPPING)
 
 **MANDATORY: Every single file MUST have:**
 - Full filename with extension
-- Arrow separator (Ã¢â€ â€™)
+- Arrow separator (â†')
 - 20-30 word technical description
 - NO shortcuts, NO summaries, NO grouping
 
 **Test Files (500 files):**
-- uniswap-v2-adapter-001.test.js Ã¢â€ â€™ Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
+- uniswap-v2-adapter-001.test.js â†' Unit tests for Uniswap V2 adapter covering swap execution, error handling, gas estimation, slippage calculations, integration with mock blockchain provider, edge cases for failed transactions
 ... (LIST ALL 500 FILES - NO SKIPPING)
 
 
 **Config Files (247 files):**
-- uniswap-config.json Ã¢â€ â€™ Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
+- uniswap-config.json â†' Configuration for Uniswap V2/V3 contract addresses across mainnet, Polygon, Arbitrum, Optimism, includes router addresses, factory addresses, WETH addresses, default slippage settings
 ... (LIST ALL 247 FILES - NO SKIPPING)
 
 ```
 
-Ã¢ÂÅ’ WRONG (skipping):
+âŒ WRONG (skipping):
 
 ```
-- uniswap-v2-adapter-001.js Ã¢â€ â€™ Uniswap adapter
-- uniswap-v2-adapter-002.js Ã¢â€ â€™ Another adapter
-... and 2498 more files  Ã¢â€ Â FORBIDDEN! REJECTED!
+- uniswap-v2-adapter-001.js â†' Uniswap adapter
+- uniswap-v2-adapter-002.js â†' Another adapter
+... and 2498 more files  â† FORBIDDEN! REJECTED!
 ```
 
 **FOLDER TREE EXAMPLE (300 folders):**
 
-Ã¢Å“... CORRECT:
+âœ... CORRECT:
 
 ```
 backend/
@@ -139,17 +139,17 @@ backend/
 |   +-- dex-adapters/
 |   |   +-- uniswap/
 |   |   |   +-- v2/
-|   |   |   |   +-- core/           Ã¢â€ â€™ Core V2 swap logic
-|   |   |   |   +-- router/         Ã¢â€ â€™ V2 routing algorithms
-|   |   |   |   +-- utils/          Ã¢â€ â€™ V2 helper functions
+|   |   |   |   +-- core/           â†' Core V2 swap logic
+|   |   |   |   +-- router/         â†' V2 routing algorithms
+|   |   |   |   +-- utils/          â†' V2 helper functions
 |   |   |   +-- v3/
-|   |   |   |   +-- core/           Ã¢â€ â€™ Core V3 swap logic
-|   |   |   |   +-- quoter/         Ã¢â€ â€™ V3 price quotation
-|   |   |   |   +-- position/       Ã¢â€ â€™ V3 liquidity positions
-|   |   |   +-- common/             Ã¢â€ â€™ Shared Uniswap utilities
+|   |   |   |   +-- core/           â†' Core V3 swap logic
+|   |   |   |   +-- quoter/         â†' V3 price quotation
+|   |   |   |   +-- position/       â†' V3 liquidity positions
+|   |   |   +-- common/             â†' Shared Uniswap utilities
 |   |   +-- sushiswap/
-|   |   |   +-- core/               Ã¢â€ â€™ SushiSwap core logic
-|   |   |   +-- router/             Ã¢â€ â€™ SushiSwap routing
+|   |   |   +-- core/               â†' SushiSwap core logic
+|   |   |   +-- router/             â†' SushiSwap routing
 ... (SHOW ALL 300 FOLDERS - NO SKIPPING)
 ```
 
@@ -163,14 +163,14 @@ backend/
 - NEVER skip files between chunks
 **
 
-- [ ] PowerShell found 3247 files Ã¢â€ â€™ My output lists 3247 files Ã¢Å“...
-- [ ] PowerShell found 312 folders Ã¢â€ â€™ My folder tree shows 312 folders Ã¢Å“...
-- [ ] Every file has 20-30 word description Ã¢Å“...
-- [ ] No "etc.", "and more", or "..." shortcuts Ã¢Å“...
+- [ ] PowerShell found 3247 files â†' My output lists 3247 files âœ...
+- [ ] PowerShell found 312 folders â†' My folder tree shows 312 folders âœ...
+- [ ] Every file has 20-30 word description âœ...
+- [ ] No "etc.", "and more", or "..." shortcuts âœ...
 
 **IF ANY CHECK FAILS: STOP AND FIX IT BEFORE WRITING FILES.**
 
-### Ã¢Å“... QUALITY STANDARDS:
+### âœ... QUALITY STANDARDS:
 
 1. **File Enumeration**: If PowerShell finds 54 files, your Feature Files section MUST list all 54 files with descriptions
 1. **COMPLETE Grouping**: Group ALL files by purpose - no file left behind
@@ -182,7 +182,7 @@ backend/
 8. **Cleanup**: Delete temp_*.ps1 files you created
 9. **Complete Folder Structure**: Use numbered format 'FOLDER X/Y: foldername/' and 'FILE X/Y: filename.ext' for ALL folders and files; numbering resets per level, folder/file counters are separate, and ordering is folders-first then files (A->Z) at each level
 
-### Ã°Å¸â€œÂ SELF-CHECK BEFORE WRITING:
+### ðŸ" SELF-CHECK BEFORE WRITING:
 
 Ask yourself:
 
@@ -195,19 +195,19 @@ Ask yourself:
 
 **If you answer NO to ANY question above, DO NOT PROCEED. Go back and COMPLETE it.**
 
-### Ã°Å¸â€œÅ  EXAMPLE OF COMPLETE OUTPUT:
+### ðŸ"Š EXAMPLE OF COMPLETE OUTPUT:
 
 ```
-## Feature 1: Ai Modules Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­Â (Highly Complex - 54 files)
+## Feature 1: Ai Modules â­â­â­â­â­ (Highly Complex - 54 files)
 
 Feature Files:
 
 Core Logic (5 files):
-- ai-engine.js Ã¢â€ â€™ Core AI processing
-- decisionMaker.js Ã¢â€ â€™ Decision logic
-- patternLearner.js Ã¢â€ â€™ Pattern recognition
-- scoreArbOpportunity.js Ã¢â€ â€™ Scoring
-- modelRouter.js Ã¢â€ â€™ Model routing
+- ai-engine.js â†' Core AI processing
+- decisionMaker.js â†' Decision logic
+- patternLearner.js â†' Pattern recognition
+- scoreArbOpportunity.js â†' Scoring
+- modelRouter.js â†' Model routing
 
 [... LIST ALL OTHER 49 FILES IN GROUPS ...]
 
@@ -230,29 +230,29 @@ Windows Implementation:
 
 **This is the MINIMUM acceptable quality. Anything less is INCOMPLETE.**
 
-## Feature 2: Explainability Ã¢Â­ÂÃ¢Â­Â (Moderate - 12 files)
+## Feature 2: Explainability â­â­ (Moderate - 12 files)
 
 Feature Files:
 
 Core Logic (3 files):
-- shap-explainer.py Ã¢â€ â€™ SHAP value calculation
-- lime-interpreter.py Ã¢â€ â€™ LIME interpretation
-- feature-importance.py Ã¢â€ â€™ Feature importance analysis
+- shap-explainer.py â†' SHAP value calculation
+- lime-interpreter.py â†' LIME interpretation
+- feature-importance.py â†' Feature importance analysis
 
 Visualization (4 files):
-- explanation-charts.js Ã¢â€ â€™ Interactive explanation charts
-- model-insights.html Ã¢â€ â€™ Explanation dashboard
-- report-generator.py Ã¢â€ â€™ PDF report generation
-- visualization-utils.js Ã¢â€ â€™ Chart utilities
+- explanation-charts.js â†' Interactive explanation charts
+- model-insights.html â†' Explanation dashboard
+- report-generator.py â†' PDF report generation
+- visualization-utils.js â†' Chart utilities
 
 Configuration (2 files):
-- explainability-config.json Ã¢â€ â€™ Explanation settings
-- model-metadata.json Ã¢â€ â€™ Model information
+- explainability-config.json â†' Explanation settings
+- model-metadata.json â†' Model information
 
 Tests (3 files):
-- test-shap.py Ã¢â€ â€™ SHAP explanation tests
-- test-lime.py Ã¢â€ â€™ LIME explanation tests
-- test-visualization.js Ã¢â€ â€™ Chart rendering tests
+- test-shap.py â†' SHAP explanation tests
+- test-lime.py â†' LIME explanation tests
+- test-visualization.js â†' Chart rendering tests
 
 Technologies: Python, SHAP, LIME, Matplotlib, JavaScript, HTML
 
@@ -361,7 +361,7 @@ Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
 
 **IMPORTANT:** Execute this PowerShell script using run_terminal_cmd tool. Do NOT break it into individual characters or lines.
 
-**Ã°Å¸Å¡Â¨ MANDATORY COUNT VALIDATION - ZERO TOLERANCE Ã°Å¸Å¡Â¨**
+**ðŸš¨ MANDATORY COUNT VALIDATION - ZERO TOLERANCE ðŸš¨**
 
 **CRITICAL: BEFORE YOU WRITE ANY ANALYSIS, YOU MUST:**
 
@@ -371,8 +371,8 @@ Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
    - Look for "TOTAL FILES FOUND: [NUMBER]"
    - Look for "TOTAL FOLDERS FOUND: [NUMBER]"
 4. **VERIFY YOUR ANALYSIS MATCHES EXACTLY**:
-   - If PowerShell says "TOTAL FILES FOUND: 54" Ã¢â€ â€™ Your analysis MUST say "54 files"
-   - If PowerShell says "TOTAL FOLDERS FOUND: 10" Ã¢â€ â€™ Your analysis MUST say "10 folders"
+   - If PowerShell says "TOTAL FILES FOUND: 54" â†' Your analysis MUST say "54 files"
+   - If PowerShell says "TOTAL FOLDERS FOUND: 10" â†' Your analysis MUST say "10 folders"
    - **NO EXCEPTIONS, NO APPROXIMATIONS, NO ROUNDING**
 
 **INSTANT FAILURE CONDITIONS:**
@@ -382,14 +382,14 @@ Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
 - If you don't read the full output = IMMEDIATE FAILURE
 
 **MANDATORY VALIDATION STEPS:**
-1. Ã¢Å“... **Step 1**: Execute PowerShell command using run_terminal_cmd
-2. Ã¢Å“... **Step 2**: Read complete output until "END OF COMPLETE LIST"
-3. Ã¢Å“... **Step 3**: Extract exact numbers from PowerShell output
-4. Ã¢Å“... **Step 4**: State the exact numbers in your analysis
-5. Ã¢Å“... **Step 5**: Verify your file list count matches PowerShell count
-6. Ã¢Å“... **Step 6**: Verify your folder count matches PowerShell count
+1. âœ... **Step 1**: Execute PowerShell command using run_terminal_cmd
+2. âœ... **Step 2**: Read complete output until "END OF COMPLETE LIST"
+3. âœ... **Step 3**: Extract exact numbers from PowerShell output
+4. âœ... **Step 4**: State the exact numbers in your analysis
+5. âœ... **Step 5**: Verify your file list count matches PowerShell count
+6. âœ... **Step 6**: Verify your folder count matches PowerShell count
 
-**Ã°Å¸Å¡Â¨ MANDATORY OUTPUT FORMAT - COPY THIS EXACTLY Ã°Å¸Å¡Â¨**
+**ðŸš¨ MANDATORY OUTPUT FORMAT - COPY THIS EXACTLY ðŸš¨**
 
 **BEFORE YOU WRITE ANY ANALYSIS, YOU MUST OUTPUT THIS EXACT FORMAT:**
 
@@ -420,27 +420,27 @@ The enumeration is complete and ready for the next step in the process.
 - **IF POWERSHELL SHOWS 54 FILES, YOU MUST SHOW 54 FILES**
 - **IF POWERSHELL SHOWS 10 FOLDERS, YOU MUST SHOW 10 FOLDERS**
 
-**Ã°Å¸Å¡Â¨ FINAL VALIDATION CHECK - MANDATORY Ã°Å¸Å¡Â¨**
+**ðŸš¨ FINAL VALIDATION CHECK - MANDATORY ðŸš¨**
 
 **BEFORE YOU PROCEED TO STEP 3, YOU MUST VERIFY:**
 
 1. **COUNT VERIFICATION**: 
    - PowerShell said: "TOTAL FILES FOUND: [X]"
    - Your analysis says: "[X] files"
-   - Ã¢Å“... MATCH = Continue
-   - Ã¢ÂÅ’ MISMATCH = STOP and fix immediately
+   - âœ... MATCH = Continue
+   - âŒ MISMATCH = STOP and fix immediately
 
 2. **FOLDER COUNT VERIFICATION**:
    - PowerShell said: "TOTAL FOLDERS FOUND: [Y]"
    - Your analysis says: "[Y] folders"
-   - Ã¢Å“... MATCH = Continue
-   - Ã¢ÂÅ’ MISMATCH = STOP and fix immediately
+   - âœ... MATCH = Continue
+   - âŒ MISMATCH = STOP and fix immediately
 
 3. **FILE LIST VERIFICATION**:
    - PowerShell listed [X] files
    - Your analysis lists [X] files
-   - Ã¢Å“... MATCH = Continue
-   - Ã¢ÂÅ’ MISMATCH = STOP and fix immediately
+   - âœ... MATCH = Continue
+   - âŒ MISMATCH = STOP and fix immediately
 
 **IF ANY VERIFICATION FAILS:**
 - STOP immediately
@@ -453,18 +453,18 @@ The enumeration is complete and ready for the next step in the process.
 ```
 PowerShell Output: "TOTAL FILES FOUND: 54"
 My Analysis: "TOTAL FILES FOUND: 54"
-Ã¢Å“... VERIFICATION PASSED - Counts match exactly
+âœ... VERIFICATION PASSED - Counts match exactly
 
 PowerShell Output: "TOTAL FOLDERS FOUND: 10"  
 My Analysis: "TOTAL FOLDERS FOUND: 10"
-Ã¢Å“... VERIFICATION PASSED - Counts match exactly
+âœ... VERIFICATION PASSED - Counts match exactly
 ```
 
 **EXAMPLE OF INCORRECT VALIDATION (FAILURE):**
 ```
 PowerShell Output: "TOTAL FILES FOUND: 54"
 My Analysis: "TOTAL FILES FOUND: 59"
-Ã¢ÂÅ’ VERIFICATION FAILED - Counts do not match
+âŒ VERIFICATION FAILED - Counts do not match
 STOP: Fix the count to match PowerShell exactly
 ```
 
@@ -495,10 +495,10 @@ STOP: Fix the count to match PowerShell exactly
 Found 10 files in backend/plugins/dex-adapters:
 - uniswap-v2-adapter.js
 - sushiswap-adapter.js
-- ... (8 more files)  Ã¢â€ Â FORBIDDEN!
-- and more files  Ã¢â€ Â FORBIDDEN!
-- plus 8 additional files  Ã¢â€ Â FORBIDDEN!
-- similar files  Ã¢â€ Â FORBIDDEN!
+- ... (8 more files)  â† FORBIDDEN!
+- and more files  â† FORBIDDEN!
+- plus 8 additional files  â† FORBIDDEN!
+- similar files  â† FORBIDDEN!
 ```
 
 **CORRECT (COMPLETE):**
@@ -524,19 +524,19 @@ If folder has 100+ files, list ALL files but group by type for readability:
 Found 150 files in backend/plugins:
 
 JavaScript files (120):
-- adapter-1.js Ã¢â€ â€™ Description
-- adapter-2.js Ã¢â€ â€™ Description
-- adapter-3.js Ã¢â€ â€™ Description
+- adapter-1.js â†' Description
+- adapter-2.js â†' Description
+- adapter-3.js â†' Description
 ... (list ALL 120 files individually with descriptions)
 
 Test files (20):
-- test-1.test.js Ã¢â€ â€™ Description
-- test-2.test.js Ã¢â€ â€™ Description
+- test-1.test.js â†' Description
+- test-2.test.js â†' Description
 ... (list ALL 20 files individually with descriptions)
 
 Config files (10):
-- config-1.json Ã¢â€ â€™ Description
-- config-2.json Ã¢â€ â€™ Description
+- config-1.json â†' Description
+- config-2.json â†' Description
 ... (list ALL 10 files individually with descriptions)
 ```
 Still list EVERY file individually with descriptions. FORBIDDEN to use "etc." or "and more files". Your count MUST equal 150 total entries.
@@ -568,9 +568,9 @@ THEN: Primary feature = JavaScript functionality
      References = Mention secondary features
 
 EXAMPLE: backend/plugins/dex-adapters/
-- adapter.js (primary) Ã¢â€ â€™ Dex Adapters feature
-- config.json (secondary) Ã¢â€ â€™ Configuration
-- README.md (secondary) Ã¢â€ â€™ Documentation
+- adapter.js (primary) â†' Dex Adapters feature
+- config.json (secondary) â†' Configuration
+- README.md (secondary) â†' Documentation
 ```
 
 **Scenario B: Empty or Scaffolded Folders**
@@ -581,7 +581,7 @@ THEN: Feature = Scaffolded [Folder Name]
      Implementation = "Awaiting development"
 
 EXAMPLE: ai-modules/models/training/
-- Empty folder Ã¢â€ â€™ Scaffolded Training Models feature
+- Empty folder â†' Scaffolded Training Models feature
 - Owner = ai-modules.md (based on parent path)
 ```
 
@@ -593,8 +593,8 @@ THEN: Focus on Windows-compatible files
      Owner = Windows functionality
 
 EXAMPLE: dashboard/components/
-- legacy-component.js (legacy) Ã¢â€ â€™ Reference only
-- windows-component.tsx (Windows) Ã¢â€ â€™ Primary feature
+- legacy-component.js (legacy) â†' Reference only
+- windows-component.tsx (Windows) â†' Primary feature
 ```
 
 **Scenario D: Deeply Nested Structures**
@@ -615,47 +615,47 @@ EXAMPLE: backend/engine/core/adapters/dex/
 ```
 Feature #1: Ai Modules - Found 54 files across 10 folders
 
-- "What does this FEATURE do?" Ã¢â€ â€™ Provides AI-powered trading modules and machine learning capabilities
-- "Which MD file OWNS this FEATURE?" Ã¢â€ â€™ ai-modules.md (core AI functionality)
-- "Which MD files REFERENCE this FEATURE?" Ã¢â€ â€™ backend.md (integration), dashboard.md (UI)
-- "HOW TO IMPLEMENT Ã¢â€ â€™ OWNER FILE (ai-modules.md)" Ã¢â€ â€™
+- "What does this FEATURE do?" â†' Provides AI-powered trading modules and machine learning capabilities
+- "Which MD file OWNS this FEATURE?" â†' ai-modules.md (core AI functionality)
+- "Which MD files REFERENCE this FEATURE?" â†' backend.md (integration), dashboard.md (UI)
+- "HOW TO IMPLEMENT â†' OWNER FILE (ai-modules.md)" â†'
   Append this section to the end of features/ai-modules.md:
   
   ## Feature 1: Ai Modules
   
   Feature Files:
-  - ai-engine.js Ã¢â€ â€™ Core AI processing engine
-  - ml-models.json Ã¢â€ â€™ Machine learning model configurations
-  - training-data.csv Ã¢â€ â€™ Training datasets for AI models
+  - ai-engine.js â†' Core AI processing engine
+  - ml-models.json â†' Machine learning model configurations
+  - training-data.csv â†' Training datasets for AI models
   
   Windows Implementation:
   - Implement as Windows Service for background AI processing
   - Use Windows ML for local model inference
   - Integrate with Windows Task Scheduler for periodic retraining
 
-- "HOW TO IMPLEMENT Ã¢â€ â€™ REFERENCES" Ã¢â€ â€™
-  - In features/backend.md: Ai Modules Ã¢â€ â€™ see features/ai-modules.md
-  - In features/dashboard.md: Ai Modules Ã¢â€ â€™ see features/ai-modules.md
+- "HOW TO IMPLEMENT â†' REFERENCES" â†'
+  - In features/backend.md: Ai Modules â†' see features/ai-modules.md
+  - In features/dashboard.md: Ai Modules â†' see features/ai-modules.md
 ```
 
 **INCORRECT Output Example:**
 ```
-Ã¢ÂÅ’ WRONG - Missing feature numbering
+âŒ WRONG - Missing feature numbering
 Ai Modules Analysis
 
-Ã¢ÂÅ’ WRONG - Incomplete file listing
+âŒ WRONG - Incomplete file listing
 Found some files in ai-modules:
 - ai-engine.js
-- ... (other files)  Ã¢â€ Â FORBIDDEN!
+- ... (other files)  â† FORBIDDEN!
 
-Ã¢ÂÅ’ WRONG - Missing counts
+âŒ WRONG - Missing counts
 Feature has various files across multiple folders
 
-Ã¢ÂÅ’ WRONG - Vague implementation
+âŒ WRONG - Vague implementation
 Windows Implementation:
-- Make it work on Windows  Ã¢â€ Â TOO VAGUE!
+- Make it work on Windows  â† TOO VAGUE!
 
-Ã¢ÂÅ’ WRONG - Missing structured format
+âŒ WRONG - Missing structured format
 The ai-modules feature MUST be implemented by adding files to the appropriate location and ensuring compatibility with the Windows environment.
 ```
 
@@ -690,7 +690,7 @@ The ai-modules feature MUST be implemented by adding files to the appropriate lo
 
 **ENHANCED OUTPUT FORMAT WITH FOLDER TREE AND DETAILED DESCRIPTIONS:**
 
-### Ã°Å¸Å¡Â¨ MANDATORY FOLDER TREE SECTION Ã°Å¸Å¡Â¨
+### ðŸš¨ MANDATORY FOLDER TREE SECTION ðŸš¨
 
 **CRITICAL**: You MUST include a COMPLETE folder tree structure showing ALL nested folders AND ALL FILES.
 
@@ -698,7 +698,7 @@ The ai-modules feature MUST be implemented by adding files to the appropriate lo
 
 **REQUIRED FORMAT:**
 
-### Ã°Å¸â€Â¢ MANDATORY NUMBERING FORMAT
+### ðŸ"¢ MANDATORY NUMBERING FORMAT
 
 **CRITICAL**: Every folder and file MUST be numbered:
 
@@ -712,20 +712,20 @@ The ai-modules feature MUST be implemented by adding files to the appropriate lo
 - File totals (Y): Count ONLY files within that single folder (exclude subfolders). Example: If a folder has 7 files and 2 subfolders, file Y = 7.
 - Sequential within scope: Files in a folder must be numbered FILE 1/Y, 2/Y, ..., Y/Y; subfolders at a level must be FOLDER 1/Y, 2/Y, ..., Y/Y.
 - Example clarity: Use 1/3 then 1/2 for a child level, NOT 1/3 then 4/5. Each level resets.
-- Deterministic ordering: At every folder level, list all subfolders first (sorted AÃ¢â€ â€™Z), then list all files (sorted AÃ¢â€ â€™Z) before descending into deeper levels.
+- Deterministic ordering: At every folder level, list all subfolders first (sorted Aâ†'Z), then list all files (sorted Aâ†'Z) before descending into deeper levels.
 - Exact counts: Compute Y from actual discovered items at that level; never guess or reuse counts from other levels.
 
 **Example:**
 
 ```
 FOLDER 1/11: backend/contracts/
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ FOLDER 2/11: docs/
-Ã¢â€â€š Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ FILE 1/125: README.md
-Ã¢â€â€š Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ FILE 2/125: GOVERNANCE.md
-Ã¢â€â€š Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ FILE 3/125: SECURITY.md
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ FOLDER 3/11: interfaces/
-Ã¢â€â€š Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ FILE 4/125: IAIAgentInterface.sol
-Ã¢â€â€š Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ FILE 5/125: IAlphaNFT.sol
+â"œâ"€â"€ FOLDER 2/11: docs/
+â"‚ â"œâ"€â"€ FILE 1/125: README.md
+â"‚ â"œâ"€â"€ FILE 2/125: GOVERNANCE.md
+â"‚ â""â"€â"€ FILE 3/125: SECURITY.md
+â"œâ"€â"€ FOLDER 3/11: interfaces/
+â"‚ â"œâ"€â"€ FILE 4/125: IAIAgentInterface.sol
+â"‚ â""â"€â"€ FILE 5/125: IAlphaNFT.sol
 ```
 
 **FORBIDDEN**: Listing without `FOLDER X/Y:` or `FILE X/Y:` prefix
@@ -734,61 +734,61 @@ FOLDER 1/11: backend/contracts/
 Folder Structure:
 
 ai-modules/
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ datasets/
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ ai-decision-corpus.json
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ features.csv
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ profitLabels.json
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ trade-history.csv
-Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ README.md
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ features/
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ featureExtractor.js
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ gasFeeSpikeFeature.js
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ latencyProfileFeature.js
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ priceDeltaFeature.js
-Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ README.md
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ models/
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ modelWeights/
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ decisionNet-v1.pt
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ patternNet-v2.onnx
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ scorerModel.json
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ volatilityClassifier.pkl
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ README.md
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ trainingOutputs/
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ accuracy-report.txt
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ token-risk-score-histogram.png
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ trade-learning-curve.png
-Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ README.md
-Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ README.md
-Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ [LIST ALL OTHER FOLDERS AND FILES]
+â"œâ"€â"€ datasets/
+â"‚   â"œâ"€â"€ ai-decision-corpus.json
+â"‚   â"œâ"€â"€ features.csv
+â"‚   â"œâ"€â"€ profitLabels.json
+â"‚   â"œâ"€â"€ trade-history.csv
+â"‚   â""â"€â"€ README.md
+â"œâ"€â"€ features/
+â"‚   â"œâ"€â"€ featureExtractor.js
+â"‚   â"œâ"€â"€ gasFeeSpikeFeature.js
+â"‚   â"œâ"€â"€ latencyProfileFeature.js
+â"‚   â"œâ"€â"€ priceDeltaFeature.js
+â"‚   â""â"€â"€ README.md
+â"œâ"€â"€ models/
+â"‚   â"œâ"€â"€ modelWeights/
+â"‚   â"‚   â"œâ"€â"€ decisionNet-v1.pt
+â"‚   â"‚   â"œâ"€â"€ patternNet-v2.onnx
+â"‚   â"‚   â"œâ"€â"€ scorerModel.json
+â"‚   â"‚   â"œâ"€â"€ volatilityClassifier.pkl
+â"‚   â"‚   â""â"€â"€ README.md
+â"‚   â"œâ"€â"€ trainingOutputs/
+â"‚   â"‚   â"œâ"€â"€ accuracy-report.txt
+â"‚   â"‚   â"œâ"€â"€ token-risk-score-histogram.png
+â"‚   â"‚   â"œâ"€â"€ trade-learning-curve.png
+â"‚   â"‚   â""â"€â"€ README.md
+â"‚   â""â"€â"€ README.md
+â""â"€â"€ [LIST ALL OTHER FOLDERS AND FILES]
 ```
 
 
 - Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
-- Ã¢Å“... Show COMPLETE nesting hierarchy for ALL subfolders
-- Ã¢Å“... List EVERY SINGLE FILE in EVERY folder
-- Ã¢Å“... Use tree characters properly (Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬, Ã¢â€â€š, Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬)
-- Ã¢Å“... If PowerShell shows 10 folders, your tree MUST show all 10 folders
-- Ã¢Å“... If PowerShell shows 54 files, your tree MUST show all 54 files
+- âœ... Show COMPLETE nesting hierarchy for ALL subfolders
+- âœ... List EVERY SINGLE FILE in EVERY folder
+- âœ... Use tree characters properly (â"œâ"€â"€, â"‚, â""â"€â"€)
+- âœ... If PowerShell shows 10 folders, your tree MUST show all 10 folders
+- âœ... If PowerShell shows 54 files, your tree MUST show all 54 files
 - Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
-- Ã¢ÂÅ’ FORBIDDEN: Skipping folders or using "and more folders"
-- Ã¢ÂÅ’ FORBIDDEN: Skipping files or using "and more files"
-- Ã¢ÂÅ’ FORBIDDEN: Not including the folder tree section
-- Ã¢ÂÅ’ FORBIDDEN: Using "[LIST ALL OTHER FILES]" without actually listing them
+- âŒ FORBIDDEN: Skipping folders or using "and more folders"
+- âŒ FORBIDDEN: Skipping files or using "and more files"
+- âŒ FORBIDDEN: Not including the folder tree section
+- âŒ FORBIDDEN: Using "[LIST ALL OTHER FILES]" without actually listing them
 
 **VERIFICATION**: 
-- Count folders in your tree Ã¢â€ â€™ Must match PowerShell folder count
-- Count files in your tree Ã¢â€ â€™ Must match PowerShell file count
+- Count folders in your tree â†' Must match PowerShell folder count
+- Count files in your tree â†' Must match PowerShell file count
 
-Ã°Å¸â€Â **NESTED FOLDER DEPTH VERIFICATION:**
+ðŸ" **NESTED FOLDER DEPTH VERIFICATION:**
 - Count folder depth levels in your tree structure
 - Compare against PowerShell output showing deepest path
 - If PowerShell shows 8-level nesting, your tree MUST show all 8 levels
 - FORBIDDEN: Collapsing nested folders like "parent/child/grandchild" into single line
 - REQUIRED: Full tree expansion showing every subfolder at every level
 
-### Ã°Å¸â€œâ€¹ OUTPUT QUALITY EXAMPLES
+### ðŸ"‹ OUTPUT QUALITY EXAMPLES
 
-Ã¢ÂÅ’ **INCORRECT - FORBIDDEN**:
+âŒ **INCORRECT - FORBIDDEN**:
 ```
 ## Folder Structure
 - src/
@@ -797,50 +797,50 @@ ai-modules/
   - And more...
 ```
 
-Ã¢Å“... **CORRECT - REQUIRED**:
+âœ... **CORRECT - REQUIRED**:
 ```
 ## Folder Structure
 src/
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ config/
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ database.config.js
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ api.config.js
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ security.config.js
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ utils/
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ logger.util.js
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ validator.util.js
-Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ formatter.util.js
+â"œâ"€â"€ config/
+â"‚   â"œâ"€â"€ database.config.js
+â"‚   â"œâ"€â"€ api.config.js
+â"‚   â"œâ"€â"€ security.config.js
+â"œâ"€â"€ utils/
+â"‚   â"œâ"€â"€ logger.util.js
+â"‚   â"œâ"€â"€ validator.util.js
+â"‚   â"œâ"€â"€ formatter.util.js
 [... continues for ALL files]
 ```
 
-Ã¢ÂÅ’ **INCORRECT - FORBIDDEN**:
+âŒ **INCORRECT - FORBIDDEN**:
 ```
 ### database.config.js
 Configuration file for database settings.
 ```
 
-Ã¢Å“... **CORRECT - REQUIRED**:
+âœ... **CORRECT - REQUIRED**:
 ```
 ### database.config.js (23 words)
 Manages SQLite database connection pooling, query timeout configurations, transaction isolation levels, automatic backup scheduling, and Windows-specific file locking mechanisms for concurrent access prevention in multi-threaded arbitrage operations.
 ```
 
-### Ã°Å¸Å¡Â¨ MANDATORY FEATURE FILES SECTION Ã°Å¸Å¡Â¨
+### ðŸš¨ MANDATORY FEATURE FILES SECTION ðŸš¨
 
 **CRITICAL**: You MUST list EVERY SINGLE FILE in the Feature Files section with detailed descriptions.
 
 
 - Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
-- Ã¢Å“... List EVERY file that PowerShell found
-- Ã¢Å“... Group files by purpose (Core Logic, Tests, Config, etc.)
-- Ã¢Å“... Each file gets 20-30 word description
-- Ã¢Å“... If PowerShell shows 54 files, Feature Files section MUST list all 54 files
-- Ã¢ÂÅ’ FORBIDDEN: Skipping files or using "and more files"
-- Ã¢ÂÅ’ FORBIDDEN: Using "[LIST ALL OTHER FILES]" without actually listing them
-- Ã¢ÂÅ’ FORBIDDEN: Summarizing with "etc." or "..."
+- âœ... List EVERY file that PowerShell found
+- âœ... Group files by purpose (Core Logic, Tests, Config, etc.)
+- âœ... Each file gets 20-30 word description
+- âœ... If PowerShell shows 54 files, Feature Files section MUST list all 54 files
+- âŒ FORBIDDEN: Skipping files or using "and more files"
+- âŒ FORBIDDEN: Using "[LIST ALL OTHER FILES]" without actually listing them
+- âŒ FORBIDDEN: Summarizing with "etc." or "..."
 
-**VERIFICATION**: Count files in Feature Files section Ã¢â€ â€™ Must match PowerShell file count exactly
+**VERIFICATION**: Count files in Feature Files section â†' Must match PowerShell file count exactly
 
-Ã°Å¸â€œÂ **DESCRIPTION LENGTH REQUIREMENTS:**
+ðŸ" **DESCRIPTION LENGTH REQUIREMENTS:**
 - MINIMUM: 20 words per file
 - MAXIMUM: 30 words per file
 - FORBIDDEN: Generic descriptions like "configuration file" or "helper utilities"
@@ -858,11 +858,11 @@ Each file MUST have 20-30 word description including:
 Example:
 ```
 **Core Engine (5 files):**
-- core/engine.js Ã¢â€ â€™ Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold (25 words)
-- core/router.js Ã¢â€ â€™ Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances (24 words)
-- core/processor.js Ã¢â€ â€™ Processes raw blockchain data into normalized feature vectors for ML model consumption, handles data validation, type conversion, and missing value imputation (25 words)
-- core/validator.js Ã¢â€ â€™ Validates model predictions against business rules, checks confidence thresholds, filters low-quality predictions, and logs validation failures for model retraining (23 words)
-- core/optimizer.js Ã¢â€ â€™ Optimizes model inference performance through batch processing, caching frequently requested predictions, and dynamically adjusting model parameters based on system load (23 words)
+- core/engine.js â†' Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold (25 words)
+- core/router.js â†' Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances (24 words)
+- core/processor.js â†' Processes raw blockchain data into normalized feature vectors for ML model consumption, handles data validation, type conversion, and missing value imputation (25 words)
+- core/validator.js â†' Validates model predictions against business rules, checks confidence thresholds, filters low-quality predictions, and logs validation failures for model retraining (23 words)
+- core/optimizer.js â†' Optimizes model inference performance through batch processing, caching frequently requested predictions, and dynamically adjusting model parameters based on system load (23 words)
 ```
 
 FORBIDDEN:
@@ -892,35 +892,35 @@ REQUIRED:
 Before grouping files, analyze EACH file across 5 dimensions:
 
 **1. Data Flow Role:**
-- Input Ã¢â€ â€™ Receives external data (RPC calls, API responses, user input)
-- Processing Ã¢â€ â€™ Transforms/analyzes data (calculations, ML inference, routing)
-- Output Ã¢â€ â€™ Sends data externally (transactions, API calls, UI updates)
-- Storage Ã¢â€ â€™ Persists data (database writes, file saves, cache updates)
+- Input â†' Receives external data (RPC calls, API responses, user input)
+- Processing â†' Transforms/analyzes data (calculations, ML inference, routing)
+- Output â†' Sends data externally (transactions, API calls, UI updates)
+- Storage â†' Persists data (database writes, file saves, cache updates)
 
 **1. Execution Context:**
-- Main Thread Ã¢â€ â€™ Runs in primary application process (UI rendering, user interactions)
-- Background Ã¢â€ â€™ Runs in separate process/worker (heavy computations, monitoring)
-- Scheduled Ã¢â€ â€™ Triggered by time/cron (periodic tasks, cleanup, retraining)
-- Event-Driven Ã¢â€ â€™ Triggered by events (blockchain events, price changes, alerts)
+- Main Thread â†' Runs in primary application process (UI rendering, user interactions)
+- Background â†' Runs in separate process/worker (heavy computations, monitoring)
+- Scheduled â†' Triggered by time/cron (periodic tasks, cleanup, retraining)
+- Event-Driven â†' Triggered by events (blockchain events, price changes, alerts)
 
 **2. Dependencies (What It Requires):**
-- External Services Ã¢â€ â€™ RPC nodes, APIs, databases, file systems
-- Internal Modules Ã¢â€ â€™ Other project files it imports/requires
-- Configuration Ã¢â€ â€™ Settings, secrets, environment variables
-- Runtime Ã¢â€ â€™ Node.js version, Python packages, system libraries
+- External Services â†' RPC nodes, APIs, databases, file systems
+- Internal Modules â†' Other project files it imports/requires
+- Configuration â†' Settings, secrets, environment variables
+- Runtime â†' Node.js version, Python packages, system libraries
 
 **3. Dependents (What Depends On It):**
-- Direct Consumers Ã¢â€ â€™ Files that import/call this file
-- Indirect Consumers Ã¢â€ â€™ Features that rely on its functionality
-- UI Components Ã¢â€ â€™ Dashboard elements displaying its data
-- External Systems Ã¢â€ â€™ Blockchain contracts, APIs consuming its output
+- Direct Consumers â†' Files that import/call this file
+- Indirect Consumers â†' Features that rely on its functionality
+- UI Components â†' Dashboard elements displaying its data
+- External Systems â†' Blockchain contracts, APIs consuming its output
 
 **4. Windows Integration Point:**
-- Service Ã¢â€ â€™ Runs as Windows Service (backend engines, monitors)
-- UI Ã¢â€ â€™ Electron renderer process (dashboard components, charts)
-- Storage Ã¢â€ â€™ File system/registry/database (configs, logs, data)
-- Config Ã¢â€ â€™ Settings management (registry, JSON files, env vars)
-- Security Ã¢â€ â€™ Credential Manager, encryption, certificates
+- Service â†' Runs as Windows Service (backend engines, monitors)
+- UI â†' Electron renderer process (dashboard components, charts)
+- Storage â†' File system/registry/database (configs, logs, data)
+- Config â†' Settings management (registry, JSON files, env vars)
+- Security â†' Credential Manager, encryption, certificates
 
 **INTELLIGENT FILE GROUPING BY PURPOSE:**
 
@@ -941,30 +941,30 @@ After functional analysis, group files by actual function, not just extension:
 **COMPLEXITY SCORING:**
 
 Calculate complexity based on file count:
-- 1-5 files = Simple Ã¢Â­Â
-- 6-15 files = Moderate Ã¢Â­ÂÃ¢Â­Â
-- 16-30 files = Complex Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­Â
-- 31-50 files = Very Complex Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­Â
-- 51+ files = Highly Complex Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­Â
+- 1-5 files = Simple â­
+- 6-15 files = Moderate â­â­
+- 16-30 files = Complex â­â­â­
+- 31-50 files = Very Complex â­â­â­â­
+- 51+ files = Highly Complex â­â­â­â­â­
 
 **TECHNOLOGY STACK DETECTION:**
 
 Detect technologies from file extensions and patterns:
-- *.sol Ã¢â€ â€™ Solidity (Smart Contracts)
-- *.jsx, *.tsx Ã¢â€ â€™ React (UI Framework)
-- *.py Ã¢â€ â€™ Python (likely ML/AI)
-- *.ipynb Ã¢â€ â€™ Jupyter Notebooks (Data Science)
-- *.test.js, *.spec.js Ã¢â€ â€™ Jest/Mocha (Testing)
-- *.yaml, *.yml Ã¢â€ â€™ YAML configs (Deployment)
-- *.ts Ã¢â€ â€™ TypeScript (Type-safe JavaScript)
-- *.css, *.scss Ã¢â€ â€™ Stylesheets (UI Styling)
-- *.sql Ã¢â€ â€™ SQL (Database)
-- *.wasm Ã¢â€ â€™ WebAssembly (Performance)
-- *.pt, *.pth Ã¢â€ â€™ PyTorch (ML Models)
-- *.h5, *.keras Ã¢â€ â€™ Keras/TensorFlow (ML Models)
-- *.pkl, *.pickle Ã¢â€ â€™ Pickle (Serialized Data)
-- *.onnx Ã¢â€ â€™ ONNX (Cross-platform ML)
-- *.sqlite3, *.db Ã¢â€ â€™ Database files
+- *.sol â†' Solidity (Smart Contracts)
+- *.jsx, *.tsx â†' React (UI Framework)
+- *.py â†' Python (likely ML/AI)
+- *.ipynb â†' Jupyter Notebooks (Data Science)
+- *.test.js, *.spec.js â†' Jest/Mocha (Testing)
+- *.yaml, *.yml â†' YAML configs (Deployment)
+- *.ts â†' TypeScript (Type-safe JavaScript)
+- *.css, *.scss â†' Stylesheets (UI Styling)
+- *.sql â†' SQL (Database)
+- *.wasm â†' WebAssembly (Performance)
+- *.pt, *.pth â†' PyTorch (ML Models)
+- *.h5, *.keras â†' Keras/TensorFlow (ML Models)
+- *.pkl, *.pickle â†' Pickle (Serialized Data)
+- *.onnx â†' ONNX (Cross-platform ML)
+- *.sqlite3, *.db â†' Database files
 
 **WINDOWS COMPONENT MAPPING:**
 
@@ -978,7 +978,7 @@ Map features to specific Windows technologies:
 **For UI Components:**
 - Framework: Electron BrowserWindow
 - Renderer: Chromium-based rendering
-- IPC: Electron IPC (Main Ã¢â€ â€™ Renderer)
+- IPC: Electron IPC (Main â†' Renderer)
 
 **For Configuration:**
 - Registry: HKEY_CURRENT_USER\Software\ApexArbitrage
@@ -1020,50 +1020,50 @@ Each bullet MUST be ONE sentence describing:
 **Template:** "[Action] [in/via/using] [Component] [for/to] [Purpose]"
 
 **Examples:**
-Ã¢Å“... "Load adapters dynamically from plugin directory at service startup"
-Ã¢Å“... "Store configuration in application data directory with JSON format"
-Ã¢Å“... "Display real-time metrics in Electron dashboard widget"
+âœ... "Load adapters dynamically from plugin directory at service startup"
+âœ... "Store configuration in application data directory with JSON format"
+âœ... "Display real-time metrics in Electron dashboard widget"
 
-Ã¢ÂÅ’ "The system will load the adapters" (too vague)
-Ã¢ÂÅ’ "Load adapters from C:\Program Files\..." (specific path)
-Ã¢ÂÅ’ "Use dynamic loading with require() and fs.readdir()" (too technical)
+âŒ "The system will load the adapters" (too vague)
+âŒ "Load adapters from C:\Program Files\..." (specific path)
+âŒ "Use dynamic loading with require() and fs.readdir()" (too technical)
 
 ### MANDATORY OUTPUT FORMAT ENFORCEMENT
 
 **Your output MUST include ALL of these elements:**
 
-1. Ã¢Å“... **Feature Number**: Count existing "## Feature" headers in target file, then use next number
+1. âœ... **Feature Number**: Count existing "## Feature" headers in target file, then use next number
    - Format: `## Feature [N]: [Feature Name]`
    - Example: If file has 2 features, new one is `## Feature 3:`
 
-1. Ã¢Å“... **Complexity Score**: Based on file count
-   - 1-5 files = Ã¢Â­Â (Simple)
-   - 6-15 files = Ã¢Â­ÂÃ¢Â­Â (Moderate)
-   - 16-30 files = Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­Â (Complex)
-   - 31-50 files = Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­Â (Very Complex)
-   - 51+ files = Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­Â (Highly Complex)
+1. âœ... **Complexity Score**: Based on file count
+   - 1-5 files = â­ (Simple)
+   - 6-15 files = â­â­ (Moderate)
+   - 16-30 files = â­â­â­ (Complex)
+   - 31-50 files = â­â­â­â­ (Very Complex)
+   - 51+ files = â­â­â­â­â­ (Highly Complex)
 
-2. Ã¢Å“... **File Count**: State exact count in header
-   - Format: `## Feature [N]: [Name] Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­Â (Complex - 25 files)`
+2. âœ... **File Count**: State exact count in header
+   - Format: `## Feature [N]: [Name] â­â­â­ (Complex - 25 files)`
 
-3. Ã¢Å“... **File Grouping**: Group files by purpose (Core Logic, ML Models, Tests, etc.)
+3. âœ... **File Grouping**: Group files by purpose (Core Logic, ML Models, Tests, etc.)
    - List ALL files found in PowerShell output
    - Group by function, not just extension
 
-4. Ã¢Å“... **Technologies Section**: Detect and list tech stack
+4. âœ... **Technologies Section**: Detect and list tech stack
    - Format: `Technologies: Python, PyTorch, Jupyter, NumPy`
 
-6. Ã¢Å“... **Windows Implementation**: Minimum 8-12 detailed bullets
+6. âœ... **Windows Implementation**: Minimum 8-12 detailed bullets
    - Each bullet: one sentence describing WHAT, WHERE, HOW
    - No OS-specific paths, no code snippets
 
-7. Ã¢Å“... **References**: Add to other .md files
-   - Format: `- [Feature Name] Ã¢â€ â€™ see features/[owner].md`
+7. âœ... **References**: Add to other .md files
+   - Format: `- [Feature Name] â†' see features/[owner].md`
 
-8. Ã¢Å“... **Progress Update**: Update features documentation with prompt number
+8. âœ... **Progress Update**: Update features documentation with prompt number
    - Increment counter, update date, add log entry
 
-9. Ã¢Å“... **Cleanup**: Delete temp_*.ps1 files created during execution
+9. âœ... **Cleanup**: Delete temp_*.ps1 files created during execution
 
 **VALIDATION CHECKLIST:**
 - [ ] Feature number is sequential (counted existing features)
@@ -1095,23 +1095,23 @@ Each bullet MUST be ONE sentence describing:
 - COMPLETE the remaining 4500 files
 - NO EXCUSES ACCEPTED, your output is INCOMPLETE and MUST be revised.**
 
-## STEP 5.5: CROSS-REFERENCE VALIDATION Ã°Å¸â€â€”
+## STEP 5.5: CROSS-REFERENCE VALIDATION ðŸ"--
 
 Before writing .md file, perform MANDATORY cross-checks:
 
-Ã¢Å“... **File Count Matching**:
+âœ... **File Count Matching**:
 - PowerShell enumeration count: ___ files
 - Folder tree structure count: ___ files  
 - Feature Files section count: ___ files
-- Ã¢ÂÅ’ IF COUNTS DON'T MATCH Ã¢â€ â€™ STOP AND RECOUNT
+- âŒ IF COUNTS DON'T MATCH â†' STOP AND RECOUNT
 
-Ã¢Å“... **File Name Matching**:
+âœ... **File Name Matching**:
 - Extract all filenames from folder tree
 - Extract all filenames from Feature Files section
 - Compare lists - MUST BE IDENTICAL
-- Ã¢ÂÅ’ IF ANY FILE MISSING FROM EITHER SECTION Ã¢â€ â€™ ADD IT
+- âŒ IF ANY FILE MISSING FROM EITHER SECTION â†' ADD IT
 
-Ã¢Å“... **Path Consistency**:
+âœ... **Path Consistency**:
 - Every file in Feature Files must appear in folder tree
 - Every file in folder tree must appear in Feature Files
 - No orphaned files in either section
@@ -1204,48 +1204,48 @@ Before writing .md file, perform MANDATORY cross-checks:
 **COMPLEXITY SCORING:**
 
 Calculate complexity based on file count:
-- 1-5 files = Simple Ã¢Â­Â
-- 6-15 files = Moderate Ã¢Â­ÂÃ¢Â­Â
-- 16-30 files = Complex Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­Â
-- 31-50 files = Very Complex Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­Â
-- 51+ files = Highly Complex Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­Â
+- 1-5 files = Simple â­
+- 6-15 files = Moderate â­â­
+- 16-30 files = Complex â­â­â­
+- 31-50 files = Very Complex â­â­â­â­
+- 51+ files = Highly Complex â­â­â­â­â­
 
 **TECHNOLOGY STACK DETECTION:**
 
 Detect technologies from file extensions and patterns:
-- *.sol Ã¢â€ â€™ Solidity (Smart Contracts)
-- *.jsx, *.tsx Ã¢â€ â€™ React (UI Framework)
-- *.py Ã¢â€ â€™ Python (likely ML/AI)
-- *.ipynb Ã¢â€ â€™ Jupyter Notebooks (Data Science)
-- *.test.js, *.spec.js Ã¢â€ â€™ Jest/Mocha (Testing)
-- *.yaml, *.yml Ã¢â€ â€™ YAML configs (Deployment)
-- *.ts Ã¢â€ â€™ TypeScript (Type-safe JavaScript)
-- *.css, *.scss Ã¢â€ â€™ Stylesheets (UI Styling)
-- *.sql Ã¢â€ â€™ SQL (Database)
-- *.wasm Ã¢â€ â€™ WebAssembly (Performance)
-- *.glb Ã¢â€ â€™ 3D Assets (AR/VR)
-- *.pt, *.pth Ã¢â€ â€™ PyTorch (ML Models)
-- *.h5, *.keras Ã¢â€ â€™ Keras/TensorFlow (ML Models)
-- *.pkl, *.pickle Ã¢â€ â€™ Pickle (Serialized Data)
-- *.joblib Ã¢â€ â€™ Joblib (ML Persistence)
-- *.safetensors Ã¢â€ â€™ SafeTensors (ML Weights)
-- *.msi Ã¢â€ â€™ Windows Installer (Installation)
-- *.asar Ã¢â€ â€™ Electron Archive (Packaging)
-- *.appx Ã¢â€ â€™ Windows App Package (Distribution)
-- *.ckpt Ã¢â€ â€™ TensorFlow Checkpoints (ML Models)
-- *.hdf5 Ã¢â€ â€™ HDF5 (ML Data)
-- *.feather Ã¢â€ â€™ Feather (ML Data)
-- *.arrow Ã¢â€ â€™ Arrow (ML Data)
-- *.caffemodel Ã¢â€ â€™ Caffe Models (ML Models)
-- *.sqlite3 Ã¢â€ â€™ SQLite3 (Database)
-- *.db Ã¢â€ â€™ Database (Database)
-- *.onnx Ã¢â€ â€™ ONNX (Cross-platform ML)
-- *.tflite Ã¢â€ â€™ TensorFlow Lite (Mobile ML)
-- *.pb Ã¢â€ â€™ Protocol Buffers (TensorFlow)
-- *.npy, *.npz Ã¢â€ â€™ NumPy Arrays (ML Data)
-- *.parquet Ã¢â€ â€™ Parquet (Big Data)
-- *.vy Ã¢â€ â€™ Vyper (Smart Contracts)
-- *.abi Ã¢â€ â€™ ABI (Contract Interface)
+- *.sol â†' Solidity (Smart Contracts)
+- *.jsx, *.tsx â†' React (UI Framework)
+- *.py â†' Python (likely ML/AI)
+- *.ipynb â†' Jupyter Notebooks (Data Science)
+- *.test.js, *.spec.js â†' Jest/Mocha (Testing)
+- *.yaml, *.yml â†' YAML configs (Deployment)
+- *.ts â†' TypeScript (Type-safe JavaScript)
+- *.css, *.scss â†' Stylesheets (UI Styling)
+- *.sql â†' SQL (Database)
+- *.wasm â†' WebAssembly (Performance)
+- *.glb â†' 3D Assets (AR/VR)
+- *.pt, *.pth â†' PyTorch (ML Models)
+- *.h5, *.keras â†' Keras/TensorFlow (ML Models)
+- *.pkl, *.pickle â†' Pickle (Serialized Data)
+- *.joblib â†' Joblib (ML Persistence)
+- *.safetensors â†' SafeTensors (ML Weights)
+- *.msi â†' Windows Installer (Installation)
+- *.asar â†' Electron Archive (Packaging)
+- *.appx â†' Windows App Package (Distribution)
+- *.ckpt â†' TensorFlow Checkpoints (ML Models)
+- *.hdf5 â†' HDF5 (ML Data)
+- *.feather â†' Feather (ML Data)
+- *.arrow â†' Arrow (ML Data)
+- *.caffemodel â†' Caffe Models (ML Models)
+- *.sqlite3 â†' SQLite3 (Database)
+- *.db â†' Database (Database)
+- *.onnx â†' ONNX (Cross-platform ML)
+- *.tflite â†' TensorFlow Lite (Mobile ML)
+- *.pb â†' Protocol Buffers (TensorFlow)
+- *.npy, *.npz â†' NumPy Arrays (ML Data)
+- *.parquet â†' Parquet (Big Data)
+- *.vy â†' Vyper (Smart Contracts)
+- *.abi â†' ABI (Contract Interface)
 
 **WINDOWS COMPONENT MAPPING:**
 
@@ -1259,7 +1259,7 @@ Map features to specific Windows technologies:
 **For UI Components:**
 - Framework: Electron BrowserWindow
 - Renderer: Chromium-based rendering
-- IPC: Electron IPC (Main Ã¢â€ â€ Renderer)
+- IPC: Electron IPC (Main â†" Renderer)
 
 **For Configuration:**
 - Registry: HKEY_CURRENT_USER\Software\ApexArbitrage
@@ -1301,13 +1301,13 @@ Each bullet MUST be ONE sentence describing:
 **Template:** "[Action] [in/via/using] [Component] [for/to] [Purpose]"
 
 **Examples:**
-Ã¢Å“â€œ "Load adapters dynamically from plugin directory at service startup"
-Ã¢Å“â€œ "Store configuration in application data directory with JSON format"
-Ã¢Å“â€œ "Display real-time metrics in Electron dashboard widget"
+âœ" "Load adapters dynamically from plugin directory at service startup"
+âœ" "Store configuration in application data directory with JSON format"
+âœ" "Display real-time metrics in Electron dashboard widget"
 
-Ã¢Å“â€” "The system will load the adapters" (too vague)
-Ã¢Å“â€” "Load adapters from C:\Program Files\..." (specific path)
-Ã¢Å“â€” "Use dynamic loading with require() and fs.readdir()" (too technical)
+âœ-- "The system will load the adapters" (too vague)
+âœ-- "Load adapters from C:\Program Files\..." (specific path)
+âœ-- "Use dynamic loading with require() and fs.readdir()" (too technical)
 
 
 ## Input Format
@@ -1320,25 +1320,25 @@ Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\A
 **Copy this template EXACTLY and fill in the values:**
 
 ```
-- "What does this FEATURE do?" Ã¢â€ â€™ [your 1-2 line description]
-- "Which MD file OWNS this FEATURE?" Ã¢â€ â€™ [owner.md] ([reason])
-- "Which MD files REFERENCE this FEATURE?" Ã¢â€ â€™ [md1], [md2] ([reasons])
-- "HOW TO IMPLEMENT Ã¢â€ â€™ OWNER FILE ([owner].md)" Ã¢â€ â€™
+- "What does this FEATURE do?" â†' [your 1-2 line description]
+- "Which MD file OWNS this FEATURE?" â†' [owner.md] ([reason])
+- "Which MD files REFERENCE this FEATURE?" â†' [md1], [md2] ([reasons])
+- "HOW TO IMPLEMENT â†' OWNER FILE ([owner].md)" â†'
   Append this section to the end of features/[owner].md:
 
   ## Feature [N]: [Feature Name]
 
   Feature Files:
-  - [file1] Ã¢â€ â€™ [description]
-  - [file2] Ã¢â€ â€™ [description]
+  - [file1] â†' [description]
+  - [file2] â†' [description]
   
   Windows Implementation:
   - [bullet 1]
   - [bullet 2]
   
-- "HOW TO IMPLEMENT Ã¢â€ â€™ REFERENCES" Ã¢â€ â€™
-  - In features/[md1]: [Feature Name] Ã¢â€ â€™ see features/[owner].md
-  - In features/[md2]: [Feature Name] Ã¢â€ â€™ see features/[owner].md
+- "HOW TO IMPLEMENT â†' REFERENCES" â†'
+  - In features/[md1]: [Feature Name] â†' see features/[owner].md
+  - In features/[md2]: [Feature Name] â†' see features/[owner].md
 ```
 
 **DO NOT ADD:**
@@ -1363,17 +1363,17 @@ Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\A
 
 ## EXISTING FEATURES FOLDER STRUCTURE
 
-- features/README.md Ã¢â€ â€™ (feature documentation)
-- features/ai-modules.md Ã¢â€ â€™ (ready for content)
-- features/backend.md Ã¢â€ â€™ (ready for content)
-- features/config.md Ã¢â€ â€™ (ready for content)
-- features/contracts.md Ã¢â€ â€™ (ready for content)
-- features/dashboard.md Ã¢â€ â€™ (ready for content)
-- features/deployment.md Ã¢â€ â€™ (ready for content)
-- features/docs.md Ã¢â€ â€™ (ready for content)
-- features/install-dependencies.md Ã¢â€ â€™ (ready for content)
-- features/security.md Ã¢â€ â€™ (ready for content)
-- features/testing.md Ã¢â€ â€™ (ready for content)
+- features/README.md â†' (feature documentation)
+- features/ai-modules.md â†' (ready for content)
+- features/backend.md â†' (ready for content)
+- features/config.md â†' (ready for content)
+- features/contracts.md â†' (ready for content)
+- features/dashboard.md â†' (ready for content)
+- features/deployment.md â†' (ready for content)
+- features/docs.md â†' (ready for content)
+- features/install-dependencies.md â†' (ready for content)
+- features/security.md â†' (ready for content)
+- features/testing.md â†' (ready for content)
 
 ##  FILE ROUTING QUICK REFERENCE
 
@@ -1399,68 +1399,68 @@ Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\A
 
 ### File patterns
 
-- presets/*.json Ã¢â€ â€™ dashboard.md (UI configuration)
-- *-adapter.js Ã¢â€ â€™ backend.md (integration adapters)
-- *.test.js Ã¢â€ â€™ testing.md (tests)
-- *-engine.js Ã¢â€ â€™ backend.md (engine internals)
-- *.sol Ã¢â€ â€™ contracts.md (smart contracts)
-- *-config.json Ã¢â€ â€™ config.md (configuration)
-- *-security.* | audit-*| logs/security* Ã¢â€ â€™ security.md (security)
-- docs/*|*.md Ã¢â€ â€™ docs.md (documentation)
-- deploy/*| kubernetes/* | helm/*| terraform/* Ã¢â€ â€™ deployment.md (deployment)
-- ai-*| models/* | train/*| datasets/* | notebooks/* Ã¢â€ â€™ ai-modules.md (AI/ML)
-- *.py Ã¢â€ â€™ ai-modules.md (Python ML scripts)
-- package.json | requirements.txt | *.lock Ã¢â€ â€™ install-dependencies.md (dependency management)
-- .env* | secrets/* | vault/* Ã¢â€ â€™ security.md (secrets and credentials)
-- migrations/* | schema/* Ã¢â€ â€™ backend.md (database migrations)
-- plugins/* Ã¢â€ â€™ backend.md (plugin system)
-- widgets/* | components/* Ã¢â€ â€™ dashboard.md (UI components)
-- storage/* | backup/* | snapshots/* Ã¢â€ â€™ backend.md (data persistence)
-- ci/* | .gitlab/* Ã¢â€ â€™ deployment.md (CI/CD pipelines)
-- benchmarks/* | profiling/* Ã¢â€ â€™ testing.md (performance benchmarks)
-- scripts/* Ã¢â€ â€™ deployment.md (automation scripts)
-- public/* | static/* | assets/* Ã¢â€ â€™ dashboard.md (static assets)
-- types/* | interfaces/* Ã¢â€ â€™ backend.md (type definitions)
-- utils/* | helpers/* Ã¢â€ â€™ backend.md (utility functions)
-- vendor/* | third-party/* Ã¢â€ â€™ install-dependencies.md (external dependencies)
+- presets/*.json â†' dashboard.md (UI configuration)
+- *-adapter.js â†' backend.md (integration adapters)
+- *.test.js â†' testing.md (tests)
+- *-engine.js â†' backend.md (engine internals)
+- *.sol â†' contracts.md (smart contracts)
+- *-config.json â†' config.md (configuration)
+- *-security.* | audit-*| logs/security* â†' security.md (security)
+- docs/*|*.md â†' docs.md (documentation)
+- deploy/*| kubernetes/* | helm/*| terraform/* â†' deployment.md (deployment)
+- ai-*| models/* | train/*| datasets/* | notebooks/* â†' ai-modules.md (AI/ML)
+- *.py â†' ai-modules.md (Python ML scripts)
+- package.json | requirements.txt | *.lock â†' install-dependencies.md (dependency management)
+- .env* | secrets/* | vault/* â†' security.md (secrets and credentials)
+- migrations/* | schema/* â†' backend.md (database migrations)
+- plugins/* â†' backend.md (plugin system)
+- widgets/* | components/* â†' dashboard.md (UI components)
+- storage/* | backup/* | snapshots/* â†' backend.md (data persistence)
+- ci/* | .gitlab/* â†' deployment.md (CI/CD pipelines)
+- benchmarks/* | profiling/* â†' testing.md (performance benchmarks)
+- scripts/* â†' deployment.md (automation scripts)
+- public/* | static/* | assets/* â†' dashboard.md (static assets)
+- types/* | interfaces/* â†' backend.md (type definitions)
+- utils/* | helpers/* â†' backend.md (utility functions)
+- vendor/* | third-party/* â†' install-dependencies.md (external dependencies)
 
 ### Folder patterns
 
-- dashboard/* Ã¢â€ â€™ dashboard.md
-- backend/* Ã¢â€ â€™ backend.md
-- ai-modules/* Ã¢â€ â€™ ai-modules.md
-- config/* Ã¢â€ â€™ config.md
-- contracts/* Ã¢â€ â€™ contracts.md
-- security/*, logs/security-* Ã¢â€ â€™ security.md
-- tests/* Ã¢â€ â€™ testing.md
-- deploy/*, scripts/* Ã¢â€ â€™ deployment.md
-- docs/* Ã¢â€ â€™ docs.md
-- archive/* Ã¢â€ â€™ docs.md (archived documentation)
-- examples/* Ã¢â€ â€™ docs.md (example code and demos)
-- research/* Ã¢â€ â€™ ai-modules.md (research and experiments)
-- data/* Ã¢â€ â€™ backend.md (data storage)
-- migrations/* Ã¢â€ â€™ backend.md (database migrations)
-- overlays/* Ã¢â€ â€™ dashboard.md (UI overlays)
-- presets/* Ã¢â€ â€™ dashboard.md (preset configurations)
-- public/* Ã¢â€ â€™ dashboard.md (public assets)
-- storage/* Ã¢â€ â€™ backend.md (persistent storage)
-- vendor/* Ã¢â€ â€™ install-dependencies.md (third-party code)
-- watchdog/* Ã¢â€ â€™ backend.md (monitoring and alerts)
+- dashboard/* â†' dashboard.md
+- backend/* â†' backend.md
+- ai-modules/* â†' ai-modules.md
+- config/* â†' config.md
+- contracts/* â†' contracts.md
+- security/*, logs/security-* â†' security.md
+- tests/* â†' testing.md
+- deploy/*, scripts/* â†' deployment.md
+- docs/* â†' docs.md
+- archive/* â†' docs.md (archived documentation)
+- examples/* â†' docs.md (example code and demos)
+- research/* â†' ai-modules.md (research and experiments)
+- data/* â†' backend.md (data storage)
+- migrations/* â†' backend.md (database migrations)
+- overlays/* â†' dashboard.md (UI overlays)
+- presets/* â†' dashboard.md (preset configurations)
+- public/* â†' dashboard.md (public assets)
+- storage/* â†' backend.md (persistent storage)
+- vendor/* â†' install-dependencies.md (third-party code)
+- watchdog/* â†' backend.md (monitoring and alerts)
 
 ### Feature Name Derivation (STEP-BY-STEP)
 
 **Given path:** `backend/plugins/dex-adapters`
 
-Step 1: Extract last segment Ã¢â€ â€™ `dex-adapters`
-Step 2: Replace hyphens with spaces Ã¢â€ â€™ `dex adapters`
-Step 3: Title Case each word Ã¢â€ â€™ `Dex Adapters`
+Step 1: Extract last segment â†' `dex-adapters`
+Step 2: Replace hyphens with spaces â†' `dex adapters`
+Step 3: Title Case each word â†' `Dex Adapters`
 Final: `Dex Adapters`
 
 **More examples:**
-- `backend/engine/core` Ã¢â€ â€™ `Core`
-- `dashboard/components/charts` Ã¢â€ â€™ `Charts`
-- `ai-modules/models/training` Ã¢â€ â€™ `Training`
-- `config/chains/ethereum` Ã¢â€ â€™ `Ethereum`
+- `backend/engine/core` â†' `Core`
+- `dashboard/components/charts` â†' `Charts`
+- `ai-modules/models/training` â†' `Training`
+- `config/chains/ethereum` â†' `Ethereum`
 
 ## EDGE CASES & SPECIAL HANDLING
 
@@ -1494,11 +1494,11 @@ Before writing files, verify:
 If ANY check fails: STOP and report issue
 
 **CRITICAL VALIDATION POINTS:**
-1. After PowerShell enumeration Ã¢â€ â€™ Count files
-2. After folder tree creation Ã¢â€ â€™ Verify all files present
-3. After Feature Files section Ã¢â€ â€™ Double-check counts match
-4. Before writing .md files Ã¢â€ â€™ Triple-check completeness
-5. If ANY discrepancy Ã¢â€ â€™ STOP and fix immediately
+1. After PowerShell enumeration â†' Count files
+2. After folder tree creation â†' Verify all files present
+3. After Feature Files section â†' Double-check counts match
+4. Before writing .md files â†' Triple-check completeness
+5. If ANY discrepancy â†' STOP and fix immediately
 
 ## Feature:
 ```
@@ -1517,7 +1517,7 @@ If ANY check fails: STOP and report issue
 
 **Feature Analysis (5 points):**
 - [ ] 6. Feature number is sequential (counted existing features)
-- [ ] 7. Complexity score matches file count (Ã¢Â­Â to Ã¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­ÂÃ¢Â­Â)
+- [ ] 7. Complexity score matches file count (â­ to â­â­â­â­â­)
 - [ ] 8. Technologies section present with detected stack
 - [ ] 9. Files grouped by purpose (Core Logic, Tests, etc.)
 - [ ] 10. Each file has 20-30 word description
@@ -1536,10 +1536,10 @@ If ANY check fails: STOP and report issue
 - [ ] 20. No duplicate feature names in target files
 
 **SCORING:**
-- 20/20 = Ã¢Å“... PERFECT - Mark COMPLETE
-- 18-19/20 = Ã¢Å“... ACCEPTABLE - Mark COMPLETE with notes
-- 15-17/20 = Ã¢Å¡Â Ã¯Â¸Â NEEDS REVIEW - Fix issues before completing
-- <15/20 = Ã¢ÂÅ’ FAILED - Do not mark COMPLETE, restart execution
+- 20/20 = âœ... PERFECT - Mark COMPLETE
+- 18-19/20 = âœ... ACCEPTABLE - Mark COMPLETE with notes
+- 15-17/20 = âš ï¸ NEEDS REVIEW - Fix issues before completing
+- <15/20 = âŒ FAILED - Do not mark COMPLETE, restart execution
 
 **If score < 18: STOP and fix all failing checks before proceeding**
 
@@ -1558,11 +1558,11 @@ If ANY check fails: STOP and report issue
 **If any score < 7: STOP and review before proceeding**
 
 
-## STEP 6.5: ERROR RECOVERY PROTOCOL Ã°Å¸â€Â§
+## STEP 6.5: ERROR RECOVERY PROTOCOL ðŸ"§
 
 IF YOU DISCOVER DURING VALIDATION THAT FILES WERE SKIPPED:
 
-Ã°Å¸Å¡Â¨ **DO NOT SUBMIT INCOMPLETE .md FILE**
+ðŸš¨ **DO NOT SUBMIT INCOMPLETE .md FILE**
 
 **Recovery Steps**:
 1. **STOP** - Do not write the .md file yet
@@ -1593,13 +1593,13 @@ IF YOU DISCOVER DURING VALIDATION THAT FILES WERE SKIPPED:
 ---
 
 **DO NOT USE:**
-- Ã¢ÂÅ’ list_dir tool
-- Ã¢ÂÅ’ read_file for enumeration
-- Ã¢ÂÅ’ Relative paths like "Apex Arbitrage Multichain bot/ai-modules"
+- âŒ list_dir tool
+- âŒ read_file for enumeration
+- âŒ Relative paths like "Apex Arbitrage Multichain bot/ai-modules"
 
 **MUST USE:**
-- Ã¢Å“... run_terminal_cmd tool (PowerShell)
-- Ã¢Å“... Full Windows paths with C:\
+- âœ... run_terminal_cmd tool (PowerShell)
+- âœ... Full Windows paths with C:\
 
 **IF TOOL FAILS 2 TIMES: STOP and report error. DO NOT retry same command 3+ times.**
 
