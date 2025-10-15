@@ -707,7 +707,7 @@ The ai-modules feature MUST be implemented by adding files to the appropriate lo
 - Separate sequences: Folder numbering and file numbering are independent. Do NOT interleave or share counters between folders and files.
 - Folder totals (Y): Count ONLY sibling folders at that level (exclude files). Example: If a folder has 3 subfolders and 5 files, folder Y = 3.
 - File totals (Y): Count ONLY files within that single folder (exclude subfolders). Example: If a folder has 7 files and 2 subfolders, file Y = 7.
-- Sequential within scope: Files in a folder must be numbered FILE 1/Y, 2/Y, â€¦, Y/Y; subfolders at a level must be FOLDER 1/Y, 2/Y, â€¦, Y/Y.
+- Sequential within scope: Files in a folder must be numbered FILE 1/Y, 2/Y, ..., Y/Y; subfolders at a level must be FOLDER 1/Y, 2/Y, ..., Y/Y.
 - Example clarity: Use 1/3 then 1/2 for a child level, NOT 1/3 then 4/5. Each level resets.
 - Deterministic ordering: At every folder level, list all subfolders first (sorted A->Z), then list all files (sorted A->Z) before descending into deeper levels.
 - Exact counts: Compute Y from actual discovered items at that level; never guess or reuse counts from other levels.

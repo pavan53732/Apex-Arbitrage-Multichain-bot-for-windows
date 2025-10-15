@@ -33,8 +33,10 @@ foreach ($f in $slice) {
     $replacementLine
   )
 
-  # Replace ellipsis mojibake: E2 80 A6 mis-decoded as U+00E2 U+20AC U+00A6
-  $content = [System.Text.RegularExpressions.Regex]::Replace($content, "\x{00E2}\x{20AC}\x{00A6}", "...")
+  # Replace ellipsis mojibake: UTF-8 bytes E2 80 A6 mis-decoded as U+00E2 U+20AC U+00A6
+  # Build the three-character mojibake sequence via code points to avoid parser/encoding issues
+  $ellipsisMojibake = ([char]0x00E2).ToString() + ([char]0x20AC).ToString() + ([char]0x00A6).ToString()
+  $content = $content.Replace($ellipsisMojibake, "...")
 
   if ($content -ne $orig) {
     # Normalize to LF endings and write UTF-8 without BOM
