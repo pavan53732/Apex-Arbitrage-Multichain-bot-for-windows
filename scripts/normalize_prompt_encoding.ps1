@@ -29,10 +29,6 @@ foreach ($f in $slice) {
     $replacementLine
   )
 
-  # Replace common mis-decoded UTF-8 sequences (ASCII-safe via \u escapes)
-  # Ellipsis … (UTF-8 E2 80 A6) mis-decoded as â€¦ (U+00E2 U+20AC U+00A6)
-  $content = $content -replace "\u00E2\u20AC\u00A6", "..."
-
   if ($content -ne $orig) {
     # Normalize to LF endings and write UTF-8 without BOM
     $content = $content -replace "\r\n?", "`n"
