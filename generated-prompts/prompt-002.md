@@ -716,6 +716,47 @@ The ai-modules feature MUST be implemented by adding files to the appropriate lo
 
 **IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
 
+
+---
+
+## ðŸš¨ MANDATORY CHECKPOINT: NUMBERING FORMAT CONFIRMATION
+
+**âš ï¸ STOP AND READ - DO NOT PROCEED TO STEP 5 WITHOUT COMPLETING THIS CHECKPOINT**
+
+Before you write ANY folder tree structure in STEP 5, you MUST confirm you understand and will use the mandatory numbering format:
+
+### REQUIRED FORMAT EXAMPLES:
+```
+FOLDER 1/3: src/
+FOLDER 2/3: tests/
+FOLDER 3/3: docs/
+
+FILE 1/5: src/index.js
+FILE 2/5: src/config.js
+FILE 3/5: tests/unit.test.js
+FILE 4/5: tests/integration.test.js
+FILE 5/5: docs/README.md
+```
+
+### HIERARCHICAL NUMBERING RULES:
+1. **Count ALL folders first** â†’ Use "FOLDER X/Y:" where Y = total folder count
+2. **Count ALL files across ALL folders** â†’ Use "FILE X/Y:" where Y = total file count
+3. **Number sequentially** â†’ FOLDER 1, 2, 3... then FILE 1, 2, 3...
+4. **Never restart numbering** â†’ Files continue from where folders ended
+5. **Always show totals** â†’ X/Y format shows progress and validates completeness
+
+### SELF-CHECK BEFORE PROCEEDING:
+- [ ] I have counted the total number of folders in this feature
+- [ ] I have counted the total number of files across all folders
+- [ ] I understand FOLDER numbering: FOLDER 1/Y, FOLDER 2/Y, ... FOLDER Y/Y
+- [ ] I understand FILE numbering: FILE 1/Z, FILE 2/Z, ... FILE Z/Z
+- [ ] I will use this exact format in STEP 5 folder tree structure
+
+**TYPE "CONFIRMED" BELOW TO PROCEED TO STEP 5:**
+
+[Your confirmation here]
+
+---
 ### STEP 5: IMPLEMENTATION GUIDE
 
 **ENHANCED OUTPUT FORMAT WITH FOLDER TREE AND DETAILED DESCRIPTIONS:**
