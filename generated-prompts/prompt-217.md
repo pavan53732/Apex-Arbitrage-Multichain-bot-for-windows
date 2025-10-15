@@ -383,6 +383,114 @@ try {
 
 **IMPORTANT:** Execute this PowerShell script using run_terminal_cmd tool. Do NOT break it into individual characters or lines.
 
+**🚨 MANDATORY COUNT VALIDATION - ZERO TOLERANCE 🚨**
+
+**CRITICAL: BEFORE YOU WRITE ANY ANALYSIS, YOU MUST:**
+
+1. **EXECUTE POWERSHELL COMMAND** using run_terminal_cmd tool
+2. **READ THE EXACT OUTPUT** until you see "END OF COMPLETE LIST"
+3. **EXTRACT THE EXACT NUMBERS** from PowerShell output:
+   - Look for "TOTAL FILES FOUND: [NUMBER]"
+   - Look for "TOTAL FOLDERS FOUND: [NUMBER]"
+4. **VERIFY YOUR ANALYSIS MATCHES EXACTLY**:
+   - If PowerShell says "TOTAL FILES FOUND: 54" → Your analysis MUST say "54 files"
+   - If PowerShell says "TOTAL FOLDERS FOUND: 10" → Your analysis MUST say "10 folders"
+   - **NO EXCEPTIONS, NO APPROXIMATIONS, NO ROUNDING**
+
+**INSTANT FAILURE CONDITIONS:**
+- If PowerShell shows 54 files but you report 59 files = IMMEDIATE FAILURE
+- If PowerShell shows 10 folders but you report 8 folders = IMMEDIATE FAILURE
+- If you don't execute the PowerShell command = IMMEDIATE FAILURE
+- If you don't read the full output = IMMEDIATE FAILURE
+
+**MANDATORY VALIDATION STEPS:**
+1. ✅ **Step 1**: Execute PowerShell command using run_terminal_cmd
+2. ✅ **Step 2**: Read complete output until "END OF COMPLETE LIST"
+3. ✅ **Step 3**: Extract exact numbers from PowerShell output
+4. ✅ **Step 4**: State the exact numbers in your analysis
+5. ✅ **Step 5**: Verify your file list count matches PowerShell count
+6. ✅ **Step 6**: Verify your folder count matches PowerShell count
+
+**🚨 MANDATORY OUTPUT FORMAT - COPY THIS EXACTLY 🚨**
+
+**BEFORE YOU WRITE ANY ANALYSIS, YOU MUST OUTPUT THIS EXACT FORMAT:**
+
+```
+STEP 1: FILE ENUMERATION COMPLETE
+[FOLDER-NAME] FILE ENUMERATION RESULTS
+TOTAL FILES FOUND: [EXACT NUMBER FROM POWERSHELL]
+TOTAL FOLDERS FOUND: [EXACT NUMBER FROM POWERSHELL]
+
+FOLDER STRUCTURE:
+[LIST ALL FOLDERS FROM POWERSHELL OUTPUT]
+
+FILE LIST: [EXACT NUMBER] FILES
+[LIST ALL FILES FROM POWERSHELL OUTPUT]
+
+ANALYSIS:
+Total folder size: [EXACT NUMBER] files across [EXACT NUMBER] folders
+File types: [DETECTED TYPES]
+Structure shows [DESCRIPTION]
+The enumeration is complete and ready for the next step in the process.
+```
+
+**CRITICAL RULES:**
+- Replace [EXACT NUMBER FROM POWERSHELL] with the actual numbers from PowerShell output
+- Replace [LIST ALL FOLDERS] with the actual folder list from PowerShell
+- Replace [LIST ALL FILES] with the actual file list from PowerShell
+- **DO NOT GUESS OR APPROXIMATE** - use only what PowerShell actually found
+- **IF POWERSHELL SHOWS 54 FILES, YOU MUST SHOW 54 FILES**
+- **IF POWERSHELL SHOWS 10 FOLDERS, YOU MUST SHOW 10 FOLDERS**
+
+**🚨 FINAL VALIDATION CHECK - MANDATORY 🚨**
+
+**BEFORE YOU PROCEED TO STEP 3, YOU MUST VERIFY:**
+
+1. **COUNT VERIFICATION**: 
+   - PowerShell said: "TOTAL FILES FOUND: [X]"
+   - Your analysis says: "[X] files"
+   - ✅ MATCH = Continue
+   - ❌ MISMATCH = STOP and fix immediately
+
+2. **FOLDER COUNT VERIFICATION**:
+   - PowerShell said: "TOTAL FOLDERS FOUND: [Y]"
+   - Your analysis says: "[Y] folders"
+   - ✅ MATCH = Continue
+   - ❌ MISMATCH = STOP and fix immediately
+
+3. **FILE LIST VERIFICATION**:
+   - PowerShell listed [X] files
+   - Your analysis lists [X] files
+   - ✅ MATCH = Continue
+   - ❌ MISMATCH = STOP and fix immediately
+
+**IF ANY VERIFICATION FAILS:**
+- STOP immediately
+- Go back to PowerShell output
+- Re-read the exact numbers
+- Fix your analysis to match exactly
+- DO NOT proceed until all counts match perfectly
+
+**EXAMPLE OF CORRECT VALIDATION:**
+```
+PowerShell Output: "TOTAL FILES FOUND: 54"
+My Analysis: "TOTAL FILES FOUND: 54"
+✅ VERIFICATION PASSED - Counts match exactly
+
+PowerShell Output: "TOTAL FOLDERS FOUND: 10"  
+My Analysis: "TOTAL FOLDERS FOUND: 10"
+✅ VERIFICATION PASSED - Counts match exactly
+```
+
+**EXAMPLE OF INCORRECT VALIDATION (FAILURE):**
+```
+PowerShell Output: "TOTAL FILES FOUND: 54"
+My Analysis: "TOTAL FILES FOUND: 59"
+❌ VERIFICATION FAILED - Counts do not match
+STOP: Fix the count to match PowerShell exactly
+```
+
+
 **VALIDATION REQUIRED:
 - If PowerShell command fails or returns error, output "ERROR: Cannot access path" and STOP
 - If command succeeds but returns 0 files, check if path exists as empty folder (valid) or path is wrong (error)
