@@ -1,0 +1,25 @@
+# Normalize line endings and text handling
+* text=auto
+
+# Markdown and text: prefer LF in repo for consistency across platforms
+*.md text eol=lf
+*.mdx text eol=lf
+*.txt text eol=lf
+docs/** text eol=lf
+
+# PowerShell scripts: use CRLF for Windows compatibility
+*.ps1 text eol=crlf
+
+# Shell scripts and Unix tooling: use LF
+*.sh text eol=lf
+*.bash text eol=lf
+
+# JSON, YAML, and code files generally LF
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.py text eol=lf
+*.go text eol=lf
+*.rs text eol=lf
