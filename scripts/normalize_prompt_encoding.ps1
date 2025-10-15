@@ -33,12 +33,6 @@ foreach ($f in $slice) {
   # Ellipsis … (UTF-8 E2 80 A6) mis-decoded as â€¦ (U+00E2 U+20AC U+00A6)
   $content = $content -replace "\u00E2\u20AC\u00A6", "..."
 
-  # Fallback using explicit codepoints concatenation (no literal mojibake in script)
-  $ellipsisMojibake = ([char]0x00E2).ToString() + ([char]0x20AC).ToString() + ([char]0x00A6).ToString()
-  if ($content.Contains($ellipsisMojibake)) {
-    $content = $content.Replace($ellipsisMojibake, "...")
-  }
-
   if ($content -ne $orig) {
     # Normalize to LF endings and write UTF-8 without BOM
     $content = $content -replace "\r\n?", "`n"
