@@ -1,4 +1,4 @@
-﻿## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
+## 🎯 DELEGATION FLOW: COMPLETE ALL STEPS
 
 **CRITICAL INSTRUCTION FOR AI AGENT:**
 
@@ -763,13 +763,13 @@ ai-modules/
 ```
 
 
-- âœ… Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
+- Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
 - ✅ Show COMPLETE nesting hierarchy for ALL subfolders
 - ✅ List EVERY SINGLE FILE in EVERY folder
 - ✅ Use tree characters properly (├──, │, └──)
 - ✅ If PowerShell shows 10 folders, your tree MUST show all 10 folders
 - ✅ If PowerShell shows 54 files, your tree MUST show all 54 files
-- ✅ Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A→Z ordering (folders first, then files) at each level
+- Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
 - ❌ FORBIDDEN: Skipping folders or using "and more folders"
 - ❌ FORBIDDEN: Skipping files or using "and more files"
 - ❌ FORBIDDEN: Not including the folder tree section
@@ -829,7 +829,7 @@ Manages SQLite database connection pooling, query timeout configurations, transa
 **CRITICAL**: You MUST list EVERY SINGLE FILE in the Feature Files section with detailed descriptions.
 
 
-- âœ… Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
+- Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
 - ✅ List EVERY file that PowerShell found
 - ✅ Group files by purpose (Core Logic, Tests, Config, etc.)
 - ✅ Each file gets 20-30 word description
