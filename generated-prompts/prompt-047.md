@@ -203,7 +203,7 @@ backend/
 6. **References**: Add feature name to 2-4 other .md files
 7. **Progress Update**: Increment counter, update date, add log entry
 8. **Cleanup**: Delete temp_*.ps1 files you created
-9. **Complete Folder Structure**: Use numbered format 'FOLDER X/Y: foldername/' and 'FILE X/Y: filename.ext' for ALL folders and files in folder tree structures
+9. **Complete Folder Structure**: Use numbered format 'FOLDER X/Y: foldername/' and 'FILE X/Y: filename.ext' for ALL folders and files; numbering resets per level, folder/file counters are separate, and ordering is folders-first then files (A->Z) at each level
 
 ### 📍 SELF-CHECK BEFORE WRITING:
 
@@ -725,26 +725,15 @@ The ai-modules feature MUST be implemented by adding files to the appropriate lo
 ####  FOLDER NUMBERING FORMAT
 - **FOLDER X/Y: foldername/** - Number folders sequentially within each level using X/Y notation where X is the current level's position and Y is the total count at that level
 - **FILE X/Y: filename.ext** - Number files sequentially within each folder using X/Y notation where X is the file's position and Y is the total file count in that folder
-
-####  NUMBERING EXAMPLES
-`
-FOLDER 1/3: ai-modules/
- FOLDER 1/2: datasets/
-    FILE 1/5: ai-decision-corpus.json
-    FILE 2/5: features.csv
-    FILE 3/5: profitLabels.json
-    FILE 4/5: trade-history.csv
-    FILE 5/5: README.md
- FOLDER 2/2: features/
-     FILE 1/5: featureExtractor.js
-     [additional files numbered 2/5 through 5/5]
-`
-
-####  NUMBERING RULES
-- **Hierarchical numbering**: Each level resets numbering (1/3, 1/2, not 1/3, 4/5)
-- **Sequential within level**: Files and folders numbered 1, 2, 3... within their container
-- **Total count**: Y represents the total number of items at that level
-- **Consistent format**: Always use "FOLDER X/Y:" or "FILE X/Y:" prefixes
+**Numbering Rules (STRICT):**
+- Per-level reset: Each folder level restarts numbering at 1 for its immediate children (e.g., 1/3, 2/3, 3/3). Do NOT carry numbers across different parent folders.
+- Separate sequences: Folder numbering and file numbering are independent. Do NOT interleave or share counters between folders and files.
+- Folder totals (Y): Count ONLY sibling folders at that level (exclude files). Example: If a folder has 3 subfolders and 5 files, folder Y = 3.
+- File totals (Y): Count ONLY files within that single folder (exclude subfolders). Example: If a folder has 7 files and 2 subfolders, file Y = 7.
+- Sequential within scope: Files in a folder must be numbered FILE 1/Y, 2/Y, â€¦, Y/Y; subfolders at a level must be FOLDER 1/Y, 2/Y, â€¦, Y/Y.
+- Example clarity: Use 1/3 then 1/2 for a child level, NOT 1/3 then 4/5. Each level resets.
+- Deterministic ordering: At every folder level, list all subfolders first (sorted A->Z), then list all files (sorted A->Z) before descending into deeper levels.
+- Exact counts: Compute Y from actual discovered items at that level; never guess or reuse counts from other levels.
 
 ####  CRITICAL REQUIREMENTS
 - **MANDATORY**: All folder and file listings MUST use this numbering format
@@ -785,7 +774,8 @@ ai-modules/
 └── [LIST ALL OTHER FOLDERS AND FILES]
 ```
 
-**ULTRA-MANDATORY RULES:**
+
+- âœ… Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
 - ✅ Show COMPLETE nesting hierarchy for ALL subfolders
 - ✅ List EVERY SINGLE FILE in EVERY folder
 - ✅ Use tree characters properly (├──, │, └──)
@@ -849,7 +839,8 @@ Manages SQLite database connection pooling, query timeout configurations, transa
 
 **CRITICAL**: You MUST list EVERY SINGLE FILE in the Feature Files section with detailed descriptions.
 
-**ULTRA-MANDATORY RULES:**
+
+- âœ… Enforce numbering rules: per-level reset, separate folder/file counters, and deterministic A->Z ordering (folders first, then files) at each level
 - ✅ List EVERY file that PowerShell found
 - ✅ Group files by purpose (Core Logic, Tests, Config, etc.)
 - ✅ Each file gets 20-30 word description
@@ -1622,5 +1613,8 @@ IF YOU DISCOVER DURING VALIDATION THAT FILES WERE SKIPPED:
 - ✅ Full Windows paths with C:\
 
 **IF TOOL FAILS 2 TIMES: STOP and report error. DO NOT retry same command 3+ times.**
+
+
+
 
 
