@@ -709,6 +709,21 @@ The ai-modules feature MUST be implemented by adding files to the appropriate lo
 - Choose the single owner .md from: install-dependencies.md, config.md, backend.md, dashboard.md, ai-modules.md, contracts.md, security.md, testing.md, deployment.md, docs.md
 - Choose 1-4 referencing .md files based on real integration needs
 
+### 🚨 CRITICAL REMINDER: MANDATORY FOLDER TREE STRUCTURE 🚨
+
+**BEFORE PROCEEDING TO STEP 5, REMEMBER:**
+
+**MANDATORY FOLDER TREE REQUIREMENTS:**
+- ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
+- ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
+- ✅ **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
+- ✅ **Sequential numbering within each folder**
+- ✅ **List EVERY file with detailed descriptions** (20-30 words each)
+- ✅ **Show ALL nested folders and subfolders**
+- ✅ **NO shortcuts, NO "etc.", NO skipping**
+
+**IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
+
 ### STEP 5: IMPLEMENTATION GUIDE
 
 **ENHANCED OUTPUT FORMAT WITH FOLDER TREE AND DETAILED DESCRIPTIONS:**
@@ -1043,6 +1058,23 @@ Each bullet MUST be ONE sentence describing:
 
 **Your output MUST include ALL of these elements:**
 
+### 🚨 CRITICAL: FOLDER TREE STRUCTURE REQUIREMENTS 🚨
+
+**BEFORE WRITING, REMEMBER THESE MANDATORY REQUIREMENTS:**
+
+**FOLDER TREE STRUCTURE MUST INCLUDE:**
+- ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
+- ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
+- ✅ **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
+- ✅ **Sequential numbering within each folder**
+- ✅ **List EVERY file with detailed descriptions** (20-30 words each)
+- ✅ **Show ALL nested folders and subfolders**
+- ✅ **NO shortcuts, NO "etc.", NO skipping**
+
+**IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
+
+**Your output MUST include ALL of these elements:**
+
 1. ✅ **Feature Number**: Count existing "## Feature" headers in target file, then use next number
    - Format: `## Feature [N]: [Feature Name]`
    - Example: If file has 2 features, new one is `## Feature 3:`
@@ -1327,6 +1359,23 @@ PATH-TO-FEATURE MAPPER
 Full Path: C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\backend\plugins\internal
 
 ## OUTPUT FORMAT (EXACT TEMPLATE - DO NOT DEVIATE)
+
+**Copy this template EXACTLY and fill in the values:**
+
+### 🚨 FINAL REMINDER: MANDATORY FOLDER TREE STRUCTURE 🚨
+
+**BEFORE WRITING YOUR OUTPUT, REMEMBER:**
+
+**MANDATORY FOLDER TREE REQUIREMENTS:**
+- ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
+- ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
+- ✅ **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
+- ✅ **Sequential numbering within each folder**
+- ✅ **List EVERY file with detailed descriptions** (20-30 words each)
+- ✅ **Show ALL nested folders and subfolders**
+- ✅ **NO shortcuts, NO "etc.", NO skipping**
+
+**IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
 
 **Copy this template EXACTLY and fill in the values:**
 
