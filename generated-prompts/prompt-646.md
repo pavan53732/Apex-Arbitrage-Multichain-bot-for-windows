@@ -366,7 +366,8 @@ try {
     if ($files.Count -gt 500) {
         Write-Host "LARGE FOLDER: $($files.Count) files - Processing in chunks"
     }
-    Write-Host "REMINDER: Must list EVERY file - Use CHUNKS if needed"`nWrite-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
+    Write-Host "REMINDER: Must list EVERY file - Use CHUNKS if needed"`
+Write-Host "--- COMPLETE FILE LIST (ALL $($files.Count) FILES) ---"
     $fileIndex = 1
     $files | Sort-Object FullName | ForEach-Object { 
         Write-Host "FILE $fileIndex/$($files.Count): $($_.FullName)"
@@ -1519,30 +1520,7 @@ If ANY check fails: STOP and report issue
 4. Before writing .md files → Triple-check completeness
 5. If ANY discrepancy → STOP and fix immediately
 
-## Feature:"
-        "Feature files list" = $content -match "Feature Files:"
-        "Windows implementation" = $content -match "Windows Implementation:"
-        "Minimum bullets" = ($content | Select-String "^- ").Count -ge 8
-    }
-    
-    $allPassed = $true
-    foreach ($check in $checks.GetEnumerator()) {
-        if (-not $check.Value) {
-            Write-Host "❌ Validation failed: $($check.Key)"
-            $allPassed = $false
-        } else {
-            Write-Host "✅ $($check.Key): Passed"
-        }
-    }
-    
-    if (-not $allPassed) {
-        Write-Host "❌ .md validation failed - prompt incomplete"
-        exit 1
-    }
-} else {
-    Write-Host "❌ Target file not found: $targetFile"
-    exit 1
-}
+## Feature:
 ```
 
 
