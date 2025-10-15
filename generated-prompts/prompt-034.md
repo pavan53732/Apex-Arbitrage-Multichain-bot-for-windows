@@ -180,6 +180,7 @@ backend/
 6. **References**: Add feature name to 2-4 other .md files
 7. **Progress Update**: Increment counter, update date, add log entry
 8. **Cleanup**: Delete temp_*.ps1 files you created
+9. **Complete Folder Structure**: Use numbered format 'FOLDER X/Y: foldername/' and 'FILE X/Y: filename.ext' for ALL folders and files in folder tree structures
 
 ### 📍 SELF-CHECK BEFORE WRITING:
 
@@ -1480,3 +1481,4 @@ IF YOU DISCOVER DURING VALIDATION THAT FILES WERE SKIPPED:
 - ✅ Full Windows paths with C:\
 
 **IF TOOL FAILS 2 TIMES: STOP and report error. DO NOT retry same command 3+ times.**
+
