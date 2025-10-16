@@ -9,6 +9,8 @@
 
 ## 🚨 PROJECT ANALYSIS SCOPE RESTRICTION 🚨
 
+**This mode never reads features/*.md; documentation happens only after analysis.**
+
 **WHEN YOU SWITCH TO PROJECT ANALYSIS MODE:**
 **FORBIDDEN ACTIONS:**
 - ❌ DO NOT analyze the features/ folder in the root directory
@@ -45,7 +47,6 @@ $folders = Get-ChildItem -Path $path -Recurse -Directory -Force
 Write-Host "FILES: $($files.Count) | FOLDERS: $($folders.Count)"
 Write-Host "DEEPEST PATH: $($files | Sort-Object FullName.Length -Descending | Select-Object -First 1 | ForEach-Object { $_.FullName })"
 $files | Sort-Object FullName | ForEach-Object { Write-Host "FILE: $($_.Name)" }
-$folders | Sort-Object FullName | ForEach-Object { Write-Host "FOLDER: $($_.Name)" }
 ```
 
 ### STEP 2: FEATURE ANALYSIS
@@ -78,6 +79,7 @@ FOLDER 1/3: foldername/
 - **FILE X/Y: filename.ext** where X = current position, Y = total in that folder
 - **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
 - **Sequential numbering within each folder**
+- **Order at each level: subfolders A→Z, then files A→Z**
 - **List EVERY file with detailed descriptions** (20-30 words each)
 
 **FORBIDDEN:**
@@ -89,6 +91,7 @@ FOLDER 1/3: foldername/
 **VERIFICATION:**
 - Count folders in your tree → Must match PowerShell folder count
 - Count files in your tree → Must match PowerShell file count
+- **Zero-shortcut policy applies globally**
 
 ### STEP 3: WINDOWS MAPPING
 **Required Components (8-12 bullets):**
@@ -161,12 +164,12 @@ Windows Implementation:
 
 ### 🚨 FINAL VALIDATION CHECK - MANDATORY 🚨
 
-**BEFORE WRITING FILES, VERIFY:**
-1. **File Count Match**: PowerShell count = Your tree count = Feature Files count
-2. **Word Count**: Every file description is 20-30 words
-3. **Numbering**: FOLDER X/Y and FILE X/Y format used correctly
-4. **Completeness**: No files skipped or summarized
-5. **Encoding**: Proper UTF-8 emojis used (🚨 ⚠️ ✅ ❌)
+**VALIDATION GATE:**
+- **Counts match**: PowerShell count = Your tree count = Feature Files count
+- **Numbering correct**: FOLDER X/Y and FILE X/Y format used correctly
+- **Descriptions 20-30**: Every file description is 20-30 words
+- **UTF-8 intact**: Proper UTF-8 emojis used (🚨 ⚠️ ✅ ❌)
+- **Zero-shortcut policy applies globally**
 
 **IF ANY VERIFICATION FAILS:**
 - STOP and fix the issue immediately
@@ -266,9 +269,10 @@ Windows Implementation:
 - ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
 - ✅ **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
 - ✅ **Sequential numbering within each folder**
+- ✅ **Order at each level: subfolders A→Z, then files A→Z**
 - ✅ **List EVERY file with detailed descriptions** (20-30 words each)
 - ✅ **Show ALL nested folders and subfolders**
-- ✅ **NO shortcuts, NO "etc.", NO skipping**
+- ✅ **Zero-shortcut policy applies globally**
 
 **IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
 
