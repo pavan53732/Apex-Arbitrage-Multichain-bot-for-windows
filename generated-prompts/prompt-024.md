@@ -1,11 +1,26 @@
 ﻿
-**You are the CHIEF DOCUMENTATION OFFICER for the APEX Arbitrage Multichain Bot.**
+**You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate feature file.**
 
 **TARGET FOLDER:** `Apex Arbitrage Multichain bot/backend`
 **FULL PATH:** `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\backend`
 **ANALYSIS MODE:** PROJECT ANALYSIS
 
-**MANDATE:** Analyze the specified folder and create comprehensive Windows feature documentation with institutional precision.
+**WHAT YOU MUST DO:**
+1. ✅ Analyze ALL files in the specified folder
+2. ✅ Create a complete folder tree structure  
+3. ✅ Write detailed descriptions for each file (20-30 words)
+4. ✅ Generate comprehensive Windows implementation details
+5. ✅ Based on content analysis, decide which feature file to append to
+6. ✅ APPEND this documentation to the appropriate features/*.md file
+7. ✅ NO QUESTIONS - START IMMEDIATELY
+
+**WHAT YOU MUST NOT DO:**
+❌ Ask which folder to analyze (it's specified above)
+❌ Ask for existing documentation content (you will append to it)
+❌ Ask for clarification on what to do
+❌ Create standalone documentation (append to existing file)
+
+**START NOW - ANALYZE THE FOLDER AND DECIDE WHERE TO APPEND**
 
 ---
 

@@ -1,9 +1,8 @@
 ﻿
-**You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the existing feature file.**
+**You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate feature file.**
 
 **TARGET FOLDER:** `Apex Arbitrage Multichain bot/ai-modules`
 **FULL PATH:** `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ai-modules`
-**TARGET FEATURE FILE:** `features/ai-modules.md`
 **ANALYSIS MODE:** PROJECT ANALYSIS
 
 **WHAT YOU MUST DO:**
@@ -11,8 +10,9 @@
 2. ✅ Create a complete folder tree structure  
 3. ✅ Write detailed descriptions for each file (20-30 words)
 4. ✅ Generate comprehensive Windows implementation details
-5. ✅ APPEND this documentation to features/ai-modules.md
-6. ✅ NO QUESTIONS - START IMMEDIATELY
+5. ✅ Based on content analysis, decide which feature file to append to
+6. ✅ APPEND this documentation to the appropriate features/*.md file
+7. ✅ NO QUESTIONS - START IMMEDIATELY
 
 **WHAT YOU MUST NOT DO:**
 ❌ Ask which folder to analyze (it's specified above)
@@ -20,7 +20,7 @@
 ❌ Ask for clarification on what to do
 ❌ Create standalone documentation (append to existing file)
 
-**START NOW - ANALYZE THE FOLDER AND APPEND TO ai-modules.md**
+**START NOW - ANALYZE THE FOLDER AND DECIDE WHERE TO APPEND**
 
 ---
 
