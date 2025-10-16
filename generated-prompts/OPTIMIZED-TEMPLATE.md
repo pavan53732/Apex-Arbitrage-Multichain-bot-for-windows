@@ -1,4 +1,3 @@
-# OPTIMIZED PROMPT TEMPLATE v2.0
 
 ## 🎯 CORE MISSION: PATH → WINDOWS FEATURE
 
@@ -8,15 +7,45 @@
 
 ---
 
+## 🚨 PROJECT ANALYSIS SCOPE RESTRICTION 🚨
+
+**WHEN YOU SWITCH TO PROJECT ANALYSIS MODE:**
+**FORBIDDEN ACTIONS:**
+- ❌ DO NOT analyze the features/ folder in the root directory
+- ❌ DO NOT read any .md files from features/ folder
+- ❌ DO NOT scan the root project directory
+- ❌ DO NOT explore folders outside the specified path
+
+**MANDATORY ACTIONS:**
+- ✅ ONLY analyze files in the EXACT path specified in STEP 1.5
+- ✅ ONLY use PowerShell output from STEP 2 for file enumeration
+- ✅ ONLY work with the target folder path provided in the prompt
+- ✅ IGNORE all other folders and files in the project
+
+**EXAMPLE:** If prompt says: `ai-modules\models\trainingOutputs`
+- ✅ CORRECT: Analyze ONLY files in `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ai-modules\models\trainingOutputs`
+- ❌ WRONG: Reading features/ai-modules.md from root directory
+- ❌ WRONG: Scanning other folders in the project
+- ❌ WRONG: Analyzing files outside the specified path
+
+**VERIFICATION:** Before analyzing ANY file, ask yourself:
+- Is this file inside the target path from STEP 1.5?
+- YES → Proceed
+- NO → STOP and ignore this file
+
+---
+
 ## EXECUTION PROTOCOL
 
 ### STEP 1: FILE DISCOVERY
 ```powershell
-$path = "C:\Users\Pavan pc\Desktop\[PATH]"
+$path = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\[PATH]"
 $files = Get-ChildItem -Path $path -Recurse -File -Force
 $folders = Get-ChildItem -Path $path -Recurse -Directory -Force
 Write-Host "FILES: $($files.Count) | FOLDERS: $($folders.Count)"
-$files | Sort-Object FullName | ForEach-Object { Write-Host $_.Name }
+Write-Host "DEEPEST PATH: $($files | Sort-Object FullName.Length -Descending | Select-Object -First 1 | ForEach-Object { $_.FullName })"
+$files | Sort-Object FullName | ForEach-Object { Write-Host "FILE: $($_.Name)" }
+$folders | Sort-Object FullName | ForEach-Object { Write-Host "FOLDER: $($_.Name)" }
 ```
 
 ### STEP 2: FEATURE ANALYSIS
@@ -25,6 +54,41 @@ $files | Sort-Object FullName | ForEach-Object { Write-Host $_.Name }
 - **Technologies**: Detect from extensions
 - **Owner**: Route to correct features/*.md
 - **References**: 2-4 related .md files
+
+### 🚨 MANDATORY FOLDER TREE STRUCTURE 🚨
+
+**CRITICAL**: You MUST include a COMPLETE folder tree structure showing ALL nested folders AND ALL FILES.
+
+**REQUIRED FORMAT:**
+```
+## Folder Structure
+FOLDER 1/3: foldername/
+├── FOLDER 1/2: subfolder1/
+│   ├── FILE 1/3: file1.js
+│   ├── FILE 2/3: file2.js
+│   └── FILE 3/3: file3.js
+├── FOLDER 2/2: subfolder2/
+│   ├── FILE 1/2: file4.js
+│   └── FILE 2/2: file5.js
+└── FILE 1/1: rootfile.js
+```
+
+**NUMBERING RULES (STRICT):**
+- **FOLDER X/Y: foldername/** where X = current position, Y = total at that level
+- **FILE X/Y: filename.ext** where X = current position, Y = total in that folder
+- **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
+- **Sequential numbering within each folder**
+- **List EVERY file with detailed descriptions** (20-30 words each)
+
+**FORBIDDEN:**
+- ❌ Skipping folders or using "and more folders"
+- ❌ Skipping files or using "and more files"
+- ❌ Not including the folder tree section
+- ❌ Using "[LIST ALL OTHER FILES]" without actually listing them
+
+**VERIFICATION:**
+- Count folders in your tree → Must match PowerShell folder count
+- Count files in your tree → Must match PowerShell file count
 
 ### STEP 3: WINDOWS MAPPING
 **Required Components (8-12 bullets):**
@@ -43,7 +107,7 @@ $files | Sort-Object FullName | ForEach-Object { Write-Host $_.Name }
 ## Feature N: [Name] ⭐⭐⭐ ([Count] files)
 
 Feature Files:
-[Group files by purpose - list ALL]
+[Group files by purpose - list ALL with 20-30 word descriptions]
 
 Technologies: [Detected stack]
 
@@ -53,6 +117,26 @@ Windows Implementation:
 
 **Add references to related .md files**
 
+### 🚨 MANDATORY FEATURE FILES SECTION 🚨
+
+**CRITICAL**: You MUST list EVERY SINGLE FILE in the Feature Files section with detailed descriptions.
+
+**REQUIRED FORMAT:**
+```markdown
+**Core Logic (5 files):**
+- core/engine.js → Main AI processing engine that orchestrates model loading, manages inference requests, caches predictions in SQLite, and triggers retraining when accuracy drops below threshold (25 words)
+- core/router.js → Routes incoming prediction requests to appropriate ML models based on input type, model availability, and load balancing across multiple model instances (24 words)
+- core/processor.js → Processes raw blockchain data into normalized feature vectors for ML model consumption, handles data validation, type conversion, and missing value imputation (25 words)
+```
+
+**DESCRIPTION LENGTH REQUIREMENTS:**
+- **MINIMUM**: 20 words per file
+- **MAXIMUM**: 30 words per file
+- **FORBIDDEN**: Generic descriptions like "configuration file" or "helper utilities"
+- **REQUIRED**: Specific purpose, key functions, dependencies, Windows integration details
+
+**VERIFICATION**: Count words in each description - must be 20-30 words
+
 ---
 
 ## QUALITY GATES
@@ -61,10 +145,11 @@ Windows Implementation:
 - ✅ List EVERY file (no "etc." or "...")
 - ✅ 20-30 words per file description
 - ✅ File count matches PowerShell exactly
-- ✅ Complete folder tree with numbering
+- ✅ Complete folder tree with FOLDER X/Y and FILE X/Y numbering
 - ✅ Technologies section present
 - ✅ 8-12 Windows implementation bullets
 - ✅ Cross-references added
+- ✅ UTF-8 encoding preserved (🚨 ⚠️ ✅ ❌)
 
 ### FORBIDDEN SHORTCUTS
 - ❌ Skipping files with "and more"
@@ -72,6 +157,21 @@ Windows Implementation:
 - ❌ Missing nested folders
 - ❌ Count mismatches
 - ❌ Incomplete Windows mapping
+- ❌ Using corrupted UTF-8 characters (ðŸš¨, âš ï¸, âŸŒ, âœ…, â†')
+
+### 🚨 FINAL VALIDATION CHECK - MANDATORY 🚨
+
+**BEFORE WRITING FILES, VERIFY:**
+1. **File Count Match**: PowerShell count = Your tree count = Feature Files count
+2. **Word Count**: Every file description is 20-30 words
+3. **Numbering**: FOLDER X/Y and FILE X/Y format used correctly
+4. **Completeness**: No files skipped or summarized
+5. **Encoding**: Proper UTF-8 emojis used (🚨 ⚠️ ✅ ❌)
+
+**IF ANY VERIFICATION FAILS:**
+- STOP and fix the issue immediately
+- DO NOT write incomplete files
+- DO NOT proceed with mismatched counts
 
 ---
 
@@ -153,3 +253,40 @@ Windows Implementation:
 ```
 
 **CRITICAL:** Execute in order, validate completely, no shortcuts allowed.
+
+---
+
+## 🚨 MANDATORY CHECKPOINT: NUMBERING FORMAT CONFIRMATION ⚠️
+
+**STOP AND READ - DO NOT PROCEED TO STEP 5 WITHOUT COMPLETING THIS CHECKPOINT**
+
+**BEFORE PROCEEDING TO STEP 5, REMEMBER:**
+**MANDATORY FOLDER TREE REQUIREMENTS:**
+- ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
+- ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
+- ✅ **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
+- ✅ **Sequential numbering within each folder**
+- ✅ **List EVERY file with detailed descriptions** (20-30 words each)
+- ✅ **Show ALL nested folders and subfolders**
+- ✅ **NO shortcuts, NO "etc.", NO skipping**
+
+**IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
+
+**Copy this template EXACTLY and fill in the values:**
+```
+- "What does this FEATURE do?" → [your 1-2 line description]
+- "Which MD file OWNS this FEATURE?" → [owner.md] ([reason])
+- "Which MD files REFERENCE this FEATURE?" → [md1], [md2] ([reasons])
+- "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
+  Append this section to the end of features/[owner].md:
+  ## Feature [N]: [Feature Name]
+  Feature Files:
+  - [file1] → [description]
+  - [file2] → [description]
+  Windows Implementation:
+  - [bullet 1]
+  - [bullet 2]
+- "HOW TO IMPLEMENT → REFERENCES" →
+  - In features/[md1]: [Feature Name] → see features/[owner].md
+  - In features/[md2]: [Feature Name] → see features/[owner].md
+```
