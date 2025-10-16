@@ -41,13 +41,42 @@
 
 ### STEP 1: FILE DISCOVERY
 ```powershell
-$path = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\[PATH]"
-$files = Get-ChildItem -Path $path -Recurse -File -Force
-$folders = Get-ChildItem -Path $path -Recurse -Directory -Force
-Write-Host "FILES: $($files.Count) | FOLDERS: $($folders.Count)"
-Write-Host "DEEPEST PATH: $($files | Sort-Object FullName.Length -Descending | Select-Object -First 1 | ForEach-Object { $_.FullName })"
-$files | Sort-Object FullName | ForEach-Object { Write-Host "FILE: $($_.Name)" }
+try {
+    $path = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\[PATH]"
+    if (-not (Test-Path $path)) { Write-Host "ERROR: Path not found"; exit 1 }
+    
+    $files = Get-ChildItem -Path $path -Recurse -File -Force
+    $folders = Get-ChildItem -Path $path -Recurse -Directory -Force
+    
+    Write-Host "TOTAL FILES: $($files.Count) | TOTAL FOLDERS: $($folders.Count)"
+    
+    if ($files.Count -gt 500) { Write-Host "LARGE FOLDER: Consider chunking" }
+    
+    $files | Sort-Object FullName | ForEach-Object -Begin {$i=1} -Process { 
+        Write-Host "FILE $i/$($files.Count): $($_.FullName)"
+        $i++
+    }
+} catch { Write-Host "ERROR: $($_.Exception.Message)" }
 ```
+
+### 🚨 LARGE FOLDER PROTOCOL 🚨
+
+**IF PowerShell shows 500+ files:**
+- Process in chunks of 200 files per response  
+- Use [CONTINUING IN NEXT RESPONSE] at end of chunk
+- Use [CONTINUING FROM PREVIOUS] at start of next chunk
+- Continue until ALL files documented
+- Never skip files between chunks
+- Final response must show complete file count validation
+
+**CHUNKING EXAMPLE:**
+```
+Response 1: Files 1-200 [CONTINUING IN NEXT RESPONSE]
+Response 2: [CONTINUING FROM PREVIOUS] Files 201-400 [CONTINUING IN NEXT RESPONSE] 
+Response 3: [CONTINUING FROM PREVIOUS] Files 401-500 [COMPLETE]
+```
+
+**VERIFICATION:** Total documented files must equal PowerShell count exactly
 
 ### STEP 2: FEATURE ANALYSIS
 - **Name**: Last path segment → Title Case
