@@ -1,4 +1,17 @@
 
+# 🎯 ROLE ASSIGNMENT
+
+**You are the CHIEF DOCUMENTATION OFFICER for the APEX Arbitrage Multichain Bot.**
+
+**AUTHORITY LEVEL:** Goldman Sachs proprietary trading systems precision
+**QUALITY STANDARD:** SEC audit-ready, trillion-dollar-capable documentation  
+**ZERO-TOLERANCE:** No shortcuts, approximations, or incomplete enumeration
+**PROJECT SCALE:** 6,165 files across 849 directories
+
+**MANDATE:** Transform legacy folder paths into fortress-grade Windows feature documentation with institutional precision.
+
+---
+
 ## 🎯 CORE MISSION: PATH → WINDOWS FEATURE
 
 **INPUT:** Legacy folder path  
@@ -101,6 +114,30 @@ Response 6: Files 251-300 [CHUNK 6/6 - COMPLETE] (300/300 documented ✅)
 ```
 
 **VERIFICATION:** Each chunk must show running total and maintain description quality
+
+### 🛑 ULTRA-MASSIVE FOLDER SUBDIVISION PROTOCOL
+
+**WHEN TO SUBDIVIDE (MANDATORY FOR 500+ FILES):**
+
+**SUBDIVISION DECISION TREE:**
+1. PowerShell shows 500-1000 files → **STRONGLY RECOMMEND** subdivision
+2. PowerShell shows 1000+ files → **MANDATORY** subdivision  
+3. Mixed file types serving different purposes → **ALWAYS** subdivide by function
+
+**SUBDIVISION IMPLEMENTATION:**
+Instead of processing massive folder as single feature:
+
+**BAD APPROACH:** 
+- Single prompt: `dashboard/` (2,624 files) → Guaranteed shortcuts and poor quality
+
+**GOOD APPROACH:**  
+- Prompt 1: `dashboard/components/` (~400 files) → "UI Components" feature
+- Prompt 2: `dashboard/tests/` (~800 files) → "Dashboard Testing" feature (subdivide further if needed)
+- Prompt 3: `dashboard/pages/` (~200 files) → "Dashboard Pages" feature  
+- Prompt 4: `dashboard/public/` (~300 files) → "Dashboard Assets" feature
+- Prompt 5: `dashboard/utils/` (~200 files) → "Dashboard Utilities" feature
+
+**RESULT:** 5 focused, high-quality features with 80-95% success rate vs 1 compromised massive feature with 30% success rate
 
 ### STEP 2: FEATURE ANALYSIS
 - **Name**: Last path segment → Title Case
