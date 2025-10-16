@@ -11,11 +11,10 @@
 3. ✅ Write detailed descriptions for each file (20-30 words)
 4. ✅ Generate comprehensive Windows implementation details
 5. ✅ Based on content analysis, decide which EXISTING feature file to append to
-6. ✅ Check if content already exists in the target feature file
-7. ✅ If exists - append as "Feature 2", "Feature 3", etc.
-8. ✅ If doesn't exist - append as "Feature 1"
-9. ✅ APPEND to EXISTING features/*.md files ONLY (do not create new files)
-10. ✅ NO QUESTIONS - START IMMEDIATELY
+6. ✅ Count existing features in target file (read only "## Feature X:" headings)
+7. ✅ Use next feature number (Feature 1, Feature 2, Feature 3, etc.)
+8. ✅ APPEND to EXISTING features/*.md files ONLY (do not create new files)
+9. ✅ NO QUESTIONS - START IMMEDIATELY
 
 **EXISTING FEATURE FILES YOU CAN APPEND TO:**
 - ai-modules.md, archive.md, backend.md, config.md
@@ -28,6 +27,7 @@
 ❌ Ask for clarification on what to do
 ❌ Create new .md files (only append to existing ones)
 ❌ Create standalone documentation (append to existing file)
+❌ Read entire feature file content (only read feature headings)
 
 **START NOW - ANALYZE THE FOLDER AND DECIDE WHERE TO APPEND**
 
@@ -70,11 +70,17 @@ FOLDER 1/1: [folder-name]/
 ```
 
 **IMPORTANT:**
-1. Check the target feature file first to see if content already exists
-2. If content exists, use "Feature 2", "Feature 3", etc.
-3. If no content exists, use "Feature 1"
-4. APPEND this complete documentation to the appropriate EXISTING features/*.md file
-5. Do NOT create new .md files - only append to existing ones**
+1. Read ONLY the feature headings in the target file (e.g., "## Feature 1:", "## Feature 2:")
+2. Count how many "Feature X:" headings already exist
+3. Use the next number (if Feature 1 and Feature 2 exist, use "Feature 3")
+4. If no features exist, use "Feature 1"
+5. APPEND this complete documentation to the appropriate EXISTING features/*.md file
+6. Do NOT create new .md files - only append to existing ones
+
+**EFFICIENT FEATURE COUNTING:**
+- Use: `grep -c "## Feature" features/target-file.md` to count existing features
+- Or: `Select-String -Pattern "## Feature" -Path "features/target-file.md" | Measure-Object | Select-Object -ExpandProperty Count`
+- This gives you the exact count without reading entire file content
 
 ---
 
