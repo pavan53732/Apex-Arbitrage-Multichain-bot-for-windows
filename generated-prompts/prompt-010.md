@@ -1,4 +1,4 @@
-
+﻿
 # 🎯 ROLE ASSIGNMENT
 
 **You are the CHIEF DOCUMENTATION OFFICER for the APEX Arbitrage Multichain Bot.**
@@ -171,7 +171,7 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 ### STEP 1: FILE DISCOVERY
 ```powershell
 try {
-    $path = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\[PATH]"
+    $path = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\docs"
     if (-not (Test-Path $path)) { Write-Host "ERROR: Path not found"; exit 1 }
     
 $files = Get-ChildItem -Path $path -Recurse -File -Force
