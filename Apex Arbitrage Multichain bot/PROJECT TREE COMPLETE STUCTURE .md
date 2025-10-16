@@ -6,7 +6,7 @@ Source Root: Apex Arbitrage Multi chain bot/
 File Count: 6,086 Files
 Directory Count: 842
 
-C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT\APEX ARBITRAGE MULTICHAIN BOT
+C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage-Multichain-bot
 
 |   Bot Blue Print.md
 |   PROJECT FILES AND FOLDERS DETAILS .MD
