@@ -27,10 +27,10 @@
 **You must create documentation in this exact format:**
 
 ```markdown
-# FOLDER ANALYSIS: database
+# FOLDER ANALYSIS: wall-of-fame
 
 ## COMPLETE FOLDER TREE STRUCTURE
-FOLDER 1/1: database/
+FOLDER 1/1: wall-of-fame/
 ├── FILE 1/X: filename1.js
 ├── FILE 2/X: filename2.py
 └── FILE 3/X: filename3.md
