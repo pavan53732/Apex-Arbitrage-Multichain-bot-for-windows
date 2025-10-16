@@ -50,7 +50,8 @@ try {
     
     Write-Host "TOTAL FILES: $($files.Count) | TOTAL FOLDERS: $($folders.Count)"
     
-    if ($files.Count -gt 500) { Write-Host "LARGE FOLDER: Consider chunking" }
+    if ($files.Count -gt 200) { Write-Host "LARGE FOLDER: $($files.Count) files detected" }
+    if ($files.Count -gt 500) { Write-Host "WARNING: ULTRA-MASSIVE FOLDER - Consider subdivision" }
     
     $files | Sort-Object FullName | ForEach-Object -Begin {$i=1} -Process { 
         Write-Host "FILE $i/$($files.Count): $($_.FullName)"
@@ -59,24 +60,47 @@ try {
 } catch { Write-Host "ERROR: $($_.Exception.Message)" }
 ```
 
-### 🚨 LARGE FOLDER PROTOCOL 🚨
+### 📊 FOLDER SIZE STRATEGY & DECISION TREE
 
-**IF PowerShell shows 500+ files:**
-- Process in chunks of 200 files per response  
-- Use [CONTINUING IN NEXT RESPONSE] at end of chunk
-- Use [CONTINUING FROM PREVIOUS] at start of next chunk
-- Continue until ALL files documented
-- Never skip files between chunks
-- Final response must show complete file count validation
+**AUTOMATIC CATEGORIZATION BASED ON POWERSHELL OUTPUT:**
 
-**CHUNKING EXAMPLE:**
+- **Small (1-50 files):** ✅ PROCEED - Single response, excellent quality expected
+- **Medium (51-200 files):** ✅ PROCEED - Single response, good quality maintained  
+- **Large (201-500 files):** ⚠️ USE CHUNKING - 50-file chunks, accept quality trade-offs
+- **Massive (501-1000 files):** 🚨 RECOMMEND SUBDIVISION into logical functional areas
+- **Ultra-Massive (1000+ files):** 🛑 MANDATORY SUBDIVISION - do not process as single feature
+
+**DECISION PROTOCOL:**
+1. Check PowerShell file count
+2. If ≤200 files → Proceed with standard workflow
+3. If 201-500 files → Use chunking protocol below
+4. If 500+ files → **STOP** and recommend subdivision strategy
+
+**SUBDIVISION EXAMPLES:**
+- `backend/` (1,608 files) → Split: `backend/plugins/`, `backend/engine/`, `backend/data/`
+- `dashboard/` (2,624 files) → Split: `dashboard/components/`, `dashboard/tests/`, `dashboard/pages/`
+
+### 🚨 CHUNKING PROTOCOL (201-500 files only) 🚨
+
+**PREREQUISITES:** Only use for folders with 201-500 files (subdivision better for 500+)
+
+**CHUNKING RULES:**
+- Process in chunks of 50 files per response (maintains description quality)
+- Use [CHUNK X/Y - CONTINUING] markers  
+- Maintain 20-30 word descriptions throughout ALL chunks
+- Each chunk MUST include running file count verification
+
+**CHUNKING EXAMPLE (for 300 files):**
 ```
-Response 1: Files 1-200 [CONTINUING IN NEXT RESPONSE]
-Response 2: [CONTINUING FROM PREVIOUS] Files 201-400 [CONTINUING IN NEXT RESPONSE] 
-Response 3: [CONTINUING FROM PREVIOUS] Files 401-500 [COMPLETE]
+Response 1: Files 1-50 [CHUNK 1/6 - CONTINUING] (50/300 documented)
+Response 2: Files 51-100 [CHUNK 2/6 - CONTINUING] (100/300 documented)  
+Response 3: Files 101-150 [CHUNK 3/6 - CONTINUING] (150/300 documented)
+Response 4: Files 151-200 [CHUNK 4/6 - CONTINUING] (200/300 documented)
+Response 5: Files 201-250 [CHUNK 5/6 - CONTINUING] (250/300 documented)
+Response 6: Files 251-300 [CHUNK 6/6 - COMPLETE] (300/300 documented ✅)
 ```
 
-**VERIFICATION:** Total documented files must equal PowerShell count exactly
+**VERIFICATION:** Each chunk must show running total and maintain description quality
 
 ### STEP 2: FEATURE ANALYSIS
 - **Name**: Last path segment → Title Case
@@ -168,6 +192,25 @@ Windows Implementation:
 - **REQUIRED**: Specific purpose, key functions, dependencies, Windows integration details
 
 **VERIFICATION**: Count words in each description - must be 20-30 words
+
+---
+
+### ⚠️ REALISTIC SUCCESS EXPECTATIONS
+
+**FOLDER SIZE vs EXPECTED RESULTS:**
+- **1-50 files:** 95% success - Excellent descriptions, complete enumeration
+- **51-200 files:** 80% success - Good descriptions, reliable enumeration  
+- **201-500 files:** 60% success - Shorter descriptions, possible shortcuts
+- **500+ files:** 30% success - HIGH RISK - Subdivision strongly recommended
+
+**QUALITY DEGRADATION WARNINGS:**
+- Descriptions become generic after 200+ files (AI cognitive overload)
+- AI agents shortcut despite instructions at 500+ files
+- Count integrity decreases with folder size 
+- Template optimized for 50-200 file sweet spot
+
+**HONEST ASSESSMENT:**
+Template works excellently for appropriately-sized folders but struggles with ultra-massive folders due to AI agent behavior limitations.
 
 ---
 
