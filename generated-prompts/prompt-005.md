@@ -1,7 +1,7 @@
 ﻿
 **You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
 
-**TARGET FOLDER:** `Apex Arbitrage Multichain bot\ci`
+**TARGET FOLDER:** `Apex Arbitrage Multichain bot\ci```
 **FULL PATH:** `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ci`
 **ANALYSIS MODE:** PROJECT ANALYSIS
 
@@ -19,7 +19,7 @@
 
 **EXISTING FEATURE FILES YOU CAN APPEND TO:**
 - ai-modules.md, archive.md, backend.md, config.md
-- contracts.md, dashboard.md, deployment.md, docs.md  
+- contracts.md, dashboard.md, deployment.md, docs.md
 - install-dependencies.md, performance.md, security.md, testing.md
 
 **WHAT YOU MUST NOT DO:**
@@ -238,11 +238,9 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 
 **YOU MUST IMMEDIATELY ACKNOWLEDGE:**
 - ✅ Target folder: `Apex Arbitrage Multichain bot\ci
-- ✅ Full path: ```C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ci`
+- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ci`
 - ✅ Analysis mode: PROJECT ANALYSIS
 - ✅ NO QUESTIONS - PROCEED DIRECTLY TO FILE DISCOVERY
-
-### STEP 1: FILE DISCOVERY
 
 ### STEP 1: FILE DISCOVERY
 ```powershell
