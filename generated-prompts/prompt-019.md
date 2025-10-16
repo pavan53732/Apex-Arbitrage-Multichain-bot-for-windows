@@ -22,6 +22,58 @@
 
 **START NOW - ANALYZE THE FOLDER AND DECIDE WHERE TO APPEND**
 
+## 📋 REQUIRED OUTPUT FORMAT
+
+**You must create documentation in this exact format:**
+
+```markdown
+# FOLDER ANALYSIS: trading
+
+## COMPLETE FOLDER TREE STRUCTURE
+FOLDER 1/1: trading/
+├── FILE 1/X: filename1.js
+├── FILE 2/X: filename2.py
+└── FILE 3/X: filename3.md
+
+## FEATURE ANALYSIS
+**Feature Name:** Trading System
+**File Count:** X files
+**Complexity:** ⭐⭐⭐
+**Technologies:** JavaScript, Python, Markdown
+
+## FILE DESCRIPTIONS
+- **filename1.js** → JavaScript module implementing core functionality with error handling, logging integration, and Windows service compatibility for robust operations
+- **filename2.py** → Python script containing business logic implementation with data processing, optimization algorithms, and real-time monitoring capabilities
+- **filename3.md** → Documentation file providing comprehensive API reference, usage examples, and integration guidelines for the system
+
+## WINDOWS IMPLEMENTATION
+- Node.js runtime environment with Windows service integration
+- Python 3.9+ with virtual environment management
+- Windows PowerShell execution for automated processes
+- Windows Task Scheduler integration for periodic operations
+- Windows Event Log integration for error tracking and monitoring
+- Windows Performance Counters for system resource monitoring
+- Windows Registry configuration for system parameters
+- Windows Service wrapper for 24/7 operation
+- Windows Firewall rules for secure communication
+- Windows Backup integration for data persistence
+- Windows Update compatibility for dependency management
+- Windows Security Center integration for threat detection
+
+## TECHNOLOGIES DETECTED
+- JavaScript (Node.js)
+- Python (Business Logic)
+- Markdown (Documentation)
+- JSON (Configuration)
+
+## CROSS-REFERENCES
+- Related to: backend.md (API integration)
+- Related to: testing.md (unit tests)
+- Related to: docs.md (documentation)
+```
+
+**APPEND THIS COMPLETE DOCUMENTATION TO THE APPROPRIATE FEATURE FILE NOW!**
+
 ---
 
 ### 🛡️ ZERO-TOLERANCE ENFORCEMENT SYSTEM
@@ -150,12 +202,12 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 
 ## 🚨 PROJECT ANALYSIS SCOPE RESTRICTION 🚨
 
-**This mode never reads features/*.md; documentation happens only after analysis.**
+**This mode analyzes the target folder and then appends documentation to the appropriate feature file.**
 
 **WHEN YOU SWITCH TO PROJECT ANALYSIS MODE:**
 **FORBIDDEN ACTIONS:**
 - ❌ DO NOT analyze the features/ folder in the root directory
-- ❌ DO NOT read any .md files from features/ folder
+- ❌ DO NOT read existing content from features/ folder (you will append to it)
 - ❌ DO NOT scan the root project directory
 - ❌ DO NOT explore folders outside the specified path
 
@@ -179,14 +231,6 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 ---
 
 ## EXECUTION PROTOCOL
-
-### 🎯 MANDATORY FIRST STEP: CONFIRM TARGET FOLDER
-
-**YOU MUST IMMEDIATELY ACKNOWLEDGE:**
-- ✅ Target folder: `Apex Arbitrage Multichain bot/trading`
-- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\trading`
-- ✅ Analysis mode: PROJECT ANALYSIS
-- ✅ NO QUESTIONS - PROCEED DIRECTLY TO FILE DISCOVERY
 
 ### 🎯 MANDATORY FIRST STEP: CONFIRM TARGET FOLDER
 

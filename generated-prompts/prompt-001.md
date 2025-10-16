@@ -22,6 +22,58 @@
 
 **START NOW - ANALYZE THE FOLDER AND DECIDE WHERE TO APPEND**
 
+## 📋 REQUIRED OUTPUT FORMAT
+
+**You must create documentation in this exact format:**
+
+```markdown
+# FOLDER ANALYSIS: ai-modules
+
+## COMPLETE FOLDER TREE STRUCTURE
+FOLDER 1/1: ai-modules/
+├── FILE 1/X: filename1.js
+├── FILE 2/X: filename2.py
+└── FILE 3/X: filename3.md
+
+## FEATURE ANALYSIS
+**Feature Name:** AI Modules System
+**File Count:** X files
+**Complexity:** ⭐⭐⭐
+**Technologies:** JavaScript, Python, Markdown
+
+## FILE DESCRIPTIONS
+- **filename1.js** → JavaScript module implementing machine learning algorithms with data preprocessing, model training, and prediction capabilities for arbitrage opportunity analysis
+- **filename2.py** → Python script containing neural network implementation with TensorFlow integration, model optimization, and real-time trading signal generation
+- **filename3.md** → Documentation file providing comprehensive API reference, usage examples, and integration guidelines for the AI modules system
+
+## WINDOWS IMPLEMENTATION
+- Node.js runtime environment with Windows service integration
+- Python 3.9+ with virtual environment management
+- Windows PowerShell execution for automated model training
+- Windows Task Scheduler integration for periodic model updates
+- Windows Event Log integration for error tracking and monitoring
+- Windows Performance Counters for system resource monitoring
+- Windows Registry configuration for model parameters
+- Windows Service wrapper for 24/7 operation
+- Windows Firewall rules for secure API communication
+- Windows Backup integration for model persistence
+- Windows Update compatibility for dependency management
+- Windows Security Center integration for threat detection
+
+## TECHNOLOGIES DETECTED
+- JavaScript (Node.js)
+- Python (Machine Learning)
+- Markdown (Documentation)
+- JSON (Configuration)
+
+## CROSS-REFERENCES
+- Related to: backend.md (API integration)
+- Related to: testing.md (unit tests)
+- Related to: docs.md (documentation)
+```
+
+**APPEND THIS COMPLETE DOCUMENTATION TO THE APPROPRIATE FEATURE FILE NOW!**
+
 ---
 
 ### 🛡️ ZERO-TOLERANCE ENFORCEMENT SYSTEM
@@ -150,12 +202,12 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 
 ## 🚨 PROJECT ANALYSIS SCOPE RESTRICTION 🚨
 
-**This mode never reads features/*.md; documentation happens only after analysis.**
+**This mode analyzes the target folder and then appends documentation to the appropriate feature file.**
 
 **WHEN YOU SWITCH TO PROJECT ANALYSIS MODE:**
 **FORBIDDEN ACTIONS:**
 - ❌ DO NOT analyze the features/ folder in the root directory
-- ❌ DO NOT read any .md files from features/ folder
+- ❌ DO NOT read existing content from features/ folder (you will append to it)
 - ❌ DO NOT scan the root project directory
 - ❌ DO NOT explore folders outside the specified path
 
@@ -190,49 +242,16 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 
 ### STEP 1: FILE DISCOVERY
 
-### 🎯 MANDATORY FIRST STEP: CONFIRM TARGET FOLDER
-
-**YOU MUST IMMEDIATELY ACKNOWLEDGE:**
-- ✅ Target folder: `Apex Arbitrage Multichain bot/ai-modules`
-- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ai-modules`
-- ✅ Analysis mode: PROJECT ANALYSIS
-- ✅ NO QUESTIONS - PROCEED DIRECTLY TO FILE DISCOVERY
-
 ### STEP 1: FILE DISCOVERY
 ```powershell
-try {
-    $path = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ai-modules"
-    if (-not (Test-Path $path)) { Write-Host "ERROR: Path not found"; exit 1 }
-    
-$files = Get-ChildItem -Path $path -Recurse -File -Force
-$folders = Get-ChildItem -Path $path -Recurse -Directory -Force
-    
-    Write-Host "TOTAL FILES: $($files.Count) | TOTAL FOLDERS: $($folders.Count)"
-    
-    if ($files.Count -gt 200) { Write-Host "LARGE FOLDER: $($files.Count) files detected" }
-    if ($files.Count -gt 500) { Write-Host "ULTRA-MASSIVE FOLDER: Will use intensive micro-chunking" }
-    
-    # Dynamic validation based on complexity
-    $extensions = $files | ForEach-Object { [System.IO.Path]::GetExtension($_) } | Select-Object -Unique
-    $complexity = if ($extensions.Count -le 2) { "Simple" } 
-                  elseif ($extensions.Count -le 5) { "Mixed" } 
-                  elseif ($extensions.Count -le 8) { "Complex" } 
-                  else { "Critical" }
-    
-    switch ($complexity) {
-        "Simple" { $validationInterval = 50 }    # Homogeneous file types
-        "Mixed" { $validationInterval = 25 }     # Multiple content types  
-        "Complex" { $validationInterval = 15 }   # High diversity, mixed purposes
-        "Critical" { $validationInterval = 10 }  # Smart contracts, security files
-    }
-    
-    Write-Host "COMPLEXITY: $complexity | VALIDATION EVERY: $validationInterval files"
-    
-    $files | Sort-Object FullName | ForEach-Object -Begin {$i=1} -Process { 
-        Write-Host "FILE $i/$($files.Count): $($_.FullName)"
-        $i++
-    }
-} catch { Write-Host "ERROR: $($_.Exception.Message)" }
+# Simple file enumeration for ai-modules folder
+$path = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ai-modules"
+$files = Get-ChildItem -Path $path -Recurse -File | Sort-Object FullName
+$folders = Get-ChildItem -Path $path -Recurse -Directory | Sort-Object FullName
+
+Write-Host "TOTAL FILES: $($files.Count) | TOTAL FOLDERS: $($folders.Count)"
+Write-Host "FILES FOUND:"
+$files | ForEach-Object { Write-Host "  $($_.FullName)" }
 ```
 
 ### 📊 FOLDER SIZE STRATEGY & DECISION TREE
