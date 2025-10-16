@@ -1,8 +1,8 @@
 ﻿
-**You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate feature file.**
+**You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
 
-**TARGET FOLDER:** `Apex Arbitrage Multichain bot/docs`
-**FULL PATH:** `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\docs`
+**TARGET FOLDER:** `Apex Arbitrage Multichain bot/data`
+**FULL PATH:** `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\data`
 **ANALYSIS MODE:** PROJECT ANALYSIS
 
 **WHAT YOU MUST DO:**
