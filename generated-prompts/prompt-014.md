@@ -10,14 +10,23 @@
 2. ✅ Create a complete folder tree structure  
 3. ✅ Write detailed descriptions for each file (20-30 words)
 4. ✅ Generate comprehensive Windows implementation details
-5. ✅ Based on content analysis, decide which feature file to append to
-6. ✅ APPEND this documentation to the appropriate features/*.md file
-7. ✅ NO QUESTIONS - START IMMEDIATELY
+5. ✅ Based on content analysis, decide which EXISTING feature file to append to
+6. ✅ Check if content already exists in the target feature file
+7. ✅ If exists - append as "Feature 2", "Feature 3", etc.
+8. ✅ If doesn't exist - append as "Feature 1"
+9. ✅ APPEND to EXISTING features/*.md files ONLY (do not create new files)
+10. ✅ NO QUESTIONS - START IMMEDIATELY
+
+**EXISTING FEATURE FILES YOU CAN APPEND TO:**
+- ai-modules.md, archive.md, backend.md, config.md
+- contracts.md, dashboard.md, deployment.md, docs.md  
+- install-dependencies.md, performance.md, security.md, testing.md
 
 **WHAT YOU MUST NOT DO:**
 ❌ Ask which folder to analyze (it's specified above)
 ❌ Ask for existing documentation content (you will append to it)
 ❌ Ask for clarification on what to do
+❌ Create new .md files (only append to existing ones)
 ❌ Create standalone documentation (append to existing file)
 
 **START NOW - ANALYZE THE FOLDER AND DECIDE WHERE TO APPEND**
@@ -27,52 +36,45 @@
 **You must create documentation in this exact format:**
 
 ```markdown
-# FOLDER ANALYSIS: migrations
+# FOLDER ANALYSIS: [folder-name]
 
 ## COMPLETE FOLDER TREE STRUCTURE
-FOLDER 1/1: migrations/
+FOLDER 1/1: [folder-name]/
 ├── FILE 1/X: filename1.js
 ├── FILE 2/X: filename2.py
 └── FILE 3/X: filename3.md
 
 ## FEATURE ANALYSIS
-**Feature Name:** Migrations System
+**Feature Name:** [Feature Name] (Feature X - where X is the next number in the target file)
 **File Count:** X files
 **Complexity:** ⭐⭐⭐
 **Technologies:** JavaScript, Python, Markdown
 
 ## FILE DESCRIPTIONS
-- **filename1.js** → JavaScript module implementing core functionality with error handling, logging integration, and Windows service compatibility for robust operations
-- **filename2.py** → Python script containing business logic implementation with data processing, optimization algorithms, and real-time monitoring capabilities
-- **filename3.md** → Documentation file providing comprehensive API reference, usage examples, and integration guidelines for the system
+- **filename1.js** → [20-30 word description]
+- **filename2.py** → [20-30 word description]  
+- **filename3.md** → [20-30 word description]
 
 ## WINDOWS IMPLEMENTATION
-- Node.js runtime environment with Windows service integration
-- Python 3.9+ with virtual environment management
-- Windows PowerShell execution for automated processes
-- Windows Task Scheduler integration for periodic operations
-- Windows Event Log integration for error tracking and monitoring
-- Windows Performance Counters for system resource monitoring
-- Windows Registry configuration for system parameters
-- Windows Service wrapper for 24/7 operation
-- Windows Firewall rules for secure communication
-- Windows Backup integration for data persistence
-- Windows Update compatibility for dependency management
-- Windows Security Center integration for threat detection
+- [Windows-specific implementation details]
+- [PowerShell integration]
+- [Windows service configuration]
+- [Registry settings]
+- [Security considerations]
 
 ## TECHNOLOGIES DETECTED
-- JavaScript (Node.js)
-- Python (Business Logic)
-- Markdown (Documentation)
-- JSON (Configuration)
+- [List all detected technologies]
 
 ## CROSS-REFERENCES
-- Related to: backend.md (API integration)
-- Related to: testing.md (unit tests)
-- Related to: docs.md (documentation)
+- Related to: [other-feature].md (if applicable)
 ```
 
-**APPEND THIS COMPLETE DOCUMENTATION TO THE APPROPRIATE FEATURE FILE NOW!**
+**IMPORTANT:**
+1. Check the target feature file first to see if content already exists
+2. If content exists, use "Feature 2", "Feature 3", etc.
+3. If no content exists, use "Feature 1"
+4. APPEND this complete documentation to the appropriate EXISTING features/*.md file
+5. Do NOT create new .md files - only append to existing ones**
 
 ---
 

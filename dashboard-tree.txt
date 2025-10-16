@@ -1,0 +1,3214 @@
+﻿Folder PATH listing
+Volume serial number is A86F-C8B6
+C:\USERS\PAVAN PC\DESKTOP\APEX ARBITRAGE MULTICHAIN BOT FOR WINDOWS\APEX-ARBITRAGE-MULTICHAIN-BOT-FOR-WINDOWS\APEX ARBITRAGE MULTICHAIN BOT\DASHBOARD
+|   README.md
+|   
++---admin
+|       README.md
+|       
++---ai
+|   |   ai-manifest.json
+|   |   CHANGELOG.md
+|   |   index.js
+|   |   README.md
+|   |   
+|   +---automation
+|   |       AIAutoPilotPanel.jsx
+|   |       AIBatchRunner.js
+|   |       automation-demo.json
+|   |       AutomationLogs.json
+|   |       AutoStrategySelector.js
+|   |       OperatorOverrideToggle.jsx
+|   |       README.md
+|   |       
+|   +---chat
+|   |       AIChatUtils.js
+|   |       ChatFeedbackPanel.jsx
+|   |       ChatHistoryStore.js
+|   |       ChatOperatorLog.json
+|   |       LLMChatEngine.js
+|   |       PromptTemplates.json
+|   |       README.md
+|   |       
+|   +---components
+|   |       AIInsightWidget.jsx
+|   |       AITradeScorer.jsx
+|   |       AutomationToggle.jsx
+|   |       DecisionPathCard.jsx
+|   |       FeatureAttributionCard.jsx
+|   |       FeedbackPanel.jsx
+|   |       LLMChatBox.jsx
+|   |       ModelAuditLogPanel.jsx
+|   |       ModelStatusChip.jsx
+|   |       ModelSwitcher.jsx
+|   |       OperatorAIFeedbackPanel.jsx
+|   |       README.md
+|   |       ScoreKPIBlock.jsx
+|   |       XAIHeatmapOverlay.jsx
+|   |       
+|   +---config
+|   |       ai-dashboard-config.json
+|   |       ai-presets.json
+|   |       chat-settings.json
+|   |       feedback-config.json
+|   |       model-switcher-presets.json
+|   |       README.md
+|   |       xai-overlays.json
+|   |       
+|   +---demo
+|   |       ai-dashboard-tour.md
+|   |       ai-insight-demo.json
+|   |       chat-demo.json
+|   |       feedback-demo.json
+|   |       README.md
+|   |       xai-demo.json
+|   |       
+|   +---explainability
+|   |       ExplainabilityHistory.json
+|   |       ExplainabilityUtils.js
+|   |       FeatureImportanceChart.jsx
+|   |       GlobalXAIStatsWidget.jsx
+|   |       README.md
+|   |       SaliencyMapPanel.jsx
+|   |       xai-demo-data.json
+|   |       XAIIncidentExplorer.jsx
+|   |       XAIOverviewModal.jsx
+|   |       
+|   +---feedback
+|   |       feedback-demo.json
+|   |       FeedbackAPI.js
+|   |       FeedbackHistoryTable.jsx
+|   |       FeedbackPanel.jsx
+|   |       FeedbackSchema.json
+|   |       README.md
+|   |       
+|   +---hooks
+|   |       README.md
+|   |       useAIAutoPilot.js
+|   |       useAIFeedback.js
+|   |       useAIModel.js
+|   |       useAIOperatorMode.js
+|   |       useAIScoring.js
+|   |       useLLMChat.js
+|   |       useXAI.js
+|   |       
+|   +---models
+|   |   |   ai-models-list.json
+|   |   |   default-model-config.json
+|   |   |   model-audit-log.json
+|   |   |   model-metadata.json
+|   |   |   README.md
+|   |   |   
+|   |   \---weights
+|   |       |   ai-arb-v5.onnx
+|   |       |   pattern-learner-v3.pt
+|   |       |   README.md
+|   |       |   xai-embedder-v1.bin
+|   |       |   
+|   |       \---old-weights
+|   |               ai-arb-v3.pt
+|   |               ai-arb-v4.onnx
+|   |               README.md
+|   |               
+|   +---presets
+|   |       ai-theme-presets.json
+|   |       explainability-presets.json
+|   |       model-switcher-presets.json
+|   |       README.md
+|   |       
+|   +---scoring
+|   |       AIPredictionTable.jsx
+|   |       AIScoreEngine.js
+|   |       README.md
+|   |       score-demo.json
+|   |       ScoreEventLog.json
+|   |       ScoreHeatmapPanel.jsx
+|   |       ScorePresetConfig.json
+|   |       ScoringUtils.js
+|   |       
+|   +---tests
+|   |       aiModelSelect.test.js
+|   |       automationMode.test.js
+|   |       FeedbackPanel.test.js
+|   |       LLMChatPanel.test.js
+|   |       OperatorAIFeedbackPanel.test.js
+|   |       README.md
+|   |       XAIWidget.test.js
+|   |       
+|   \---utils
+|           aiApiClient.js
+|           aiDataAdapters.js
+|           aiFileUtils.js
+|           aiFormatters.js
+|           aiMetrics.js
+|           aiValidator.js
+|           README.md
+|           
++---analytics
+|   |   CHANGELOG.md
+|   |   README.md
+|   |   
+|   +---ai
+|   |       ai-demo-results.json
+|   |       AIDashboardAdapter.js
+|   |       AIProfitPredictor.js
+|   |       AnalyticsAIMetrics.jsx
+|   |       LatencyAnomalyAI.js
+|   |       OutlierDetectorAI.js
+|   |       README.md
+|   |       RegressionTrainer.js
+|   |       
+|   +---charts
+|   |       AnalyticsChartUtils.js
+|   |       AnomalyScatterPlot.jsx
+|   |       AreaChart.jsx
+|   |       CandlestickChart.jsx
+|   |       LineChart.jsx
+|   |       OrderbookDepthChart.jsx
+|   |       PieChart.jsx
+|   |       README.md
+|   |       
+|   +---components
+|   |       AnalyticsAlertBanner.jsx
+|   |       AnalyticsDashboard.jsx
+|   |       GasCostChart.jsx
+|   |       LatencyStatsPanel.jsx
+|   |       OperatorStatsPanel.jsx
+|   |       OutlierDetectionWidget.jsx
+|   |       PerformanceBreakdown.jsx
+|   |       PnLChart.jsx
+|   |       README.md
+|   |       RiskProfileChart.jsx
+|   |       ROIHeatmap.jsx
+|   |       TradeMetricsTable.jsx
+|   |       VolumeTimeSeries.jsx
+|   |       
+|   +---config
+|   |       ai-analytics-presets.json
+|   |       analytics-layout.json
+|   |       anomaly-detection-config.json
+|   |       custom-widgets-presets.json
+|   |       dashboard-metrics.json
+|   |       kpi-config.json
+|   |       operator-view-presets.json
+|   |       README.md
+|   |       regression-settings.json
+|   |       risk-indicators.json
+|   |       theme-presets.json
+|   |       timeseries-source.json
+|   |       
+|   +---data
+|   |       demo-anomalies.json
+|   |       demo-gas-costs.csv
+|   |       demo-pnl-data.csv
+|   |       demo-trade-metrics.csv
+|   |       outlier-events.csv
+|   |       README.md
+|   |       time-series-sample.csv
+|   |       
+|   +---explainability
+|   |       AnalyticsXAIOverlay.jsx
+|   |       AnomalyExplanationPanel.jsx
+|   |       explainability-config.json
+|   |       README.md
+|   |       RegressionExplainPanel.jsx
+|   |       
+|   +---hooks
+|   |       README.md
+|   |       useAnalyticsData.js
+|   |       useAnomalyScan.js
+|   |       useArbStats.js
+|   |       useGasTrends.js
+|   |       useLatencyStats.js
+|   |       useLivePnL.js
+|   |       useVolumeTimeseries.js
+|   |       
+|   +---integration
+|   |       AnalyticsAPI.js
+|   |       analyticsDataClient.js
+|   |       AnalyticsWS.js
+|   |       README.md
+|   |       syncConfig.json
+|   |       useAnalyticsSocket.js
+|   |       
+|   +---pages
+|   |       dashboard.js
+|   |       gas-cost.js
+|   |       pnl.js
+|   |       README.md
+|   |       regression.js
+|   |       risk.js
+|   |       roi.js
+|   |       time-series.js
+|   |       trade-metrics.js
+|   |       
+|   +---panels
+|   |       MainAnalyticsPanel.jsx
+|   |       OperatorPerformancePanel.jsx
+|   |       ProfitRegressionPanel.jsx
+|   |       README.md
+|   |       RiskAndROIOverview.jsx
+|   |       TimeSeriesExplorerPanel.jsx
+|   |       VolumeVsGasPanel.jsx
+|   |       
+|   +---reports
+|   |       custom-user-report-sample.pdf
+|   |       daily-report-20250730.pdf
+|   |       gas-analysis-report-20250701.csv
+|   |       profit-loss-report-20250710.csv
+|   |       README.md
+|   |       regression-report-20250715.csv
+|   |       
+|   +---state
+|   |       analyticsPersistence.js
+|   |       analyticsSelectors.js
+|   |       analyticsStore.js
+|   |       README.md
+|   |       
+|   +---tests
+|   |       AnalyticsAIMetrics.test.js
+|   |       AnalyticsAPI.test.js
+|   |       AnalyticsDashboard.test.js
+|   |       GasCostChart.test.js
+|   |       LatencyStatsPanel.test.js
+|   |       OutlierDetectionWidget.test.js
+|   |       README.md
+|   |       ROIHeatmap.test.js
+|   |       TradeMetricsTable.test.js
+|   |       
+|   +---utils
+|   |       anomalyUtils.js
+|   |       calcROI.js
+|   |       formatTradeData.js
+|   |       kpiFormatters.js
+|   |       pnlUtils.js
+|   |       README.md
+|   |       regressionUtils.js
+|   |       timeSeriesUtils.js
+|   |       
+|   \---widgets
+|           ActiveRouteWidget.jsx
+|           ArbitrageScoreWidget.jsx
+|           GasTrendWidget.jsx
+|           LatencyIndicatorWidget.jsx
+|           LiveVolumeSparkline.jsx
+|           MiniPnLWidget.jsx
+|           README.md
+|           TradeCountWidget.jsx
+|           
++---api
+|   |   ai.js
+|   |   arb.js
+|   |   CHANGELOG.md
+|   |   dev.js
+|   |   extension.js
+|   |   health.js
+|   |   index.js
+|   |   metrics.js
+|   |   notifications.js
+|   |   plugin.js
+|   |   README.md
+|   |   user.js
+|   |   webhook.js
+|   |   
+|   +---docs
+|   |       api-error-codes.md
+|   |       api-versioning.md
+|   |       auth.md
+|   |       integration.md
+|   |       multi-tenancy.md
+|   |       README.md
+|   |       routes.md
+|   |       schemas.md
+|   |       sockets.md
+|   |       update-history.md
+|   |       webhooks.md
+|   |       
+|   +---integration
+|   |       aiAdapter.js
+|   |       analyticsAdapter.js
+|   |       backendAdapter.js
+|   |       configAdapter.js
+|   |       metricsAdapter.js
+|   |       multiTenantAdapter.js
+|   |       notificationAdapter.js
+|   |       operatorAdapter.js
+|   |       pluginAdapter.js
+|   |       README.md
+|   |       riskAdapter.js
+|   |       sandboxAdapter.js
+|   |       uploadAdapter.js
+|   |       wsAdapter.js
+|   |       
+|   +---middleware
+|   |       analyticsThrottle.js
+|   |       auth.js
+|   |       cors.js
+|   |       csrf.js
+|   |       errorHandler.js
+|   |       logger.js
+|   |       multiTenantGuard.js
+|   |       operatorGuard.js
+|   |       rateLimit.js
+|   |       README.md
+|   |       validate.js
+|   |       
+|   +---routes
+|   |   |   ai.js
+|   |   |   alerts.js
+|   |   |   analytics.js
+|   |   |   config.js
+|   |   |   gas.js
+|   |   |   graphql.js
+|   |   |   health.js
+|   |   |   index.js
+|   |   |   metrics.js
+|   |   |   multi-tenant.js
+|   |   |   notifications.js
+|   |   |   operator.js
+|   |   |   overlays.js
+|   |   |   plugins.js
+|   |   |   pnl.js
+|   |   |   presets.js
+|   |   |   README.md
+|   |   |   risk.js
+|   |   |   sandbox.js
+|   |   |   session.js
+|   |   |   status.js
+|   |   |   trades.js
+|   |   |   uploads.js
+|   |   |   user.js
+|   |   |   websocket.js
+|   |   |   xai.js
+|   |   |   
+|   |   \---__mocks__
+|   |           ai-inference.json
+|   |           analytics.json
+|   |           config.json
+|   |           health.json
+|   |           notifications.json
+|   |           operator.json
+|   |           overlays.json
+|   |           presets.json
+|   |           README.md
+|   |           session.json
+|   |           trades.json
+|   |           user.json
+|   |           
+|   +---schemas
+|   |       ai-inference.schema.json
+|   |       analytics.schema.json
+|   |       config.schema.json
+|   |       notification.schema.json
+|   |       openapi.yaml
+|   |       operator.schema.json
+|   |       overlays.schema.json
+|   |       plugin.schema.json
+|   |       presets.schema.json
+|   |       README.md
+|   |       session.schema.json
+|   |       trade.schema.json
+|   |       upload.schema.json
+|   |       user.schema.json
+|   |       websocket.schema.json
+|   |       
+|   +---sockets
+|   |       ai-socket.js
+|   |       alerts-socket.js
+|   |       analytics-socket.js
+|   |       config-socket.js
+|   |       notification-socket.js
+|   |       operator-socket.js
+|   |       overlays-socket.js
+|   |       plugin-socket.js
+|   |       README.md
+|   |       trade-socket.js
+|   |       user-socket.js
+|   |       
+|   +---tests
+|   |   |   api-ai.test.js
+|   |   |   api-analytics.test.js
+|   |   |   api-config.test.js
+|   |   |   api-error.test.js
+|   |   |   api-health.test.js
+|   |   |   api-metrics.test.js
+|   |   |   api-multi-tenant.test.js
+|   |   |   api-notifications.test.js
+|   |   |   api-operator.test.js
+|   |   |   api-presets.test.js
+|   |   |   api-routes.test.js
+|   |   |   api-sandbox.test.js
+|   |   |   api-session.test.js
+|   |   |   api-status.test.js
+|   |   |   api-trades.test.js
+|   |   |   api-uploads.test.js
+|   |   |   api-websocket.test.js
+|   |   |   api-xai.test.js
+|   |   |   README.md
+|   |   |   
+|   |   \---__mocks__
+|   |           aiMock.js
+|   |           analyticsMock.js
+|   |           README.md
+|   |           userSessionMock.js
+|   |           
+|   \---utils
+|           apiErrorCodes.js
+|           apiMockUtils.js
+|           apiResponse.js
+|           parseQuery.js
+|           queryValidator.js
+|           rateLimiter.js
+|           README.md
+|           testUtils.js
+|           uploadUtils.js
+|           validateSchema.js
+|           websocketUtils.js
+|           
++---ar
+|   |   CHANGELOG.md
+|   |   README.md
+|   |   
+|   +---components
+|   |       ARActionPromptPanel.jsx
+|   |       ARCameraStreamView.jsx
+|   |       ARConfigPanel.jsx
+|   |       ARDashboardMenu.jsx
+|   |       ARFeatureAttributionMap.jsx
+|   |       ARGasPriceMeter.jsx
+|   |       ARIncidentFeed.jsx
+|   |       ARLatencyStatusWidget.jsx
+|   |       ARLivePoolWidget.jsx
+|   |       AROperatorCommandPanel.jsx
+|   |       AROrderbook3D.jsx
+|   |       AROverlayToggle.jsx
+|   |       ARPnLHeatmap3D.jsx
+|   |       ARRiskAlertOverlay.jsx
+|   |       ARXAIInsightPanel.jsx
+|   |       README.md
+|   |       
+|   +---config
+|   |       ar-context-presets.json
+|   |       ar-device-mapping.json
+|   |       ar-operator-presets.json
+|   |       ar-overlays.json
+|   |       ar-theme-presets.json
+|   |       README.md
+|   |       
+|   +---context
+|   |       ARDeviceContext.js
+|   |       AROverlayContext.js
+|   |       ARPermissionContext.js
+|   |       ARSessionContext.js
+|   |       README.md
+|   |       
+|   +---fixtures
+|   |       ar-incident-demo.json
+|   |       demo-ar-overlays.json
+|   |       live-pool-demo.json
+|   |       README.md
+|   |       xr-demo-assets.json
+|   |       
+|   +---hooks
+|   |       README.md
+|   |       useARCameraStream.js
+|   |       useARIncidentFeed.js
+|   |       useAROperatorMode.js
+|   |       useAROverlay.js
+|   |       useARSession.js
+|   |       useXRScene.js
+|   |       
+|   +---integration
+|   |       ARBackendAdapter.js
+|   |       ARIncidentFeedAdapter.js
+|   |       ARLiveFeedAdapter.js
+|   |       ARWebSocketAdapter.js
+|   |       ARXAIAdapter.js
+|   |       integration-config.json
+|   |       README.md
+|   |       
+|   +---modals
+|   |       ARIncidentDetailModal.jsx
+|   |       ARPermissionModal.jsx
+|   |       ARSettingsModal.jsx
+|   |       ARXAIExplainModal.jsx
+|   |       README.md
+|   |       
+|   +---overlays
+|   |       ARAlertBannerOverlay.jsx
+|   |       ARIncidentOverlay.jsx
+|   |       ARLiveXAIOverlay.jsx
+|   |       ARPerformanceOverlay.jsx
+|   |       ARXAIAttributionOverlay.jsx
+|   |       overlays-config.json
+|   |       overlays-demo-data.json
+|   |       overlays-preset.json
+|   |       README.md
+|   |       
+|   +---pages
+|   |       incidents.js
+|   |       index.js
+|   |       live.js
+|   |       operator.js
+|   |       pools.js
+|   |       README.md
+|   |       settings.js
+|   |       
+|   +---preview
+|   |       ar-preview-demo.json
+|   |       ARPreviewControls.jsx
+|   |       ARPreviewPanel.jsx
+|   |       README.md
+|   |       
+|   +---tests
+|   |       ARContext.test.js
+|   |       ARIncidentFeed.test.js
+|   |       ARIntegration.test.js
+|   |       ARLivePoolWidget.test.js
+|   |       AROverlayToggle.test.js
+|   |       README.md
+|   |       XRScene3D.test.js
+|   |       
+|   +---uploads
+|   |   |   ar-upload-manifest.json
+|   |   |   README.md
+|   |   |   user-ar-presets.json
+|   |   |   
+|   |   \---custom-ar-assets
+|   |           custom-overlay.glb
+|   |           custom-pool.glb
+|   |           README.md
+|   |           
+|   +---utils
+|   |       arDemoData.js
+|   |       arDeviceUtils.js
+|   |       arMetricsUtils.js
+|   |       arOverlayUtils.js
+|   |       arTestHelpers.js
+|   |       README.md
+|   |       xrSceneUtils.js
+|   |       
+|   \---xr
+|       |   README.md
+|       |   xr-config.json
+|       |   XRLiquidityMesh.jsx
+|       |   XRModelViewer.jsx
+|       |   XROrderbookDepth3D.jsx
+|       |   XRScene3D.jsx
+|       |   XRVolumeVisualization.jsx
+|       |   
+|       \---XRAssets
+|               dashboard.glb
+|               metrics-cube.glb
+|               pool.glb
+|               README.md
+|               
++---backend
+|       README.md
+|       
++---charts
+|       README.md
+|       
++---components
+|   |   README.md
+|   |   
+|   +---ai
+|   |       AIChatBubble.jsx
+|   |       AIDecisionFlow.jsx
+|   |       AIInsightPrompt.jsx
+|   |       LLMChatBox.jsx
+|   |       ModelConfidenceMeter.jsx
+|   |       ModelSwitcherCard.jsx
+|   |       README.md
+|   |       SaliencyOverlay.jsx
+|   |       XAIHeatmapPanel.jsx
+|   |       
+|   +---atomic
+|   |       Avatar.jsx
+|   |       Badge.jsx
+|   |       Button.jsx
+|   |       Chip.jsx
+|   |       ColorSwatch.jsx
+|   |       Divider.jsx
+|   |       Icon.jsx
+|   |       Label.jsx
+|   |       ProgressBar.jsx
+|   |       README.md
+|   |       Skeleton.jsx
+|   |       Spinner.jsx
+|   |       StatusIndicator.jsx
+|   |       ToggleSwitch.jsx
+|   |       Tooltip.jsx
+|   |       
+|   +---charts
+|   |       AreaChart.jsx
+|   |       BarChart.jsx
+|   |       CandlestickChart.jsx
+|   |       ChartWrapper.jsx
+|   |       DepthChart.jsx
+|   |       HeatmapChart.jsx
+|   |       LatencyTrendChart.jsx
+|   |       LineChart.jsx
+|   |       PieChart.jsx
+|   |       README.md
+|   |       TradePathChart.jsx
+|   |       VolumeChart.jsx
+|   |       
+|   +---dialogs
+|   |       AIExplainDialog.jsx
+|   |       ConfirmDialog.jsx
+|   |       ErrorModal.jsx
+|   |       OnboardingModal.jsx
+|   |       OperatorCommandDialog.jsx
+|   |       PluginDialog.jsx
+|   |       README.md
+|   |       ReportExportDialog.jsx
+|   |       SettingsDialog.jsx
+|   |       
+|   +---forms
+|   |       CodeEditorInput.jsx
+|   |       DatePicker.jsx
+|   |       FileUploadInput.jsx
+|   |       InputGroup.jsx
+|   |       JSONEditor.jsx
+|   |       MultiSelect.jsx
+|   |       PasswordInput.jsx
+|   |       RangeSlider.jsx
+|   |       README.md
+|   |       SearchInput.jsx
+|   |       SelectInput.jsx
+|   |       TextInput.jsx
+|   |       ToggleGroup.jsx
+|   |       
+|   +---layout
+|   |       AppLayout.jsx
+|   |       Breadcrumbs.jsx
+|   |       DashboardGrid.jsx
+|   |       Footer.jsx
+|   |       PageWrapper.jsx
+|   |       PanelCard.jsx
+|   |       README.md
+|   |       SectionHeader.jsx
+|   |       Sidebar.jsx
+|   |       SplitPaneLayout.jsx
+|   |       Topbar.jsx
+|   |       
+|   +---loaders
+|   |       FullscreenLoader.jsx
+|   |       InlineSpinner.jsx
+|   |       README.md
+|   |       WidgetLoader.jsx
+|   |       
+|   +---notifications
+|   |       InlineAlert.jsx
+|   |       NotificationBanner.jsx
+|   |       README.md
+|   |       Snackbar.jsx
+|   |       ToastContainer.jsx
+|   |       WebhookAlert.jsx
+|   |       
+|   +---operator
+|   |       AuditTimeline.jsx
+|   |       HealthStatusCard.jsx
+|   |       IncidentFeed.jsx
+|   |       IncidentSummaryPanel.jsx
+|   |       KillSwitchButton.jsx
+|   |       OperatorCommandBar.jsx
+|   |       README.md
+|   |       ShiftRosterPanel.jsx
+|   |       
+|   +---overlays
+|   |       AlertBanner.jsx
+|   |       AROverlay.jsx
+|   |       DebugOverlay.jsx
+|   |       IncidentOverlay.jsx
+|   |       README.md
+|   |       RiskOverlay.jsx
+|   |       TradePathOverlay.jsx
+|   |       XAIOverlay.jsx
+|   |       
+|   +---plugin
+|   |       PluginCard.jsx
+|   |       PluginConfigForm.jsx
+|   |       PluginMarketplace.jsx
+|   |       PluginPanel.jsx
+|   |       PluginStatusIndicator.jsx
+|   |       PluginToggle.jsx
+|   |       README.md
+|   |       
+|   +---sandbox
+|   |       ExperimentalChartPanel.jsx
+|   |       FeatureFlagToggle.jsx
+|   |       LLMToolbox.jsx
+|   |       PlaygroundPanel.jsx
+|   |       README.md
+|   |       WidgetDevTools.jsx
+|   |       
+|   +---tables
+|   |       AITable.jsx
+|   |       AlertHistoryTable.jsx
+|   |       DataTable.jsx
+|   |       EditableTableCell.jsx
+|   |       PoolTable.jsx
+|   |       README.md
+|   |       RiskMatrixTable.jsx
+|   |       SortableTable.jsx
+|   |       TablePagination.jsx
+|   |       TradeTable.jsx
+|   |       
+|   +---theme
+|   |       ContrastModeSwitch.jsx
+|   |       README.md
+|   |       ThemePaletteGrid.jsx
+|   |       ThemePreviewBox.jsx
+|   |       ThemeSelector.jsx
+|   |       ThemeToggle.jsx
+|   |       
+|   +---utils
+|   |       BlockTimer.jsx
+|   |       CodeBlock.jsx
+|   |       CopyToClipboard.jsx
+|   |       GasBadge.jsx
+|   |       JsonViewer.jsx
+|   |       OperatorAvatar.jsx
+|   |       README.md
+|   |       StatusPill.jsx
+|   |       TimeAgo.jsx
+|   |       ValueChangeDelta.jsx
+|   |       
+|   \---widgets
+|           AIDecisionScoreCard.jsx
+|           GasWidget.jsx
+|           LatencyMeter.jsx
+|           MEVActivityWidget.jsx
+|           OperatorInsightsWidget.jsx
+|           PnLWidget.jsx
+|           PoolHealthWidget.jsx
+|           README.md
+|           RiskGaugeWidget.jsx
+|           RoutePriorityMeter.jsx
+|           TokenReputationScore.jsx
+|           TradeDeltaWidget.jsx
+|           TradeVolumeSparkline.jsx
+|           WatchdogStatus.jsx
+|           
++---context
+|       AIContext.js
+|       AIProvider.jsx
+|       AlertsContext.js
+|       AlertsProvider.jsx
+|       AppContext.js
+|       AppProvider.jsx
+|       AuthContext.js
+|       AuthProvider.jsx
+|       context.test.js
+|       contextHelpers.js
+|       index.js
+|       LayoutContext.js
+|       LayoutProvider.jsx
+|       LocaleContext.js
+|       LocaleProvider.jsx
+|       ModalContext.js
+|       ModalProvider.jsx
+|       NotificationsContext.js
+|       NotificationsProvider.jsx
+|       OperatorContext.js
+|       OperatorProvider.jsx
+|       OperatorShiftContext.js
+|       OperatorShiftProvider.jsx
+|       OverlayContext.js
+|       OverlayProvider.jsx
+|       PluginContext.js
+|       PluginProvider.jsx
+|       README.md
+|       SettingsContext.js
+|       SettingsProvider.jsx
+|       StateSyncContext.js
+|       StateSyncProvider.jsx
+|       ThemeContext.js
+|       ThemeProvider.jsx
+|       useAI.js
+|       useAlerts.js
+|       useApp.js
+|       useAuth.js
+|       useLayout.js
+|       useLocale.js
+|       useModal.js
+|       useNotifications.js
+|       useOperator.js
+|       useOperatorShift.js
+|       useOverlay.js
+|       usePlugin.js
+|       useSettings.js
+|       useStateSync.js
+|       useTheme.js
+|       useWebsocket.js
+|       useXAI.js
+|       WebsocketContext.js
+|       WebsocketProvider.jsx
+|       XAIContext.js
+|       XAIProvider.jsx
+|       
++---data
+|   |   active-pools.json
+|   |   agent-scores.json
+|   |   ai-evaluations.json
+|   |   compliance-log.json
+|   |   fork-state-diff.json
+|   |   incident-log.json
+|   |   market-depth.json
+|   |   operator-profiles.json
+|   |   oracle-feed-cache.json
+|   |   plugin-usage.json
+|   |   profit-log.json
+|   |   README.md
+|   |   risk-events.json
+|   |   route-cache.json
+|   |   simulation-runs.json
+|   |   state-history.log
+|   |   token-metadata.json
+|   |   trade-history.json
+|   |   
+|   +---ai-feedback
+|   |       feedback-20250701.json
+|   |       feedback-20250715.json
+|   |       feedback-20250730.json
+|   |       model-update-requests.json
+|   |       README.md
+|   |       
+|   +---analytics
+|   |       ai-inference-20250701.json
+|   |       ai-inference-20250715.json
+|   |       ai-inference-20250730.json
+|   |       anomaly-events-20250730.json
+|   |       pool-liquidity-report-20250701.json
+|   |       pool-liquidity-report-20250715.json
+|   |       pool-liquidity-report-20250730.json
+|   |       README.md
+|   |       trade-alpha-scores-20250701.json
+|   |       trade-alpha-scores-20250715.json
+|   |       trade-alpha-scores-20250730.json
+|   |       
+|   +---audit-trails
+|   |       audit-20250701.log
+|   |       audit-20250715.log
+|   |       audit-20250730.log
+|   |       event-archive-20250701.json
+|   |       event-archive-20250715.json
+|   |       event-archive-20250730.json
+|   |       README.md
+|   |       
+|   +---compliance-archive
+|   |       kyc-report-20250701.pdf
+|   |       kyc-report-20250715.pdf
+|   |       kyc-report-20250730.pdf
+|   |       README.md
+|   |       sanctions-check-20250701.json
+|   |       sanctions-check-20250715.json
+|   |       sanctions-check-20250730.json
+|   |       
+|   +---export
+|   |       ai-inference-export-20250701.json
+|   |       dashboard-report-20250730.pdf
+|   |       export-20250701.csv
+|   |       export-20250715.csv
+|   |       export-20250730.csv
+|   |       README.md
+|   |       
+|   +---forensics
+|   |       exploit-dump-20250701.json
+|   |       exploit-dump-20250715.json
+|   |       exploit-dump-20250730.json
+|   |       README.md
+|   |       root-cause-analysis.md
+|   |       trade-anomaly-20250730.json
+|   |       
+|   +---logs
+|   |       ai-agent-20250701.log
+|   |       ai-agent-20250715.log
+|   |       ai-agent-20250730.log
+|   |       engine-20250701.log
+|   |       engine-20250715.log
+|   |       engine-20250730.log
+|   |       error-20250701.log
+|   |       error-20250715.log
+|   |       error-20250730.log
+|   |       README.md
+|   |       rotation-policy.md
+|   |       trades-20250701.log
+|   |       trades-20250715.log
+|   |       trades-20250730.log
+|   |       watchdog-20250701.log
+|   |       watchdog-20250715.log
+|   |       watchdog-20250730.log
+|   |       
+|   +---operator-audit
+|   |       ai-review-20250715.json
+|   |       nlp-feedback-20250730.json
+|   |       operator-actions-20250701.json
+|   |       operator-actions-20250715.json
+|   |       operator-actions-20250730.json
+|   |       README.md
+|   |       
+|   +---simulation-snapshots
+|   |       post-fork-sim-20250715.json
+|   |       pre-fork-sim-20250715.json
+|   |       README.md
+|   |       risk-test-20250715.json
+|   |       snapshot-20250701.json
+|   |       snapshot-20250715.json
+|   |       snapshot-20250730.json
+|   |       
+|   +---snapshots
+|   |       agents-20250701.json
+|   |       agents-20250715.json
+|   |       agents-20250730.json
+|   |       latest-snapshot.json
+|   |       pools-20250701.json
+|   |       pools-20250715.json
+|   |       pools-20250730.json
+|   |       README.md
+|   |       sim-20250701.json
+|   |       sim-20250715.json
+|   |       sim-20250730.json
+|   |       
+|   \---synthetic-datasets
+|           deep-arb-ai-trainset.csv
+|           fake-arb-scenarios.json
+|           README.md
+|           sim-synthetic-events.json
+|           synthetic-prices-20250701.csv
+|           synthetic-prices-20250715.csv
+|           synthetic-profits-20250730.csv
+|           
++---deploy
+|   |   CHANGELOG.md
+|   |   patterns.md
+|   |   README.md
+|   |   
+|   +---ansible
+|   |   |   inventory.ini
+|   |   |   playbook.yml
+|   |   |   README.md
+|   |   |   secrets.yml
+|   |   |   
+|   |   +---group_vars
+|   |   |       all.yml
+|   |   |       prod.yml
+|   |   |       README.md
+|   |   |       
+|   |   +---roles
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---ai-modules
+|   |   |   |   |   README.md
+|   |   |   |   |   
+|   |   |   |   +---backend
+|   |   |   |   |       README.md
+|   |   |   |   |       
+|   |   |   |   +---dashboard
+|   |   |   |   |       README.md
+|   |   |   |   |       
+|   |   |   |   \---operator
+|   |   |   |           README.md
+|   |   |   |           
+|   |   |   +---backend
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   +---dashboard
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   \---operator
+|   |   |           README.md
+|   |   |           
+|   |   \---scripts
+|   |           README.md
+|   |           run-all.sh
+|   |           
+|   +---audit
+|   |       audit-checklist.md
+|   |       cloud-posture.md
+|   |       deploy-logs.md
+|   |       README.md
+|   |       
+|   +---docker
+|   |       ai-modules.Dockerfile
+|   |       backend.Dockerfile
+|   |       base.Dockerfile
+|   |       dashboard.Dockerfile
+|   |       operator.Dockerfile
+|   |       README.md
+|   |       
+|   +---docker-compose
+|   |       docker-compose.dev.yml
+|   |       docker-compose.override.yml
+|   |       docker-compose.prod.yml
+|   |       docker-compose.yml
+|   |       README.md
+|   |       
+|   +---environments
+|   |       .env.example
+|   |       dev.env
+|   |       local.env
+|   |       mainnet-fork.env
+|   |       preview.env
+|   |       prod.env
+|   |       README.md
+|   |       staging.env
+|   |       testnet.env
+|   |       vault.env
+|   |       
+|   +---helm
+|   |   |   README.md
+|   |   |   
+|   |   \---apex-protocol
+|   |       |   Chart.yaml
+|   |       |   NOTES.txt
+|   |       |   README.md
+|   |       |   values.yaml
+|   |       |   
+|   |       \---templates
+|   |               configmap.yaml
+|   |               deployment.yaml
+|   |               hpa.yaml
+|   |               ingress.yaml
+|   |               README.md
+|   |               secrets.yaml
+|   |               service.yaml
+|   |               
+|   +---kubernetes
+|   |   |   README.md
+|   |   |   
+|   |   +---base
+|   |   |       ai-modules-deployment.yaml
+|   |   |       backend-deployment.yaml
+|   |   |       configmap.yaml
+|   |   |       dashboard-deployment.yaml
+|   |   |       ingress.yaml
+|   |   |       kustomization.yaml
+|   |   |       namespace.yaml
+|   |   |       operator-deployment.yaml
+|   |   |       README.md
+|   |   |       secrets.yaml
+|   |   |       service.yaml
+|   |   |       storage.yaml
+|   |   |       
+|   |   +---overlays
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   +---dev
+|   |   |   |       kustomization.yaml
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   +---local
+|   |   |   |       kustomization.yaml
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   +---prod
+|   |   |   |       kustomization.yaml
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   +---staging
+|   |   |   |       kustomization.yaml
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   \---testnet
+|   |   |           kustomization.yaml
+|   |   |           README.md
+|   |   |           
+|   |   \---scripts
+|   |           cleanup.sh
+|   |           deploy.sh
+|   |           README.md
+|   |           
+|   +---migration
+|   |       001-init.sql
+|   |       README.md
+|   |       
+|   +---scripts
+|   |       backup-db.sh
+|   |       deploy-all.sh
+|   |       healthcheck.sh
+|   |       logs.sh
+|   |       README.md
+|   |       restore-db.sh
+|   |       update-all.sh
+|   |       
+|   +---secrets
+|   |       dev.secrets.enc
+|   |       example.secrets.yaml
+|   |       prod.secrets.enc
+|   |       README.md
+|   |       
+|   \---terraform
+|       |   main.tf
+|       |   outputs.tf
+|       |   provider.tf
+|       |   README.md
+|       |   secrets.auto.tfvars
+|       |   variables.tf
+|       |   versions.tf
+|       |   
+|       +---modules
+|       |   |   README.md
+|       |   |   
+|       |   +---db
+|       |   |       README.md
+|       |   |       
+|       |   +---k8s
+|       |   |       README.md
+|       |   |       
+|       |   +---storage
+|       |   |       README.md
+|       |   |       
+|       |   \---vpc
+|       |           README.md
+|       |           
+|       \---scripts
+|               apply.sh
+|               plan.sh
+|               README.md
+|               
++---docs
+|   |   ai-integration.md
+|   |   analytics.md
+|   |   api.md
+|   |   ar-guide.md
+|   |   architecture.md
+|   |   audit-trail.md
+|   |   backend-api.md
+|   |   backend-stack.md
+|   |   CHANGELOG.md
+|   |   charts.md
+|   |   ci-cd.md
+|   |   code-quality.md
+|   |   compliance.md
+|   |   context.md
+|   |   contract-integration.md
+|   |   data-pipeline.md
+|   |   db-schema.md
+|   |   design-system.md
+|   |   event-handling.md
+|   |   event-reference.md
+|   |   extensions.md
+|   |   failover-guide.md
+|   |   faq.md
+|   |   faqs.md
+|   |   features.md
+|   |   fork-testing.md
+|   |   formal-verification.md
+|   |   getting-started.md
+|   |   incident-response.md
+|   |   integration.md
+|   |   localization.md
+|   |   logging-monitoring.md
+|   |   mainnet-deployment.md
+|   |   mainnet-hardening.md
+|   |   migration-guide.md
+|   |   module-development.md
+|   |   navigation.md
+|   |   notification-guide.md
+|   |   onboarding.md
+|   |   operator-guide.md
+|   |   operator-modes.md
+|   |   operator-roles.md
+|   |   overlays-ar-xai.md
+|   |   pages-structure.md
+|   |   plugin-architecture.md
+|   |   plugin-system.md
+|   |   privacy.md
+|   |   quickstart.md
+|   |   README.md
+|   |   release-notes.md
+|   |   risk-management.md
+|   |   roadmap.md
+|   |   security.md
+|   |   simulation-workflow.md
+|   |   state-management.md
+|   |   style-guide.md
+|   |   test-strategy.md
+|   |   testing.md
+|   |   theming.md
+|   |   troubleshooting.md
+|   |   upgradeability.md
+|   |   uploads.md
+|   |   user-guide.md
+|   |   widgets.md
+|   |   xai-guide.md
+|   |   
+|   +---ai
+|   |       ai-engine.md
+|   |       ai-ml-pipeline.md
+|   |       ai-models.md
+|   |       ai-ops-guide.md
+|   |       ai-testing-guide.md
+|   |       ai-upgradeability.md
+|   |       README.md
+|   |       
+|   +---api
+|   |       ai-engine-api.yaml
+|   |       backend-api.yaml
+|   |       dashboard-api.yaml
+|   |       notification-api.yaml
+|   |       plugin-api.yaml
+|   |       README.md
+|   |       simulation-api.yaml
+|   |       
+|   +---audit
+|   |       audit-log-spec.md
+|   |       incident-review-checklist.md
+|   |       operator-audit-demo.csv
+|   |       README.md
+|   |       
+|   +---compliance
+|   |       aml-logs.md
+|   |       compliance-audit.md
+|   |       data-retention.md
+|   |       kyc-flow.md
+|   |       README.md
+|   |       sanctions-workflow.md
+|   |       
+|   +---dashboard
+|   |       ai-dashboard.md
+|   |       dashboard-api.md
+|   |       dashboard-architecture.md
+|   |       live-analytics-guide.md
+|   |       notification-integration.md
+|   |       overlays-integration.md
+|   |       plugin-status-panel.md
+|   |       README.md
+|   |       
+|   +---diagrams
+|   |       ai-integration.drawio
+|   |       ai-xai-pipeline.svg
+|   |       backend-architecture.drawio
+|   |       ci-cd-pipeline.drawio
+|   |       dashboard-architecture.png
+|   |       data-pipeline.drawio
+|   |       failover-diagram.drawio
+|   |       fork-testing.drawio
+|   |       incident-response.drawio
+|   |       operator-dashboard.drawio
+|   |       operator-flow.svg
+|   |       plugin-system-sequence.png
+|   |       plugin-system.drawio
+|   |       README.md
+|   |       risk-flow.drawio
+|   |       simulation-workflow.drawio
+|   |       state-context-flow.png
+|   |       
+|   +---formal
+|   |       ai-formal-verification.md
+|   |       contract-formal-verification.md
+|   |       formal-verification-report.md
+|   |       invariants.md
+|   |       model-specs.md
+|   |       README.md
+|   |       
+|   +---legacy
+|   |       deprecated-architecture.md
+|   |       legacy-api.md
+|   |       legacy-upgrade-guide.md
+|   |       old-release-notes.md
+|   |       README.md
+|   |       
+|   +---migration
+|   |       ai-migration.md
+|   |       backend-migration.md
+|   |       contract-migration.md
+|   |       db-migration.md
+|   |       plugin-migration.md
+|   |       README.md
+|   |       
+|   +---onboarding
+|   |       ai-module-onboarding.md
+|   |       auditor-onboarding.md
+|   |       developer-onboarding.md
+|   |       faq-onboarding.md
+|   |       operator-onboarding.md
+|   |       plugin-onboarding.md
+|   |       README.md
+|   |       
+|   +---playbooks
+|   |       disaster-recovery.md
+|   |       incident-playbook.md
+|   |       ops-handover.md
+|   |       README.md
+|   |       rollback-playbook.md
+|   |       upgrade-playbook.md
+|   |       
+|   +---risk
+|   |       ai-risk.md
+|   |       bridge-risk.md
+|   |       incident-catalog.md
+|   |       kill-switch.md
+|   |       mev-risk.md
+|   |       oracle-risk.md
+|   |       pool-risk.md
+|   |       README.md
+|   |       risk-dashboard.md
+|   |       trade-risk.md
+|   |       
+|   +---samples
+|   |       demo-user.csv
+|   |       onboarding-example.md
+|   |       plugin-stub.js
+|   |       README.md
+|   |       sample-config.json
+|   |       sample-theme.json
+|   |       
+|   \---templates
+|           context-provider-template.js
+|           operator-alert-template.md
+|           plugin-template.js
+|           README.md
+|           widget-template.jsx
+|           
++---extensions
+|   |   CHANGELOG.md
+|   |   extension-api.md
+|   |   extension-dev-guide.md
+|   |   extension-security.md
+|   |   manifest.json
+|   |   README.md
+|   |   registry.json
+|   |   
+|   +---assets
+|   |       extension-banner-sample.png
+|   |       extension-icon-sample.svg
+|   |       extension-preview-theme.css
+|   |       README.md
+|   |       
+|   +---community
+|   |       CommunityDiscussionThread.jsx
+|   |       CommunityExtensionManifest.json
+|   |       CommunityGalleryPanel.jsx
+|   |       ExtensionMarketplace.jsx
+|   |       ExtensionSubmitForm.jsx
+|   |       README.md
+|   |       VotingWidget.jsx
+|   |       
+|   +---core
+|   |       CoreExtensionLoader.js
+|   |       CoreExtensionSampleWidget.jsx
+|   |       CoreExtensionsRegistry.json
+|   |       README.md
+|   |       
+|   +---demo
+|   |       AnimationPlayground.jsx
+|   |       DarkModeDemoWidget.jsx
+|   |       DemoConfigPreset.json
+|   |       MobileUXPreviewer.jsx
+|   |       README.md
+|   |       ThemeDemoPanel.jsx
+|   |       UXFeedbackCollector.jsx
+|   |       
+|   +---integration
+|   |       AnalyticsIntegrationPanel.jsx
+|   |       ARPluginIntegrationPanel.jsx
+|   |       ChainlinkIntegrationWidget.jsx
+|   |       DiscordBotIntegration.jsx
+|   |       ExternalApiIntegrationWidget.jsx
+|   |       IntegrationManifest.json
+|   |       README.md
+|   |       WebhookBridgeExtension.jsx
+|   |       XAIExtensionAdapter.js
+|   |       
+|   +---labs
+|   |       AdvancedStrategyLab.jsx
+|   |       AIPrototypePanel.jsx
+|   |       ExperimentalWidgetGallery.jsx
+|   |       ExperimentRegistry.json
+|   |       LabsDemoConfig.json
+|   |       LabsLauncherPanel.jsx
+|   |       PatternExplorerLab.jsx
+|   |       README.md
+|   |       
+|   +---plugin
+|   |       AdvancedPluginDemo.jsx
+|   |       plugin-manifest.json
+|   |       PluginConfigEditor.jsx
+|   |       PluginExtensionTemplate.js
+|   |       PluginQuickStartSample.jsx
+|   |       PluginReadme.md
+|   |       README.md
+|   |       
+|   +---samples
+|   |       extension-onboarding.md
+|   |       extension-sample-api.js
+|   |       extension-sample-config.json
+|   |       extension-sample-doc.md
+|   |       extension-sample-widget.jsx
+|   |       README.md
+|   |       
+|   +---tests
+|   |       AnalyticsIntegrationPanel.test.js
+|   |       CommunityGalleryPanel.test.js
+|   |       DemoExtensionSandbox.test.js
+|   |       ExtensionLoader.test.js
+|   |       ExtensionValidator.test.js
+|   |       LabsLauncherPanel.test.js
+|   |       PluginQuickStartSample.test.js
+|   |       README.md
+|   |       
+|   \---utils
+|           extensionDevHelpers.js
+|           extensionHotReload.js
+|           extensionPermissions.js
+|           extensionSandbox.js
+|           extensionValidator.js
+|           README.md
+|           registerExtension.js
+|           
++---fixtures
+|   |   CHANGELOG.md
+|   |   README.md
+|   |   
+|   +---analytics
+|   |       anomaly-events-demo.csv
+|   |       gas-costs-demo.csv
+|   |       latency-demo.csv
+|   |       outlier-events-demo.json
+|   |       pnl-demo.csv
+|   |       README.md
+|   |       risk-profile-demo.json
+|   |       roi-demo.csv
+|   |       trade-history-demo.csv
+|   |       
+|   +---api
+|   |       mock-ai-inference.json
+|   |       mock-analytics-data.json
+|   |       mock-arb-alerts.json
+|   |       mock-health-status.json
+|   |       mock-incident-events.json
+|   |       mock-notifications.json
+|   |       mock-operator-audit.json
+|   |       mock-overlays.json
+|   |       mock-pnl-data.json
+|   |       mock-trade-metrics.json
+|   |       mock-upload-results.json
+|   |       mock-user-session.json
+|   |       mock-websocket-events.json
+|   |       README.md
+|   |       
+|   +---ar
+|   |       ar-incident-demo.json
+|   |       ar-user-preset-demo.json
+|   |       demo-ar-overlays.json
+|   |       live-pool-demo.json
+|   |       README.md
+|   |       xr-demo-assets.json
+|   |       
+|   +---demo
+|   |       ai-widget-demo-data.json
+|   |       dashboard-demo-metrics.json
+|   |       gas-widget-demo.json
+|   |       operator-demo-session.json
+|   |       plugin-demo-config.json
+|   |       pnl-widget-demo.json
+|   |       README.md
+|   |       sandbox-stories.json
+|   |       trade-volume-demo.json
+|   |       xai-overlay-demo.json
+|   |       
+|   +---misc
+|   |       deprecated-demo.json
+|   |       migration-sample.json
+|   |       README.md
+|   |       seed-data.json
+|   |       test-data.json
+|   |       
+|   +---notifications
+|   |       alert-demo.json
+|   |       banner-demo.json
+|   |       incident-toast-demo.json
+|   |       operator-notification-demo.json
+|   |       README.md
+|   |       webhook-demo.json
+|   |       
+|   +---operator
+|   |       audit-timeline-demo.json
+|   |       escalation-demo.json
+|   |       incident-log-demo.json
+|   |       kill-switch-events-demo.json
+|   |       README.md
+|   |       shift-demo-schedule.json
+|   |       
+|   +---plugins
+|   |       extension-gallery-demo.json
+|   |       plugin-config-demo.json
+|   |       plugin-marketplace-demo.json
+|   |       README.md
+|   |       
+|   +---test-utils
+|   |       demo-api-client.js
+|   |       fixtures.test.js
+|   |       README.md
+|   |       sample-mock-store.js
+|   |       
+|   \---user
+|           demo-locale-settings.json
+|           demo-user-profile.json
+|           onboarding-tour-demo.json
+|           README.md
+|           theme-preset-demo.json
+|           
++---hooks
+|       hooks.test.js
+|       index.js
+|       README.md
+|       useAI.js
+|       useAIFeedback.js
+|       useAIInsight.js
+|       useAIScoring.js
+|       useAlerts.js
+|       useAnalyticsData.js
+|       useApi.js
+|       useAppState.js
+|       useArbStats.js
+|       useARCameraStream.js
+|       useARIncidentFeed.js
+|       useAROperatorMode.js
+|       useAROverlay.js
+|       useARSession.js
+|       useAuth.js
+|       useBanner.js
+|       useBreadcrumbs.js
+|       useClipboard.js
+|       useDropzone.js
+|       useExtensionRegistry.js
+|       useFileUpload.js
+|       useFocusTrap.js
+|       useGasTrends.js
+|       useHydrated.js
+|       useLabsExperiment.js
+|       useLatencyStats.js
+|       useLayout.js
+|       useLiveData.js
+|       useLivePnL.js
+|       useLocale.js
+|       useLocalStorage.js
+|       useModal.js
+|       useModelAudit.js
+|       useModelSwitcher.js
+|       useNavigation.js
+|       useNotifications.js
+|       useOnboarding.js
+|       useOperator.js
+|       useOperatorShift.js
+|       usePersistedState.js
+|       usePlugin.js
+|       useRiskRegression.js
+|       useSession.js
+|       useSettings.js
+|       useStateSync.js
+|       useStorybookState.js
+|       useSWRApi.js
+|       useTheme.js
+|       useTimeAgo.js
+|       useUserProfile.js
+|       useVisibility.js
+|       useVolumeTimeseries.js
+|       useWebhookListener.js
+|       useWebsocket.js
+|       useWidgetTestHarness.js
+|       useXAI.js
+|       useXRScene.js
+|       
++---integration
+|       AlertSyncAdapter.js
+|       AnalyticsAdapter.js
+|       ApiBridge.js
+|       ArbScoringSync.js
+|       ARControlBridge.js
+|       ARStreamAdapter.js
+|       BotMessageBridge.js
+|       ChainDataBridge.js
+|       DiscordBotConnector.js
+|       ExtensionRegistrySync.js
+|       HealthCheckDisplay.jsx
+|       HealthCheckDisplay.test.jsx
+|       InsightsBridge.js
+|       integration.test.js
+|       IntegrationCache.js
+|       integrationConfig.json
+|       IntegrationDebugOverlay.jsx
+|       IntegrationDevPanel.jsx
+|       IntegrationLatencyMeter.jsx
+|       IntegrationLogger.js
+|       IntegrationStatusCard.jsx
+|       IntegrationToggleSwitch.jsx
+|       integrationUtils.js
+|       LabsStatusBridge.js
+|       mockIntegrationData.json
+|       OperatorSyncBridge.js
+|       PluginSyncAdapter.js
+|       PluginSyncAdapter.test.js
+|       README.md
+|       SSEBridge.js
+|       SyncErrorBoundary.jsx
+|       useIntegrationStatus.js
+|       WebhookReceiver.js
+|       WebsocketBridge.js
+|       WebsocketBridge.test.js
+|       XAIAdapter.js
+|       XAIAdapter.test.js
+|       XRCanvasSync.js
+|       
++---layouts
+|       AppLayout.jsx
+|       ARLayout.jsx
+|       AuthLayout.jsx
+|       DashboardGrid.jsx
+|       Footer.jsx
+|       MultiPaneLayout.jsx
+|       OperatorLayout.jsx
+|       PageWrapper.jsx
+|       README.md
+|       Sidebar.jsx
+|       SplitPaneLayout.jsx
+|       StickyMenuBar.jsx
+|       Topbar.jsx
+|       
++---locales
+|   |   add-new-language.md
+|   |   ar.json
+|   |   bn.json
+|   |   CHANGELOG.md
+|   |   check-missing-translations.js
+|   |   compile-locale-bundle.js
+|   |   currency-map.json
+|   |   currency-utils.js
+|   |   date-format-map.json
+|   |   de.json
+|   |   detect-user-locale.js
+|   |   en.json
+|   |   es.json
+|   |   fallback.json
+|   |   fr.json
+|   |   hi.json
+|   |   i18n-config.js
+|   |   id.json
+|   |   ja.json
+|   |   keys-reference.json
+|   |   locale-utils.js
+|   |   locales.test.js
+|   |   message-templates.json
+|   |   number-format-map.json
+|   |   pluralization-rules.json
+|   |   pt.json
+|   |   README.md
+|   |   region-switcher.js
+|   |   ru.json
+|   |   supported-locales.json
+|   |   ta.json
+|   |   te.json
+|   |   timeago-locales.js
+|   |   timezone-map.json
+|   |   translate-best-practices.md
+|   |   update-locale-cdn.js
+|   |   zh.json
+|   |   
+|   \---custom
+|           custom-strings-demo.json
+|           onboarding-tour-hi.json
+|           operator-flows-ta.json
+|           README.md
+|           
++---mock
+|   |   api-handlers.js
+|   |   api-handlers.test.js
+|   |   CHANGELOG.md
+|   |   factories.test.js
+|   |   faker-config.js
+|   |   hot-reload-mocks.js
+|   |   inject-mocks.js
+|   |   mirage-readme.md
+|   |   mirage-server.js
+|   |   mirage-server.test.js
+|   |   mock-server.js
+|   |   mock-utils.js
+|   |   mock.test.js
+|   |   mockConfig.json
+|   |   msw-readme.md
+|   |   msw-server.js
+|   |   README.md
+|   |   scenario-presets.test.js
+|   |   scenario-switcher.js
+|   |   setup-mock-env.js
+|   |   socket-mock-server.js
+|   |   
+|   +---api-responses
+|   |       mock-ai-inference.json
+|   |       mock-analytics-data.json
+|   |       mock-arb-alerts.json
+|   |       mock-health-status.json
+|   |       mock-incident-events.json
+|   |       mock-notifications.json
+|   |       mock-operator-audit.json
+|   |       mock-overlays.json
+|   |       mock-pnl-data.json
+|   |       mock-trade-metrics.json
+|   |       mock-upload-results.json
+|   |       mock-user-session.json
+|   |       mock-websocket-events.json
+|   |       README.md
+|   |       
+|   +---factories
+|   |       aiInferenceFactory.js
+|   |       analyticsFactory.js
+|   |       incidentFactory.js
+|   |       notificationFactory.js
+|   |       poolFactory.js
+|   |       README.md
+|   |       tradeFactory.js
+|   |       userFactory.js
+|   |       
+|   \---scenario-presets
+|           ai-demo-state.json
+|           incident-demo-state.json
+|           operator-demo-state.json
+|           README.md
+|           trade-surge-state.json
+|           
++---modals
+|       AccountSwitchDialog.jsx
+|       AIExplainDialog.jsx
+|       AIFeedbackModal.jsx
+|       AlertModal.jsx
+|       ARPermissionModal.jsx
+|       AuditReviewDialog.jsx
+|       ConfirmDialog.jsx
+|       CustomModal.jsx
+|       DebugModal.jsx
+|       DialogQueueProvider.jsx
+|       ErrorModal.jsx
+|       ExportDialog.jsx
+|       ExtensionMarketplaceDialog.jsx
+|       FileUploadModal.jsx
+|       HelpDialog.jsx
+|       IncidentDetailModal.jsx
+|       index.js
+|       InfoDialog.jsx
+|       KillSwitchModal.jsx
+|       LabsDialog.jsx
+|       ModalHost.jsx
+|       modals.test.js
+|       ModelSwitcherDialog.jsx
+|       NotificationModal.jsx
+|       OnboardingModal.jsx
+|       OperatorCommandDialog.jsx
+|       OverlaySettingsDialog.jsx
+|       PluginConfigDialog.jsx
+|       PluginDialog.jsx
+|       ProfileSettingsModal.jsx
+|       README.md
+|       SettingsDialog.jsx
+|       ShiftChangeDialog.jsx
+|       TourDialog.jsx
+|       WelcomeDialog.jsx
+|       XAIOverlayDialog.jsx
+|       
++---notifications
+|   |   AIInsightAlert.jsx
+|   |   AlertBadge.jsx
+|   |   AlertCountdown.jsx
+|   |   AlertStatusPill.jsx
+|   |   CHANGELOG.md
+|   |   EmailNotification.jsx
+|   |   EscalationAlertBar.jsx
+|   |   IncidentAlertBar.jsx
+|   |   IncidentResponseToast.jsx
+|   |   InlineAlert.jsx
+|   |   mockNotificationServer.js
+|   |   MultiChannelAlert.jsx
+|   |   notification-best-practices.md
+|   |   notificationApi.js
+|   |   NotificationBanner.jsx
+|   |   NotificationCenter.jsx
+|   |   notificationDevPanel.jsx
+|   |   NotificationPanel.jsx
+|   |   notifications.test.js
+|   |   NotificationsContext.js
+|   |   NotificationsProvider.jsx
+|   |   notificationStories.md
+|   |   notificationTemplates.js
+|   |   notificationUtils.js
+|   |   OperatorAlert.jsx
+|   |   PushNotificationPanel.jsx
+|   |   README.md
+|   |   Snackbar.jsx
+|   |   ToastContainer.jsx
+|   |   useNotifications.js
+|   |   WebhookAlert.jsx
+|   |   
+|   \---testData
+|           demo-notifications.json
+|           incident-alerts-demo.json
+|           README.md
+|           
++---operator
+|       README.md
+|       
++---overlays
+|       AlertBanner.jsx
+|       ARIncidentOverlay.jsx
+|       AROverlay.jsx
+|       ConnectionStatusOverlay.jsx
+|       DebugOverlay.jsx
+|       EscalationOverlay.jsx
+|       IncidentBannerOverlay.jsx
+|       IncidentOverlay.jsx
+|       index.js
+|       LatencyOverlay.jsx
+|       OperatorCamOverlay.jsx
+|       OperatorOverlay.jsx
+|       OverlayConfigPanel.jsx
+|       OverlayHotkeys.js
+|       OverlayPortal.jsx
+|       OverlayProvider.jsx
+|       OverlayRoot.jsx
+|       overlays.test.js
+|       OverlaySettingsModal.jsx
+|       OverlayToggleButton.jsx
+|       OverlayTransition.js
+|       overlayUtils.js
+|       README.md
+|       RiskOverlay.jsx
+|       StatusOverlay.jsx
+|       TradePathOverlay.jsx
+|       XAIHeatmapOverlay.jsx
+|       XAIOverlay.jsx
+|       
++---pages
+|   |   404.js
+|   |   500.js
+|   |   account.js
+|   |   ai.js
+|   |   alerts.js
+|   |   analytics.js
+|   |   ar.js
+|   |   assets.js
+|   |   backup.js
+|   |   cam.js
+|   |   changelog.js
+|   |   dashboard.js
+|   |   dev.js
+|   |   docs.js
+|   |   download.js
+|   |   edge.js
+|   |   escalation.js
+|   |   extensions.js
+|   |   failover.js
+|   |   gas.js
+|   |   health.js
+|   |   help.js
+|   |   history.js
+|   |   i18n.js
+|   |   incidents.js
+|   |   index.js
+|   |   kill-switch.js
+|   |   latency.js
+|   |   legal.js
+|   |   liquidity.js
+|   |   login.js
+|   |   logs.js
+|   |   maintenance.js
+|   |   marketplace.js
+|   |   metrics.js
+|   |   onboarding-tour.js
+|   |   onboarding.js
+|   |   operator.js
+|   |   overlays.js
+|   |   pattern-404.js
+|   |   pattern-dashboard.js
+|   |   pattern-modal.js
+|   |   plugins.js
+|   |   pnl.js
+|   |   preview.js
+|   |   privacy.js
+|   |   profile.js
+|   |   README.md
+|   |   register.js
+|   |   reset-password.js
+|   |   risk.js
+|   |   robots.txt
+|   |   sandbox.js
+|   |   settings.js
+|   |   sitemap.xml
+|   |   status.js
+|   |   storybook.js
+|   |   team.js
+|   |   test.js
+|   |   theme.js
+|   |   trades.js
+|   |   uploads.js
+|   |   users.js
+|   |   verify-email.js
+|   |   wallets.js
+|   |   welcome.js
+|   |   xai.js
+|   |   [...slug].js
+|   |   _app.js
+|   |   _document.js
+|   |   _error.js
+|   |   _middleware.js
+|   |   
+|   \---api
+|           ai.js
+|           arb.js
+|           dev.js
+|           extension.js
+|           health.js
+|           index.js
+|           metrics.js
+|           notifications.js
+|           plugin.js
+|           README.md
+|           user.js
+|           webhook.js
+|           
++---plugins
+|   |   atomic-swap-batched.ts
+|   |   bridge-latency-sniper.ts
+|   |   CHANGELOG.md
+|   |   ExtensionPluginAdapter.js
+|   |   flash-sandwich-mm.ts
+|   |   hyper-bundle-engine.ts
+|   |   index.js
+|   |   MarketplaceQAStatus.jsx
+|   |   MarketplaceSubmissionForm.jsx
+|   |   micro-latency-arb-suite.ts
+|   |   nft-gamefi-arb.ts
+|   |   plugin-api.test.js
+|   |   plugin-architecture.md
+|   |   plugin-best-practices.md
+|   |   plugin-marketplace.test.js
+|   |   plugin-sandbox.test.js
+|   |   plugin-schema.json
+|   |   plugin-types.js
+|   |   PluginAdapter.js
+|   |   PluginAPI.js
+|   |   PluginApiBridge.js
+|   |   PluginAuditLog.js
+|   |   PluginCard.jsx
+|   |   PluginConfig.js
+|   |   PluginConfigForm.jsx
+|   |   PluginContext.js
+|   |   PluginDataSync.js
+|   |   PluginDetails.jsx
+|   |   PluginDevToolsPanel.jsx
+|   |   PluginDialog.jsx
+|   |   PluginErrorBoundary.jsx
+|   |   PluginEventBus.js
+|   |   PluginFactory.js
+|   |   PluginHotReload.js
+|   |   PluginInstallDialog.jsx
+|   |   PluginInterface.js
+|   |   PluginLifecycle.js
+|   |   PluginList.jsx
+|   |   PluginLoader.js
+|   |   PluginManager.jsx
+|   |   PluginManifest.js
+|   |   PluginMarketplace.jsx
+|   |   PluginMetadata.js
+|   |   PluginPanel.jsx
+|   |   PluginPermissions.json
+|   |   PluginProvider.jsx
+|   |   PluginQuickStartSample.jsx
+|   |   PluginReadme.md
+|   |   PluginRegistry.json
+|   |   plugins.test.js
+|   |   PluginSandbox.jsx
+|   |   PluginSandboxLauncher.js
+|   |   PluginSecurityManager.js
+|   |   PluginSettings.jsx
+|   |   PluginStatusIndicator.jsx
+|   |   PluginToggle.jsx
+|   |   PluginValidator.js
+|   |   PluginVersion.js
+|   |   README.md
+|   |   
+|   +---alpha-signal
+|   |   |   ai-signal-orchestrator.js
+|   |   |   alpha-nft-issuer.js
+|   |   |   alpha-reputation.js
+|   |   |   alpha-voting.js
+|   |   |   micro-arb-detector.js
+|   |   |   README.md
+|   |   |   sandwich-detector.js
+|   |   |   sniping-detector.js
+|   |   |   trend-analyzer-v2.js
+|   |   |   trend-analyzer.js
+|   |   |   whale-signal.js
+|   |   |   
+|   |   +---docs
+|   |   |       alerts-integration.md
+|   |   |       alpha-reputation-scores.md
+|   |   |       alpha-signal-models.md
+|   |   |       alpha-voting-protocol.md
+|   |   |       arb-patterns.md
+|   |   |       README.md
+|   |   |       
+|   |   \---tests
+|   |           ai-signal-orchestrator.test.js
+|   |           alpha-nft-issuer.test.js
+|   |           alpha-reputation.test.js
+|   |           alpha-voting.test.js
+|   |           micro-arb-detector.test.js
+|   |           README.md
+|   |           sandwich-detector.test.js
+|   |           sniping-detector.test.js
+|   |           trend-analyzer-v2.test.js
+|   |           trend-analyzer.test.js
+|   |           whale-signal.test.js
+|   |           
+|   +---bridge-adapters
+|   |   |   avalanche-adapter.js
+|   |   |   axelar-adapter.js
+|   |   |   circle-cctp-adapter.js
+|   |   |   cross-twin-adapter.js
+|   |   |   elliptic-adapter.js
+|   |   |   layerzero-adapter.js
+|   |   |   polygon-zkevm-adapter.js
+|   |   |   range-cross-chain-adapter.js
+|   |   |   README.md
+|   |   |   relaychain-adapter.js
+|   |   |   symbiosis-adapter.js
+|   |   |   wormhole-adapter.js
+|   |   |   
+|   |   +---docs
+|   |   |       avalanche-guide.md
+|   |   |       bridge-integrations.md
+|   |   |       cross-chain-security.md
+|   |   |       polygon-zkevm-guide.md
+|   |   |       README.md
+|   |   |       relaychain-integration.md
+|   |   |       
+|   |   \---tests
+|   |           avalanche-adapter.test.js
+|   |           axelar-adapter.test.js
+|   |           circle-cctp-adapter.test.js
+|   |           cross-twin-adapter.test.js
+|   |           elliptic-adapter.test.js
+|   |           layerzero-adapter.test.js
+|   |           polygon-zkevm-adapter.test.js
+|   |           range-cross-chain-adapter.test.js
+|   |           README.md
+|   |           relaychain-adapter.test.js
+|   |           symbiosis-adapter.test.js
+|   |           wormhole-adapter.test.js
+|   |           
+|   +---compliance
+|   |   |   adverse-media-scanner.js
+|   |   |   blacklist-module.js
+|   |   |   dispute-module.js
+|   |   |   forensics-module.js
+|   |   |   jurisdiction-manager.js
+|   |   |   kyc-aml-module.js
+|   |   |   pep-checker.js
+|   |   |   permission-validator.js
+|   |   |   rbac-enforcer.js
+|   |   |   README.md
+|   |   |   sanctions-checker.js
+|   |   |   whitelist-module.js
+|   |   |   
+|   |   +---docs
+|   |   |       compliance-checks.md
+|   |   |       forensics-guide.md
+|   |   |       governance-controls.md
+|   |   |       kyc-flows.md
+|   |   |       README.md
+|   |   |       sanctions-lists.md
+|   |   |       
+|   |   \---tests
+|   |           adverse-media-scanner.test.js
+|   |           blacklist-module.test.js
+|   |           dispute-module.test.js
+|   |           forensics-module.test.js
+|   |           jurisdiction-manager.test.js
+|   |           kyc-aml-module.test.js
+|   |           pep-checker.test.js
+|   |           permission-validator.test.js
+|   |           rbac-enforcer.test.js
+|   |           README.md
+|   |           sanctions-checker.test.js
+|   |           whitelist-module.test.js
+|   |           
+|   +---dex-adapters
+|   |   |   aggregator-adapter.js
+|   |   |   balancer-adapter.js
+|   |   |   cowswap-adapter.js
+|   |   |   curve-adapter.js
+|   |   |   dodo-adapter.js
+|   |   |   fraxswap-adapter.js
+|   |   |   kyber-adapter.js
+|   |   |   maverick-adapter.js
+|   |   |   orca-adapter.js
+|   |   |   pancake-adapter.js
+|   |   |   quickswap-adapter.js
+|   |   |   README.md
+|   |   |   sushi-adapter.js
+|   |   |   synthetix-adapter.js
+|   |   |   thorchain-adapter.js
+|   |   |   traderjoe-adapter.js
+|   |   |   uniswap-v3-adapter.js
+|   |   |   vertex-adapter.js
+|   |   |   woofi-adapter.js
+|   |   |   
+|   |   +---docs
+|   |   |       adapter-development.md
+|   |   |       dex-architecture.md
+|   |   |       gas-optimizations.md
+|   |   |       integration-guide.md
+|   |   |       README.md
+|   |   |       slippage-models.md
+|   |   |       supported-dexes.md
+|   |   |       
+|   |   \---tests
+|   |           aggregator-adapter.test.js
+|   |           balancer-adapter.test.js
+|   |           cowswap-adapter.test.js
+|   |           curve-adapter.test.js
+|   |           dodo-adapter.test.js
+|   |           fraxswap-adapter.test.js
+|   |           kyber-adapter.test.js
+|   |           maverick-adapter.test.js
+|   |           orca-adapter.test.js
+|   |           pancake-adapter.test.js
+|   |           quickswap-adapter.test.js
+|   |           README.md
+|   |           sushi-adapter.test.js
+|   |           synthetix-adapter.test.js
+|   |           thorchain-adapter.test.js
+|   |           traderjoe-adapter.test.js
+|   |           uniswap-v3-adapter.test.js
+|   |           vertex-adapter.test.js
+|   |           woofi-adapter.test.js
+|   |           
+|   +---docs
+|   |       adapter-api.md
+|   |       alpha-patterns.md
+|   |       fork-testing-guide.md
+|   |       integration-scenarios.md
+|   |       mev-risk-mitigation.md
+|   |       plugin-development.md
+|   |       plugins-architecture.md
+|   |       README.md
+|   |       registry-guide.md
+|   |       smart-contract-integration.md
+|   |       
+|   +---flashloan
+|   |   |   aave-adapter.js
+|   |   |   angle-adapter.js
+|   |   |   compound-adapter.js
+|   |   |   cream-adapter.js
+|   |   |   dydx-adapter.js
+|   |   |   flashbots-adapter.js
+|   |   |   gearbox-adapter.js
+|   |   |   makerdao-adapter.js
+|   |   |   morpho-adapter.js
+|   |   |   parasite-arb-adapter.js
+|   |   |   radiant-adapter.js
+|   |   |   README.md
+|   |   |   stargate-adapter.js
+|   |   |   
+|   |   +---docs
+|   |   |       audit-log.md
+|   |   |       flashloan-architecture.md
+|   |   |       flashloan-risks.md
+|   |   |       provider-integrations.md
+|   |   |       README.md
+|   |   |       upgrade-guide.md
+|   |   |       
+|   |   \---tests
+|   |           aave-adapter.test.js
+|   |           angle-adapter.test.js
+|   |           compound-adapter.test.js
+|   |           cream-adapter.test.js
+|   |           dydx-adapter.test.js
+|   |           flashbots-adapter.test.js
+|   |           gearbox-adapter.test.js
+|   |           makerdao-adapter.test.js
+|   |           morpho-adapter.test.js
+|   |           parasite-arb-adapter.test.js
+|   |           radiant-adapter.test.js
+|   |           README.md
+|   |           stargate-adapter.test.js
+|   |           
+|   +---insurance
+|   |   |   claim-auditor.js
+|   |   |   claim-verifier.js
+|   |   |   coverage-oracle.js
+|   |   |   incident-monitor.js
+|   |   |   insurance-pool-manager.js
+|   |   |   payout-calculator.js
+|   |   |   premium-calculator.js
+|   |   |   README.md
+|   |   |   risk-assessment-plugin.js
+|   |   |   risk-modeler.js
+|   |   |   
+|   |   +---docs
+|   |   |       claim-workflow.md
+|   |   |       insurance-architecture.md
+|   |   |       pool-audits.md
+|   |   |       README.md
+|   |   |       risk-assessment-methods.md
+|   |   |       risk-models.md
+|   |   |       
+|   |   \---tests
+|   |           claim-auditor.test.js
+|   |           claim-verifier.test.js
+|   |           coverage-oracle.test.js
+|   |           incident-monitor.test.js
+|   |           insurance-pool-manager.test.js
+|   |           payout-calculator.test.js
+|   |           premium-calculator.test.js
+|   |           README.md
+|   |           risk-assessment-plugin.test.js
+|   |           risk-modeler.test.js
+|   |           
+|   +---intent-solvers
+|   |   |   auction-intent-solver.js
+|   |   |   batch-intent-processor.js
+|   |   |   cow-intent-solver.js
+|   |   |   eco-intent-solver.js
+|   |   |   intent-forker.js
+|   |   |   intent-merger.js
+|   |   |   keepers-intent-solver.js
+|   |   |   README.md
+|   |   |   rfq-intent-solver.js
+|   |   |   sandwich-intent-solver.js
+|   |   |   sniper-intent-solver.js
+|   |   |   uniswapx-intent-solver.js
+|   |   |   
+|   |   +---docs
+|   |   |       auction-design.md
+|   |   |       eco-intents.md
+|   |   |       intent-architecture.md
+|   |   |       intent-merging.md
+|   |   |       README.md
+|   |   |       
+|   |   \---tests
+|   |           auction-intent-solver.test.js
+|   |           batch-intent-processor.test.js
+|   |           cow-intent-solver.test.js
+|   |           eco-intent-solver.test.js
+|   |           intent-forker.test.js
+|   |           intent-merger.test.js
+|   |           keepers-intent-solver.test.js
+|   |           README.md
+|   |           rfq-intent-solver.test.js
+|   |           sandwich-intent-solver.test.js
+|   |           sniper-intent-solver.test.js
+|   |           uniswapx-intent-solver.test.js
+|   |           
+|   +---internal
+|   |       interface-definitions.ts
+|   |       migration-tool.js
+|   |       plugin-manager.ts
+|   |       plugin-utils.js
+|   |       plugins.json
+|   |       README.md
+|   |       registry.ts
+|   |       test-utils.js
+|   |       
+|   +---marketplace
+|   |       governance-marketplace.js
+|   |       module-marketplace-registry.json
+|   |       module-marketplace.js
+|   |       plugin-marketplace-registry.json
+|   |       plugin-marketplace.js
+|   |       README.md
+|   |       
+|   +---model-marketplace
+|   |       ai-model-marketplace-registry.json
+|   |       ai-model-marketplace.js
+|   |       ai-model-metadata.json
+|   |       ai-model-proxy.js
+|   |       ai-model-validator.js
+|   |       README.md
+|   |       
+|   +---oracles
+|   |   |   ai-oracle.js
+|   |   |   chainlink-oracle.js
+|   |   |   compliance-oracle.js
+|   |   |   external-data-oracle.js
+|   |   |   fallback-oracle.js
+|   |   |   liquidity-oracle.js
+|   |   |   onchain-oracle.js
+|   |   |   README.md
+|   |   |   time-weighted-oracle.js
+|   |   |   volatility-oracle.js
+|   |   |   zero-knowledge-oracle.js
+|   |   |   
+|   |   +---docs
+|   |   |       data-sources.md
+|   |   |       oracle-integrations.md
+|   |   |       README.md
+|   |   |       risk-mitigation.md
+|   |   |       zk-proofs.md
+|   |   |       
+|   |   \---tests
+|   |           ai-oracle.test.js
+|   |           chainlink-oracle.test.js
+|   |           compliance-oracle.test.js
+|   |           external-data-oracle.test.js
+|   |           fallback-oracle.test.js
+|   |           liquidity-oracle.test.js
+|   |           onchain-oracle.test.js
+|   |           README.md
+|   |           time-weighted-oracle.test.js
+|   |           volatility-oracle.test.js
+|   |           zero-knowledge-oracle.test.js
+|   |           
+|   +---samples
+|   |       demo-plugin-index.js
+|   |       demo-plugin-manifest.json
+|   |       demo-plugin-ui.jsx
+|   |       plugin-boilerplate.md
+|   |       README.md
+|   |       
+|   +---social-impact
+|   |   |   carbon-offset-module.js
+|   |   |   charity-oracle.js
+|   |   |   csr-audit.js
+|   |   |   donation-router.js
+|   |   |   esg-allocator.js
+|   |   |   grants-engine.js
+|   |   |   green-bond-manager.js
+|   |   |   impact-scoring.js
+|   |   |   impact-voting.js
+|   |   |   README.md
+|   |   |   
+|   |   +---docs
+|   |   |       charity-protocols.md
+|   |   |       csr-programs.md
+|   |   |       esg-logic.md
+|   |   |       impact-scoring-models.md
+|   |   |       README.md
+|   |   |       social-impact-flows.md
+|   |   |       
+|   |   \---tests
+|   |           carbon-offset-module.test.js
+|   |           charity-oracle.test.js
+|   |           csr-audit.test.js
+|   |           donation-router.test.js
+|   |           esg-allocator.test.js
+|   |           grants-engine.test.js
+|   |           green-bond-manager.test.js
+|   |           impact-scoring.test.js
+|   |           impact-voting.test.js
+|   |           README.md
+|   |           
+|   +---template
+|   |       adapter-template.js
+|   |       model-template.js
+|   |       plugin-template.js
+|   |       README.md
+|   |       template-config.json
+|   |       
+|   \---tests
+|           ai-model-marketplace.test.js
+|           atomic-swap-batched.test.ts
+|           bridge-latency-sniper.test.ts
+|           flash-sandwich-mm.test.ts
+|           governance-marketplace.test.js
+|           hyper-bundle-engine.test.ts
+|           micro-latency-arb-suite.test.ts
+|           nft-gamefi-arb.test.ts
+|           plugin-manager.test.js
+|           plugins-integration.test.js
+|           README.md
+|           test-utils.js
+|           
++---presets
+|   |   advanced-presets.json
+|   |   ai-presets.json
+|   |   backup-presets.json
+|   |   CHANGELOG.md
+|   |   custom-preset-guide.md
+|   |   demo-presets.json
+|   |   layout-presets.json
+|   |   pattern-presets.json
+|   |   patterns.md
+|   |   presets-best-practices.md
+|   |   presets.test.js
+|   |   quickstart-presets.json
+|   |   README.md
+|   |   sample-presets.json
+|   |   strategy-presets.json
+|   |   theme-presets.json
+|   |   ui-presets.json
+|   |   user-presets.json
+|   |   
+|   +---custom-presets
+|   |       high-volatility-preset.json
+|   |       minimal-view-preset.json
+|   |       night-trading-preset.json
+|   |       README.md
+|   |       sample-operator-preset.json
+|   |       
+|   \---templates
+|           dev-preset.json
+|           onboarding-preset.json
+|           preset-template.json
+|           README.md
+|           
++---preview
+|       CHANGELOG.md
+|       feature-flags.json
+|       feature-flags.test.js
+|       FeatureFlagPanel.jsx
+|       FeatureFlagSwitch.jsx
+|       preview-branches.json
+|       preview-cleanup.js
+|       preview-config.json
+|       preview-demo-data.json
+|       preview-deploy-hook.js
+|       preview-env.js
+|       preview-metadata.json
+|       preview-status.json
+|       preview-stories.md
+|       preview.test.js
+|       previewApi.js
+|       PreviewBanner.jsx
+|       PreviewChangelogModal.jsx
+|       previewDeployHooks.js
+|       PreviewDeploymentCard.jsx
+|       previewDevPanel.jsx
+|       PreviewPanel.jsx
+|       PreviewReviewActions.jsx
+|       PreviewStatusBar.jsx
+|       PreviewToggleButton.jsx
+|       previewUtils.js
+|       README.md
+|       useFeatureFlags.js
+|       usePreviewStatus.js
+|       webhook-handler.js
+|       
++---public
+|   |   .htaccess
+|   |   android-chrome-192x192.png
+|   |   android-chrome-512x512.png
+|   |   apple-touch-icon.png
+|   |   browserconfig.xml
+|   |   CHANGELOG.md
+|   |   empty-state.svg
+|   |   error-illustration.svg
+|   |   favicon-16x16.png
+|   |   favicon-32x32.png
+|   |   favicon.ico
+|   |   humans.txt
+|   |   loading-spinner.svg
+|   |   logo-dark.svg
+|   |   logo-light.svg
+|   |   logo-small.png
+|   |   logo-square.png
+|   |   logo.svg
+|   |   manifest.json
+|   |   manifest.webmanifest
+|   |   mstile-150x150.png
+|   |   og-image.png
+|   |   placeholder.png
+|   |   preview-banner.svg
+|   |   privacy-badge.svg
+|   |   README.md
+|   |   robots.txt
+|   |   safari-pinned-tab.svg
+|   |   security-badge.svg
+|   |   site.webmanifest
+|   |   sitemap.xml
+|   |   social-preview.jpg
+|   |   tailwind.css
+|   |   theme.css
+|   |   twitter-card.png
+|   |   
+|   +---backgrounds
+|   |       dark-bg.png
+|   |       dashboard-bg.svg
+|   |       landing-bg.jpg
+|   |       light-bg.png
+|   |       README.md
+|   |       
+|   +---banners
+|   |       beta-banner.svg
+|   |       incident-banner.svg
+|   |       promo-banner.png
+|   |       README.md
+|   |       
+|   +---brand
+|   |       alt-logo.svg
+|   |       full-logo.svg
+|   |       icon.svg
+|   |       README.md
+|   |       wordmark.svg
+|   |       
+|   +---downloads
+|   |       apex-protocol-whitepaper.pdf
+|   |       quickstart.pdf
+|   |       README.md
+|   |       terms-and-conditions.pdf
+|   |       user-guide.pdf
+|   |       
+|   +---fonts
+|   |       custom-icons.ttf
+|   |       Inter-Bold.woff2
+|   |       Inter-Regular.woff2
+|   |       README.md
+|   |       RobotoMono-Regular.woff2
+|   |       
+|   +---icons
+|   |       ai-bot.png
+|   |       ai.svg
+|   |       alert.svg
+|   |       arb.svg
+|   |       dark-mode.svg
+|   |       gas.svg
+|   |       latency.svg
+|   |       operator.svg
+|   |       plugin.svg
+|   |       README.md
+|   |       settings.svg
+|   |       user.svg
+|   |       wallet.svg
+|   |       
+|   \---onboarding
+|           ai-demo.svg
+|           operator.svg
+|           README.md
+|           step1.svg
+|           step2.svg
+|           step3.svg
+|           success.svg
+|           
++---sandbox
+|   |   AIOpsPlayground.jsx
+|   |   AISandbox.jsx
+|   |   CHANGELOG.md
+|   |   DataVizLab.jsx
+|   |   demo-examples.md
+|   |   ExtensionPlayground.jsx
+|   |   IntegrationTestPanel.jsx
+|   |   LayoutPlayground.jsx
+|   |   OperatorTestPanel.jsx
+|   |   OverlaySandbox.jsx
+|   |   patterns.md
+|   |   README.md
+|   |   sandbox-best-practices.md
+|   |   sandbox.test.js
+|   |   sandboxApi.js
+|   |   SandboxHome.jsx
+|   |   sandboxHotReload.js
+|   |   sandboxState.js
+|   |   sandboxUtils.js
+|   |   StorybookPanel.jsx
+|   |   ThemeSandbox.jsx
+|   |   WidgetPlayground.jsx
+|   |   
+|   +---demo-patterns
+|   |       ai-prompt-lab-demo.jsx
+|   |       data-viz-demo.jsx
+|   |       multi-widget-demo.jsx
+|   |       operator-alert-demo.jsx
+|   |       overlay-motion-demo.jsx
+|   |       README.md
+|   |       sandbox-patterns.md
+|   |       
+|   \---presets
+|           ai-demo-preset.json
+|           README.md
+|           theme-preset.json
+|           widget-preset.json
+|           
++---scripts
+|       README.md
+|       
++---settings
+|       README.md
+|       
++---src
+|       README.md
+|       
++---state
+|   |   aiState.js
+|   |   analyticsState.js
+|   |   CHANGELOG.md
+|   |   contextBridge.js
+|   |   devtools.js
+|   |   edgeState.js
+|   |   layoutState.js
+|   |   middleware.js
+|   |   notificationsState.js
+|   |   operatorState.js
+|   |   overlayState.js
+|   |   patterns.md
+|   |   persistStore.js
+|   |   pluginState.js
+|   |   presetsState.js
+|   |   README.md
+|   |   riskState.js
+|   |   selectors.js
+|   |   snapshotUtils.js
+|   |   ssrState.js
+|   |   state-best-practices.md
+|   |   state.test.js
+|   |   stateEvents.js
+|   |   stateHistory.js
+|   |   stateMigration.js
+|   |   stateSubscriptions.js
+|   |   stateSync.js
+|   |   stateUtils.js
+|   |   store.js
+|   |   themeState.js
+|   |   tradesState.js
+|   |   userState.js
+|   |   
+|   \---demo
+|           demo-state.json
+|           demo-userState.js
+|           README.md
+|           
++---stats
+|       README.md
+|       
++---styles
+|   |   ar.css
+|   |   CHANGELOG.md
+|   |   fonts.css
+|   |   index.css
+|   |   minimal.css
+|   |   mixins.scss
+|   |   night-mode.css
+|   |   overrides.scss
+|   |   patterns.md
+|   |   print.css
+|   |   README.md
+|   |   responsive.css
+|   |   scrollbar.css
+|   |   tailwind.config.js
+|   |   tailwind.css
+|   |   theme.css
+|   |   transitions.css
+|   |   utility-classes.css
+|   |   variables.scss
+|   |   
+|   +---animations
+|   |       bounce.css
+|   |       expand.css
+|   |       fade.css
+|   |       overlay.css
+|   |       README.md
+|   |       slide.css
+|   |       spinner.css
+|   |       
+|   +---components
+|   |       alert.css
+|   |       avatar.css
+|   |       badge.css
+|   |       button.css
+|   |       card.css
+|   |       chart.css
+|   |       form.css
+|   |       loading.css
+|   |       menu.css
+|   |       modal.css
+|   |       README.md
+|   |       table.css
+|   |       tabs.css
+|   |       timeline.css
+|   |       tooltip.css
+|   |       widget.css
+|   |       
+|   \---palette
+|           accessibility.css
+|           custom-tokens.css
+|           dark.css
+|           light.css
+|           operator.css
+|           README.md
+|           solarized.css
+|           
++---testData
+|       README.md
+|       
++---tests
+|   |   CHANGELOG.md
+|   |   patterns.md
+|   |   README.md
+|   |   test-best-practices.md
+|   |   
+|   +---ai
+|   |       ai-dashboard-integration.test.py
+|   |       ai-module-smoke.test.py
+|   |       alpha-score.test.py
+|   |       profit-gradient.test.py
+|   |       README.md
+|   |       route-selection.test.py
+|   |       volatility-model.test.py
+|   |       
+|   +---chaos
+|   |       incident-chaos.test.js
+|   |       node-crash-recovery.test.js
+|   |       README.md
+|   |       system-chaos.test.js
+|   |       
+|   +---components
+|   |       Alert.test.jsx
+|   |       Avatar.test.jsx
+|   |       Badge.test.jsx
+|   |       Button.test.jsx
+|   |       Card.test.jsx
+|   |       Chart.test.jsx
+|   |       Form.test.jsx
+|   |       Loading.test.jsx
+|   |       Menu.test.jsx
+|   |       Modal.test.jsx
+|   |       README.md
+|   |       Table.test.jsx
+|   |       Tabs.test.jsx
+|   |       Timeline.test.jsx
+|   |       Tooltip.test.jsx
+|   |       Widget.test.jsx
+|   |       
+|   +---contracts
+|   |       alpha-nft.test.js
+|   |       batch-executor.test.js
+|   |       digital-twin-bridge.test.js
+|   |       dispute-resolution.test.js
+|   |       flashloan-arbitrage.test.js
+|   |       governance-module.test.js
+|   |       insurance-pool.test.js
+|   |       intent-solver.test.js
+|   |       operator-nft.test.js
+|   |       README.md
+|   |       reputation-oracle.test.js
+|   |       upgradable-proxy.test.js
+|   |       zk-proof.test.js
+|   |       
+|   +---coverage
+|   |   |   ai-coverage.test.py
+|   |   |   backend-coverage.test.js
+|   |   |   contracts-coverage.test.js
+|   |   |   coverage-report.html
+|   |   |   coverage-summary.md
+|   |   |   lcov.info
+|   |   |   README.md
+|   |   |   summary.json
+|   |   |   
+|   |   \---.nyc_output
+|   |           README.md
+|   |           
+|   +---docs
+|   |       ai-testing.md
+|   |       chaos-testing.md
+|   |       coverage-guide.md
+|   |       fork-testing.md
+|   |       legacy-cases.md
+|   |       mainnet-e2e.md
+|   |       README.md
+|   |       snapshot-methods.md
+|   |       test-strategy.md
+|   |       test-troubleshooting.md
+|   |       
+|   +---e2e
+|   |       ai-e2e.test.py
+|   |       ai-panel.e2e.js
+|   |       dashboard-e2e.test.js
+|   |       failover-e2e.test.js
+|   |       live-trade.e2e.js
+|   |       mainnet-e2e.test.js
+|   |       mobile-responsive.e2e.js
+|   |       onboarding.e2e.js
+|   |       plugin-marketplace.e2e.js
+|   |       preset-switch.e2e.js
+|   |       README.md
+|   |       regression-suite.e2e.js
+|   |       theme-switch.e2e.js
+|   |       
+|   +---fixtures
+|   |       example-analytics.json
+|   |       example-trades.json
+|   |       README.md
+|   |       
+|   +---flows
+|   |       AuthFlow.test.js
+|   |       NotificationFlow.test.js
+|   |       OperatorIncidentFlow.test.js
+|   |       PluginLifecycle.test.js
+|   |       PresetSwitchFlow.test.js
+|   |       README.md
+|   |       TradeExecFlow.test.js
+|   |       
+|   +---fork
+|   |       block-drift-fork.test.js
+|   |       mainnet-fork.test.js
+|   |       mempool-chaos.test.js
+|   |       README.md
+|   |       zk-sim-fork.test.js
+|   |       
+|   +---fuzz
+|   |       ai-fuzz.test.py
+|   |       fork-fuzz.test.js
+|   |       fuzz-arb-paths.test.js
+|   |       plugin-fuzz.test.js
+|   |       README.md
+|   |       
+|   +---integration
+|   |       ai-integration.test.py
+|   |       contracts-integration.test.js
+|   |       engine-integration.test.js
+|   |       overlays-integration.test.js
+|   |       plugins-integration.test.js
+|   |       README.md
+|   |       storage-integration.test.js
+|   |       utils-integration.test.js
+|   |       watchdog-integration.test.js
+|   |       
+|   +---legacy
+|   |       legacy-tests-summary.md
+|   |       migration-checks.test.js
+|   |       README.md
+|   |       
+|   +---migration
+|   |       contract-migration.test.js
+|   |       db-migration.test.js
+|   |       plugin-migration.test.js
+|   |       README.md
+|   |       
+|   +---mocks
+|   |       mock-api.js
+|   |       mock-plugin.json
+|   |       mock-theme.json
+|   |       mock-user.json
+|   |       README.md
+|   |       
+|   +---pages
+|   |       AiPage.test.jsx
+|   |       IndexPage.test.jsx
+|   |       NotFoundPage.test.jsx
+|   |       OperatorPage.test.jsx
+|   |       PluginsPage.test.jsx
+|   |       README.md
+|   |       SettingsPage.test.jsx
+|   |       TradesPage.test.jsx
+|   |       
+|   +---performance
+|   |       ai-latency-benchmark.test.py
+|   |       fork-benchmark.test.js
+|   |       gas-benchmark.test.js
+|   |       README.md
+|   |       
+|   +---plugin
+|   |       alpha-signal-plugins.test.js
+|   |       bridge-adapters.test.js
+|   |       compliance-plugins.test.js
+|   |       dex-adapters.test.js
+|   |       flashloan-adapters.test.js
+|   |       insurance-plugins.test.js
+|   |       intent-solvers.test.js
+|   |       model-marketplace.test.js
+|   |       oracles-adapters.test.js
+|   |       plugin-marketplace.test.js
+|   |       README.md
+|   |       template-plugins.test.js
+|   |       
+|   +---python
+|   |       ai-agent-tests.py
+|   |       legacy-ml-tests.py
+|   |       model-integration-tests.py
+|   |       README.md
+|   |       strategy-selection-tests.py
+|   |       token-score-tests.py
+|   |       
+|   +---regression
+|   |       darkmode-regression.test.js
+|   |       failed-trade-replay.test.js
+|   |       legacy-compat.test.js
+|   |       patch-regression.test.js
+|   |       README.md
+|   |       snapshot-regression.test.js
+|   |       snapshot.test.js
+|   |       upgrade-regression.test.js
+|   |       visual-regression.test.js
+|   |       
+|   +---runner
+|   |       foundry.toml
+|   |       hardhat.config.js
+|   |       pytest.ini
+|   |       README.md
+|   |       test-runner.config.js
+|   |       
+|   +---snapshot
+|   |       README.md
+|   |       snapshot-audit.test.js
+|   |       snapshot-compare.test.js
+|   |       
+|   +---state
+|   |       aiState.test.js
+|   |       analyticsState.test.js
+|   |       edgeState.test.js
+|   |       layoutState.test.js
+|   |       notificationsState.test.js
+|   |       operatorState.test.js
+|   |       overlayState.test.js
+|   |       pluginState.test.js
+|   |       presetsState.test.js
+|   |       README.md
+|   |       riskState.test.js
+|   |       ssrState.test.js
+|   |       stateHistory.test.js
+|   |       stateUtils.test.js
+|   |       store.test.js
+|   |       themeState.test.js
+|   |       tradesState.test.js
+|   |       userState.test.js
+|   |       
+|   +---unit
+|   |       ai-unit.test.py
+|   |       contracts-unit.test.js
+|   |       core-unit.test.js
+|   |       engine-unit.test.js
+|   |       overlays-unit.test.js
+|   |       plugins-unit.test.js
+|   |       README.md
+|   |       storage-unit.test.js
+|   |       utils-unit.test.js
+|   |       watchdog-unit.test.js
+|   |       
+|   \---utils
+|           analytics-utils.test.js
+|           api-rate-limiter-utils.test.js
+|           arb-throttler-utils.test.js
+|           bridge-utils.test.js
+|           cache-manager-utils.test.js
+|           digital-twin-utils.test.js
+|           error-handler-utils.test.js
+|           fee-estimator-utils.test.js
+|           gas-profiler-utils.test.js
+|           job-queue-utils.test.js
+|           key-management-utils.test.js
+|           latency-profiler-utils.test.js
+|           log-rotator-utils.test.js
+|           migration-helper-utils.test.js
+|           nonce-safety-utils.test.js
+|           privacy-zk-utils.test.js
+|           profit-gradient-filter-utils.test.js
+|           README.md
+|           sim-result-compressor.test.js
+|           simulation-utils.test.js
+|           social-graph-utils.test.js
+|           stateful-cache-utils.test.js
+|           tx-bundle-utils.test.js
+|           volatility-watchdog-utils.test.js
+|           
++---theme
+|   |   CHANGELOG.md
+|   |   fontTokens.js
+|   |   layout.js
+|   |   radiusTokens.js
+|   |   README.md
+|   |   shadowTokens.js
+|   |   spacingTokens.js
+|   |   theme-patterns.md
+|   |   theme.test.js
+|   |   themeConfig.js
+|   |   themeHydrate.js
+|   |   themeMiddleware.js
+|   |   themeMigration.js
+|   |   themeProvider.jsx
+|   |   themeRegistry.js
+|   |   ThemeSwitcher.jsx
+|   |   themeTokens.js
+|   |   themeUtils.js
+|   |   typography.js
+|   |   useTheme.js
+|   |   
+|   +---demo
+|   |       README.md
+|   |       theme-demo.js
+|   |       theme-gallery.md
+|   |       
+|   +---fonts
+|   |       custom-fonts.js
+|   |       Inter.js
+|   |       README.md
+|   |       RobotoMono.js
+|   |       
+|   \---palettes
+|           accessibility.js
+|           custom.js
+|           dark.js
+|           light.js
+|           operator.js
+|           README.md
+|           solarized.js
+|           
++---themes
+|       README.md
+|       
++---uploads
+|   |   CHANGELOG.md
+|   |   README.md
+|   |   
+|   +---csv
+|   |       ai-train-data.csv
+|   |       analytics-demo.csv
+|   |       custom-upload.csv
+|   |       README.md
+|   |       trade-log.csv
+|   |       
+|   +---exports
+|   |       csv-export-2025-07-31.zip
+|   |       full-backup-2025-07-31.zip
+|   |       README.md
+|   |       
+|   +---logs
+|   |       ai-session-logs.log
+|   |       README.md
+|   |       upload-errors-2025-07-31.log
+|   |       
+|   +---misc
+|   |       ai-result-report.docx
+|   |       onboarding-demo.pdf
+|   |       README.md
+|   |       
+|   +---model-weights
+|   |       custom-plugin-model.bin
+|   |       finGPT-7b.bin
+|   |       glm-4.5.bin
+|   |       investlm-13b.bin
+|   |       README.md
+|   |       xai-tiny.onnx
+|   |       
+|   +---presets
+|   |       custom-operator-preset.json
+|   |       night-trading-preset.json
+|   |       README.md
+|   |       user-backup-2025-07-31.json
+|   |       
+|   \---users
+|       |   README.md
+|       |   
+|       \---pavan_korukonda
+|               avatar.png
+|               custom-ai-data.csv
+|               README.md
+|               uploaded-preset.json
+|               
++---utils
+|       aiUtils.js
+|       analyticsUtils.js
+|       animationUtils.js
+|       apiUtils.js
+|       arbUtils.js
+|       CHANGELOG.md
+|       constants.js
+|       dashboardUtils.js
+|       dataUtils.js
+|       demoUtils.js
+|       enums.js
+|       errorUtils.js
+|       ethUtils.js
+|       formatters.js
+|       hotReloadUtils.js
+|       layoutUtils.js
+|       logger.js
+|       mevUtils.js
+|       patterns.md
+|       perfUtils.js
+|       pluginUtils.js
+|       README.md
+|       sandboxUtils.js
+|       storageUtils.js
+|       testUtils.js
+|       themeUtils.js
+|       tokenUtils.js
+|       typeHelpers.js
+|       validators.js
+|       wsUtils.js
+|       
++---widgets
+|   |   AIInsightWidget.jsx
+|   |   AlertBannerWidget.jsx
+|   |   ArbOpportunityWidget.jsx
+|   |   CHANGELOG.md
+|   |   ChartWidget.jsx
+|   |   CircuitBreakerWidget.jsx
+|   |   CSVPreviewWidget.jsx
+|   |   GasWidget.jsx
+|   |   HeatmapWidget.jsx
+|   |   IncidentAlertWidget.jsx
+|   |   KillSwitchWidget.jsx
+|   |   LatencyWidget.jsx
+|   |   ModelStatusWidget.jsx
+|   |   OperatorControlWidget.jsx
+|   |   OperatorStatusWidget.jsx
+|   |   PatternDetectionWidget.jsx
+|   |   patterns.md
+|   |   PnLWidget.jsx
+|   |   PresetModeWidget.jsx
+|   |   PresetUploadWidget.jsx
+|   |   README.md
+|   |   RiskWidget.jsx
+|   |   SafeModeWidget.jsx
+|   |   SnackbarWidget.jsx
+|   |   SpeedModeWidget.jsx
+|   |   StatusBadgeWidget.jsx
+|   |   SwapRouteWidget.jsx
+|   |   TimelineWidget.jsx
+|   |   TokenListWidget.jsx
+|   |   TradeStatsWidget.jsx
+|   |   UploadWidget.jsx
+|   |   WalletStatusWidget.jsx
+|   |   WatchdogWidget.jsx
+|   |   WidgetDemo.jsx
+|   |   WidgetFrame.jsx
+|   |   WidgetLoader.jsx
+|   |   widgets.test.js
+|   |   WidgetSandbox.jsx
+|   |   WidgetSettings.jsx
+|   |   WidgetTestPanel.jsx
+|   |   XAIWidget.jsx
+|   |   
+|   +---ext
+|   |       CustomPartnerWidget.jsx
+|   |       README.md
+|   |       
+|   \---legacy
+|           OldPnLWidget.jsx
+|           README.md
+|           
+\---xai
+    |   AttentionMap.jsx
+    |   CHANGELOG.md
+    |   ChartSaliencyOverlay.jsx
+    |   FeatureAttribution.jsx
+    |   patterns.md
+    |   PredictionExplanation.jsx
+    |   README.md
+    |   SaliencyMap.jsx
+    |   TokenInsight.jsx
+    |   WidgetXAIOverlay.jsx
+    |   xai-api.js
+    |   xai.test.js
+    |   xaiConfig.js
+    |   XAIDashboardOverlay.jsx
+    |   XAIExport.jsx
+    |   xaiHooks.js
+    |   XAIInspector.jsx
+    |   XAIOverlay.jsx
+    |   XAIStatusBar.jsx
+    |   xaiTokens.js
+    |   XAIToolbar.jsx
+    |   xaiUtils.js
+    |   
+    +---demo
+    |       README.md
+    |       XAIOverlayDemo.md
+    |       XAIWidgetDemo.jsx
+    |       
+    \---ext
+            PartnerXAIWidget.jsx
+            README.md
+            
