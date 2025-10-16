@@ -27,10 +27,10 @@
 **You must create documentation in this exact format:**
 
 ```markdown
-# FOLDER ANALYSIS: dashboard
+# FOLDER ANALYSIS: config
 
 ## COMPLETE FOLDER TREE STRUCTURE
-FOLDER 1/1: dashboard/
+FOLDER 1/1: config/
 ├── FILE 1/X: filename1.js
 ├── FILE 2/X: filename2.py
 └── FILE 3/X: filename3.md
@@ -235,8 +235,8 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 ### 🎯 MANDATORY FIRST STEP: CONFIRM TARGET FOLDER
 
 **YOU MUST IMMEDIATELY ACKNOWLEDGE:**
-- ✅ Target folder: `Apex Arbitrage Multichain bot/dashboard`
-- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\dashboard`
+- ✅ Target folder: `Apex Arbitrage Multichain bot/config`
+- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\config`
 - ✅ Analysis mode: PROJECT ANALYSIS
 - ✅ NO QUESTIONS - PROCEED DIRECTLY TO FILE DISCOVERY
 

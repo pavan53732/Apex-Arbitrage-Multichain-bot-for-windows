@@ -235,8 +235,8 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 ### 🎯 MANDATORY FIRST STEP: CONFIRM TARGET FOLDER
 
 **YOU MUST IMMEDIATELY ACKNOWLEDGE:**
-- ✅ Target folder: `Apex Arbitrage Multichain bot/backend`
-- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\backend`
+- ✅ Target folder: `Apex Arbitrage Multichain bot/utils`
+- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\utils`
 - ✅ Analysis mode: PROJECT ANALYSIS
 - ✅ NO QUESTIONS - PROCEED DIRECTLY TO FILE DISCOVERY
 

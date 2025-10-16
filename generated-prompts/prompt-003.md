@@ -1,8 +1,8 @@
 ﻿
 **You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
 
-**TARGET FOLDER:** `Apex Arbitrage Multichain bot`
-**FULL PATH:** `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot`
+**TARGET FOLDER:** `Apex Arbitrage Multichain bot/backend`
+**FULL PATH:** `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\backend`
 **ANALYSIS MODE:** PROJECT ANALYSIS
 
 **WHAT YOU MUST DO:**
@@ -27,10 +27,10 @@
 **You must create documentation in this exact format:**
 
 ```markdown
-# FOLDER ANALYSIS: ci
+# FOLDER ANALYSIS: backend
 
 ## COMPLETE FOLDER TREE STRUCTURE
-FOLDER 1/1: ci/
+FOLDER 1/1: backend/
 ├── FILE 1/X: filename1.js
 ├── FILE 2/X: filename2.py
 └── FILE 3/X: filename3.md
@@ -235,8 +235,8 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 ### 🎯 MANDATORY FIRST STEP: CONFIRM TARGET FOLDER
 
 **YOU MUST IMMEDIATELY ACKNOWLEDGE:**
-- ✅ Target folder: `Apex Arbitrage Multichain bot/ci`
-- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ci`
+- ✅ Target folder: `Apex Arbitrage Multichain bot/backend`
+- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\backend`
 - ✅ Analysis mode: PROJECT ANALYSIS
 - ✅ NO QUESTIONS - PROCEED DIRECTLY TO FILE DISCOVERY
 
@@ -245,7 +245,7 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 ### STEP 1: FILE DISCOVERY
 ```powershell
 try {
-    $path = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot"
+    $path = "C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\backend"
     if (-not (Test-Path $path)) { Write-Host "ERROR: Path not found"; exit 1 }
     
 $files = Get-ChildItem -Path $path -Recurse -File -Force

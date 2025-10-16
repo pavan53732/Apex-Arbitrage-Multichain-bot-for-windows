@@ -27,10 +27,10 @@
 **You must create documentation in this exact format:**
 
 ```markdown
-# FOLDER ANALYSIS: install-dependencies
+# FOLDER ANALYSIS: examples
 
 ## COMPLETE FOLDER TREE STRUCTURE
-FOLDER 1/1: install-dependencies/
+FOLDER 1/1: examples/
 ├── FILE 1/X: filename1.js
 ├── FILE 2/X: filename2.py
 └── FILE 3/X: filename3.md
@@ -235,8 +235,8 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 ### 🎯 MANDATORY FIRST STEP: CONFIRM TARGET FOLDER
 
 **YOU MUST IMMEDIATELY ACKNOWLEDGE:**
-- ✅ Target folder: `Apex Arbitrage Multichain bot/install-dependencies`
-- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\install-dependencies`
+- ✅ Target folder: `Apex Arbitrage Multichain bot/examples`
+- ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\examples`
 - ✅ Analysis mode: PROJECT ANALYSIS
 - ✅ NO QUESTIONS - PROCEED DIRECTLY TO FILE DISCOVERY
 
