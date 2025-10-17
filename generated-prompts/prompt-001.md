@@ -50,10 +50,22 @@ FOLDER 1/1: [folder-name]/
 **Complexity:** ⭐⭐⭐
 **Technologies:** JavaScript, Python, Markdown
 
-## FILE DESCRIPTIONS
-- **filename1.js** → [20-30 word description]
-- **filename2.py** → [20-30 word description]  
-- **filename3.md** → [20-30 word description]
+## FILE DESCRIPTIONS WITH COMPLETE HIERARCHICAL NUMBERING
+
+**Level 1 Files:**
+- **FILE 1/1: rootfile.js** → JavaScript module implementing core arbitrage engine with real-time market data processing, risk management algorithms, and Windows service integration for 24/7 automated trading operations
+
+**Level 2 Files:**
+- **FILE 1/2: subfolder1/file1.js** → Configuration management module handling environment variables, API keys, and trading parameters with secure Windows Credential Manager integration
+- **FILE 2/2: subfolder1/file2.js** → Database connection handler providing SQLite integration with connection pooling, transaction management, and Windows-specific path handling
+
+**Level 3 Files:**
+- **FILE 1/3: subfolder1/nested1/file1.js** → Market data fetcher implementing WebSocket connections to multiple exchanges with error handling, reconnection logic, and Windows Event Log integration
+- **FILE 2/3: subfolder1/nested1/file2.js** → Price analysis engine calculating arbitrage opportunities using statistical models, machine learning predictions, and real-time profit calculations
+- **FILE 3/3: subfolder1/nested1/file3.js** → Order execution module handling buy/sell operations with exchange API integration, order validation, and Windows Task Scheduler automation
+
+**Level 4 Files:**
+- **FILE 1/1: subfolder1/nested1/deep/file1.js** → Utility functions providing common operations, data validation, and Windows-specific helper methods for the arbitrage system
 
 ## WINDOWS IMPLEMENTATION
 - [Windows-specific implementation details]
@@ -81,6 +93,36 @@ FOLDER 1/1: [folder-name]/
 - Use: `grep -c "## Feature" features/target-file.md` to count existing features
 - Or: `Select-String -Pattern "## Feature" -Path "features/target-file.md" | Measure-Object | Select-Object -ExpandProperty Count`
 - This gives you the exact count without reading entire file content
+
+---
+
+## 🚨 MANDATORY COMPLETE ENUMERATION RULES 🚨
+
+**ZERO TOLERANCE FOR INCOMPLETE ENUMERATION:**
+
+1. **EVERY FILE MUST BE LISTED** - No "etc.", no "and more", no shortcuts
+2. **EVERY FOLDER MUST BE LISTED** - Including all nested subfolders
+3. **COUNT VERIFICATION MANDATORY** - PowerShell count MUST match your tree count
+4. **NO SKIPPING ALLOWED** - Even if there are 1000+ files, list them ALL
+5. **VALIDATION CHECKPOINT** - Before writing, verify: PowerShell files = Tree files
+
+**ENFORCEMENT:**
+- If you skip ANY file → Your output will be REJECTED
+- If counts don't match → Your output will be REJECTED
+- If you use shortcuts → Your output will be REJECTED
+
+**MANDATORY VERIFICATION CHECKPOINT:**
+Before writing ANY documentation, you MUST:
+1. Count files in PowerShell output
+2. Count files in your tree structure
+3. Verify they match EXACTLY
+4. If they don't match → STOP and fix it
+
+**ZERO TOLERANCE FOR:**
+- Missing files in tree
+- Incorrect numbering
+- Shortcuts like "and more"
+- Incomplete enumeration
 
 ---
 
@@ -278,10 +320,21 @@ $folders = Get-ChildItem -Path $path -Recurse -Directory -Force
     
     Write-Host "COMPLEXITY: $complexity | VALIDATION EVERY: $validationInterval files"
     
-    $files | Sort-Object FullName | ForEach-Object -Begin {$i=1} -Process { 
-        Write-Host "FILE $i/$($files.Count): $($_.FullName)"
-        $i++
+    # MANDATORY: List EVERY SINGLE FILE - NO EXCEPTIONS
+    Write-Host "=== COMPLETE FILE ENUMERATION ==="
+    $files | Sort-Object FullName | ForEach-Object -Begin {$i=1} -Process {
+    Write-Host "FILE $i/$($files.Count): $($_.FullName)"
+    $i++
     }
+    Write-Host "=== ENUMERATION COMPLETE: $($files.Count) files listed ==="
+
+    # MANDATORY: List EVERY SINGLE FOLDER - NO EXCEPTIONS
+    Write-Host "=== COMPLETE FOLDER ENUMERATION ==="
+    $folders | Sort-Object FullName | ForEach-Object -Begin {$i=1} -Process {
+    Write-Host "FOLDER $i/$($folders.Count): $($_.FullName)"
+    $i++
+    }
+    Write-Host "=== ENUMERATION COMPLETE: $($folders.Count) folders listed ==="
 } catch { Write-Host "ERROR: $($_.Exception.Message)" }
 ```
 
@@ -573,16 +626,30 @@ function Invoke-AutoCorrection($failedDescriptions, $fileList) {
 
 **REQUIRED FORMAT:**
 ```
-## Folder Structure
-FOLDER 1/3: foldername/
-├── FOLDER 1/2: subfolder1/
-│   ├── FILE 1/3: file1.js
-│   ├── FILE 2/3: file2.js
-│   └── FILE 3/3: file3.js
-├── FOLDER 2/2: subfolder2/
-│   ├── FILE 1/2: file4.js
-│   └── FILE 2/2: file5.js
-└── FILE 1/1: rootfile.js
+## 🚨 MANDATORY COMPLETE HIERARCHICAL NUMBERING 🚨
+
+**EVERY FILE AND FOLDER MUST HAVE FULL HIERARCHICAL NUMBERS:**
+
+**NUMBERING RULES:**
+- **FOLDER 1/1: foldername/** (Level 1)
+- **├── FOLDER 1/2: subfolder1/** (Level 2)
+- **│   ├── FOLDER 1/1: nested1/** (Level 3)
+- **│   │   ├── FILE 1/3: file1.js** (Level 4)
+- **│   │   ├── FILE 2/3: file2.js** (Level 4)
+- **│   │   └── FILE 3/3: file3.js** (Level 4)
+- **│   └── FOLDER 2/1: nested2/** (Level 3)
+- **│       ├── FILE 1/2: file4.js** (Level 4)
+- **│       └── FILE 2/2: file5.js** (Level 4)
+- **├── FOLDER 2/2: subfolder2/** (Level 2)
+- **│   ├── FILE 1/1: file6.js** (Level 3)
+- **└── FILE 1/1: rootfile.js** (Level 2)
+
+**MANDATORY REQUIREMENTS:**
+1. **EVERY folder** gets FOLDER X/Y numbering
+2. **EVERY file** gets FILE X/Y numbering
+3. **EVERY level** resets numbering (1/1, 1/2, NOT 1/1, 1/2, 3/4)
+4. **EVERY nested level** gets its own numbering sequence
+5. **NO shortcuts** - list EVERY single item
 ```
 
 **NUMBERING RULES (STRICT):**
