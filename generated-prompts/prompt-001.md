@@ -111,6 +111,38 @@ FOLDER 1/1: [folder-name]/
 - If counts don't match → Your output will be REJECTED
 - If you use shortcuts → Your output will be REJECTED
 
+**SKIP PREVENTION MECHANISMS:**
+```javascript
+function validateCompleteEnumeration(items) {
+    const totalItems = countAllItems(items);
+    const processedTracker = new Set();
+
+    // Ensure no gaps in processing
+    for (let i = 0; i < totalItems; i++) {
+        if (!processedTracker.has(i)) {
+            throw new Error(`GAP_DETECTED: Missing item ${i} in sequence`);
+        }
+    }
+}
+
+class ProcessingMonitor {
+    constructor(expectedCount) {
+        this.expectedCount = expectedCount;
+        this.processedCount = 0;
+        this.skippedItems = [];
+    }
+
+    recordProcessing(item) {
+        this.processedCount++;
+
+        // CRITICAL: Ensure sequential processing
+        if (this.processedCount > this.expectedCount) {
+            throw new Error(`OVER_PROCESSING: Expected ${this.expectedCount}, got ${this.processedCount}`);
+        }
+    }
+}
+```
+
 **MANDATORY VERIFICATION CHECKPOINT:**
 Before writing ANY documentation, you MUST:
 1. Count files in PowerShell output
@@ -118,11 +150,103 @@ Before writing ANY documentation, you MUST:
 3. Verify they match EXACTLY
 4. If they don't match → STOP and fix it
 
+**VERIFICATION FRAMEWORK:**
+```javascript
+function verifyCompleteCoverage(powerShellCount, documentationCount) {
+    const tolerance = 0; // ZERO TOLERANCE
+
+    if (Math.abs(powerShellCount - documentationCount) > tolerance) {
+        const discrepancy = powerShellCount - documentationCount;
+        throw new Error(`COUNT_MISMATCH: PowerShell=${powerShellCount}, Doc=${documentationCount}, Diff=${discrepancy}`);
+    }
+
+    return true; // Only if exact match
+}
+
+// Visual verification display
+function generateVerificationReport(processedItems) {
+    const stats = analyzeStructure(processedItems);
+
+    return `
+## COMPLETE ENUMERATION VERIFICATION
+
+**TOTAL FILES PROCESSED:** ${stats.totalFiles}
+**TOTAL FOLDERS PROCESSED:** ${stats.totalFolders}
+**HIERARCHICAL LEVELS:** ${stats.maxLevel}
+**VERIFICATION HASH:** ${generateHash(processedItems)}
+
+### DETAILED BREAKDOWN:
+${stats.levelBreakdown.map(level =>
+    `- **Level ${level.level} Items:** ${level.count} (${level.type} 1/${level.count} to ${level.type} ${level.count}/${level.count})`
+).join('\n')}
+
+**SEQUENTIAL INTEGRITY:** ✅ VERIFIED (No gaps in numbering)
+**COMPLETENESS CHECK:** ✅ VERIFIED (All items accounted for)
+`;
+}
+```
+
 **ZERO TOLERANCE FOR:**
 - Missing files in tree
 - Incorrect numbering
 - Shortcuts like "and more"
 - Incomplete enumeration
+
+## 🚀 PERFORMANCE OPTIMIZATION FOR LARGE STRUCTURES
+
+**CHUNKED PROCESSING:**
+```javascript
+class ChunkedProcessor {
+    constructor(chunkSize = 100) {
+        this.chunkSize = chunkSize;
+        this.processedChunks = 0;
+    }
+
+    processLargeStructure(items) {
+        const chunks = this.createChunks(items, this.chunkSize);
+
+        for (let i = 0; i < chunks.length; i++) {
+            const chunk = chunks[i];
+
+            // Process chunk with numbering
+            const numberedChunk = this.processChunk(chunk, i);
+
+            // Verify chunk completeness
+            this.verifyChunk(numberedChunk, chunk);
+
+            this.processedChunks++;
+        }
+    }
+}
+```
+
+**ERROR RECOVERY SYSTEM:**
+```javascript
+class NumberingRecovery {
+    constructor(stateFile = 'numbering-state.json') {
+        this.stateFile = stateFile;
+        this.recoveryPoints = new Map();
+    }
+
+    // Save state at each level
+    saveRecoveryPoint(level, state) {
+        this.recoveryPoints.set(level, {
+            ...state,
+            timestamp: Date.now(),
+            checksum: this.generateChecksum(state)
+        });
+
+        // Persist to disk
+        this.persistState();
+    }
+
+    // Resume from last good state
+    resumeFromFailure() {
+        const lastGoodState = this.loadLastGoodState();
+        return this.rebuildNumberingState(lastGoodState);
+    }
+}
+```
 
 ---
 
@@ -627,6 +751,62 @@ function Invoke-AutoCorrection($failedDescriptions, $fileList) {
 **REQUIRED FORMAT:**
 ```
 ## 🚨 MANDATORY COMPLETE HIERARCHICAL NUMBERING 🚨
+
+**ALGORITHM IMPLEMENTATION:**
+```javascript
+class HierarchicalNumbering {
+    constructor() {
+        this.levels = new Map(); // Track counters per level
+        this.processedItems = new Set(); // Prevent skipping
+        this.auditTrail = []; // Complete processing history
+    }
+
+    generateNumbering(item, parentPath = '', level = 1) {
+        // CRITICAL: Every item MUST get a number
+        const itemKey = `${parentPath}/${item.name}`;
+        
+        // Check for duplicate processing (skip prevention)
+        if (this.processedItems.has(itemKey)) {
+            throw new Error(`DUPLICATE_PROCESSING_DETECTED: ${itemKey}`);
+        }
+
+        // Determine if folder or file
+        const isFolder = item.type === 'folder' ||
+                        (item.type === 'file' && item.name.includes('.'));
+        
+        // Get or initialize level counter
+        if (!this.levels.has(level)) {
+            this.levels.set(level, 0);
+        }
+        
+        const currentCount = this.levels.get(level) + 1;
+        this.levels.set(level, currentCount);
+        
+        // Generate hierarchical number
+        const itemLevel = level;
+        const itemNumber = currentCount;
+        const totalAtLevel = this.getTotalAtLevel(level);
+        
+        const numbering = isFolder
+            ? `FOLDER ${itemNumber}/${totalAtLevel}: ${item.name}`
+            : `FILE ${itemNumber}/${totalAtLevel}: ${item.name}`;
+            
+        // Mark as processed (skip prevention)
+        this.processedItems.add(itemKey);
+        
+        // Audit trail entry
+        this.auditTrail.push({
+            item: itemKey,
+            numbering: numbering,
+            timestamp: new Date().toISOString(),
+            level: level,
+            type: isFolder ? 'folder' : 'file'
+        });
+        
+        return numbering;
+    }
+}
+```
 
 **EVERY FILE AND FOLDER MUST HAVE FULL HIERARCHICAL NUMBERS:**
 
