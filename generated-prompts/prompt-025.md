@@ -1,8 +1,8 @@
 ﻿
 **You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
 
-**TARGET FOLDER:** `Apex Arbitrage Multichain bot\vendor
-**FULL PATH:** ```C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\vendor`
+**TARGET FOLDER:** `Apex Arbitrage Multichain bot\vendor`
+**FULL PATH:** `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\vendor`
 **ANALYSIS MODE:** PROJECT ANALYSIS
 
 **WHAT YOU MUST DO:**
@@ -455,7 +455,7 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 ### 🎯 MANDATORY FIRST STEP: CONFIRM TARGET FOLDER
 
 **YOU MUST IMMEDIATELY ACKNOWLEDGE:**
-- ✅ Target folder: `Apex Arbitrage Multichain bot\vendor
+- ✅ Target folder: `Apex Arbitrage Multichain bot\vendor`
 - ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\vendor`
 - ✅ Analysis mode: PROJECT ANALYSIS
 - ✅ NO QUESTIONS - PROCEED DIRECTLY TO FILE DISCOVERY
@@ -1181,4 +1181,3 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - "HOW TO IMPLEMENT → REFERENCES" →
   - In features/[md1]: [Feature Name] → see features/[owner].md
   - In features/[md2]: [Feature Name] → see features/[owner].md
-```

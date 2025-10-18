@@ -455,7 +455,7 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 ### 🎯 MANDATORY FIRST STEP: CONFIRM TARGET FOLDER
 
 **YOU MUST IMMEDIATELY ACKNOWLEDGE:**
-- ✅ Target folder: `Apex Arbitrage Multichain bot\overlays``
+- ✅ Target folder: `Apex Arbitrage Multichain bot\overlays`
 - ✅ Full path: `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\overlays`
 - ✅ Analysis mode: PROJECT ANALYSIS
 - ✅ NO QUESTIONS - PROCEED DIRECTLY TO FILE DISCOVERY
@@ -1181,4 +1181,3 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - "HOW TO IMPLEMENT → REFERENCES" →
   - In features/[md1]: [Feature Name] → see features/[owner].md
   - In features/[md2]: [Feature Name] → see features/[owner].md
-```
