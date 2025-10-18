@@ -437,12 +437,6 @@ function Monitor-MemoryUsage($currentFile, $totalFiles) {
 - ✅ ONLY work with the target folder path provided in the prompt
 - ✅ IGNORE all other folders and files in the project
 
-**EXAMPLE:** If prompt says: `ai-modules\models\trainingOutputs`
-- ✅ CORRECT: Analyze ONLY files in `C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\ai-modules\models\trainingOutputs`
-- ❌ WRONG: Reading features/ai-modules.md from root directory
-- ❌ WRONG: Scanning other folders in the project
-- ❌ WRONG: Analyzing files outside the specified path
-
 **VERIFICATION:** Before analyzing ANY file, ask yourself:
 - Is this file inside the target path from STEP 1.5?
 - YES → Proceed
