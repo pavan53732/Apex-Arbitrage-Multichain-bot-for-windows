@@ -4,22 +4,21 @@
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\archive
 **FULL PATH:** C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\archive
 **ANALYSIS MODE:** PROJECT ANALYSIS
+**ROUTING MODE:** OWNER-ONLY (Archive → quality.md)
 
 **WHAT YOU MUST DO:**
-1. ✅ Analyze ALL files in the specified folder
-2. ✅ Create a complete folder tree structure  
-3. ✅ Write detailed descriptions for each file (20-30 words)
-4. ✅ Generate comprehensive Windows implementation details
-5. ✅ Based on content analysis, decide which EXISTING feature file to append to
-6. ✅ Count existing features in target file (read only "## Feature X:" headings)
-7. ✅ Use next feature number (Feature 1, Feature 2, Feature 3, etc.)
-8. ✅ APPEND to EXISTING features/*.md files ONLY (do not create new files)
+1. ✅ Analyze ALL files under the target folder
+2. ✅ Partition by OWNER before writing (archive → quality.md)
+3. ✅ Create a complete folder tree structure for the CURRENT OWNER GROUP ONLY
+4. ✅ Write 20–30 word descriptions for every file listed (no generics)
+5. ✅ Generate Windows implementation details relevant to archiving/retention
+6. ✅ Count existing "## Feature X:" headings in the target owner file and use the next number
+7. ✅ APPEND only to EXISTING features/*.md files
+8. ✅ Add cross-references with counts for archived items that belong to other owners (no duplication)
 9. ✅ NO QUESTIONS - START IMMEDIATELY
 
-**EXISTING FEATURE FILES YOU CAN APPEND TO:**
-- ai-modules.md, archive.md, backend.md, config.md
-- contracts.md, dashboard.md, deployment.md, docs.md
-- install-dependencies.md, performance.md, security.md, testing.md
+**EXISTING FEATURE FILES YOU CAN APPEND TO (ULTRA-LEAN-5):**
+- backend.md, contracts.md, dashboard.md, platform.md, quality.md
 
 **WHAT YOU MUST NOT DO:**
 ❌ Ask which folder to analyze (it's specified above)

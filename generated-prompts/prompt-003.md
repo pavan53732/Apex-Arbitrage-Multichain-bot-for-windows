@@ -16,10 +16,8 @@
 8. ✅ APPEND to EXISTING features/*.md files ONLY (do not create new files)
 9. ✅ NO QUESTIONS - START IMMEDIATELY
 
-**EXISTING FEATURE FILES YOU CAN APPEND TO:**
-- ai-modules.md, archive.md, backend.md, config.md
-- contracts.md, dashboard.md, deployment.md, docs.md
-- install-dependencies.md, performance.md, security.md, testing.md
+**EXISTING FEATURE FILES YOU CAN APPEND TO (ULTRA-LEAN-5):**
+- backend.md, contracts.md, dashboard.md, platform.md, quality.md
 
 **WHAT YOU MUST NOT DO:**
 ❌ Ask which folder to analyze (it's specified above)
