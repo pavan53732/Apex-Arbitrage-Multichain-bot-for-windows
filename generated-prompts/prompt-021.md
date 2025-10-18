@@ -1181,4 +1181,3 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - "HOW TO IMPLEMENT → REFERENCES" →
   - In features/[md1]: [Feature Name] → see features/[owner].md
   - In features/[md2]: [Feature Name] → see features/[owner].md
-```
