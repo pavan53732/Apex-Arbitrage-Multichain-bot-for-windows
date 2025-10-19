@@ -1,4 +1,4 @@
-﻿ufeffðŸš¨ **CRITICAL INSTRUCTION - READ FIRST** ðŸš¨
+﻿🚨 **CRITICAL INSTRUCTION - READ FIRST** 🚨
 
 **YOU MUST LIST EVERY SINGLE FILE - NO EXCEPTIONS**
 - PowerShell will show you 60 files and 17 folders

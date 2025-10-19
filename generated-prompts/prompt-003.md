@@ -1,4 +1,4 @@
-﻿ufeffðŸš¨ **CRITICAL INSTRUCTION - READ FIRST** ðŸš¨
+﻿🚨 **CRITICAL INSTRUCTION - READ FIRST** 🚨
 
 **YOU MUST LIST EVERY SINGLE FILE - NO EXCEPTIONS**
 - PowerShell will show you 1608 files and 197 folders
@@ -8,7 +8,6 @@
 
 **You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
 
-**You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
 
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\backend
 **FULL PATH:** C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\backend
