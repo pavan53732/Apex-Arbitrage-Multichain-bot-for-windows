@@ -1143,15 +1143,17 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - [ ] Complexity score calculated
 - [ ] Technologies detected accurately
 - [ ] Windows implementation planned
-- [ ] Owner .md file determined
+- [ ] Owner .md file determined (Ultra-lean-5)
+- [ ] Flow-aware routing applied
 - [ ] Reference files identified
 
 **After Writing Files:**
 - [ ] Owner .md updated with new feature
-- [ ] Reference .md files updated
+- [ ] Cross-references added (if flow feature)
 - [ ] Cross-references added
 - [ ] File counts verified
 - [ ] No duplicate features created
+- [ ] UTF-8 encoding preserved
 
 ---
 

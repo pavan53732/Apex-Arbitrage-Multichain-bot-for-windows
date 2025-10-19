@@ -5,16 +5,19 @@
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\wall-of-fame
 **FULL PATH:** C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\wall-of-fame
 **ANALYSIS MODE:** PROJECT ANALYSIS
+**ROUTING MODE:** FLOW-AWARE (Dashboard → Backend → Wall-of-Fame)
 
 **WHAT YOU MUST DO:**
-1. ✅ Analyze ALL files in the specified folder
-2. ✅ Create a complete folder tree structure  
-3. ✅ Write detailed descriptions for each file (20-30 words)
-4. ✅ Generate comprehensive Windows implementation details
-5. ✅ Based on content analysis, decide which EXISTING feature file to append to
-6. ✅ Count existing features in target file (read only "## Feature X:" headings)
-7. ✅ Use next feature number (Feature 1, Feature 2, Feature 3, etc.)
-8. ✅ APPEND to EXISTING features/*.md files ONLY (do not create new files)
+1. ✅ Analyze ALL files under the target folder
+2. ✅ Partition by OWNER and FLOW before writing
+   - OWNER (wall-of-fame → platform.md): list ONLY wall-of-fame files as an owner feature in platform.md
+   - FLOW (anchored in backend.md): list ONLY backend files; reference Wall-of-Fame counts and links
+3. ✅ Create a complete folder tree structure for the CURRENT OWNER GROUP ONLY
+4. ✅ Write 20–30 word descriptions for every file listed (no generics)
+5. ✅ Generate Windows implementation details relevant to the group/flow
+6. ✅ Count existing "## Feature X:" headings in the target owner file and use the next number
+7. ✅ APPEND only to EXISTING features/*.md files
+8. ✅ Add cross-references for related owners with counts (do not duplicate file lists)
 9. ✅ NO QUESTIONS - START IMMEDIATELY
 
 **EXISTING FEATURE FILES YOU CAN APPEND TO:**
@@ -27,6 +30,8 @@
 ❌ Create new .md files (only append to existing ones)
 ❌ Create standalone documentation (append to existing file)
 ❌ Read entire feature file content (only read feature headings)
+❌ Mixing multiple OWNERS in single feature
+❌ Listing non-owner files in owner features
 
 **START NOW - ANALYZE THE FOLDER AND DECIDE WHERE TO APPEND**
 
