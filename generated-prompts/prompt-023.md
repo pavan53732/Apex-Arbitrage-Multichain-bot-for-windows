@@ -17,9 +17,7 @@
 9. ✅ NO QUESTIONS - START IMMEDIATELY
 
 **EXISTING FEATURE FILES YOU CAN APPEND TO:**
-- ai-modules.md, archive.md, backend.md, config.md
-- contracts.md, dashboard.md, deployment.md, docs.md
-- install-dependencies.md, performance.md, security.md, testing.md
+- backend.md, contracts.md, dashboard.md, platform.md, quality.md
 
 **WHAT YOU MUST NOT DO:**
 ❌ Ask which folder to analyze (it's specified above)
@@ -190,7 +188,7 @@ ${stats.levelBreakdown.map(level =>
 - Shortcuts like "and more"
 - Incomplete enumeration
 
-## � QUALITY ASSURANCE METRICS
+## 📊 QUALITY ASSURANCE METRICS
 
 | Metric | Requirement | Enforcement |
 |--------|-------------|-------------|
@@ -238,7 +236,7 @@ function finalVerification(documentation, originalCounts) {
 }
 ```
 
-## �🚀 PERFORMANCE OPTIMIZATION FOR LARGE STRUCTURES
+## 🚀 PERFORMANCE OPTIMIZATION FOR LARGE STRUCTURES
 
 **CHUNKED PROCESSING:**
 ```javascript
@@ -508,9 +506,9 @@ $folders = Get-ChildItem -Path $path -Recurse -Directory -Force
 
 - **Small (1-50 files):** ✅ PROCEED - Single response, excellent quality expected
 - **Medium (51-200 files):** 🧬 USE MICRO-CHUNKING - 25-file chunks for precision
-- **Large (201-500 files):** 🧬 USE MICRO-CHUNKING - 25-file chunks for quality
-- **Massive (501-1000 files):** 🧬 USE INTENSIVE MICRO-CHUNKING - 25-file chunks with extra validation
-- **Ultra-Massive (1000+ files):** 🧬 USE INTENSIVE MICRO-CHUNKING - 25-file chunks with continuous monitoring
+- **Large (201-500 files):** 🧬 USE MICRO-CHUNKING - 20-file chunks for quality
+- **Massive (501-1000 files):** 🧬 USE INTENSIVE MICRO-CHUNKING - 15-file chunks with extra validation
+- **Ultra-Massive (1000+ files):** 🧬 USE INTENSIVE MICRO-CHUNKING - 10-file chunks with continuous monitoring
 
 **DECISION PROTOCOL:**
 1. Check PowerShell file count
@@ -521,7 +519,7 @@ $folders = Get-ChildItem -Path $path -Recurse -Directory -Force
 
 ### 🧬 UNIFIED ADAPTIVE CHUNKING SYSTEM
 
-**INTELLIGENT PROCESSING BASED ON COMPLEXITY:**
+**INTELLIGENT PROCESSING BASED ON COMPLEXITY (OWNER/FLOW AWARE):**
 
 - **Small (1-50 files):** ✅ DIRECT - Process all files in single response
 - **Medium (51-200 files):** 🧬 MICRO-CHUNK - 25-file chunks with standard validation
@@ -533,6 +531,10 @@ $folders = Get-ChildItem -Path $path -Recurse -Directory -Force
 - Smaller chunks for larger folders (cognitive load management)
 - Increased validation frequency for complexity
 - Real-time adjustment based on file type diversity
+
+**OWNER/FLOW AWARE CHUNKING:**
+- If files belong to different owners, ensure chunks respect owner boundaries for routing
+- For flow features, prioritize chunking that maintains the integrity of the flow sequence
 
 **INTELLIGENT CHUNKING EXAMPLES:**
 ```
@@ -566,22 +568,22 @@ Ultra-Massive (2500 files): 250 chunks of 10 files each [PRECISION-CHUNK X/250]
 
 **BEFORE DOCUMENTATION - ANALYZE CONTENT FIRST:**
 
-#### PRE-ANALYSIS PROTOCOL:
+#### PRE-ANALYSIS PROTOCOL (OWNER/FLOW AWARE):
 1. **Execute PowerShell enumeration**
 2. **Categorize ALL files by extension and purpose**
-3. **Create routing map BEFORE writing any documentation**
-4. **Validate routing decisions**  
+3. **Create routing map BEFORE writing any documentation** (partition by OWNER and FLOW)
+4. **Validate routing decisions** (ensure no mixed content in single owner writes)
 5. **THEN proceed with documentation**
 
 **PRE-ANALYSIS OUTPUT FORMAT:**
 ```
 CONTENT ANALYSIS COMPLETE:
 - Smart Contracts: [Count] files → contracts.md
-- AI/ML Files: [Count] files → ai-modules.md
+- AI/ML Files: [Count] files → backend.md (routed to backend due to flow-aware architecture)
 - Dashboard Files: [Count] files → dashboard.md  
 - Backend Logic: [Count] files → backend.md
-- Testing Files: [Count] files → testing.md
-- Documentation: [Count] files → docs.md
+- Testing Files: [Count] files → quality.md (all testing now under quality.md)
+- Documentation: [Count] files → platform.md (all general docs now under platform.md)
 
 ROUTING VALIDATED ✅
 PROCEEDING WITH DOCUMENTATION...
@@ -591,25 +593,30 @@ PROCEEDING WITH DOCUMENTATION...
 
 ### 🧠 SEMANTIC CONTENT INTELLIGENCE
 
-**ADVANCED FILE CATEGORIZATION FOR 99% ACCURATE ROUTING:**
+**ADVANCED FILE CATEGORIZATION FOR 99% ACCURATE ROUTING (Owner/Flow Aware):**
 
 ```powershell
-# Semantic analysis for 99% accurate routing
+# Semantic analysis for 99% accurate routing (Owner/Flow Aware)
 function Get-FileSemanticCategory($filePath, $fileName, $fileContent) {
     # Analyze file path context
-    if ($filePath -match "test|spec|__tests__") { return "Testing" }
+    if ($filePath -match "test|spec|__tests__") { return "Quality" } # All testing to quality.md
     if ($filePath -match "component|widget|ui") { return "Dashboard" }
     if ($filePath -match "contract|sol") { return "SmartContract" }
-    
+    if ($filePath -match "docs|readme|changelog") { return "Platform" } # All general docs to platform.md
+
     # Analyze content patterns for .js files
     if ($fileName -match "\.js$") {
         if ($fileContent -match "React|jsx|component") { return "Dashboard" }
         if ($fileContent -match "contract|web3|ethereum") { return "SmartContract" }
-        if ($fileContent -match "describe|it\(|test\(") { return "Testing" }
+        if ($fileContent -match "describe|it\(|test\(") { return "Quality" }
         if ($fileContent -match "express|app\.listen|server") { return "Backend" }
     }
-    
-    return "Unknown"
+
+    # Special routing for AI/ML files to Backend as per flow-aware architecture
+    if ($fileName -match "\.py$") { return "Backend" }
+    if ($filePath -match "models/|ai-") { return "Backend" }
+
+    return "Backend" # Default to backend for unknown or general logic files
 }
 
 # Apply semantic analysis to all files
@@ -634,60 +641,65 @@ Based on PowerShell enumeration, analyze the discovered files:
 - Identify functional areas (contracts/, tests/, components/, models/, etc.)
 - Determine if folder serves single purpose or multiple purposes
 
-#### 2.2 INTELLIGENT ROUTING DECISION
+#### 2.2 INTELLIGENT ROUTING DECISION (OWNER/FLOW AWARE)
 **SINGLE-PURPOSE FOLDERS:**
-Use FILE ROUTING TABLE for straightforward routing
+Use FILE ROUTING TABLE for straightforward routing (e.g., dedicated `contracts/` folder to `contracts.md`)
 
-**MIXED-CONTENT FOLDERS:**
-Analyze each file group separately:
-- Smart contracts (.sol files) → route to contracts.md
-- AI/ML files (.py, models/) → route to ai-modules.md  
-- Dashboard files (components/, .jsx) → route to dashboard.md
-- Test files (.test.js, spec.js) → route to testing.md
-- Documentation (.md files) → route to docs.md
+**MIXED-CONTENT AND FLOW PROTOCOL:**
+**ROUTING MODE: FLOW-AWARE (Dashboard → Backend → Contracts)**
+
+1. **Identify Flow Features:** Features that span multiple architectural layers (e.g., a dashboard component triggering a backend API that interacts with a smart contract).
+2. **Anchor in Backend:** Flow features should always be documented primarily in `features/backend.md`.
+3. **Owner-Scoped Enumeration:** Within the `backend.md` feature, only list and describe files that are physically located within the *backend* directories and directly managed by the backend owner.
+4. **Cross-Reference Other Layers:** For related files in `dashboard/` or `contracts/` folders that are part of the *same flow*, create explicit cross-references in `backend.md`.
+5. **Avoid Duplication:** Do NOT list or describe files belonging to `dashboard/` or `contracts/` directly within `backend.md`. Instead, refer to their respective owner files (`dashboard.md`, `contracts.md`).
+
+**OWNER-ONLY FOLDERS/FILES:**
+If content types are distinct and not part of a cross-layer flow (e.g., standalone contracts, UI components not directly linked to a backend process in this context), route each content type to its proper owner file (`contracts.md`, `dashboard.md`, `quality.md`, `platform.md`).
 
 #### 2.3 FEATURE CATEGORIZATION
 - **Name**: Reflect actual content purpose, not just folder name
 - **Complexity**: File count → Star rating (⭐-⭐⭐⭐⭐⭐)
 - **Technologies**: Detect from actual file extensions and content
-- **Owner**: Intelligently determined from content analysis
-- **References**: Cross-reference related features based on content relationships
+- **Owner**: Intelligently determined from content analysis (one of: `backend.md`, `contracts.md`, `dashboard.md`, `platform.md`, `quality.md`)
+- **References**: Cross-reference related features based on content relationships (especially for flow features)
 
-### 🔄 MIXED-CONTENT FOLDER PROTOCOL
+### 🔄 MIXED-CONTENT AND FLOW PROTOCOL
 
-**WHEN FOLDER CONTAINS MULTIPLE CONTENT TYPES:**
+**WHEN FOLDER CONTAINS MULTIPLE CONTENT TYPES OR IS PART OF A FLOW:**
 
 #### IDENTIFICATION:
 - Multiple file extensions serving different purposes
 - Subfolders with different functional areas  
-- Files that clearly belong to different feature categories
+- Files that clearly belong to different feature categories or architectural layers
 
 #### PROCESSING APPROACH:
-**OPTION A: SINGLE FEATURE WITH SECTIONS**
-If content types are closely related:
+**OPTION A: OWNER FEATURE (for standalone owner-specific content)**
+If content types are closely related and belong to a single owner (e.g., all smart contracts in a folder, all dashboard components):
 ```
 ## Feature N: [Folder Name] ⭐⭐⭐ ([Total Count] files)
 
-**Smart Contracts ([Count] files):**
-[List .sol files with descriptions → Note: Also documented in contracts.md]
+**File Type 1 ([Count] files):**
+[List files with descriptions]
 
-**Backend Logic ([Count] files):**  
-[List backend files with descriptions]
-
-**Testing Files ([Count] files):**
-[List test files with descriptions → Note: Also documented in testing.md]
+**File Type 2 ([Count] files):**
+[List files with descriptions]
 ```
 
-**OPTION B: CROSS-REFERENCE APPROACH**
-If content types are distinct:
-- Route each content type to its proper owner file
-- Create cross-references between related features
-- Document the relationship and shared folder location
+**OPTION B: FLOW FEATURE (Anchored in features/backend.md)**
+If content spans multiple architectural layers (Dashboard → Backend → Contracts):
+- The primary feature documentation is written in `features/backend.md`.
+- ONLY backend-owned files are listed and described in `backend.md`.
+- Cross-references are made to `dashboard.md` and `contracts.md` for related components.
 
-#### CROSS-REFERENCE FORMAT:
-- In contracts.md: "Smart contracts from backend/ folder → see backend.md for full context"
-- In backend.md: "Contains smart contracts → see contracts.md for contract details"
-- In testing.md: "Backend tests → see backend.md for tested components"
+#### CROSS-REFERENCE FORMAT FOR FLOW FEATURES (FROM backend.md):
+- **Related Dashboard Components ([X] files):** See `features/dashboard.md` for details on UI elements interacting with this backend feature.
+- **Related Smart Contracts ([Y] files):** See `features/contracts.md` for full contract definitions and logic integrated with this backend feature.
+
+#### CROSS-REFERENCE FORMAT FOR OWNER-ONLY FEATURES:
+- In `contracts.md`: "Smart contracts from `backend/` folder → see `features/backend.md` for full backend flow context"
+- In `dashboard.md`: "UI components interacting with backend `X` → see `features/backend.md` for backend logic details"
+- In `quality.md`: "Tests for `backend/X` → see `features/backend.md` for tested components"
 
 ### 🔒 CONTINUOUS VALIDATION PROTOCOL
 
@@ -902,8 +914,10 @@ class HierarchicalNumbering {
 - File System (configuration)
 - Registry (settings)
 
-### STEP 5: DOCUMENTATION
+### STEP 5: DOCUMENTATION (OWNER/FLOW AWARE)
 **Append to features/[owner].md:**
+
+**TEMPLATE FOR OWNER FEATURE (e.g., contracts.md, dashboard.md, quality.md, platform.md):**
 ```markdown
 ## Feature N: [Name] ⭐⭐⭐ ([Count] files)
 
@@ -914,7 +928,29 @@ Technologies: [Detected stack]
 
 Windows Implementation:
 - [8-12 specific implementation bullets]
+
+Cross-References:
+- Related to: [other-owner-feature].md (if applicable)
 ```
+
+**TEMPLATE FOR FLOW FEATURE (Anchored in features/backend.md):**
+```markdown
+## Feature N: [Name] (Flow: Dashboard → Backend → Contracts) ⭐⭐⭐ ([Count] files)
+
+Feature Files (Backend Owned):
+[Group backend files by purpose - list ALL with 20-30 word descriptions]
+
+Technologies: [Detected stack]
+
+Windows Implementation:
+- [8-12 specific implementation bullets]
+
+Cross-References:
+- **Related Dashboard Components ([X] files):** See `features/dashboard.md` for details on UI elements interacting with this backend feature.
+- **Related Smart Contracts ([Y] files):** See `features/contracts.md` for full contract definitions and logic integrated with this backend feature.
+```
+
+**CRITICAL**: When documenting a FLOW feature in `backend.md`, only list files directly owned by the `backend/` folder. Cross-reference related files in `dashboard.md` and `contracts.md` using the specified format.
 
 **Add references to related .md files**
 
@@ -1027,7 +1063,7 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - ❌ Missing nested folders
 - ❌ Count mismatches
 - ❌ Incomplete Windows mapping
-- ❌ Using corrupted UTF-8 characters (ðŸš¨, âš ï¸, âŸŒ, âœ…, â†')
+- ❌ Using corrupted UTF-8 characters (🚨, ⚠️, ✅, ❌)
 
 ### 🚨 FINAL VALIDATION CHECK - MANDATORY 🚨
 
@@ -1047,33 +1083,33 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ## INTELLIGENT FILE ROUTING TABLE
 
-**CONTENT-BASED ROUTING GUIDANCE:**
+**CONTENT-BASED ROUTING GUIDANCE (ULTRA-LEAN-5 OWNERS):**
 
 | Content Type | File Patterns | Owner .md | Analysis Notes |
 |-------------|---------------|----------|----------------|
 | Smart Contracts | *.sol, contracts/ | contracts.md | Always route to contracts regardless of parent folder |
-| AI/ML Components | *.py, models/, ai-*, *.pkl, *.h5 | ai-modules.md | Machine learning and AI-related code |
-| Dashboard/UI | components/, *.jsx, *.tsx, dashboard/ | dashboard.md | Frontend and UI components |
-| Backend Logic | server/, api/, *.js (non-UI) | backend.md | Server-side business logic |
-| Testing Files | test/, *.test.js, *.spec.js, __tests__/ | testing.md | All testing-related files |
-| Deployment | deploy/, ci/, docker/, *.yml | deployment.md | CI/CD and deployment configs |
-| Configuration | config/, *.env, settings/, *.conf | config.md | Application configuration |
-| Security | security/, auth/, encryption/ | security.md | Security and authentication |
-| Documentation | docs/, *.md, README* | docs.md | Project documentation |
-| Dependencies | install/, setup/, package.json, requirements.txt | install-dependencies.md | Dependency management |
+| AI/ML Components | *.py, models/, ai-*, *.pkl, *.h5 | backend.md | Routed to backend due to flow-aware architecture. Cross-reference relevant sections. |
+| Dashboard/UI | components/, *.jsx, *.tsx, dashboard/, overlays/, public/ | dashboard.md | Frontend and UI components |
+| Backend Logic | server/, api/, *.js (non-UI), core/, engine/, plugins/, utils/, storage/, third-party/, watchdog/, migrations/, data/, logs/, manifest/, presets/, scripts/, vendor/ | backend.md | Server-side business logic and supporting infrastructure. This is the anchor for flow features. |
+| Quality Assurance | test/, *.test.js, *.spec.js, __tests__/, ci/, benchmarks/ | quality.md | All testing, CI, and performance benchmark related files |
+| Platform Documentation & Config | docs/, *.md, README*, config/, deploy/, examples/, types/, build/, root-level docs | platform.md | Project documentation, configuration, deployment scripts, examples, and type definitions |
 
-**MIXED FOLDER ANALYSIS PROTOCOL:**
-1. **Categorize files by type** using table above
-2. **Group related files** by their actual purpose  
-3. **Route each group** to appropriate owner file
-4. **Document cross-references** between related features
-5. **Note mixed nature** in feature descriptions
+**MIXED FOLDER ANALYSIS PROTOCOL (OWNER/FLOW AWARE):**
+1. **Categorize files by type and architectural layer** using table above
+2. **Group related files** by their actual purpose AND designated owner (from Ultra-lean-5)
+3. **Route each group** to appropriate owner file, prioritizing flow-aware anchoring in `backend.md`
+4. **Document cross-references** between related features and layers with file counts
+5. **Note mixed nature** in feature descriptions, explicitly stating the flow
 
-**EXAMPLE: backend/ folder contains:**
-- backend/contracts/*.sol → Route to contracts.md
-- backend/api/*.js → Route to backend.md  
-- backend/tests/*.test.js → Route to testing.md
-- backend/docs/*.md → Route to docs.md
+**EXAMPLE: `backend/` folder contains (FLOW-AWARE ROUTING):**
+- `backend/contracts/*.sol` → Route to `contracts.md` (Owner-only)
+- `backend/api/*.js` → Route to `backend.md` (Backend Logic)
+- `backend/tests/*.test.js` → Route to `quality.md` (Testing)
+- `backend/docs/*.md` → Route to `platform.md` (Documentation)
+
+**EXAMPLE: `dashboard/` folder contains:**
+- `dashboard/components/*.jsx` → Route to `dashboard.md` (UI Components)
+- `dashboard/utils/*.js` (generic utils) → Route to `backend.md` (if used by backend directly) or `dashboard.md` (if purely UI helper)
 
 ---
 
@@ -1104,7 +1140,7 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ---
 
-## VALIDATION CHECKLIST
+## VALIDATION CHECKLIST (OWNER/FLOW AWARE)
 
 **Before Writing Files:**
 - [ ] PowerShell executed successfully
@@ -1113,14 +1149,14 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - [ ] Complexity score calculated
 - [ ] Technologies detected accurately
 - [ ] Windows implementation planned
-- [ ] Owner .md file determined
-- [ ] Reference files identified
+- [ ] Owner .md file determined (one of Ultra-lean-5)
+- [ ] Reference files identified (especially for flow features)
 
 **After Writing Files:**
 - [ ] Owner .md updated with new feature
-- [ ] Reference .md files updated
-- [ ] Cross-references added
-- [ ] File counts verified
+- [ ] Reference .md files updated (for cross-references)
+- [ ] Cross-references added with file counts (for flow features)
+- [ ] File counts verified (owner-specific counts)
 - [ ] No duplicate features created
 
 ---
@@ -1130,11 +1166,11 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 ```
 - "What does this FEATURE do?" → [1-2 line description]
 - "Which MD file OWNS this FEATURE?" → [owner.md] ([reason])
-- "Which MD files REFERENCE this FEATURE?" → [md1], [md2] ([reasons])
+- "Which MD files REFERENCE this FEATURE?  " → [md1], [md2] ([reasons])
 - "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
-  [Complete feature documentation]
+  [Complete feature documentation based on template for OWNER or FLOW feature]
 - "HOW TO IMPLEMENT → REFERENCES" →
-  [Cross-reference additions]
+  [Cross-reference additions as per protocol]
 ```
 
 **CRITICAL:** Execute in order, validate completely, no shortcuts allowed.
@@ -1165,13 +1201,7 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - "Which MD files REFERENCE this FEATURE?" → [md1], [md2] ([reasons])
 - "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
   Append this section to the end of features/[owner].md:
-  ## Feature [N]: [Feature Name]
-  Feature Files:
-  - [file1] → [description]
-  - [file2] → [description]
-  Windows Implementation:
-  - [bullet 1]
-  - [bullet 2]
+  [Complete feature documentation based on template for OWNER or FLOW feature]
 - "HOW TO IMPLEMENT → REFERENCES" →
-  - In features/[md1]: [Feature Name] → see features/[owner].md
-  - In features/[md2]: [Feature Name] → see features/[owner].md
+  [Cross-reference additions as per protocol]
+```

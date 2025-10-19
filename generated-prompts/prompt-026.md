@@ -1,4 +1,5 @@
 ﻿
+
 **You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
 
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\wall-of-fame
@@ -17,9 +18,7 @@
 9. ✅ NO QUESTIONS - START IMMEDIATELY
 
 **EXISTING FEATURE FILES YOU CAN APPEND TO:**
-- ai-modules.md, archive.md, backend.md, config.md
-- contracts.md, dashboard.md, deployment.md, docs.md
-- install-dependencies.md, performance.md, security.md, testing.md
+- backend.md, contracts.md, dashboard.md, platform.md, quality.md
 
 **WHAT YOU MUST NOT DO:**
 ❌ Ask which folder to analyze (it's specified above)
@@ -190,7 +189,7 @@ ${stats.levelBreakdown.map(level =>
 - Shortcuts like "and more"
 - Incomplete enumeration
 
-## � QUALITY ASSURANCE METRICS
+## 📊 QUALITY ASSURANCE METRICS
 
 | Metric | Requirement | Enforcement |
 |--------|-------------|-------------|
@@ -238,7 +237,7 @@ function finalVerification(documentation, originalCounts) {
 }
 ```
 
-## �🚀 PERFORMANCE OPTIMIZATION FOR LARGE STRUCTURES
+## 🚀 PERFORMANCE OPTIMIZATION FOR LARGE STRUCTURES
 
 **CHUNKED PROCESSING:**
 ```javascript
@@ -577,11 +576,11 @@ Ultra-Massive (2500 files): 250 chunks of 10 files each [PRECISION-CHUNK X/250]
 ```
 CONTENT ANALYSIS COMPLETE:
 - Smart Contracts: [Count] files → contracts.md
-- AI/ML Files: [Count] files → ai-modules.md
+- AI/ML Files: [Count] files → backend.md
 - Dashboard Files: [Count] files → dashboard.md  
 - Backend Logic: [Count] files → backend.md
-- Testing Files: [Count] files → testing.md
-- Documentation: [Count] files → docs.md
+- Testing Files: [Count] files → quality.md
+- Documentation: [Count] files → platform.md
 
 ROUTING VALIDATED ✅
 PROCEEDING WITH DOCUMENTATION...
@@ -641,10 +640,10 @@ Use FILE ROUTING TABLE for straightforward routing
 **MIXED-CONTENT FOLDERS:**
 Analyze each file group separately:
 - Smart contracts (.sol files) → route to contracts.md
-- AI/ML files (.py, models/) → route to ai-modules.md  
+- AI/ML files (.py, models/) → route to backend.md  
 - Dashboard files (components/, .jsx) → route to dashboard.md
-- Test files (.test.js, spec.js) → route to testing.md
-- Documentation (.md files) → route to docs.md
+- Test files (.test.js, spec.js) → route to quality.md
+- Documentation (.md files) → route to platform.md
 
 #### 2.3 FEATURE CATEGORIZATION
 - **Name**: Reflect actual content purpose, not just folder name
@@ -675,7 +674,7 @@ If content types are closely related:
 [List backend files with descriptions]
 
 **Testing Files ([Count] files):**
-[List test files with descriptions → Note: Also documented in testing.md]
+[List test files with descriptions → Note: Also documented in quality.md]
 ```
 
 **OPTION B: CROSS-REFERENCE APPROACH**
@@ -687,7 +686,7 @@ If content types are distinct:
 #### CROSS-REFERENCE FORMAT:
 - In contracts.md: "Smart contracts from backend/ folder → see backend.md for full context"
 - In backend.md: "Contains smart contracts → see contracts.md for contract details"
-- In testing.md: "Backend tests → see backend.md for tested components"
+- In quality.md: "Backend tests → see backend.md for tested components"
 
 ### 🔒 CONTINUOUS VALIDATION PROTOCOL
 
@@ -1052,15 +1051,15 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 | Content Type | File Patterns | Owner .md | Analysis Notes |
 |-------------|---------------|----------|----------------|
 | Smart Contracts | *.sol, contracts/ | contracts.md | Always route to contracts regardless of parent folder |
-| AI/ML Components | *.py, models/, ai-*, *.pkl, *.h5 | ai-modules.md | Machine learning and AI-related code |
+| AI/ML Components | *.py, models/, ai-*, *.pkl, *.h5 | backend.md | Machine learning and AI-related code |
 | Dashboard/UI | components/, *.jsx, *.tsx, dashboard/ | dashboard.md | Frontend and UI components |
 | Backend Logic | server/, api/, *.js (non-UI) | backend.md | Server-side business logic |
-| Testing Files | test/, *.test.js, *.spec.js, __tests__/ | testing.md | All testing-related files |
-| Deployment | deploy/, ci/, docker/, *.yml | deployment.md | CI/CD and deployment configs |
-| Configuration | config/, *.env, settings/, *.conf | config.md | Application configuration |
-| Security | security/, auth/, encryption/ | security.md | Security and authentication |
-| Documentation | docs/, *.md, README* | docs.md | Project documentation |
-| Dependencies | install/, setup/, package.json, requirements.txt | install-dependencies.md | Dependency management |
+| Testing Files | test/, *.test.js, *.spec.js, __tests__/ | quality.md | All testing-related files |
+| Deployment | deploy/, ci/, docker/, *.yml | platform.md | CI/CD and deployment configs |
+| Configuration | config/, *.env, settings/, *.conf | platform.md | Application configuration |
+| Security | security/, auth/, encryption/ | quality.md | Security and authentication |
+| Documentation | docs/, *.md, README* | platform.md | Project documentation |
+| Dependencies | install/, setup/, package.json, requirements.txt | platform.md | Dependency management |
 
 **MIXED FOLDER ANALYSIS PROTOCOL:**
 1. **Categorize files by type** using table above
@@ -1072,8 +1071,8 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 **EXAMPLE: backend/ folder contains:**
 - backend/contracts/*.sol → Route to contracts.md
 - backend/api/*.js → Route to backend.md  
-- backend/tests/*.test.js → Route to testing.md
-- backend/docs/*.md → Route to docs.md
+- backend/tests/*.test.js → Route to quality.md
+- backend/docs/*.md → Route to platform.md
 
 ---
 
