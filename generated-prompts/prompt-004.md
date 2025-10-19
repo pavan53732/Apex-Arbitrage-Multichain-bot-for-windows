@@ -16,7 +16,7 @@
 8. ✅ APPEND to EXISTING features/*.md files ONLY (do not create new files)
 9. ✅ NO QUESTIONS - START IMMEDIATELY
 
-**EXISTING FEATURE FILES YOU CAN APPEND TO (ULTRA-LEAN-5):**
+**EXISTING FEATURE FILES YOU CAN APPEND TO:**
 - backend.md, contracts.md, dashboard.md, platform.md, quality.md
 
 **WHAT YOU MUST NOT DO:**

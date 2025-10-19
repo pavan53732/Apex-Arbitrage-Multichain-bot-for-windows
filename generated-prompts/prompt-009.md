@@ -1,4 +1,6 @@
 ﻿
+# Documentation Generation Prompt: Apex Arbitrage Bot Deploy
+
 **You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
 
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\deploy
@@ -16,7 +18,7 @@
 8. ✅ APPEND to EXISTING features/*.md files ONLY (do not create new files)
 9. ✅ NO QUESTIONS - START IMMEDIATELY
 
-**EXISTING FEATURE FILES YOU CAN APPEND TO (ULTRA-LEAN-5):**
+**EXISTING FEATURE FILES YOU CAN APPEND TO:**
 - backend.md, contracts.md, dashboard.md, platform.md, quality.md
 
 **WHAT YOU MUST NOT DO:**
