@@ -1,4 +1,13 @@
-﻿
+﻿ufeffðŸš¨ **CRITICAL INSTRUCTION - READ FIRST** ðŸš¨
+
+**YOU MUST LIST EVERY SINGLE FILE - NO EXCEPTIONS**
+- PowerShell will show you 47 files and 6 folders
+- You MUST document all 47 files with 20-30 word descriptions
+- Using "..." or "and more files" = IMMEDIATE REJECTION
+- File count in documentation MUST equal PowerShell count
+
+**You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
+
 **You are an AI documentation specialist. Your task is to analyze the specified folder and append documentation to the appropriate features folder .md files.**
 
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\types
