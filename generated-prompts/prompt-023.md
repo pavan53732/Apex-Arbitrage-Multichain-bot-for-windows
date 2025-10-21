@@ -11,7 +11,14 @@
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\types
 **FULL PATH:** C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\types
 **ANALYSIS MODE:** PROJECT ANALYSIS
-**ROUTING MODE:** FLOW-AWARE (Dashboard → Backend → Types)
+**ROUTING MODE:** OWNER FEATURE (Hardcoded)
+
+**HARDCODED ROUTING DECISION:**
+- **Target Path:** types/
+- **Destination:** platform.md
+- **Reason:** Types folder contains TypeScript type definitions
+- **Feature Type:** OWNER FEATURE
+- **NO ANALYSIS REQUIRED** - Route directly to platform.md (Dashboard → Backend → Types)
 
 **WHAT YOU MUST DO:**
 1. ✅ Analyze ALL files under the target folder

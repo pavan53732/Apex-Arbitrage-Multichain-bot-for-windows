@@ -11,7 +11,14 @@
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\tests
 **FULL PATH:** C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\tests
 **ANALYSIS MODE:** PROJECT ANALYSIS
-**ROUTING MODE:** FLOW-AWARE (Dashboard → Backend → Tests)
+**ROUTING MODE:** OWNER FEATURE (Hardcoded)
+
+**HARDCODED ROUTING DECISION:**
+- **Target Path:** tests/
+- **Destination:** quality.md
+- **Reason:** Tests folder contains test files and quality assurance
+- **Feature Type:** OWNER FEATURE
+- **NO ANALYSIS REQUIRED** - Route directly to quality.md (Dashboard → Backend → Tests)
 
 **WHAT YOU MUST DO:**
 1. ✅ Analyze ALL files under the target folder

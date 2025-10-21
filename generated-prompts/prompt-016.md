@@ -11,7 +11,14 @@
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\presets
 **FULL PATH:** C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\presets
 **ANALYSIS MODE:** PROJECT ANALYSIS
-**ROUTING MODE:** FLOW-AWARE (Dashboard → Backend → Presets)
+**ROUTING MODE:** OWNER FEATURE (Hardcoded)
+
+**HARDCODED ROUTING DECISION:**
+- **Target Path:** presets/
+- **Destination:** platform.md
+- **Reason:** Presets folder contains configuration presets and templates
+- **Feature Type:** OWNER FEATURE
+- **NO ANALYSIS REQUIRED** - Route directly to platform.md
 
 **WHAT YOU MUST DO:**
 1. ✅ Analyze ALL files under the target folder

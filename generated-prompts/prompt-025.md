@@ -11,7 +11,14 @@
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\vendor
 **FULL PATH:** C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\vendor
 **ANALYSIS MODE:** PROJECT ANALYSIS
-**ROUTING MODE:** FLOW-AWARE (Dashboard → Backend → Vendor)
+**ROUTING MODE:** OWNER FEATURE (Hardcoded)
+
+**HARDCODED ROUTING DECISION:**
+- **Target Path:** vendor/
+- **Destination:** platform.md
+- **Reason:** Vendor folder contains third-party vendor libraries
+- **Feature Type:** OWNER FEATURE
+- **NO ANALYSIS REQUIRED** - Route directly to platform.md (Dashboard → Backend → Vendor)
 
 **WHAT YOU MUST DO:**
 1. ✅ Analyze ALL files under the target folder

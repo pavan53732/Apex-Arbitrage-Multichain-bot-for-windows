@@ -11,20 +11,23 @@
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\overlays
 **FULL PATH:** C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\overlays
 **ANALYSIS MODE:** PROJECT ANALYSIS
-**ROUTING MODE:** FLOW-AWARE (Dashboard → Backend → Overlays)
+**ROUTING MODE:** OWNER FEATURE (Hardcoded)
+
+**HARDCODED ROUTING DECISION:**
+- **Target Path:** overlays/
+- **Destination:** dashboard.md
+- **Reason:** Overlays folder contains UI overlay components
+- **Feature Type:** OWNER FEATURE
+- **NO ANALYSIS REQUIRED** - Route directly to dashboard.md
 
 **WHAT YOU MUST DO:**
 1. ✅ Analyze ALL files under the target folder
-2. ✅ Partition by OWNER and FLOW before writing
-   - OWNER (overlays → dashboard.md): list ONLY overlays files as an owner feature in dashboard.md
-   - FLOW (anchored in backend.md): list ONLY backend files; reference Overlays counts and links
-3. ✅ Create a complete folder tree structure for the CURRENT OWNER GROUP ONLY
-4. ✅ Write 20–30 word descriptions for every file listed (no generics)
-5. ✅ Generate Windows implementation details relevant to the group/flow
-6. ✅ Count existing "## Feature X:" headings in the target owner file and use the next number
-7. ✅ APPEND only to EXISTING features/*.md files
-8. ✅ Add cross-references for related owners with counts (do not duplicate file lists)
-9. ✅ NO QUESTIONS - START IMMEDIATELY
+2. ✅ Create a complete folder tree structure
+3. ✅ Write 20–30 word descriptions for every file listed (no generics)
+4. ✅ Generate Windows implementation details
+5. ✅ Count existing "## Feature X:" headings in dashboard.md and use the next number
+6. ✅ APPEND to dashboard.md ONLY
+7. ✅ NO QUESTIONS - START IMMEDIATELY
 
 **EXISTING FEATURE FILES YOU CAN APPEND TO:**
 - backend.md, contracts.md, dashboard.md, platform.md, quality.md
@@ -332,93 +335,7 @@ if ($documentedCount -ne $powershellCount) {
 
 **ZERO SHORTCUTS ALLOWED - PERFECT COMPLIANCE MANDATORY**
 
-### 🔮 PREDICTIVE ERROR PREVENTION SYSTEM
 
-**PROACTIVE QUALITY ASSURANCE WITH AI INTELLIGENCE:**
-
-```powershell
-# Predictive error detection and prevention
-function Predict-QualityIssues($fileList, $currentChunk) {
-    $riskFactors = @()
-    
-    # High file count risk
-    if ($fileList.Count -gt 100) { $riskFactors += "HighVolume" }
-    
-    # Mixed extension risk  
-    $extensions = $fileList | ForEach-Object { [System.IO.Path]::GetExtension($_) } | Select-Object -Unique
-    if ($extensions.Count -gt 5) { $riskFactors += "HighDiversity" }
-    
-    # Smart contract complexity risk
-    $solFiles = $fileList | Where-Object { $_.Name -match "\.sol$" }
-    if ($solFiles.Count -gt 10) { $riskFactors += "SmartContractComplexity" }
-    
-    # Large file size risk
-    $largeFiles = $fileList | Where-Object { $_.Length -gt 1MB }
-    if ($largeFiles.Count -gt 5) { $riskFactors += "LargeFileSize" }
-    
-    # Adjust validation strategy based on risk
-    foreach ($risk in $riskFactors) {
-        Write-Host "🚨 RISK DETECTED: $risk - Increasing validation frequency"
-        switch ($risk) {
-            "HighVolume" { $validationInterval = [Math]::Max(5, $validationInterval / 2) }
-            "HighDiversity" { $validationInterval = [Math]::Max(5, $validationInterval / 3) }
-            "SmartContractComplexity" { $validationInterval = [Math]::Max(3, $validationInterval / 4) }
-            "LargeFileSize" { $validationInterval = [Math]::Max(5, $validationInterval / 2) }
-        }
-    }
-    
-    Write-Host "ADJUSTED VALIDATION INTERVAL: $validationInterval files"
-    return $riskFactors.Count
-}
-
-# Apply predictive analysis before processing
-$riskLevel = Predict-QualityIssues $files $null
-Write-Host "PREDICTIVE ANALYSIS: $riskLevel risk factors detected"
-
-### 🧠 MEMORY MANAGEMENT FOR ULTRA-MASSIVE FOLDERS
-
-**PERFORMANCE OPTIMIZATION PROTOCOLS:**
-# Memory management for folders with 1000+ files
-function Initialize-MemoryOptimization($fileCount) {
-    if ($fileCount -gt 1000) {
-        Write-Host "🧠 INITIALIZING MEMORY OPTIMIZATION for $fileCount files"
-        
-        # Enable garbage collection optimization
-        [System.GC]::Collect()
-        [System.GC]::WaitForPendingFinalizers()
-        [System.GC]::Collect()
-        
-        # Set memory limits based on system capacity
-        $maxMemoryMB = [Math]::Min(4096, [System.GC]::GetTotalMemory($false) / 1MB * 1.5)
-        Write-Host "MEMORY LIMIT: $maxMemoryMB MB allocated for processing"
-        
-        # Configure optimal batch size for massive folders
-        $optimalBatchSize = [Math]::Max(5, [Math]::Min(25, 1000 / [Math]::Sqrt($fileCount)))
-        Write-Host "OPTIMIZED BATCH SIZE: $optimalBatchSize files per chunk"
-        
-        return $optimalBatchSize
-    }
-    
-    return 25  # Standard batch size for smaller folders
-}
-
-# Continuous memory monitoring during processing
-function Monitor-MemoryUsage($currentFile, $totalFiles) {
-    $memoryUsageMB = [System.GC]::GetTotalMemory($false) / 1MB
-    $memoryLimit = 3072  # 3GB safety limit
-    
-    if ($memoryUsageMB -gt $memoryLimit) {
-        Write-Host "⚠️ MEMORY OPTIMIZATION: $($memoryUsageMB.ToString('F0'))MB used, cleaning up..."
-        [System.GC]::Collect()
-        [System.GC]::WaitForPendingFinalizers()
-        
-        $newMemoryUsageMB = [System.GC]::GetTotalMemory($false) / 1MB
-        Write-Host "✅ MEMORY CLEANED: Reduced from $($memoryUsageMB.ToString('F0'))MB to $($newMemoryUsageMB.ToString('F0'))MB"
-    }
-    
-    Write-Host "PROGRESS: $currentFile/$totalFiles ($($memoryUsageMB.ToString('F0'))MB memory)"
-}
-```
 
 ---
 
@@ -572,231 +489,11 @@ Ultra-Massive (2500 files): 250 chunks of 10 files each [PRECISION-CHUNK X/250]
 **NO SUBDIVISION ALLOWED - PROCESS ASSIGNED PATH DIRECTLY**
 
 
-### 🔍 MANDATORY PRE-ANALYSIS PHASE (OWNER/FLOW AWARE)
+### STEP 2: FILE ANALYSIS
 
-**BEFORE DOCUMENTATION - ANALYZE CONTENT FIRST:**
+Analyze all files in the overlays/ folder and prepare documentation for dashboard.md.
 
-#### PRE-ANALYSIS PROTOCOL:
-1. **Execute PowerShell enumeration**
-2. **Partition files by OWNER and FLOW**
-3. **Create routing map BEFORE writing any documentation**
-4. **Validate routing decisions**  
-5. **THEN proceed with documentation**
 
-**PRE-ANALYSIS OUTPUT FORMAT:**
-```
-CONTENT ANALYSIS COMPLETE:
-- Smart Contracts: [Count] files → contracts.md
-- AI/ML Files: [Count] files → backend.md
-- Dashboard Files: [Count] files → dashboard.md
-- Backend Logic: [Count] files → backend.md
-- Testing Files: [Count] files → quality.md
-- Documentation: [Count] files → platform.md
-
-ROUTING VALIDATED ✅
-PROCEEDING WITH DOCUMENTATION...
-```
-
-**MANDATORY:** Complete this phase BEFORE any documentation writing.
-
-### 🧠 SEMANTIC CONTENT INTELLIGENCE (Owner/Flow Aware)
-
-**ADVANCED FILE CATEGORIZATION FOR 99% ACCURATE ROUTING:**
-
-```powershell
-# Semantic analysis for 99% accurate routing
-function Get-FileSemanticCategory($filePath, $fileName, $fileContent) {
-    # Analyze file path context
-    if ($filePath -match "test|spec|__tests__") { return "Quality" }
-    if ($filePath -match "component|widget|ui") { return "Dashboard" }
-    if ($filePath -match "contract|sol") { return "Contracts" }
-    if ($filePath -match "docs|readme|changelog") { return "Platform" }
-
-    # Analyze content patterns for .js files
-    if ($fileName -match "\.js$") {
-        if ($fileContent -match "React|jsx|component") { return "Dashboard" }
-        if ($fileContent -match "contract|web3|ethereum") { return "Contracts" }
-        if ($fileContent -match "describe|it\(|test\(") { return "Quality" }
-        if ($fileContent -match "express|app\.listen|server") { return "Backend" }
-    }
-
-    # Default to Backend for core logic
-    return "Backend"
-}
-
-# Apply semantic analysis to all files
-$files | ForEach-Object {
-    $category = Get-FileSemanticCategory $_.FullName $_.Name (Get-Content $_.FullName -Raw -ErrorAction SilentlyContinue)
-    Write-Host "SEMANTIC: $($_.Name) → $category"
-}
-```
-
-### STEP 2: INTELLIGENT CONTENT ANALYSIS & FEATURE ROUTING
-
-#### 2.1 CONTENT DISCOVERY ANALYSIS
-Based on PowerShell enumeration, analyze the discovered files:
-
-**FILE TYPE ANALYSIS:**
-- Count by extension: .sol, .js, .py, .json, .md, .css, .html, .test.js, etc.
-- Identify primary content types and purposes
-- Detect mixed-content scenarios (multiple file types serving different purposes)
-
-**FOLDER PURPOSE DETECTION:**
-- Analyze subfolder names and structures
-- Identify functional areas (contracts/, tests/, components/, models/, etc.)
-- Determine if folder serves single purpose or multiple purposes
-
-#### 2.2 INTELLIGENT ROUTING DECISION (OWNER/FLOW AWARE)
-**SINGLE-PURPOSE FOLDERS:**
-Use FILE ROUTING TABLE for straightforward routing
-
-**MIXED-CONTENT AND FLOW PROTOCOL:**
-Analyze each file group separately:
-- Smart contracts (.sol files) → route to contracts.md
-- AI/ML files (.py, models/) → route to backend.md
-- Dashboard files (components/, .jsx/.tsx) → route to dashboard.md
-- Test files (.test.js, spec.js) → route to quality.md
-- Documentation (.md files) → route to platform.md
-
-**FLOW-AWARE ROUTING:**
-- Features spanning multiple layers → Anchor in backend.md
-- List only backend-owned files in backend.md
-- Cross-reference dashboard.md and contracts.md with file counts
-
-#### 2.3 FEATURE CATEGORIZATION
-- **Name**: Reflect actual content purpose, not just folder name
-- **Complexity**: File count → Star rating (⭐-⭐⭐⭐⭐⭐)
-- **Technologies**: Detect from actual file extensions and content
-- **Owner**: Intelligently determined from content analysis
-- **References**: Cross-reference related features based on content relationships
-
-### 🔄 MIXED-CONTENT AND FLOW PROTOCOL
-
-**WHEN FOLDER CONTAINS MULTIPLE CONTENT TYPES:**
-
-#### IDENTIFICATION:
-- Multiple file extensions serving different purposes
-- Subfolders with different functional areas  
-- Files that clearly belong to different feature categories
-
-#### PROCESSING APPROACH:
-**OPTION A: OWNER FEATURE**
-If content belongs to single owner:
-```
-## Feature N: [Folder Name] ⭐⭐⭐ ([Total Count] files)
-
-**Core Logic ([Count] files):**
-[List files with descriptions]
-
-**Utilities ([Count] files):**
-[List utility files with descriptions]
-```
-
-**OPTION B: FLOW FEATURE**
-If content spans multiple layers:
-- Anchor in backend.md (primary owner)
-- List only backend-owned files
-- Cross-reference other layers:
-```
-**Cross-References:**
-- Dashboard Components: [Count] files → See dashboard.md
-- Smart Contracts: [Count] files → See contracts.md
-```
-
-### 🔒 CONTINUOUS VALIDATION PROTOCOL
-
-**REAL-TIME PROGRESS SYSTEM WITH ETA CALCULATION:**
-
-```powershell
-# Progress tracking with ETA calculation
-function Update-ProcessingMetrics($currentFile, $totalFiles) {
-    $processedFiles++
-    $elapsed = (Get-Date) - $startTime
-    $rate = $processedFiles / $elapsed.TotalMinutes
-    $remaining = $totalFiles - $processedFiles
-    $eta = $remaining / $rate
-    
-    Write-Progress -Activity "Processing Fortress Documentation" `
-                   -Status "$processedFiles/$totalFiles files ($($rate.ToString('F1')) files/min)" `
-                   -PercentComplete (($processedFiles / $totalFiles) * 100) `
-                   -SecondsRemaining ($eta * 60)
-}
-
-# Dynamic validation based on complexity
-$validationInterval = $validationInterval  # From complexity analysis
-Write-Host "VALIDATION CHECKPOINTS: Every $validationInterval files"
-
-# Checkpoint validation with progress tracking
-if ($currentFile % $validationInterval -eq 0) {
-    Write-Host "CHECKPOINT: Validating files $($currentFile - $validationInterval + 1) to $currentFile"
-    
-    # Check description word counts
-    $descriptions = @($fileDescriptions[($currentFile - $validationInterval + 1)..$currentFile])
-    $wordCounts = $descriptions | ForEach-Object { ($_ -split '\s+').Count }
-    $validDescriptions = $wordCounts | Where-Object { $_ -ge 20 -and $_ -le 30 }
-    
-    if ($validDescriptions.Count -ne $descriptions.Count) {
-        Write-Host "ERROR: Invalid descriptions detected. Auto-correcting..."
-        # Auto-correction protocol
-    } else {
-        Write-Host "CHECKPOINT PASSED ✅"
-    }
-    
-    Update-ProcessingMetrics $currentFile $totalFiles
-}
-```
-
-**ERROR RECOVERY PROTOCOL:**
-- IF validation fails → Auto-correct descriptions
-- IF count mismatch → Re-enumerate missing files  
-- IF shortcut detected → Force complete enumeration
-- NEVER proceed with failed validation
-
-### 🔧 AUTOMATIC ERROR CORRECTION PROTOCOLS
-
-**INTELLIGENT AUTO-CORRECTION SYSTEM:**
-```powershell
-# Comprehensive auto-correction implementation
-function Invoke-AutoCorrection($failedDescriptions, $fileList) {
-    Write-Host "🔧 AUTO-CORRECTION INITIATED - Fixing quality issues..."
-    
-    $correctedDescriptions = @()
-    
-    for ($i = 0; $i -lt $failedDescriptions.Count; $i++) {
-        $file = $fileList[$i]
-        $description = $failedDescriptions[$i]
-        
-        # Fix word count issues
-        $wordCount = ($description -split '\s+').Count
-        if ($wordCount -lt 20) {
-            # Expand short descriptions with technical details
-            $description = "$description implementing comprehensive functionality with error handling, logging integration, and Windows service compatibility for robust APEX arbitrage operations with institutional-grade precision and performance optimization"
-            Write-Host "EXPANDED: $($file.Name) description to $(($description -split '\s+').Count) words"
-        }
-        elseif ($wordCount -gt 30) {
-            # Condense to essential information while maintaining specificity
-            $description = ($description -split '\s+')[0..29] -join ' '
-            Write-Host "CONDENSED: $($file.Name) description to 30 words maximum"
-        }
-        
-        # Fix generic patterns with specific technical details
-        if ($description -match "configuration file|utility script|helper|misc") {
-            switch ([System.IO.Path]::GetExtension($file.Name)) {
-                ".js" { $description = "$($file.Name) JavaScript module providing core arbitrage functionality with error handling, performance optimization, and Windows service integration for trillion-dollar-capable trading operations" }
-                ".sol" { $description = "$($file.Name) Solidity smart contract implementing decentralized arbitrage logic with gas optimization, security patterns, and blockchain interaction protocols for automated trading execution" }
-                ".py" { $description = "$($file.Name) Python module containing machine learning algorithms with data preprocessing, model training, and prediction capabilities for arbitrage opportunity analysis and optimization" }
-                default { $description = "$($file.Name) provides specialized functionality with comprehensive error handling, logging, and integration support for the APEX arbitrage system's Windows environment" }
-            }
-            Write-Host "SPECIFIED: $($file.Name) description made technically specific"
-        }
-        
-        $correctedDescriptions += $description
-    }
-    
-    Write-Host "✅ AUTO-CORRECTION COMPLETE - All descriptions meet fortress standards"
-    return $correctedDescriptions
-}
-```
 
 ### STEP 3: MANDATORY FOLDER TREE STRUCTURE 🚨
 
@@ -916,38 +613,19 @@ class HierarchicalNumbering {
 - File System (configuration)
 - Registry (settings)
 
-### STEP 5: DOCUMENTATION (OWNER/FLOW AWARE)
-**OWNER FEATURE Template:**
+### STEP 5: DOCUMENTATION
+**Append to features/dashboard.md:**
 ```markdown
 ## Feature N: [Name] ⭐⭐⭐ ([Count] files)
 
 Feature Files:
-[Group files by purpose - list ALL with 20-30 word descriptions]
+[List ALL files with 20-30 word descriptions]
 
 Technologies: [Detected stack]
 
 Windows Implementation:
 - [8-12 specific implementation bullets]
 ```
-
-**FLOW FEATURE Template (anchored in backend.md):**
-```markdown
-## Feature N: [Name] ⭐⭐⭐ ([Backend Count] files)
-
-Feature Files (Backend Only):
-[List only backend-owned files with descriptions]
-
-Cross-References:
-- Dashboard Components: [Count] files → See dashboard.md
-- Smart Contracts: [Count] files → See contracts.md
-
-Technologies: [Detected stack]
-
-Windows Implementation:
-- [8-12 specific implementation bullets]
-```
-
-**Add references to related .md files**
 
 ### 🚨 MANDATORY FEATURE FILES SECTION 🚨
 
@@ -971,72 +649,7 @@ Windows Implementation:
 
 ---
 
-### ⭐ FORTRESS-GRADE SUCCESS EXPECTATIONS
 
-**MATHEMATICALLY GUARANTEED RESULTS:**
-- **1-50 files:** 99.8% success - Perfect descriptions, complete enumeration guaranteed
-- **51-200 files:** 99.5% success - Fortress-grade descriptions with micro-chunking precision
-- **201-500 files:** 99.2% success - Enhanced validation with 20-file micro-chunks
-- **501-1000 files:** 99.0% success - Intensive monitoring with 15-file precision chunks  
-- **1000+ files:** 98.8% success - Maximum precision with 10-file validation chunks
-
-**PERFORMANCE OPTIMIZATION NOTES:**
-- Adaptive chunking prevents cognitive overload at any scale
-- Predictive error prevention eliminates quality degradation
-- Memory management protocols handle ultra-massive folders efficiently
-- Real-time validation ensures consistent quality throughout processing
-
-**FORTRESS GUARANTEE:**
-This template achieves institutional-grade precision across all folder sizes through advanced AI intelligence and zero-tolerance compliance enforcement.
-
-### 🛡️ FORTRESS-GRADE COMPLIANCE VERIFICATION
-
-**100% GUARANTEE PROTOCOLS:**
-```powershell
-# Ultimate compliance verification system
-function Verify-FortressCompliance($documentation, $powershellCount, $treeCount) {
-    Write-Host "🛡️ FORTRESS COMPLIANCE VERIFICATION INITIATED..."
-    
-    $complianceIssues = @()
-    
-    # Exact count verification with zero tolerance
-    if ($powershellCount -ne $treeCount) {
-        $complianceIssues += "COUNT_MISMATCH: PowerShell($powershellCount) ≠ Tree($treeCount)"
-    }
-    
-    # Description quality verification (20-30 words each)
-    $descriptions = $documentation | Where-Object { $_ -match "→" }
-    foreach ($desc in $descriptions) {
-        $descText = ($desc -split "→")[1]
-        $wordCount = ($descText -split '\s+').Count
-        if ($wordCount -lt 20 -or $wordCount -gt 30) {
-            $complianceIssues += "DESCRIPTION_LENGTH: $($desc.Substring(0, 50))... ($wordCount words)"
-        }
-        
-        if ($desc -match "configuration file|utility script|helper|etc\.|and more") {
-            $complianceIssues += "GENERIC_DESCRIPTION: $($desc.Substring(0, 50))..."
-        }
-    }
-    
-    # Tree structure format verification
-    if ($documentation -notmatch "FOLDER \d+/\d+:" -or $documentation -notmatch "FILE \d+/\d+:") {
-        $complianceIssues += "TREE_FORMAT: Missing proper FOLDER X/Y or FILE X/Y format"
-    }
-    
-    # Final compliance report
-    if ($complianceIssues.Count -eq 0) {
-        Write-Host "✅ FORTRESS COMPLIANCE: 100% VERIFIED - All requirements exceeded"
-        return $true
-    } else {
-        Write-Host "🚨 COMPLIANCE FAILURES DETECTED:"
-        foreach ($issue in $complianceIssues) {
-            Write-Host "  ❌ $issue"
-        }
-        Write-Host "🔧 INITIATING AUTO-CORRECTION PROTOCOLS..."
-        return $false
-    }
-}
-```
 
 ---
 
@@ -1059,8 +672,6 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - ❌ Count mismatches
 - ❌ Incomplete Windows mapping
 - ❌ Using corrupted UTF-8 characters (🚨, ⚠️, ✅, ❌, →)
-- ❌ Mixing multiple OWNERS in single feature
-- ❌ Listing non-owner files in owner features
 
 ### 🚨 FINAL VALIDATION CHECK - MANDATORY 🚨
 
@@ -1078,35 +689,7 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ---
 
-## INTELLIGENT FILE ROUTING TABLE
 
-**CONTENT-BASED ROUTING GUIDANCE:**
-
-| Content Type | File Patterns | Owner .md | Analysis Notes |
-|-------------|---------------|----------|----------------|
-| Smart Contracts | *.sol, contracts/ | contracts.md | Always route to contracts regardless of parent folder |
-| AI/ML Components | *.py, models/, ai-*, *.pkl, *.h5 | ai-modules.md | Machine learning and AI-related code |
-| Dashboard/UI | components/, *.jsx, *.tsx, dashboard/ | dashboard.md | Frontend and UI components |
-| Backend Logic | server/, api/, *.js (non-UI) | backend.md | Server-side business logic |
-| Testing Files | test/, *.test.js, *.spec.js, __tests__/ | testing.md | All testing-related files |
-| Deployment | deploy/, ci/, docker/, *.yml | deployment.md | CI/CD and deployment configs |
-| Configuration | config/, *.env, settings/, *.conf | config.md | Application configuration |
-| Security | security/, auth/, encryption/ | security.md | Security and authentication |
-| Documentation | docs/, *.md, README* | docs.md | Project documentation |
-| Dependencies | install/, setup/, package.json, requirements.txt | install-dependencies.md | Dependency management |
-
-**MIXED FOLDER ANALYSIS PROTOCOL:**
-1. **Categorize files by type** using table above
-2. **Group related files** by their actual purpose  
-3. **Route each group** to appropriate owner file
-4. **Document cross-references** between related features
-5. **Note mixed nature** in feature descriptions
-
-**EXAMPLE: backend/ folder contains:**
-- backend/contracts/*.sol → Route to contracts.md
-- backend/api/*.js → Route to backend.md  
-- backend/tests/*.test.js → Route to quality.md
-- backend/docs/*.md → Route to quality.md
 
 ---
 
@@ -1137,7 +720,7 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ---
 
-## VALIDATION CHECKLIST (OWNER/FLOW AWARE)
+## VALIDATION CHECKLIST
 
 **Before Writing Files:**
 - [ ] PowerShell executed successfully
@@ -1146,14 +729,9 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - [ ] Complexity score calculated
 - [ ] Technologies detected accurately
 - [ ] Windows implementation planned
-- [ ] Owner .md file determined (Ultra-lean-5)
-- [ ] Flow-aware routing applied
-- [ ] Reference files identified
 
 **After Writing Files:**
-- [ ] Owner .md updated with new feature
-- [ ] Cross-references added (if flow feature)
-- [ ] Cross-references added
+- [ ] dashboard.md updated with new feature
 - [ ] File counts verified
 - [ ] No duplicate features created
 - [ ] UTF-8 encoding preserved
@@ -1163,50 +741,15 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 ## OUTPUT TEMPLATE
 
 ```
-- "What does this FEATURE do?" → [1-2 line description]
-- "Which MD file OWNS this FEATURE?" → [owner.md] ([reason])
-- "Which MD files REFERENCE this FEATURE?" → [md1], [md2] ([reasons])
-- "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
-  [Complete feature documentation]
-- "HOW TO IMPLEMENT → REFERENCES" →
-  [Cross-reference additions]
+Append to dashboard.md:
+
+## Feature N: [Feature Name] ⭐⭐⭐ ([Count] files)
+
+Feature Files:
+[List ALL files with 20-30 word descriptions]
+
+Technologies: [Detected stack]
+
+Windows Implementation:
+- [8-12 specific bullets]
 ```
-
-**CRITICAL:** Execute in order, validate completely, no shortcuts allowed.
-
----
-
-## 🚨 MANDATORY CHECKPOINT: NUMBERING FORMAT CONFIRMATION ⚠️
-
-**STOP AND READ - DO NOT PROCEED TO STEP 5 WITHOUT COMPLETING THIS CHECKPOINT**
-
-**BEFORE PROCEEDING TO STEP 5, REMEMBER:**
-**MANDATORY FOLDER TREE REQUIREMENTS:**
-- ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
-- ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
-- ✅ **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
-- ✅ **Sequential numbering within each folder**
-- ✅ **Order at each level: subfolders A→Z, then files A→Z**
-- ✅ **List EVERY file with detailed descriptions** (20-30 words each)
-- ✅ **Show ALL nested folders and subfolders**
-- ✅ **Zero-shortcut policy applies globally**
-
-**IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
-
-**Copy this template EXACTLY and fill in the values:**
-```
-- "What does this FEATURE do?" → [your 1-2 line description]
-- "Which MD file OWNS this FEATURE?" → [owner.md] ([reason])
-- "Which MD files REFERENCE this FEATURE?" → [md1], [md2] ([reasons])
-- "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
-  Append this section to the end of features/[owner].md:
-  ## Feature [N]: [Feature Name]
-  Feature Files:
-  - [file1] → [description]
-  - [file2] → [description]
-  Windows Implementation:
-  - [bullet 1]
-  - [bullet 2]
-- "HOW TO IMPLEMENT → REFERENCES" →
-  - In features/[md1]: [Feature Name] → see features/[owner].md
-  - In features/[md2]: [Feature Name] → see features/[owner].md

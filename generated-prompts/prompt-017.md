@@ -11,7 +11,14 @@
 **TARGET FOLDER:** Apex Arbitrage Multichain bot\public
 **FULL PATH:** C:\Users\Pavan pc\Desktop\Apex Arbitrage Multichain bot for windows\Apex-Arbitrage-Multichain-bot-for-windows\Apex Arbitrage Multichain bot\public
 **ANALYSIS MODE:** PROJECT ANALYSIS
-**ROUTING MODE:** FLOW-AWARE (Dashboard → Backend → Public)
+**ROUTING MODE:** OWNER FEATURE (Hardcoded)
+
+**HARDCODED ROUTING DECISION:**
+- **Target Path:** public/
+- **Destination:** dashboard.md
+- **Reason:** Public folder contains static assets and frontend resources
+- **Feature Type:** OWNER FEATURE
+- **NO ANALYSIS REQUIRED** - Route directly to dashboard.md (Dashboard → Backend → Public)
 
 **WHAT YOU MUST DO:**
 1. ✅ Analyze ALL files under the target folder

@@ -1018,51 +1018,15 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 ## OUTPUT TEMPLATE
 
 ```
-- "What does this FEATURE do?" → [1-2 line description]
-- "Which MD file OWNS this FEATURE?" → platform.md (Archive/Historical files)
-- "HOW TO IMPLEMENT" →
-  Append this section to the end of features/platform.md:
-  ## Feature [N]: [Feature Name]
-  Feature Files:
-  - [file1] → [description]
-  - [file2] → [description]
-  Windows Implementation:
-  - [bullet 1]
-  - [bullet 2]
-```
+Append to platform.md:
 
-**CRITICAL:** Execute in order, validate completely, no shortcuts allowed.
+## Feature N: [Feature Name] ⭐⭐⭐ ([Count] files)
 
----
+Feature Files:
+[List ALL files with 20-30 word descriptions]
 
-## 🚨 MANDATORY CHECKPOINT: NUMBERING FORMAT CONFIRMATION ⚠️
+Technologies: [Detected stack]
 
-**STOP AND READ - DO NOT PROCEED TO STEP 5 WITHOUT COMPLETING THIS CHECKPOINT**
-
-**BEFORE PROCEEDING TO STEP 5, REMEMBER:**
-**MANDATORY FOLDER TREE REQUIREMENTS:**
-- ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
-- ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
-- ✅ **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
-- ✅ **Sequential numbering within each folder**
-- ✅ **Order at each level: subfolders A→Z, then files A→Z**
-- ✅ **List EVERY file with detailed descriptions** (20-30 words each)
-- ✅ **Show ALL nested folders and subfolders**
-- ✅ **Zero-shortcut policy applies globally**
-
-**IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
-
-**Copy this template EXACTLY and fill in the values:**
-```
-- "What does this FEATURE do?" → [your 1-2 line description]
-- "Which MD file OWNS this FEATURE?" → platform.md (Archive/Historical files)
-- "HOW TO IMPLEMENT" →
-  Append this section to the end of features/platform.md:
-  ## Feature [N]: [Feature Name]
-  Feature Files:
-  - [file1] → [description]
-  - [file2] → [description]
-  Windows Implementation:
-  - [bullet 1]
-  - [bullet 2]
+Windows Implementation:
+- [8-12 specific bullets]
 ```
