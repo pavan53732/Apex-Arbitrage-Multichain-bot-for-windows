@@ -94,21 +94,15 @@
 ## TECHNOLOGIES DETECTED
 - [List all detected technologies]
 
-## CROSS-REFERENCES
-- Related to: [other-feature].md (if applicable)
-```
-
 **IMPORTANT:**
 1. Read ONLY the feature headings in the target file (e.g., "## Feature 1:", "## Feature 2:")
 2. Count how many "Feature X:" headings already exist
 3. Use the next number (if Feature 1 and Feature 2 exist, use "Feature 3")
 4. If no features exist, use "Feature 1"
-5. APPEND this complete documentation to the appropriate EXISTING features/*.md file
-6. Do NOT create new .md files - only append to existing ones
+5. APPEND this complete documentation to platform.md
 
 **EFFICIENT FEATURE COUNTING:**
-- Use: `grep -c "## Feature" features/target-file.md` to count existing features
-- Or: `Select-String -Pattern "## Feature" -Path "features/target-file.md" | Measure-Object | Select-Object -ExpandProperty Count`
+- Use: `Select-String -Pattern "## Feature" -Path "features/platform.md" | Measure-Object | Select-Object -ExpandProperty Count`
 - This gives you the exact count without reading entire file content
 
 ## 🚨 MANDATORY COMPLETE ENUMERATION RULES 🚨
@@ -1035,7 +1029,6 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - ✅ Complete folder tree with FOLDER X/Y and FILE X/Y numbering
 - ✅ Technologies section present
 - ✅ 8-12 Windows implementation bullets
-- ✅ Cross-references added
 - ✅ UTF-8 encoding preserved (🚨 ⚠️ ✅ ❌)
 
 ### FORBIDDEN SHORTCUTS
@@ -1134,9 +1127,7 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - [ ] Reference files identified
 
 **After Writing Files:**
-- [ ] Owner .md updated with new feature
-- [ ] Reference .md files updated
-- [ ] Cross-references added
+- [x] Target file: platform.md (hardcoded) updated with new feature
 - [ ] File counts verified
 - [ ] No duplicate features created
 
@@ -1144,25 +1135,6 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ## OUTPUT TEMPLATE
 
-```
-- "What does this FEATURE do?" → [1-2 line description]
-- "Which MD file OWNS this FEATURE?" → [owner.md] ([reason])
-- "Which MD files REFERENCE this FEATURE?" → [md1], [md2] ([reasons])
-- "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
-  [Complete feature documentation]
-- "HOW TO IMPLEMENT → REFERENCES" →
-  [Cross-reference additions]
-```
-
-**CRITICAL:** Execute in order, validate completely, no shortcuts allowed.
-
----
-
-## 🚨 MANDATORY CHECKPOINT: NUMBERING FORMAT CONFIRMATION ⚠️
-
-**STOP AND READ - DO NOT PROCEED TO STEP 5 WITHOUT COMPLETING THIS CHECKPOINT**
-
-**BEFORE PROCEEDING TO STEP 5, REMEMBER:**
 **MANDATORY FOLDER TREE REQUIREMENTS:**
 - ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
 - ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
@@ -1175,20 +1147,14 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 **IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
 
-**Copy this template EXACTLY and fill in the values:**
-```
-- "What does this FEATURE do?" → [your 1-2 line description]
-- "Which MD file OWNS this FEATURE?" → [owner.md] ([reason])
-- "Which MD files REFERENCE this FEATURE?" → [md1], [md2] ([reasons])
-- "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
-  Append this section to the end of features/[owner].md:
-  ## Feature [N]: [Feature Name]
-  Feature Files:
-  - [file1] → [description]
-  - [file2] → [description]
-  Windows Implementation:
-  - [bullet 1]
-  - [bullet 2]
-- "HOW TO IMPLEMENT → REFERENCES" →
-  - In features/[md1]: [Feature Name] → see features/[owner].md
-  - In features/[md2]: [Feature Name] → see features/[owner].md
+Append to platform.md:
+
+## Feature N: [Feature Name] ⭐⭐⭐ ([Count] files)
+
+Feature Files:
+[List ALL files with 20-30 word descriptions]
+
+Technologies: [Detected stack]
+
+Windows Implementation:
+- [8-12 specific bullets]

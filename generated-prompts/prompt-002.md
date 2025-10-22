@@ -84,8 +84,6 @@
 ## TECHNOLOGIES DETECTED
 - [List all detected technologies]
 
-## CROSS-REFERENCES
-- Related to: [other-feature].md (if applicable)
 ```
 
 **IMPORTANT:**
@@ -93,12 +91,11 @@
 2. Count how many "Feature X:" headings already exist
 3. Use the next number (if Feature 1 and Feature 2 exist, use "Feature 3")
 4. If no features exist, use "Feature 1"
-5. APPEND this complete documentation to the appropriate EXISTING features/*.md file
+5. APPEND this complete documentation to platform.md
 6. Do NOT create new .md files - only append to existing ones
 
 **EFFICIENT FEATURE COUNTING:**
-- Use: `grep -c "## Feature" features/target-file.md` to count existing features
-- Or: `Select-String -Pattern "## Feature" -Path "features/target-file.md" | Measure-Object | Select-Object -ExpandProperty Count`
+- Use: `Select-String -Pattern "## Feature" -Path "features/platform.md" | Measure-Object | Select-Object -ExpandProperty Count`
 - This gives you the exact count without reading entire file content
 
 ## 🚨 MANDATORY COMPLETE ENUMERATION RULES 🚨
@@ -612,7 +609,6 @@ Based on PowerShell enumeration, analyze the discovered files:
 - **Name**: Reflect actual content purpose, not just folder name
 - **Complexity**: File count → Star rating (⭐-⭐⭐⭐⭐⭐)
 - **Technologies**: Detect from actual file extensions and content
-- **Owner**: platform.md (hardcoded)
 
 ### 🔒 CONTINUOUS VALIDATION PROTOCOL
 
@@ -941,7 +937,6 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - ✅ Complete folder tree with FOLDER X/Y and FILE X/Y numbering
 - ✅ Technologies section present
 - ✅ 8-12 Windows implementation bullets
-- ✅ Cross-references added
 - ✅ UTF-8 encoding preserved (🚨 ⚠️ ✅ ❌)
 
 ### FORBIDDEN SHORTCUTS
@@ -1005,7 +1000,7 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - [ ] Complexity score calculated
 - [ ] Technologies detected accurately
 - [ ] Windows implementation planned
-- [ ] Target file: platform.md
+- [x] Target file: platform.md (hardcoded)
 
 **After Writing Files:**
 - [ ] platform.md updated with new feature
@@ -1017,7 +1012,18 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ## OUTPUT TEMPLATE
 
-```
+**MANDATORY FOLDER TREE REQUIREMENTS:**
+- ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
+- ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
+- ✅ **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
+- ✅ **Sequential numbering within each folder**
+- ✅ **Order at each level: subfolders A→Z, then files A→Z**
+- ✅ **List EVERY file with detailed descriptions** (20-30 words each)
+- ✅ **Show ALL nested folders and subfolders**
+- ✅ **Zero-shortcut policy applies globally**
+
+**IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
+
 Append to platform.md:
 
 ## Feature N: [Feature Name] ⭐⭐⭐ ([Count] files)
@@ -1029,4 +1035,3 @@ Technologies: [Detected stack]
 
 Windows Implementation:
 - [8-12 specific bullets]
-```
