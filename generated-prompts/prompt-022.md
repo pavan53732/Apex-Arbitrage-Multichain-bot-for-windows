@@ -1219,4 +1219,3 @@ Technologies: [Detected stack]
 
 Windows Implementation:
 - [8-12 specific bullets]
-```

@@ -911,23 +911,3 @@ Technologies: [Detected stack]
 
 Windows Implementation:
 - [8-12 specific bullets]
-
-**CRITICAL:** Execute in order, validate completely, no shortcuts allowed.
-
----
-
-## OUTPUT TEMPLATE
-
-```
-Append to quality.md:
-
-## Feature N: [Feature Name] ⭐⭐⭐ ([Count] files)
-
-Feature Files:
-[List ALL files with 20-30 word descriptions]
-
-Technologies: [Detected stack]
-
-Windows Implementation:
-- [8-12 specific bullets]
-```

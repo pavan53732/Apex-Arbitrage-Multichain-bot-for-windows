@@ -1030,7 +1030,6 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 **IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
 
-```
 Append to platform.md:
 
 ## Feature N: [Feature Name] ⭐⭐⭐ ([Count] files)
@@ -1042,6 +1041,3 @@ Technologies: [Detected stack]
 
 Windows Implementation:
 - [8-12 specific bullets]
-```
-
-**CRITICAL:** Execute in order, validate completely, no shortcuts allowed.
