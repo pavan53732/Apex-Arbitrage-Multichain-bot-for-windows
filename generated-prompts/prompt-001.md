@@ -1010,3 +1010,29 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - [ ] UTF-8 encoding preserved
 
 ---
+
+## OUTPUT TEMPLATE
+
+**MANDATORY FOLDER TREE REQUIREMENTS:**
+- ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
+- ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
+- ✅ **Sequential numbering across all levels** (1/54, 2/54, 3/54, NOT 1/3, 4/5)
+- ✅ **Sequential numbering within each folder**
+- ✅ **Order at each level: subfolders A→Z, then files A→Z**
+- ✅ **List EVERY file with detailed descriptions** (20-30 words each)
+- ✅ **Show ALL nested folders and subfolders**
+- ✅ **Zero-shortcut policy applies globally**
+
+## Feature N: [Feature Name] ⭐⭐⭐ ([Count] files)
+
+Feature Files:
+[List ALL files with 20-30 word descriptions]
+
+Technologies: [Detected stack]
+
+Windows Implementation:
+- [8-12 specific bullets]
+
+**IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
+
+Append to backend.md
