@@ -1098,38 +1098,6 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ---
 
-## INTELLIGENT FILE ROUTING TABLE
-
-**CONTENT-BASED ROUTING GUIDANCE (ULTRA-LEAN-5 OWNERS):**
-
-| Content Type | File Patterns | Owner .md | Analysis Notes |
-|-------------|---------------|----------|----------------|
-| Smart Contracts | *.sol, contracts/ | contracts.md | Always route to contracts regardless of parent folder |
-| AI/ML Components | *.py, models/, ai-*, *.pkl, *.h5 | backend.md | Routed to backend due to flow-aware architecture. Cross-reference relevant sections. |
-| Dashboard/UI | components/, *.jsx, *.tsx, dashboard/, overlays/, public/ | dashboard.md | Frontend and UI components |
-| Backend Logic | server/, api/, *.js (non-UI), core/, engine/, plugins/, utils/, storage/, third-party/, watchdog/, migrations/, data/, logs/, manifest/, presets/, scripts/, vendor/ | backend.md | Server-side business logic and supporting infrastructure. This is the anchor for flow features. |
-| Quality Assurance | test/, *.test.js, *.spec.js, __tests__/, ci/, benchmarks/ | quality.md | All testing, CI, and performance benchmark related files |
-| Platform Documentation & Config | docs/, *.md, README*, config/, deploy/, examples/, types/, build/, root-level docs | platform.md | Project documentation, configuration, deployment scripts, examples, and type definitions |
-
-**MIXED FOLDER ANALYSIS PROTOCOL (OWNER/FLOW AWARE):**
-1. **Categorize files by type and architectural layer** using table above
-2. **Group related files** by their actual purpose AND designated owner (from Ultra-lean-5)
-3. **Route each group** to appropriate owner file, prioritizing flow-aware anchoring in `backend.md`
-4. **Document cross-references** between related features and layers with file counts
-5. **Note mixed nature** in feature descriptions, explicitly stating the flow
-
-**EXAMPLE: `backend/` folder contains (FLOW-AWARE ROUTING):**
-- `backend/contracts/*.sol` → Route to `contracts.md` (Owner-only)
-- `backend/api/*.js` → Route to `backend.md` (Backend Logic)
-- `backend/tests/*.test.js` → Route to `quality.md` (Testing)
-- `backend/docs/*.md` → Route to `platform.md` (Documentation)
-
-**EXAMPLE: `dashboard/` folder contains:**
-- `dashboard/components/*.jsx` → Route to `dashboard.md` (UI Components)
-- `dashboard/utils/*.js` (generic utils) → Route to `backend.md` (if used by backend directly) or `dashboard.md` (if purely UI helper)
-
----
-
 ## WINDOWS TECH STACK
 
 **Backend Services:**
@@ -1178,44 +1146,4 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ---
 
-## OUTPUT TEMPLATE
-
-```
-- "What does this FEATURE do?" → [1-2 line description]
-- "Which MD file OWNS this FEATURE?" → [owner.md] ([reason])
-- "Which MD files REFERENCE this FEATURE?" → [md1], [md2] ([reasons])
-- "HOW TO IMPLEMENT → OWNER FILE ([owner].md)" →
-  [Complete feature documentation based on template for OWNER or FLOW feature]
-- "HOW TO IMPLEMENT → REFERENCES" →
-  [Cross-reference additions as per protocol]
-```
-
-**CRITICAL:** Execute in order, validate completely, no shortcuts allowed.
-
 ---
-
-## OUTPUT TEMPLATE
-
-**MANDATORY FOLDER TREE REQUIREMENTS:**
-- ✅ **FOLDER X/Y: foldername/** format (X = current position, Y = total at that level)
-- ✅ **FILE X/Y: filename.ext** format (X = current position, Y = total in that folder)
-- ✅ **Each level resets numbering** (1/3, 1/2, NOT 1/3, 4/5)
-- ✅ **Sequential numbering within each folder**
-- ✅ **Order at each level: subfolders A→Z, then files A→Z**
-- ✅ **List EVERY file with detailed descriptions** (20-30 words each)
-- ✅ **Show ALL nested folders and subfolders**
-- ✅ **Zero-shortcut policy applies globally**
-
-**IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
-
-Append to platform.md:
-
-## Feature N: [Feature Name] ⭐⭐⭐ ([Count] files)
-
-Feature Files:
-[List ALL files with 20-30 word descriptions]
-
-Technologies: [Detected stack]
-
-Windows Implementation:
-- [8-12 specific bullets]
