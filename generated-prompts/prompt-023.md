@@ -1096,38 +1096,6 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ---
 
-## INTELLIGENT FILE ROUTING TABLE
-
-**CONTENT-BASED ROUTING GUIDANCE (ULTRA-LEAN-5 OWNERS):**
-
-| Content Type | File Patterns | Owner .md | Analysis Notes |
-|-------------|---------------|----------|----------------|
-| Smart Contracts | *.sol, contracts/ | contracts.md | Always route to contracts regardless of parent folder |
-| AI/ML Components | *.py, models/, ai-*, *.pkl, *.h5 | backend.md | Routed to backend due to flow-aware architecture. Cross-reference relevant sections. |
-| Dashboard/UI | components/, *.jsx, *.tsx, dashboard/, overlays/, public/ | dashboard.md | Frontend and UI components |
-| Backend Logic | server/, api/, *.js (non-UI), core/, engine/, plugins/, utils/, storage/, third-party/, watchdog/, migrations/, data/, logs/, manifest/, presets/, scripts/, vendor/ | backend.md | Server-side business logic and supporting infrastructure. This is the anchor for flow features. |
-| Quality Assurance | test/, *.test.js, *.spec.js, __tests__/, ci/, benchmarks/ | quality.md | All testing, CI, and performance benchmark related files |
-| Platform Documentation & Config | docs/, *.md, README*, config/, deploy/, examples/, types/, build/, root-level docs | platform.md | Project documentation, configuration, deployment scripts, examples, and type definitions |
-
-**MIXED FOLDER ANALYSIS PROTOCOL (OWNER/FLOW AWARE):**
-1. **Categorize files by type and architectural layer** using table above
-2. **Group related files** by their actual purpose AND designated owner (from Ultra-lean-5)
-3. **Route each group** to appropriate owner file, prioritizing flow-aware anchoring in `backend.md`
-4. **Document cross-references** between related features and layers with file counts
-5. **Note mixed nature** in feature descriptions, explicitly stating the flow
-
-**EXAMPLE: `backend/` folder contains (FLOW-AWARE ROUTING):**
-- `backend/contracts/*.sol` → Route to `contracts.md` (Owner-only)
-- `backend/api/*.js` → Route to `backend.md` (Backend Logic)
-- `backend/tests/*.test.js` → Route to `quality.md` (Testing)
-- `backend/docs/*.md` → Route to `platform.md` (Documentation)
-
-**EXAMPLE: `dashboard/` folder contains:**
-- `dashboard/components/*.jsx` → Route to `dashboard.md` (UI Components)
-- `dashboard/utils/*.js` (generic utils) → Route to `backend.md` (if used by backend directly) or `dashboard.md` (if purely UI helper)
-
----
-
 ## WINDOWS TECH STACK
 
 **Backend Services:**

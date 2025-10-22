@@ -1086,36 +1086,6 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 
 ---
 
-## INTELLIGENT FILE ROUTING TABLE
-
-**CONTENT-BASED ROUTING GUIDANCE:**
-
-| Content Type | File Patterns | Owner .md | Analysis Notes |
-|-------------|---------------|----------|----------------|
-| Smart Contracts | *.sol, contracts/ | contracts.md | Always route to contracts regardless of parent folder |
-| AI/ML Components | *.py, models/, ai-*, *.pkl, *.h5 | backend.md | Machine learning and AI-related code |
-| Dashboard/UI | components/, *.jsx, *.tsx, dashboard/ | dashboard.md | Frontend and UI components |
-| Backend Logic | core/, engine/, plugins/, utils/, storage/ | backend.md | Server-side business logic |
-| Testing Files | test/, *.test.js, *.spec.js, __tests__/ | quality.md | All testing-related files |
-| Platform Services | docs/, *.md, README*, deployment/ | platform.md | Platform and documentation |
-| Quality Assurance | quality/, metrics/, validation/ | quality.md | Quality assurance and validation |
-| Cross-Layer Features | Multiple file types spanning layers | backend.md | Anchor in backend.md, cross-reference others |
-
-**MIXED FOLDER ANALYSIS PROTOCOL:**
-1. **Categorize files by type** using table above
-2. **Group related files** by their actual purpose  
-3. **Route each group** to appropriate owner file
-4. **Document cross-references** between related features
-5. **Note mixed nature** in feature descriptions
-
-**EXAMPLE: backend/ folder contains:**
-- backend/contracts/*.sol → Route to contracts.md
-- backend/core/*.js → Route to backend.md  
-- backend/tests/*.test.js → Route to quality.md
-- backend/docs/*.md → Route to platform.md
-
----
-
 ## WINDOWS TECH STACK
 
 **Backend Services:**
