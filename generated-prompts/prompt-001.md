@@ -1004,12 +1004,15 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - [x] Target file: backend.md (hardcoded)
 
 **After Writing Files:**
-- [ ] backend.md updated with new feature
-- [ ] File counts verified
+- [x] Target file: backend.md (hardcoded) updated with new feature
+- [ ] File counts and Folder Counts and Nest Folder Counts verified
+- [ ] MANDATORY FOLDER TREE REQUIREMENTS
 - [ ] No duplicate features created
 - [ ] UTF-8 encoding preserved
 
 ---
+
+Append to backend.md
 
 ## OUTPUT TEMPLATE
 
@@ -1034,5 +1037,3 @@ Windows Implementation:
 - [8-12 specific bullets]
 
 **IF YOU FORGET THESE REQUIREMENTS, YOUR OUTPUT WILL BE REJECTED!**
-
-Append to backend.md
