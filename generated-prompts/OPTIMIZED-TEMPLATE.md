@@ -536,7 +536,7 @@ FOLDER 1/3: foldername/
 - Registry (settings)
 
 ### STEP 5: DOCUMENTATION
-**Append to features/[owner].md:**
+**Append to features/[owner].md:** (After validation completion)
 ```markdown
 ## Feature N: [Name] ⭐⭐⭐ ([Count] files)
 
@@ -750,11 +750,13 @@ function Verify-FortressCompliance($documentation, $powershellCount, $treeCount)
 - [ ] Reference files identified
 
 **After Writing Files:**
-- [ ] Owner .md updated with new feature
+- [x] Target file: features/[owner].md updated with new feature
+- [ ] File counts and Folder Counts and Nest Folder Counts verified
+- [ ] MANDATORY FOLDER TREE REQUIREMENTS
 - [ ] Reference .md files updated
 - [ ] Cross-references added
-- [ ] File counts verified
 - [ ] No duplicate features created
+- [ ] UTF-8 encoding preserved
 
 ---
 
