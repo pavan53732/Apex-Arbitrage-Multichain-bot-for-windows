@@ -137,4 +137,66 @@ Each chain should provide:
 - Oracle Registry
 - Bridge Registry (if cross-chain functionality is implemented)
 
-<!-- APPEND PARTS 4-6 BELOW THIS LINE -->
+### 9. Supported Profit Strategies
+The architecture is intended to support multiple independent strategy modules, such as:
+- Cross-DEX Arbitrage
+- Triangular Arbitrage
+- Flash Loan Arbitrage
+- Stablecoin Arbitrage
+- Multi-Hop Routing
+- Liquidity Imbalance Detection
+- Oracle Divergence Monitoring
+- Cross-Chain Arbitrage (when bridge support is implemented)
+- Statistical Arbitrage (future)
+- Market-Making (future)
+- Yield Optimization (future)
+
+Each strategy should implement a common interface so it can be enabled or disabled without affecting the rest of the system.
+
+### 10. User Profit Flow
+```
+Market Scanner
+  ↓ Collect Market Data
+  ↓ Normalize Data
+  ↓ AI Opportunity Analysis
+  ↓ Risk Evaluation
+  ↓ Profit Estimation
+  ↓ Gas Calculation
+  ↓ Slippage Simulation
+  ↓ Flash Loan Availability
+  ↓ Execution Simulation
+  ↓ Decision Engine
+  ↓ Execute Transaction
+  ↓ Loan Repayment
+  ↓ Profit Distribution
+  ↓ Trade Verification
+  ↓ Learning Database
+```
+Only opportunities that satisfy configured profitability, risk, and simulation requirements proceed to execution.
+
+### 11. Technology Stack
+- **Frontend:** Next.js, React, TypeScript, Tailwind CSS, Recharts, TanStack Query, Zustand or Redux Toolkit, Framer Motion
+- **Backend:** Node.js, TypeScript, Express or Fastify, WebSocket, Ethers.js, Viem (optional), Axios
+- **Blockchain:** Solidity, Hardhat, OpenZeppelin Contracts, Foundry (optional), Ethers.js / Viem
+- **AI:** Python, PyTorch and/or TensorFlow, NumPy, Pandas, Scikit-learn, XGBoost or LightGBM, ONNX Runtime (optional)
+- **Storage:** SQLite (dev/local), PostgreSQL (prod, optional), Redis, Parquet/CSV for datasets
+- **Messaging:** WebSocket, Event Bus, Node EventEmitter, BullMQ (optional)
+- **Infrastructure:** Docker, Docker Compose, GitHub Actions, PM2, Nginx, Prometheus, Grafana
+- **Testing:** Jest, Vitest, Hardhat Tests, Foundry Tests, Playwright, Mainnet Fork Testing
+
+### 12. Design Goals
+- Autonomous operation with configurable supervision
+- Modular architecture with well-defined interfaces
+- Deterministic execution for blockchain actions
+- AI-assisted decision support
+- High observability through metrics and structured logging
+- Multi-strategy extensibility
+- Chain abstraction for EVM compatibility
+- Comprehensive simulation before execution
+- Continuous model improvement from historical execution data
+
+### 13. End Goal
+APEX is designed to become a modular autonomous DeFi execution platform, not merely a single-purpose arbitrage bot. Its architecture separates intelligence, risk evaluation, simulation, execution, and learning into independent subsystems so that new strategies, protocols, AI models, and supported chains can be added without redesigning the entire platform.
+The long-term objective is to evolve into an extensible DeFi operating system capable of continuously discovering, evaluating, and executing profitable opportunities across multiple EVM ecosystems while maintaining strict safety, observability, and engineering discipline.
+
+<!-- APPEND PARTS 5-6 BELOW THIS LINE -->
