@@ -1,0 +1,52 @@
+{
+  "app": {
+    "name": "Apex Arbitrage",
+    "environment": "production"
+  },
+  "engine": {
+    "scanIntervalMs": 5000,
+    "enabled": false,
+    "autoExecute": false,
+    "tradeSizeUsd": 1000,
+    "minProfitPct": 0.2,
+    "maxSlippagePct": 1.5,
+    "liquidityDepthUsd": 5000000
+  },
+  "server": {
+    "port": 8080,
+    "host": "0.0.0.0"
+  },
+  "pricing": {
+    "source": "mock",
+    "coingecko": {
+      "baseUrl": "https://api.coingecko.com/api/v3",
+      "vsCurrency": "usd",
+      "timeoutMs": 8000
+    },
+    "mock": {
+      "jitterPct": 0.4
+    }
+  },
+  "portfolio": {
+    "baseToken": "USDC",
+    "initialBalanceUsd": 10000
+  },
+  "venues": [
+    { "id": "uniswap", "name": "Uniswap", "feePct": 0.3, "chain": "ethereum" },
+    { "id": "sushiswap", "name": "SushiSwap", "feePct": 0.25, "chain": "ethereum" },
+    { "id": "pancakeswap", "name": "PancakeSwap", "feePct": 0.2, "chain": "bsc" },
+    { "id": "quickswap", "name": "QuickSwap", "feePct": 0.3, "chain": "polygon" },
+    { "id": "curve", "name": "Curve", "feePct": 0.04, "chain": "ethereum" },
+    { "id": "traderjoe", "name": "Trader Joe", "feePct": 0.3, "chain": "arbitrum" }
+  ],
+  "tokens": [
+    { "symbol": "ETH", "name": "Ethereum", "coingeckoId": "ethereum" },
+    { "symbol": "BTC", "name": "Bitcoin", "coingeckoId": "bitcoin" },
+    { "symbol": "USDC", "name": "USD Coin", "coingeckoId": "usd-coin" },
+    { "symbol": "USDT", "name": "Tether", "coingeckoId": "tether" },
+    { "symbol": "DAI", "name": "Dai", "coingeckoId": "dai" },
+    { "symbol": "WBTC", "name": "Wrapped Bitcoin", "coingeckoId": "wrapped-bitcoin" },
+    { "symbol": "MATIC", "name": "Polygon", "coingeckoId": "matic-network" },
+    { "symbol": "ARB", "name": "Arbitrum", "coingeckoId": "arbitrum" }
+  ]
+}
