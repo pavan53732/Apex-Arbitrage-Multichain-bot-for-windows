@@ -91,4 +91,50 @@ Responsibilities:
 
 No AI exists inside contracts. AI remains off-chain.
 
-<!-- APPEND PARTS 3-6 BELOW THIS LINE -->
+### 7. AI System
+The AI layer performs:
+- Feature engineering
+- Historical learning
+- Route scoring
+- Trade classification
+- Volatility prediction
+- Execution confidence estimation
+- Market anomaly detection
+- Adaptive threshold tuning
+- Model retraining
+- Offline inference
+- Online inference
+
+Possible model families include gradient-boosted trees, sequence models (such as LSTM/GRU), transformer-based time-series models, or reinforcement learning where justified by evaluation. The final choice should be evidence-driven rather than fixed.
+
+### 8. Multi-Chain Architecture
+The architecture should be chain-agnostic.
+Initial production deployment may target Polygon, while additional EVM-compatible chains can be enabled through adapters.
+Potential supported chains include:
+- Polygon
+- Ethereum
+- Arbitrum
+- Optimism
+- Base
+- BNB Chain
+- Avalanche C-Chain
+- Sonic
+- Linea
+- zkSync Era
+- Scroll
+- Mantle
+- Gnosis
+- Celo
+
+Each chain should provide:
+- RPC Manager
+- Router Registry
+- Token Registry
+- Gas Estimator
+- Explorer
+- Flash Loan Provider
+- DEX Registry
+- Oracle Registry
+- Bridge Registry (if cross-chain functionality is implemented)
+
+<!-- APPEND PARTS 4-6 BELOW THIS LINE -->
