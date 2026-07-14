@@ -1,1 +1,0 @@
-export default function AROperator() { return null; }

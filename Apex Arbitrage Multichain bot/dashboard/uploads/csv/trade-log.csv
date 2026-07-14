@@ -1,3 +1,0 @@
-timestamp,pair,type,amount,price,profit,status
-2025-01-31T10:00:00Z,ETH/USDT,buy,1.5,2500.00,0,completed
-2025-01-31T10:05:00Z,ETH/USDT,sell,1.5,2520.00,30.00,completed

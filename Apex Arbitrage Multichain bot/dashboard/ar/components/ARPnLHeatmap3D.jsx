@@ -1,1 +1,0 @@
-export default function ARPnLHeatmap3D() { return null; }

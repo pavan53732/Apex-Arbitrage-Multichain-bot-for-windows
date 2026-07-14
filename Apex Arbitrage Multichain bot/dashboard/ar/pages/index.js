@@ -1,1 +1,0 @@
-export default function ARIndex() { return null; }

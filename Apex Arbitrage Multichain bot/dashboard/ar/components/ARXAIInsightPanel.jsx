@@ -1,1 +1,0 @@
-export default function ARXAIInsightPanel() { return null; }

@@ -1,1 +1,0 @@
-describe('XRScene3D', () => { it('renders', () => {}); });
