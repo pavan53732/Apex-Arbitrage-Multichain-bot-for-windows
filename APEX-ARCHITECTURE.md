@@ -71,4 +71,24 @@ Learning & Memory Engine
 
 ---
 
-<!-- APPEND PARTS 2-6 BELOW THIS LINE -->
+### 5. Primary System Modules (continued)
+- **Simulation Engine** — Runs complete execution simulation. Checks: Flash loan, Gas, DEX routing, Swap results, Profit, Revert conditions, Loan repayment, Expected wallet balance. Simulation must pass before execution.
+- **Execution Engine** — Responsible for: Transaction building, Flash loan request, Swap execution, Repayment, Profit withdrawal, Failure handling, Retry logic, Confirmation monitoring.
+- **Learning Engine** — Stores: Every trade, every simulation, every failure, every gas cost, every slippage event, every market condition. Improves AI models continuously.
+
+### 6. Smart Contract Layer
+Contracts perform deterministic blockchain operations only.
+Responsibilities:
+- Flash Loan Receiver
+- Swap Executor
+- Token Router
+- Profit Distributor
+- Permission Control
+- Emergency Pause
+- Upgrade Support (if selected)
+- Events
+- Security Guards
+
+No AI exists inside contracts. AI remains off-chain.
+
+<!-- APPEND PARTS 3-6 BELOW THIS LINE -->
