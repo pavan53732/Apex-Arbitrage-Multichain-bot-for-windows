@@ -3,7 +3,9 @@
 > Autonomous Multi-Chain AI DeFi Intelligence & Execution Platform
 > Working specification (compiled from owner-provided parts).
 
-**Status:** In progress — Part 1 seeded, Parts 2–6 pending.
+**Status:** v3.0.0 — Documentation complete. Implementation in progress.
+
+**See also:** `docs/` for the full v3 documentation suite (ARCHITECTURE, AGENTS, SKILLS, AI-SETTINGS, AI-PIPELINE, DESIGNER-PROTOCOLS, USER-GUIDE, TROUBLESHOOTING, FAQ, CHANGELOG, API-REFERENCE, DEPLOYMENT, CHAIN-INTEGRATION, DEX-INTEGRATION, BACKTESTING, CONTRIBUTING, WINDOWS-DESKTOP, CLOUD-AI-INTEGRATION, SECURITY, ENHANCEMENT-ROADMAP).
 
 ---
 
@@ -200,3 +202,48 @@ APEX is designed to become a modular autonomous DeFi execution platform, not mer
 The long-term objective is to evolve into an extensible DeFi operating system capable of continuously discovering, evaluating, and executing profitable opportunities across multiple EVM ecosystems while maintaining strict safety, observability, and engineering discipline.
 
 <!-- APPEND PARTS 5-6 BELOW THIS LINE -->
+
+---
+
+## Addendum v3.0 (2026-07-25)
+
+The v3 documentation suite in `docs/` supersedes Parts 2–6 of this file.
+The new direction:
+
+- **Cloud-AI-only** (OpenAI-compatible + Anthropic + Self-Hosted Local OpenAI-compatible)
+- **Windows desktop .exe** via Electron (no Docker, no WSL)
+- **User-configurable AI providers** with full base URL + model + key control
+- **12 agents, 40+ skills, 3-layer cache, RAG, memory, function-calling, streaming**
+- **AI Settings page** with OpenAI / Anthropic / Self-Hosted / Custom templates
+- **Full documentation** across 20 markdown files
+
+### v3.0 Documentation Map
+
+| Doc | Purpose |
+|-----|---------|
+| `docs/README.md` | Doc index + project vision |
+| `docs/ARCHITECTURE.md` | System architecture, layers, components, data flow |
+| `docs/AGENTS.md` | 12 agents, full field schema, communication protocol |
+| `docs/DESIGNER-PROTOCOLS.md` | UI/UX design system, component library, patterns |
+| `docs/SKILLS.md` | 40+ skills across 10 categories |
+| `docs/AI-PIPELINE.md` | Provider abstraction, streaming, function-calling, RAG, memory |
+| `docs/AI-SETTINGS.md` | AI Configuration page (3 tabs, 3 provider types, presets) |
+| `docs/WINDOWS-DESKTOP.md` | Electron packaging, .exe, no Docker |
+| `docs/CLOUD-AI-INTEGRATION.md` | Provider integration reference |
+| `docs/ENHANCEMENT-ROADMAP.md` | Milestones, feature matrix, architecture patterns to adopt |
+| `docs/SECURITY.md` | Threat model, key handling, Electron hardening |
+| `docs/USER-GUIDE.md` | End-user guide |
+| `docs/TROUBLESHOOTING.md` | Symptom-first troubleshooting |
+| `docs/FAQ.md` | 50+ Q&A |
+| `docs/CHANGELOG.md` | Version history |
+| `docs/API-REFERENCE.md` | IPC + programmatic + (planned) webhook API |
+| `docs/DEPLOYMENT.md` | Build, release, code signing, auto-update |
+| `docs/CHAIN-INTEGRATION.md` | Adding a new EVM chain |
+| `docs/DEX-INTEGRATION.md` | Adding a new DEX adapter |
+| `docs/BACKTESTING.md` | Backtest engine, A/B, stress tests |
+| `docs/CONTRIBUTING.md` | How to contribute |
+
+The architecture in Parts 1–6 of this file (system modules, multi-chain, profit
+strategies, etc.) is implemented by the components and skills documented in
+`docs/`. Treat the v3 docs as authoritative for design and implementation
+decisions.
