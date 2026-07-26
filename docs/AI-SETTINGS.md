@@ -21,3 +21,12 @@ Defines AI provider selection, model preferences, temperature, max tokens, strea
 
 ## Example
 A balanced profile uses reasoning with a smaller context window and JSON output enabled.
+
+## Validation
+- Validate provider enablement against `AI-PROVIDER-MANAGER.md`.
+- Validate capability requirements against `MODEL-CAPABILITY-NEGOTIATION.md`.
+- Reject profiles that omit required provider, model, or cost settings.
+
+## Lifecycle
+- Settings are loaded at startup, validated before use, and revalidated on profile change.
+- Provider lifecycle details remain owned by `AI-PROVIDER-MANAGER.md`.

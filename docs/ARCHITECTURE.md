@@ -68,3 +68,8 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Ownership boundary
+- This document describes system boundaries and layering only.
+- It does not own trading logic, execution logic, provider selection, registry records, or lifecycle behavior.
+- Those responsibilities remain with their authoritative owner documents.

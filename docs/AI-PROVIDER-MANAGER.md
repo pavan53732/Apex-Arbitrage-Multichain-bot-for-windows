@@ -17,3 +17,9 @@ Defines provider inventory, capability detection, health monitoring, failover, a
 
 ## Example
 A degraded provider is demoted until capability and latency checks recover.
+
+## Selection and failover
+- Select providers by capability, health, latency, cost, and policy priority.
+- Demote providers that fail health or capability checks until recovery succeeds.
+- Failover remains synchronous for critical flows and must preserve auditability.
+- Capability negotiation detail remains owned by `MODEL-CAPABILITY-NEGOTIATION.md`.
