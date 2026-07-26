@@ -84,3 +84,6 @@ Warm -> Active -> Expiring -> Invalidated -> Purged.
 - `AI-COST-MANAGEMENT.md`
 
 - `HEALTHCHECKS.md`
+
+
+For runtime state transitions and failover probes, see `ORCHESTRATOR.md` and `HEALTHCHECKS.md`.

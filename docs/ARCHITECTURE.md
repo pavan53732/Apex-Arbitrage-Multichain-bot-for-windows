@@ -41,3 +41,6 @@ For authoritative runtime flow, see `ORCHESTRATOR.md`.
 - `VERSIONING.md`
 
 - `DOMAIN-MODEL.md`
+
+
+For canonical data contracts, see `DOMAIN-MODEL.md`.

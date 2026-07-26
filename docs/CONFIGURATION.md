@@ -25,3 +25,6 @@ Defines runtime and operational configuration, precedence, validation, and secre
 - `PLUGIN-SDK.md`
 
 - `HEALTHCHECKS.md`
+
+
+For provider setup and probe configuration, see `AI-PROVIDER-MANAGER.md` and `HEALTHCHECKS.md`.

@@ -131,3 +131,17 @@ These must not claim ownership and should only point to owners:
 - Domain model: `docs/DOMAIN-MODEL.md`
 - Metrics: `docs/METRICS.md`
 - Healthchecks: `docs/HEALTHCHECKS.md`
+
+
+## Product surface contracts
+- UI Dashboard: `docs/UI-DASHBOARD-SPEC.md`
+- AI Provider Manager: `docs/AI-PROVIDER-MANAGER.md`
+- AI Gateway: `docs/AI-GATEWAY.md`
+- AI Memory System: `docs/AI-MEMORY-SYSTEM.md`
+- Risk Engine: `docs/RISK-ENGINE.md`
+- Notification Center: `docs/NOTIFICATION-CENTER.md`
+- Chain Command Center: `docs/CHAIN-COMMAND-CENTER.md`
+- DEX Intelligence: `docs/DEX-INTELLIGENCE.md`
+- Wallet Command Center: `docs/WALLET-COMMAND-CENTER.md`
+- Portfolio Analytics: `docs/PORTFOLIO-ANALYTICS.md`
+- Enterprise Operations: `docs/ENTERPRISE-OPERATIONS.md`

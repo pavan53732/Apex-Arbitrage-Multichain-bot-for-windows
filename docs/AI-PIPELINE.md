@@ -112,3 +112,6 @@ AI-PIPELINE.md is the single source for behavioural orchestration, provider rout
 - `AI-CONSENSUS.md`
 
 - `AI-AGENT-SPECIFICATION.md`
+
+
+For provider abstraction and gateway routing, see `AI-PROVIDER-MANAGER.md` and `AI-GATEWAY.md`.

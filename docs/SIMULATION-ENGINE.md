@@ -263,3 +263,6 @@ Persist scenario ids, seeds, market snapshots, configuration hashes, code versio
 - `DOMAIN-MODEL.md`
 
 - `METRICS.md`
+
+
+For canonical entities and performance tracking, see `DOMAIN-MODEL.md` and `METRICS.md`.
