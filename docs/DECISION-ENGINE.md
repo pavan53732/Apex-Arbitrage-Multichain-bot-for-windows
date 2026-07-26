@@ -36,3 +36,6 @@ Defines the authoritative gatekeeper between recommendation and execution, inclu
 
 ## Example
 An AI recommendation is blocked when policy or risk gates fail.
+
+## Approval flow
+- Must define how approval or veto is surfaced to the Windows UI.

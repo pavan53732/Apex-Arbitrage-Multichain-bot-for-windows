@@ -36,3 +36,6 @@ Defines data quality, lineage, retention, access control, and stewardship expect
 
 ## Example
 A market dataset is rejected if provenance is missing.
+
+## Windows storage governance
+- Must define AppData/ProgramData use, retention, encryption, and backup behavior.

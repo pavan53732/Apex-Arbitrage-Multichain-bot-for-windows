@@ -34,3 +34,6 @@ Defines how user, market, wallet, and runtime context are assembled for downstre
 
 ## Example
 A prompt includes live balances, active positions, and current chain state.
+
+## Context sources
+- Must define which runtime, market, wallet, and Windows signals feed model context.

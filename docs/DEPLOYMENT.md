@@ -33,3 +33,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Windows deployments
+- Must define installer, auto-update, and rollback patterns.

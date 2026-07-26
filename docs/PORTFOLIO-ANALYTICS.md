@@ -12,3 +12,6 @@ Defines portfolio metrics, performance attribution, risk views, and reporting ou
 
 ## Example
 A report shows exposure, realized PnL, drawdown, and strategy contribution.
+
+## Portfolio UI
+- Must define live analytics, export, and widget behavior.

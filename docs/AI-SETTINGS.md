@@ -30,3 +30,6 @@ A balanced profile uses reasoning with a smaller context window and JSON output 
 ## Lifecycle
 - Settings are loaded at startup, validated before use, and revalidated on profile change.
 - Provider lifecycle details remain owned by `AI-PROVIDER-MANAGER.md`.
+
+## Windows AI settings
+- Must define local model path and per-user profile isolation on Windows.

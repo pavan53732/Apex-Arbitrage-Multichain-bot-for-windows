@@ -15,3 +15,6 @@ Defines how end users navigate features, interpret statuses, and follow safe ope
 
 ## Example
 The guide explains how to review trade status before approving an action.
+
+## Windows user actions
+- Must define install, first-run, tray, and update steps for end users.

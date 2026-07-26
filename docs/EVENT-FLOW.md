@@ -17,3 +17,7 @@ Defines event production, routing, consumption, correlation, and lifecycle acros
 
 ## Example
 OpportunityDiscovered leads to RiskCalculated, SimulationPassed, and ExecutionSubmitted.
+
+## Arbitrage events
+- Must define opportunity, spread, execution, fill, failure, and expiry events.
+- Must define Windows Event Log integration for critical events.

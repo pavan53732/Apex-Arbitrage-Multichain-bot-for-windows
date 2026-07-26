@@ -66,3 +66,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Arbitrage workers
+- Must define worker roles for scanning, matching, execution, and reconciliation.

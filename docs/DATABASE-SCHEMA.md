@@ -95,3 +95,6 @@ Defines persistent entities, relationships, validation rules, and migration expe
 
 ## Example
 A schema migration adds a non-null field after backfilling existing rows.
+
+## Windows storage
+- Must define path, locking, and backup behavior on Windows.

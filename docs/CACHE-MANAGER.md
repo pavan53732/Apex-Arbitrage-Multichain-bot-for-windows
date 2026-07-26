@@ -24,3 +24,6 @@ A stale price cache entry is invalidated after a new market tick arrives.
 - Invalidation occurs on chain updates, provider changes, schema changes, and TTL expiry.
 - Eviction must prefer stale, low-value, or least-recently-used entries under pressure.
 - Consistency checks must fail closed when cache freshness is uncertain.
+
+## Cache limits
+- Must define TTL, eviction, and freshness windows by domain.

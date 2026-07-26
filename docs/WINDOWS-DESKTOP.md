@@ -32,3 +32,7 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Windows-specific behavior
+- Must define tray icon, multi-monitor, DPI scaling, and window restore behavior.
+- Must define startup, minimize-to-tray, and user session handling.

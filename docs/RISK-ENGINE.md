@@ -13,3 +13,7 @@ A route fails the risk gate when exposure, gas, slippage, or confidence breach p
 
 ## Future compatibility notes
 Additional risk models may be introduced through configuration.
+
+## Risk rules
+- Must define spread, liquidity, exposure, and leg-failure risk checks.
+- Must define per-arbitrage-window loss limits and stop conditions.

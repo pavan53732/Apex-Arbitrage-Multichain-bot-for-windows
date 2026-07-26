@@ -13,3 +13,6 @@ Defines visual tokens, spacing, component consistency, and shared interaction pa
 
 ## Example
 A primary button uses the same spacing and color semantics across screens.
+
+## UI rules
+- Must define dashboard states, colors, and accessibility for trading UI.

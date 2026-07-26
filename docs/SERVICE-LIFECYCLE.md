@@ -27,3 +27,6 @@ Defines service registration, initialization, start, healthy, paused, restarting
 
 ## Example
 A worker service transitions to paused during maintenance.
+
+## Windows service lifecycle
+- Must define SCM states and recovery actions.

@@ -16,3 +16,7 @@ Defines the pipeline from raw RPC data through normalization, validation, cachin
 
 ## Example
 Raw pool data is normalized before reaching opportunity ranking.
+
+## Windows data flow
+- Must define AppData, ProgramData, IPC, and persistence paths.
+- Must define how UI and backend share data under Windows.

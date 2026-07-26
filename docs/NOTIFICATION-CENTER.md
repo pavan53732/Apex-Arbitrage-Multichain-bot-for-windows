@@ -12,3 +12,7 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Windows delivery
+- Must define which alerts become Windows toasts versus in-app banners.
+- Must define persistence after restart and user preference controls.

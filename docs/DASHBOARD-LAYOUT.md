@@ -31,3 +31,6 @@ Defines placement rules, layout persistence, responsive behavior, and panel grou
 
 ## Example
 A compact layout collapses secondary panels on smaller screens.
+
+## Windows layout
+- Must define layout persistence and DPI behavior.

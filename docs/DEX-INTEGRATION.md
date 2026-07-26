@@ -315,3 +315,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Desktop app integration
+- Must define UI-facing DEX selection, slippage controls, and arbitrage settings exposure.

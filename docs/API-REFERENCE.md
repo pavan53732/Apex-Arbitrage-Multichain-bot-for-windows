@@ -360,3 +360,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Streaming interface
+- Must define real-time feeds and versioned endpoint behavior.

@@ -32,3 +32,6 @@ Defines named configuration bundles, defaults, overrides, environment targeting,
 
 ## Example
 A production profile enables stricter risk limits than a sandbox profile.
+
+## Arbitrage profiles
+- Must define profile presets for low-latency, cross-exchange, and simulation use cases.

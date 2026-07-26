@@ -55,3 +55,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Windows recovery
+- Must define service recovery, restart behavior, and in-flight transaction cleanup.

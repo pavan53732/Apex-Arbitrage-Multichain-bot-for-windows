@@ -18,3 +18,6 @@ Defines deterministic startup order across kernel, registries, config, database,
 
 ## Example
 Kernel starts before workers and providers before the dashboard becomes interactive.
+
+## Bootstrap steps
+- Must define ordered startup steps, service registration, and UAC handling.

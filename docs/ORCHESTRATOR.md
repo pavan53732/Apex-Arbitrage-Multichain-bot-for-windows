@@ -32,3 +32,6 @@ Defines coordination across registries, workers, policies, AI, and runtime state
 
 ## Example
 The orchestrator pauses execution during a health degradation event.
+
+## Orchestration detail
+- Must define cross-exchange timing, retry, and crash recovery.

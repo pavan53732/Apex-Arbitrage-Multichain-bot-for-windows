@@ -14,3 +14,7 @@ Defines build stages, release gates, artifact checks, deployment triggers, and r
 
 ## Example
 A release is blocked until validation and packaging succeed.
+
+## Windows release pipeline
+- Must define Windows runners, signing, packaging, and update artifact generation.
+- Must define build gates for installer, smoke test, and rollback verification.

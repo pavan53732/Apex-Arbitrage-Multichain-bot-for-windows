@@ -14,3 +14,7 @@ Defines the platform security baseline for secrets, access control, wallet handl
 
 ## Example
 A plugin without sandbox approval is blocked from loading.
+
+## Windows security baseline
+- Must define DPAPI, Credential Manager, Defender, and signing expectations.
+- Must define Windows-specific threat model and secure storage requirements.

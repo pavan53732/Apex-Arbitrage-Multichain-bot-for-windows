@@ -33,3 +33,6 @@ Defines the live system view of active chains, plugins, workers, wallets, provid
 
 ## Example
 The dashboard reads runtime knowledge to show active workers and healthy providers.
+
+## Windows runtime context
+- Must define tray, notifications, and service state visibility.

@@ -46,3 +46,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Windows config
+- Must define config file locations and Windows-specific overrides.

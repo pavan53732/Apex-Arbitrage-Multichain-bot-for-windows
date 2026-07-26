@@ -14,3 +14,7 @@ Defines metric names, dimensions, collection rules, export behavior, and retenti
 
 ## Example
 Worker queue depth, provider latency, and AI request cost are recorded as first-class metrics.
+
+## Metrics catalog
+- Must define named metrics, types, units, and thresholds.
+- Must define Windows performance counters and trading metrics.

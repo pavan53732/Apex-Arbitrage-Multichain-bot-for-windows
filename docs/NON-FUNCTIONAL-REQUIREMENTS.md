@@ -46,3 +46,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Windows requirements
+- Must define performance, reliability, and security requirements for Windows.

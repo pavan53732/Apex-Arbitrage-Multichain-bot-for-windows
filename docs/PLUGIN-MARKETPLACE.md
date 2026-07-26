@@ -15,3 +15,6 @@ Marketplace entries must declare lifecycle state, permissions, version compatibi
 
 ## Example
 A strategy plugin is listed only after validation, signing, and approval.
+
+## Plugin lifecycle
+- Must define installation, sandboxing, versioning, and uninstall behavior.

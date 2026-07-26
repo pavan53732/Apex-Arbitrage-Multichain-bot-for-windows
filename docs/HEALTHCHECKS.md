@@ -14,3 +14,6 @@ Defines health probes, status aggregation, thresholds, and degradation semantics
 
 ## Example
 An RPC provider marked unhealthy triggers failover and operator alerting.
+
+## Health definitions
+- Must define actual health checks, thresholds, and alert outputs.

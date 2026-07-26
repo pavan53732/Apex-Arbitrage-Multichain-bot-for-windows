@@ -30,3 +30,6 @@ Defines policy evaluation, priority ordering, overrides, and final decision sele
 
 ## Example
 A routing policy blocks execution when cost exceeds target.
+
+## Arbitrage policies
+- Must define spread, latency, and loss-limit policies.

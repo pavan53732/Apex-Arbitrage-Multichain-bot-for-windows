@@ -29,3 +29,6 @@ Defines IPC message types, payloads, versioning, routing, and consumer expectati
 
 ## Example
 A worker status message includes status, timestamp, and correlation id.
+
+## Message catalog
+- Must define actual message types, producers, consumers, and payload shapes.

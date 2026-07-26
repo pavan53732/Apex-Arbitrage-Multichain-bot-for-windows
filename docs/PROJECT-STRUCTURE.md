@@ -17,3 +17,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Repository layout
+- Must define the actual directories for app, service, docs, and installers.

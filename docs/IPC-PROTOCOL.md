@@ -56,3 +56,6 @@ Defines IPC transport rules, envelope format, routing, acknowledgement, retry, a
 
 ## Example
 A UI request is acknowledged, routed, and confirmed with a correlation id.
+
+## Windows IPC
+- Must define named pipe or equivalent Windows transport and message envelope structure.

@@ -16,3 +16,7 @@ Defines actor permissions, action scopes, approvals, and enforcement boundaries.
 
 ## Example
 A read-only user cannot submit execution commands.
+
+## Windows permissions
+- Must define user, admin, and service account permissions.
+- Must define UAC elevation and scheduled task permissions.

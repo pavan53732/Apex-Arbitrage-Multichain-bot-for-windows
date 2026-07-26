@@ -72,3 +72,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Routing behavior
+- Must define failover, chain changes, and proxy-aware routing.

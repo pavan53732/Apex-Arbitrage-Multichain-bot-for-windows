@@ -134,3 +134,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Windows runtime considerations
+- Must define how AI behaves with Windows proxy settings, desktop notifications, and local GPU availability.
