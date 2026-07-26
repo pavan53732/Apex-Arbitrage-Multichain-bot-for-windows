@@ -482,3 +482,10 @@ These must not claim ownership and should only point to owners:
 - Opportunity Detection
 - Position Management
 - RPC Manager
+
+
+## Deepening pass - tranche 16
+- Runtime Knowledge
+- Service Registry
+- Shutdown Lifecycle
+- System Capability Registry

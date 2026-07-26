@@ -30,3 +30,9 @@ Unregister stale services, rebind dependencies, and rehydrate from kernel state.
 - `APEX-KERNEL.md`
 - `REGISTRY-SYSTEM.md`
 - `ORCHESTRATOR.md`
+
+## Governance Rules
+Defines service identity, registration, status, ownership, and versioned service metadata.
+
+## Example
+A service entry exposes health, version, and lifecycle state before it is scheduled.

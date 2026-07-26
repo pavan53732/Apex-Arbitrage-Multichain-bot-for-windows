@@ -30,3 +30,9 @@ stateDiagram-v2
 ## Cross-references
 - `RUNTIME-OPERATIONS.md`
 - `ORCHESTRATOR.md`
+
+## Operational Contract
+Defines graceful shutdown, queue flushing, state persistence, worker stop order, and final disposal.
+
+## Example
+Execution stops before caches are flushed and state is saved.
