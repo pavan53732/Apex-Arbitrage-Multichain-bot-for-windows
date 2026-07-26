@@ -30,6 +30,9 @@ EmergencyStop is terminal until operator reset; Recovering is permitted only aft
 - Any active state -> EmergencyStop when the operator or risk engine triggers a halt.
 - EmergencyStop -> Stopped or Recovering only after explicit operator reset.
 
+## Session contract
+A session must include session id, mode, strategy reference, active universe, emergency-stop flag, recovery state, last reconciliation point, and current operator control state.
+
 ## Inputs
 - Market data snapshots.
 - Opportunity detections and rankings.
