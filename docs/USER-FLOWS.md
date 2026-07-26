@@ -120,3 +120,6 @@ Completion criteria: settings confirmed.
 - `AI-PIPELINE.md`
 - `SECURITY.md`
 - `CONFIGURATION.md`
+- `DASHBOARD-LAYOUT.md`
+- `DASHBOARD-WIDGETS.md`
+- `UX-GUIDELINES.md`

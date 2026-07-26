@@ -51,3 +51,4 @@ ScenarioDefined -> SnapshotCaptured -> Replayed -> Evaluated -> Persisted -> Pub
 - `EXECUTION-ENGINE.md`
 - `AI-PIPELINE.md`
 - `TESTING-GUIDE.md`
+- `VERSIONING.md`

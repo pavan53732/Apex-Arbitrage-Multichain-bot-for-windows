@@ -98,6 +98,7 @@ These must not claim ownership and should only point to owners:
 - Navigation stubs must reference only their authoritative owners.
 - Do not duplicate lifecycle or ownership claims across multiple docs.
 - When two docs touch the same topic, the non-owner must link to the owner.
+- Matrix docs, registries, and UX guidance must link back to their authoritative subsystem owners and adjacent governance docs.
 
 ## Cross-references
 - `APEX-ARCHITECTURE.md`

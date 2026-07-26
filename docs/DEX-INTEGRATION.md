@@ -308,3 +308,4 @@ If a DEX is exploited, abandoned, or supplanted:
 - `CHAIN-INTEGRATION.md`
 - `EXECUTION-ENGINE.md`
 - `LIQUIDITY-ANALYSIS.md`
+- `DEX-REGISTRY.md`

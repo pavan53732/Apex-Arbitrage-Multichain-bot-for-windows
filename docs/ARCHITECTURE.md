@@ -30,3 +30,11 @@ Defines the system architecture, subsystem boundaries, and orchestration model.
 - `docs/AI-PIPELINE.md`
 - `docs/RUNTIME-OPERATIONS.md`
 - `docs/STATE-MANAGEMENT.md`
+- `CHAIN-REGISTRY.md`
+- `DEX-REGISTRY.md`
+- `TOKEN-REGISTRY.md`
+- `ORACLE-REGISTRY.md`
+- `DASHBOARD-LAYOUT.md`
+- `DASHBOARD-WIDGETS.md`
+- `UX-GUIDELINES.md`
+- `VERSIONING.md`

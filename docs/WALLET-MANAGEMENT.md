@@ -12,3 +12,4 @@ Owns wallet discovery, creation, import, unlock, lock, rotation, permissions, an
 - `docs/SECURITY.md`
 - `docs/PERMISSION-MODEL.md`
 - `docs/TRANSACTION-LIFECYCLE.md`
+- `TOKEN-REGISTRY.md`

@@ -81,3 +81,5 @@ Warm -> Active -> Expiring -> Invalidated -> Purged.
 - `DATABASE-SCHEMA.md`
 - `AI-PIPELINE.md`
 - `TRADING-ENGINE.md`
+- `VERSIONING.md`
+- `AI-COST-MANAGEMENT.md`

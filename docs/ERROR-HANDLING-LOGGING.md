@@ -55,3 +55,4 @@ Defines the canonical error taxonomy, logging policy, recovery paths, and escala
 - `SECURITY.md`
 - `RUNTIME-OPERATIONS.md`
 - `IPC-PROTOCOL.md`
+- `VERSIONING.md`

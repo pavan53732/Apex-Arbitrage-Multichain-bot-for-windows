@@ -373,3 +373,4 @@ When a chain is no longer viable (low liquidity, abandoned, exploited):
 - `GAS-OPTIMISATION.md`
 - `MONITORING-OBSERVABILITY.md`
 - `DATABASE-SCHEMA.md`
+- `CHAIN-REGISTRY.md`

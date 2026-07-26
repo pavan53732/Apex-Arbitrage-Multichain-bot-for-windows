@@ -366,3 +366,5 @@ A strong provider abstraction is essential because APEX depends on AI for orches
 - `SECURITY.md`
 - `MONITORING-OBSERVABILITY.md`
 - `PERFORMANCE-TARGETS.md`
+- `AI-CAPABILITY-MATRIX.md`
+- `AI-COST-MANAGEMENT.md`

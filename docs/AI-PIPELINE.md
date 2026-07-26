@@ -101,3 +101,7 @@ Persist prompt versions, routing decisions, model ids, tokens used, confidence s
 - `MONITORING-OBSERVABILITY.md`
 - `RISK-ENGINE.md`
 - `CONFIGURATION.md`
+- `AI-CAPABILITY-MATRIX.md`
+- `AI-MEMORY.md`
+- `PROMPT-ENGINEERING.md`
+- `AI-COST-MANAGEMENT.md`

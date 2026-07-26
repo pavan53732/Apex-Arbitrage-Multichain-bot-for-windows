@@ -30,3 +30,4 @@ Owns canonical asset metadata, identifiers, decimals, display symbols, and chain
 - `PORTFOLIO-MANAGEMENT.md`
 - `WALLET-MANAGEMENT.md`
 - `STRATEGIES.md`
+- `TOKEN-REGISTRY.md`

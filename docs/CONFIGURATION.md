@@ -19,3 +19,5 @@ Defines runtime and operational configuration, precedence, validation, and secre
 - `SECURITY.md`
 - `RUNTIME-OPERATIONS.md`
 - `DATABASE-SCHEMA.md`
+- `AI-COST-MANAGEMENT.md`
+- `VERSIONING.md`

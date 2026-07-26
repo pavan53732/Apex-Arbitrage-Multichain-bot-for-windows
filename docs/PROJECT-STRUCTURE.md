@@ -10,3 +10,4 @@ The implementation will use a multi-package structure for apps, packages, script
 - `ARCHITECTURE.md`
 - `MODULE-DEPENDENCY.md`
 - `BUILD-RELEASE-CICD.md`
+- `VERSIONING.md`

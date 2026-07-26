@@ -7,4 +7,7 @@ Provides navigation to the authoritative documentation set.
 - `BUILD-RELEASE-CICD.md`
 - `DEPLOYMENT.md`
 - `API-REFERENCE.md`
+- `DASHBOARD-LAYOUT.md`
+- `DASHBOARD-WIDGETS.md`
+- `UX-GUIDELINES.md`
 
