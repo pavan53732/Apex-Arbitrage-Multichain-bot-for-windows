@@ -30,3 +30,9 @@ Reject invalid records, refresh from source, and replay lineage from durable sto
 - `KNOWLEDGE-GRAPH.md`
 - `AI-MEMORY-SYSTEM.md`
 - `REGISTRY-SYSTEM.md`
+
+## Governance Rules
+Defines data quality, lineage, retention, access control, and stewardship expectations.
+
+## Example
+A market dataset is rejected if provenance is missing.

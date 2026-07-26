@@ -517,3 +517,10 @@ These must not claim ownership and should only point to owners:
 - User Guide
 - UI Component Spec
 - Context Builder
+
+
+## Deepening pass - tranche 21
+- UX Guidelines
+- Data Governance
+- Database Schema
+- Designer Protocols

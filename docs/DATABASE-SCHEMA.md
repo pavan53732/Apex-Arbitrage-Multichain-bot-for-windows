@@ -89,3 +89,9 @@ Defines persistence model, tables, indexes, retention, migrations, and backup/re
 - `RUNTIME-OPERATIONS.md`
 - `USER-FLOWS.md`
 - `VERSIONING.md`
+
+## Operational Contract
+Defines persistent entities, relationships, validation rules, and migration expectations for storage.
+
+## Example
+A schema migration adds a non-null field after backfilling existing rows.

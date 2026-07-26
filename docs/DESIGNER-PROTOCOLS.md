@@ -418,3 +418,9 @@ Mobile and tablet are explicitly **not** goals.
 - `AI-SETTINGS.md`
 - `USER-FLOWS.md`
 - `CLOUD-AI-INTEGRATION.md`
+
+## Governance Rules
+Defines design review flow, component conventions, naming, and artifact handoff requirements.
+
+## Example
+A new panel must pass layout and accessibility review before release.
