@@ -44,3 +44,9 @@ Defines how expected slippage is estimated and bounded.
 - `EXECUTION-ENGINE.md`
 - `STRATEGIES.md`
 - `ROUTING-ENGINE.md`
+
+## Operational Contract
+Defines slippage estimation, variables, bounds, calibration, and downstream decision inputs.
+
+## Example
+A route is rejected when predicted slippage exceeds the allowed limit.

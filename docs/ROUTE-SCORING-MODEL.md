@@ -26,3 +26,9 @@ Recompute score, refresh data, or fall back to next-best route.
 - `ROUTE-OPTIMIZATION.md`
 - `SIMULATION-ENGINE.md`
 - `RISK-ENGINE.md`
+
+## Operational Contract
+Defines route features, weights, score calculation, and selection criteria.
+
+## Example
+A route with stronger liquidity and lower cost ranks higher.

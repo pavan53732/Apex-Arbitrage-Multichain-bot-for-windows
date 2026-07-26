@@ -531,3 +531,10 @@ These must not claim ownership and should only point to owners:
 - Execution Policies
 - Liquidity Analysis
 - Model Capability Negotiation
+
+
+## Deepening pass - tranche 23
+- Slippage Model
+- Domain Model
+- Permission Model
+- Route Scoring Model

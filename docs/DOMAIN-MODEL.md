@@ -21,3 +21,9 @@ Defines the canonical platform entities and their relationships.
 - `DATABASE-SCHEMA.md`
 - `STATE-MANAGEMENT.md`
 - `CONFIGURATION.md`
+
+## Governance Rules
+Defines core entities, relationships, invariants, and vocabulary for the system domain.
+
+## Example
+A portfolio always belongs to a single wallet owner.
