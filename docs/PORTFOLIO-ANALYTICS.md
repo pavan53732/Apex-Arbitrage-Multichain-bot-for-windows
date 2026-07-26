@@ -18,3 +18,7 @@ A report shows exposure, realized PnL, drawdown, and strategy contribution.
 
 ## Required details
 - Define live analytics and export behavior.
+
+## Analytics rules
+- Define live portfolio metrics, exports, and multi-wallet aggregation.
+- Define presentation in the Windows UI.

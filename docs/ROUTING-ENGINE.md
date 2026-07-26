@@ -78,3 +78,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define routing failover and proxy-aware decisions.
+
+## Routing rules
+- Define route selection, failover, and proxy-aware decision inputs.
+- Define handling for changing network conditions.

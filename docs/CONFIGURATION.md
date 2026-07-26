@@ -52,3 +52,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define Windows config and environment handling.
+
+## Windows config
+- Define file locations, environment overrides, and per-user settings.
+- Define proxy and update channel configuration.

@@ -37,3 +37,7 @@ A compact layout collapses secondary panels on smaller screens.
 
 ## Required details
 - Define layout persistence and DPI support.
+
+## Layout rules
+- Define layout persistence, DPI scaling, and multi-monitor restore behavior.
+- Define per-user layout profiles.

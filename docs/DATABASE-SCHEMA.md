@@ -101,3 +101,7 @@ A schema migration adds a non-null field after backfilling existing rows.
 
 ## Required details
 - Define path, locking, and backup behavior.
+
+## Windows storage
+- Define file path, locking, backup, and migration behavior on Windows.
+- Define audit and history tables for trading state.
