@@ -90,3 +90,23 @@ Settings page, and the bot handles everything through cloud AI calls.
 
 *All documentation is maintained alongside the codebase. Update docs with every
 feature change. Docs are the source of truth for design decisions.*
+
+
+---
+
+## Expanded & New Core Documentation (v3.1)
+
+| Document | Purpose |
+|----------|---------|
+| [SECURITY.md](./SECURITY.md) | Full threat model, encryption, credential lifecycle, IPC security, CSP, incident response |
+| [CLOUD-AI-INTEGRATION.md](./CLOUD-AI-INTEGRATION.md) | Provider setup, comparison matrix, rate limits, cost optimisation, fallback routing |
+| [WINDOWS-DESKTOP.md](./WINDOWS-DESKTOP.md) | Electron architecture, NSIS installer, auto-update, portable mode, code signing |
+| [ENHANCEMENT-ROADMAP.md](./ENHANCEMENT-ROADMAP.md) | Versioned milestones, priority matrix, technical debt, architecture evolution |
+| [STRATEGIES.md](./STRATEGIES.md) | Strategy interface, lifecycle, built-in strategies, custom strategy development |
+| [DATABASE-SCHEMA.md](./DATABASE-SCHEMA.md) | Complete SQLite schema, indexes, migrations, data lifecycle |
+| [IPC-PROTOCOL.md](./IPC-PROTOCOL.md) | IPC channel catalogue, request/response schemas, validation, error codes |
+| [TESTING-GUIDE.md](./TESTING-GUIDE.md) | Unit, integration, Playwright, Hardhat, coverage, CI strategy |
+| [RISK-ENGINE.md](./RISK-ENGINE.md) | Position sizing, exposure limits, circuit breakers, drawdown, emergency shutdown |
+
+> These documents close the documentation gaps identified in the v3 consistency review. Treat them as authoritative for their respective domains.
+

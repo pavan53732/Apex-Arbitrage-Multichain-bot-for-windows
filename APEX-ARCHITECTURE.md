@@ -242,8 +242,20 @@ The new direction:
 | `docs/DEX-INTEGRATION.md` | Adding a new DEX adapter |
 | `docs/BACKTESTING.md` | Backtest engine, A/B, stress tests |
 | `docs/CONTRIBUTING.md` | How to contribute |
+| `docs/STRATEGIES.md` | Strategy interface, lifecycle, built-ins, custom strategies |
+| `docs/DATABASE-SCHEMA.md` | SQLite schema, indexes, migrations, data lifecycle |
+| `docs/IPC-PROTOCOL.md` | IPC channel catalogue, schemas, validation, error codes |
+| `docs/TESTING-GUIDE.md` | Unit, integration, E2E, Hardhat, CI testing strategy |
+| `docs/RISK-ENGINE.md` | Position sizing, circuit breakers, drawdown, emergency halt |
 
 The architecture in Parts 1–6 of this file (system modules, multi-chain, profit
 strategies, etc.) is implemented by the components and skills documented in
 `docs/`. Treat the v3 docs as authoritative for design and implementation
 decisions.
+
+
+### Historical vs Current Architecture Note
+
+Parts 1–6 of this file may still mention earlier design directions (including offline/Python-oriented AI options).  
+**The v3 documentation suite in `docs/` is authoritative** for current implementation: Cloud-AI-only inference, Windows Electron desktop packaging, and the modular agent/skill/strategy architecture. Prefer `docs/ARCHITECTURE.md`, `docs/AI-PIPELINE.md`, and the expanded security/desktop/strategy docs over legacy wording when the two conflict.
+

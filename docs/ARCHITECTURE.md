@@ -318,7 +318,7 @@ apex/
 - **Observer** — Price feeds, chain events
 - **State Machine** — Trade lifecycle: `discovered → simulated → approved → submitted → confirmed → settled/failed`
 - **Repository Pattern** — All data access via repositories (no raw SQL in app code)
-- **Strategy** — Pluggable strategy modules (see `STRATEGIES.md`, future)
+- **Strategy** — Pluggable strategy modules (see [`STRATEGIES.md`](./STRATEGIES.md))
 - **Circuit Breaker** — Per-provider AI circuit breaker; per-skill error circuit breaker
 - **Bulkhead** — Concurrency limits per skill prevent resource exhaustion
 - **Saga** — Multi-step on-chain flows (flash loan → swap → repay) compensated on failure

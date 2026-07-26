@@ -1,76 +1,357 @@
 # APEX Cloud AI Integration Guide
 
-> **Version:** 2.0.0 | **Last Updated:** July 25, 2026
+> **Version:** 3.0.0 | **Last Updated:** July 25, 2026 | **Scope:** Provider Setup, Routing, Cost, Reliability
 
 ---
 
 ## 1. Overview
 
-Cloud AI APIs exclusively. No local inference. No Docker. HTTPS to user-configured endpoints.
-Supported: OpenAI-compatible, Anthropic native, any custom OpenAI-compatible endpoint.
+APEX uses cloud-accessed AI endpoints only. These endpoints can be public hosted services or user-operated local servers that expose an OpenAI-compatible API. The application never ships an embedded model runtime and does not depend on Docker or WSL.
+
+Supported integration classes:
+
+- OpenAI-compatible APIs
+- Anthropic native API
+- Self-hosted OpenAI-compatible endpoints
+- Custom provider templates for future compatible backends
 
 ---
 
-## 2. OpenAI-Compatible
+## 2. Provider Categories
 
-POST {base_url}/v1/chat/completions | Auth: Bearer {api_key}
-Body: model, messages[{role,content}], temperature, max_tokens, response_format
-Response: choices[0].message.content, usage.{prompt,completion,total}_tokens
-
-Providers: OpenAI, Azure, Together, Groq, OpenRouter, DeepSeek, Mistral, Custom
-
----
-
-## 3. Anthropic Native
-
-POST {base_url}/v1/messages | Auth: x-api-key + anthropic-version: 2023-06-01
-Body: model, system (top-level), messages[{role,content}], temperature, max_tokens (required)
-Response: content[0].text, usage.{input,output}_tokens
-
-Differences: system is top-level, x-api-key auth, max_tokens required, temp max 1.0
+| Category | API Style | Typical Examples | Best Use |
+|---------|-----------|------------------|----------|
+| OpenAI-compatible | `/v1/chat/completions` or equivalent | OpenAI, Groq, Together, OpenRouter, DeepSeek, Mistral, Azure OpenAI-compatible gateways | Broadest compatibility and easiest abstraction |
+| Anthropic native | `/v1/messages` | Anthropic Claude | High-quality long-context reasoning and tool planning |
+| Self-hosted OpenAI-compatible | OpenAI-like local endpoint | LM Studio, Ollama proxy, vLLM, llama.cpp server, LocalAI | Privacy-focused or low-marginal-cost deployments |
 
 ---
 
-## 4. Abstraction Layer
+## 3. Provider Comparison Matrix
 
-Internal Request: system_prompt, user_prompt, temperature, max_tokens, response_format, timeout_ms
-Internal Response: content, tokens{input,output,total}, provider_id, model, latency_ms, cached, cost_estimate
-Adapters convert internal to/from provider-specific format.
-
----
-
-## 5. Structured Output
-
-OpenAI: response_format json_object | Anthropic: instruct via prompt, extract JSON
-Schema enforcement: validate, retry once with correction, error if still invalid.
+| Provider Type | Auth Header | Streaming | Tool Calling | Strengths | Primary Caveats |
+|--------------|-------------|-----------|--------------|-----------|-----------------|
+| OpenAI-compatible | `Authorization: Bearer` | Usually SSE | Usually yes | Simple standardisation, broad ecosystem | Provider quirks vary widely |
+| Anthropic native | `x-api-key` + `anthropic-version` | Yes | Yes, but schema differs | Strong reasoning, mature message API | Different request/response shape |
+| Self-hosted compatible | Usually `Bearer` or none | Depends on server | Depends on server | Cost control, local privacy boundary | Highly variable feature completeness |
 
 ---
 
-## 6. Prompt Standards
+## 4. Configuration Model
 
-System: Role + Context + Task + Output format + Constraints + Examples (few-shot)
-Budget: System <1000 tokens, User <3000, Response 2000-4096, Total <8000
+Each configured provider record should contain:
 
----
-
-## 7. Error Handling
-
-400: no retry | 401/403: alert user, skip | 429: wait+retry | 500/502/503: failover | Timeout: failover
-Degradation: All providers down -> alert, rule-based mode, retry 30s, auto-resume.
-
----
-
-## 8. Security
-
-Keys encrypted (safeStorage/DPAPI) | HTTPS only | No keys in URLs | Cert validation | Bodies not persisted
-
----
-
-## 9. Cost Optimization
-
-1. Caching (TTL) | 2. Model tiering (cheap for simple, expensive for complex)
-3. Batching | 4. Truncation | 5. Frequency control | 6. Local rules first
+| Field | Required | Purpose |
+|------|----------|---------|
+| `id` | Yes | Stable internal reference |
+| `name` | Yes | Human-readable label |
+| `provider_type` | Yes | `openai-compatible`, `anthropic`, or `custom` |
+| `base_url` | Yes | Endpoint root URL |
+| `api_key` / `key_blob` | Usually | Encrypted credential |
+| `model` | Yes | Default model for requests |
+| `temperature_default` | No | Per-provider default behaviour |
+| `timeout_ms` | No | Request deadline |
+| `enabled` | Yes | Routing eligibility |
+| `priority` | No | Fallback ordering |
 
 ---
 
-*All AI cloud-based. No local inference. Update when adding providers.*
+## 5. Setup Guides
+
+### 5.1 OpenAI-Compatible Providers
+
+Expected request shape:
+
+```json
+{
+  "model": "provider-model-name",
+  "messages": [
+    { "role": "system", "content": "..." },
+    { "role": "user", "content": "..." }
+  ],
+  "temperature": 0.2,
+  "max_tokens": 1024
+}
+```
+
+Recommended flow:
+
+1. Enter provider name.
+2. Enter HTTPS base URL.
+3. Enter encrypted API key.
+4. Select the default model.
+5. Run a connection test.
+6. Save only if request, auth, and parse checks succeed.
+
+### 5.2 Anthropic Native
+
+Anthropic differs in three key areas:
+
+- system prompt is top-level rather than a normal message item
+- auth uses `x-api-key`
+- `max_tokens` is required
+
+Representative request:
+
+```json
+{
+  "model": "claude-model",
+  "system": "...",
+  "messages": [
+    { "role": "user", "content": "..." }
+  ],
+  "max_tokens": 1024,
+  "temperature": 0.2
+}
+```
+
+### 5.3 Self-Hosted Compatible Endpoints
+
+Self-hosted servers are treated as OpenAI-compatible only if they reliably support the required subset:
+
+- message-based chat completion
+- deterministic JSON-friendly output when requested
+- streaming, if enabled in APEX
+- reasonable error codes
+
+Self-hosted endpoints should be marked clearly in the UI because their operational profile differs from cloud services.
+
+---
+
+## 6. Internal Abstraction Layer
+
+### 6.1 Normalised Request
+
+```ts
+interface AIRequest {
+  providerId: string;
+  systemPrompt?: string;
+  userPrompt: string;
+  messages?: Array<{ role: 'system' | 'user' | 'assistant' | 'tool'; content: string }>;
+  model?: string;
+  temperature?: number;
+  maxTokens?: number;
+  responseFormat?: 'text' | 'json';
+  tools?: ToolDefinition[];
+  stream?: boolean;
+  timeoutMs?: number;
+}
+```
+
+### 6.2 Normalised Response
+
+```ts
+interface AIResponse {
+  content: string;
+  model: string;
+  providerId: string;
+  tokens: { input: number; output: number; total: number };
+  latencyMs: number;
+  cached: boolean;
+  toolCalls?: ToolInvocation[];
+  finishReason?: string;
+  costEstimate?: number;
+}
+```
+
+Adapters translate between this internal contract and provider-specific wire formats.
+
+---
+
+## 7. Model Selection Guidance
+
+| Task | Model Profile | Why |
+|------|---------------|-----|
+| Opportunity classification | Fast, low-cost reasoning model | High frequency, moderate complexity |
+| Risk analysis | More capable reasoning model | Higher downside from bad judgement |
+| Structured settings validation | Small deterministic model | Schema-first output, low cost |
+| Strategy summarisation | Mid-tier model | Periodic operator-facing text |
+| Tool orchestration | Model with reliable tool calling | Correct tool invocation matters more than prose quality |
+
+### 7.1 Tiering Strategy
+
+- **Tier 1 cheap/fast** — repetitive classification, low-risk enrichment.
+- **Tier 2 balanced** — most agent workflows.
+- **Tier 3 premium** — rare, high-value reasoning or fallback escalation.
+
+---
+
+## 8. Structured Output and Schema Enforcement
+
+### 8.1 OpenAI-Compatible
+
+Prefer explicit JSON-oriented response modes where supported.
+
+### 8.2 Anthropic
+
+Use prompt-constrained JSON output or tool-use where available.
+
+### 8.3 Validation Flow
+
+1. request structured output
+2. parse response
+3. validate against schema
+4. retry once with corrective prompt if invalid
+5. fail with typed error if still invalid
+
+Structured output is mandatory for execution-adjacent decisions where free-form text is unsafe.
+
+---
+
+## 9. Tool Calling and Function Dispatch
+
+### 9.1 Purpose
+
+Function calling allows agents to invoke deterministic application tools instead of hallucinating operational state.
+
+### 9.2 Dispatch Rules
+
+- Tool names are resolved from an allowlisted registry.
+- Arguments are schema-validated before execution.
+- Tool results return to the model only after sanitisation.
+- No provider can invoke arbitrary local code paths.
+
+### 9.3 Translation Layer
+
+OpenAI-compatible and Anthropic tool schemas differ, so the provider adapter must:
+
+- map internal tool definitions into provider-specific format
+- normalise returned tool invocations
+- preserve correlation ids for auditability
+
+---
+
+## 10. Streaming Support
+
+### 10.1 Goals
+
+- faster perceived responsiveness
+- live agent trace display
+- cancellation support
+
+### 10.2 Requirements
+
+- support server-sent events or chunked transfer where available
+- aggregate partial tokens into a stable response buffer
+- expose cancellation via `AbortController`
+- gracefully downgrade when a provider does not support streaming
+
+---
+
+## 11. Rate Limiting and Throughput Control
+
+### 11.1 Per-Provider Controls
+
+Recommended controls:
+
+- requests per minute
+- tokens per minute
+- max concurrent requests
+- cooldown after repeated failure
+
+### 11.2 Scheduler Policy
+
+- high-priority execution-critical requests preempt lower-priority enrichment requests
+- repeated failures trigger provider-specific backoff
+- long-running summarisation jobs should not starve latency-sensitive workflows
+
+---
+
+## 12. Cost Optimisation
+
+### 12.1 Primary Methods
+
+- multi-layer cache
+- model tiering by task difficulty
+- prompt truncation and summarisation
+- batching compatible classification workloads
+- rule-based shortcuts before AI escalation
+
+### 12.2 Cache Layers
+
+| Layer | Scope | Best For |
+|------|-------|----------|
+| L1 memory | current session | ultra-low-latency repeated lookups |
+| L2 SQLite | local durable cache | repeated requests across restarts |
+| L3 semantic cache | approximate reuse | similar prompts with acceptable reuse tolerance |
+
+---
+
+## 13. Fallback Routing
+
+### 13.1 Fallback Strategy
+
+```text
+primary provider
+  -> retry if transient failure
+  -> secondary provider
+  -> tertiary provider
+  -> rule-based degraded mode
+```
+
+### 13.2 When to Fail Over
+
+- timeout
+- 429 with sustained overload
+- 5xx provider instability
+- invalid structured output after retry
+- connection/auth incompatibility detected by health checks
+
+### 13.3 When Not to Fail Over
+
+- user misconfiguration requiring intervention
+- unsupported feature gap that every fallback would also fail
+- security validation failure on endpoint URL or certificate
+
+---
+
+## 14. Error Handling
+
+| Error Class | Typical Action |
+|------------|----------------|
+| 400-series request error | no blind retry; surface actionable configuration message |
+| 401/403 auth error | disable provider until corrected |
+| 429 rate limit | exponential backoff or route to fallback |
+| 500/502/503 | retry with jitter, then fail over |
+| timeout | cancel, record latency breach, try fallback |
+| schema parse failure | repair prompt once, then fail typed |
+
+All provider errors should be normalised into internal error codes so the rest of the system does not branch on vendor-specific semantics.
+
+---
+
+## 15. Security and Key Management
+
+- Provider keys are stored only in encrypted form.
+- Keys are attached to headers, never URL parameters.
+- External providers require HTTPS.
+- Prompt payloads must never contain provider keys, wallet keys, or decrypted secret material.
+- Connection tests must confirm both reachability and response-shape compatibility.
+
+---
+
+## 16. Local vs Cloud Guidance
+
+| Dimension | Cloud Provider | Self-Hosted Compatible |
+|----------|----------------|------------------------|
+| Setup friction | Low | Medium to high |
+| Ongoing cost | Variable usage billing | Hardware/power/admin overhead |
+| Privacy boundary | Data leaves machine | Can stay local |
+| Performance consistency | Usually predictable | Depends on host machine |
+| Feature completeness | Usually highest | Often partial or uneven |
+
+Use cloud providers for reliability and broad capability. Use self-hosted compatible providers when privacy, experimentation, or marginal request cost matters more than operational simplicity.
+
+---
+
+## 17. Operational Recommendations
+
+- Keep at least one secondary provider configured.
+- Test structured JSON output during setup, not only plain text completion.
+- Separate cheap classification workloads from premium reasoning workloads.
+- Track provider latency and cost in the dashboard.
+- Expose a clear “degraded mode” state when AI is unavailable.
+
+---
+
+A strong provider abstraction is essential because APEX depends on AI for orchestration, ranking, and operator-facing intelligence, but it must never depend on any single vendor implementation detail.
