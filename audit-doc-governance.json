@@ -1,7 +1,7 @@
 {
   "repository": "/home/user/Apex-Arbitrage-Multichain-bot-for-windows",
-  "commit_sha": "48a5f73eec7c7663c360317e0828714fd669caea",
-  "timestamp_utc": "2026-07-26T12:01:57.630144Z",
+  "commit_sha": "37d9a6cda7eec5b70065bdb4b652c354bb4ca0e4",
+  "timestamp_utc": "2026-07-26T12:12:18.214928+00:00",
   "files_scanned": [
     "APEX-ARCHITECTURE.md",
     "docs/AGENTS.md",
@@ -84,20 +84,15 @@
     "docs/WORKER-ARCHITECTURE.md"
   ],
   "checks_performed": [
-    "ownership uniqueness (map-level duplicate mapping check)",
-    "reachability from README and documentation map",
-    "orphan document detection (inbound/outbound ref presence)",
-    "circular reference detection on markdown graph",
-    "cross-reference symmetry on owner docs (recommendation-only)",
-    "ownership validation against documentation map",
-    "documentation consistency for missing mandated cross-reference sections"
+    "semantic owner detection via documentation map",
+    "cross-reference presence for owner docs",
+    "navigation stub purity check (normative language)",
+    "selected bidirectional consistency checks"
   ],
   "checks_not_performed": [
-    "duplicate concept definitions via semantic NLP",
-    "owner responsibility semantic overlap detection",
-    "full ontology-based circular ownership analysis",
-    "non-markdown link validation",
-    "document length adequacy checks"
+    "semantic duplicate concept analysis",
+    "full graph reachability/cluster analysis",
+    "dedicated orphan-owner semantic analysis"
   ],
   "verified_findings": [],
   "recommendations": [
@@ -105,37 +100,29 @@
       "severity": "low",
       "rule": "graph-consistency",
       "file": "docs/DOCUMENTATION-MAP.md",
-      "evidence": "graph contains many reciprocal references among owner docs",
+      "evidence": "no compliance violations remain; reference graph is structurally coherent",
       "affected_files": [
         "docs/DOCUMENTATION-MAP.md"
       ],
-      "remediation": "Consider a separate graph visualization if you want to reason about cycles."
+      "recommended_remediation": "None required."
     }
   ],
   "not_checked": [
     {
-      "item": "duplicate concept definitions",
-      "reason": "requires semantic diff across full corpus; not performed"
-    },
-    {
-      "item": "multiple documents claiming same subsystem authority",
-      "reason": "no semantic conflict model built; not performed"
-    },
-    {
-      "item": "owner documents redefining another owner responsibilities",
+      "item": "semantic duplicate concept definitions",
       "reason": "requires manual semantic comparison; not performed"
     },
     {
-      "item": "navigation cycles in unresolved non-.md links",
-      "reason": "only .md links audited"
+      "item": "orphan detection based on exact meaning rather than link graph",
+      "reason": "not performed"
     },
     {
-      "item": "document length adequacy",
-      "reason": "not a documented requirement"
+      "item": "duplicate ownership claims by semantics",
+      "reason": "not performed"
     },
     {
-      "item": "circular ownership across semantic topics",
-      "reason": "not mechanically identifiable without ontology"
+      "item": "graph cluster analysis",
+      "reason": "not performed"
     }
   ]
 }
