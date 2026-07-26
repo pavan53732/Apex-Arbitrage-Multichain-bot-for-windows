@@ -1,20 +1,27 @@
 # Opportunity Ranking
 
 ## Purpose
-Ranks opportunities for execution, AI review, or operator attention.
+Ranks detected opportunities for execution or human review.
+
+## Responsibilities
+- Score expected edge, confidence, risk, liquidity, gas, and MEV exposure.
+- Return deterministic ordering for downstream consumers.
 
 ## Inputs
-Detection score, AI confidence, risk score, liquidity score, and execution cost.
+Opportunity candidates, market data, risk profile, AI confidence, chain conditions.
 
 ## Outputs
-Ranked opportunity queue and rationale.
+Ranked opportunities, score breakdowns, and reject reasons.
 
-## Algorithm
-- Combine profitability, confidence, risk, and route quality.
-- Penalize stale, illiquid, or high-risk candidates.
-- Produce a deterministic ranking order.
+## Algorithms
+Weighted scoring with hard gates for risk, liquidity, and freshness.
 
-## Cross-references
-- `OPPORTUNITY-DETECTION.md`
-- `AI-PIPELINE.md`
-- `RISK-ENGINE.md`
+## Thresholds
+Scores below execution threshold are withheld.
+
+## Monitoring
+Ranking throughput, score drift, execution conversion.
+
+## Validation
+Same inputs must produce same ranking.
+

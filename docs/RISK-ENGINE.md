@@ -10,7 +10,7 @@ Authoritative risk evaluation, limits, halts, and approval gating.
 - Trigger emergency stop on policy breaches.
 
 ## Cross-references
-- Strategies: `STRATEGIES.md`.
-- Execution: `EXECUTION-ENGINE.md`.
-- Monitoring: `MONITORING-OBSERVABILITY.md`.
+- `STRATEGIES.md`
+- `EXECUTION-ENGINE.md`
+- `MONITORING-OBSERVABILITY.md`
 

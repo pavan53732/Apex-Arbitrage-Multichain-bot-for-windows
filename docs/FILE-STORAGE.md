@@ -1,18 +1,10 @@
-# FILE-STORAGE.md
+# File Storage
 
 ## Purpose
-Defines local file locations, retention, encryption expectations, and which data types may be persisted to disk.
+Defines file-based persistence, export/import, retention, and restore-related artifacts.
 
-## Related Documents
-- [DATABASE-SCHEMA.md](./DATABASE-SCHEMA.md)
-- [SECURITY.md](./SECURITY.md)
-- [CONFIGURATION.md](./CONFIGURATION.md)
+## Cross-references
+- `DATABASE-SCHEMA.md`
+- `RUNTIME-OPERATIONS.md`
+- `SECURITY.md`
 
-## Storage Classes
-- config
-- secrets
-- sqlite database
-- logs
-- exports
-- temporary caches
-- update artifacts

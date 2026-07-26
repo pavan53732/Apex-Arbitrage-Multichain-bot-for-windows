@@ -1,11 +1,10 @@
-# FEATURE-MATRIX.md
+# Feature Matrix
 
 ## Purpose
-Tracks which capabilities exist, are planned, are deferred, or are intentionally excluded.
+Maps platform capabilities to delivery status and owning subsystems.
 
-## Columns
-- feature
-- status
-- owner doc
-- implementation phase
-- notes
+## Cross-references
+- `IMPLEMENTATION-ROADMAP.md`
+- `ENHANCEMENT-ROADMAP.md`
+- `STRATEGIES.md`
+

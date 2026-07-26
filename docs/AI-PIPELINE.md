@@ -1,73 +1,78 @@
 # AI Pipeline
 
 ## Purpose
-This document is the authoritative implementation specification for AI decisioning, prompt handling, retrieval, validation, execution gating, and learning feedback.
+This document is the authoritative specification for AI decision lifecycle, prompt lifecycle, provider routing, confidence scoring, explainability, and learning behavior.
 
-## Shared AI contract
-Every AI decision must define decision lifecycle, prompt lifecycle, context assembly, retrieval pipeline, memory usage, model routing, confidence scoring, opportunity scoring, risk scoring, validation pipeline, human approval workflow, autonomous execution rules, retry behavior, fallback models, explainability, prompt versioning, feedback loop, learning lifecycle, performance metrics, failure handling, and recovery behavior.
+## Decision contract
+AI may rank, explain, or recommend, but it cannot bypass risk, security, wallet, or execution policy checks.
 
 ## Decision lifecycle
-Ingest input -> assemble context -> retrieve memory -> build prompt -> route model -> score output -> validate -> approve or hold -> execute or reject -> persist feedback.
+Ingest context -> retrieve memory -> assemble prompt -> select model -> generate candidate -> score confidence -> score opportunity -> score risk -> validate -> approve or reject -> execute or hold -> record outcome -> learn.
+
+## Prompt lifecycle
+Prompts are versioned artifacts. Each prompt has a template id, version, effective date, model compatibility, risk mode, and rollback path. A prompt version may not be promoted unless validation passes.
 
 ## Context assembly
-Context combines market data, strategy state, portfolio state, risk state, wallet/chain health, recent executions, and user settings. Context must be freshness-checked and size-limited.
+Context includes market data, strategy state, portfolio state, wallet state, prior decisions, and system configuration. Only policy-approved fields may be included.
 
 ## Retrieval pipeline
-The retrieval pipeline pulls relevant historical decisions, strategy templates, and operational memory relevant to the current opportunity. Retrieval results must be ranked and deduplicated before prompt assembly.
+Retrieval first checks local memory, then approved knowledge sources, then current market state. Retrieval must be deterministic for the same inputs.
 
 ## Memory usage
-Memory is advisory only. It may improve ranking or explainability but cannot replace live market data or hard safety checks.
+Memory is advisory and must be labeled by freshness and source trust. Stale or low-trust memory may not override live data.
 
 ## Model routing
-Model selection is based on task type, confidence requirements, latency budget, and configured provider availability. Routing must fall back deterministically when a primary provider fails.
+Model selection depends on task type, cost ceiling, latency budget, and risk mode. Fallback models are pre-authorized and ordered.
 
 ## Confidence scoring
-Confidence is a bounded score derived from model output quality, retrieval quality, market freshness, and validation strength.
+Confidence is a bounded score derived from model output quality, retrieval support, and data freshness.
 
 ## Opportunity scoring
-Opportunity score combines AI estimate, deterministic strategy score, and route quality. AI score never overrides hard risk gates.
+AI may rank opportunities, but final ranking must be bounded by deterministic market, liquidity, and risk rules.
 
 ## Risk scoring
-Risk score summarizes exposure, volatility, liquidity, and execution risk. High risk can suppress autonomous execution regardless of AI confidence.
+Risk score combines drawdown, liquidity, volatility, slippage, execution, and chain-health features.
 
 ## Validation pipeline
-Validate prompt completeness, response schema, safety rules, route legitimacy, and risk policy before any execution handoff.
+Validate structure, policy compliance, safety constraints, and consistency with live market inputs.
 
 ## Human approval workflow
-If the configured policy requires approval, the AI may recommend but must wait for operator acceptance before execution.
+Human approval is required when policy mode, risk level, or operator settings demand review. Human rejection always wins.
 
 ## Autonomous execution rules
-Autonomous execution is allowed only when the configured policy, risk rules, wallet policy, and confidence thresholds all pass.
+Autonomous execution is allowed only when confidence, opportunity, and risk thresholds pass and no approval gate is required.
 
-## Retry behavior
-Transient provider errors may be retried with bounded backoff and capped attempts. Prompt reconstruction is allowed if context freshness remains valid.
+## Retry behaviour
+Transient provider failures may retry with bounded attempts and backoff. Prompt failures do not bypass validation.
 
 ## Fallback models
-A lower-tier or alternate provider may be used if the primary model is unavailable, but fallback cannot weaken safety policy.
+Fallback models are used in priority order when the primary provider fails or becomes unavailable.
 
 ## Explainability
-Each decision must preserve a human-readable rationale, key factors, and the validation outcome that led to execution or rejection.
+Every actionable AI output must include rationale, supporting inputs, confidence, and the reasons for any rejection.
 
 ## Prompt versioning
-Prompt templates are versioned. A decision record must reference the prompt version used.
+Prompt versions are tracked with content hash, owner, release channel, and rollback target.
 
 ## Feedback loop
-Each executed or rejected decision produces feedback on outcome, confidence calibration, and error patterns.
+Execution outcomes feed back into evaluation metadata. Negative outcomes may reduce confidence or trigger model review.
 
 ## Learning lifecycle
-Learning is offline and governed by versioned feedback artifacts. It can tune ranking weights or prompts, but not override hard safety rules.
+Learning is offline-by-default unless explicitly enabled by configuration and governance policy.
 
 ## Performance metrics
-Latency, success rate, validation pass rate, confidence calibration, fallback rate, and operator override rate.
+Track confidence calibration, approval rate, precision, latency, fallback rate, and outcome quality.
 
 ## Failure handling
-Model timeout, bad schema, unsafe suggestion, stale context, retrieval failure, or provider outage must fail closed.
+Handle provider timeout, empty response, malformed output, stale context, and model drift as explicit failure states.
 
-## Recovery behavior
-On failure, recompute context, switch provider, or hold the opportunity. No unsafe execution may proceed during recovery.
+## Recovery behaviour
+Recover by falling back to a lower-priority model, human review, or no-trade according to policy.
 
 ## Cross-references
-- Strategy behavior: `STRATEGIES.md`
-- Simulation behavior: `SIMULATION-ENGINE.md`
+- Strategy rules: `STRATEGIES.md`
+- Simulation: `SIMULATION-ENGINE.md`
 - Monitoring: `MONITORING-OBSERVABILITY.md`
-- Risk rules: `RISK-ENGINE.md`
+- Risk: `RISK-ENGINE.md`
+- Configuration: `CONFIGURATION.md`
+

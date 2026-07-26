@@ -1,11 +1,11 @@
 # APEX Architecture
 
 ## Purpose
-Top-level index for the specification set.
+Top-level index for the implementation specification set.
 
 ## Cross-references
-- Documentation map: `docs/DOCUMENTATION-MAP.md`.
-- Architecture: `docs/ARCHITECTURE.md`.
-- Trading engine: `docs/TRADING-ENGINE.md`.
-- Execution engine: `docs/EXECUTION-ENGINE.md`.
+- `docs/DOCUMENTATION-MAP.md`
+- `docs/ARCHITECTURE.md`
+- `docs/TRADING-ENGINE.md`
+- `docs/EXECUTION-ENGINE.md`
 

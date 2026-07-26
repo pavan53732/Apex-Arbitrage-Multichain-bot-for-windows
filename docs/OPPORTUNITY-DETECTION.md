@@ -1,20 +1,28 @@
 # Opportunity Detection
 
 ## Purpose
-Identifies candidate opportunities from market data and strategy inputs.
+Detects candidate opportunities from market, chain, and strategy inputs.
+
+## Responsibilities
+- Ingest market data and token/pair metadata.
+- Produce candidate opportunities.
+- Reject stale, illiquid, or policy-violating candidates.
 
 ## Inputs
-Market data, volatility, liquidity, price dislocation, and strategy configuration.
+Market snapshots, liquidity signals, token/pair scores, chain status, strategy requirements, AI hints.
 
 ## Outputs
-Candidate opportunity record and detection score.
+Candidate list, reason codes, confidence, and timestamps.
 
-## Algorithm
-- Scan for spreads, trends, or statistical signals.
-- Filter stale or unviable candidates.
-- Emit normalized opportunity records for ranking.
+## Algorithms
+Rule-based filters, freshness gates, and strategy-specific pattern detectors.
 
-## Cross-references
-- `MARKET-DATA.md`
-- `OPPORTUNITY-RANKING.md`
-- `STRATEGIES.md`
+## Thresholds
+Candidates below freshness or liquidity thresholds are rejected.
+
+## Monitoring
+Candidate rate, rejection rate, freshness failures.
+
+## Validation
+Determinism for same input snapshot.
+

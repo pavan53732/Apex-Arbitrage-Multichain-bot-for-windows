@@ -4,6 +4,6 @@
 Provides navigation to the authoritative documentation set.
 
 ## Cross-references
-- Overview: `APEX-ARCHITECTURE.md`.
-- Ownership map: `DOCUMENTATION-MAP.md`.
+- `APEX-ARCHITECTURE.md`
+- `DOCUMENTATION-MAP.md`
 

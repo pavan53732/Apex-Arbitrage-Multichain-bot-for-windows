@@ -1,14 +1,10 @@
-# NON-FUNCTIONAL-REQUIREMENTS.md
+# Non-Functional Requirements
 
 ## Purpose
-Defines cross-cutting system qualities required of the application beyond functional behavior.
+Defines global performance, reliability, security, maintainability, and operability goals.
 
-## Scope
-Security, reliability, maintainability, auditability, usability, portability, performance, recoverability.
+## Cross-references
+- `PERFORMANCE-TARGETS.md`
+- `SECURITY.md`
+- `MONITORING-OBSERVABILITY.md`
 
-## Requirements
-- The app must fail safe by default.
-- Secrets must be encrypted at rest.
-- Core domain logic must be testable without Electron.
-- Documentation must remain the implementation source of truth.
-- User-facing safety controls must be available before enabling automation.

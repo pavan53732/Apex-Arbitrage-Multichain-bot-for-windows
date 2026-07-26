@@ -7,7 +7,7 @@ Defines the canonical repository layout and ownership boundaries for implementat
 The implementation will use a multi-package structure for apps, packages, scripts, assets, tests, and contracts.
 
 ## Cross-references
-- Architecture: `ARCHITECTURE.md`.
-- Dependencies: `MODULE-DEPENDENCY.md`.
-- Release pipeline: `BUILD-RELEASE-CICD.md`.
+- `ARCHITECTURE.md`
+- `MODULE-DEPENDENCY.md`
+- `BUILD-RELEASE-CICD.md`
 

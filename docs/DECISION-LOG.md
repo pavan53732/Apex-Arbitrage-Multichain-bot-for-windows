@@ -1,9 +1,9 @@
-# DECISION-LOG.md
+# Decision Log
 
 ## Purpose
-Stores architectural decisions that affect implementation so future AI sessions do not reverse or reinterpret settled choices.
+Records durable architecture and product decisions with rationale and cross-links.
 
-## Rules
-- Record date, decision, context, options considered, and consequence.
-- Link each decision to affected docs.
-- Superseded decisions must remain visible with status markers.
+## Cross-references
+- `ARCHITECTURE.md`
+- `DOCUMENTATION-MAP.md`
+
