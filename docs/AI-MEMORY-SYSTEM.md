@@ -63,3 +63,6 @@ A trade outcome is stored in trade memory, summarized into strategy memory, and 
 
 ## Future compatibility notes
 Additional retrieval backends may be added without changing memory layers.
+
+## Required details
+- Define Windows persistence and memory tiers.

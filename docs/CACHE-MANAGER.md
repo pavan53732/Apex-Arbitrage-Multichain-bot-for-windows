@@ -27,3 +27,6 @@ A stale price cache entry is invalidated after a new market tick arrives.
 
 ## Cache limits
 - Must define TTL, eviction, and freshness windows by domain.
+
+## Required details
+- Define TTL, eviction, and freshness values.

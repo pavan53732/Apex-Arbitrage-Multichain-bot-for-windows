@@ -16,3 +16,6 @@ A primary button uses the same spacing and color semantics across screens.
 
 ## UI rules
 - Must define dashboard states, colors, and accessibility for trading UI.
+
+## Required details
+- Define visual tokens and accessibility.

@@ -36,3 +36,6 @@ An input is validated before any state-changing action.
 
 ## Rollout rules
 - Must define environment overrides and strategy rollout controls.
+
+## Required details
+- Define rollout, scope, and override behavior.

@@ -29,3 +29,6 @@ Defines security invariants for wallets, plugins, secrets, approvals, permission
 
 ## Example
 A wallet action requires explicit permission and audit logging.
+
+## Required details
+- Define secret storage, signing, audit logs, and escalation rules.

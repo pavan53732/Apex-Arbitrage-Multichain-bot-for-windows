@@ -16,3 +16,6 @@ Defines how the backend runs, recovers, and stays observable in production.
 - `SHUTDOWN-LIFECYCLE.md`
 - `HEALTHCHECKS.md`
 - `MONITORING-OBSERVABILITY.md`
+
+## Required details
+- Define service, tray, proxy, recovery, and monitoring behavior.

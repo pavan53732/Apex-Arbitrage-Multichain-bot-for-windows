@@ -61,3 +61,6 @@ An input is validated before any state-changing action.
 
 ## Windows determinism
 - Must define line endings, path handling, and timer resolution considerations on Windows.
+
+## Required details
+- Define deterministic replay and Windows file/timing differences.

@@ -25,3 +25,6 @@ Defines provider adapter inputs, outputs, capability declarations, errors, and c
 
 ## Example
 An OpenAI-compatible adapter exposes streaming, JSON, embeddings, and tool-calling capabilities.
+
+## Required details
+- Define model request, response, error, and resource limits.

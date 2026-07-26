@@ -69,3 +69,6 @@ An input is validated before any state-changing action.
 
 ## Arbitrage workers
 - Must define worker roles for scanning, matching, execution, and reconciliation.
+
+## Required details
+- Define worker roles and failure boundaries.

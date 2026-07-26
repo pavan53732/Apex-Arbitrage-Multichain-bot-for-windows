@@ -66,3 +66,6 @@ Market Agent + Risk Agent + Planner Agent converge before the Decision Engine ac
 
 ## Future compatibility notes
 Additional agents may be added without changing consensus semantics.
+
+## Required details
+- Define fallback, failure, and approval behavior for consensus misses.

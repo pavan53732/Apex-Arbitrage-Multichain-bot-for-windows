@@ -75,3 +75,6 @@ An input is validated before any state-changing action.
 
 ## Routing behavior
 - Must define failover, chain changes, and proxy-aware routing.
+
+## Required details
+- Define routing failover and proxy-aware decisions.

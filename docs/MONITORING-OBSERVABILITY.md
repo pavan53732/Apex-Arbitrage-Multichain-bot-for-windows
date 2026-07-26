@@ -63,3 +63,6 @@ An input is validated before any state-changing action.
 
 ## Windows telemetry
 - Must define Event Log and Windows performance telemetry integration.
+
+## Required details
+- Define Event Log, counters, dashboards, and alerting.

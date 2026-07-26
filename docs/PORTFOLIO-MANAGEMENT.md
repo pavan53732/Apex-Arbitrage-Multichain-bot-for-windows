@@ -18,3 +18,6 @@ Defines portfolio ownership, allocation, rebalancing, exposure limits, and walle
 
 ## Example
 A portfolio rebalance is blocked if exposure exceeds policy.
+
+## Required details
+- Define multi-wallet aggregation and reconciliation.

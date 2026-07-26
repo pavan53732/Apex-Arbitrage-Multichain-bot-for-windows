@@ -30,3 +30,6 @@ A worker service transitions to paused during maintenance.
 
 ## Windows service lifecycle
 - Must define SCM states and recovery actions.
+
+## Required details
+- Define SCM lifecycle states and recovery actions.

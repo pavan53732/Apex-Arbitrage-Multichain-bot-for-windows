@@ -18,3 +18,7 @@ Defines provider pool management, health, rotation, failover, latency, routing, 
 
 ## Example
 A slow RPC endpoint is rotated out after repeated latency breaches.
+
+## Required details
+- Define endpoint config, websocket support, retry, and proxy handling.
+- Define failover and custom RPC registration.

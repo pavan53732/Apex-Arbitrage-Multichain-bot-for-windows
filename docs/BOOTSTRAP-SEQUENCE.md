@@ -21,3 +21,6 @@ Kernel starts before workers and providers before the dashboard becomes interact
 
 ## Bootstrap steps
 - Must define ordered startup steps, service registration, and UAC handling.
+
+## Required details
+- Define ordered startup and elevation steps.

@@ -16,3 +16,6 @@ Defines the complete tool surface available to AI agents, including permissions,
 
 ## Example
 The risk agent uses a tool to query exposure before consensus.
+
+## Required details
+- Define tool schema and permissions.

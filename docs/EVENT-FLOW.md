@@ -21,3 +21,6 @@ OpportunityDiscovered leads to RiskCalculated, SimulationPassed, and ExecutionSu
 ## Arbitrage events
 - Must define opportunity, spread, execution, fill, failure, and expiry events.
 - Must define Windows Event Log integration for critical events.
+
+## Required details
+- Define opportunity, execution, fill, failure, and expiry events.

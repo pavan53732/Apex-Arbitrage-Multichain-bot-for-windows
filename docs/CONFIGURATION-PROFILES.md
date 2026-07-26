@@ -35,3 +35,6 @@ A production profile enables stricter risk limits than a sandbox profile.
 
 ## Arbitrage profiles
 - Must define profile presets for low-latency, cross-exchange, and simulation use cases.
+
+## Required details
+- Define named profiles and their settings.

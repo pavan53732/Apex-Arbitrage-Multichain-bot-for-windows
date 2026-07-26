@@ -16,3 +16,6 @@ Defines the end-to-end trading decision and execution coordination layer.
 - `EXECUTION-ENGINE.md`
 - `ORCHESTRATOR.md`
 - `RISK-ENGINE.md`
+
+## Required details
+- Define service mode, crash recovery, and desktop state surfaces.

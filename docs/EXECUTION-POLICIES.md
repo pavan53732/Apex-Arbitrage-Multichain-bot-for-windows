@@ -32,3 +32,6 @@ Defines execution permissions, sequencing, retries, stop conditions, and excepti
 
 ## Example
 A policy prevents execution when risk checks fail.
+
+## Required details
+- Define risk, slippage, timing, and proxy-related policy limits.

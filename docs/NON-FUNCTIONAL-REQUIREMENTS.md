@@ -49,3 +49,6 @@ An input is validated before any state-changing action.
 
 ## Windows requirements
 - Must define performance, reliability, and security requirements for Windows.
+
+## Required details
+- Define Windows performance, reliability, and security targets.

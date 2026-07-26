@@ -99,3 +99,6 @@ An input is validated before any state-changing action.
 
 ## Transport contracts
 - Must define error mapping, versioning, and protocol compatibility.
+
+## Required details
+- Define transport and error compatibility.

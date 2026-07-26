@@ -14,3 +14,6 @@ Defines the concrete health checks that prove the system is ready to trade.
 ## Failure handling
 - Any critical failure must block autonomous trading.
 - Health failures must publish alerts and recovery actions.
+
+## Required details
+- Define concrete checks and thresholds.

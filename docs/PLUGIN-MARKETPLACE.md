@@ -18,3 +18,6 @@ A strategy plugin is listed only after validation, signing, and approval.
 
 ## Plugin lifecycle
 - Must define installation, sandboxing, versioning, and uninstall behavior.
+
+## Required details
+- Define install, remove, sandbox, and ranking behavior.

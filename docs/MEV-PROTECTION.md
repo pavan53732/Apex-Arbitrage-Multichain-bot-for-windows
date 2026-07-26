@@ -51,3 +51,6 @@ An input is validated before any state-changing action.
 
 ## Protection detail
 - Must define private relay behavior and simulation checks.
+
+## Required details
+- Define private routing and sandbox protections.

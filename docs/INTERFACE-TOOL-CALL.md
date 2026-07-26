@@ -25,3 +25,6 @@ Defines AI tool invocation shape, permissions, arguments, result handling, and e
 
 ## Example
 The AI asks the risk tool for exposure metrics before recommending execution.
+
+## Required details
+- Define tool arguments, outputs, permissions, and sandbox constraints.

@@ -39,3 +39,6 @@ Defines provider failover, redundancy, circuit breaking, and recovery behavior.
 
 ## Example
 A backup provider takes over after repeated timeout errors.
+
+## Required details
+- Define provider health, latency, weighting, and circuit breaker behavior.

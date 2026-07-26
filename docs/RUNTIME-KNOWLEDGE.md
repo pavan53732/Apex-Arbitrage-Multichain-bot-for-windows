@@ -36,3 +36,6 @@ The dashboard reads runtime knowledge to show active workers and healthy provide
 
 ## Windows runtime context
 - Must define tray, notifications, and service state visibility.
+
+## Required details
+- Define runtime state and Windows surfaces.

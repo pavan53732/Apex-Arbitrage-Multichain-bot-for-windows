@@ -36,3 +36,6 @@ Defines optimization objectives, constraints, scoring, and route comparison logi
 
 ## Example
 The optimizer prefers the route with the best net expected return.
+
+## Required details
+- Define scoring, validation, replay, and batch optimization behavior.

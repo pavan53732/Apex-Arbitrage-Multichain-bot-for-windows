@@ -34,3 +34,6 @@ A compact layout collapses secondary panels on smaller screens.
 
 ## Windows layout
 - Must define layout persistence and DPI behavior.
+
+## Required details
+- Define layout persistence and DPI support.

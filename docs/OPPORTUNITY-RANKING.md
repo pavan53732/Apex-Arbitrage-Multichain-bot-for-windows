@@ -37,3 +37,6 @@ Defines the scoring inputs, weighting model, thresholds, tie-breaking, and confi
 
 ## Example
 A route with low gas and high historical success outranks a marginally profitable alternative.
+
+## Required details
+- Define thresholds, tie-breaks, freshness, and score drift rules.

@@ -21,3 +21,6 @@ Defines channels, severities, delivery guarantees, retry policy, and escalation 
 
 ## Example
 A high-severity execution failure is routed to the notification center and operator channel.
+
+## Required details
+- Define toast persistence, delivery guarantees, and priority routing.

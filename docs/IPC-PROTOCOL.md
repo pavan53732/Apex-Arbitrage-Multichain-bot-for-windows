@@ -10,3 +10,6 @@ Defines the application IPC contract between desktop UI and backend services.
 ## Contract
 - Every message needs a producer, consumer, type, and payload schema.
 - Messages must define error response behavior and compatibility rules.
+
+## Required details
+- Define Windows transport, schema, and version compatibility.

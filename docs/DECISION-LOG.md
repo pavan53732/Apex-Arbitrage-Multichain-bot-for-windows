@@ -62,3 +62,6 @@ Trade executed after simulation passed, risk accepted, and policy approved; late
 
 ## Future compatibility notes
 Structured event linkage may be added while preserving append-only history.
+
+## Required details
+- Capture decisions, rationale, alternatives, and implementation owners.

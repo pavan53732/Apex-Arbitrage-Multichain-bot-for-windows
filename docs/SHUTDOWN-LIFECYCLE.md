@@ -36,3 +36,6 @@ Defines graceful shutdown, queue flushing, state persistence, worker stop order,
 
 ## Example
 Execution stops before caches are flushed and state is saved.
+
+## Required details
+- Define graceful stop, drain, flush, and forced shutdown behavior.

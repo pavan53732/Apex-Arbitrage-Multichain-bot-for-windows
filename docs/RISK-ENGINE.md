@@ -19,3 +19,6 @@ Defines trading risk checks used before and during execution.
 - `EXECUTION-ENGINE.md`
 - `ARBITRAGE-WINDOW-MANAGER.md`
 - `OPPORTUNITY-RANKING.md`
+
+## Required details
+- Define formulas, limits, and abort behavior for arb risk.

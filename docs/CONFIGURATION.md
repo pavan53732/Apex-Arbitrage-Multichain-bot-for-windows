@@ -49,3 +49,6 @@ An input is validated before any state-changing action.
 
 ## Windows config
 - Must define config file locations and Windows-specific overrides.
+
+## Required details
+- Define Windows config and environment handling.

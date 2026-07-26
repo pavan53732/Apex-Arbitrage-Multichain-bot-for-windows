@@ -36,3 +36,6 @@ An input is validated before any state-changing action.
 
 ## Arbitrage explanations
 - Must explain why opportunities were taken or skipped.
+
+## Required details
+- Define why decisions were taken or skipped.

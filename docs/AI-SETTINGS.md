@@ -33,3 +33,6 @@ A balanced profile uses reasoning with a smaller context window and JSON output 
 
 ## Windows AI settings
 - Must define local model path and per-user profile isolation on Windows.
+
+## Required details
+- Define local inference and per-user isolation.

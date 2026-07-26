@@ -20,3 +20,6 @@ An input is validated before any state-changing action.
 
 ## Repository layout
 - Must define the actual directories for app, service, docs, and installers.
+
+## Required details
+- Define repo directories and installer layout.

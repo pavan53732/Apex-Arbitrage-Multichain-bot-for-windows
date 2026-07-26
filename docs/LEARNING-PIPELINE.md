@@ -49,3 +49,6 @@ An input is validated before any state-changing action.
 
 ## Windows learning workflow
 - Must define local storage paths and GPU/CPU training behavior on Windows.
+
+## Required details
+- Define local storage, model updates, and feedback loops.

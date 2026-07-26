@@ -40,3 +40,6 @@ A wallet widget shows balance, exposure, and status in one view.
 
 ## Trading widgets
 - Must define widgets for spread, P&L, order book, MEV, and execution status.
+
+## Required details
+- Define widget behavior and live update cadence.

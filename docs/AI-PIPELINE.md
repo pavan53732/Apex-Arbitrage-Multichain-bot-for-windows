@@ -16,3 +16,6 @@ Defines AI request routing, prompt lifecycle, provider routing, confidence scori
 - `MODEL-CAPABILITY-NEGOTIATION.md`
 - `RUNTIME-OPERATIONS.md`
 - `INTERFACE-AGENT-MESSAGE.md`
+
+## Required details
+- Define Windows proxy, notification, GPU fallback, and restart recovery.

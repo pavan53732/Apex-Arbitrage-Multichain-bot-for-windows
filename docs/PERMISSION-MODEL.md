@@ -20,3 +20,6 @@ A read-only user cannot submit execution commands.
 ## Windows permissions
 - Must define user, admin, and service account permissions.
 - Must define UAC elevation and scheduled task permissions.
+
+## Required details
+- Define user, admin, and service permissions plus UAC escalation boundaries.

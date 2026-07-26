@@ -17,3 +17,6 @@ Defines submission, confirmation, replacement, cancellation, and finality handli
 - `DATABASE-SCHEMA.md`
 - `GAS-OPTIMISATION.md`
 - `WALLET-MANAGEMENT.md`
+
+## Required details
+- Define replacement logic, persistence, and Windows restart recovery.

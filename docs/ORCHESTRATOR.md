@@ -16,3 +16,6 @@ Defines the system coordinator that sequences AI, trading, and runtime actions.
 - `RUNTIME-OPERATIONS.md`
 - `TRADING-LIFECYCLE.md`
 - `EXECUTION-LIFECYCLE.md`
+
+## Required details
+- Define startup, retry, and cross-subsystem sequencing.

@@ -16,3 +16,6 @@ Defines chain transaction execution, confirmation, cancellation, and recovery.
 - `RISK-ENGINE.md`
 - `GAS-OPTIMISATION.md`
 - `MEV-PROTECTION.md`
+
+## Required details
+- Define wallet permissions, proxy, firewall, and crash recovery.

@@ -18,3 +18,6 @@ The guide explains how to review trade status before approving an action.
 
 ## Windows user actions
 - Must define install, first-run, tray, and update steps for end users.
+
+## Required details
+- Define install, update, tray, and first-run help.

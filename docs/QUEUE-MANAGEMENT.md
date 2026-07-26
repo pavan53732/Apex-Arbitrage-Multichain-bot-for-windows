@@ -56,3 +56,6 @@ An input is validated before any state-changing action.
 
 ## Arbitrage prioritization
 - Must define priority handling for latency-sensitive arbitrage signals.
+
+## Required details
+- Define priority, arbitration, and latency handling.

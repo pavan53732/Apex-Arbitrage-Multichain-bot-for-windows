@@ -26,3 +26,6 @@ Defines plugin installation, validation, loading, initialization, runtime, disab
 
 ## Example
 A plugin is unloaded before version migration.
+
+## Required details
+- Define signing, versioning, sandboxing, and side-by-side plugin behavior.

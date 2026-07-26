@@ -23,3 +23,6 @@ Defines how responses, decisions, and prompts are reviewed for confidence, error
 
 ## Example
 A failed recommendation is analyzed and turned into a prompt refinement action.
+
+## Required details
+- Define reflection inputs and decision quality criteria.

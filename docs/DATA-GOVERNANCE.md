@@ -39,3 +39,6 @@ A market dataset is rejected if provenance is missing.
 
 ## Windows storage governance
 - Must define AppData/ProgramData use, retention, encryption, and backup behavior.
+
+## Required details
+- Define storage, retention, encryption, and audit rules.

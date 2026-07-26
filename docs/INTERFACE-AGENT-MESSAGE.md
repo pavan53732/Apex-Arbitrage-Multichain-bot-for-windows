@@ -25,3 +25,6 @@ Defines message envelope, routing fields, correlation, priority, and validation 
 
 ## Example
 A planner message includes task id, origin agent, destination agent, priority, and payload type.
+
+## Required details
+- Define transport-agnostic payloads and correlation IDs.

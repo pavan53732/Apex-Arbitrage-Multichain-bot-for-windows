@@ -33,3 +33,6 @@ A routing policy blocks execution when cost exceeds target.
 
 ## Arbitrage policies
 - Must define spread, latency, and loss-limit policies.
+
+## Required details
+- Define policy inputs, limits, and enforcement.

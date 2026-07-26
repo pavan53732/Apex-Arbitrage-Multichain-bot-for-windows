@@ -36,3 +36,6 @@ An input is validated before any state-changing action.
 
 ## Windows deployments
 - Must define installer, auto-update, and rollback patterns.
+
+## Required details
+- Define installer and update channels.

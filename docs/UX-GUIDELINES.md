@@ -24,3 +24,6 @@ Defines interaction principles, accessibility expectations, feedback timing, and
 
 ## Example
 A destructive action requires clear confirmation and reversible feedback.
+
+## Required details
+- Define trading UI layout, accessibility, and density rules.

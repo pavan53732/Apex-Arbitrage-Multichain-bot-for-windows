@@ -17,3 +17,6 @@ Defines the actual IPC message types used by the desktop app and backend.
 - Notifications.
 - Healthcheck results.
 - Plugin and config updates.
+
+## Required details
+- Define actual messages and their producers/consumers.

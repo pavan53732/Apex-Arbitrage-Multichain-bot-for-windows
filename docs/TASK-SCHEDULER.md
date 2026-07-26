@@ -34,3 +34,6 @@ An input is validated before any state-changing action.
 
 ## Scheduling rules
 - Must define priority, timing resolution, and background worker scheduling.
+
+## Required details
+- Define timing resolution and priority scheduling.

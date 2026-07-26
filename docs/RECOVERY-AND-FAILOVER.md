@@ -58,3 +58,6 @@ An input is validated before any state-changing action.
 
 ## Windows recovery
 - Must define service recovery, restart behavior, and in-flight transaction cleanup.
+
+## Required details
+- Define restart, failover, and cleanup recovery semantics.

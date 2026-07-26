@@ -12,3 +12,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Required details
+- Define formatting, testing, and packaging expectations.

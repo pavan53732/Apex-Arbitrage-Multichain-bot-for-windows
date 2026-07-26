@@ -363,3 +363,6 @@ An input is validated before any state-changing action.
 
 ## Streaming interface
 - Must define real-time feeds and versioned endpoint behavior.
+
+## Required details
+- Define streaming, versioning, and rate limits.

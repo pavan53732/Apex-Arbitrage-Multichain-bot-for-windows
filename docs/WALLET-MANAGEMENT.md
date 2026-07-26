@@ -19,3 +19,6 @@ Defines wallet inventory, labeling, address hygiene, funding status, and authori
 
 ## Example
 An active wallet is excluded from trading if its funding falls below threshold.
+
+## Required details
+- Define credential storage, hardware wallet integration, and recovery.

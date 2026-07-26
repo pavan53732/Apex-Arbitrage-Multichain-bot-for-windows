@@ -17,3 +17,7 @@ Defines the Windows desktop shell for the trading application.
 - `UI-DASHBOARD-SPEC.md`
 - `WINDOWS-NOTIFICATION-INTEGRATION.md`
 - `WORKSPACE-MANAGER.md`
+
+## Required details
+- Define tray menu actions, window restore, DPI scaling, and multi-monitor rules.
+- Define startup, shutdown, and offline state behavior.

@@ -42,3 +42,6 @@ Defines the lifecycle from pre-checks through simulation, approval, submission, 
 
 ## Example
 Execution pauses if confirmations are not received within policy.
+
+## Required details
+- Define preflight, send, pending, confirm, replace, cancel, and finality rules.

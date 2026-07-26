@@ -32,3 +32,6 @@ Defines route features, weights, score calculation, and selection criteria.
 
 ## Example
 A route with stronger liquidity and lower cost ranks higher.
+
+## Required details
+- Define scoring formula, weights, calibration, and drift checks.

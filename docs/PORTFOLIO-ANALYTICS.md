@@ -15,3 +15,6 @@ A report shows exposure, realized PnL, drawdown, and strategy contribution.
 
 ## Portfolio UI
 - Must define live analytics, export, and widget behavior.
+
+## Required details
+- Define live analytics and export behavior.

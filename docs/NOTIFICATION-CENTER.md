@@ -16,3 +16,6 @@ An input is validated before any state-changing action.
 ## Windows delivery
 - Must define which alerts become Windows toasts versus in-app banners.
 - Must define persistence after restart and user preference controls.
+
+## Required details
+- Define toast vs in-app routing, severity mapping, and restart persistence.

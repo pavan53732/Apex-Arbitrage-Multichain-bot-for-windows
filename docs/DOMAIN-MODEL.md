@@ -30,3 +30,6 @@ A portfolio always belongs to a single wallet owner.
 
 ## Windows entities
 - Must define Windows app/session/service entities where applicable.
+
+## Required details
+- Define Windows entities where needed.

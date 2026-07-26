@@ -17,3 +17,6 @@ Defines the dashboard UI contract, data binding, refresh behavior, and interacti
 
 ## Example
 A chart widget refreshes after a new trade completes.
+
+## Required details
+- Define panel layout, refresh cadence, interactions, and error states.
