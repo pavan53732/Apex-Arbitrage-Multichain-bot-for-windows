@@ -1,76 +1,83 @@
 # Runtime Operations
 
 ## Purpose
-Defines workers, scheduling, queues, failover, backups, restore, upgrades, and diagnostics.
+Defines worker lifecycle, scheduling, queues, orchestration, cache, plugins, recovery, failover, backup, restore, upgrade, migration, health monitoring, telemetry, diagnostics, logging, and alerting.
 
 ## Ownership
-- Owns worker lifecycle, scheduler policy, queue orchestration, cache maintenance, failover, backup, restore, upgrade, and migration workflows.
-- Consumes monitoring, logging, configuration, and recovery owners.
-
-## Responsibilities
-- Start and stop background workers deterministically.
-- Schedule recurring and one-off tasks.
-- Route jobs through typed queues with retry and dead-letter handling.
-- Maintain cache invalidation and state synchronization.
-- Execute restore, upgrade, and migration steps in a safe order.
-- Surface health, diagnostics, and alerts.
+- Owns runtime orchestration, worker lifecycle, scheduling, queues, cache coordination, failover, and operational tooling.
+- Does not own trading rules, AI policy, or risk policy.
 
 ## Worker lifecycle
-Stopped -> Starting -> Ready -> Busy -> Draining -> Stopped.
-Failure paths: Ready -> Failed -> Recovering -> Ready or Stopped.
+Stopped -> Starting -> Warmup -> Ready -> Busy -> Draining -> Stopped.
 
-### Transition rules
-- Starting -> Ready only after configuration validation, dependency checks, and warmup complete.
-- Ready -> Busy only when a queued job is assigned.
-- Busy -> Draining when shutdown or maintenance is requested.
-- Any state -> Failed when a worker encounters an unrecoverable fault.
-- Failed -> Recovering when automated restart is allowed.
-- Recovering -> Ready only after health checks pass.
-- Recovering -> Stopped when recovery budget is exceeded or operator stop is requested.
-
-## Scheduler model
-- Tasks have id, owner, priority, run window, retry policy, timeout, and concurrency class.
-- Higher priority tasks may preempt lower priority queued work only when safe.
-- Scheduler must avoid duplicate execution of idempotent jobs.
-- Scheduler decisions must be reproducible from task metadata and current state.
+## Scheduler
+- Schedules time-based, priority-based, and dependency-based jobs.
+- Must honor execution-critical priority over enrichment tasks.
 
 ## Queue management
-- Separate queues for market data, AI, execution, reconciliation, alerts, and maintenance.
-- Each queue has bounded concurrency and bounded retry.
-- Poison messages move to dead-letter storage with reason codes.
-- Queue state changes must emit durable events for monitoring and recovery.
+- Queues are ordered, bounded, and observable.
+- Dead-letter queues capture unrecoverable tasks.
+- Retries must be idempotent and bounded.
+
+## Task orchestration
+- Tasks are versioned, typed, and correlation-id based.
+- Orchestrator must track dependencies and completion state.
 
 ## Cache lifecycle
-- Warm on startup where safe.
-- Invalidate on chain, provider, strategy, or configuration changes.
-- Expire stale market and quote data by TTL.
+Warm -> Active -> Expiring -> Invalidated -> Purged.
 
-## Failover and recovery
-- Prefer local recovery before operator escalation.
-- Restart failed workers with backoff and circuit breaking.
-- Fail closed for execution, wallet, and risk queues.
-- Promote fallback workers only after primary health degrades below threshold.
+## Synchronisation
+- Shared state must be synchronised via authoritative main-process state.
+- Renderer and workers consume replicated state, not source-of-truth state.
+
+## Plugin architecture
+- Plugins are allowlisted, signed, and capability-scoped.
+- Extension points require documented contracts and versioning.
+
+## Recovery workflows
+- Rebuild authoritative state from persistence.
+- Reconcile queue and worker state before resuming.
+- Block live work when recovery is incomplete.
+
+## Failover
+- Fail over to standby workers or providers when healthy replacements exist.
+- Fail closed when no safe replacement exists.
 
 ## Backup and restore
-- Back up configuration, strategy definitions, database snapshots, and exports.
-- Restore must validate version compatibility before activation.
-- Restore must not activate partially migrated state.
+- Backups must be versioned, encrypted, and verifiable.
+- Restore must validate integrity before re-admission.
 
 ## Upgrade and migration
-- Migrations run before application activation.
-- Failed migrations must halt startup and leave previous state intact.
-- Upgrade tasks must be idempotent and auditable.
+- Upgrades are staged, reversible, and compatibility checked.
+- Migrations must be idempotent and auditable.
+
+## Health monitoring
+- Worker health.
+- Queue depth.
+- Scheduler lag.
+- Cache hit rate.
+- Recovery state.
+
+## Telemetry
+- Counters, gauges, histograms, and event traces.
+- High-cardinality labels must be controlled.
 
 ## Diagnostics
-- Health checks, telemetry, logs, queue depth, and worker status are exposed through operator APIs.
-- Diagnostics exports must preserve correlation ids and avoid secrets.
+- Support bundle generation.
+- State snapshot export.
+- Failure timeline.
+
+## Logging
+- Structured, correlation-id-based, and redacted.
+
+## Alerting
+- Queue saturation.
+- Worker churn.
+- Recovery failure.
+- Upgrade failure.
 
 ## Cross-references
 - `MONITORING-OBSERVABILITY.md`
-- `ERROR-HANDLING-LOGGING.md`
-- `CONFIGURATION.md`
 - `DATABASE-SCHEMA.md`
-- `DEPLOYMENT.md`
-- `QUEUE-MANAGEMENT.md`
-- `RECOVERY-AND-FAILOVER.md`
-- `WORKER-ARCHITECTURE.md`
+- `AI-PIPELINE.md`
+- `TRADING-ENGINE.md`

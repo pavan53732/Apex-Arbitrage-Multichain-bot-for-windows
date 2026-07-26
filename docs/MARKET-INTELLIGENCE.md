@@ -15,11 +15,8 @@ Owns scoring and ranking of market entities used by strategy and execution decis
 - Opportunity detection and ranking.
 - Confidence, volatility, trend, correlation, volume, liquidity health, and risk scoring.
 
-## Responsibilities
-- Convert raw market data into deterministic scores.
-- Apply hard gates for freshness, liquidity, chain health, and venue health.
-- Produce explainable component scores for downstream consumers.
-- Expose stable outputs for strategy, AI, and UI consumers.
+## Shared contract
+Every intelligence module defines algorithm, inputs, outputs, ranking criteria, thresholds, configuration, monitoring, and validation.
 
 ## Scoring lifecycle
 Snapshot -> FeatureExtracted -> Scored -> Ranked -> Published -> Expired.
@@ -31,24 +28,89 @@ Snapshot -> FeatureExtracted -> Scored -> Ranked -> Published -> Expired.
 - Ranked -> Published when risk and policy gates approve the results.
 - Published -> Expired on TTL or on upstream market data invalidation.
 
-## Feature model
-Feature sets may include spread, depth, volatility, momentum, correlation, freshness, provider trust, chain health, DEX concentration, and fee pressure. Feature definitions must be versioned.
-
 ## Determinism rules
 - For a given snapshot id and configuration, feature extraction and scoring must be deterministic.
 - Re-evaluating the same snapshot under the same configuration must produce the same scores and ranking order.
 - Ranking ties must be broken by documented stable rules.
 - Retry is only allowed for transient computation or data-fetch failures and must not change the result for identical inputs.
 
-## Decision outputs
-- Token score.
-- Pair score.
-- Chain score.
-- DEX score.
-- Opportunity score.
-- Confidence score.
-- Reject reason.
-- Explanation bundle.
+## Token scoring
+Purpose: rank tokens by tradability and execution quality.
+Inputs: liquidity, volume, volatility, concentration, provider trust, age, and asset metadata.
+Outputs: token score, reject reasons, trust class.
+Validation: reject stale, illiquid, or malformed tokens.
+
+## Pair scoring
+Purpose: rank tradable pairs by spread quality and execution feasibility.
+Inputs: pair liquidity, spread, volume, volatility, chain health, and fee tier.
+Outputs: pair score, route readiness, reject reasons.
+Validation: reject pairs below liquidity or freshness threshold.
+
+## Chain scoring
+Purpose: classify chains by execution suitability.
+Inputs: finality, congestion, fee pressure, RPC health, reorg risk.
+Outputs: chain score, health class, reject reasons.
+Validation: reject chains below finality or health threshold.
+
+## DEX scoring
+Purpose: rank DEXs by route quality and reliability.
+Inputs: liquidity, fee tier, latency, historical failure rate, MEV exposure.
+Outputs: DEX score, route class, reject reasons.
+Validation: reject unsupported or unstable venues.
+
+## Opportunity detection
+Purpose: detect candidate trading opportunities from scored market data.
+Inputs: token, pair, chain, DEX, and route scores.
+Outputs: opportunity candidates, confidence, reason codes.
+Validation: only publish when hard gates pass.
+
+## Opportunity ranking
+Purpose: order candidate opportunities for execution priority.
+Inputs: scores, risk, cost, latency, and confidence.
+Outputs: ranked opportunity list, tie-break outputs.
+Validation: ranking must be deterministic for identical input set.
+
+## Confidence scoring
+Purpose: quantify belief in a candidate opportunity.
+Inputs: model quality, data freshness, provider trust, feature agreement.
+Outputs: confidence score and rationale.
+Validation: confidence cannot override hard risk gates.
+
+## Volatility analysis
+Purpose: measure price movement instability.
+Inputs: price series and realized volatility.
+Outputs: volatility score and regime label.
+Validation: thresholds must be versioned.
+
+## Trend analysis
+Purpose: determine directional bias.
+Inputs: trend features, moving averages, momentum, breakouts.
+Outputs: trend score and regime label.
+Validation: stale data must fail closed.
+
+## Correlation analysis
+Purpose: measure relationship stability across assets or venues.
+Inputs: paired return series and correlation windows.
+Outputs: correlation score and stability label.
+Validation: regime shifts must invalidate prior assumptions.
+
+## Volume analysis
+Purpose: quantify participation and support.
+Inputs: volume, turnover, windowed averages.
+Outputs: volume score and liquidity support label.
+Validation: abnormal spikes require separate handling.
+
+## Liquidity health
+Purpose: measure whether depth supports execution.
+Inputs: depth, slippage curves, spread, pool concentration.
+Outputs: liquidity health score and rejection reasons.
+Validation: thin liquidity fails safe.
+
+## Risk scoring
+Purpose: quantify market-side risk used by higher-level gating.
+Inputs: volatility, liquidity, chain health, correlation, spread stability.
+Outputs: market risk score and alert class.
+Validation: risk output must align with risk-engine thresholds.
 
 ## Failure and recovery
 - Missing or stale market data must produce a hard reject rather than speculative scores.

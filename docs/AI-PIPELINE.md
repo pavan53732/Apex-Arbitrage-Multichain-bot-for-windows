@@ -7,13 +7,13 @@ This document is the authoritative specification for AI decision lifecycle, prom
 - Owns AI request orchestration, provider routing, prompt lifecycle, and structured response validation.
 - Does not own execution authorization, which remains with risk and execution owners.
 
-## Decision contract
 ## Provider policy
 - Production AI must use approved cloud providers with paid API keys only.
-- Local LLM inference is not supported in production and must not be used as an implicit fallback.
-- Cloud fallback models are allowed only when explicitly configured and approved.
-- Cost ceilings, provider routing, and model fallback order are governed by configuration and governance policy.
+- Local LLM inference is unsupported in production.
+- Provider selection, fallback order, cost caps, and audit logging are governed by this pipeline.
+- AI outputs must identify the provider and model used for each actionable decision.
 
+## Decision contract
 AI may rank, explain, or recommend, but it cannot bypass risk, security, wallet, or execution policy checks.
 
 ## Decision lifecycle
@@ -30,15 +30,13 @@ Ingest context -> retrieve memory -> assemble prompt -> select model -> generate
 - Learn only from persisted outcomes and only when learning is enabled by policy.
 
 ## Prompt lifecycle
-Prompts are versioned artifacts. Each prompt has a template id, version, effective date, model compatibility, risk mode, and rollback path. A prompt version may not be promoted unless validation passes.
+Prompts are versioned artifacts with template id, version, effective date, model compatibility, risk mode, and rollback path.
 
 ### Transition rules
-- Draft -> Validated -> Promoted -> Active -> Deprecated -> Retired.
-- A prompt cannot become Active until compatibility and safety tests pass.
-- Deprecated prompts may serve only for rollback or compatibility windows.
+Draft -> Validated -> Promoted -> Active -> Deprecated -> Retired.
 
 ## Context assembly
-Context includes market data, strategy state, portfolio state, wallet state, prior decisions, and system configuration. Only policy-approved fields may be included.
+Context includes market data, strategy state, portfolio state, wallet state, prior decisions, configuration, and operator policy. Only approved fields may be included.
 
 ## Retrieval pipeline
 Retrieval first checks local memory, then approved knowledge sources, then current market state. Retrieval must be deterministic for the same inputs.
@@ -74,7 +72,7 @@ Transient provider failures may retry with bounded attempts and backoff. Prompt 
 Fallback models are used in priority order when the primary provider fails or becomes unavailable.
 
 ## Explainability
-Every actionable AI output must include rationale, supporting inputs, confidence, and the reasons for any rejection.
+Every actionable AI output must include rationale, supporting inputs, confidence, provider, model, and the reasons for any rejection.
 
 ## Prompt versioning
 Prompt versions are tracked with content hash, owner, release channel, and rollback target.
@@ -86,7 +84,7 @@ Execution outcomes feed back into evaluation metadata. Negative outcomes may red
 Learning is offline-by-default unless explicitly enabled by configuration and governance policy.
 
 ## Performance metrics
-Track confidence calibration, approval rate, precision, latency, fallback rate, and outcome quality.
+Track confidence calibration, approval rate, precision, latency, fallback rate, token cost, and outcome quality.
 
 ## Failure handling
 Handle provider timeout, empty response, malformed output, stale context, and model drift as explicit failure states.
@@ -95,9 +93,7 @@ Handle provider timeout, empty response, malformed output, stale context, and mo
 Recover by falling back to a lower-priority model, human review, or no-trade according to policy.
 
 ## Persistence
-- Persist prompt versions, routing decisions, model ids, tokens used, confidence scores, validation results, and final consumer decisions.
-- Persist memory references and freshness labels, not raw secrets or unauthorized context fields.
-- Persist learning outcomes only when offline learning is enabled.
+Persist prompt versions, routing decisions, model ids, tokens used, confidence scores, validation results, and final consumer decisions.
 
 ## Cross-references
 - `STRATEGIES.md`
