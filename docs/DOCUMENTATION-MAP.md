@@ -426,3 +426,10 @@ These must not claim ownership and should only point to owners:
 - Registry System
 - Security
 - Token Registry
+
+
+## Deepening pass - tranche 8
+- Token Discovery
+- AI Capability Matrix
+- AI Tools
+- Decision Engine

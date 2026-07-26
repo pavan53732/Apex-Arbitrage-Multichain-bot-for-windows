@@ -25,3 +25,9 @@ This matrix is descriptive and used by AI routing, provider selection, and confi
 
 ## Orchestration boundary
 This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `AI-PIPELINE.md`.
+
+## Governance Rules
+Defines detected AI capabilities, provider support mapping, and compatibility decisions.
+
+## Example
+A provider supports reasoning but not vision, so the gateway disables vision calls.

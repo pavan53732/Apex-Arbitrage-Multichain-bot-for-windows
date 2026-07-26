@@ -30,3 +30,9 @@ Decisions expire after `DECISION_TTL_SECONDS` unless executed.
 - `RISK-ENGINE.md`
 - `ORCHESTRATOR.md`
 - `TRADING-LIFECYCLE.md`
+
+## Operational Contract
+Defines the authoritative gatekeeper between recommendation and execution, including veto hierarchy and timeouts.
+
+## Example
+An AI recommendation is blocked when policy or risk gates fail.
