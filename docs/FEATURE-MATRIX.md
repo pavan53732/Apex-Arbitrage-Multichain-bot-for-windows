@@ -1,10 +1,9 @@
-# Feature Matrix
+# FEATURE MATRIX
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `IMPLEMENTATION-ROADMAP.md`
 - `ENHANCEMENT-ROADMAP.md`
 - `STRATEGIES.md`
-

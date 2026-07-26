@@ -1,9 +1,8 @@
-# Changelog
+# CHANGELOG
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `DECISION-LOG.md`
 - `IMPLEMENTATION-ROADMAP.md`
-

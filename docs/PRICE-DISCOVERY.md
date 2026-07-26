@@ -1,10 +1,9 @@
-# Price Discovery
+# PRICE DISCOVERY
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `MARKET-DATA.md`
 - `MARKET-INTELLIGENCE.md`
 - `ROUTING-ENGINE.md`
-

@@ -1,10 +1,9 @@
-# File Storage
+# FILE STORAGE
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `DATABASE-SCHEMA.md`
 - `RUNTIME-OPERATIONS.md`
 - `SECURITY.md`
-

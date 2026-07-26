@@ -1,9 +1,8 @@
-# Coding Standards
+# CODING STANDARDS
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `PROJECT-STRUCTURE.md`
 - `TESTING-GUIDE.md`
-

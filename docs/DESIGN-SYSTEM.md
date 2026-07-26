@@ -1,9 +1,9 @@
-# Design System
+# DESIGN SYSTEM
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
+- `DESIGNER-PROTOCOLS.md`
 - `UI-COMPONENT-SPEC.md`
 - `WINDOWS-DESKTOP.md`
-

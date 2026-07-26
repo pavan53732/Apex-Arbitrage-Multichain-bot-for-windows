@@ -1,9 +1,9 @@
-# Troubleshooting
+# TROUBLESHOOTING
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
+- `USER-GUIDE.md`
+- `RUNTIME-OPERATIONS.md`
 - `MONITORING-OBSERVABILITY.md`
-- `ERROR-HANDLING-LOGGING.md`
-

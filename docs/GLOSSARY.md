@@ -1,10 +1,9 @@
-# Glossary
+# GLOSSARY
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `ARCHITECTURE.md`
 - `STRATEGIES.md`
 - `RISK-ENGINE.md`
-

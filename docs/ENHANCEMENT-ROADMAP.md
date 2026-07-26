@@ -1,9 +1,8 @@
-# Enhancement Roadmap
+# ENHANCEMENT ROADMAP
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `FEATURE-MATRIX.md`
 - `IMPLEMENTATION-ROADMAP.md`
-

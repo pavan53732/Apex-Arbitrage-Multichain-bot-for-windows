@@ -1,10 +1,10 @@
-# Build Release Cicd
+# BUILD RELEASE CICD
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
+- `DEPLOYMENT.md`
 - `WINDOWS-DESKTOP.md`
 - `TESTING-GUIDE.md`
 - `RUNTIME-OPERATIONS.md`
-
