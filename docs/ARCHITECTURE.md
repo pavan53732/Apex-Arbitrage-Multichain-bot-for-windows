@@ -55,3 +55,6 @@ For canonical data contracts, see `DOMAIN-MODEL.md`.
 
 For trading lifecycle, see `TRADING-LIFECYCLE.md`.
 For execution lifecycle, see `EXECUTION-LIFECYCLE.md`.
+For event handling, see `EVENT-BUS.md`.
+For worker scheduling, see `WORKER-POOL.md`.
+For workspace persistence, see `DASHBOARD-WORKSPACES.md`.

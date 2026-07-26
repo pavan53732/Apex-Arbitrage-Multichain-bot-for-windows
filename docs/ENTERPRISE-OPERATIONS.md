@@ -6,3 +6,6 @@ Defines workspace profiles, import/export, backup, restore, version history, and
 ## Cross-references
 - `CONFIGURATION.md`
 - `RUNTIME-OPERATIONS.md`
+
+
+For workspace, see `DASHBOARD-WORKSPACES.md`.

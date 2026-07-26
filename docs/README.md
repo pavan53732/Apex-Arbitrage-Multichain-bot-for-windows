@@ -31,3 +31,9 @@ Navigation-only document pointing to the authoritative owner(s).
 - [ROUTE-OPTIMIZATION.md](./ROUTE-OPTIMIZATION.md) – Defines route simulation, scoring, and fallback selection.
 - [CONTRACT-MANAGEMENT.md](./CONTRACT-MANAGEMENT.md) – Defines contract registry, ABI versioning, and governance approval.
 - [PROVIDER-RESILIENCE.md](./PROVIDER-RESILIENCE.md) – Defines provider health checks, failover, and reinstatement.
+
+- [EVENT-BUS.md](./EVENT-BUS.md) – Defines the pub/sub backbone for agents, workers, and UI.
+- [WORKER-POOL.md](./WORKER-POOL.md) – Defines worker lifecycle, queue priority, and scaling policy.
+- [REGISTRY-SYSTEM.md](./REGISTRY-SYSTEM.md) – Defines the unified registry interface and governance rules.
+- [DASHBOARD-WORKSPACES.md](./DASHBOARD-WORKSPACES.md) – Defines workspace persistence, restore, and isolation.
+- [LEARNING-PIPELINE.md](./LEARNING-PIPELINE.md) – Defines the retraining, evaluation, and promotion pipeline.

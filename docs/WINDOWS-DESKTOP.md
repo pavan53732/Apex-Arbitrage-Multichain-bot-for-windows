@@ -23,3 +23,6 @@ Provides navigation to the authoritative documentation set.
 - Startup sequencing: see `ORCHESTRATOR.md` and `HEALTHCHECKS.md`.
 - UI interactions: see `UI-DASHBOARD-SPEC.md`, `INTERFACE-NOTIFICATION-CHANNEL.md`, and `INTERFACE-TOOL-CALL.md`.
 - Recovery and session behavior: see `SHUTDOWN-LIFECYCLE.md` and `RUNTIME-OPERATIONS.md`.
+
+
+For workspace, see `DASHBOARD-WORKSPACES.md`.

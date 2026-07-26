@@ -191,3 +191,21 @@ These must not claim ownership and should only point to owners:
 - Route optimization: `ROUTE-OPTIMIZATION.md`
 - Contract management: `CONTRACT-MANAGEMENT.md`
 - Provider resilience: `PROVIDER-RESILIENCE.md`
+
+- EVENT-BUS.md — Authoritative
+
+- WORKER-POOL.md — Authoritative
+
+- REGISTRY-SYSTEM.md — Authoritative
+
+- DASHBOARD-WORKSPACES.md — Authoritative
+
+- LEARNING-PIPELINE.md — Authoritative
+
+
+## Infrastructure contracts
+- Event Bus: `EVENT-BUS.md`
+- Worker Pool: `WORKER-POOL.md`
+- Registry System: `REGISTRY-SYSTEM.md`
+- Dashboard Workspaces: `DASHBOARD-WORKSPACES.md`
+- Learning Pipeline: `LEARNING-PIPELINE.md`

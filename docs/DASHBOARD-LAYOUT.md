@@ -22,3 +22,6 @@ This document covers desktop layout, responsive behavior, docking, panels, split
 
 
 For interaction logic, data binding, and state transitions, see `UI-DASHBOARD-SPEC.md`.
+
+
+For workspace, see `DASHBOARD-WORKSPACES.md`.

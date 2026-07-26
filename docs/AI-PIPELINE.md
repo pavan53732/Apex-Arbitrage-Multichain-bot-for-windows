@@ -128,3 +128,4 @@ For AI orchestration, see `AI-ORCHESTRATION.md`.
 For consensus, see `AI-CONSENSUS.md`.
 For provider abstraction, see `AI-PROVIDER-MANAGER.md`.
 For memory, see `AI-MEMORY-SYSTEM.md`.
+For learning and retraining, see `LEARNING-PIPELINE.md`.

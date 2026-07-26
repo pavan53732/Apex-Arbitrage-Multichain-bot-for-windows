@@ -83,3 +83,6 @@ Do not persist:
 - [`DATA-FLOW.md`](./DATA-FLOW.md)
 - [`EVENT-FLOW.md`](./EVENT-FLOW.md)
 - [`DATABASE-SCHEMA.md`](./DATABASE-SCHEMA.md)
+
+
+For workspace, see `DASHBOARD-WORKSPACES.md`.
