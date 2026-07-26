@@ -30,3 +30,9 @@ Must be secured with multi-sig and emergency pause controls.
 - `SECURITY-CONTRACTS.md`
 - `CHAIN-REGISTRY.md`
 - `ORCHESTRATOR.md`
+
+## Governance Rules
+Defines contract lifecycle handling, deployment references, upgrades, deprecation, and address safety.
+
+## Example
+A proxy upgrade is recorded before the implementation address changes.

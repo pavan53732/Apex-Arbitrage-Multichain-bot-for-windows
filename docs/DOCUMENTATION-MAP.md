@@ -454,3 +454,10 @@ These must not claim ownership and should only point to owners:
 - AI Context Window Management
 - AI Memory
 - AI Planner
+
+
+## Deepening pass - tranche 12
+- Bootstrap Sequence
+- Cache Manager
+- Contract Management
+- Contract Registry
