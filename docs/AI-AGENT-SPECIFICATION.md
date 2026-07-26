@@ -15,3 +15,7 @@ Each agent defines purpose, inputs, outputs, tools, memory access, metrics, and 
 
 ## Example
 The planner agent decomposes goals, orders dependencies, and emits a structured execution plan.
+
+## Agent rules
+- Define agent identity, goals, tools, permissions, and output expectations.
+- Define failure and handoff behavior.

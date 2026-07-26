@@ -31,3 +31,7 @@ Defines detected AI capabilities, provider support mapping, and compatibility de
 
 ## Example
 A provider supports reasoning but not vision, so the gateway disables vision calls.
+
+## Capability rules
+- Define capability names, supported models, constraints, and fallback choices.
+- Define how unsupported capabilities are rejected.

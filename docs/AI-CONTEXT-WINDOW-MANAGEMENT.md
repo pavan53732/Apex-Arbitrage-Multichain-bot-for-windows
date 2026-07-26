@@ -29,3 +29,7 @@ Defines token budgeting, compression, rolling summaries, chunk selection, and re
 
 ## Example
 Long market history is compressed before dispatching a prompt to the AI provider.
+
+## Context rules
+- Define what enters the AI context window, what is summarized, and what is excluded.
+- Define token budget and retention behavior.

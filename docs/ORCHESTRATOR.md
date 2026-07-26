@@ -22,3 +22,7 @@ Defines the system coordinator that sequences AI, trading, and runtime actions.
 
 ## Startup and recovery
 - Must define startup ordering, retry handling, and sleep/resume behavior.
+
+## Orchestration rules
+- Define startup ordering, retry behavior, and cross-subsystem sequencing.
+- Define how the orchestrator handles sleep/resume and restart recovery.

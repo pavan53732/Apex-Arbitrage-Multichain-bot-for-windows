@@ -23,3 +23,7 @@ Defines indexing, ranking, retrieval, embedding strategy hooks, and document sea
 
 ## Example
 A planner prompt retrieves strategy docs, market notes, and memory summaries ranked by relevance.
+
+## Knowledge rules
+- Define canonical knowledge sources and retrieval priority.
+- Define freshness and de-duplication rules.
