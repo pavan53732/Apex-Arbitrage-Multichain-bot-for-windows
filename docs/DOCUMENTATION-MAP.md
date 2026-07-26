@@ -496,3 +496,10 @@ These must not claim ownership and should only point to owners:
 - Trading Lifecycle
 - Update Manager
 - Versioning
+
+
+## Deepening pass - tranche 18
+- Wallet Management
+- AI Reasoning Policy
+- Configuration Profiles
+- Dashboard Workspaces

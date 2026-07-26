@@ -26,3 +26,9 @@ Fallback to safe defaults and validate merged config.
 - `CONFIGURATION.md`
 - `AI-SETTINGS.md`
 - `DASHBOARD-WORKSPACES.md`
+
+## Governance Rules
+Defines named configuration bundles, defaults, overrides, environment targeting, and validation.
+
+## Example
+A production profile enables stricter risk limits than a sandbox profile.

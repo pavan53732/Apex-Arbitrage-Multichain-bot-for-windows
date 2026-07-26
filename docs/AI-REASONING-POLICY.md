@@ -26,3 +26,9 @@ Reject the action, route to deterministic logic, and log the violation.
 - `AI-CONSENSUS.md`
 - `DECISION-ENGINE.md`
 - `RISK-ENGINE.md`
+
+## Governance Rules
+Defines allowed reasoning patterns, confidence thresholds, escalation rules, and safety constraints for AI decisions.
+
+## Example
+A low-confidence plan is escalated instead of executed automatically.

@@ -34,3 +34,8 @@ On startup restore last workspace; if corrupt, fall back to default workspace.
 - `RECOVERY-AND-FAILOVER.md`
 
 For workspace management, see `WORKSPACE-MANAGER.md`.
+## Operational Contract
+Defines workspace layout, persisted views, routing, and dashboard-specific context handling.
+
+## Example
+A trader workspace restores open panels after refresh.
