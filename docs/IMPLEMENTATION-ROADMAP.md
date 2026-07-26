@@ -1,18 +1,21 @@
 # IMPLEMENTATION-ROADMAP.md
 
 ## Purpose
-Execution roadmap for turning the specification into code.
+Translates architecture and roadmap intent into a build order for AI agents and developers.
 
-## Phases
+## Related Documents
+- [ENHANCEMENT-ROADMAP.md](./ENHANCEMENT-ROADMAP.md)
+- [PROJECT-STRUCTURE.md](./PROJECT-STRUCTURE.md)
+- [BUILD-RELEASE-CICD.md](./BUILD-RELEASE-CICD.md)
+
+## Suggested Build Order
 1. repo scaffolding
-2. config + secure storage + DB
-3. IPC + main/renderer skeleton
-4. strategies + risk engine
-5. chain/dex integrations
-6. AI orchestration
-7. UI completion
-8. packaging and release hardening
-
-## Cross-References
-- [`PROJECT-STRUCTURE.md`](./PROJECT-STRUCTURE.md)
-- [`BUILD-RELEASE-CICD.md`](./BUILD-RELEASE-CICD.md)
+2. config and secrets
+3. IPC contracts and preload bridge
+4. local DB and repositories
+5. chain and DEX adapters
+6. risk engine
+7. strategy engine
+8. renderer shell and feature views
+9. diagnostics and updater
+10. packaging and release

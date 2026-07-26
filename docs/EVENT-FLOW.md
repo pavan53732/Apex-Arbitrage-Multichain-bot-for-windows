@@ -1,21 +1,23 @@
 # EVENT-FLOW.md
 
 ## Purpose
-Defines event-driven behaviour across runtime layers.
+Defines event-driven behavior across the desktop runtime.
 
-## Event Sources
-- UI commands
-- scheduled jobs
-- provider callbacks
-- chain state changes
+## Related Documents
+- [DATA-FLOW.md](./DATA-FLOW.md)
+- [IPC-PROTOCOL.md](./IPC-PROTOCOL.md)
+
+## Core Event Classes
+- user intent events
+- configuration events
+- strategy lifecycle events
+- quote/market data events
+- execution events
+- risk events
 - updater events
-- error events
+- diagnostics events
 
-## Event Handling Rules
-- Every event has one owner.
-- Events crossing process boundaries must use typed IPC contracts.
-- High-risk events require audit logging.
-
-## Cross-References
-- [`IPC-PROTOCOL.md`](./IPC-PROTOCOL.md)
-- [`STATE-MANAGEMENT.md`](./STATE-MANAGEMENT.md)
+## Rules
+- Events must be named in past-tense or domain-action format consistently.
+- Events sent to renderer must be sanitized and typed.
+- Event ordering requirements must be documented for critical workflows.

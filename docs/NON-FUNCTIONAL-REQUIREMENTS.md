@@ -1,25 +1,14 @@
 # NON-FUNCTIONAL-REQUIREMENTS.md
 
 ## Purpose
-Defines system-wide non-functional constraints and quality attributes.
+Defines cross-cutting system qualities required of the application beyond functional behavior.
 
-## Categories
-- security
-- reliability
-- performance
-- maintainability
-- observability
-- usability
-- testability
+## Scope
+Security, reliability, maintainability, auditability, usability, portability, performance, recoverability.
 
-## Core Requirements
-- all privileged operations mediated by main process,
-- typed validation on all external boundaries,
-- docs remain single source of truth,
-- critical workflows auditable,
-- UI remains functional in degraded-but-safe modes.
-
-## Cross-References
-- [`SECURITY.md`](./SECURITY.md)
-- [`PERFORMANCE-TARGETS.md`](./PERFORMANCE-TARGETS.md)
-- [`TESTING-GUIDE.md`](./TESTING-GUIDE.md)
+## Requirements
+- The app must fail safe by default.
+- Secrets must be encrypted at rest.
+- Core domain logic must be testable without Electron.
+- Documentation must remain the implementation source of truth.
+- User-facing safety controls must be available before enabling automation.

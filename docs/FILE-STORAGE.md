@@ -1,21 +1,18 @@
 # FILE-STORAGE.md
 
 ## Purpose
-Defines all local file paths, storage classes, retention, and cleanup rules.
+Defines local file locations, retention, encryption expectations, and which data types may be persisted to disk.
+
+## Related Documents
+- [DATABASE-SCHEMA.md](./DATABASE-SCHEMA.md)
+- [SECURITY.md](./SECURITY.md)
+- [CONFIGURATION.md](./CONFIGURATION.md)
 
 ## Storage Classes
-- database
+- config
+- secrets
+- sqlite database
 - logs
-- cache
-- diagnostics bundles
-- downloaded update artifacts
-
-## Rules
-- No secrets in plaintext files.
-- Respect OS app-data directories.
-- Support exportable diagnostics bundles with redaction.
-
-## Cross-References
-- [`DATABASE-SCHEMA.md`](./DATABASE-SCHEMA.md)
-- [`CONFIGURATION.md`](./CONFIGURATION.md)
-- [`ERROR-HANDLING-LOGGING.md`](./ERROR-HANDLING-LOGGING.md)
+- exports
+- temporary caches
+- update artifacts

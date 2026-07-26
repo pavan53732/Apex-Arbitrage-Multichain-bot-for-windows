@@ -1,51 +1,43 @@
 # BUILD-RELEASE-CICD.md
 
 ## Purpose
-Defines the end-to-end build, release, CI, and rollback workflow for APEX.
+Defines how APEX is built, tested, packaged, versioned, released, and rolled back.
 
 ## Scope
-Local builds, CI validation, packaging, code signing, artifact publishing, auto-update channels, and release recovery.
+Covers CI workflows, branch policy, build steps, artifacts, code signing, release channels, distribution, and rollback procedures.
 
-## Branch Workflow
-- Default workflow operates directly on `main` unless the owner requests otherwise.
-- Always checkout `main`, pull latest changes, commit, push, verify remote state, and end with a clean working tree.
+## Related Documents
+- [WINDOWS-DESKTOP.md](./WINDOWS-DESKTOP.md)
+- [TESTING-GUIDE.md](./TESTING-GUIDE.md)
+- [PROJECT-STRUCTURE.md](./PROJECT-STRUCTURE.md)
+
+## Branch Policy
+- Primary branch: `main`.
+- Documentation and implementation changes may land directly on `main` when explicitly authorized.
+- CI must run on push to `main`.
 
 ## CI Stages
-1. Install dependencies.
-2. Typecheck all packages.
-3. Lint.
-4. Unit tests.
-5. Integration tests.
-6. E2E smoke tests for desktop shell.
-7. Build desktop artifacts.
-8. Optional publish step for signed release artifacts.
+1. install dependencies
+2. lint
+3. typecheck
+4. unit tests
+5. integration tests
+6. contract tests
+7. e2e smoke tests
+8. package Windows artifacts
 
-## Release Versioning
-- Semantic versioning for app releases.
-- Changelog updated for user-visible changes.
-- Schema or IPC breaking changes must bump compatibility metadata.
-
-## Packaging Outputs
-- Windows NSIS installer
-- optional portable build
+## Release Outputs
+- NSIS installer
+- portable executable package
+- checksums
+- release notes
 - update manifest
-- checksum/signature artifacts
 
-## Required Release Checks
-- tests green,
-- DB migrations verified,
-- IPC compatibility verified,
-- docs updated for spec changes,
-- code signing successful,
-- updater metadata published.
+## Versioning
+- Semantic versioning for app releases.
+- Documentation-only changes may skip version bump unless docs materially redefine implementation requirements.
 
-## Rollback Strategy
-- keep previous stable artifact and update manifest,
-- allow channel pinning to stable,
-- if migration is non-reversible, document recovery/export path before release.
-
-## Cross-References
-- [`WINDOWS-DESKTOP.md`](./WINDOWS-DESKTOP.md)
-- [`TESTING-GUIDE.md`](./TESTING-GUIDE.md)
-- [`DATABASE-SCHEMA.md`](./DATABASE-SCHEMA.md)
-- [`IPC-PROTOCOL.md`](./IPC-PROTOCOL.md)
+## Rollback
+- Preserve prior installer artifacts.
+- Auto-update channels must support pinned rollback targets.
+- Breaking provider/config migrations require documented downgrade handling.

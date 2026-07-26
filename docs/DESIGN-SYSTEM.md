@@ -1,17 +1,17 @@
 # DESIGN-SYSTEM.md
 
 ## Purpose
-Translates product design intent into implementation-ready UI rules.
+Defines the implementation-facing design system for the desktop UI: tokens, spacing, typography, color roles, density, component variants, and interaction behavior.
 
-## Includes
-- typography tokens
+## Related Documents
+- [DESIGNER-PROTOCOLS.md](./DESIGNER-PROTOCOLS.md)
+- [UI-COMPONENT-SPEC.md](./UI-COMPONENT-SPEC.md)
+
+## Design System Responsibilities
+- semantic tokens
+- typography scale
 - spacing scale
-- color roles
-- elevation
-- interaction states
-- accessibility states
-- layout primitives
-
-## Cross-References
-- [`UI-COMPONENT-SPEC.md`](./UI-COMPONENT-SPEC.md)
-- [`DESIGNER-PROTOCOLS.md`](./DESIGNER-PROTOCOLS.md)
+- elevation and borders
+- component states
+- dark mode behavior
+- iconography rules

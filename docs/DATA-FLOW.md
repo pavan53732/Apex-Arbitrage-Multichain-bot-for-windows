@@ -1,21 +1,23 @@
 # DATA-FLOW.md
 
 ## Purpose
-Describes how data moves through APEX from input sources to execution, persistence, and UI presentation.
+Defines the authoritative data movement paths between user actions, AI analysis, chain data, strategy evaluation, risk approval, execution, persistence, and UI updates.
+
+## Related Documents
+- [EVENT-FLOW.md](./EVENT-FLOW.md)
+- [STATE-MANAGEMENT.md](./STATE-MANAGEMENT.md)
+- [IPC-PROTOCOL.md](./IPC-PROTOCOL.md)
 
 ## Primary Flows
-1. Config load -> service bootstrap -> readiness state.
-2. Chain/RPC + DEX quote -> strategy evaluation -> risk evaluation -> execution proposal.
-3. User UI action -> preload -> IPC -> service -> DB/audit -> UI response.
-4. AI request -> provider adapter -> schema validation -> task result -> persistence/UI.
+1. User changes settings in renderer.
+2. Renderer submits validated IPC command.
+3. Main process updates config service.
+4. Main emits settings-updated event.
+5. Renderer store reconciles and re-renders.
 
-## Canonical Trading Flow
-```text
-RPC/DEX data -> normalized market snapshot -> strategy engine -> candidate trade
--> risk engine -> approved proposal -> signer/executor -> result -> audit DB -> renderer
-```
-
-## Cross-References
-- [`EVENT-FLOW.md`](./EVENT-FLOW.md)
-- [`STATE-MANAGEMENT.md`](./STATE-MANAGEMENT.md)
-- [`RISK-ENGINE.md`](./RISK-ENGINE.md)
+6. Strategy scheduler requests quotes and balances.
+7. Adapters normalize raw chain/DEX responses.
+8. Strategy engine produces opportunities.
+9. Risk engine accepts or rejects opportunities.
+10. Approved trade plans flow into execution service.
+11. Results are persisted and broadcast to renderer.

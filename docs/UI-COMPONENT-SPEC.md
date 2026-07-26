@@ -1,11 +1,19 @@
 # UI-COMPONENT-SPEC.md
 
 ## Purpose
-Defines reusable UI components, responsibilities, states, and interaction rules.
+Defines major UI component families, ownership, states, and behavior expectations for the renderer.
 
-## Scope
-Buttons, forms, tables, modals, status badges, panels, logs viewer, diagnostics cards, and strategy controls.
+## Related Documents
+- [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md)
+- [DESIGNER-PROTOCOLS.md](./DESIGNER-PROTOCOLS.md)
+- [STATE-MANAGEMENT.md](./STATE-MANAGEMENT.md)
 
-## Cross-References
-- [`DESIGN-SYSTEM.md`](./DESIGN-SYSTEM.md)
-- [`DESIGNER-PROTOCOLS.md`](./DESIGNER-PROTOCOLS.md)
+## Core Component Families
+- shell layout
+- navigation
+- data tables
+- opportunity cards
+- settings forms
+- diagnostics panels
+- logs viewer
+- confirmation dialogs

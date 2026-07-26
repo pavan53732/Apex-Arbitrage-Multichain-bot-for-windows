@@ -140,3 +140,39 @@ feature change. Docs are the source of truth for design decisions.*
 - [IMPLEMENTATION-ROADMAP.md](./IMPLEMENTATION-ROADMAP.md)
 - [DECISION-LOG.md](./DECISION-LOG.md)
 - [KNOWN-LIMITATIONS.md](./KNOWN-LIMITATIONS.md)
+
+
+## Single Source of Truth Model
+The documentation set is the authoritative implementation specification for APEX. AI agents and developers must implement the system from these documents without inventing undocumented architecture, state flow, storage rules, or package structure.
+
+## Specification Documents Added for AI-Driven Implementation
+### Repository and Architecture Ownership
+- [PROJECT-STRUCTURE.md](./PROJECT-STRUCTURE.md)
+- [MODULE-DEPENDENCY.md](./MODULE-DEPENDENCY.md)
+- [DATA-FLOW.md](./DATA-FLOW.md)
+- [EVENT-FLOW.md](./EVENT-FLOW.md)
+- [COMPONENT-DIAGRAMS.md](./COMPONENT-DIAGRAMS.md)
+- [NON-FUNCTIONAL-REQUIREMENTS.md](./NON-FUNCTIONAL-REQUIREMENTS.md)
+- [DECISION-LOG.md](./DECISION-LOG.md)
+- [KNOWN-LIMITATIONS.md](./KNOWN-LIMITATIONS.md)
+
+### Implementation Standards
+- [CODING-STANDARDS.md](./CODING-STANDARDS.md)
+- [CONFIGURATION.md](./CONFIGURATION.md)
+- [STATE-MANAGEMENT.md](./STATE-MANAGEMENT.md)
+- [ERROR-HANDLING-LOGGING.md](./ERROR-HANDLING-LOGGING.md)
+- [MONITORING-OBSERVABILITY.md](./MONITORING-OBSERVABILITY.md)
+- [BUILD-RELEASE-CICD.md](./BUILD-RELEASE-CICD.md)
+- [PERFORMANCE-TARGETS.md](./PERFORMANCE-TARGETS.md)
+
+### Contracts, Permissions, and UI Specs
+- [API-CONTRACTS.md](./API-CONTRACTS.md)
+- [IPC-MESSAGE-CATALOG.md](./IPC-MESSAGE-CATALOG.md)
+- [PERMISSION-MODEL.md](./PERMISSION-MODEL.md)
+- [FILE-STORAGE.md](./FILE-STORAGE.md)
+- [UI-COMPONENT-SPEC.md](./UI-COMPONENT-SPEC.md)
+- [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md)
+- [FEATURE-MATRIX.md](./FEATURE-MATRIX.md)
+- [IMPLEMENTATION-ROADMAP.md](./IMPLEMENTATION-ROADMAP.md)
+- [GLOSSARY.md](./GLOSSARY.md)
+

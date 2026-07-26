@@ -1,89 +1,56 @@
 # ERROR-HANDLING-LOGGING.md
 
 ## Purpose
-Defines the error model, logging standards, retry policies, and recovery behaviour for APEX.
+Defines the canonical error model, retry behavior, recovery flows, and logging standards for APEX.
 
 ## Scope
-Application errors across AI, chain adapters, DEX adapters, IPC, database, updater, and UI surfaces.
+Covers application errors, domain errors, infrastructure failures, AI provider failures, IPC errors, user-facing error presentation, and structured logs.
 
-## Error Hierarchy
-- `AppError` (base typed error)
-- `ConfigError`
+## Related Documents
+- [MONITORING-OBSERVABILITY.md](./MONITORING-OBSERVABILITY.md)
+- [IPC-PROTOCOL.md](./IPC-PROTOCOL.md)
+- [SECURITY.md](./SECURITY.md)
+- [RISK-ENGINE.md](./RISK-ENGINE.md)
+
+## Error Categories
+- `ConfigurationError`
 - `ValidationError`
-- `SecurityError`
 - `ProviderError`
-- `RateLimitError`
 - `ChainConnectionError`
-- `QuoteExpiredError`
-- `ExecutionRejectedError`
-- `RiskViolationError`
-- `PersistenceError`
+- `QuoteError`
+- `ExecutionError`
+- `RiskRejectionError`
 - `IpcContractError`
+- `PersistenceError`
+- `SecurityPolicyError`
 
-## Error Metadata Requirements
-Every typed error should carry:
-- machine-readable code,
-- category,
-- user-safe message,
-- internal diagnostic message,
-- retriable flag,
-- severity,
-- optional causal chain.
-
-## Logging Format
-Structured JSON logs for machine ingestion with fields:
+## Logging Standard
+All logs must be structured JSON with:
 - timestamp
 - level
-- service
-- module
+- domain
 - event
+- message
 - correlationId
-- requestId/taskId when applicable
-- chainId / provider / strategyId when applicable
-- redacted error object
+- entity identifiers when relevant
+- sanitized context object
 
 ## Redaction Rules
-Never log:
-- API keys,
-- wallet private keys or seed phrases,
-- raw Authorization headers,
-- full account addresses if policy later requires masking,
-- unredacted user prompts when marked sensitive.
+- Never log API keys, seed phrases, private keys, raw auth headers, or decrypted secret values.
+- Wallet addresses may be logged when necessary.
+- RPC URLs should be masked when they contain credentials.
 
 ## Retry Policy
-| Category | Retry? | Strategy |
-|---|---|---|
-| Rate limit | yes | exponential backoff with jitter |
-| network timeout | yes | bounded retries |
-| schema validation | no | fail fast and alert developer/user |
-| risk violation | no | immediate halt/reject |
-| stale quote | maybe | re-quote once if within timing budget |
-| DB locked | limited | short bounded retry |
+- AI provider: bounded exponential backoff, circuit breaker on repeated 429/5xx.
+- RPC calls: retry idempotent reads only.
+- Quote fetches: short retry budget; do not loop indefinitely.
+- Trade execution: never blindly retry a signed transaction without nonce-aware safeguards.
 
-## User-Facing Behaviour
-- Errors shown in UI must be safe, concise, and actionable.
-- Provide retry action only when safe.
-- Critical risk/security events should be sticky and visible until acknowledged.
-- Background warnings should not block the entire UI.
+## User-Facing Behavior
+- Actionable errors should include cause, impact, and next step.
+- Fatal startup errors must block execution with recovery instructions.
+- Background recoverable failures should surface as status banners or log entries, not modal spam.
 
-## Recovery Flows
-- provider failure -> fallback provider if policy allows,
-- quote failure -> refresh quote path,
-- chain RPC failure -> failover to backup RPC,
-- DB corruption suspicion -> read-only safe mode,
-- preload/IPC contract mismatch -> block execution path and require update.
-
-## Diagnostics and Support Bundles
-Support export should include:
-- recent redacted logs,
-- app version,
-- OS version,
-- enabled providers/chains,
-- config summary without secrets,
-- error timeline.
-
-## Cross-References
-- [`MONITORING-OBSERVABILITY.md`](./MONITORING-OBSERVABILITY.md)
-- [`SECURITY.md`](./SECURITY.md)
-- [`IPC-PROTOCOL.md`](./IPC-PROTOCOL.md)
-- [`NON-FUNCTIONAL-REQUIREMENTS.md`](./NON-FUNCTIONAL-REQUIREMENTS.md)
+## AI Agent Guidance
+- Every thrown error must map to a category in this document.
+- Every retryable operation must define idempotency assumptions in code.

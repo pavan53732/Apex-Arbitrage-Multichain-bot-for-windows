@@ -1,17 +1,11 @@
 # FEATURE-MATRIX.md
 
 ## Purpose
-Lists features by release stage, user role, and implementation readiness.
+Tracks which capabilities exist, are planned, are deferred, or are intentionally excluded.
 
-## Dimensions
-- feature name
-- owner module
-- UI status
-- backend status
-- AI dependency
-- risk level
-- release flag
-
-## Cross-References
-- [`IMPLEMENTATION-ROADMAP.md`](./IMPLEMENTATION-ROADMAP.md)
-- [`ENHANCEMENT-ROADMAP.md`](./ENHANCEMENT-ROADMAP.md)
+## Columns
+- feature
+- status
+- owner doc
+- implementation phase
+- notes

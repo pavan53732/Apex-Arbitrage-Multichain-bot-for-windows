@@ -1,25 +1,18 @@
 # MODULE-DEPENDENCY.md
 
 ## Purpose
-Defines allowed and forbidden dependencies between repository packages and runtime layers.
+Defines allowed dependencies between top-level application layers and packages.
+
+## Related Documents
+- [PROJECT-STRUCTURE.md](./PROJECT-STRUCTURE.md)
+- [ARCHITECTURE.md](./ARCHITECTURE.md)
 
 ## Dependency Matrix
-| From | May Depend On |
-|---|---|
-| renderer | preload API, shared-types, ipc-contracts |
-| preload | ipc-contracts, shared-types |
-| main | core, config, db, ai-orchestrator, risk-engine, strategy-engine, chain-clients, dex-clients, logging |
-| strategy-engine | core, shared-types, config, logging, chain-clients, dex-clients, risk-engine interfaces |
-| db | shared-types, logging, config |
-| shared-types | none or schema utilities only |
-
-## Forbidden Dependencies
-- renderer -> db
-- renderer -> chain/dex adapters
-- shared-types -> Electron
-- strategies -> renderer
-- logging -> feature modules
-
-## Cross-References
-- [`PROJECT-STRUCTURE.md`](./PROJECT-STRUCTURE.md)
-- [`ARCHITECTURE.md`](./ARCHITECTURE.md)
+| From | May Depend On | Must Not Depend On |
+|---|---|---|
+| renderer features | ui-kit, ipc-contracts, shared models | Electron main internals, db, contracts |
+| preload | ipc-contracts, shared models | renderer feature modules |
+| main app | all non-UI packages | renderer feature modules directly |
+| strategy-engine | chain-adapters, dex-adapters, risk-engine, ai-core | renderer, Electron UI |
+| risk-engine | shared models, config | renderer, DEX UI, updater |
+| db | config, shared models | renderer |

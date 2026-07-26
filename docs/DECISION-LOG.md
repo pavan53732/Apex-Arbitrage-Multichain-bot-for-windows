@@ -1,16 +1,9 @@
 # DECISION-LOG.md
 
 ## Purpose
-Track architecture and implementation decisions that materially affect future work.
+Stores architectural decisions that affect implementation so future AI sessions do not reverse or reinterpret settled choices.
 
-## Required Fields per Entry
-- date
-- decision
-- context
-- alternatives considered
-- consequence
-- linked docs updated
-
-## Cross-References
-- [`ARCHITECTURE.md`](./ARCHITECTURE.md)
-- [`KNOWN-LIMITATIONS.md`](./KNOWN-LIMITATIONS.md)
+## Rules
+- Record date, decision, context, options considered, and consequence.
+- Link each decision to affected docs.
+- Superseded decisions must remain visible with status markers.

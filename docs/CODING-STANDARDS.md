@@ -1,94 +1,79 @@
 # CODING-STANDARDS.md
 
 ## Purpose
-This document defines the implementation standards for all APEX source code. It is intended to remove stylistic and architectural ambiguity for both human contributors and AI agents.
+Defines mandatory coding conventions for all code generated for APEX so humans and AI agents produce uniform, reviewable, and maintainable code.
 
 ## Scope
-TypeScript rules, naming conventions, formatting, dependency rules, linting, testing expectations, and commit conventions.
+Covers TypeScript standards, naming conventions, file naming, architecture rules, dependency rules, formatting, linting, testing expectations, comments, and commit conventions.
 
-## Ownership
-Engineering maintainers own this document. Any automated or AI-generated code must conform before merge.
+## Related Documents
+- [PROJECT-STRUCTURE.md](./PROJECT-STRUCTURE.md)
+- [ARCHITECTURE.md](./ARCHITECTURE.md)
+- [TESTING-GUIDE.md](./TESTING-GUIDE.md)
+- [BUILD-RELEASE-CICD.md](./BUILD-RELEASE-CICD.md)
 
-## Language Standards
-- Primary language: TypeScript.
-- Use `strict` mode across all packages.
-- Disallow `any` unless accompanied by a documented justification comment and a tracked cleanup issue.
-- Prefer discriminated unions over boolean mode flags.
-- Prefer explicit return types on exported functions, public methods, IPC handlers, service boundaries, and hooks.
+## Language and Tooling Standards
+- TypeScript is required for application code.
+- Use strict mode, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`, and path aliases only when defined centrally.
+- ESLint and Prettier are mandatory.
+- Avoid `any`; prefer `unknown` with explicit narrowing.
+- Prefer Zod schemas for runtime validation.
 
-## Naming Conventions
-| Item | Convention |
-|---|---|
-| Variables/functions | `camelCase` |
-| Types/interfaces/classes | `PascalCase` |
-| Constants | `SCREAMING_SNAKE_CASE` for true constants; otherwise `camelCase` |
-| Files | `kebab-case` |
-| React components | `PascalCase.tsx` |
-| Hooks | `useXxx.ts` |
-| Stores | `*.store.ts` |
-| Schemas | `*.schema.ts` |
-| Tests | `*.spec.ts` / `*.e2e.ts` |
+## Naming Rules
+- Files: kebab-case, except React components may use `PascalCase.tsx` if enforced consistently.
+- Types, interfaces, classes: PascalCase.
+- Functions and variables: camelCase.
+- Constants: UPPER_SNAKE_CASE only for true constants and env keys.
+- IPC channels: `<domain>:<action>` format, for example `wallet:get-balance`.
+- Feature folders: singular nouns unless the domain is inherently plural.
 
-## Architectural Coding Rules
-- Keep domain logic outside React components.
-- Keep IPC handlers thin; delegate to services.
-- Prefer pure functions in `packages/core`.
-- Side effects must be isolated in adapter/service layers.
-- No hidden singleton state except explicitly documented infrastructure services.
-- Do not parse environment variables outside the config package.
-- Do not perform direct SQL in UI, strategy, or renderer layers.
+## Architectural Rules
+- No renderer access to Node or Electron internals except through preload-exposed APIs.
+- No direct SQL from UI code.
+- No side effects inside pure domain mappers or validators.
+- Domain logic must be package-local and testable without Electron.
+- Shared contracts must be typed and versioned.
 
 ## Dependency Rules
-- UI components may depend on hooks, stores, shared types, and API clients.
-- UI components must not depend on database or chain adapters.
-- Strategy modules may not import Electron-specific APIs.
-- Shared types may not import runtime packages.
-- Circular dependencies are prohibited.
+- Import only from package public entry points.
+- UI kit must not depend on feature modules.
+- Risk engine must not depend on renderer UI.
+- Strategy implementations must depend on interfaces and adapters, not concrete window or UI services.
+- Cyclic dependencies are forbidden.
 
 ## Error and Logging Rules
-- Throw typed errors from service boundaries.
-- Never swallow errors silently.
-- Log with structured fields, not concatenated prose, following [`ERROR-HANDLING-LOGGING.md`](./ERROR-HANDLING-LOGGING.md).
-- Never log secrets, tokens, private keys, mnemonic phrases, or full provider responses containing user-sensitive fields.
+- Throw typed errors, not string literals.
+- Log structured objects, not free-form multiline text as the primary signal.
+- Never log secrets, raw API keys, or decrypted credentials.
 
-## React / Renderer Rules
-- Prefer feature folders over type-based sprawl.
-- One component should have one clear responsibility.
-- Derived state should stay derived; do not duplicate server/main-process state unnecessarily.
-- Use memoization only when profiling or data volume justifies it.
+## Formatting Rules
+- One exported symbol family per file when practical.
+- Prefer small modules with focused responsibility.
+- Keep functions under roughly 60 lines unless orchestration logic genuinely requires more.
+- Use early returns to reduce nesting.
+- Document non-obvious invariants with concise comments.
 
-## TypeScript Patterns
-- Use `zod` schemas at all external boundaries.
-- Prefer readonly types for immutable DTOs.
-- Prefer small service interfaces over monolithic god-services.
-- Use exhaustive `switch` statements with `never` checks for enums/unions.
+## Testability Rules
+- Every package must be unit-testable in isolation.
+- Business rules must have deterministic tests.
+- IPC handlers require contract tests.
+- Critical flows require integration coverage.
 
-## Formatting and Tooling
-- ESLint and Prettier are mandatory.
-- Max line length: 100-120 depending on formatter settings, but readability takes priority over forced wrapping.
-- Use import ordering: built-in -> external -> workspace packages -> relative imports.
-- Avoid default exports except for framework-required entrypoints.
+## Commit Conventions
+Use conventional-style commit prefixes:
+- `feat:` new functionality
+- `fix:` bug fix
+- `docs:` documentation only
+- `refactor:` internal structural changes
+- `test:` test-only changes
+- `chore:` tooling or maintenance
 
-## Testing Minimums
-- Every package must have unit tests for critical business logic.
-- IPC and config validation require explicit boundary tests.
-- Bugs fixed in production should add a regression test whenever practical.
-- See [`TESTING-GUIDE.md`](./TESTING-GUIDE.md).
+Commit bodies must explain:
+- what changed,
+- why it changed,
+- which docs or architecture decisions it aligns with.
 
-## Git and Commit Conventions
-- Work directly on `main` unless the repo owner instructs otherwise.
-- Pull latest `main` before making changes.
-- Use descriptive commit subjects that state the area and intent.
-- Multi-paragraph commit bodies are preferred for large documentation or architecture updates.
-
-## AI Agent Constraints
-- AI agents must not invent unapproved libraries or folders.
-- AI agents must check this document and [`PROJECT-STRUCTURE.md`](./PROJECT-STRUCTURE.md) before writing code.
-- Where ambiguity exists, the AI agent must resolve it by updating documentation first rather than improvising architecture.
-
-## Cross-References
-- [`PROJECT-STRUCTURE.md`](./PROJECT-STRUCTURE.md)
-- [`CONFIGURATION.md`](./CONFIGURATION.md)
-- [`ERROR-HANDLING-LOGGING.md`](./ERROR-HANDLING-LOGGING.md)
-- [`TESTING-GUIDE.md`](./TESTING-GUIDE.md)
-- [`NON-FUNCTIONAL-REQUIREMENTS.md`](./NON-FUNCTIONAL-REQUIREMENTS.md)
+## AI Agent Rules
+- Do not invent local conventions; follow this document.
+- If a generated implementation conflicts with this file, this file wins unless explicitly superseded.
+- If a needed convention is missing, update this document before broad code generation continues.

@@ -1,19 +1,12 @@
 # COMPONENT-DIAGRAMS.md
 
 ## Purpose
-Textual component diagrams for AI agents and human maintainers.
+Provides structural diagrams of major runtime components and their boundaries.
 
-## System Diagram
+## Scope
+This file owns diagram-oriented representations and should not duplicate long prose owned elsewhere.
+
+## Desktop Runtime
 ```text
-Renderer UI <-> Preload Bridge <-> Main Process <-> Domain Services
-                                       |-> DB
-                                       |-> AI Providers
-                                       |-> Chain Clients
-                                       |-> DEX Clients
-                                       |-> Risk Engine
-                                       |-> Strategy Engine
+Renderer UI -> Preload API -> IPC Contracts -> Main Process Services -> Packages (AI, Risk, Strategy, DB, Adapters)
 ```
-
-## Cross-References
-- [`ARCHITECTURE.md`](./ARCHITECTURE.md)
-- [`MODULE-DEPENDENCY.md`](./MODULE-DEPENDENCY.md)

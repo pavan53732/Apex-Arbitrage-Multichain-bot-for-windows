@@ -1,15 +1,7 @@
 # KNOWN-LIMITATIONS.md
 
 ## Purpose
-Defines accepted constraints, temporary gaps, and not-yet-supported behaviours.
+Documents current intentional constraints, unsupported scenarios, and accepted gaps so implementation remains honest and consistent.
 
-## Categories
-- platform limitations
-- provider limitations
-- chain support limitations
-- performance limitations
-- documentation limitations
-
-## Cross-References
-- [`DECISION-LOG.md`](./DECISION-LOG.md)
-- [`ENHANCEMENT-ROADMAP.md`](./ENHANCEMENT-ROADMAP.md)
+## Scope
+Covers provider limitations, chain support limits, desktop-only constraints, unsupported wallet modes, and deferred features.

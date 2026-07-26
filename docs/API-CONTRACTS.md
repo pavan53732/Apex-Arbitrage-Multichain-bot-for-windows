@@ -1,11 +1,14 @@
 # API-CONTRACTS.md
 
 ## Purpose
-Defines internal service API contracts and external-facing adapter contract expectations.
+Defines external and internal typed API contracts not fully covered by transport-specific docs.
 
-## Scope
-Typed service interfaces, repository contracts, provider contracts, and renderer-safe APIs. IPC-specific messages remain in [`IPC-PROTOCOL.md`](./IPC-PROTOCOL.md).
+## Related Documents
+- [IPC-PROTOCOL.md](./IPC-PROTOCOL.md)
+- [API-REFERENCE.md](./API-REFERENCE.md)
+- [CHAIN-INTEGRATION.md](./CHAIN-INTEGRATION.md)
 
-## Cross-References
-- [`API-REFERENCE.md`](./API-REFERENCE.md)
-- [`IPC-PROTOCOL.md`](./IPC-PROTOCOL.md)
+## Scope Boundaries
+- HTTP/RPC client request and response normalization contracts.
+- Provider-facing structured output contracts.
+- Shared DTO naming conventions.
