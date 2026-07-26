@@ -239,3 +239,15 @@ These must not claim ownership and should only point to owners:
 - Explainability: `EXPLAINABILITY.md`
 - Workflow Builder: `WORKFLOW-BUILDER.md`
 - Knowledge Graph: `KNOWLEDGE-GRAPH.md`
+
+- GOVERNANCE-EXPLAINABILITY.md — Authoritative
+
+- LIVE-ARCHITECTURE-VIEWER.md — Authoritative
+
+- DATA-GOVERNANCE.md — Authoritative
+
+
+## Central governance contracts
+- Governance Explainability: `GOVERNANCE-EXPLAINABILITY.md`
+- Live Architecture Viewer: `LIVE-ARCHITECTURE-VIEWER.md`
+- Data Governance: `DATA-GOVERNANCE.md`

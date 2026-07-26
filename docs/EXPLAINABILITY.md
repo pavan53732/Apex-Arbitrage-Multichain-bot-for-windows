@@ -26,3 +26,5 @@ Reject storage, request re-evaluation, or mark the decision as non-compliant.
 - `DECISION-ENGINE.md`
 - `LEARNING-PIPELINE.md`
 - `METRICS.md`
+
+For governance-grade trace compliance, see `GOVERNANCE-EXPLAINABILITY.md`.

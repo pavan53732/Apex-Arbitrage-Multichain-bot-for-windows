@@ -25,3 +25,5 @@ Refresh source nodes, revalidate relations, and isolate stale subgraphs.
 - `CHAIN-INTELLIGENCE.md`
 - `MARKET-INTELLIGENCE.md`
 - `DOMAIN-MODEL.md`
+
+For data governance, see `DATA-GOVERNANCE.md`.

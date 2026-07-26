@@ -45,3 +45,6 @@ Navigation-only document pointing to the authoritative owner(s).
 - [EXPLAINABILITY.md](./EXPLAINABILITY.md) – Defines the mandatory trace format for decisions and actions.
 - [WORKFLOW-BUILDER.md](./WORKFLOW-BUILDER.md) – Defines event-driven user workflows and policy-checked automation.
 - [KNOWLEDGE-GRAPH.md](./KNOWLEDGE-GRAPH.md) – Defines the structured graph of protocols, tokens, strategies, chains, DEXs, risks, and agents.
+- [GOVERNANCE-EXPLAINABILITY.md](./GOVERNANCE-EXPLAINABILITY.md) – Centralizes audit lineage, rationale retention, and trace governance.
+- [LIVE-ARCHITECTURE-VIEWER.md](./LIVE-ARCHITECTURE-VIEWER.md) – Centralizes live topology visualization and runtime graph rendering.
+- [DATA-GOVERNANCE.md](./DATA-GOVERNANCE.md) – Centralizes normalization, validation, provenance, caching, and graph linking.

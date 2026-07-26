@@ -59,3 +59,5 @@ For event handling, see `EVENT-BUS.md`.
 For worker scheduling, see `WORKER-POOL.md`.
 For workspace persistence, see `DASHBOARD-WORKSPACES.md`.
 For dependency graph details, see `DEPENDENCY-GRAPH.md`.
+For live architecture visualization, see `LIVE-ARCHITECTURE-VIEWER.md`.
+For data governance, see `DATA-GOVERNANCE.md`.
