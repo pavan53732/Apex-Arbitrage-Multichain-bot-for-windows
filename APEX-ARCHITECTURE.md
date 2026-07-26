@@ -1,261 +1,85 @@
-# APEX — Project Specification
+# APEX — Project Overview
 
-> Autonomous Multi-Chain AI DeFi Intelligence & Execution Platform
-> Working specification (compiled from owner-provided parts).
+## Purpose
+This file is the top-level overview and navigation map for the APEX repository. It is intentionally concise. Detailed implementation guidance lives in the `docs/` directory, which is the single source of truth for application behaviour, architecture, interfaces, and delivery rules.
 
-**Status:** v3.0.0 — Documentation complete. Implementation in progress.
+## Vision
+APEX is a Windows-first desktop arbitrage platform with AI-assisted workflows, modular strategy execution, strict risk controls, and multi-chain/multi-DEX integration.
 
-**See also:** `docs/` for the full v3 documentation suite (ARCHITECTURE, AGENTS, SKILLS, AI-SETTINGS, AI-PIPELINE, DESIGNER-PROTOCOLS, USER-GUIDE, TROUBLESHOOTING, FAQ, CHANGELOG, API-REFERENCE, DEPLOYMENT, CHAIN-INTEGRATION, DEX-INTEGRATION, BACKTESTING, CONTRIBUTING, WINDOWS-DESKTOP, CLOUD-AI-INTEGRATION, SECURITY, ENHANCEMENT-ROADMAP).
+## Documentation Principles
+- Every topic has one authoritative document.
+- AI agents and human contributors must follow repository documentation before writing code.
+- When documentation is missing or ambiguous, the correct action is to update the specification first.
 
----
+## Documentation Map
+### Core Architecture
+- [`docs/README.md`](./docs/README.md)
+- [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md)
+- [`docs/PROJECT-STRUCTURE.md`](./docs/PROJECT-STRUCTURE.md)
+- [`docs/MODULE-DEPENDENCY.md`](./docs/MODULE-DEPENDENCY.md)
+- [`docs/DATA-FLOW.md`](./docs/DATA-FLOW.md)
+- [`docs/EVENT-FLOW.md`](./docs/EVENT-FLOW.md)
+- [`docs/COMPONENT-DIAGRAMS.md`](./docs/COMPONENT-DIAGRAMS.md)
 
-## Part 1 — Architecture Definition v1.0 (provided)
+### Engineering Standards
+- [`docs/CODING-STANDARDS.md`](./docs/CODING-STANDARDS.md)
+- [`docs/CONFIGURATION.md`](./docs/CONFIGURATION.md)
+- [`docs/STATE-MANAGEMENT.md`](./docs/STATE-MANAGEMENT.md)
+- [`docs/ERROR-HANDLING-LOGGING.md`](./docs/ERROR-HANDLING-LOGGING.md)
+- [`docs/PERMISSION-MODEL.md`](./docs/PERMISSION-MODEL.md)
+- [`docs/FILE-STORAGE.md`](./docs/FILE-STORAGE.md)
+- [`docs/NON-FUNCTIONAL-REQUIREMENTS.md`](./docs/NON-FUNCTIONAL-REQUIREMENTS.md)
+- [`docs/PERFORMANCE-TARGETS.md`](./docs/PERFORMANCE-TARGETS.md)
 
-### 1. Vision
-APEX is not a simple arbitrage bot.
-APEX is a modular autonomous DeFi operating system whose primary objective is to continuously analyze decentralized finance markets, discover profitable opportunities, evaluate risk in real time, simulate execution before capital is committed, and execute only when predefined profitability and safety conditions are satisfied.
-Instead of relying on a single arbitrage strategy, APEX functions as an intelligent execution platform capable of hosting many independent profit-generation strategies under one unified architecture.
-The project is designed around deterministic execution, modular intelligence, production-grade engineering, and autonomous decision making.
+### AI, Trading, and Runtime Systems
+- [`docs/AI-PIPELINE.md`](./docs/AI-PIPELINE.md)
+- [`docs/AI-SETTINGS.md`](./docs/AI-SETTINGS.md)
+- [`docs/CLOUD-AI-INTEGRATION.md`](./docs/CLOUD-AI-INTEGRATION.md)
+- [`docs/STRATEGIES.md`](./docs/STRATEGIES.md)
+- [`docs/RISK-ENGINE.md`](./docs/RISK-ENGINE.md)
+- [`docs/CHAIN-INTEGRATION.md`](./docs/CHAIN-INTEGRATION.md)
+- [`docs/DEX-INTEGRATION.md`](./docs/DEX-INTEGRATION.md)
+- [`docs/IPC-PROTOCOL.md`](./docs/IPC-PROTOCOL.md)
+- [`docs/IPC-MESSAGE-CATALOG.md`](./docs/IPC-MESSAGE-CATALOG.md)
+- [`docs/API-REFERENCE.md`](./docs/API-REFERENCE.md)
+- [`docs/API-CONTRACTS.md`](./docs/API-CONTRACTS.md)
+- [`docs/DATABASE-SCHEMA.md`](./docs/DATABASE-SCHEMA.md)
 
-### 2. Core Mission
-The objective of APEX is:
-Maximize risk-adjusted profit through autonomous AI-assisted execution while minimizing capital exposure, execution failures, gas waste, slippage, and protocol risk.
-Every subsystem exists to improve one or more of these objectives.
+### UI and Product Design
+- [`docs/DESIGNER-PROTOCOLS.md`](./docs/DESIGNER-PROTOCOLS.md)
+- [`docs/DESIGN-SYSTEM.md`](./docs/DESIGN-SYSTEM.md)
+- [`docs/UI-COMPONENT-SPEC.md`](./docs/UI-COMPONENT-SPEC.md)
+- [`docs/FEATURE-MATRIX.md`](./docs/FEATURE-MATRIX.md)
 
-### 3. Project Philosophy
-APEX follows five engineering principles.
+### Operations and Delivery
+- [`docs/TESTING-GUIDE.md`](./docs/TESTING-GUIDE.md)
+- [`docs/WINDOWS-DESKTOP.md`](./docs/WINDOWS-DESKTOP.md)
+- [`docs/BUILD-RELEASE-CICD.md`](./docs/BUILD-RELEASE-CICD.md)
+- [`docs/MONITORING-OBSERVABILITY.md`](./docs/MONITORING-OBSERVABILITY.md)
+- [`docs/DEPLOYMENT.md`](./docs/DEPLOYMENT.md)
+- [`docs/IMPLEMENTATION-ROADMAP.md`](./docs/IMPLEMENTATION-ROADMAP.md)
+- [`docs/ENHANCEMENT-ROADMAP.md`](./docs/ENHANCEMENT-ROADMAP.md)
+- [`docs/DECISION-LOG.md`](./docs/DECISION-LOG.md)
+- [`docs/KNOWN-LIMITATIONS.md`](./docs/KNOWN-LIMITATIONS.md)
 
-- **Intelligence First** — Every execution decision should be data-driven. No transaction should execute simply because an arbitrage exists. The system evaluates market conditions, volatility, liquidity, gas cost, execution probability, historical success, protocol health, wallet status before execution.
-- **Simulation Before Execution** — Nothing executes immediately. Every opportunity passes through: Discovery → Risk Analysis → Simulation → Profit Validation → Execution → Verification → Learning.
-- **Safety Before Profit** — The system must reject trades when: Expected profit < required minimum; Gas spikes; Liquidity disappears; Oracle divergence detected; Flash loan unavailable; Pool health abnormal; MEV probability unacceptable; Execution confidence below threshold.
-- **Modular Everything** — Every major subsystem must be replaceable: DEX, Oracle, Bridge, Flash Loan Provider, Execution Strategy, AI Model, Storage Engine, Dashboard, Notification Provider. Nothing should require rewriting the entire project.
-- **Continuous Learning** — Every execution becomes training data: successful trades, failed trades, gas usage, profit, slippage, execution time, route quality — all become part of future decision making.
+### Support and Shared Vocabulary
+- [`docs/SECURITY.md`](./docs/SECURITY.md)
+- [`docs/FAQ.md`](./docs/FAQ.md)
+- [`docs/TROUBLESHOOTING.md`](./docs/TROUBLESHOOTING.md)
+- [`docs/USER-GUIDE.md`](./docs/USER-GUIDE.md)
+- [`docs/CONTRIBUTING.md`](./docs/CONTRIBUTING.md)
+- [`docs/CHANGELOG.md`](./docs/CHANGELOG.md)
+- [`docs/GLOSSARY.md`](./docs/GLOSSARY.md)
 
-### 4. High-Level System Architecture
-```
-User Dashboard
-      │
-      ▼
-Command & Configuration Layer
-      │
-      ▼
-Autonomous Orchestrator Engine
-      │
-      ┌───────────────┬───────────────┬───────────────┐
-      ▼               ▼               ▼
-Discovery        Intelligence       Risk Engine
-Engine           Engine            Engine
-      │
-      ▼
-Opportunity Decision Engine  (Execute? YES / NO)
-      ┌────────┴────────┐
-      ▼                 ▼
-Simulation Engine    Reject
-      ▼
-Transaction Builder
-      ▼
-Smart Contract Layer
-      ▼
-Blockchain Execution Layer
-      ▼
-Verification & Monitoring
-      ▼
-Learning & Memory Engine
-```
+## Repository Workflow
+Work directly on `main` unless the repository owner explicitly requests a feature branch. Before finishing any change:
+1. Checkout `main`.
+2. Pull latest `main`.
+3. Make changes.
+4. Commit with descriptive message and body.
+5. Push to remote `main`.
+6. Verify push succeeded.
+7. Confirm `git status` is clean.
 
-### 5. Primary System Modules
-- **Autonomous Orchestrator** — Central brain. Lifecycle management, scheduling, dependency coordination, event routing, workflow orchestration, recovery, subsystem communication.
-- **Market Discovery Engine** — Scans every supported protocol. Collects token prices, pool reserves, liquidity, TVL, swap fees, gas, block information, volume, protocol status. Updates continuously.
-- **Opportunity Engine** — Builds every possible trading path: DEX Arbitrage, Triangular Arbitrage, Multi-hop, Flash Loan Arbitrage, Cross-DEX, Cross-Chain, Stablecoin cycles, Synthetic asset arbitrage, route permutations.
-- **AI Intelligence Engine** — Predicts probability of success, profit confidence, execution confidence, market trend, volatility, liquidity movement, expected gas, expected slippage, expected ROI, expected failure probability. Outputs confidence score.
-- **Risk Engine** — Evaluates liquidity risk, contract risk, pool risk, MEV risk, oracle risk, bridge risk, network congestion, execution risk, capital exposure, maximum drawdown.
-- **Simulation Engine** — Runs complete execution simulation. Checks flash loan, gas, DEX routing, swap results, profit... *(Part 1 cut off here — continues in Part 2)*
-
----
-
-### 5. Primary System Modules (continued)
-- **Simulation Engine** — Runs complete execution simulation. Checks: Flash loan, Gas, DEX routing, Swap results, Profit, Revert conditions, Loan repayment, Expected wallet balance. Simulation must pass before execution.
-- **Execution Engine** — Responsible for: Transaction building, Flash loan request, Swap execution, Repayment, Profit withdrawal, Failure handling, Retry logic, Confirmation monitoring.
-- **Learning Engine** — Stores: Every trade, every simulation, every failure, every gas cost, every slippage event, every market condition. Improves AI models continuously.
-
-### 6. Smart Contract Layer
-Contracts perform deterministic blockchain operations only.
-Responsibilities:
-- Flash Loan Receiver
-- Swap Executor
-- Token Router
-- Profit Distributor
-- Permission Control
-- Emergency Pause
-- Upgrade Support (if selected)
-- Events
-- Security Guards
-
-No AI exists inside contracts. AI remains off-chain.
-
-### 7. AI System
-The AI layer performs:
-- Feature engineering
-- Historical learning
-- Route scoring
-- Trade classification
-- Volatility prediction
-- Execution confidence estimation
-- Market anomaly detection
-- Adaptive threshold tuning
-- Model retraining
-- Offline inference
-- Online inference
-
-Possible model families include gradient-boosted trees, sequence models (such as LSTM/GRU), transformer-based time-series models, or reinforcement learning where justified by evaluation. The final choice should be evidence-driven rather than fixed.
-
-### 8. Multi-Chain Architecture
-The architecture should be chain-agnostic.
-Initial production deployment may target Polygon, while additional EVM-compatible chains can be enabled through adapters.
-Potential supported chains include:
-- Polygon
-- Ethereum
-- Arbitrum
-- Optimism
-- Base
-- BNB Chain
-- Avalanche C-Chain
-- Sonic
-- Linea
-- zkSync Era
-- Scroll
-- Mantle
-- Gnosis
-- Celo
-
-Each chain should provide:
-- RPC Manager
-- Router Registry
-- Token Registry
-- Gas Estimator
-- Explorer
-- Flash Loan Provider
-- DEX Registry
-- Oracle Registry
-- Bridge Registry (if cross-chain functionality is implemented)
-
-### 9. Supported Profit Strategies
-The architecture is intended to support multiple independent strategy modules, such as:
-- Cross-DEX Arbitrage
-- Triangular Arbitrage
-- Flash Loan Arbitrage
-- Stablecoin Arbitrage
-- Multi-Hop Routing
-- Liquidity Imbalance Detection
-- Oracle Divergence Monitoring
-- Cross-Chain Arbitrage (when bridge support is implemented)
-- Statistical Arbitrage (future)
-- Market-Making (future)
-- Yield Optimization (future)
-
-Each strategy should implement a common interface so it can be enabled or disabled without affecting the rest of the system.
-
-### 10. User Profit Flow
-```
-Market Scanner
-  ↓ Collect Market Data
-  ↓ Normalize Data
-  ↓ AI Opportunity Analysis
-  ↓ Risk Evaluation
-  ↓ Profit Estimation
-  ↓ Gas Calculation
-  ↓ Slippage Simulation
-  ↓ Flash Loan Availability
-  ↓ Execution Simulation
-  ↓ Decision Engine
-  ↓ Execute Transaction
-  ↓ Loan Repayment
-  ↓ Profit Distribution
-  ↓ Trade Verification
-  ↓ Learning Database
-```
-Only opportunities that satisfy configured profitability, risk, and simulation requirements proceed to execution.
-
-### 11. Technology Stack
-- **Frontend:** Next.js, React, TypeScript, Tailwind CSS, Recharts, TanStack Query, Zustand or Redux Toolkit, Framer Motion
-- **Backend:** Node.js, TypeScript, Express or Fastify, WebSocket, Ethers.js, Viem (optional), Axios
-- **Blockchain:** Solidity, Hardhat, OpenZeppelin Contracts, Foundry (optional), Ethers.js / Viem
-- **AI:** Python, PyTorch and/or TensorFlow, NumPy, Pandas, Scikit-learn, XGBoost or LightGBM, ONNX Runtime (optional)
-- **Storage:** SQLite (dev/local), PostgreSQL (prod, optional), Redis, Parquet/CSV for datasets
-- **Messaging:** WebSocket, Event Bus, Node EventEmitter, BullMQ (optional)
-- **Infrastructure:** Docker, Docker Compose, GitHub Actions, PM2, Nginx, Prometheus, Grafana
-- **Testing:** Jest, Vitest, Hardhat Tests, Foundry Tests, Playwright, Mainnet Fork Testing
-
-### 12. Design Goals
-- Autonomous operation with configurable supervision
-- Modular architecture with well-defined interfaces
-- Deterministic execution for blockchain actions
-- AI-assisted decision support
-- High observability through metrics and structured logging
-- Multi-strategy extensibility
-- Chain abstraction for EVM compatibility
-- Comprehensive simulation before execution
-- Continuous model improvement from historical execution data
-
-### 13. End Goal
-APEX is designed to become a modular autonomous DeFi execution platform, not merely a single-purpose arbitrage bot. Its architecture separates intelligence, risk evaluation, simulation, execution, and learning into independent subsystems so that new strategies, protocols, AI models, and supported chains can be added without redesigning the entire platform.
-The long-term objective is to evolve into an extensible DeFi operating system capable of continuously discovering, evaluating, and executing profitable opportunities across multiple EVM ecosystems while maintaining strict safety, observability, and engineering discipline.
-
-<!-- APPEND PARTS 5-6 BELOW THIS LINE -->
-
----
-
-## Addendum v3.0 (2026-07-25)
-
-The v3 documentation suite in `docs/` supersedes Parts 2–6 of this file.
-The new direction:
-
-- **Cloud-AI-only** (OpenAI-compatible + Anthropic + Self-Hosted Local OpenAI-compatible)
-- **Windows desktop .exe** via Electron (no Docker, no WSL)
-- **User-configurable AI providers** with full base URL + model + key control
-- **12 agents, 40+ skills, 3-layer cache, RAG, memory, function-calling, streaming**
-- **AI Settings page** with OpenAI / Anthropic / Self-Hosted / Custom templates
-- **Full documentation** across 20 markdown files
-
-### v3.0 Documentation Map
-
-| Doc | Purpose |
-|-----|---------|
-| `docs/README.md` | Doc index + project vision |
-| `docs/ARCHITECTURE.md` | System architecture, layers, components, data flow |
-| `docs/AGENTS.md` | 12 agents, full field schema, communication protocol |
-| `docs/DESIGNER-PROTOCOLS.md` | UI/UX design system, component library, patterns |
-| `docs/SKILLS.md` | 40+ skills across 10 categories |
-| `docs/AI-PIPELINE.md` | Provider abstraction, streaming, function-calling, RAG, memory |
-| `docs/AI-SETTINGS.md` | AI Configuration page (3 tabs, 3 provider types, presets) |
-| `docs/WINDOWS-DESKTOP.md` | Electron packaging, .exe, no Docker |
-| `docs/CLOUD-AI-INTEGRATION.md` | Provider integration reference |
-| `docs/ENHANCEMENT-ROADMAP.md` | Milestones, feature matrix, architecture patterns to adopt |
-| `docs/SECURITY.md` | Threat model, key handling, Electron hardening |
-| `docs/USER-GUIDE.md` | End-user guide |
-| `docs/TROUBLESHOOTING.md` | Symptom-first troubleshooting |
-| `docs/FAQ.md` | 50+ Q&A |
-| `docs/CHANGELOG.md` | Version history |
-| `docs/API-REFERENCE.md` | IPC + programmatic + (planned) webhook API |
-| `docs/DEPLOYMENT.md` | Build, release, code signing, auto-update |
-| `docs/CHAIN-INTEGRATION.md` | Adding a new EVM chain |
-| `docs/DEX-INTEGRATION.md` | Adding a new DEX adapter |
-| `docs/BACKTESTING.md` | Backtest engine, A/B, stress tests |
-| `docs/CONTRIBUTING.md` | How to contribute |
-| `docs/STRATEGIES.md` | Strategy interface, lifecycle, built-ins, custom strategies |
-| `docs/DATABASE-SCHEMA.md` | SQLite schema, indexes, migrations, data lifecycle |
-| `docs/IPC-PROTOCOL.md` | IPC channel catalogue, schemas, validation, error codes |
-| `docs/TESTING-GUIDE.md` | Unit, integration, E2E, Hardhat, CI testing strategy |
-| `docs/RISK-ENGINE.md` | Position sizing, circuit breakers, drawdown, emergency halt |
-
-The architecture in Parts 1–6 of this file (system modules, multi-chain, profit
-strategies, etc.) is implemented by the components and skills documented in
-`docs/`. Treat the v3 docs as authoritative for design and implementation
-decisions.
-
-
-### Historical vs Current Architecture Note
-
-Parts 1–6 of this file may still mention earlier design directions (including offline/Python-oriented AI options).  
-**The v3 documentation suite in `docs/` is authoritative** for current implementation: Cloud-AI-only inference, Windows Electron desktop packaging, and the modular agent/skill/strategy architecture. Prefer `docs/ARCHITECTURE.md`, `docs/AI-PIPELINE.md`, and the expanded security/desktop/strategy docs over legacy wording when the two conflict.
-
+## Single Source of Truth Statement
+If two documents conflict, the more focused document owns the topic. This overview file never overrides detailed implementation documents; it only links to them.

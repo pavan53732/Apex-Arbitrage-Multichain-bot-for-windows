@@ -110,3 +110,33 @@ feature change. Docs are the source of truth for design decisions.*
 
 > These documents close the documentation gaps identified in the v3 consistency review. Treat them as authoritative for their respective domains.
 
+
+## Specification Expansion (v3.2)
+
+### Build Blueprint
+- [PROJECT-STRUCTURE.md](./PROJECT-STRUCTURE.md)
+- [CODING-STANDARDS.md](./CODING-STANDARDS.md)
+- [CONFIGURATION.md](./CONFIGURATION.md)
+- [STATE-MANAGEMENT.md](./STATE-MANAGEMENT.md)
+- [ERROR-HANDLING-LOGGING.md](./ERROR-HANDLING-LOGGING.md)
+- [MONITORING-OBSERVABILITY.md](./MONITORING-OBSERVABILITY.md)
+- [BUILD-RELEASE-CICD.md](./BUILD-RELEASE-CICD.md)
+- [GLOSSARY.md](./GLOSSARY.md)
+
+### Additional Developer Specifications
+- [MODULE-DEPENDENCY.md](./MODULE-DEPENDENCY.md)
+- [DATA-FLOW.md](./DATA-FLOW.md)
+- [EVENT-FLOW.md](./EVENT-FLOW.md)
+- [COMPONENT-DIAGRAMS.md](./COMPONENT-DIAGRAMS.md)
+- [API-CONTRACTS.md](./API-CONTRACTS.md)
+- [IPC-MESSAGE-CATALOG.md](./IPC-MESSAGE-CATALOG.md)
+- [PERMISSION-MODEL.md](./PERMISSION-MODEL.md)
+- [FILE-STORAGE.md](./FILE-STORAGE.md)
+- [PERFORMANCE-TARGETS.md](./PERFORMANCE-TARGETS.md)
+- [NON-FUNCTIONAL-REQUIREMENTS.md](./NON-FUNCTIONAL-REQUIREMENTS.md)
+- [UI-COMPONENT-SPEC.md](./UI-COMPONENT-SPEC.md)
+- [DESIGN-SYSTEM.md](./DESIGN-SYSTEM.md)
+- [FEATURE-MATRIX.md](./FEATURE-MATRIX.md)
+- [IMPLEMENTATION-ROADMAP.md](./IMPLEMENTATION-ROADMAP.md)
+- [DECISION-LOG.md](./DECISION-LOG.md)
+- [KNOWN-LIMITATIONS.md](./KNOWN-LIMITATIONS.md)
