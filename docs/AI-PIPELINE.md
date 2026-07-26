@@ -3,14 +3,33 @@
 ## Purpose
 This document is the authoritative specification for AI decision lifecycle, prompt lifecycle, provider routing, confidence scoring, explainability, and learning behavior.
 
+## Ownership
+- Owns AI request orchestration, provider routing, prompt lifecycle, and structured response validation.
+- Does not own execution authorization, which remains with risk and execution owners.
+
 ## Decision contract
 AI may rank, explain, or recommend, but it cannot bypass risk, security, wallet, or execution policy checks.
 
 ## Decision lifecycle
 Ingest context -> retrieve memory -> assemble prompt -> select model -> generate candidate -> score confidence -> score opportunity -> score risk -> validate -> approve or reject -> execute or hold -> record outcome -> learn.
 
+### Transition rules
+- Ingest context only after all required state snapshots are available.
+- Retrieve memory only from approved namespaces and freshness windows.
+- Assemble prompt only from policy-approved fields.
+- Select model only from pre-authorized routing tables.
+- Generate candidate only when token and timeout budgets are available.
+- Score and validate every response before downstream use.
+- Record outcome only after the authoritative consumer has accepted or rejected the output.
+- Learn only from persisted outcomes and only when learning is enabled by policy.
+
 ## Prompt lifecycle
 Prompts are versioned artifacts. Each prompt has a template id, version, effective date, model compatibility, risk mode, and rollback path. A prompt version may not be promoted unless validation passes.
+
+### Transition rules
+- Draft -> Validated -> Promoted -> Active -> Deprecated -> Retired.
+- A prompt cannot become Active until compatibility and safety tests pass.
+- Deprecated prompts may serve only for rollback or compatibility windows.
 
 ## Context assembly
 Context includes market data, strategy state, portfolio state, wallet state, prior decisions, and system configuration. Only policy-approved fields may be included.
@@ -69,10 +88,14 @@ Handle provider timeout, empty response, malformed output, stale context, and mo
 ## Recovery behaviour
 Recover by falling back to a lower-priority model, human review, or no-trade according to policy.
 
-## Cross-references
-- Strategy rules: `STRATEGIES.md`
-- Simulation: `SIMULATION-ENGINE.md`
-- Monitoring: `MONITORING-OBSERVABILITY.md`
-- Risk: `RISK-ENGINE.md`
-- Configuration: `CONFIGURATION.md`
+## Persistence
+- Persist prompt versions, routing decisions, model ids, tokens used, confidence scores, validation results, and final consumer decisions.
+- Persist memory references and freshness labels, not raw secrets or unauthorized context fields.
+- Persist learning outcomes only when offline learning is enabled.
 
+## Cross-references
+- `STRATEGIES.md`
+- `SIMULATION-ENGINE.md`
+- `MONITORING-OBSERVABILITY.md`
+- `RISK-ENGINE.md`
+- `CONFIGURATION.md`

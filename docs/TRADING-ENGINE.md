@@ -1,46 +1,68 @@
 # Trading Engine
 
 ## Purpose
-The trading engine is the top-level coordinator for live, paper, and simulated trading sessions. It owns the trading session state machine and delegates pricing, strategy selection, execution, risk gating, portfolio updates, and telemetry to specialized owner subsystems.
+The trading engine is the top-level coordinator for live, paper, and simulated trading sessions. It owns the session lifecycle and routes validated opportunity work to the execution engine and portfolio subsystems.
+
+## Ownership
+- Owns session state, session commands, emergency stop, and reconciliation policy.
+- Depends on strategy, AI, risk, execution, portfolio, market data, and monitoring owners.
 
 ## Responsibilities
 - Start, pause, resume, and stop trading sessions.
-- Select strategy candidates from market, AI, and configuration inputs.
-- Route validated opportunities to execution.
-- Maintain session-level reconciliation and emergency stop behavior.
-- Emit canonical trading events for UI, AI, monitoring, and audit consumers.
+- Convert market and AI inputs into session-level plans.
+- Enforce mode-specific behavior for live, paper, and simulation sessions.
+- Emit canonical session events for UI, automation, and auditing.
+- Block planning while reconciliation is incomplete.
+- Maintain authoritative session state that can be reconstructed from persisted records after restart.
 
-## Business rules
-- No execution may begin unless the active mode is ready and the risk engine approves the candidate.
-- Live trading must respect configured chain, wallet, liquidity, and stop conditions.
-- Paper trading and simulation use the same decision model as live trading but must never broadcast to production chains.
-- Emergency stop has priority over all other session commands.
-
-## State machine
+## Session lifecycle
 Stopped -> Starting -> Ready -> Monitoring -> Planning -> Executing -> Reconciling -> Monitoring.
-EmergencyStop is a terminal state until operator reset.
+EmergencyStop is terminal until operator reset; Recovering is permitted only after crash restart.
+
+### Transition rules
+- Stopped -> Starting after configuration, runtime, and dependency validation pass.
+- Starting -> Ready only after state restoration and warmup complete.
+- Ready -> Monitoring when the engine is idle and healthy.
+- Monitoring -> Planning when validated opportunity work is admitted.
+- Planning -> Executing after risk, wallet, route, and execution checks pass.
+- Executing -> Reconciling after a terminal execution event or failure event.
+- Reconciling -> Monitoring only after durable state is consistent.
+- Any active state -> EmergencyStop when the operator or risk engine triggers a halt.
+- EmergencyStop -> Stopped or Recovering only after explicit operator reset.
 
 ## Inputs
 - Market data snapshots.
-- Opportunity detections.
+- Opportunity detections and rankings.
 - AI recommendations.
 - Strategy configuration.
 - Risk thresholds.
 - Wallet and chain health.
+- Runtime diagnostics.
+- Persisted session snapshots.
 
 ## Outputs
 - Execution requests.
 - Session lifecycle events.
 - Portfolio and position updates.
-- Alert and audit events.
+- Alerts and audit events.
+- Recovery tasks after restart.
 
-## Interfaces
-- IPC: trading.start, trading.stop, trading.pause, trading.resume, trading.emergencyStop.
-- Depends on: AI pipeline, strategy engine, risk engine, execution engine, portfolio manager, market data.
+## Idempotency and retry
+- Session commands must be idempotent when invoked with the same correlation id and command payload.
+- Restart recovery must reconstruct the same session state from durable records.
+- Planning retries must not create duplicate execution work.
+- Emergency stop must always win over in-flight planning or execution.
 
-## Recovery
+## Failure and recovery
 - On process restart, reload persisted session state and reconcile in-flight work before resuming.
 - On unresolved execution state, force reconciliation and block new planning until the session is consistent.
+- If reconciliation cannot complete, degrade to stopped state and surface a blocking diagnostic.
+- If durable state is inconsistent with live state, durable state is authoritative and live work must be reconciled to it.
+
+## Persistence
+- Persist session id, mode, lifecycle state, current strategy, halt reason, emergency-stop state, and active work references.
+- Persist start, stop, pause, resume, and recovery timestamps.
+- Persist the last known consistent snapshot before resuming work.
 
 ## Monitoring
 - Session latency.
@@ -48,9 +70,18 @@ EmergencyStop is a terminal state until operator reset.
 - Emergency stop count.
 - Reconciliation backlog.
 - Session recovery time.
+- State restoration success rate.
 
 ## Testing
 - Session lifecycle coverage.
 - Emergency stop coverage.
 - Crash recovery coverage.
+- Reconciliation gate coverage.
+- Restart replay coverage.
 
+## Cross-references
+- `EXECUTION-ENGINE.md`
+- `RISK-ENGINE.md`
+- `STATE-MANAGEMENT.md`
+- `DATABASE-SCHEMA.md`
+- `MONITORING-OBSERVABILITY.md`
