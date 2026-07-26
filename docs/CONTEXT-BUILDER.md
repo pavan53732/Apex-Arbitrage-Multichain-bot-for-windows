@@ -28,3 +28,9 @@ Compress context, fall back to curated memory, or refuse dispatch if policy fail
 - `AI-MEMORY-SYSTEM.md`
 - `KNOWLEDGE-GRAPH.md`
 - `AI-GATEWAY.md`
+
+## Operational Contract
+Defines how user, market, wallet, and runtime context are assembled for downstream reasoning.
+
+## Example
+A prompt includes live balances, active positions, and current chain state.

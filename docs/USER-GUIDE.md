@@ -9,3 +9,9 @@ Provides operator-facing usage guidance for the application.
 ## Cross-references
 - `USER-FLOWS.md`
 - `TROUBLESHOOTING.md`
+
+## Governance Rules
+Defines how end users navigate features, interpret statuses, and follow safe operating procedures.
+
+## Example
+The guide explains how to review trade status before approving an action.
