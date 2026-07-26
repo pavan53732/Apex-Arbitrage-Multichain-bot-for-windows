@@ -22,3 +22,9 @@ This document covers semantic versioning, compatibility, deprecation, and migrat
 - `CONFIGURATION.md`
 - `IMPLEMENTATION-ROADMAP.md`
 - `MODULE-DEPENDENCY.md`
+
+## Governance Rules
+Defines version policy for documents, schemas, APIs, plugins, contracts, and compatibility expectations.
+
+## Example
+A breaking schema change requires a version bump and migration plan.

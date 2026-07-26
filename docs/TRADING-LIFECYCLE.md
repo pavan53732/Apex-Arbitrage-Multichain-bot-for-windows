@@ -45,3 +45,9 @@ stateDiagram-v2
 - `EXECUTION-LIFECYCLE.md`
 - `RISK-ENGINE.md`
 - `SIMULATION-ENGINE.md`
+
+## Operational Contract
+Defines the full trade lifecycle from opportunity to execution, confirmation, reconciliation, and closure.
+
+## Example
+Trading pauses if execution confirmation fails.

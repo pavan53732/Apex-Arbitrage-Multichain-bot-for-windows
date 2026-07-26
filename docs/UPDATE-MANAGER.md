@@ -12,3 +12,9 @@ Define ownership, contracts, lifecycle, validation, and cross-references.
 ## Cross-references
 - `APEX-OS.md`
 - `ARCHITECTURE.md`
+
+## Operational Contract
+Defines application, plugin, prompt, and model update handling, rollback, migration, and integrity checks.
+
+## Example
+A plugin update is rolled back after an integrity failure.

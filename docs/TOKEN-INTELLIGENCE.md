@@ -29,3 +29,9 @@ If metadata source fails, use cached values and log a warning.
 - `MARKET-DATA.md`
 - `CHAIN-INTELLIGENCE.md`
 - `DOMAIN-MODEL.md`
+
+## Operational Contract
+Defines token enrichment, scoring inputs, validation, metadata aggregation, and downstream usage.
+
+## Example
+An enriched token record includes symbol, chain, liquidity, risk, and discovery source.

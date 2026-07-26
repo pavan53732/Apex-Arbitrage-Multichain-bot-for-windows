@@ -489,3 +489,10 @@ These must not claim ownership and should only point to owners:
 - Service Registry
 - Shutdown Lifecycle
 - System Capability Registry
+
+
+## Deepening pass - tranche 17
+- Token Intelligence
+- Trading Lifecycle
+- Update Manager
+- Versioning
