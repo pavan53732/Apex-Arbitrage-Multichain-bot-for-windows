@@ -25,3 +25,9 @@ This registry is descriptive and feeds market data, routing, slippage, and risk 
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.
+
+## Interface Contract
+Defines oracle identity, feed metadata, heartbeat expectations, and versioned feed configuration.
+
+## Example
+A price oracle entry includes chain, feed id, heartbeat, and status.

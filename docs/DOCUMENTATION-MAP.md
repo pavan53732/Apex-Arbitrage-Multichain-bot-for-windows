@@ -412,3 +412,10 @@ These must not claim ownership and should only point to owners:
 - Chain Registry
 - DEX Registry
 - Event Bus
+
+
+## Deepening pass - tranche 6
+- Event Flow
+- Healthchecks
+- Metrics
+- Oracle Registry

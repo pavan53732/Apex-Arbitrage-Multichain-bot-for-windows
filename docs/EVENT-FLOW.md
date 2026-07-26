@@ -11,3 +11,9 @@ Defines event emission, propagation, ordering, and consumption semantics.
 - `DATA-FLOW.md`
 - `IPC-PROTOCOL.md`
 - `STATE-MANAGEMENT.md`
+
+## Operational Contract
+Defines event production, routing, consumption, correlation, and lifecycle across the platform.
+
+## Example
+OpportunityDiscovered leads to RiskCalculated, SimulationPassed, and ExecutionSubmitted.
