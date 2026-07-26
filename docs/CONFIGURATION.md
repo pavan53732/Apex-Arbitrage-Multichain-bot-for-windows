@@ -70,3 +70,7 @@ An input is validated before any state-changing action.
 - Configuration keys are defined in `CONFIGURATION-REFERENCE.md`.
 - Hot reload applies only to keys explicitly marked reloadable.
 - Keys requiring restart must be annotated in the reference.
+
+## Key reference
+- `CONFIGURATION-REFERENCE.md` is the canonical key-by-key configuration reference.
+- Values marked reloadable may hot-reload; all others require restart or session reset.

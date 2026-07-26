@@ -71,3 +71,7 @@ An input is validated before any state-changing action.
 ## Error catalog
 - Error codes are defined in `ERROR-CATALOG.md` and `ERROR-CODES.md`.
 - Retry classifications must defer to the failure matrix.
+
+## Recovery classification
+- Error-to-action mapping is owned by `FAILURE-MATRIX.md` and `FAILURE-RECOVERY-MATRIX.md`.
+- Stable error codes are enumerated in `ERROR-CATALOG.md` and `ERROR-CODES.md`.

@@ -108,3 +108,7 @@ An input is validated before any state-changing action.
 ## State machine references
 - Subsystem state machines are owned by the corresponding `*-STATE-MACHINE.md` documents.
 - Timeout semantics must defer to the owning subsystem contract.
+
+## Transition conventions
+- State transitions must be documented in the owning subsystem state-machine contract.
+- Timeouts and retry semantics defer to the owning contract.

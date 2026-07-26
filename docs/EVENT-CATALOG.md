@@ -27,3 +27,7 @@ TradeStarted includes trade id, wallet id, strategy id, chain id, and timestamp.
 ## Event ownership
 - Publisher, consumer, retention, ordering, and priority are defined in `EVENT-OWNERSHIP-MATRIX.md`.
 - Delivery guarantees must defer to the owner of the event stream.
+
+## Delivery and ownership
+- Delivery guarantees, publisher, consumer, priority, ordering, and retention belong in `EVENT-OWNERSHIP-MATRIX.md`.
+- Event definitions remain canonical here, but stream semantics defer to the ownership matrix.

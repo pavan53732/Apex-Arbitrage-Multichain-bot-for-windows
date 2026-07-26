@@ -569,3 +569,11 @@ An input is validated before any state-changing action.
 ## Authority metadata
 - Each listed owner includes its canonical source and scope.
 - If a document conflicts with its owner, the owner document wins.
+
+## Additional canonical owners
+- State machine contracts: `docs/AI-STATE-MACHINE.md`, `docs/ENGINE-STATE-MACHINE.md`, `docs/EXECUTION-STATE-MACHINE.md`, `docs/WORKER-STATE-MACHINE.md`, `docs/PLUGIN-STATE-MACHINE.md`, `docs/SERVICE-STATE-MACHINE.md`.
+- Reliability contracts: `docs/ERROR-CATALOG.md`, `docs/ERROR-CODES.md`, `docs/FAILURE-MATRIX.md`, `docs/RECOVERY-PLAYBOOK.md`, `docs/FAILURE-RECOVERY-MATRIX.md`.
+- Runtime contracts: `docs/THREADING-MODEL.md`, `docs/CONCURRENCY-MODEL.md`, `docs/MEMORY-LIFECYCLE.md`.
+- AI contracts: `docs/AI-TOOL-INVOCATION-CONTRACT.md`, `docs/PROMPT-LIFECYCLE.md`, `docs/CONTEXT-PRIORITY-MATRIX.md`, `docs/AI-SAFETY-BOUNDARY.md`.
+- Governance contracts: `docs/CANONICAL-SOURCE-RULES.md`, `docs/DOCUMENTATION-LIFECYCLE.md`, `docs/CROSS-REFERENCE-INDEX.md`, `docs/FEATURE-GATES.md`.
+- Operational contracts: `docs/CONFIGURATION-REFERENCE.md`, `docs/TIMING-SPECIFICATION.md`, `docs/RESOURCE-BUDGET-SPECIFICATION.md`, `docs/CAPACITY-PLANNING.md`, `docs/MODULE-OWNERSHIP-MATRIX.md`, `docs/EVENT-OWNERSHIP-MATRIX.md`, `docs/DEPENDENCY-AUTHORITY-RULES.md`, `docs/DATA-OWNERSHIP.md`, `docs/SECRET-LIFECYCLE.md`, `docs/TRUST-BOUNDARIES.md`.

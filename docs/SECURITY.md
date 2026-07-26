@@ -41,3 +41,8 @@ This document defers to the canonical owners for implementation, policy, and sch
 ## Trust and secrets
 - Trust boundaries are defined in `TRUST-BOUNDARIES.md`.
 - Secret handling is defined in `SECRET-LIFECYCLE.md`.
+
+## Boundary references
+- Trust domains are defined in `TRUST-BOUNDARIES.md`.
+- Secrets follow `SECRET-LIFECYCLE.md`.
+- Any plugin or AI access beyond these boundaries must be rejected.
