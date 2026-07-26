@@ -1,0 +1,17 @@
+name: Validate Documentation Governance
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  markdown-reference-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate local markdown references
+        run: scripts/validate_markdown_refs.sh

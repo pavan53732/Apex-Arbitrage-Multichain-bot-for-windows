@@ -20,12 +20,12 @@ Guidance for OpenCode-based coding agents contributing to this repository.
 
 ## Required reading
 - `AGENTS.md`
-- `ARCHITECTURE.md`
-- `RUNTIME-OPERATIONS.md`
-- `AI-PIPELINE.md`
-- `CACHE-MANAGER.md`
-- `DATABASE-SCHEMA.md`
-- `SECURITY-CONTRACTS.md`
+- `docs/ARCHITECTURE.md`
+- `docs/RUNTIME-OPERATIONS.md`
+- `docs/AI-PIPELINE.md`
+- `docs/CACHE-MANAGER.md`
+- `docs/DATABASE-SCHEMA.md`
+- `docs/SECURITY-CONTRACTS.md`
 
 ## Working rule
 If the repo does not explicitly define the behavior, do not guess.

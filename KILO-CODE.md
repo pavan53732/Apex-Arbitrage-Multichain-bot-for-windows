@@ -20,12 +20,12 @@ Guidance for Kilo Code-based coding agents contributing to this repository.
 
 ## Required reading
 - `AGENTS.md`
-- `ARCHITECTURE.md`
-- `TRADING-LIFECYCLE.md`
-- `EXECUTION-LIFECYCLE.md`
-- `TRANSACTION-LIFECYCLE.md`
-- `ORDER-MANAGEMENT.md`
-- `RUNTIME-OPERATIONS.md`
+- `docs/ARCHITECTURE.md`
+- `docs/TRADING-LIFECYCLE.md`
+- `docs/EXECUTION-LIFECYCLE.md`
+- `docs/TRANSACTION-LIFECYCLE.md`
+- `docs/ORDER-MANAGEMENT.md`
+- `docs/RUNTIME-OPERATIONS.md`
 
 ## Working rule
 If two docs appear to disagree, stop and resolve the canonical owner before coding.

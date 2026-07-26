@@ -20,12 +20,12 @@ Guidance for Antigravity-based coding agents contributing to this repository.
 
 ## Required reading
 - `AGENTS.md`
-- `ARCHITECTURE.md`
-- `AI-PIPELINE.md`
-- `RUNTIME-OPERATIONS.md`
-- `TRADING-LIFECYCLE.md`
-- `EXECUTION-LIFECYCLE.md`
-- `DATABASE-SCHEMA.md`
+- `docs/ARCHITECTURE.md`
+- `docs/AI-PIPELINE.md`
+- `docs/RUNTIME-OPERATIONS.md`
+- `docs/TRADING-LIFECYCLE.md`
+- `docs/EXECUTION-LIFECYCLE.md`
+- `docs/DATABASE-SCHEMA.md`
 
 ## Working rule
 If the owner doc is missing, the change is blocked until the contract exists.

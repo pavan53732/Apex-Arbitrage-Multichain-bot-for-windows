@@ -20,3 +20,4 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define setup, branch, test, and review requirements.
+- Run `../scripts/validate_markdown_refs.sh` from the repository root before opening a review when you touched markdown navigation or canonical references.

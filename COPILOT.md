@@ -21,13 +21,13 @@ Guidance for COPILOT-based coding agents contributing to this repository.
 
 ## Required reading
 - `AGENTS.md`
-- `ARCHITECTURE.md`
-- `AI-PIPELINE.md`
-- `RUNTIME-OPERATIONS.md`
-- `TRADING-LIFECYCLE.md`
-- `EXECUTION-LIFECYCLE.md`
-- `DATABASE-SCHEMA.md`
-- `SECURITY-CONTRACTS.md`
+- `docs/ARCHITECTURE.md`
+- `docs/AI-PIPELINE.md`
+- `docs/RUNTIME-OPERATIONS.md`
+- `docs/TRADING-LIFECYCLE.md`
+- `docs/EXECUTION-LIFECYCLE.md`
+- `docs/DATABASE-SCHEMA.md`
+- `docs/SECURITY-CONTRACTS.md`
 
 ## Working rule
 If the repository does not define the behavior, do not guess.

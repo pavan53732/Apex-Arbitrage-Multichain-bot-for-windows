@@ -20,12 +20,13 @@ This document is navigation only. It does not own product behavior, runtime beha
 - Read the authoritative owner docs before changing code.
 - Prefer lifecycle, interface, registry, schema, and architecture boundary docs over summaries.
 - Do not infer behavior from short references or roadmaps.
+- Run `scripts/validate_markdown_refs.sh` after documentation edits to catch broken local references before commit.
 - If a behavior is not explicit in an owner doc, treat it as ambiguous and stop.
 
 ## Canonical starting points
-- `ARCHITECTURE.md` for system boundaries.
-- `AI-PIPELINE.md` for AI decision behavior.
-- `RUNTIME-OPERATIONS.md` for runtime control.
-- `TRADING-LIFECYCLE.md` and `EXECUTION-LIFECYCLE.md` for trade and execution flow.
-- `DATABASE-SCHEMA.md` for persistence structure.
-- `SECURITY-CONTRACTS.md` for security rules.
+- [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for system boundaries.
+- [docs/AI-PIPELINE.md](./docs/AI-PIPELINE.md) for AI decision behavior.
+- [docs/RUNTIME-OPERATIONS.md](./docs/RUNTIME-OPERATIONS.md) for runtime control.
+- [docs/TRADING-LIFECYCLE.md](./docs/TRADING-LIFECYCLE.md) and [docs/EXECUTION-LIFECYCLE.md](./docs/EXECUTION-LIFECYCLE.md) for trade and execution flow.
+- [docs/DATABASE-SCHEMA.md](./docs/DATABASE-SCHEMA.md) for persistence structure.
+- [docs/SECURITY-CONTRACTS.md](./docs/SECURITY-CONTRACTS.md) for security rules.

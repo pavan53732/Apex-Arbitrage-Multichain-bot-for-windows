@@ -20,12 +20,12 @@ Guidance for Cline-based coding agents contributing to this repository.
 
 ## Required reading
 - `AGENTS.md`
-- `ARCHITECTURE.md`
-- `AI-PIPELINE.md`
-- `AI-PROVIDER-MANAGER.md`
-- `MODEL-CAPABILITY-NEGOTIATION.md`
-- `RUNTIME-OPERATIONS.md`
-- `SECURITY-CONTRACTS.md`
+- `docs/ARCHITECTURE.md`
+- `docs/AI-PIPELINE.md`
+- `docs/AI-PROVIDER-MANAGER.md`
+- `docs/MODEL-CAPABILITY-NEGOTIATION.md`
+- `docs/RUNTIME-OPERATIONS.md`
+- `docs/SECURITY-CONTRACTS.md`
 
 ## Working rule
 Only implement what the authoritative docs already define.
