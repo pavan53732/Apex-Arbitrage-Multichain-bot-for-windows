@@ -27,3 +27,9 @@ Rollback, disable, or pin to previous version.
 - `CONFIGURATION.md`
 - `POLICY-ENGINE.md`
 - `VERSIONING.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

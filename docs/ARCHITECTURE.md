@@ -63,3 +63,8 @@ For live architecture visualization, see `LIVE-ARCHITECTURE-VIEWER.md`.
 For data governance, see `DATA-GOVERNANCE.md`.
 For constitution and philosophy, see `APEX-OS.md`.
 For opportunity lifecycle, see `OPPORTUNITY-LIFECYCLE.md`.
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

@@ -8,3 +8,9 @@ Provides navigation to the authoritative documentation set.
 - `AI-PIPELINE.md`
 - `USER-FLOWS.md`
 
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

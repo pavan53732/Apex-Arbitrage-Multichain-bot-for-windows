@@ -28,3 +28,9 @@ Refresh topology from kernel, requery registries, and fall back to cached graph.
 - `DEPENDENCY-GRAPH.md`
 - `HEALTHCHECKS.md`
 - `UI-DASHBOARD-SPEC.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

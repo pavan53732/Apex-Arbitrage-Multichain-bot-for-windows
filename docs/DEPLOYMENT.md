@@ -27,3 +27,9 @@ Defines build pipeline, packaging, testing gates, release promotion, rollback ex
 - `BUILD-RELEASE-CICD.md`
 - `RUNTIME-OPERATIONS.md`
 - `SECURITY.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

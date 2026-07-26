@@ -28,3 +28,9 @@ Break cycles through explicit ownership, reload graph, and isolate incompatible 
 - `APEX-ARCHITECTURE.md`
 - `SERVICE-REGISTRY.md`
 - `ORCHESTRATOR.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

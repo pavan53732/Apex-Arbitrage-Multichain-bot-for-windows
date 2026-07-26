@@ -309,3 +309,9 @@ If a DEX is exploited, abandoned, or supplanted:
 - `EXECUTION-ENGINE.md`
 - `LIQUIDITY-ANALYSIS.md`
 - `DEX-REGISTRY.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

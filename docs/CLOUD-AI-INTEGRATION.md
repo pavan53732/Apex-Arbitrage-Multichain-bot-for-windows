@@ -368,3 +368,9 @@ A strong provider abstraction is essential because APEX depends on AI for orches
 - `PERFORMANCE-TARGETS.md`
 - `AI-CAPABILITY-MATRIX.md`
 - `AI-COST-MANAGEMENT.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

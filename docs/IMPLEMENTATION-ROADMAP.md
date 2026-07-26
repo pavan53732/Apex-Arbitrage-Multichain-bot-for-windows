@@ -10,3 +10,9 @@ Defines implementation sequencing so major subsystems are delivered in a safe de
 - `ARCHITECTURE.md`
 - `PROJECT-STRUCTURE.md`
 - `TRADING-ENGINE.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

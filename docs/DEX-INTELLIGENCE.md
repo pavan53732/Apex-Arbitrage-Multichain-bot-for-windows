@@ -6,3 +6,9 @@ Defines DEX-level liquidity, TVL, fees, latency, pools, performance, and support
 ## Cross-references
 - `DOMAIN-MODEL.md`
 - `METRICS.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

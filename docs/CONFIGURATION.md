@@ -41,3 +41,8 @@ For provider setup, see `AI-PROVIDER-MANAGER.md`.
 For health probes, see `HEALTHCHECKS.md`.
 For security rules, see `SECURITY-CONTRACTS.md`.
 For policy governance, see `POLICY-ENGINE.md`.
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

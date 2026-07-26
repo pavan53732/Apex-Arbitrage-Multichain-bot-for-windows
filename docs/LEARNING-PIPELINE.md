@@ -40,3 +40,9 @@ New models go to a shadow pool for 24 hours. Roll back automatically if shadow p
 - `AI-MEMORY-SYSTEM.md`
 - `METRICS.md`
 - `SIMULATION-ENGINE.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

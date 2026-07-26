@@ -26,3 +26,9 @@ Reclassify with fresh data and reduce confidence if unstable.
 - `MARKET-INTELLIGENCE.md`
 - `STRATEGY-ROTATION.md`
 - `ORCHESTRATOR.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

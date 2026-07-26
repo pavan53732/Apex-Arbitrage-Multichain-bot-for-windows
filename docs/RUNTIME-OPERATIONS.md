@@ -100,3 +100,8 @@ For orchestrator sequencing, see `ORCHESTRATOR.md`.
 For health probes, see `HEALTHCHECKS.md`.
 For recovery logic, see `RECOVERY-AND-FAILOVER.md`.
 For shutdown semantics, see `SHUTDOWN-LIFECYCLE.md`.
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

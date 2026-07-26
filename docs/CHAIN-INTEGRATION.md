@@ -374,3 +374,9 @@ When a chain is no longer viable (low liquidity, abandoned, exploited):
 - `MONITORING-OBSERVABILITY.md`
 - `DATABASE-SCHEMA.md`
 - `CHAIN-REGISTRY.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

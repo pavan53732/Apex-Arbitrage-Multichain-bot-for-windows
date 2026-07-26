@@ -123,3 +123,9 @@ Completion criteria: settings confirmed.
 - `DASHBOARD-LAYOUT.md`
 - `DASHBOARD-WIDGETS.md`
 - `UX-GUIDELINES.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

@@ -129,3 +129,8 @@ For consensus, see `AI-CONSENSUS.md`.
 For provider abstraction, see `AI-PROVIDER-MANAGER.md`.
 For memory, see `AI-MEMORY-SYSTEM.md`.
 For learning and retraining, see `LEARNING-PIPELINE.md`.
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

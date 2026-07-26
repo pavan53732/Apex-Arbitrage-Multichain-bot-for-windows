@@ -293,3 +293,9 @@ Testing in APEX is not only about correctness in isolated functions. It is the m
 - `AI-PIPELINE.md`
 - `RUNTIME-OPERATIONS.md`
 - `MONITORING-OBSERVABILITY.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

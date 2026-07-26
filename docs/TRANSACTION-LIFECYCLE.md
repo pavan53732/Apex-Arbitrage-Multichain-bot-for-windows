@@ -74,3 +74,9 @@ Pending -> ReorgObserved -> Pending | Failed.
 - `GAS-OPTIMISATION.md`
 - `CHAIN-INTEGRATION.md`
 - `DATABASE-SCHEMA.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

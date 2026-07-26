@@ -90,3 +90,9 @@ Trading-related contracts must include:
 
 ## Cross-references
 - `VERSIONING.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

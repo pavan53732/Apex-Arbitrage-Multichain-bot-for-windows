@@ -42,3 +42,9 @@ Defines MEV avoidance, mitigation, and execution safeguards.
 - `EXECUTION-ENGINE.md`
 - `ROUTING-ENGINE.md`
 - `TRANSACTION-LIFECYCLE.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

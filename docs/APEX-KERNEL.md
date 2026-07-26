@@ -37,3 +37,9 @@ Retry registration, isolate failed plugins, fall back to safe defaults, and aler
 - `SERVICE-REGISTRY.md`
 - `HEALTHCHECKS.md`
 - `PLUGIN-SDK.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

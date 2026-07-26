@@ -52,3 +52,9 @@ ScenarioDefined -> SnapshotCaptured -> Replayed -> Evaluated -> Persisted -> Pub
 - `AI-PIPELINE.md`
 - `TESTING-GUIDE.md`
 - `VERSIONING.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

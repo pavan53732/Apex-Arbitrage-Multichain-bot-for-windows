@@ -66,3 +66,9 @@ Candidate -> Scored -> Validated -> Approved -> Bound -> Invalidated -> Replaced
 - `GAS-OPTIMISATION.md`
 - `MEV-PROTECTION.md`
 - `EXECUTION-ENGINE.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

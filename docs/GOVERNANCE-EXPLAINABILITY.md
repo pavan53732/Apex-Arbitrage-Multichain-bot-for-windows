@@ -31,3 +31,9 @@ Reject non-compliant traces, rebuild from source logs, and escalate to audit.
 - `DECISION-ENGINE.md`
 - `POLICY-ENGINE.md`
 - `DECISION-LOG.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

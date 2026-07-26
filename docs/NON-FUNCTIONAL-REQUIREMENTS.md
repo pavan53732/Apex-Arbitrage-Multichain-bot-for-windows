@@ -40,3 +40,9 @@ Defines global performance, reliability, security, maintainability, and operabil
 - `docs/MONITORING-OBSERVABILITY.md`
 - `docs/AI-PIPELINE.md`
 - `docs/RUNTIME-OPERATIONS.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

@@ -67,3 +67,9 @@ Raw -> Parsed -> Normalized -> Validated -> Published -> Expired.
 - `ORACLE-REGISTRY.md`
 - `CHAIN-REGISTRY.md`
 - `DEX-REGISTRY.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

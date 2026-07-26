@@ -25,3 +25,9 @@ Rebalance queues, adjust weights, and requeue tasks.
 - `WORKER-POOL.md`
 - `ORCHESTRATOR.md`
 - `EVENT-BUS.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

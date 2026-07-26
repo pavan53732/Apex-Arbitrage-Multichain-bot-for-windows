@@ -54,3 +54,9 @@ Healthy, Degraded, Recovering, Unhealthy, Stopped.
 - `SECURITY.md`
 - `TRADING-ENGINE.md`
 - `EXECUTION-ENGINE.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

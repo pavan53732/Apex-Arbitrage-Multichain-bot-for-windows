@@ -278,3 +278,8 @@ For canonical entities and performance tracking, see `DOMAIN-MODEL.md` and `METR
 For trading lifecycle, see `TRADING-LIFECYCLE.md`.
 For execution lifecycle, see `EXECUTION-LIFECYCLE.md`.
 For performance targets, see `PERFORMANCE-SLOS.md`.
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

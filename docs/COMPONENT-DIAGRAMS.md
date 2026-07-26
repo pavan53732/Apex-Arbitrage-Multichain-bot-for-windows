@@ -17,3 +17,9 @@ Renderer UI -> Preload API -> IPC Contracts -> Main Process Services -> Packages
 - `PROJECT-STRUCTURE.md`
 - `MODULE-DEPENDENCY.md`
 - `RUNTIME-OPERATIONS.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

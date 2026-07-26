@@ -29,3 +29,9 @@ If a chain is unreachable, demote it and fallback to the next best chain.
 - `CHAIN-REGISTRY.md`
 - `ORCHESTRATOR.md`
 - `HEALTHCHECKS.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

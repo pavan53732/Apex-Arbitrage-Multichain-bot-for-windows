@@ -88,3 +88,9 @@ A session must include session id, mode, strategy reference, active universe, em
 - `STATE-MANAGEMENT.md`
 - `DATABASE-SCHEMA.md`
 - `MONITORING-OBSERVABILITY.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

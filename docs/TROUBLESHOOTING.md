@@ -7,3 +7,9 @@ Navigation-only document pointing to the authoritative owner(s).
 - `USER-GUIDE.md`
 - `RUNTIME-OPERATIONS.md`
 - `MONITORING-OBSERVABILITY.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

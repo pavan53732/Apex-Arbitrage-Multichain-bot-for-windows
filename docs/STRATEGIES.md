@@ -1518,3 +1518,9 @@ Add route scorers, signal filters, and AI ranking hooks only through documented 
 - `EXECUTION-ENGINE.md`
 - `MARKET-INTELLIGENCE.md`
 - `SIMULATION-ENGINE.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

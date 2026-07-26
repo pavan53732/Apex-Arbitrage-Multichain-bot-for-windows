@@ -354,3 +354,9 @@ Standard error code format: `E_<CATEGORY>_<SPECIFIC>`.
 - `PROJECT-STRUCTURE.md`
 - `ERROR-HANDLING-LOGGING.md`
 - `VERSIONING.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

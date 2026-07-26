@@ -28,3 +28,8 @@ Reject storage, request re-evaluation, or mark the decision as non-compliant.
 - `METRICS.md`
 
 For governance-grade trace compliance, see `GOVERNANCE-EXPLAINABILITY.md`.
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

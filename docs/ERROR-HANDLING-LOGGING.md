@@ -56,3 +56,9 @@ Defines the canonical error taxonomy, logging policy, recovery paths, and escala
 - `RUNTIME-OPERATIONS.md`
 - `IPC-PROTOCOL.md`
 - `VERSIONING.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

@@ -29,3 +29,9 @@ Chain scoring has its own lifecycle, health model, and consumer set that do not 
 - `ROUTING-ENGINE.md`
 - `EXECUTION-ENGINE.md`
 - `MONITORING-OBSERVABILITY.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

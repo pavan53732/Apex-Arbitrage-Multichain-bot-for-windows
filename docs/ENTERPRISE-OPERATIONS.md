@@ -9,3 +9,9 @@ Defines workspace profiles, import/export, backup, restore, version history, and
 
 
 For workspace, see `DASHBOARD-WORKSPACES.md`.
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

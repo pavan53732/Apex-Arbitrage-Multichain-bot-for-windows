@@ -24,3 +24,9 @@ Restart worker, reconnect RPC, switch provider, reload cache, recover queue, not
 - `HEALTHCHECKS.md`
 - `PROVIDER-RESILIENCE.md`
 - `RECOVERY-AND-FAILOVER.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

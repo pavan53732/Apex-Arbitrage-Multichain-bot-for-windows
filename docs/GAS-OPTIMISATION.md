@@ -38,3 +38,9 @@ Defines gas estimation, repricing, replacement, batching, and submission timing 
 - `EXECUTION-ENGINE.md`
 - `TRANSACTION-LIFECYCLE.md`
 - `MEV-PROTECTION.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.

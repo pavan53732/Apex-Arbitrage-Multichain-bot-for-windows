@@ -44,3 +44,9 @@ These targets apply to UI, IPC, market data, AI requests, execution, reconciliat
 - `docs/RUNTIME-OPERATIONS.md`
 - `docs/AI-PIPELINE.md`
 - `docs/CLOUD-AI-INTEGRATION.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.
