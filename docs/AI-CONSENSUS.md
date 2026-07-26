@@ -57,3 +57,12 @@ Consensus output must remain traceable to individual agent inputs.
 
 ## Future compatibility notes
 New agents must be onboarded via explicit consensus configuration.
+
+## Decision Policy
+Consensus requires configured quorum, weighted confidence, and explicit veto handling.
+
+## Example
+Market Agent + Risk Agent + Planner Agent converge before the Decision Engine accepts execution authority.
+
+## Future compatibility notes
+Additional agents may be added without changing consensus semantics.

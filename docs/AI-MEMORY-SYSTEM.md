@@ -57,3 +57,9 @@ Memory semantics must remain independent of any AI provider.
 
 ## Future compatibility notes
 Additional retrieval backends may be introduced without changing memory contracts.
+
+## Example
+A trade outcome is stored in trade memory, summarized into strategy memory, and later promoted to long-term knowledge.
+
+## Future compatibility notes
+Additional retrieval backends may be added without changing memory layers.

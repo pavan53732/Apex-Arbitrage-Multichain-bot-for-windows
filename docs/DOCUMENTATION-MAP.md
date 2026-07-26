@@ -377,3 +377,10 @@ These must not claim ownership and should only point to owners:
 - `AI-CONSENSUS.md`
 - `AI-MEMORY-SYSTEM.md`
 - `DECISION-LOG.md`
+
+
+## Deepening pass
+- AI Consensus
+- AI Gateway
+- AI Memory System
+- Decision Log

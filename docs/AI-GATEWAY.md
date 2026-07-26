@@ -58,3 +58,9 @@ Must not hardcode provider vendors or bypass policy checks.
 
 ## Future compatibility notes
 New provider types should be added through adapters without changing gateway behavior.
+
+## Example
+A tool-calling request is routed to the provider with the required capability set and normalized response schema.
+
+## Future compatibility notes
+Capability negotiation must remain provider-neutral.

@@ -56,3 +56,9 @@ Must remain append-first and non-destructive.
 
 ## Future compatibility notes
 May be extended with structured event links without changing existing entries.
+
+## Example
+Trade executed after simulation passed, risk accepted, and policy approved; later replay links to the ledger and outcome.
+
+## Future compatibility notes
+Structured event linkage may be added while preserving append-only history.
