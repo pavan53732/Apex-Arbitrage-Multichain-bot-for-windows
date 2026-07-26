@@ -433,3 +433,10 @@ These must not claim ownership and should only point to owners:
 - AI Capability Matrix
 - AI Tools
 - Decision Engine
+
+
+## Deepening pass - tranche 9
+- Opportunity Lifecycle
+- Orchestrator
+- Plugin Lifecycle
+- Plugin SDK

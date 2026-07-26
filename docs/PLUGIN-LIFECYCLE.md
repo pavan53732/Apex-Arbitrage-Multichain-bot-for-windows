@@ -20,3 +20,9 @@ stateDiagram-v2
 - `PLUGIN-SDK.md`
 - `PLUGIN-MARKETPLACE.md`
 - `PROVIDER-RESILIENCE.md`
+
+## Operational Contract
+Defines plugin installation, validation, loading, initialization, runtime, disablement, unload, and removal.
+
+## Example
+A plugin is unloaded before version migration.

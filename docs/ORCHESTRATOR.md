@@ -27,3 +27,8 @@ Idle -> Discovery -> Validation -> Risk -> Simulation -> Decision -> Queue -> Ex
 For kernel behavior, see `APEX-KERNEL.md`.
 For service registration, see `SERVICE-REGISTRY.md`.
 For dependency resolution, see `DEPENDENCY-GRAPH.md`.
+## Operational Contract
+Defines coordination across registries, workers, policies, AI, and runtime state.
+
+## Example
+The orchestrator pauses execution during a health degradation event.
