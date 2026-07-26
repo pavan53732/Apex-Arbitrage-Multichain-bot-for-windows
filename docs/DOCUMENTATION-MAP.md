@@ -503,3 +503,10 @@ These must not claim ownership and should only point to owners:
 - AI Reasoning Policy
 - Configuration Profiles
 - Dashboard Workspaces
+
+
+## Deepening pass - tranche 19
+- UI Dashboard Spec
+- Dashboard Layout
+- Dashboard Widgets
+- Wallet Command Center

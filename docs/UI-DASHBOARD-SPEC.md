@@ -11,3 +11,9 @@ Executive overview, live market intelligence, AI intelligence center, strategy c
 - `METRICS.md`
 - `HEALTHCHECKS.md`
 - `AI-ORCHESTRATION.md`
+
+## Operational Contract
+Defines the dashboard UI contract, data binding, refresh behavior, and interaction expectations.
+
+## Example
+A chart widget refreshes after a new trade completes.

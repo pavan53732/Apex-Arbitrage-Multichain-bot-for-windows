@@ -31,3 +31,9 @@ This document covers widget behavior, data bindings, refresh expectations, and d
 
 
 For interaction logic, data binding, and state transitions, see `UI-DASHBOARD-SPEC.md`.
+
+## Operational Contract
+Defines widget responsibilities, inputs, outputs, rendering cadence, and error states.
+
+## Example
+A wallet widget shows balance, exposure, and status in one view.

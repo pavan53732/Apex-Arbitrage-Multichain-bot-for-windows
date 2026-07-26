@@ -25,3 +25,9 @@ For interaction logic, data binding, and state transitions, see `UI-DASHBOARD-SP
 
 
 For workspace, see `DASHBOARD-WORKSPACES.md`.
+
+## Governance Rules
+Defines placement rules, layout persistence, responsive behavior, and panel grouping.
+
+## Example
+A compact layout collapses secondary panels on smaller screens.
