@@ -10,423 +10,1515 @@ Each strategy must define business objective, decision logic, market conditions,
 Discover -> Score -> Validate -> Size -> Approve -> Execute -> Monitor -> Exit -> Reconcile -> Learn.
 
 ## Common strategy requirements
-- Strategies must fail closed when market data freshness, liquidity, risk, or chain health are invalid.
-- Strategies may request AI assistance, but AI cannot bypass deterministic risk gates.
-- Strategy state must be persisted with enough detail to resume deterministic evaluation after restart.
-- Every live strategy must expose backtest and simulation scenarios before activation.
-- Every strategy must define a stop condition and a recovery condition.
+These requirements apply to every strategy below.
+- Business objective and overview.
+- Decision logic or model.
+- Required market conditions.
+- Entry and exit conditions.
+- Position sizing and capital allocation.
+- Risk controls, stop-loss, and take-profit.
+- Volatility, liquidity, slippage, gas, and MEV policy.
+- Supported chains, DEXs, and market data.
+- AI interaction rules.
+- Runtime workflow and state machine.
+- IPC and persistence requirements.
+- Monitoring, alerting, backtesting, simulation, and failure handling.
+- Known limitations and extension points.
+
+## Strategy template
+### Business objective
+### Strategy overview
+### Decision logic
+### Required market conditions
+### Entry conditions
+### Exit conditions
+### Position sizing methodology
+### Capital allocation rules
+### Risk controls
+### Stop-loss logic
+### Take-profit logic
+### Volatility handling
+### Liquidity requirements
+### Slippage tolerance
+### Gas optimisation rules
+### MEV considerations
+### Supported chains
+### Supported DEXs
+### Required market data
+### AI interaction
+### Runtime workflow
+### State machine
+### IPC interactions
+### Database persistence
+### Monitoring metrics
+### Alert thresholds
+### Backtesting methodology
+### Simulation scenarios
+### Stress testing
+### Performance metrics
+### Failure scenarios
+### Recovery behaviour
+### Known limitations
+### Extension points
 
 ## Arbitrage
+
 ### Business objective
 Exploit price inefficiencies between venues after gas, slippage, and MEV costs.
+
+### Strategy overview
+Arbitrage uses deterministic rules and policy gates to transform market signals into execution intent.
+
 ### Decision logic
 Use route quotes, latency, and liquidity depth to compute net edge.
-### Market conditions
-Requires fragmented pricing and sufficient liquidity on both legs.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
 ### Entry conditions
-Net positive edge, fresh quotes, wallet ready, risk-approved.
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
 ### Exit conditions
-Execution completed, edge collapses, timeout, or risk breach.
-### Position sizing
-Size by net edge, pool depth, gas cost, and risk budget.
-### Capital allocation
-Prefer lowest capital needed for atomic or near-atomic capture.
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
 ### Risk controls
-Max loss per attempt, stale quote rejection, exposure cap.
-### Stop-loss
-Abort if edge compresses below threshold during pre-submit validation.
-### Take-profit
-Realize on confirmed fills only.
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
 ### Volatility handling
-Reduce size when price variance increases.
+Reduce size or pause when volatility exceeds the accepted policy band.
+
 ### Liquidity requirements
-Both sides must support the required notional with acceptable impact.
+Route only when the path depth can support target notional within impact limits.
+
 ### Slippage tolerance
-Bounded by route-specific policy from `SLIPPAGE-MODEL.md`.
+Use the route-specific maximum slippage defined by the slippage model.
+
 ### Gas optimisation rules
-Use fee ceilings and replacement only within policy.
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
 ### MEV considerations
-Prefer protected routes when sandwich risk is high.
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
 ### Supported chains
-Configured chain set only.
+Configured chains only.
+
 ### Supported DEXs
-Configured DEX set only.
+Configured DEXs only.
+
 ### Required market data
-Quotes, liquidity depth, gas, chain health, token metadata.
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
 ### AI interaction
-AI may rank but cannot bypass deterministic risk gates.
+AI may rank or explain but cannot bypass deterministic gates.
+
 ### Runtime workflow
-Detect -> validate -> route -> submit -> monitor -> reconcile.
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
 ### State machine
 Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
 ### IPC interactions
-Opportunity, plan, order, and transaction events.
+Opportunity, plan, order, transaction, and alert events.
+
 ### Database persistence
-Store opportunity scores, order ids, fills, and final PnL.
+Persist scores, plans, fills, and final outcome records.
+
 ### Monitoring metrics
-Edge capture rate, fill latency, slippage, failure rate.
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
 ### Alert thresholds
-Alert on repeated stale quotes, high failure rate, or excessive slippage.
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
 ### Backtesting methodology
-Replay historical spreads and execution constraints.
+Replay historical input snapshots against the same deterministic rules.
+
 ### Simulation scenarios
-Thin liquidity, gas spikes, reorgs, and quote invalidation.
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
 ### Stress testing
-Increase latency, reduce liquidity, and inflate gas to verify abort logic.
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
 ### Performance metrics
-Net captured edge, success rate, execution latency.
+Measure realized edge, fill success, and execution latency.
+
 ### Failure scenarios
-Stale quote, route failure, revert, reorg, wallet failure.
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
 ### Recovery behaviour
-Reconcile receipts, update accounting, and block further attempts when thresholds exceed.
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
 ### Known limitations
-Cannot guarantee fills in fast-moving or illiquid markets.
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
 ### Extension points
-Additional route scorers, chain adapters, and AI ranking hooks.
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
 
 ## Triangular Arbitrage
+
 ### Business objective
 Capture conversion inefficiencies across three assets on a venue or chain.
+
+### Strategy overview
+Triangular Arbitrage uses deterministic rules and policy gates to transform market signals into execution intent.
+
 ### Decision logic
 Evaluate three-leg closed-loop edge after fees and impact.
-### Market conditions
-Requires sufficient depth on all three legs.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
 ### Entry conditions
-Positive closed-loop edge, all routes fresh, liquidity sufficient.
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
 ### Exit conditions
-Edge loss, completion, or pre-submit invalidation.
-### Position sizing
-Bound by weakest leg depth and risk budget.
-### Capital allocation
-Reserve capital for atomic or near-atomic execution only.
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
 ### Risk controls
-Reject if any leg becomes stale or illiquid.
-### Stop-loss
-Cancel if any leg quote drifts beyond tolerance.
-### Take-profit
-Recognize only when the full loop settles.
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
 ### Volatility handling
-Smaller size when inter-leg variance increases.
+Reduce size or pause when volatility exceeds the accepted policy band.
+
 ### Liquidity requirements
-All legs must meet minimum depth and impact limits.
+Route only when the path depth can support target notional within impact limits.
+
 ### Slippage tolerance
-Per leg, with total-loop budget enforced.
+Use the route-specific maximum slippage defined by the slippage model.
+
 ### Gas optimisation rules
-Use single transaction bundle where supported.
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
 ### MEV considerations
-Prefer protected bundle submission.
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
 ### Supported chains
-Configured chain set.
+Configured chains only.
+
 ### Supported DEXs
-Configured DEX set.
+Configured DEXs only.
+
 ### Required market data
-Three-leg quotes, gas, liquidity, fees, token metadata.
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
 ### AI interaction
-AI may rank opportunities by confidence and risk.
+AI may rank or explain but cannot bypass deterministic gates.
+
 ### Runtime workflow
-Loop discovery -> validation -> route build -> execution -> reconciliation.
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
 ### State machine
-Idle -> Candidate -> Approved -> Submitted -> Settled | Failed -> Reconciled.
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
 ### IPC interactions
-Opportunity, plan, order, transaction events.
+Opportunity, plan, order, transaction, and alert events.
+
 ### Database persistence
-Loop quote snapshot, execution result, realized edge.
+Persist scores, plans, fills, and final outcome records.
+
 ### Monitoring metrics
-Loop edge, fill rate, loop latency.
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
 ### Alert thresholds
-Alert on repeated loop invalidations or high failure counts.
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
 ### Backtesting methodology
-Replay historical three-leg loops.
+Replay historical input snapshots against the same deterministic rules.
+
 ### Simulation scenarios
-Depth loss, fee spike, route invalidation, partial completion.
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
 ### Stress testing
-Vary liquidity and latency across all legs.
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
 ### Performance metrics
-Loop success rate, average captured edge.
+Measure realized edge, fill success, and execution latency.
+
 ### Failure scenarios
-One-leg revert, partial completion, stale third-leg quote.
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
 ### Recovery behaviour
-Mark partial loops, reconcile, and quarantine bad routes.
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
 ### Known limitations
-Atomic completion may not be available on all paths.
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
 ### Extension points
-Alternative loop builders and venue adapters.
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
 
 ## Cross-DEX Arbitrage
+
 ### Business objective
 Capture spread across DEX venues.
+
+### Strategy overview
+Cross-DEX Arbitrage uses deterministic rules and policy gates to transform market signals into execution intent.
+
 ### Decision logic
 Compare normalized quotes across routers and pools.
-### Market conditions
-Requires multiple venues with non-overlapping pricing.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
 ### Entry conditions
-Positive net edge after fees and slippage.
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
 ### Exit conditions
-Fill, edge collapse, timeout.
-### Position sizing
-Size by depth and route quality.
-### Capital allocation
-Use lowest-risk venue pair first.
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
 ### Risk controls
-Reject stale, shallow, or MEV-exposed routes.
-### Stop-loss
-Abort if route score drops below threshold.
-### Take-profit
-Settle on confirmed fills only.
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
 ### Volatility handling
-Reduce size when price dispersion is unstable.
+Reduce size or pause when volatility exceeds the accepted policy band.
+
 ### Liquidity requirements
-Sufficient depth on both venues.
+Route only when the path depth can support target notional within impact limits.
+
 ### Slippage tolerance
-Route-level tolerance only.
+Use the route-specific maximum slippage defined by the slippage model.
+
 ### Gas optimisation rules
-Optimize for venue-specific fees and transaction counts.
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
 ### MEV considerations
-Use protection when route visibility is high.
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
 ### Supported chains
-Configured chain set.
+Configured chains only.
+
 ### Supported DEXs
-Configured DEX set.
+Configured DEXs only.
+
 ### Required market data
-DEX quotes, depth, gas, chain health.
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
 ### AI interaction
-AI may identify candidate pairs and rank confidence.
+AI may rank or explain but cannot bypass deterministic gates.
+
 ### Runtime workflow
-Detect -> compare -> validate -> execute -> reconcile.
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
 ### State machine
-Idle -> Candidate -> Approved -> Submitted -> Filled | Failed -> Reconciled.
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
 ### IPC interactions
-Opportunity, routing, execution, transaction, accounting events.
+Opportunity, plan, order, transaction, and alert events.
+
 ### Database persistence
-Store pair scores, route, fill, and PnL.
+Persist scores, plans, fills, and final outcome records.
+
 ### Monitoring metrics
-Spread capture, fill time, invalidation rate.
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
 ### Alert thresholds
-Alert on repeated failed routes or stale input data.
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
 ### Backtesting methodology
-Replay cross-DEX spread histories.
+Replay historical input snapshots against the same deterministic rules.
+
 ### Simulation scenarios
-MEV attack, router outage, shallow pools.
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
 ### Stress testing
-Increase spread churn and reduce liquidity.
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
 ### Performance metrics
-Net edge, execution success, average slippage.
+Measure realized edge, fill success, and execution latency.
+
 ### Failure scenarios
-Revert, quote drift, sandwich attack.
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
 ### Recovery behaviour
-Reprice, abandon, reconcile exposures.
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
 ### Known limitations
-Sensitive to chain congestion and MEV.
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
 ### Extension points
-Additional router adapters and protected execution paths.
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
 
 ## Cross-Chain Arbitrage
+
 ### Business objective
-Capture spread between equivalent assets on different chains.
+Capture spread across chains using supported bridges or native settlement paths.
+
+### Strategy overview
+Cross-Chain Arbitrage uses deterministic rules and policy gates to transform market signals into execution intent.
+
 ### Decision logic
-Compare net edge after bridge cost, latency, and finality risk.
-### Market conditions
-Requires stable bridge routes and finality confidence.
+Compare normalized cross-chain opportunity net of bridge, gas, and finality costs.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
 ### Entry conditions
-Positive edge after bridge, gas, and transfer costs.
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
 ### Exit conditions
-Edge collapse, bridge failure, or finality breach.
-### Position sizing
-Constrained by bridge liquidity and transfer limits.
-### Capital allocation
-Use capital only when bridge and destination liquidity both satisfy policy.
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
 ### Risk controls
-Reject if bridge latency, reorg risk, or destination liquidity exceed limits.
-### Stop-loss
-Abort when bridge delay invalidates profitability.
-### Take-profit
-Settle after verified arrival and hedge completion.
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
 ### Volatility handling
-Prefer smaller size under high volatility or finality uncertainty.
+Reduce size or pause when volatility exceeds the accepted policy band.
+
 ### Liquidity requirements
-Bridge capacity and destination venue depth must both pass.
+Route only when the path depth can support target notional within impact limits.
+
 ### Slippage tolerance
-Combined chain-and-bridge budget enforced.
+Use the route-specific maximum slippage defined by the slippage model.
+
 ### Gas optimisation rules
-Budget both source and destination transaction cost.
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
 ### MEV considerations
-Use protected submission on both sides if available.
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
 ### Supported chains
-Configured source and destination chain set.
+Configured chains only.
+
 ### Supported DEXs
-Configured source and destination DEX set.
+Configured DEXs only.
+
 ### Required market data
-Bridge quotes, finality metrics, destination depth, fees.
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
 ### AI interaction
-AI may rank chains by relative execution confidence.
+AI may rank or explain but cannot bypass deterministic gates.
+
 ### Runtime workflow
-Source validation -> bridge initiation -> destination validation -> completion -> reconcile.
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
 ### State machine
-Idle -> Candidate -> Bridging -> Confirming -> Settled | Failed -> Reconciled.
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
 ### IPC interactions
-Bridge status, execution, confirmation, and reconciliation events.
+Opportunity, plan, order, transaction, and alert events.
+
 ### Database persistence
-Source tx, bridge id, destination tx, final outcome.
+Persist scores, plans, fills, and final outcome records.
+
 ### Monitoring metrics
-Bridge success, finality delay, profit capture, failure rate.
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
 ### Alert thresholds
-Alert on repeated bridge stalls or transfer failures.
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
 ### Backtesting methodology
-Replay bridge latency and cross-chain spread history.
+Replay historical input snapshots against the same deterministic rules.
+
 ### Simulation scenarios
-Bridge outage, delayed finality, chain reorg, destination liquidity loss.
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
 ### Stress testing
-Increase latency and reduce finality assumptions.
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
 ### Performance metrics
-Net cross-chain edge, completion success, realized duration.
+Measure realized edge, fill success, and execution latency.
+
 ### Failure scenarios
-Bridge timeout, reorg, destination reject, price collapse.
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
 ### Recovery behaviour
-Reconcile both sides and quarantine unsettled transfers.
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
 ### Known limitations
-Cross-chain execution is slower and finality-sensitive.
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
 ### Extension points
-Additional bridge adapters and chain-finality heuristics.
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
 
 ## Flash Loan Arbitrage
+
 ### Business objective
-Capture one-block or one-transaction spread using borrowed capital.
+Use borrowed capital to capture atomic arbitrage without pre-funded balance risk.
+
+### Strategy overview
+Flash Loan Arbitrage uses deterministic rules and policy gates to transform market signals into execution intent.
+
 ### Decision logic
-Evaluate net edge after loan premium, gas, and MEV costs.
-### Market conditions
-Requires atomic execution and borrowable liquidity.
+Evaluate atomic borrow/repay feasibility, fee coverage, and route safety.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
 ### Entry conditions
-Positive edge exceeding loan fee and all execution costs.
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
 ### Exit conditions
-Atomic fill, revert, or validation failure.
-### Position sizing
-Limited by borrow capacity and route depth.
-### Capital allocation
-No permanent capital allocation; temporary borrow only.
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
 ### Risk controls
-Atomicity required; any validation failure aborts before borrow.
-### Stop-loss
-Not applicable after borrow; pre-borrow checks are mandatory.
-### Take-profit
-Only realized on full atomic settlement.
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
 ### Volatility handling
-Reject unstable markets with high quote churn.
+Reduce size or pause when volatility exceeds the accepted policy band.
+
 ### Liquidity requirements
-Borrow liquidity and route liquidity both required.
+Route only when the path depth can support target notional within impact limits.
+
 ### Slippage tolerance
-Very tight; bounded by atomic execution policy.
+Use the route-specific maximum slippage defined by the slippage model.
+
 ### Gas optimisation rules
-Optimize for single-transaction cost and revert risk.
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
 ### MEV considerations
-Use highest available execution protection.
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
 ### Supported chains
-Configured chains with flash-loan support.
+Configured chains only.
+
 ### Supported DEXs
-Configured DEXs with atomic routing support.
+Configured DEXs only.
+
 ### Required market data
-Borrow rates, liquidity, quotes, gas, chain health.
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
 ### AI interaction
-AI may identify opportunities but cannot alter atomic safety checks.
+AI may rank or explain but cannot bypass deterministic gates.
+
 ### Runtime workflow
-Detect -> validate -> borrow -> route -> repay -> reconcile.
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
 ### State machine
-Idle -> Candidate -> Approved -> Borrowing -> Submitted -> Settled | Reverted -> Reconciled.
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
 ### IPC interactions
-Opportunity, approval, execution, borrow, repayment, reconciliation events.
+Opportunity, plan, order, transaction, and alert events.
+
 ### Database persistence
-Loan id, route plan, repayment status, realized PnL.
+Persist scores, plans, fills, and final outcome records.
+
 ### Monitoring metrics
-Atomic success rate, revert rate, loan cost variance.
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
 ### Alert thresholds
-Alert on failed pre-borrow validation or repeated reverts.
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
 ### Backtesting methodology
-Replay atomic spreads with historical borrow and gas assumptions.
+Replay historical input snapshots against the same deterministic rules.
+
 ### Simulation scenarios
-Revert-on-second-leg, slippage surge, gas spike, borrow rejection.
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
 ### Stress testing
-Increase fee and gas volatility.
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
 ### Performance metrics
-Atomic net edge, revert rate, approval latency.
+Measure realized edge, fill success, and execution latency.
+
 ### Failure scenarios
-Loan rejection, revert, route failure, repayment invalidation.
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
 ### Recovery behaviour
-Quarantine the failed route and reconcile accounting.
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
 ### Known limitations
-Dependent on atomic on-chain behavior and borrow availability.
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
 ### Extension points
-New loan venues and atomic route builders.
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
 
 ## Statistical Arbitrage
+
 ### Business objective
-Exploit statistically significant mean reversion between correlated assets.
+Capture relative mispricing using mean reversion or spread models.
+
+### Strategy overview
+Statistical Arbitrage uses deterministic rules and policy gates to transform market signals into execution intent.
+
 ### Decision logic
-Use spread z-score, correlation stability, and regime filters.
-### Market conditions
-Requires stable correlation and sufficient liquidity.
+Use historical spread z-score, volatility, and correlation to detect signal strength.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
 ### Entry conditions
-Spread threshold exceeded and confidence above policy threshold.
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
 ### Exit conditions
-Spread reverts, correlation breaks, or holding-time limit reached.
-### Position sizing
-Scale by z-score, volatility, and estimated half-life.
-### Capital allocation
-Risk-budgeted allocation per pair or basket.
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
 ### Risk controls
-Correlation break, drawdown cap, and regime filter.
-### Stop-loss
-Exit on spread overshoot or model invalidation.
-### Take-profit
-Exit when spread mean reverts to target band.
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
 ### Volatility handling
-Reduce size when realized volatility or model error increases.
+Reduce size or pause when volatility exceeds the accepted policy band.
+
 ### Liquidity requirements
-Sufficient depth for both legs under slippage budget.
+Route only when the path depth can support target notional within impact limits.
+
 ### Slippage tolerance
-Pair-specific tolerance with aggregate cap.
+Use the route-specific maximum slippage defined by the slippage model.
+
 ### Gas optimisation rules
-Prefer fewer rebalances and avoid unnecessary churn.
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
 ### MEV considerations
-Prefer protected paths where leg visibility is high.
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
 ### Supported chains
-Configured chain set.
+Configured chains only.
+
 ### Supported DEXs
-Configured DEX set.
+Configured DEXs only.
+
 ### Required market data
-Historical spreads, correlation metrics, depth, gas, volatility.
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
 ### AI interaction
-AI may summarize regime signals but not replace statistical rules.
+AI may rank or explain but cannot bypass deterministic gates.
+
 ### Runtime workflow
-Signal -> validate -> size -> execute -> monitor -> exit -> reconcile.
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
 ### State machine
-Idle -> Candidate -> Approved -> Active -> Exiting -> Reconciled.
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
 ### IPC interactions
-Signal, approval, execution, exit, reconciliation events.
+Opportunity, plan, order, transaction, and alert events.
+
 ### Database persistence
-Signal history, parameters, realized PnL, exit reason.
+Persist scores, plans, fills, and final outcome records.
+
 ### Monitoring metrics
-Signal hit rate, holding time, drawdown, convergence quality.
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
 ### Alert thresholds
-Alert on correlation collapse or excessive drawdown.
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
 ### Backtesting methodology
-Replay historical pair spreads and regime filters.
+Replay historical input snapshots against the same deterministic rules.
+
 ### Simulation scenarios
-Correlation break, volatility spike, lagged fills.
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
 ### Stress testing
-Perturb correlation, latency, and liquidity simultaneously.
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
 ### Performance metrics
-Sharpe proxy, drawdown, capture rate, turnover.
+Measure realized edge, fill success, and execution latency.
+
 ### Failure scenarios
-Model drift, execution lag, spread blowout.
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
 ### Recovery behaviour
-Reduce size, pause the strategy, or retire the pair.
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
 ### Known limitations
-Performance depends on stable regimes and quality market data.
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
 ### Extension points
-Additional pair selectors and regime classifiers.
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
+
+## Grid Trading
+
+### Business objective
+Harvest oscillation inside a defined price band.
+
+### Strategy overview
+Grid Trading uses deterministic rules and policy gates to transform market signals into execution intent.
+
+### Decision logic
+Place symmetrical ladder orders around a reference price and rebalance on fills.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
+### Entry conditions
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
+### Exit conditions
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
+### Risk controls
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
+### Volatility handling
+Reduce size or pause when volatility exceeds the accepted policy band.
+
+### Liquidity requirements
+Route only when the path depth can support target notional within impact limits.
+
+### Slippage tolerance
+Use the route-specific maximum slippage defined by the slippage model.
+
+### Gas optimisation rules
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
+### MEV considerations
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
+### Supported chains
+Configured chains only.
+
+### Supported DEXs
+Configured DEXs only.
+
+### Required market data
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
+### AI interaction
+AI may rank or explain but cannot bypass deterministic gates.
+
+### Runtime workflow
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
+### State machine
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
+### IPC interactions
+Opportunity, plan, order, transaction, and alert events.
+
+### Database persistence
+Persist scores, plans, fills, and final outcome records.
+
+### Monitoring metrics
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
+### Alert thresholds
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
+### Backtesting methodology
+Replay historical input snapshots against the same deterministic rules.
+
+### Simulation scenarios
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
+### Stress testing
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
+### Performance metrics
+Measure realized edge, fill success, and execution latency.
+
+### Failure scenarios
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
+### Recovery behaviour
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
+### Known limitations
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
+### Extension points
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
+
+## Scalping
+
+### Business objective
+Capture small intraday inefficiencies with very tight hold times.
+
+### Strategy overview
+Scalping uses deterministic rules and policy gates to transform market signals into execution intent.
+
+### Decision logic
+Use short-lived momentum and spread signals with aggressive freshness gates.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
+### Entry conditions
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
+### Exit conditions
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
+### Risk controls
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
+### Volatility handling
+Reduce size or pause when volatility exceeds the accepted policy band.
+
+### Liquidity requirements
+Route only when the path depth can support target notional within impact limits.
+
+### Slippage tolerance
+Use the route-specific maximum slippage defined by the slippage model.
+
+### Gas optimisation rules
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
+### MEV considerations
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
+### Supported chains
+Configured chains only.
+
+### Supported DEXs
+Configured DEXs only.
+
+### Required market data
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
+### AI interaction
+AI may rank or explain but cannot bypass deterministic gates.
+
+### Runtime workflow
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
+### State machine
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
+### IPC interactions
+Opportunity, plan, order, transaction, and alert events.
+
+### Database persistence
+Persist scores, plans, fills, and final outcome records.
+
+### Monitoring metrics
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
+### Alert thresholds
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
+### Backtesting methodology
+Replay historical input snapshots against the same deterministic rules.
+
+### Simulation scenarios
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
+### Stress testing
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
+### Performance metrics
+Measure realized edge, fill success, and execution latency.
+
+### Failure scenarios
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
+### Recovery behaviour
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
+### Known limitations
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
+### Extension points
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
+
+## Momentum
+
+### Business objective
+Follow directional continuation when trend strength is strong.
+
+### Strategy overview
+Momentum uses deterministic rules and policy gates to transform market signals into execution intent.
+
+### Decision logic
+Use trend confirmation, volume expansion, and volatility filters.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
+### Entry conditions
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
+### Exit conditions
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
+### Risk controls
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
+### Volatility handling
+Reduce size or pause when volatility exceeds the accepted policy band.
+
+### Liquidity requirements
+Route only when the path depth can support target notional within impact limits.
+
+### Slippage tolerance
+Use the route-specific maximum slippage defined by the slippage model.
+
+### Gas optimisation rules
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
+### MEV considerations
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
+### Supported chains
+Configured chains only.
+
+### Supported DEXs
+Configured DEXs only.
+
+### Required market data
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
+### AI interaction
+AI may rank or explain but cannot bypass deterministic gates.
+
+### Runtime workflow
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
+### State machine
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
+### IPC interactions
+Opportunity, plan, order, transaction, and alert events.
+
+### Database persistence
+Persist scores, plans, fills, and final outcome records.
+
+### Monitoring metrics
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
+### Alert thresholds
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
+### Backtesting methodology
+Replay historical input snapshots against the same deterministic rules.
+
+### Simulation scenarios
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
+### Stress testing
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
+### Performance metrics
+Measure realized edge, fill success, and execution latency.
+
+### Failure scenarios
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
+### Recovery behaviour
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
+### Known limitations
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
+### Extension points
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
+
+## Mean Reversion
+
+### Business objective
+Trade price excursions back toward a statistical baseline.
+
+### Strategy overview
+Mean Reversion uses deterministic rules and policy gates to transform market signals into execution intent.
+
+### Decision logic
+Use deviation from moving average or fair value bands.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
+### Entry conditions
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
+### Exit conditions
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
+### Risk controls
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
+### Volatility handling
+Reduce size or pause when volatility exceeds the accepted policy band.
+
+### Liquidity requirements
+Route only when the path depth can support target notional within impact limits.
+
+### Slippage tolerance
+Use the route-specific maximum slippage defined by the slippage model.
+
+### Gas optimisation rules
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
+### MEV considerations
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
+### Supported chains
+Configured chains only.
+
+### Supported DEXs
+Configured DEXs only.
+
+### Required market data
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
+### AI interaction
+AI may rank or explain but cannot bypass deterministic gates.
+
+### Runtime workflow
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
+### State machine
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
+### IPC interactions
+Opportunity, plan, order, transaction, and alert events.
+
+### Database persistence
+Persist scores, plans, fills, and final outcome records.
+
+### Monitoring metrics
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
+### Alert thresholds
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
+### Backtesting methodology
+Replay historical input snapshots against the same deterministic rules.
+
+### Simulation scenarios
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
+### Stress testing
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
+### Performance metrics
+Measure realized edge, fill success, and execution latency.
+
+### Failure scenarios
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
+### Recovery behaviour
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
+### Known limitations
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
+### Extension points
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
+
+## Market Making
+
+### Business objective
+Quote both sides to capture spread while controlling inventory.
+
+### Strategy overview
+Market Making uses deterministic rules and policy gates to transform market signals into execution intent.
+
+### Decision logic
+Use inventory-aware bid/ask placement around fair value.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
+### Entry conditions
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
+### Exit conditions
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
+### Risk controls
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
+### Volatility handling
+Reduce size or pause when volatility exceeds the accepted policy band.
+
+### Liquidity requirements
+Route only when the path depth can support target notional within impact limits.
+
+### Slippage tolerance
+Use the route-specific maximum slippage defined by the slippage model.
+
+### Gas optimisation rules
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
+### MEV considerations
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
+### Supported chains
+Configured chains only.
+
+### Supported DEXs
+Configured DEXs only.
+
+### Required market data
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
+### AI interaction
+AI may rank or explain but cannot bypass deterministic gates.
+
+### Runtime workflow
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
+### State machine
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
+### IPC interactions
+Opportunity, plan, order, transaction, and alert events.
+
+### Database persistence
+Persist scores, plans, fills, and final outcome records.
+
+### Monitoring metrics
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
+### Alert thresholds
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
+### Backtesting methodology
+Replay historical input snapshots against the same deterministic rules.
+
+### Simulation scenarios
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
+### Stress testing
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
+### Performance metrics
+Measure realized edge, fill success, and execution latency.
+
+### Failure scenarios
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
+### Recovery behaviour
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
+### Known limitations
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
+### Extension points
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
+
+## Liquidity Provision
+
+### Business objective
+Supply liquidity to earn fees while managing impermanent loss.
+
+### Strategy overview
+Liquidity Provision uses deterministic rules and policy gates to transform market signals into execution intent.
+
+### Decision logic
+Select pools by fee yield, depth, and expected adverse selection.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
+### Entry conditions
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
+### Exit conditions
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
+### Risk controls
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
+### Volatility handling
+Reduce size or pause when volatility exceeds the accepted policy band.
+
+### Liquidity requirements
+Route only when the path depth can support target notional within impact limits.
+
+### Slippage tolerance
+Use the route-specific maximum slippage defined by the slippage model.
+
+### Gas optimisation rules
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
+### MEV considerations
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
+### Supported chains
+Configured chains only.
+
+### Supported DEXs
+Configured DEXs only.
+
+### Required market data
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
+### AI interaction
+AI may rank or explain but cannot bypass deterministic gates.
+
+### Runtime workflow
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
+### State machine
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
+### IPC interactions
+Opportunity, plan, order, transaction, and alert events.
+
+### Database persistence
+Persist scores, plans, fills, and final outcome records.
+
+### Monitoring metrics
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
+### Alert thresholds
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
+### Backtesting methodology
+Replay historical input snapshots against the same deterministic rules.
+
+### Simulation scenarios
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
+### Stress testing
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
+### Performance metrics
+Measure realized edge, fill success, and execution latency.
+
+### Failure scenarios
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
+### Recovery behaviour
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
+### Known limitations
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
+### Extension points
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
+
+## Yield Farming
+
+### Business objective
+Allocate capital to incentives where expected net yield exceeds risk-adjusted threshold.
+
+### Strategy overview
+Yield Farming uses deterministic rules and policy gates to transform market signals into execution intent.
+
+### Decision logic
+Compare reward emissions, lockup terms, and withdrawal penalties.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
+### Entry conditions
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
+### Exit conditions
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
+### Risk controls
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
+### Volatility handling
+Reduce size or pause when volatility exceeds the accepted policy band.
+
+### Liquidity requirements
+Route only when the path depth can support target notional within impact limits.
+
+### Slippage tolerance
+Use the route-specific maximum slippage defined by the slippage model.
+
+### Gas optimisation rules
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
+### MEV considerations
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
+### Supported chains
+Configured chains only.
+
+### Supported DEXs
+Configured DEXs only.
+
+### Required market data
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
+### AI interaction
+AI may rank or explain but cannot bypass deterministic gates.
+
+### Runtime workflow
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
+### State machine
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
+### IPC interactions
+Opportunity, plan, order, transaction, and alert events.
+
+### Database persistence
+Persist scores, plans, fills, and final outcome records.
+
+### Monitoring metrics
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
+### Alert thresholds
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
+### Backtesting methodology
+Replay historical input snapshots against the same deterministic rules.
+
+### Simulation scenarios
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
+### Stress testing
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
+### Performance metrics
+Measure realized edge, fill success, and execution latency.
+
+### Failure scenarios
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
+### Recovery behaviour
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
+### Known limitations
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
+### Extension points
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
+
+## Dollar-Cost Averaging
+
+### Business objective
+Accumulate exposure over time with deterministic sizing.
+
+### Strategy overview
+Dollar-Cost Averaging uses deterministic rules and policy gates to transform market signals into execution intent.
+
+### Decision logic
+Allocate fixed schedule-based orders irrespective of short-term noise.
+
+### Required market conditions
+Configured market conditions must satisfy freshness, liquidity, and venue availability thresholds.
+
+### Entry conditions
+All hard gates pass, the strategy is enabled, and the opportunity is not stale.
+
+### Exit conditions
+Exit on fill, invalidation, timeout, stop-loss, or risk breach.
+
+### Position sizing methodology
+Size by available capital, liquidity depth, expected edge, and risk budget.
+
+### Capital allocation rules
+Allocate only from the strategy budget and never exceed configured exposure limits.
+
+### Risk controls
+Apply max loss, freshness, concentration, drawdown, and execution controls.
+
+### Stop-loss logic
+Abort if the edge or signal quality falls below the configured threshold before execution.
+
+### Take-profit logic
+Take profit only on confirmed fills or realized settlement outcomes.
+
+### Volatility handling
+Reduce size or pause when volatility exceeds the accepted policy band.
+
+### Liquidity requirements
+Route only when the path depth can support target notional within impact limits.
+
+### Slippage tolerance
+Use the route-specific maximum slippage defined by the slippage model.
+
+### Gas optimisation rules
+Respect fee ceilings, replacement policy, and chain-specific gas guidance.
+
+### MEV considerations
+Prefer protected submission or reject routes with unacceptable MEV exposure.
+
+### Supported chains
+Configured chains only.
+
+### Supported DEXs
+Configured DEXs only.
+
+### Required market data
+Quotes, depth, gas, chain health, token metadata, and strategy-specific signals.
+
+### AI interaction
+AI may rank or explain but cannot bypass deterministic gates.
+
+### Runtime workflow
+Detect -> score -> validate -> size -> approve -> execute -> monitor -> reconcile.
+
+### State machine
+Idle -> Candidate -> Approved -> Submitted -> Filled | Failed | Cancelled -> Reconciled.
+
+### IPC interactions
+Opportunity, plan, order, transaction, and alert events.
+
+### Database persistence
+Persist scores, plans, fills, and final outcome records.
+
+### Monitoring metrics
+Capture candidate rate, approval rate, fill rate, latency, slippage, and error rate.
+
+### Alert thresholds
+Alert on repeated invalidations, stale inputs, or repeated execution failures.
+
+### Backtesting methodology
+Replay historical input snapshots against the same deterministic rules.
+
+### Simulation scenarios
+Include thin liquidity, gas spikes, failures, and adverse price movement.
+
+### Stress testing
+Increase latency, reduce depth, and inflate fees to verify abort logic.
+
+### Performance metrics
+Measure realized edge, fill success, and execution latency.
+
+### Failure scenarios
+Handle stale quotes, route failure, reorg, wallet failure, and rejection.
+
+### Recovery behaviour
+Reconcile outcomes, update state, and pause when thresholds are exceeded.
+
+### Known limitations
+Strategy performance depends on market liquidity, latency, and venue reliability.
+
+### Extension points
+Add route scorers, signal filters, and AI ranking hooks only through the documented interfaces.
 
 ## Cross-references
-- `docs/SLIPPAGE-MODEL.md`
-- `docs/GAS-OPTIMISATION.md`
-- `docs/MEV-PROTECTION.md`
-- `docs/OPPORTUNITY-RANKING.md`
-- `docs/EXECUTION-ENGINE.md`
+- `RISK-ENGINE.md`
+- `AI-PIPELINE.md`
+- `EXECUTION-ENGINE.md`
+- `MARKET-INTELLIGENCE.md`
