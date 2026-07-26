@@ -33,3 +33,7 @@ A portfolio always belongs to a single wallet owner.
 
 ## Required details
 - Define Windows entities where needed.
+
+## Domain entities
+- Define the core trading, wallet, service, and Windows desktop entities.
+- Define identifiers and relationships clearly.

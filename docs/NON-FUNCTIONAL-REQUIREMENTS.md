@@ -52,3 +52,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define Windows performance, reliability, and security targets.
+
+## Requirements
+- Define Windows performance, reliability, security, and recoverability targets.
+- Define latency and startup expectations.

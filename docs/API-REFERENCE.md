@@ -366,3 +366,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define streaming, versioning, and rate limits.
+
+## Streaming and limits
+- Define streaming endpoints, rate limits, and versioning.
+- Define error responses and compatibility behavior.

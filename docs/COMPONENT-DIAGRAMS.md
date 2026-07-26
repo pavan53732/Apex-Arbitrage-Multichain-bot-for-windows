@@ -26,3 +26,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define Windows shell and backend boundaries.
+
+## Boundaries
+- Define the Windows shell, backend, worker, and data boundaries.
+- Define the main IPC and service connections.

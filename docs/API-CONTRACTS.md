@@ -102,3 +102,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define transport and error compatibility.
+
+## Transport contracts
+- Define request/response shapes, error mapping, and protocol compatibility.
+- Define Windows IPC and external client boundaries if applicable.

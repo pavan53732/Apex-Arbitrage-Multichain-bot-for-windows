@@ -37,3 +37,7 @@ A worker service transitions to paused during maintenance.
 ## Windows SCM
 - Define install, start, stop, restart, and recovery states under Windows SCM.
 - Define delayed start and service account behavior.
+
+## Service states
+- Define install, start, stop, restart, and recovery states under Windows SCM.
+- Define delayed start and service account behavior.
