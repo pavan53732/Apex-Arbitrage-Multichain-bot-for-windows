@@ -20,6 +20,12 @@ APEX is a professional trading desktop app for Windows. It must communicate
 7. **Accessible** — WCAG 2.1 AA compliance is non-negotiable
 8. **No Surprises** — destructive actions require confirmation, statuses are honest
 
+
+### 1.2 AI Usage Policy
+1. **Cloud AI Only** — production AI must use approved cloud providers with paid API keys; local LLM inference is unsupported in production.
+2. **No Silent Fallback to Local Models** — if cloud providers fail, the system must fall back only to approved cloud fallback providers or safe no-trade behavior.
+3. **Provider Governance** — model routing, token usage, and cost controls are governed by the AI pipeline and configuration policy.
+
 ---
 
 ## 2. Color System

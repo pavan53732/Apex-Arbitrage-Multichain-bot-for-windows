@@ -8,6 +8,12 @@ This document is the authoritative specification for AI decision lifecycle, prom
 - Does not own execution authorization, which remains with risk and execution owners.
 
 ## Decision contract
+## Provider policy
+- Production AI must use approved cloud providers with paid API keys only.
+- Local LLM inference is not supported in production and must not be used as an implicit fallback.
+- Cloud fallback models are allowed only when explicitly configured and approved.
+- Cost ceilings, provider routing, and model fallback order are governed by configuration and governance policy.
+
 AI may rank, explain, or recommend, but it cannot bypass risk, security, wallet, or execution policy checks.
 
 ## Decision lifecycle
