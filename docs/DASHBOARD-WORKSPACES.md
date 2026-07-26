@@ -124,6 +124,7 @@ Each workspace is a JSON object:
 ## Cross-References
 
 - **DASHBOARD-LAYOUT.md** — Layout model and panel placement.
+- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
 - **DASHBOARD-WIDGETS.md** — Widget lifecycle and data binding.
 - **DASHBOARD-RUNTIME.md** — Dashboard initialization and data flow.
 - **WORKSPACE-MANAGER.md** — Workspace manager service.

@@ -28,6 +28,7 @@ Compress, trim, retrieve alternate memory, or refuse request.
 - `AI-PIPELINE.md`
 - `AI-MEMORY-SYSTEM.md`
 - `CONTEXT-BUILDER.md`
+- `TRACEABILITY-MATRIX.md`
 
 ## Governance Rules
 Defines token budgeting, compression, rolling summaries, chunk selection, and retrieval prioritization.

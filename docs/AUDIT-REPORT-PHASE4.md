@@ -23,9 +23,9 @@ After Phase 4 fixes, the cross-reference validator (`validate_cross_references.p
 
 | File | Broken Ref | Resolution |
 |------|-----------|------------|
-| `docs/README.md` | `APEX-ARCHITECTURE.md` | → `../APEX-ARCHITECTURE.md` |
-| `docs/DEPENDENCY-GRAPH.md` | `APEX-ARCHITECTURE.md` | → `../APEX-ARCHITECTURE.md` |
-| `docs/DOCUMENTATION-MAP.md` (×3) | `APEX-ARCHITECTURE.md` | → `../APEX-ARCHITECTURE.md` |
+| docs/README.md | APEX-ARCHITECTURE.md | → `../APEX-ARCHITECTURE.md` |
+| docs/DEPENDENCY-GRAPH.md | APEX-ARCHITECTURE.md | → `../APEX-ARCHITECTURE.md` |
+| docs/DOCUMENTATION-MAP.md (×3) | APEX-ARCHITECTURE.md | → `../APEX-ARCHITECTURE.md` |
 | `docs/BUILD-RELEASE-CICD.md` | `CODE-SIGNING.md` | Created `docs/CODE-SIGNING.md` |
 
 ---
@@ -64,7 +64,7 @@ The duplicate/conflict auditor (`audit_duplicates.py`) reports:
 | `AGENTS.md` ↔ `docs/AGENTS.md` | Consolidate into `docs/AGENTS.md` |
 | `AI-MEMORY.md` ↔ `AI-MEMORY-SYSTEM.md` | Consolidate into one |
 | `API-CONTRACTS.md` ↔ `API-REFERENCE.md` | Consolidate into one |
-| `ARCHITECTURE.md` ↔ `APEX-ARCHITECTURE.md` | Keep `ARCHITECTURE.md` as canonical; redirect from `APEX-ARCHITECTURE.md` |
+| `ARCHITECTURE.md` ↔ APEX-ARCHITECTURE.md | Keep `ARCHITECTURE.md` as canonical; redirect from APEX-ARCHITECTURE.md |
 | `WORKER-ARCHITECTURE.md` ↔ `WORKER-POOL.md` | Consolidate into one |
 
 ### Conflict Potentials

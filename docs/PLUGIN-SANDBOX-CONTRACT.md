@@ -102,6 +102,7 @@ Each plugin declares required capabilities in its manifest. Capabilities are gra
 ## Cross-References
 
 - **PLUGIN-LIFECYCLE.md** — Plugin lifecycle state machine.
+- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
 - **PLUGIN-SDK.md** — Plugin API reference and hooks.
 - **PLUGIN-MARKETPLACE.md** — Plugin distribution and signing.
 - **TRUST-BOUNDARIES.md** — Trust domain T4 plugin isolation.

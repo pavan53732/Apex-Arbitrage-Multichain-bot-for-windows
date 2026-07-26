@@ -54,6 +54,7 @@ Detected -> Classified -> Contained -> Restored -> Reconciled -> Released.
 - `WORKER-ARCHITECTURE.md`
 - `MONITORING-OBSERVABILITY.md`
 - `ERROR-HANDLING-LOGGING.md`
+- `TRACEABILITY-MATRIX.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

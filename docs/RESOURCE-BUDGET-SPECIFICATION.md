@@ -120,6 +120,7 @@ flowchart LR
 ## Cross-References
 
 - **CAPACITY-PLANNING.md** — Maximum supported throughput and sizing.
+- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
 - **MEMORY-LIFECYCLE.md** — Memory allocation and eviction policies.
 - **CONFIGURATION-REFERENCE.md** — Resource config keys (`resource.*`, `plugin.sandbox.*`).
 - **MONITORING-OBSERVABILITY.md** — Metric collection and alerting.

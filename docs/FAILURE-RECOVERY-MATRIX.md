@@ -10,3 +10,6 @@ Maps failure types to recovery behaviours.
 - Timeout -> bounded retry.
 - Invariant breach -> fail closed.
 
+## Cross-References
+- `TRACEABILITY-MATRIX.md`
+

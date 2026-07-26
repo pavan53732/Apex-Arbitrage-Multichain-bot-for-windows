@@ -160,6 +160,7 @@ All events use `Exactly-once` delivery (see `EVENT-OWNERSHIP-MATRIX.md`).
 ## Cross-References
 
 - **SECURITY.md** — Overall security architecture and trust model.
+- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
 - **TRUST-BOUNDARIES.md** — Trust domain enforcement for secret access.
 - **EVENT-OWNERSHIP-MATRIX.md** — Secret event ownership.
 - **CONFIGURATION-REFERENCE.md** — Secret config keys (`security.secret.*`).

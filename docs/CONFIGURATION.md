@@ -10,6 +10,7 @@ Defines runtime and operational configuration, precedence, validation, and secre
 
 ## Ownership
 - Owns schema, defaults, override precedence, and validation rules.
+- Delegates profile-specific definitions and switching to `CONFIGURATION-PROFILES.md`.
 
 ## Precedence
 1. Secure defaults.
@@ -26,6 +27,9 @@ Defines runtime and operational configuration, precedence, validation, and secre
 - `DATABASE-SCHEMA.md`
 - `AI-COST-MANAGEMENT.md`
 - `VERSIONING.md`
+- `PLUGIN-SDK.md`
+- `HEALTHCHECKS.md`
+- `TRACEABILITY-MATRIX.md`
 
 - `PLUGIN-SDK.md`
 

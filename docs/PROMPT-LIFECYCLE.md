@@ -214,6 +214,7 @@ All events have `At-least-once` delivery guarantee (see `EVENT-OWNERSHIP-MATRIX.
 ## Cross-References
 
 - **AI-PIPELINE.md** — Where prompts are consumed in the AI decision pipeline.
+- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
 - **AI-MEMORY.md** — Memory storage, retrieval, and governance.
 - **AI-CONTEXT-WINDOW-MANAGEMENT.md** — Token budget and context window limits.
 - **AI-TOOL-INVOCATION-CONTRACT.md** — Tool invocation policy for prompt-driven tools.

@@ -153,6 +153,7 @@ All violations emit a `security.violation` event (Exactly-once delivery, Critica
 ## Cross-References
 
 - **SECURITY.md** — Overall security architecture.
+- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
 - **SECURITY-CONTRACTS.md** — Security contracts and policies.
 - **SECRET-LIFECYCLE.md** — Secret lifecycle within trust domains.
 - **PERMISSION-MODEL.md** — Permission model for intra-domain access.

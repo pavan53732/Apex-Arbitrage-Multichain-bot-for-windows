@@ -17,6 +17,7 @@ Define ownership, contracts, lifecycle, validation, and cross-references.
 ## Cross-references
 - `APEX-OS.md`
 - `ARCHITECTURE.md`
+- `TRACEABILITY-MATRIX.md`
 
 ## Operational Contract
 Defines deterministic startup order across kernel, registries, config, database, workers, providers, AI, chains, and dashboard readiness.

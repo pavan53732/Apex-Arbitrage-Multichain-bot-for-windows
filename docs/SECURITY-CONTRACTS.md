@@ -3,45 +3,24 @@
 ## Document type
 Document type: [REFERENCE]
 
-# Security Contracts
-
 ## Purpose
-Defines mandatory security controls for the platform.
+Declares high-level security policy for the platform.
 
-## Secret storage
-Secrets must use the OS keychain and must never be stored in `.env` files.
+## Authority
+Detailed security architecture, trust boundaries, secret lifecycle, permission model, incident response, and monitoring are owned by `SECURITY.md`.
 
-## Wallet signing
-Wallet signing must require explicit user approval via the desktop UI; headless auto-sign is forbidden.
+Policy mandates from this document are enforced by `SECURITY.md` and `SECURITY.md` §7 (Monitoring Events).
 
-## Plugin sandbox
-Plugins must run in a separate process with CPU and RAM limits.
+## Mandated Controls
+- **Secret storage**: Secrets must use the OS keychain; never stored in `.env` files.
+- **Wallet signing**: Wallet signing requires explicit user approval via desktop UI; headless auto-sign forbidden.
+- **Plugin sandbox**: Plugins run in a separate process with CPU and RAM limits.
+- **Emergency stop**: `/admin/emergency-stop` terminates active orders and locks wallets.
+- **Audit log**: Every state transition logs user ID, timestamp, and immutable hash.
 
-## Emergency stop
-`/admin/emergency-stop` terminates all active orders and locks wallets.
-
-## Audit log
-Every state transition must log user ID, timestamp, and immutable hash.
-
-## Cross-references
-- `PLUGIN-SDK.md`
-- `WALLET-COMMAND-CENTER.md`
-- `ORCHESTRATOR.md`
-- `HEALTHCHECKS.md`
-
-## Governance Rules
-Defines security invariants for wallets, plugins, secrets, approvals, permissions, and emergency controls.
-
-## Example
-A wallet action requires explicit permission and audit logging.
-
-## Required details
-- Define secret storage, signing, audit logs, and escalation rules.
-
-## Windows controls
-- Secrets must use DPAPI or Credential Manager.
-- Signed binaries and plugin checks are required.
-- Critical actions must log to an auditable trail.
-
-## Canonical ownership
-This document defers to the canonical owners for implementation, policy, and schema details.
+## Cross-References
+- `SECURITY.md` — Full security architecture.
+- `PERMISSION-MODEL.md` — Role/action permission matrix.
+- `TRUST-BOUNDARIES.md` — Trust domain definitions.
+- `SECRET-LIFECYCLE.md` — Secret lifecycle details.
+- `TRACEABILITY-MATRIX.md`

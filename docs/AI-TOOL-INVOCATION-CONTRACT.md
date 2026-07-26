@@ -192,6 +192,7 @@ interface ToolInvocation {
 ## Cross-References
 
 - **AI-TOOLS.md** — Tool registry and definitions.
+- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
 - **AI-PIPELINE.md** — AI decision pipeline orchestration.
 - **AI-SAFETY-BOUNDARY.md** — Safety boundary enforcement.
 - **TRUST-BOUNDARIES.md** — Trust domain rules for tool access.

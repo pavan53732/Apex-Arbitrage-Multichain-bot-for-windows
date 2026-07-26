@@ -31,6 +31,7 @@ Fallback to safe defaults and validate merged config.
 - `CONFIGURATION.md`
 - `AI-SETTINGS.md`
 - `DASHBOARD-WORKSPACES.md`
+- `TRACEABILITY-MATRIX.md`
 
 ## Governance Rules
 Defines named configuration bundles, defaults, overrides, environment targeting, and validation.

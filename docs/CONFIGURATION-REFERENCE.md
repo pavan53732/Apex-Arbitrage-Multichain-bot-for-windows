@@ -261,6 +261,7 @@ When a `Reload: Yes` batch of keys is changed simultaneously (e.g. via profile s
 ## Cross-References
 
 - **CONFIGURATION.md** — Precedence, profiles, secret handling authority.
+- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
 - **CONFIGURATION-PROFILES.md** — Profile inheritance and switching.
 - **FEATURE-FLAGS.md** — Feature flag system and gating.
 - **SCHEMAS/configuration.schema.json** — JSON Schema for config validation.

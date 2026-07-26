@@ -124,6 +124,7 @@ Maps publishers, consumers, delivery guarantees, ordering, priority, and retenti
 ## Cross-References
 
 - **EVENT-CATALOG.md** — Canonical event definitions and payload schemas.
+- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
 - **EVENT-BUS.md** — Event bus architecture and delivery mechanism.
 - **CONFIGURATION-REFERENCE.md** — Event config keys (`event.*`).
 - **FAILURE-RECOVERY-MATRIX.md** — Recovery actions for event failures.

@@ -13,6 +13,7 @@ OpenAI-compatible, Anthropic-compatible, Gemini, OpenRouter, Groq, and custom en
 
 ## Cross-references
 - `AI-ORCHESTRATION.md`
+- `TRACEABILITY-MATRIX.md`
 - `AI-CONSENSUS.md`
 - `METRICS.md`
 - `CONFIGURATION.md`

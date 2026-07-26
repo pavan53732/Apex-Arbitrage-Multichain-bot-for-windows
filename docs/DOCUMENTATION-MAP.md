@@ -16,7 +16,9 @@ Defines ownership, authority, and cross-reference rules for the documentation se
 - Navigation stubs must point to the owner document and must not redefine behavior.
 
 ## Canonical owners
+- Agent navigation: `docs/AGENTS.md`
 - Documentation map: `docs/DOCUMENTATION-MAP.md`
+- Governance conventions: `docs/README-GOVERNANCE.md`
 - Architecture: `docs/ARCHITECTURE.md`
 - Root architecture overview: `../APEX-ARCHITECTURE.md`
 - Project structure: `docs/PROJECT-STRUCTURE.md`
@@ -28,6 +30,11 @@ Defines ownership, authority, and cross-reference rules for the documentation se
 - AI decision pipeline: `docs/AI-PIPELINE.md`
 - Cloud AI integration: `docs/CLOUD-AI-INTEGRATION.md`
 - AI settings: `docs/AI-SETTINGS.md`
+- AI memory system: `docs/AI-MEMORY-SYSTEM.md`
+  - Deprecated: `docs/AI-MEMORY.md` → redirects to `AI-MEMORY-SYSTEM.md`
+- Error handling and logging: `docs/ERROR-HANDLING-LOGGING.md`
+- Permission model: `docs/PERMISSION-MODEL.md`
+- Security contracts: `docs/SECURITY-CONTRACTS.md` (policy mandates enforced by `SECURITY.md`)
 - Market data: `docs/MARKET-DATA.md`
 - Market intelligence: `docs/MARKET-INTELLIGENCE.md`
 - Opportunity detection detail: `docs/OPPORTUNITY-DETECTION.md` (owned under market intelligence authority)

@@ -21,3 +21,4 @@ Defines how the desktop app loads, isolates, versions, and updates plugins.
 - `PLUGIN-MARKETPLACE.md`
 - `SECURITY-CONTRACTS.md`
 - `SYSTEM-CAPABILITY-REGISTRY.md`
+- `TRACEABILITY-MATRIX.md`
