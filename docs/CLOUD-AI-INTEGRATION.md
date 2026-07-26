@@ -6,14 +6,13 @@
 
 ## 1. Overview
 
-APEX uses cloud-accessed AI endpoints only. These endpoints can be public hosted services or user-operated local servers that expose an OpenAI-compatible API. The application never ships an embedded model runtime and does not depend on Docker or WSL.
+APEX uses cloud AI providers with paid API keys only. The application never ships an embedded model runtime and does not depend on local LLM inference, Docker, or WSL in production.
 
 Supported integration classes:
 
-- OpenAI-compatible APIs
+- OpenAI-compatible cloud APIs
 - Anthropic native API
-- Self-hosted OpenAI-compatible endpoints
-- Custom provider templates for future compatible backends
+- Custom provider templates for future cloud-compatible backends
 
 ---
 
@@ -23,7 +22,6 @@ Supported integration classes:
 |---------|-----------|------------------|----------|
 | OpenAI-compatible | `/v1/chat/completions` or equivalent | OpenAI, Groq, Together, OpenRouter, DeepSeek, Mistral, Azure OpenAI-compatible gateways | Broadest compatibility and easiest abstraction |
 | Anthropic native | `/v1/messages` | Anthropic Claude | High-quality long-context reasoning and tool planning |
-| Self-hosted OpenAI-compatible | OpenAI-like local endpoint | LM Studio, Ollama proxy, vLLM, llama.cpp server, LocalAI | Privacy-focused or low-marginal-cost deployments |
 
 ---
 
@@ -33,7 +31,6 @@ Supported integration classes:
 |--------------|-------------|-----------|--------------|-----------|-----------------|
 | OpenAI-compatible | `Authorization: Bearer` | Usually SSE | Usually yes | Simple standardisation, broad ecosystem | Provider quirks vary widely |
 | Anthropic native | `x-api-key` + `anthropic-version` | Yes | Yes, but schema differs | Strong reasoning, mature message API | Different request/response shape |
-| Self-hosted compatible | Usually `Bearer` or none | Depends on server | Depends on server | Cost control, local privacy boundary | Highly variable feature completeness |
 
 ---
 
@@ -105,16 +102,16 @@ Representative request:
 }
 ```
 
-### 5.3 Self-Hosted Compatible Endpoints
+### 5.3 Cloud Provider Endpoints
 
-Self-hosted servers are treated as OpenAI-compatible only if they reliably support the required subset:
+Cloud providers are treated as supported only if they reliably support the required subset:
 
 - message-based chat completion
 - deterministic JSON-friendly output when requested
 - streaming, if enabled in APEX
 - reasonable error codes
 
-Self-hosted endpoints should be marked clearly in the UI because their operational profile differs from cloud services.
+All providers should be marked clearly in the UI, including auth method, rate limits, cost class, and fallback role.
 
 ---
 
@@ -282,10 +279,10 @@ Recommended controls:
 ### 13.1 Fallback Strategy
 
 ```text
-primary provider
+primary cloud provider
   -> retry if transient failure
-  -> secondary provider
-  -> tertiary provider
+  -> secondary cloud provider
+  -> tertiary cloud provider
   -> rule-based degraded mode
 ```
 
@@ -355,3 +352,9 @@ Use cloud providers for reliability and broad capability. Use self-hosted compat
 ---
 
 A strong provider abstraction is essential because APEX depends on AI for orchestration, ranking, and operator-facing intelligence, but it must never depend on any single vendor implementation detail.
+
+
+## Production policy
+- Production AI must use approved cloud providers with paid API keys only.
+- Local LLM inference is unsupported in production.
+- Experimental local or self-hosted adapters, if ever added, must remain outside the production routing set.
