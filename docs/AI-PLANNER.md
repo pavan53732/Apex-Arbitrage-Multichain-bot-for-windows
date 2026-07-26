@@ -18,3 +18,9 @@ stateDiagram-v2
 - `AI-ORCHESTRATION.md`
 - `DECISION-ENGINE.md`
 - `AI-CONSENSUS.md`
+
+## Operational Contract
+Defines goal decomposition, dependency ordering, sequencing, recovery, and plan emission.
+
+## Example
+The planner breaks a multi-step execution request into risk, simulation, and trade tasks.

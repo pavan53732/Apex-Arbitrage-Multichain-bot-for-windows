@@ -18,3 +18,9 @@ stateDiagram-v2
 - `DASHBOARD-WORKSPACES.md`
 - `WINDOWS-DESKTOP.md`
 - `CONFIGURATION-PROFILES.md`
+
+## Operational Contract
+Defines workspace composition, layout, settings, dashboard bindings, provider selection, and recovery state.
+
+## Example
+A simulation workspace restores its selected chain, wallet, and layout on reopen.

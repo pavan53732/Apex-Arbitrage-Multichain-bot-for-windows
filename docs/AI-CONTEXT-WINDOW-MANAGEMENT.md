@@ -23,3 +23,9 @@ Compress, trim, retrieve alternate memory, or refuse request.
 - `AI-PIPELINE.md`
 - `AI-MEMORY-SYSTEM.md`
 - `CONTEXT-BUILDER.md`
+
+## Governance Rules
+Defines token budgeting, compression, rolling summaries, chunk selection, and retrieval prioritization.
+
+## Example
+Long market history is compressed before dispatching a prompt to the AI provider.

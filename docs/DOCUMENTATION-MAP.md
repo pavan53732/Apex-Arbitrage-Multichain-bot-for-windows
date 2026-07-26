@@ -447,3 +447,10 @@ These must not claim ownership and should only point to owners:
 - Prompt Engineering
 - Security Contracts
 - Service Lifecycle
+
+
+## Deepening pass - tranche 11
+- Workspace Manager
+- AI Context Window Management
+- AI Memory
+- AI Planner

@@ -23,3 +23,9 @@ This document covers short-term memory, long-term memory, retrieval, summarizati
 
 ## Orchestration boundary
 This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `AI-PIPELINE.md`.
+
+## Governance Rules
+Defines the memory surface exposed to the rest of the platform, including session recall and persistence boundaries.
+
+## Example
+A user preference is recalled for prompt construction without exposing unrelated private data.
