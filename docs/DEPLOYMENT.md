@@ -39,3 +39,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define installer and update channels.
+
+## Deployment rules
+- Define installer, update, rollback, and rollout behavior for Windows.
+- Define safe failure and recovery during deployment.

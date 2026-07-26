@@ -31,3 +31,7 @@ Re-scan adapters, revalidate manifests, and suspend stale capabilities.
 
 ## Required details
 - Define platform capabilities and runtime features.
+
+## Capability rules
+- Define platform, runtime, service, and plugin capabilities explicitly.
+- Define how capability checks block unsupported features.

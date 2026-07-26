@@ -39,3 +39,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define why decisions were taken or skipped.
+
+## Explanation rules
+- Explain why actions were taken, skipped, or delayed.
+- Capture inputs, outputs, and decision context for auditability.

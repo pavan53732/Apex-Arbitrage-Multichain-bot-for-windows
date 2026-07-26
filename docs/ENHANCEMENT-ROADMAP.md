@@ -15,3 +15,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define milestones and delivery sequencing.
+
+## Roadmap rules
+- Define phased milestones, dependencies, and release goals.
+- Tie roadmap items to authoritative owner docs.

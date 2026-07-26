@@ -23,3 +23,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define repo directories and installer layout.
+
+## Repository layout
+- Define the actual directories for docs, app, service, installers, and tests.
+- Define where Windows packaging artifacts live.

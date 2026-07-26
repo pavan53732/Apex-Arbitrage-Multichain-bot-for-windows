@@ -19,3 +19,7 @@ A primary button uses the same spacing and color semantics across screens.
 
 ## Required details
 - Define visual tokens and accessibility.
+
+## UI rules
+- Define visual tokens, states, accessibility, and density for trading screens.
+- Define dark and light theme treatment if used.
