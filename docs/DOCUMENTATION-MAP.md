@@ -104,3 +104,18 @@ These must not claim ownership and should only point to owners:
 - `APEX-ARCHITECTURE.md`
 - `docs/ARCHITECTURE.md`
 - `docs/PROJECT-STRUCTURE.md`
+
+
+## Additional governed documents
+- AI capability matrix: `docs/AI-CAPABILITY-MATRIX.md` (Authoritative; owned by AI capability governance; defines supported AI capabilities and measurement.)
+- AI memory: `docs/AI-MEMORY.md` (Authoritative; owned by AI memory governance; defines memory storage, retrieval, and context handling.)
+- Prompt engineering: `docs/PROMPT-ENGINEERING.md` (Authoritative; owned by AI prompt governance; defines prompt design and construction guidance.)
+- AI cost management: `docs/AI-COST-MANAGEMENT.md` (Authoritative; owned by AI cost governance; defines cost tracking, limits, and optimisation.)
+- Chain registry: `docs/CHAIN-REGISTRY.md` (Registry; owned by market/data/routing authority; lists supported chains and chain metadata.)
+- DEX registry: `docs/DEX-REGISTRY.md` (Registry; owned by market/data/routing authority; lists supported DEXs and DEX metadata.)
+- Token registry: `docs/TOKEN-REGISTRY.md` (Registry; owned by market/data/routing authority; lists token definitions and addresses.)
+- Oracle registry: `docs/ORACLE-REGISTRY.md` (Registry; owned by market/data/routing authority; lists oracle providers and feeds.)
+- Dashboard widgets: `docs/DASHBOARD-WIDGETS.md` (Authoritative; owned by desktop/UI authority; defines the available dashboard widgets.)
+- Dashboard layout: `docs/DASHBOARD-LAYOUT.md` (Authoritative; owned by desktop/UI authority; defines layout, grid, and responsive behavior.)
+- UX guidelines: `docs/UX-GUIDELINES.md` (Authoritative; owned by desktop/UI authority; defines interaction and presentation standards.)
+- Versioning: `docs/VERSIONING.md` (Support; owned by governance/schema/config/API authorities; describes versioning strategy.)

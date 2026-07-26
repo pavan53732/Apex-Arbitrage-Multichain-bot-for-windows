@@ -65,3 +65,5 @@ Raw -> Parsed -> Normalized -> Validated -> Published -> Expired.
 - `MONITORING-OBSERVABILITY.md`
 - `TOKEN-REGISTRY.md`
 - `ORACLE-REGISTRY.md`
+- `CHAIN-REGISTRY.md`
+- `DEX-REGISTRY.md`
