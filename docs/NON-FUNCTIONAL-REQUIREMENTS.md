@@ -7,10 +7,36 @@ Defines global performance, reliability, security, maintainability, and operabil
 - Deterministic decisions for the same input snapshot and configuration.
 - Fail-closed behavior on invalid risk, security, or freshness conditions.
 - Structured logging and observability for all critical paths.
-- Recoverability after crash, restart, and chain reorg.
-- Bounded latency for execution and reconciliation paths.
+- Recoverability after crash, restart, queue failure, and chain reorg.
+- Bounded latency for execution, reconciliation, and operator-facing workflows.
+- Cloud AI must use paid API keys only in production.
+- AI costs must be measurable, capped, and visible per session and provider.
+- Local LLM inference must not be assumed by any production requirement.
+
+## Reliability goals
+- No silent data loss on execution, order, transaction, or risk state changes.
+- No duplicate side effects from retried idempotent operations.
+- Durable state must be restorable from persistence after restart.
+- Recovery workflows must reconcile state before resuming live work.
+
+## Security goals
+- Secrets and signing material must never be exposed in logs or telemetry.
+- Privileged operations must be gated by policy and permission checks.
+- AI prompt and output handling must not leak sensitive internal state.
+
+## Maintainability goals
+- Every subsystem must have a single authoritative owner document.
+- Cross-cutting rules must be centralized rather than duplicated.
+- Configuration names, error codes, and event names must remain stable.
+
+## Operability goals
+- Operators must see health, alerts, recovery state, and queue pressure.
+- Diagnostics must be exportable without compromising secrets.
+- Backups, restores, and upgrades must be auditable and reproducible.
 
 ## Cross-references
 - `docs/PERFORMANCE-TARGETS.md`
 - `docs/SECURITY.md`
 - `docs/MONITORING-OBSERVABILITY.md`
+- `docs/AI-PIPELINE.md`
+- `docs/RUNTIME-OPERATIONS.md`
