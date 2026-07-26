@@ -31,25 +31,42 @@ Snapshot -> FeatureExtracted -> Scored -> Ranked -> Published -> Expired.
 - Ranked -> Published when risk and policy gates approve the results.
 - Published -> Expired on TTL or on upstream market data invalidation.
 
-## Idempotency and retry
+## Feature model
+Feature sets may include spread, depth, volatility, momentum, correlation, freshness, provider trust, chain health, DEX concentration, and fee pressure. Feature definitions must be versioned.
+
+## Determinism rules
 - For a given snapshot id and configuration, feature extraction and scoring must be deterministic.
 - Re-evaluating the same snapshot under the same configuration must produce the same scores and ranking order.
+- Ranking ties must be broken by documented stable rules.
 - Retry is only allowed for transient computation or data-fetch failures and must not change the result for identical inputs.
+
+## Decision outputs
+- Token score.
+- Pair score.
+- Chain score.
+- DEX score.
+- Opportunity score.
+- Confidence score.
+- Reject reason.
+- Explanation bundle.
 
 ## Failure and recovery
 - Missing or stale market data must produce a hard reject rather than speculative scores.
 - If risk or policy gates fail, no opportunity should be published for execution.
 - On computation failure, emit diagnostics and do not publish partial or inconsistent scores.
+- If feature extraction fails, the entire snapshot is rejected rather than partially scored.
 
 ## Persistence
-- Persist snapshot id, feature hashes, scores, ranking, and reject reasons where backtesting or audit requires it.
+- Persist snapshot id, feature hashes, scores, ranking, tie-break rule, and reject reasons where backtesting or audit requires it.
 - Persist configuration versions used for scoring.
+- Persist explanation metadata for traceability.
 
 ## Monitoring
 - Scoring latency.
 - Ranking throughput.
 - Candidate rejection rate and reasons.
 - Score and ranking drift across releases.
+- Feature extraction failures.
 
 ## Cross-references
 - `MARKET-DATA.md`

@@ -26,33 +26,47 @@ Candidate -> Evaluated -> Approved -> Monitored -> Breached -> Halted -> Reset.
 - Breached -> Halted when emergency-stop policy or halt policy is triggered.
 - Halted -> Reset only after operator action and state normalization.
 
-## Inputs
-- Market data.
+## Risk inputs
+- Market data freshness and quality.
 - Portfolio and position state.
 - Wallet state.
 - Strategy metadata.
 - Execution plan details.
 - AI confidence and explanation metadata.
 
-## Outputs
-- Risk scores.
-- Approval decisions.
-- Reject reasons.
-- Halt or emergency-stop recommendations.
+## Hard gates
+- Freshness gate.
+- Liquidity gate.
+- Concentration gate.
+- Exposure gate.
+- Volatility gate.
+- Chain health gate.
+- Wallet readiness gate.
+- Security and authorization gate.
 
-## Rules
-- Safety, wallet, signing, and liquidity checks are hard gates.
-- AI confidence may inform ranking but cannot override risk rejection.
-- Risk evaluation must be deterministic for the same snapshot.
-- A breached hard limit must produce a stable reject code.
+## Risk outputs
+- Risk score.
+- Approval state.
+- Reject code.
+- Halt recommendation.
+- Emergency stop flag.
+- Recovery instructions.
 
-## Idempotency and retry
+## Determinism rules
 - Re-evaluating the same snapshot must return the same decision and code set.
-- Retry is only for transient data-fetch failures, never for a risk rejection.
+- Risk decisions must not depend on non-versioned mutable state.
+- AI may contribute a score, but the deterministic hard gates control the final answer.
+
+## Failure and recovery
+- A breached hard limit must produce a stable reject code.
+- If any required input is missing, fail closed.
+- If state becomes inconsistent, halt new execution until reconciliation completes.
+- Retry is allowed only for transient data-fetch failures, never for a risk rejection.
 
 ## Persistence
 - Persist risk snapshot hashes, limit sets, scores, approvals, rejects, breach reasons, and halt timestamps.
-- Persist the operator reset decision and recovery notes.
+- Persist operator reset decisions and recovery notes.
+- Persist the exact input snapshot that produced the decision.
 
 ## Monitoring
 - Approval rate.
@@ -60,6 +74,7 @@ Candidate -> Evaluated -> Approved -> Monitored -> Breached -> Halted -> Reset.
 - Emergency stop count.
 - Risk score drift.
 - Evaluation latency.
+- Hard-gate failure counts by category.
 
 ## Cross-references
 - `STRATEGIES.md`
