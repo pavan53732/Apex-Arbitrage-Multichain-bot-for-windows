@@ -19,3 +19,7 @@ Defines the end-to-end trading decision and execution coordination layer.
 
 ## Required details
 - Define service mode, crash recovery, and desktop state surfaces.
+
+## Trading rules
+- Define orchestration from opportunity to settlement.
+- Define crash recovery, service mode, and desktop state surfaces.

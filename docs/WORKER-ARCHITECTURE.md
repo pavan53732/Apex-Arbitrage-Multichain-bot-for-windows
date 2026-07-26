@@ -72,3 +72,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define worker roles and failure boundaries.
+
+## Worker rules
+- Define worker roles, isolation, and failure boundaries.
+- Define arbitrage-specific workers and desktop support workers.

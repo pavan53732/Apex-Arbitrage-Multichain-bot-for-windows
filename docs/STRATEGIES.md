@@ -1527,3 +1527,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define per-strategy assumptions, inputs, outputs, and execution constraints.
+
+## Strategy rules
+- Define strategy inputs, outputs, assumptions, and execution constraints.
+- Define per-strategy validation and failure behavior.

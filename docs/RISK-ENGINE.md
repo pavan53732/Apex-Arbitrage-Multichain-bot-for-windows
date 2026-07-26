@@ -26,3 +26,7 @@ Defines trading risk checks used before and during execution.
 ## Abort rules
 - Abort if loss limit, slippage, or timing budget is exceeded.
 - Abort if a leg is partially filled and recovery cannot restore limits.
+
+## Risk rules
+- Define formulas, limits, and abort behavior for arbitrage risk.
+- Define partial fill and cross-leg exposure handling.

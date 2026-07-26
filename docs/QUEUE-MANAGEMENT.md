@@ -59,3 +59,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define priority, arbitration, and latency handling.
+
+## Queue rules
+- Define priority, arbitration, and latency handling.
+- Define queue partitioning for trading and recovery tasks.
