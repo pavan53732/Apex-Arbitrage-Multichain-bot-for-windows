@@ -19,3 +19,6 @@ This document covers system prompts, few-shot prompts, safety prompts, agent pro
 - `AI-SETTINGS.md`
 - `CLOUD-AI-INTEGRATION.md`
 - `CONFIGURATION.md`
+
+## Orchestration boundary
+This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `AI-PIPELINE.md`.

@@ -87,3 +87,6 @@ Trading-related contracts must include:
 - [`MODULE-DEPENDENCY.md`](./MODULE-DEPENDENCY.md)
 - [`STATE-MANAGEMENT.md`](./STATE-MANAGEMENT.md)
 - [`ERROR-HANDLING-LOGGING.md`](./ERROR-HANDLING-LOGGING.md)
+
+## Cross-references
+- `VERSIONING.md`

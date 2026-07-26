@@ -353,3 +353,4 @@ Standard error code format: `E_<CATEGORY>_<SPECIFIC>`.
 - `IPC-PROTOCOL.md`
 - `PROJECT-STRUCTURE.md`
 - `ERROR-HANDLING-LOGGING.md`
+- `VERSIONING.md`

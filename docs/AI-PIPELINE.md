@@ -105,3 +105,6 @@ Persist prompt versions, routing decisions, model ids, tokens used, confidence s
 - `AI-MEMORY.md`
 - `PROMPT-ENGINEERING.md`
 - `AI-COST-MANAGEMENT.md`
+
+## Orchestration authority
+AI-PIPELINE.md is the single source for behavioural orchestration, provider routing, prompt lifecycle, and decision sequencing.

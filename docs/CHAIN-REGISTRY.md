@@ -24,3 +24,6 @@ This registry is descriptive and feeds chain integration, routing, wallet, gas, 
 - `WALLET-MANAGEMENT.md`
 - `GAS-OPTIMISATION.md`
 - `DATABASE-SCHEMA.md`
+
+## Registry boundary
+This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.

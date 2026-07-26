@@ -88,3 +88,4 @@ Defines persistence model, tables, indexes, retention, migrations, and backup/re
 - `MARKET-INTELLIGENCE.md`
 - `RUNTIME-OPERATIONS.md`
 - `USER-FLOWS.md`
+- `VERSIONING.md`

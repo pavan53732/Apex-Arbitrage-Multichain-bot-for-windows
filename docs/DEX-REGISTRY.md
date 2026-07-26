@@ -22,3 +22,6 @@ This registry is descriptive and feeds routing, liquidity, execution, and market
 - `LIQUIDITY-ANALYSIS.md`
 - `MARKET-DATA.md`
 - `DATABASE-SCHEMA.md`
+
+## Registry boundary
+This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.

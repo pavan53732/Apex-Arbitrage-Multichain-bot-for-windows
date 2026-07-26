@@ -20,3 +20,6 @@ This document covers short-term memory, long-term memory, retrieval, summarizati
 - `STATE-MANAGEMENT.md`
 - `DATABASE-SCHEMA.md`
 - `CONFIGURATION.md`
+
+## Orchestration boundary
+This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `AI-PIPELINE.md`.
