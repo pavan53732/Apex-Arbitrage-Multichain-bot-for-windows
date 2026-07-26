@@ -370,3 +370,10 @@ These must not claim ownership and should only point to owners:
 - `adr/0006-runtime-governance.md`
 - `adr/0007-workspace-model.md`
 - `adr/0008-orchestrator-state-machine.md`
+
+
+## Deepened owner docs
+- `AI-GATEWAY.md`
+- `AI-CONSENSUS.md`
+- `AI-MEMORY-SYSTEM.md`
+- `DECISION-LOG.md`

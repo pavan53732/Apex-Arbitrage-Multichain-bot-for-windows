@@ -81,3 +81,7 @@ Navigation-only document pointing to the authoritative owner(s).
 - [DIAGNOSTICS.md](./DIAGNOSTICS.md) – Defines support bundle generation and troubleshooting output.
 - [BOOTSTRAP-SEQUENCE.md](./BOOTSTRAP-SEQUENCE.md) – Defines deterministic platform startup order.
 - [EVENT-CATALOG.md](./EVENT-CATALOG.md) – Defines the canonical registry of platform events and payloads.
+- [AI-GATEWAY.md](./AI-GATEWAY.md) – Defines provider-agnostic AI routing and capability normalization.
+- [AI-CONSENSUS.md](./AI-CONSENSUS.md) – Defines multi-agent consensus and voting policy.
+- [AI-MEMORY-SYSTEM.md](./AI-MEMORY-SYSTEM.md) – Defines the layered AI memory model and retention rules.
+- [DECISION-LOG.md](./DECISION-LOG.md) – Defines the operational decision log and replay-friendly narratives.

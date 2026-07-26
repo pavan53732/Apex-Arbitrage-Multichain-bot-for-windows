@@ -1,16 +1,59 @@
 # AI Consensus
 
 ## Purpose
-Defines multi-model decision thresholds, quorum rules, disagreement handling, and fallback behavior.
+Defines how multiple AI agents contribute to a single decision recommendation.
 
-## Rules
-- Execution requires configurable quorum.
-- Risk decisions have veto authority over planner recommendations.
-- Large disagreement forces no-op or simulation-only mode.
-- Provider/model disagreement beyond threshold triggers alerting and fallback.
+## Scope
+Market analysis, risk review, planning, execution recommendation, and consensus thresholds.
 
-## Cross-references
-- `AI-PIPELINE.md`
-- `AI-COST-MANAGEMENT.md`
+## Responsibilities
+- Aggregate agent outputs.
+- Detect disagreement and confidence gaps.
+- Apply configured voting and veto policy.
+- Produce a single recommendation artifact for the Decision Engine.
+
+## Interfaces
+- Input: structured opinions from participating agents.
+- Output: consensus result, dissent summary, confidence score, and veto reasons.
+- Events: consensus started, consensus reached, consensus failed.
+
+## State machine
+```mermaid
+stateDiagram-v2
+  [*] --> COLLECTING
+  COLLECTING --> SCORING
+  SCORING --> VOTING
+  VOTING --> RESOLVED
+  VOTING --> FAILED
+  RESOLVED --> [*]
+```
+
+## Configuration
+Participant list, quorum rules, veto rules, confidence thresholds, timeout, override policy.
+
+## Failure handling
+Missing responses, conflicting outputs, low confidence, timeout, and policy breach.
+
+## Recovery
+Extend timeout within policy, exclude failing participant, or escalate to human review.
+
+## Security considerations
+Prevent unauthorized agent injection and preserve decision trace integrity.
+
+## Performance expectations
+Consensus must complete within configured decision windows.
+
+## Extension points
+Alternative voting models, weighted quorum logic, and additional agent roles.
+
+## Cross references
+- `AI-ORCHESTRATION.md`
+- `DECISION-ENGINE.md`
 - `RISK-ENGINE.md`
-- `ORCHESTRATOR.md`
+- `EXPLAINABILITY.md`
+
+## Implementation constraints
+Consensus output must remain traceable to individual agent inputs.
+
+## Future compatibility notes
+New agents must be onboarded via explicit consensus configuration.
