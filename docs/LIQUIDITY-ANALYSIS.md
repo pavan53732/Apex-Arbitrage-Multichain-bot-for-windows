@@ -71,3 +71,9 @@ Every liquidity analysis must define inputs, outputs, thresholds, scoring criter
 - `MARKET-INTELLIGENCE.md`
 - `SLIPPAGE-MODEL.md`
 - `EXECUTION-ENGINE.md`
+
+## Operational Contract
+Defines liquidity inputs, thresholds, aggregation, scoring, and report generation.
+
+## Example
+A pool is flagged when depth falls below minimum trade size.

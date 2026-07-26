@@ -26,3 +26,9 @@ Downgrade features, switch providers, or reject unsupported capability use.
 - `AI-PROVIDER-MANAGER.md`
 - `AI-GATEWAY.md`
 - `INTERFACE-PROVIDER-ADAPTER.md`
+
+## Governance Rules
+Defines how model requirements, tool support, limits, and fallback choices are negotiated.
+
+## Example
+A smaller model is selected when the task exceeds the preferred context budget.

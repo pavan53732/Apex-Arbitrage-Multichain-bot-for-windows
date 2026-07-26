@@ -26,3 +26,9 @@ Stop execution, notify operators, and require approval to resume.
 - `POLICY-ENGINE.md`
 - `TRADING-LIFECYCLE.md`
 - `EXECUTION-LIFECYCLE.md`
+
+## Governance Rules
+Defines execution permissions, sequencing, retries, stop conditions, and exception handling.
+
+## Example
+A policy prevents execution when risk checks fail.

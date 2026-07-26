@@ -524,3 +524,10 @@ These must not claim ownership and should only point to owners:
 - Data Governance
 - Database Schema
 - Designer Protocols
+
+
+## Deepening pass - tranche 22
+- Design System
+- Execution Policies
+- Liquidity Analysis
+- Model Capability Negotiation
