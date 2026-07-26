@@ -1,15 +1,62 @@
 # Worker Architecture
 
 ## Purpose
-Owns worker lifecycle, process model, concurrency boundaries, and worker-to-queue coordination.
+Defines worker roles, task execution boundaries, and worker-to-queue relationships.
+
+## Ownership
+- Owns worker role definitions and execution boundaries.
+- Does not own scheduler policy or queue metadata.
+
+## Worker roles
+- Market ingestion worker.
+- AI orchestration worker.
+- Strategy evaluation worker.
+- Execution worker.
+- Reconciliation worker.
+- Monitoring worker.
+- Maintenance worker.
 
 ## Responsibilities
-- Define worker roles and lifecycles.
-- Map tasks to worker classes.
-- Bound concurrency and isolation.
-- Coordinate startup, shutdown, draining, and recovery.
+- Consume tasks from the appropriate queue.
+- Execute a single worker role deterministically.
+- Report lifecycle, health, and error state to runtime operations.
+- Avoid cross-domain side effects outside the assigned role.
+
+## Worker lifecycle
+Created -> Starting -> Ready -> Busy -> Draining -> Stopped.
+Failure path: Busy -> Failed -> Recovering -> Ready or Stopped.
+
+### Transition rules
+- Created -> Starting when the process initializes.
+- Starting -> Ready after dependencies and configuration validate.
+- Ready -> Busy after a task is assigned.
+- Busy -> Draining on stop, deploy, or maintenance.
+- Busy -> Failed on unrecoverable task or process fault.
+- Failed -> Recovering when automatic restart or replacement begins.
+- Recovering -> Ready only after health checks pass.
+
+## Idempotency and retry
+- Worker tasks must be idempotent where retries are permitted.
+- A retried task must preserve its correlation id and attempt count.
+- Side effects must not occur twice if the same task is replayed.
+
+## Failure and recovery
+- A failed worker must be isolated from new task assignment until recovery completes.
+- Worker replacement must use the same role definition and compatible configuration.
+- If a worker cannot rejoin safely, it must remain stopped until operator review.
+
+## Persistence
+- Persist worker role, health state, assigned queue, last heartbeat, and recovery metadata.
+
+## Monitoring
+- Worker readiness.
+- Busy time.
+- Failure count.
+- Restart count.
+- Heartbeat freshness.
 
 ## Cross-references
 - `RUNTIME-OPERATIONS.md`
+- `QUEUE-MANAGEMENT.md`
+- `RECOVERY-AND-FAILOVER.md`
 - `MONITORING-OBSERVABILITY.md`
-- `IPC-PROTOCOL.md`

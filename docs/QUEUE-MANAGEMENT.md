@@ -1,15 +1,49 @@
 # Queue Management
 
 ## Purpose
-Owns queue topology, priority rules, retry behavior, and dead-letter handling.
+Defines durable task queues, dead-letter handling, concurrency policy, and queue recovery behavior.
+
+## Ownership
+- Owns queue metadata, queue-level retry rules, and dead-letter workflows.
+- Does not own worker lifecycle or scheduler policy.
 
 ## Responsibilities
-- Define queue names and domains.
-- Enforce priority and concurrency limits.
-- Describe retry, backoff, and dead-letter semantics.
-- Expose queue metrics for monitoring.
+- Maintain separate queues by domain and priority.
+- Enforce bounded concurrency and bounded retry.
+- Record queue depth, enqueue time, dequeue time, and retry attempts.
+- Move unrecoverable tasks to dead-letter storage with reason codes.
+
+## Queue lifecycle
+Empty -> Active -> Backlogged -> Saturated -> Draining -> Empty.
+
+### Transition rules
+- Empty -> Active when the first job is enqueued.
+- Active -> Backlogged when backlog exceeds soft threshold.
+- Backlogged -> Saturated when concurrency or latency thresholds are exceeded.
+- Any non-empty state -> Draining during shutdown or maintenance.
+- Draining -> Empty after all admissible work is completed or dead-lettered.
+
+## Idempotency and retry
+- Retry count must be deterministic per task and queue configuration.
+- Duplicate enqueue requests with the same idempotency key must not create duplicate jobs.
+- Dead-lettered tasks must retain original payload references and failure reasons.
+
+## Failure and recovery
+- Queue corruption or storage failure must fail closed and surface a recovery task.
+- If a queue is unavailable, dependent workers must pause rather than silently drop jobs.
+
+## Persistence
+- Persist queue metadata, task ids, attempt counts, dead-letter entries, and recovery notes.
+
+## Monitoring
+- Queue depth.
+- Retry rate.
+- Dead-letter rate.
+- Time-in-queue.
+- Saturation events.
 
 ## Cross-references
 - `RUNTIME-OPERATIONS.md`
-- `ERROR-HANDLING-LOGGING.md`
+- `WORKER-ARCHITECTURE.md`
+- `RECOVERY-AND-FAILOVER.md`
 - `MONITORING-OBSERVABILITY.md`
