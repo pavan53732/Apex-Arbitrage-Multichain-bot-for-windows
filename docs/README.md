@@ -25,3 +25,9 @@ Navigation-only document pointing to the authoritative owner(s).
 - [EXECUTION-LIFECYCLE.md](./EXECUTION-LIFECYCLE.md) – Specifies the order submission, signing, broadcasting, and confirmation state transitions.
 - [SECURITY-CONTRACTS.md](./SECURITY-CONTRACTS.md) – Codifies secret handling, wallet signing, plugin sandboxing, emergency stop, and audit logging.
 - [PERFORMANCE-SLOS.md](./PERFORMANCE-SLOS.md) – Declares numeric latency, throughput, and budget SLOs for all major subsystems.
+- [STRATEGY-ROTATION.md](./STRATEGY-ROTATION.md) – Defines strategy scoring, rotation, fallback, and monitoring.
+- [CHAIN-ROTATION.md](./CHAIN-ROTATION.md) – Defines chain prioritization, allocation, and demotion rules.
+- [TOKEN-INTELLIGENCE.md](./TOKEN-INTELLIGENCE.md) – Defines token metadata scoring, ranking, caching, and refresh.
+- [ROUTE-OPTIMIZATION.md](./ROUTE-OPTIMIZATION.md) – Defines route simulation, scoring, and fallback selection.
+- [CONTRACT-MANAGEMENT.md](./CONTRACT-MANAGEMENT.md) – Defines contract registry, ABI versioning, and governance approval.
+- [PROVIDER-RESILIENCE.md](./PROVIDER-RESILIENCE.md) – Defines provider health checks, failover, and reinstatement.

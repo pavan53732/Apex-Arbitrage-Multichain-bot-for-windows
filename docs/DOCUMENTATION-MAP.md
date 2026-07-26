@@ -170,3 +170,24 @@ These must not claim ownership and should only point to owners:
 - RUNTIME-OPERATIONS.md slimmed down; health, recovery, and shutdown logic now owned by dedicated docs.
 - DASHBOARD-LAYOUT.md and DASHBOARD-WIDGETS.md slimmed down; UI interaction logic now owned by UI-DASHBOARD-SPEC.md.
 - ARCHITECTURE.md and SIMULATION-ENGINE.md slimmed down; trading and execution lifecycle now owned by lifecycle docs.
+
+- STRATEGY-ROTATION.md — Authoritative
+
+- CHAIN-ROTATION.md — Authoritative
+
+- TOKEN-INTELLIGENCE.md — Authoritative
+
+- ROUTE-OPTIMIZATION.md — Authoritative
+
+- CONTRACT-MANAGEMENT.md — Authoritative
+
+- PROVIDER-RESILIENCE.md — Authoritative
+
+
+## Ultra Vision ownership
+- Strategy rotation: `STRATEGY-ROTATION.md`
+- Chain rotation: `CHAIN-ROTATION.md`
+- Token intelligence: `TOKEN-INTELLIGENCE.md`
+- Route optimization: `ROUTE-OPTIMIZATION.md`
+- Contract management: `CONTRACT-MANAGEMENT.md`
+- Provider resilience: `PROVIDER-RESILIENCE.md`
