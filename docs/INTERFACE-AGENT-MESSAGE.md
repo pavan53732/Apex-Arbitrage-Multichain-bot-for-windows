@@ -19,3 +19,9 @@ Defines the canonical agent message envelope.
 ## Cross-references
 - `AI-ORCHESTRATION.md`
 - `AI-AGENT-SPECIFICATION.md`
+
+## Interface Contract
+Defines message envelope, routing fields, correlation, priority, and validation rules for agent-to-agent messages.
+
+## Example
+A planner message includes task id, origin agent, destination agent, priority, and payload type.

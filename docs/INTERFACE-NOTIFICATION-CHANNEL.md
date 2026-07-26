@@ -15,3 +15,9 @@ Defines outbound notification channel contracts.
 ## Cross-references
 - `NOTIFICATION-CENTER.md`
 - `RUNTIME-OPERATIONS.md`
+
+## Interface Contract
+Defines channels, severities, delivery guarantees, retry policy, and escalation semantics for notifications.
+
+## Example
+A high-severity execution failure is routed to the notification center and operator channel.

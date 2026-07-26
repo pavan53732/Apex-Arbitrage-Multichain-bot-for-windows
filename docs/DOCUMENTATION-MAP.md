@@ -391,3 +391,10 @@ These must not claim ownership and should only point to owners:
 - Plugin Marketplace
 - Risk Engine
 - AI Agent Specification
+
+
+## Deepening pass - tranche 3
+- Interface Agent Message
+- Interface Notification Channel
+- Interface Tool Call
+- AI Cost Management

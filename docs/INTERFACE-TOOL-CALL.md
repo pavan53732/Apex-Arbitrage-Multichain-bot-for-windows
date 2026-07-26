@@ -19,3 +19,9 @@ Defines canonical tool invocation and result contracts.
 ## Cross-references
 - `AI-AGENT-SPECIFICATION.md`
 - `AI-ORCHESTRATION.md`
+
+## Interface Contract
+Defines AI tool invocation shape, permissions, arguments, result handling, and error normalization.
+
+## Example
+The AI asks the risk tool for exposure metrics before recommending execution.

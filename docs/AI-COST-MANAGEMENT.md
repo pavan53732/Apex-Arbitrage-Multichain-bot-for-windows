@@ -22,3 +22,9 @@ This document covers token budgets, rate limits, retries, caching, fallback poli
 
 ## Orchestration boundary
 This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `AI-PIPELINE.md`.
+
+## Governance Rules
+Defines token budgeting, provider spend tracking, cost alerts, and budget enforcement.
+
+## Example
+A model switch is rejected if projected cost exceeds the configured budget cap.
