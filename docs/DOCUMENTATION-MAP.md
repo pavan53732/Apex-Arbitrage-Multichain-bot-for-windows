@@ -419,3 +419,10 @@ These must not claim ownership and should only point to owners:
 - Healthchecks
 - Metrics
 - Oracle Registry
+
+
+## Deepening pass - tranche 7
+- Data Flow
+- Registry System
+- Security
+- Token Registry

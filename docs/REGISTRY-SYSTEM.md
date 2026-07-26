@@ -26,3 +26,9 @@ Registry updates follow `CONTRACT-MANAGEMENT.md` policies. New entries require m
 - `DOMAIN-MODEL.md`
 - `CONTRACT-MANAGEMENT.md`
 - `MARKET-DATA.md`
+
+## Governance Rules
+Defines the unified registry interface, schema versioning, validation, and manual approval semantics.
+
+## Example
+A token registry entry is rejected until checksum and version checks pass.

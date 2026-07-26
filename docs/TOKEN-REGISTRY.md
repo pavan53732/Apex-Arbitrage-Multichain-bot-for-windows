@@ -25,3 +25,9 @@ This registry is descriptive and feeds market data, routing, wallet, portfolio, 
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.
+
+## Interface Contract
+Defines token metadata, chain association, address validation, status, and versioned token records.
+
+## Example
+A token entry stores symbol, decimals, chain id, and active status.
