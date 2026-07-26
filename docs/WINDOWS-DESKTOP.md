@@ -11,3 +11,15 @@ Provides navigation to the authoritative documentation set.
 - `DASHBOARD-WIDGETS.md`
 - `UX-GUIDELINES.md`
 
+
+
+## State Machine
+- LAUNCHING -> LOADING_WORKSPACE -> READY -> SYNCING -> SHUTTING_DOWN.
+- SHUTTING_DOWN -> EXIT on successful drain.
+
+
+## Enterprise Contract – Windows Desktop
+- Desktop lifecycle: see `docs/WINDOWS-DESKTOP.md` and `docs/SHUTDOWN-LIFECYCLE.md`.
+- Startup sequencing: see `ORCHESTRATOR.md` and `HEALTHCHECKS.md`.
+- UI interactions: see `UI-DASHBOARD-SPEC.md`, `INTERFACE-NOTIFICATION-CHANNEL.md`, and `INTERFACE-TOOL-CALL.md`.
+- Recovery and session behavior: see `SHUTDOWN-LIFECYCLE.md` and `RUNTIME-OPERATIONS.md`.
