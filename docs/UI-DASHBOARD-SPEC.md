@@ -20,3 +20,7 @@ A chart widget refreshes after a new trade completes.
 
 ## Required details
 - Define panel layout, refresh cadence, interactions, and error states.
+
+## UI requirements
+- Define panel layout, refresh cadence, interactions, and error states.
+- Define how live trading status is represented.

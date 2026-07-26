@@ -21,3 +21,7 @@ The guide explains how to review trade status before approving an action.
 
 ## Required details
 - Define install, update, tray, and first-run help.
+
+## User workflows
+- Define install, update, tray, first-run, and troubleshooting steps.
+- Define the minimum actions needed to start trading safely.

@@ -40,3 +40,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define runtime and installer dependencies.
+
+## Dependency rules
+- Define runtime and installer dependencies plus ordering.
+- Define how dependency failures block startup or install.

@@ -21,3 +21,7 @@ A strategy plugin is listed only after validation, signing, and approval.
 
 ## Required details
 - Define install, remove, sandbox, and ranking behavior.
+
+## Marketplace rules
+- Define plugin install, remove, sandbox, ranking, and compatibility behavior.
+- Define trust and signature checks before activation.

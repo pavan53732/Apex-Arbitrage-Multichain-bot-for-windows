@@ -38,3 +38,7 @@ A production profile enables stricter risk limits than a sandbox profile.
 
 ## Required details
 - Define named profiles and their settings.
+
+## Profile rules
+- Define named profiles, their defaults, and arbitrage-specific presets.
+- Define profile storage and switching behavior.

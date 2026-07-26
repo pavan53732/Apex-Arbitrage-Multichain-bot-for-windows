@@ -39,3 +39,7 @@ The optimizer prefers the route with the best net expected return.
 
 ## Required details
 - Define scoring, validation, replay, and batch optimization behavior.
+
+## Optimization rules
+- Define route scoring inputs, validation, replay, and batch optimization behavior.
+- Define stale market data handling and route rejection rules.
