@@ -1,11 +1,14 @@
 # Windows Desktop
 
 ## Purpose
-Defines the desktop runtime, installation, update, permissions, and platform-specific workflow behavior.
+Defines Windows desktop packaging, shell behavior, startup behavior, and platform-specific constraints.
+
+## Responsibilities
+- Own Electron desktop shell behavior.
+- Own native packaging, installer, auto-update, and startup integration.
+- Provide app lifecycle hooks for recovery and updates.
 
 ## Cross-references
-- `BUILD-RELEASE-CICD.md`
-- `RUNTIME-OPERATIONS.md`
-- `SECURITY.md`
-- `USER-FLOWS.md`
-
+- `docs/BUILD-RELEASE-CICD.md`
+- `docs/DEPLOYMENT.md`
+- `docs/API-REFERENCE.md`

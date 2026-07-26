@@ -1,10 +1,14 @@
 # Wallet Management
 
 ## Purpose
-Owns wallet onboarding, key boundaries, balance checks, approvals, signing workflows, and wallet health.
+Owns wallet discovery, creation, import, unlock, lock, rotation, permissions, and signing boundaries.
+
+## Responsibilities
+- Manage non-custodial wallet metadata and signing sessions.
+- Track chain-specific balances and approvals.
+- Enforce signer permission boundaries and secret handling rules.
 
 ## Cross-references
-- `SECURITY.md`
-- `PERMISSION-MODEL.md`
-- `TRANSACTION-LIFECYCLE.md`
-
+- `docs/SECURITY.md`
+- `docs/PERMISSION-MODEL.md`
+- `docs/TRANSACTION-LIFECYCLE.md`

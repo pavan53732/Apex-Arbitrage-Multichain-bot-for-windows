@@ -3,8 +3,13 @@
 ## Purpose
 Defines health checks, telemetry, diagnostics, alerts, and operator-facing observability for all subsystems.
 
-## Cross-references
-- `ERROR-HANDLING-LOGGING.md`
-- `RUNTIME-OPERATIONS.md`
-- `PERFORMANCE-TARGETS.md`
+## Responsibilities
+- Define metrics, logs, traces, events, and health checks.
+- Expose diagnostics and alerting hooks.
+- Track subsystem-specific SLOs and failure states.
+- Provide operator-visible recovery signals.
 
+## Cross-references
+- `docs/ERROR-HANDLING-LOGGING.md`
+- `docs/RUNTIME-OPERATIONS.md`
+- `docs/PERFORMANCE-TARGETS.md`

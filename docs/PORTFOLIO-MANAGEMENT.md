@@ -3,7 +3,12 @@
 ## Purpose
 Aggregates balances and positions into portfolio value, allocation, and utilization snapshots.
 
-## Cross-references
-- `POSITION-MANAGEMENT.md`
-- `MARKET-DATA.md`
+## Responsibilities
+- Compute total value, allocation, exposure, and utilization.
+- Aggregate positions and wallet balances.
+- Feed risk, reporting, and UI dashboards.
 
+## Cross-references
+- `docs/POSITION-MANAGEMENT.md`
+- `docs/WALLET-MANAGEMENT.md`
+- `docs/MARKET-DATA.md`

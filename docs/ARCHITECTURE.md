@@ -3,9 +3,30 @@
 ## Purpose
 Defines the system architecture, subsystem boundaries, and orchestration model.
 
-## Cross-references
-- `TRADING-ENGINE.md`
-- `EXECUTION-ENGINE.md`
-- `AI-PIPELINE.md`
-- `RUNTIME-OPERATIONS.md`
+## System layers
+- Desktop shell and renderer UI.
+- Typed IPC and preload bridge.
+- Main-process services and orchestrators.
+- Domain engines and adapters.
+- Persistence, monitoring, and operator tooling.
 
+## Canonical boundaries
+- Trading decisions are owned by the trading engine.
+- Transaction submission and reconciliation are owned by the execution engine.
+- Price, liquidity, and route viability are owned by market data, liquidity analysis, routing, slippage, gas, and MEV subsystems.
+- Durable history is owned by the database schema and repository layer.
+- Runtime coordination is owned by runtime operations.
+
+## Deterministic orchestration rules
+- Main process is the source of truth for all operational state.
+- Renderer state is derived and must not bypass typed IPC.
+- Risk gates must execute before any live submission.
+- Simulation modes must reuse the same decision logic as live modes, but with isolated side effects.
+- Recovery must reconcile persisted state before new execution is admitted.
+
+## Cross-references
+- `docs/TRADING-ENGINE.md`
+- `docs/EXECUTION-ENGINE.md`
+- `docs/AI-PIPELINE.md`
+- `docs/RUNTIME-OPERATIONS.md`
+- `docs/STATE-MANAGEMENT.md`
