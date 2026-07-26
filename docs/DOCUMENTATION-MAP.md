@@ -145,3 +145,28 @@ These must not claim ownership and should only point to owners:
 - Wallet Command Center: `docs/WALLET-COMMAND-CENTER.md`
 - Portfolio Analytics: `docs/PORTFOLIO-ANALYTICS.md`
 - Enterprise Operations: `docs/ENTERPRISE-OPERATIONS.md`
+
+- TRADING-LIFECYCLE.md — Authoritative
+
+- EXECUTION-LIFECYCLE.md — Authoritative
+
+- SHUTDOWN-LIFECYCLE.md — Authoritative
+
+- INTERFACE-PROVIDER-ADAPTER.md — Authoritative
+
+- INTERFACE-AGENT-MESSAGE.md — Authoritative
+
+- INTERFACE-TOOL-CALL.md — Authoritative
+
+- INTERFACE-NOTIFICATION-CHANNEL.md — Authoritative
+
+- SECURITY-CONTRACTS.md — Authoritative
+
+- PERFORMANCE-SLOS.md — Authoritative
+
+
+## Authority Conflicts
+- AI-PIPELINE.md slimmed down; orchestration, consensus, provider, and memory logic now owned by dedicated docs.
+- RUNTIME-OPERATIONS.md slimmed down; health, recovery, and shutdown logic now owned by dedicated docs.
+- DASHBOARD-LAYOUT.md and DASHBOARD-WIDGETS.md slimmed down; UI interaction logic now owned by UI-DASHBOARD-SPEC.md.
+- ARCHITECTURE.md and SIMULATION-ENGINE.md slimmed down; trading and execution lifecycle now owned by lifecycle docs.

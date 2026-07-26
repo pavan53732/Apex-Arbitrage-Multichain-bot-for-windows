@@ -19,3 +19,6 @@ This document covers desktop layout, responsive behavior, docking, panels, split
 - `UI-COMPONENT-SPEC.md`
 - `DESIGNER-PROTOCOLS.md`
 - `USER-FLOWS.md`
+
+
+For interaction logic, data binding, and state transitions, see `UI-DASHBOARD-SPEC.md`.

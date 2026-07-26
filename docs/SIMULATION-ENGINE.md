@@ -266,3 +266,15 @@ Persist scenario ids, seeds, market snapshots, configuration hashes, code versio
 
 
 For canonical entities and performance tracking, see `DOMAIN-MODEL.md` and `METRICS.md`.
+
+
+## Enterprise Contract – Simulation Engine
+- Interfaces: `INTERFACE-TOOL-CALL.md`.
+- State machine: `TRADING-LIFECYCLE.md`, `EXECUTION-LIFECYCLE.md`.
+- Security boundaries: `SECURITY-CONTRACTS.md`.
+- Performance SLOs: `PERFORMANCE-SLOS.md`.
+- Failure modes: non-deterministic simulation, stale market data, invalid assumptions; recover via deterministic replay and abort.
+
+For trading lifecycle, see `TRADING-LIFECYCLE.md`.
+For execution lifecycle, see `EXECUTION-LIFECYCLE.md`.
+For performance targets, see `PERFORMANCE-SLOS.md`.

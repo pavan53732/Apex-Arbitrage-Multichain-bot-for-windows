@@ -44,3 +44,14 @@ For authoritative runtime flow, see `ORCHESTRATOR.md`.
 
 
 For canonical data contracts, see `DOMAIN-MODEL.md`.
+
+
+## Enterprise Contract – Architecture
+- Interfaces: `INTERFACE-AGENT-MESSAGE.md`, `INTERFACE-TOOL-CALL.md`.
+- State machine: `ORCHESTRATOR.md`, `TRADING-LIFECYCLE.md`, `EXECUTION-LIFECYCLE.md`.
+- Security boundaries: `SECURITY-CONTRACTS.md`.
+- Performance SLOs: `PERFORMANCE-SLOS.md`.
+- Failure modes: sequencing failure, ambiguous ownership, runtime drift; recover via authoritative owner docs and orchestrator retry.
+
+For trading lifecycle, see `TRADING-LIFECYCLE.md`.
+For execution lifecycle, see `EXECUTION-LIFECYCLE.md`.

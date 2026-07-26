@@ -87,3 +87,16 @@ Warm -> Active -> Expiring -> Invalidated -> Purged.
 
 
 For runtime state transitions and failover probes, see `ORCHESTRATOR.md` and `HEALTHCHECKS.md`.
+
+
+## Enterprise Contract – Runtime Operations
+- Interfaces: `INTERFACE-AGENT-MESSAGE.md`, `INTERFACE-NOTIFICATION-CHANNEL.md`.
+- State machine: `ORCHESTRATOR.md`, `SHUTDOWN-LIFECYCLE.md`.
+- Security boundaries: `SECURITY-CONTRACTS.md`.
+- Performance SLOs: `PERFORMANCE-SLOS.md`.
+- Failure modes: worker failure, queue backlog, shutdown interruption; recover via drain, checkpoint, retry, and alerting.
+
+For orchestrator sequencing, see `ORCHESTRATOR.md`.
+For health probes, see `HEALTHCHECKS.md`.
+For recovery logic, see `RECOVERY-AND-FAILOVER.md`.
+For shutdown semantics, see `SHUTDOWN-LIFECYCLE.md`.

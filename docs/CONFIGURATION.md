@@ -28,3 +28,15 @@ Defines runtime and operational configuration, precedence, validation, and secre
 
 
 For provider setup and probe configuration, see `AI-PROVIDER-MANAGER.md` and `HEALTHCHECKS.md`.
+
+
+## Enterprise Contract – Configuration
+- Interfaces: `INTERFACE-PROVIDER-ADAPTER.md`, `INTERFACE-NOTIFICATION-CHANNEL.md`.
+- State machine: `SHUTDOWN-LIFECYCLE.md` for config reload boundaries.
+- Security boundaries: `SECURITY-CONTRACTS.md`.
+- Performance SLOs: `PERFORMANCE-SLOS.md`.
+- Failure modes: invalid settings, missing secrets, unsupported provider; recover via validation failure and safe defaults.
+
+For provider setup, see `AI-PROVIDER-MANAGER.md`.
+For health probes, see `HEALTHCHECKS.md`.
+For security rules, see `SECURITY-CONTRACTS.md`.

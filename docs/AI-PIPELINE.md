@@ -115,3 +115,16 @@ AI-PIPELINE.md is the single source for behavioural orchestration, provider rout
 
 
 For provider abstraction and gateway routing, see `AI-PROVIDER-MANAGER.md` and `AI-GATEWAY.md`.
+
+
+## Enterprise Contract – AI Pipeline
+- Interfaces: `INTERFACE-PROVIDER-ADAPTER.md`, `INTERFACE-AGENT-MESSAGE.md`, `INTERFACE-TOOL-CALL.md`.
+- State machine: `AI-ORCHESTRATION.md`, `AI-CONSENSUS.md`.
+- Security boundaries: `SECURITY-CONTRACTS.md`.
+- Performance SLOs: `PERFORMANCE-SLOS.md`.
+- Failure modes: provider timeout, model rejection, consensus veto, memory miss; recover via fallback provider, no-op, or retry policy.
+
+For AI orchestration, see `AI-ORCHESTRATION.md`.
+For consensus, see `AI-CONSENSUS.md`.
+For provider abstraction, see `AI-PROVIDER-MANAGER.md`.
+For memory, see `AI-MEMORY-SYSTEM.md`.

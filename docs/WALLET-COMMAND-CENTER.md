@@ -6,3 +6,9 @@ Defines wallet balances, approvals, positions, PnL, gas spent, assets, transacti
 ## Cross-references
 - `DOMAIN-MODEL.md`
 - `HEALTHCHECKS.md`
+
+
+## State Machine
+- UNINITIALIZED -> LOCKED -> UNLOCKED -> APPROVING -> SIGNING -> ERROR.
+- ERROR -> LOCKED on recovery.
+- Signing requires desktop approval.

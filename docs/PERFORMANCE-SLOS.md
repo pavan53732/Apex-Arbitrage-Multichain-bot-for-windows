@@ -1,0 +1,18 @@
+# Performance SLOs
+
+## Purpose
+Defines numeric performance targets for core platform paths.
+
+## Targets
+- AI inference p95 <= 500ms for small models.
+- AI inference p95 <= 2000ms for large models.
+- Orchestrator cycle <= 200ms overhead per decision.
+- Dashboard refresh <= 100ms to render.
+- Execution broadcast <= 3s from EXECUTING to BROADCASTING.
+- Simulation <= 500ms per run.
+- Budget enforcement must check cost cap before every AI call.
+
+## Cross-references
+- `AI-COST-MANAGEMENT.md`
+- `METRICS.md`
+- `HEALTHCHECKS.md`

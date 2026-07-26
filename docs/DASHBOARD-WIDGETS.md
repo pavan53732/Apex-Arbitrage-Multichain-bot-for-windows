@@ -28,3 +28,6 @@ This document covers widget behavior, data bindings, refresh expectations, and d
 - `USER-FLOWS.md`
 - `STATE-MANAGEMENT.md`
 - `MONITORING-OBSERVABILITY.md`
+
+
+For interaction logic, data binding, and state transitions, see `UI-DASHBOARD-SPEC.md`.
