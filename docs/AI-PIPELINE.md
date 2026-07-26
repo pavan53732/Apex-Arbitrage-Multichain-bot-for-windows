@@ -1,7 +1,7 @@
 # Ai Pipeline
 
 ## Document type
-This document is an overview, reference, or index as noted below.
+Document type: [OVERVIEW]
 
 # AI Pipeline
 
