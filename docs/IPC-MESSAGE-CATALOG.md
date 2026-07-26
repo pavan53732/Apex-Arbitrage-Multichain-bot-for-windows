@@ -19,3 +19,7 @@ Provides a browsable catalog of every IPC message, grouped by domain, for humans
 - execution
 - logs
 - updater
+
+
+## Cross-references
+- `IPC-PROTOCOL.md`
