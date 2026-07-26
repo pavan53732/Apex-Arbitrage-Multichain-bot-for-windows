@@ -17,3 +17,9 @@ stateDiagram-v2
 - `AI-ORCHESTRATION.md`
 - `LEARNING-PIPELINE.md`
 - `EXPLAINABILITY.md`
+
+## Operational Contract
+Defines how responses, decisions, and prompts are reviewed for confidence, errors, and refinement.
+
+## Example
+A failed recommendation is analyzed and turned into a prompt refinement action.

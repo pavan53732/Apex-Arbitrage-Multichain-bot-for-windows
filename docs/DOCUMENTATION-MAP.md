@@ -398,3 +398,10 @@ These must not claim ownership and should only point to owners:
 - Interface Notification Channel
 - Interface Tool Call
 - AI Cost Management
+
+
+## Deepening pass - tranche 4
+- AI Knowledge Index
+- AI Orchestration
+- AI Provider Manager
+- AI Reflection

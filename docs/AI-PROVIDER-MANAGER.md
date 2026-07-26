@@ -11,3 +11,9 @@ OpenAI-compatible, Anthropic-compatible, Gemini, OpenRouter, Groq, and custom en
 - `AI-CONSENSUS.md`
 - `METRICS.md`
 - `CONFIGURATION.md`
+
+## Governance Rules
+Defines provider inventory, capability detection, health monitoring, failover, and cost-aware selection.
+
+## Example
+A degraded provider is demoted until capability and latency checks recover.

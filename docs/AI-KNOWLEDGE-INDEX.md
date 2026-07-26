@@ -17,3 +17,9 @@ stateDiagram-v2
 - `KNOWLEDGE-GRAPH.md`
 - `AI-MEMORY-SYSTEM.md`
 - `CONTEXT-BUILDER.md`
+
+## Interface Contract
+Defines indexing, ranking, retrieval, embedding strategy hooks, and document search semantics.
+
+## Example
+A planner prompt retrieves strategy docs, market notes, and memory summaries ranked by relevance.
