@@ -1,0 +1,24 @@
+# Oracle Registry
+
+## Purpose
+Defines the authoritative registry of supported oracle sources and fallback order.
+
+## Scope
+This registry is descriptive and feeds market data, routing, slippage, and risk decisions.
+
+## Fields
+- Oracle name.
+- Chain id.
+- Feed identifiers.
+- Supported assets.
+- Update cadence.
+- Confidence policy.
+- Fallback priority.
+- Health status.
+
+## Cross-references
+- `MARKET-DATA.md`
+- `LIQUIDITY-ANALYSIS.md`
+- `SLIPPAGE-MODEL.md`
+- `RISK-ENGINE.md`
+- `DATABASE-SCHEMA.md`

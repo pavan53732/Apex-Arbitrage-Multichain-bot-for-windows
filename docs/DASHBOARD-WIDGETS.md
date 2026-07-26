@@ -1,0 +1,30 @@
+# Dashboard Widgets
+
+## Purpose
+Defines the reusable dashboard widgets used by the Windows desktop UI.
+
+## Scope
+This document covers widget behavior, data bindings, refresh expectations, and display states.
+
+## Widget groups
+- AI confidence.
+- PnL.
+- Gas.
+- Wallet.
+- Trades.
+- Chains.
+- Strategies.
+- Latency.
+- Health.
+- Logs.
+- Charts.
+- Orders.
+- Heatmaps.
+- Risk.
+
+## Cross-references
+- `WINDOWS-DESKTOP.md`
+- `UI-COMPONENT-SPEC.md`
+- `USER-FLOWS.md`
+- `STATE-MANAGEMENT.md`
+- `MONITORING-OBSERVABILITY.md`
