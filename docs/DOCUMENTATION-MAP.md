@@ -565,3 +565,7 @@ An input is validated before any state-changing action.
 - Documentation ownership flows from domain owner docs to cross-cutting references.
 - Use this map to locate the canonical owner before editing any related cross-cutting document.
 - Do not create new owner documents for views already owned by existing subsystem docs.
+
+## Authority metadata
+- Each listed owner includes its canonical source and scope.
+- If a document conflicts with its owner, the owner document wins.

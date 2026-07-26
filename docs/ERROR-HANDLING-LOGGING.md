@@ -67,3 +67,7 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Error catalog
+- Error codes are defined in `ERROR-CATALOG.md` and `ERROR-CODES.md`.
+- Retry classifications must defer to the failure matrix.

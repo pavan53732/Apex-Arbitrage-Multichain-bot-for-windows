@@ -37,3 +37,7 @@ A plugin without sandbox approval is blocked from loading.
 
 ## Canonical ownership
 This document defers to the canonical owners for implementation, policy, and schema details.
+
+## Trust and secrets
+- Trust boundaries are defined in `TRUST-BOUNDARIES.md`.
+- Secret handling is defined in `SECRET-LIFECYCLE.md`.

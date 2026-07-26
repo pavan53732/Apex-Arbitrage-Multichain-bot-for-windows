@@ -104,3 +104,7 @@ An input is validated before any state-changing action.
 ## Windows recovery
 - Define sleep, resume, fast user switching, and session reconnection behavior.
 - Define state synchronization after a suspended or restored desktop session.
+
+## State machine references
+- Subsystem state machines are owned by the corresponding `*-STATE-MACHINE.md` documents.
+- Timeout semantics must defer to the owning subsystem contract.

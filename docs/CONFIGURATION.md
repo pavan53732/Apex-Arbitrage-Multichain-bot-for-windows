@@ -65,3 +65,8 @@ An input is validated before any state-changing action.
 ## Configuration rules
 - Define config precedence, defaults, and environment overrides.
 - Define secure handling of secrets and local paths.
+
+## Configuration reference
+- Configuration keys are defined in `CONFIGURATION-REFERENCE.md`.
+- Hot reload applies only to keys explicitly marked reloadable.
+- Keys requiring restart must be annotated in the reference.
