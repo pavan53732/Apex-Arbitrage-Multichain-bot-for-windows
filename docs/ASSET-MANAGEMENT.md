@@ -1,5 +1,10 @@
 # Asset Management
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Asset Management
+
 ## Purpose
 Owns canonical asset metadata, identifiers, decimals, display symbols, and chain-specific asset normalization.
 

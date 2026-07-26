@@ -1,5 +1,10 @@
 # System Capability Registry
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# System Capability Registry
+
 ## Purpose
 Defines platform-wide capability discovery independent of implementation names.
 
@@ -39,3 +44,6 @@ Re-scan adapters, revalidate manifests, and suspend stale capabilities.
 ## Capability rules
 - Define discoverable capabilities, feature flags, and compatibility.
 - Define capability ownership and versioning.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

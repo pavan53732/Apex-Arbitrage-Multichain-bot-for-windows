@@ -1,5 +1,10 @@
 # Orchestrator
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Orchestrator
+
 ## Purpose
 Defines the system coordinator that sequences AI, trading, and runtime actions.
 

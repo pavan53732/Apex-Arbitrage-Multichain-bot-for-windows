@@ -1,5 +1,10 @@
 # Governance Explainability
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Governance Explainability
+
 ## Purpose
 Defines the compliance-heavy owner for audit lineage, rationale retention, replayability, and decision trace governance.
 

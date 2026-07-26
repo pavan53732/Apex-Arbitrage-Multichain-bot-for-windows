@@ -1,5 +1,10 @@
 # Workflow Builder
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Workflow Builder
+
 ## Purpose
 Defines user-authored automation workflows that connect events, gates, actions, and notifications.
 

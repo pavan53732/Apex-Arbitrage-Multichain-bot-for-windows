@@ -1,5 +1,10 @@
 # Data Governance
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Data Governance
+
 ## Purpose
 Defines the central owner for data normalization, validation, provenance, caching, and graph linking.
 

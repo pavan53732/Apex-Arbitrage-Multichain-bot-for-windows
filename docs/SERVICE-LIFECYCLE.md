@@ -1,5 +1,10 @@
 # Service Lifecycle
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Service Lifecycle
+
 ## Purpose
 Defines the canonical lifecycle for all services.
 
@@ -45,3 +50,11 @@ A worker service transitions to paused during maintenance.
 ## Service rules
 - Define install, start, stop, restart, and recovery states under Windows SCM.
 - Define delayed start and service account behavior.
+
+## Lifecycle model
+- Initial state: defined by the lifecycle owner.
+- Terminal state: defined by the lifecycle owner.
+- Allowed transitions: explicitly listed by the lifecycle owner.
+- Forbidden transitions: explicitly listed by the lifecycle owner.
+- Recovery transitions: explicitly listed by the lifecycle owner.
+- Failure transitions: explicitly listed by the lifecycle owner.

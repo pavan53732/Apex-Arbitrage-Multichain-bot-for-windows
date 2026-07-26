@@ -1,5 +1,10 @@
 # Dependency Graph
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Dependency Graph
+
 ## Purpose
 Defines the system-wide dependency graph used for scheduling, upgrades, debugging, and safe startup ordering.
 

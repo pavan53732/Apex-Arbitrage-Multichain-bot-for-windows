@@ -1,5 +1,10 @@
 # Queue Management
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Queue Management
+
 ## Purpose
 Defines durable task queues, dead-letter handling, concurrency policy, and queue recovery behavior.
 

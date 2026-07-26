@@ -1,5 +1,10 @@
 # Windows Notification Integration
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Windows Notification Integration
+
 ## Purpose
 Defines how the app uses Windows toasts, tray notifications, and Action Center behavior.
 

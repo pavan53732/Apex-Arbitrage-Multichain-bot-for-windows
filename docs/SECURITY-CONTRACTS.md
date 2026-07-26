@@ -1,5 +1,10 @@
 # Security Contracts
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Security Contracts
+
 ## Purpose
 Defines mandatory security controls for the platform.
 
@@ -37,3 +42,6 @@ A wallet action requires explicit permission and audit logging.
 - Secrets must use DPAPI or Credential Manager.
 - Signed binaries and plugin checks are required.
 - Critical actions must log to an auditable trail.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

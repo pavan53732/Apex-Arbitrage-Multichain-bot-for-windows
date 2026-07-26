@@ -1,5 +1,10 @@
 # Performance Targets
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Performance Targets
+
 ## Purpose
 Defines measurable response-time, throughput, latency, recovery, and freshness targets.
 

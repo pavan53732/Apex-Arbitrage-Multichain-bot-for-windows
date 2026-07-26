@@ -1,5 +1,10 @@
 # Trading Engine
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Trading Engine
+
 ## Purpose
 Defines the end-to-end trading decision and execution coordination layer.
 

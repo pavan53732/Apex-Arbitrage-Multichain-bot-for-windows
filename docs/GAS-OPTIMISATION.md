@@ -1,5 +1,10 @@
 # Gas Optimisation
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Gas Optimisation
+
 ## Purpose
 Defines gas estimation, repricing, replacement, batching, and submission timing rules.
 

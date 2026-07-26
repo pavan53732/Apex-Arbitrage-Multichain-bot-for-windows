@@ -1,5 +1,10 @@
 # Decision Log
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Decision Log
+
 ## Purpose
 Defines the human-readable operational log of major platform decisions and outcomes.
 

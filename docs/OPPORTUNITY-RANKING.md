@@ -1,5 +1,10 @@
 # Opportunity Ranking
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Opportunity Ranking
+
 ## Purpose
 Ranks detected opportunities for execution or human review.
 

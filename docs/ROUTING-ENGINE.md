@@ -1,5 +1,10 @@
 # Routing Engine
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Routing Engine
+
 ## Purpose
 Determines optimal execution paths across DEXs, chains, pools, and bridges.
 

@@ -1,5 +1,10 @@
 # Risk Engine
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Risk Engine
+
 ## Purpose
 Defines trading risk checks used before and during execution.
 

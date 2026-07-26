@@ -1,5 +1,10 @@
 # Model Capability Negotiation
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Model Capability Negotiation
+
 ## Purpose
 Defines automatic capability detection and configuration for chosen AI providers.
 

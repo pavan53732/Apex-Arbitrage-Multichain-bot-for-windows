@@ -1,5 +1,10 @@
 # Chain Intelligence
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Chain Intelligence
+
 ## Purpose
 Owns chain-level scoring, health classification, and execution suitability for supported networks.
 

@@ -1,5 +1,10 @@
 # App Builder Deployment Guide
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# App Builder Deployment Guide
+
 ## Purpose
 Defines how the Windows app is deployed to users and updated safely.
 

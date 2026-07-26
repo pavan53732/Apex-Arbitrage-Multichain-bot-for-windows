@@ -1,5 +1,10 @@
 # Trade Explainer
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Trade Explainer
+
 ## Purpose
 Provides human-readable explanations for why a trade was executed.
 

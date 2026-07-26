@@ -1,3 +1,8 @@
+# Cross Exchange Arbitrage
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # Cross-Exchange Arbitrage
 
 ## Purpose
@@ -16,3 +21,6 @@ Defines how arbitrage opportunities are coordinated across multiple exchanges or
 - `EXECUTION-LIFECYCLE.md`
 - `TRADING-LIFECYCLE.md`
 - `RISK-ENGINE.md`
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

@@ -1,5 +1,10 @@
 # Configuration Profiles
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Configuration Profiles
+
 ## Purpose
 Defines profile inheritance, overrides, defaults, and switching for platform modes.
 

@@ -1,3 +1,8 @@
+# Monitoring Observability
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # Monitoring and Observability
 
 ## Purpose
@@ -70,3 +75,6 @@ An input is validated before any state-changing action.
 ## Observability rules
 - Define Event Log, counters, dashboards, and alerts.
 - Define live visibility for Windows runtime and trading state.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

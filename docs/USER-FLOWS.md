@@ -1,5 +1,10 @@
 # User Flows
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# User Flows
+
 ## Purpose
 Defines major user workflows from onboarding through live trading, monitoring, emergency stop, crash recovery, backup, restore, updates, export/import, and settings management.
 

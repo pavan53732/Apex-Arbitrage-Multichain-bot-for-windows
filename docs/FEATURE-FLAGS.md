@@ -1,5 +1,10 @@
 # Feature Flags
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Feature Flags
+
 ## Purpose
 Defines controlled rollout states for all product capabilities.
 

@@ -1,5 +1,10 @@
 # Backtesting
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Backtesting
+
 ## Purpose
 Authoritative simulation and replay specification for validating strategies and AI behavior before live execution.
 
@@ -68,3 +73,6 @@ An input is validated before any state-changing action.
 ## Backtest rules
 - Define deterministic replay, Windows file handling, and timing differences.
 - Define comparison against live results.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

@@ -1,5 +1,10 @@
 # Windows App Architecture
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Windows App Architecture
+
 ## Purpose
 Defines the Windows desktop application structure, including native shell, renderer, backend, and service integration.
 
@@ -21,3 +26,6 @@ Defines the Windows desktop application structure, including native shell, rende
 - `WINDOWS-DESKTOP.md`
 - `IPC-PROTOCOL.md`
 - `WORKSPACE-MANAGER.md`
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

@@ -1,5 +1,10 @@
 # Security
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Security
+
 ## Purpose
 Defines threat model, secret handling, signing boundaries, permission model, and security response behavior.
 
@@ -29,3 +34,6 @@ A plugin without sandbox approval is blocked from loading.
 ## Final rules
 - Define secrets handling, least privilege, and incident reporting.
 - Define key rotation and safe deployment guidance.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

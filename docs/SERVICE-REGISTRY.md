@@ -1,5 +1,10 @@
 # Service Registry
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Service Registry
+
 ## Purpose
 Defines the canonical registration and lookup mechanism for runtime services.
 

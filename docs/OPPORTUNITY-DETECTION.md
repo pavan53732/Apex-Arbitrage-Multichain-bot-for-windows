@@ -1,5 +1,10 @@
 # Opportunity Detection
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Opportunity Detection
+
 ## Purpose
 Detects candidate opportunities from market, chain, and strategy inputs.
 

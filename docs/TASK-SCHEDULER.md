@@ -1,5 +1,10 @@
 # Task Scheduler
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Task Scheduler
+
 ## Purpose
 Defines priority queues, fair scheduling, adaptive scheduling, polling intervals, and dynamic allocation.
 

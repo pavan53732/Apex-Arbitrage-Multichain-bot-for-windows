@@ -1,5 +1,10 @@
 # Position Management
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Position Management
+
 ## Purpose
 Tracks active positions, exposure, cost basis, unrealized and realized PnL, and position risk.
 

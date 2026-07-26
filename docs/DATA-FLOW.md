@@ -1,5 +1,10 @@
 # Data Flow
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Data Flow
+
 ## Purpose
 Defines how data moves across market, trading, AI, risk, execution, persistence, and UI layers.
 

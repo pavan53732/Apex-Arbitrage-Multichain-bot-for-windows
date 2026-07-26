@@ -1,3 +1,8 @@
+# Interface Tool Call
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # Interface: Tool Call
 
 ## Purpose
@@ -28,3 +33,12 @@ The AI asks the risk tool for exposure metrics before recommending execution.
 
 ## Required details
 - Define tool arguments, outputs, permissions, and sandbox constraints.
+
+## Interface model
+- Producer: defined by the owning system.
+- Consumer: defined by the owning system.
+- Payload: defined by the owning system.
+- Schema: defined by the owning system.
+- Validation: defined by the owning system.
+- Versioning: defined by the owning system.
+- Failure behavior: defined by the owning system.

@@ -1,5 +1,10 @@
 # Transaction Lifecycle
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Transaction Lifecycle
+
 ## Purpose
 Defines submission, confirmation, replacement, cancellation, and finality handling for chain transactions.
 
@@ -28,3 +33,11 @@ Defines submission, confirmation, replacement, cancellation, and finality handli
 ## Transaction rules
 - Define submission, pending, confirmation, replacement, cancellation, and finality.
 - Define persistence and recovery across restarts.
+
+## Lifecycle model
+- Initial state: defined by the lifecycle owner.
+- Terminal state: defined by the lifecycle owner.
+- Allowed transitions: explicitly listed by the lifecycle owner.
+- Forbidden transitions: explicitly listed by the lifecycle owner.
+- Recovery transitions: explicitly listed by the lifecycle owner.
+- Failure transitions: explicitly listed by the lifecycle owner.

@@ -1,5 +1,10 @@
 # Cache Manager
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Cache Manager
+
 ## Purpose
 Authoritative owner for cache manager.
 

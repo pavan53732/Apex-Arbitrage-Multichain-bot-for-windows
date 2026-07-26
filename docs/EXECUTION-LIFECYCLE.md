@@ -1,5 +1,10 @@
 # Execution Lifecycle
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Execution Lifecycle
+
 ## Purpose
 Defines execution state transitions from queued order to final chain outcome.
 
@@ -48,3 +53,11 @@ Execution pauses if confirmations are not received within policy.
 
 ## Execution flow
 - Preflight, send, pending, confirm, replace, cancel, and finality must be explicit.
+
+## Lifecycle model
+- Initial state: defined by the lifecycle owner.
+- Terminal state: defined by the lifecycle owner.
+- Allowed transitions: explicitly listed by the lifecycle owner.
+- Forbidden transitions: explicitly listed by the lifecycle owner.
+- Recovery transitions: explicitly listed by the lifecycle owner.
+- Failure transitions: explicitly listed by the lifecycle owner.

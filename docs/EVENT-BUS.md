@@ -1,5 +1,10 @@
 # Event Bus
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Event Bus
+
 ## Purpose
 Defines the central pub/sub backbone for asynchronous communication between agents, workers, and UI.
 

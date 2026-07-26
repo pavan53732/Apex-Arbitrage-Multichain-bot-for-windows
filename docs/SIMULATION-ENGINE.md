@@ -1,5 +1,10 @@
 # Simulation Engine
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Simulation Engine
+
 ## Purpose
 Defines paper trading, replay, stress testing, and synthetic failure simulation.
 

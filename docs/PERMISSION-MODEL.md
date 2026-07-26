@@ -1,5 +1,10 @@
 # Permission Model
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Permission Model
+
 ## Purpose
 Defines user, operator, and automation permissions for all privileged actions.
 

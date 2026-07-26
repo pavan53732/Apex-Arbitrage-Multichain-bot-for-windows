@@ -1,5 +1,10 @@
 # Workspace Manager
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Workspace Manager
+
 ## Purpose
 Defines workspace ownership, layout, settings, providers, dashboards, strategies, and wallets for each workspace.
 

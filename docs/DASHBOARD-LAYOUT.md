@@ -1,5 +1,10 @@
 # Dashboard Layout
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Dashboard Layout
+
 ## Purpose
 Defines the layout model for the Windows desktop dashboard.
 

@@ -1,5 +1,10 @@
 # Execution Engine
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Execution Engine
+
 ## Purpose
 Defines chain transaction execution, confirmation, cancellation, and recovery.
 

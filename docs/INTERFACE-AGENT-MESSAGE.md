@@ -1,3 +1,8 @@
+# Interface Agent Message
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # Interface: Agent Message
 
 ## Purpose
@@ -28,3 +33,12 @@ A planner message includes task id, origin agent, destination agent, priority, a
 
 ## Required details
 - Define transport-agnostic payloads and correlation IDs.
+
+## Interface model
+- Producer: defined by the owning system.
+- Consumer: defined by the owning system.
+- Payload: defined by the owning system.
+- Schema: defined by the owning system.
+- Validation: defined by the owning system.
+- Versioning: defined by the owning system.
+- Failure behavior: defined by the owning system.

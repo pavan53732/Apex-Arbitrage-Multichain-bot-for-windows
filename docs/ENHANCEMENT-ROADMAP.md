@@ -1,3 +1,8 @@
+# Enhancement Roadmap
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # ENHANCEMENT ROADMAP
 
 ## Purpose
@@ -19,3 +24,6 @@ An input is validated before any state-changing action.
 ## Roadmap rules
 - Define phased milestones, dependencies, and release goals.
 - Tie roadmap items to authoritative owner docs.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

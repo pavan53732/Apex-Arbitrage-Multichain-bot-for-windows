@@ -1,5 +1,10 @@
 # Policy Engine
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Policy Engine
+
 ## Purpose
 Defines the central source of truth for all user-configurable policies.
 

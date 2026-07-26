@@ -1,5 +1,10 @@
 # Windows Security Integration
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Windows Security Integration
+
 ## Purpose
 Defines how Windows-specific security features protect credentials, signing, and sandboxing.
 
@@ -17,3 +22,6 @@ Defines how Windows-specific security features protect credentials, signing, and
 - `SECURITY.md`
 - `WINDOWS-DEPLOYMENT.md`
 - `PLUGIN-LIFECYCLE.md`
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

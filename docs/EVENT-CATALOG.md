@@ -1,5 +1,10 @@
 # Event Catalog
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Event Catalog
+
 ## Purpose
 Authoritative owner for event catalog.
 

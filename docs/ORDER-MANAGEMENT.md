@@ -1,5 +1,10 @@
 # Order Management
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Order Management
+
 ## Purpose
 Owns order creation, validation, lifecycle tracking, amendment, cancellation, and reconciliation.
 

@@ -1,5 +1,10 @@
 # Database Schema
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Database Schema
+
 ## Purpose
 Defines persistence model, tables, indexes, retention, migrations, and backup/restore expectations.
 

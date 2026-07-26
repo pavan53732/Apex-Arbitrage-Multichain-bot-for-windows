@@ -1,5 +1,10 @@
 # Bootstrap Sequence
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Bootstrap Sequence
+
 ## Purpose
 Authoritative owner for bootstrap sequence.
 

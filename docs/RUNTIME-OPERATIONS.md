@@ -1,5 +1,10 @@
 # Runtime Operations
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Runtime Operations
+
 ## Purpose
 Defines how the backend runs, recovers, and stays observable in production.
 
@@ -24,3 +29,6 @@ Defines how the backend runs, recovers, and stays observable in production.
 - Support service mode and tray mode on Windows.
 - Define startup checks, drain behavior, and recovery actions.
 - Define proxy, firewall, and restart handling.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

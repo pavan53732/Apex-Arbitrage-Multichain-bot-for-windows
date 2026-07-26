@@ -1,5 +1,10 @@
 # Explainability
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Explainability
+
 ## Purpose
 Defines the mandatory trace format for every decision, recommendation, and action.
 

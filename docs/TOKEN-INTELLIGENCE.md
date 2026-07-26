@@ -1,5 +1,10 @@
 # Token Intelligence
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Token Intelligence
+
 ## Purpose
 Defines token metadata ingestion, scoring, ranking, caching, and refresh behavior.
 

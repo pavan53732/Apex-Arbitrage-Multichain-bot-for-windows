@@ -1,5 +1,10 @@
 # Decision Engine
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Decision Engine
+
 ## Purpose
 Defines the authoritative gatekeeper between recommendation and execution.
 

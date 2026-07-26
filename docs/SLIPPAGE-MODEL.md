@@ -1,5 +1,10 @@
 # Slippage Model
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Slippage Model
+
 ## Purpose
 Defines how expected slippage is estimated and bounded.
 

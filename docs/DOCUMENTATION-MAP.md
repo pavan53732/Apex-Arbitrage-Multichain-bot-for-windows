@@ -1,5 +1,10 @@
 # Documentation Map
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Documentation Map
+
 ## Purpose
 Defines ownership, authority, and cross-reference rules for the documentation set.
 

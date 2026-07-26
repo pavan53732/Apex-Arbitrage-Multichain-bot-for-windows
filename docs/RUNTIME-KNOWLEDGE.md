@@ -1,5 +1,10 @@
 # Runtime Knowledge
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Runtime Knowledge
+
 ## Purpose
 Defines what the running system knows about itself at runtime.
 

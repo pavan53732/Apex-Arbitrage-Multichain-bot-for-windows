@@ -1,5 +1,10 @@
 # Resource Manager
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Resource Manager
+
 ## Purpose
 Defines unified resource lifecycle management for wallets, workers, chains, AI, plugins, RPC, storage, and queues.
 

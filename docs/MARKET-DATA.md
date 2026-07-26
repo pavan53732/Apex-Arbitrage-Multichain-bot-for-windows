@@ -1,5 +1,10 @@
 # Market Data
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Market Data
+
 ## Purpose
 Owns ingestion, normalization, caching, freshness, and distribution of market data.
 

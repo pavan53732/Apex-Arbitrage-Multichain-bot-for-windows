@@ -1,5 +1,10 @@
 # Agent Guide
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Agent Guide
+
 ## What a gate is
 A gate is a file that tells a coding assistant which documents to read before making changes. It is not a source of behavior by itself.
 

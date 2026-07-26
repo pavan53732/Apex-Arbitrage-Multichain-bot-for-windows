@@ -1,3 +1,8 @@
+# Readme
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # README
 
 ## Purpose
@@ -92,3 +97,6 @@ Navigation-only document pointing to the authoritative owner(s).
 ## Final rules
 - Define quick start, prerequisites, and scope for Windows users.
 - Define what the bot does and does not do.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

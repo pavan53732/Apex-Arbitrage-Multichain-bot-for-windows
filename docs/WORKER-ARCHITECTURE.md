@@ -1,5 +1,10 @@
 # Worker Architecture
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Worker Architecture
+
 ## Purpose
 Defines worker roles, task execution boundaries, and worker-to-queue relationships.
 
@@ -76,3 +81,6 @@ An input is validated before any state-changing action.
 ## Worker rules
 - Define worker roles, isolation, and failure boundaries.
 - Define arbitrage-specific workers and desktop support workers.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

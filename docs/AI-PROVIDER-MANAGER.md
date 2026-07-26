@@ -1,3 +1,8 @@
+# Ai Provider Manager
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # AI Provider Manager
 
 ## Purpose

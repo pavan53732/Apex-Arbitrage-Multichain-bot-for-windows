@@ -1,3 +1,8 @@
+# Testing Guide
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # APEX Testing Guide
 
 > **Version:** 1.0.0 | **Last Updated:** July 25, 2026 | **Scope:** Unit, Integration, E2E, Contract, and Packaging Tests
@@ -299,3 +304,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

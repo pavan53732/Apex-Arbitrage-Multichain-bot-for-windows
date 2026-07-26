@@ -1,5 +1,10 @@
 # Live Architecture Viewer
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Live Architecture Viewer
+
 ## Purpose
 Defines the authoritative live topology and runtime visualization layer for modules, queues, events, and health.
 
@@ -34,3 +39,6 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

@@ -1,5 +1,10 @@
 # Chain Command Center
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Chain Command Center
+
 ## Purpose
 Defines per-chain views for RPC, latency, gas, DEXs, flash loans, oracles, wallet balances, block height, and health.
 

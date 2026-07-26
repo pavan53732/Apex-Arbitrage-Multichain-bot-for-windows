@@ -1,5 +1,10 @@
 # Contract Management
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Contract Management
+
 ## Purpose
 Defines registry-based contract storage, ABI versioning, governance approval, deployment selection, and retirement.
 

@@ -1,3 +1,8 @@
+# Dex Integration
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # APEX DEX Integration Guide
 
 > **Version:** 3.0.0 | **Last Updated:** July 25, 2026

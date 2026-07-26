@@ -1,5 +1,10 @@
 # Registry System
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Registry System
+
 ## Purpose
 Unifies chain, DEX, token, and oracle registries under one contract.
 

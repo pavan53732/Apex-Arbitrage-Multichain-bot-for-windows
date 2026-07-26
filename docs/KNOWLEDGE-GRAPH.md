@@ -1,5 +1,10 @@
 # Knowledge Graph
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Knowledge Graph
+
 ## Purpose
 Defines the structured graph linking protocols, tokens, strategies, chains, DEXs, risks, and AI agents.
 

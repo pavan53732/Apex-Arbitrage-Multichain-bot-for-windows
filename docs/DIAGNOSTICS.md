@@ -1,5 +1,10 @@
 # Diagnostics
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Diagnostics
+
 ## Purpose
 Authoritative owner for diagnostics.
 

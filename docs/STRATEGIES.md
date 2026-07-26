@@ -1,5 +1,10 @@
 # Strategies
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Strategies
+
 ## Purpose
 This document is the authoritative specification for every supported trading strategy and their implementation behavior.
 

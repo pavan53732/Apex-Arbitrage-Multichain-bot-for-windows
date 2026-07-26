@@ -1,5 +1,10 @@
 # Project Structure
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Project Structure
+
 ## Purpose
 Defines the canonical repository layout and ownership boundaries for implementation.
 
@@ -31,3 +36,6 @@ An input is validated before any state-changing action.
 ## Structure rules
 - Define top-level folders for docs, services, workers, tests, and tools.
 - Define boundaries between core and Windows-specific code.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

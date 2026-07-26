@@ -1,5 +1,10 @@
 # Notification Center
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Notification Center
+
 ## Purpose
 Defines outbound notifications for desktop, Telegram, Discord, Slack, email, and webhooks.
 

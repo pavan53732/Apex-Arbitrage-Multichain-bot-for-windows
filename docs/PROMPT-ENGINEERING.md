@@ -1,5 +1,10 @@
 # Prompt Engineering
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Prompt Engineering
+
 ## Purpose
 Defines prompt construction, template management, and versioning rules.
 

@@ -1,5 +1,10 @@
 # Arbitrage Monitoring
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Arbitrage Monitoring
+
 ## Purpose
 Defines monitoring for spread windows, execution latency, fill status, and profitability.
 
@@ -16,3 +21,6 @@ Defines monitoring for spread windows, execution latency, fill status, and profi
 - `OPPORTUNITY-RANKING.md`
 - `PERFORMANCE-SLOS.md`
 - `DECISION-LOG.md`
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

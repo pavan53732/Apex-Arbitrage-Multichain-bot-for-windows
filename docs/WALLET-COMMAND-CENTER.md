@@ -1,5 +1,10 @@
 # Wallet Command Center
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Wallet Command Center
+
 ## Purpose
 Defines wallet balances, approvals, positions, PnL, gas spent, assets, transaction history, allowance checking, and security alerts.
 

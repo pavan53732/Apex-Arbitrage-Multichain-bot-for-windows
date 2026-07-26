@@ -1,5 +1,10 @@
 # Market Intelligence
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Market Intelligence
+
 ## Purpose
 Owns scoring and ranking of market entities used by strategy and execution decisions.
 

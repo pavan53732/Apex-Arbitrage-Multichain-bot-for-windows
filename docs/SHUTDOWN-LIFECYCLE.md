@@ -1,5 +1,10 @@
 # Shutdown Lifecycle
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Shutdown Lifecycle
+
 ## Purpose
 Defines controlled shutdown behavior.
 
@@ -39,3 +44,11 @@ Execution stops before caches are flushed and state is saved.
 
 ## Required details
 - Define graceful stop, drain, flush, and forced shutdown behavior.
+
+## Lifecycle model
+- Initial state: defined by the lifecycle owner.
+- Terminal state: defined by the lifecycle owner.
+- Allowed transitions: explicitly listed by the lifecycle owner.
+- Forbidden transitions: explicitly listed by the lifecycle owner.
+- Recovery transitions: explicitly listed by the lifecycle owner.
+- Failure transitions: explicitly listed by the lifecycle owner.

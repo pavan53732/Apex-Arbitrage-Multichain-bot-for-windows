@@ -1,5 +1,10 @@
 # Healthchecks
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Healthchecks
+
 ## Purpose
 Defines the concrete health checks that prove the system is ready to trade.
 

@@ -1,5 +1,10 @@
 # Dashboard Workspaces
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Dashboard Workspaces
+
 ## Purpose
 Defines workspace persistence, restore, sharing, and isolation for desktop sessions.
 

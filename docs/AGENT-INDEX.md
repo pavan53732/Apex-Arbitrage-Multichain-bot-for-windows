@@ -1,5 +1,10 @@
 # Agent Index
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Agent Index
+
 | File | Purpose |
 |---|---|
 | `AGENTS.md` | General navigation and safety gate for all coding agents. |

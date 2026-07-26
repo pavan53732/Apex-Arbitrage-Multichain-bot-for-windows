@@ -1,5 +1,10 @@
 # Execution Policies
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Execution Policies
+
 ## Purpose
 Defines the policy layer for gas, exposure, trading windows, profit thresholds, retry policy, emergency stop, and pause policy.
 

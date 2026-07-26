@@ -1,5 +1,10 @@
 # Portfolio Management
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Portfolio Management
+
 ## Purpose
 Aggregates balances and positions into portfolio value, allocation, and utilization snapshots.
 

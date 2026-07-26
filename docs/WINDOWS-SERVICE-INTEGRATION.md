@@ -1,5 +1,10 @@
 # Windows Service Integration
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Windows Service Integration
+
 ## Purpose
 Defines how the trading backend can run under the Windows Service Control Manager.
 

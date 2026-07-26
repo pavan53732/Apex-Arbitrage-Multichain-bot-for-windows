@@ -1,3 +1,8 @@
+# Cloud Ai Integration
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # APEX Cloud AI Integration Guide
 
 > **Version:** 3.0.0 | **Last Updated:** July 25, 2026 | **Scope:** Provider Setup, Routing, Cost, Reliability

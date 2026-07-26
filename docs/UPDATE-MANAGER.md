@@ -1,5 +1,10 @@
 # Update Manager
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Update Manager
+
 ## Purpose
 Authoritative owner for update manager.
 

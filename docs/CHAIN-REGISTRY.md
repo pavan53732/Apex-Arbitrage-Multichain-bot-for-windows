@@ -1,5 +1,10 @@
 # Chain Registry
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Chain Registry
+
 ## Purpose
 Defines the authoritative registry of supported chains and chain-level capabilities.
 

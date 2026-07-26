@@ -1,5 +1,10 @@
 # App Builder Plugin System
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# App Builder Plugin System
+
 ## Purpose
 Defines how the desktop app loads, isolates, versions, and updates plugins.
 

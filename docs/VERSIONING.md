@@ -1,5 +1,10 @@
 # Versioning
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Versioning
+
 ## Support Doc
 This document provides guidance. Canonical version numbers for code, schema, and API are maintained by their respective owners (Schema/Config/API).
 ## Purpose

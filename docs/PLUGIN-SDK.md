@@ -1,3 +1,8 @@
+# Plugin Sdk
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # Plugin SDK
 
 ## Purpose

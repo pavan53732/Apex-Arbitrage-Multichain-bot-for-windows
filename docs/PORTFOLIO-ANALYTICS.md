@@ -1,5 +1,10 @@
 # Portfolio Analytics
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Portfolio Analytics
+
 ## Purpose
 Defines ROI, win rate, profit distribution, drawdown, Sharpe ratio, and comparison analytics.
 

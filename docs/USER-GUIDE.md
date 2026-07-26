@@ -1,5 +1,10 @@
 # User Guide
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# User Guide
+
 ## Purpose
 Provides operator-facing usage guidance for the application.
 

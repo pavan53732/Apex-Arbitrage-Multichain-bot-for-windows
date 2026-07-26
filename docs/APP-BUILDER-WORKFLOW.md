@@ -1,5 +1,10 @@
 # App Builder Workflow
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# App Builder Workflow
+
 ## Purpose
 Defines the workflow for building, testing, packaging, and releasing the Windows app.
 

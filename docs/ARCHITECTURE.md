@@ -1,5 +1,10 @@
 # Architecture
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Architecture
+
 ## Purpose
 Defines the system architecture, subsystem boundaries, and orchestration model.
 
@@ -73,3 +78,6 @@ An input is validated before any state-changing action.
 - This document describes system boundaries and layering only.
 - It does not own trading logic, execution logic, provider selection, registry records, or lifecycle behavior.
 - Those responsibilities remain with their authoritative owner documents.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

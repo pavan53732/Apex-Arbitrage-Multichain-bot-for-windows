@@ -1,5 +1,10 @@
 # Plugin Marketplace
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Plugin Marketplace
+
 ## Purpose
 Registry for official and community plugins.
 

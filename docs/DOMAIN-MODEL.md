@@ -1,5 +1,10 @@
 # Domain Model
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Domain Model
+
 ## Purpose
 Defines the canonical platform entities and their relationships.
 

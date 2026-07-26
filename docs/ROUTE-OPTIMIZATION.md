@@ -1,5 +1,10 @@
 # Route Optimization
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Route Optimization
+
 ## Purpose
 Defines route gathering, simulation, scoring, selection, execution, and verification.
 

@@ -1,3 +1,8 @@
+# Ai Context Window Management
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # AI Context Window Management
 
 ## Purpose

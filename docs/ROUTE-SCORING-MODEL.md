@@ -1,5 +1,10 @@
 # Route Scoring Model
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Route Scoring Model
+
 ## Purpose
 Defines the mathematical scoring model used for route selection.
 

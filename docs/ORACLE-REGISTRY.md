@@ -1,5 +1,10 @@
 # Oracle Registry
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Oracle Registry
+
 ## Purpose
 Defines the authoritative registry of supported oracle sources and fallback order.
 

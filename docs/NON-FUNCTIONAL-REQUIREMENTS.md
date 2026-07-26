@@ -1,3 +1,8 @@
+# Non Functional Requirements
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # Non-Functional Requirements
 
 ## Purpose
@@ -60,3 +65,6 @@ An input is validated before any state-changing action.
 ## NFR rules
 - Define latency, reliability, durability, and supportability targets.
 - Define Windows desktop and service constraints.
+
+## Canonical ownership
+This document defers to the canonical owners for implementation, policy, and schema details.

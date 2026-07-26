@@ -1,5 +1,10 @@
 # Windows Desktop
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Windows Desktop
+
 ## Purpose
 Defines the Windows desktop shell for the trading application.
 

@@ -1,5 +1,10 @@
 # Decision Ledger
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Decision Ledger
+
 ## Purpose
 Defines the immutable record of every autonomous decision and outcome.
 

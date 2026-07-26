@@ -1,5 +1,10 @@
 # Configuration
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Configuration
+
 ## Purpose
 Defines runtime and operational configuration, precedence, validation, and secret handling.
 

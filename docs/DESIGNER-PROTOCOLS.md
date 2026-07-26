@@ -1,3 +1,8 @@
+# Designer Protocols
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # APEX Designer Protocols - UI/UX Design System, Components, Patterns, and Standards
 
 > **Version:** 3.0.0 | **Last Updated:** July 25, 2026

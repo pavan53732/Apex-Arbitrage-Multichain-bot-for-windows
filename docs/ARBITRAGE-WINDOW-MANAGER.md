@@ -1,5 +1,10 @@
 # Arbitrage Window Manager
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Arbitrage Window Manager
+
 ## Purpose
 Defines the lifecycle of arbitrage windows from detection through expiry or execution.
 

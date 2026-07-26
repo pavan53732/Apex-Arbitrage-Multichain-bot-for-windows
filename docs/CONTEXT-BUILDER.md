@@ -1,5 +1,10 @@
 # Context Builder
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Context Builder
+
 ## Purpose
 Defines the component that assembles structured context before every AI request.
 

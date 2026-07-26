@@ -1,5 +1,10 @@
 # Dashboard Widgets
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Dashboard Widgets
+
 ## Purpose
 Defines the reusable dashboard widgets used by the Windows desktop UI.
 

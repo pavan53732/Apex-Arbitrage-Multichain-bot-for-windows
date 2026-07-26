@@ -1,5 +1,10 @@
 # Worker Pool
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Worker Pool
+
 ## Purpose
 Defines formal worker capacity, lifecycle, queue priority, and scaling behavior.
 

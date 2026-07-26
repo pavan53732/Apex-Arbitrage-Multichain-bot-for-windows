@@ -1,5 +1,10 @@
 # Module Dependency
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Module Dependency
+
 ## Purpose
 Defines the dependency graph and import rules between modules and packages.
 

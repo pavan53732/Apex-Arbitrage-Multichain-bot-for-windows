@@ -1,5 +1,10 @@
 # Windows Deployment
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Windows Deployment
+
 ## Purpose
 Defines how the Windows desktop trading app is packaged, signed, installed, updated, and rolled back.
 

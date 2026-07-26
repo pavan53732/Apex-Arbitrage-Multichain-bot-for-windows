@@ -1,5 +1,10 @@
 # Learning Pipeline
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Learning Pipeline
+
 ## Purpose
 Formalizes how operational history is converted into future model and policy improvements.
 

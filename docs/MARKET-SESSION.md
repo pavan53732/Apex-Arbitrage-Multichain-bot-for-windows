@@ -1,5 +1,10 @@
 # Market Session
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Market Session
+
 ## Purpose
 Defines the market condition labels used to guide strategy selection and scheduling.
 

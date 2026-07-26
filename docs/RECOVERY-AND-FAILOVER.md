@@ -1,3 +1,8 @@
+# Recovery And Failover
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # Recovery and Failover
 
 ## Purpose

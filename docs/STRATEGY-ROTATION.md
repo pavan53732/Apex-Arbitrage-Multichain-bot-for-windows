@@ -1,5 +1,10 @@
 # Strategy Rotation
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Strategy Rotation
+
 ## Purpose
 Defines how strategies are evaluated, selected, deployed, monitored, and rotated.
 

@@ -1,5 +1,10 @@
 # Market Regime Detection
 
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Market Regime Detection
+
 ## Purpose
 Defines the classification of market regimes that influence strategy selection and scheduling.
 

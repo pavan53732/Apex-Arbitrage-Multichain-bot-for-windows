@@ -1,3 +1,8 @@
+# Interface Provider Adapter
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
 # Interface: Provider Adapter
 
 ## Purpose
@@ -28,3 +33,12 @@ An OpenAI-compatible adapter exposes streaming, JSON, embeddings, and tool-calli
 
 ## Required details
 - Define model request, response, error, and resource limits.
+
+## Interface model
+- Producer: defined by the owning system.
+- Consumer: defined by the owning system.
+- Payload: defined by the owning system.
+- Schema: defined by the owning system.
+- Validation: defined by the owning system.
+- Versioning: defined by the owning system.
+- Failure behavior: defined by the owning system.
