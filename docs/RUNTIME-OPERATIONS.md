@@ -20,8 +20,7 @@ Stopped -> Starting -> Warmup -> Ready -> Busy -> Draining -> Stopped.
 - Retries must be idempotent and bounded.
 
 ## Task orchestration
-- Tasks are versioned, typed, and correlation-id based.
-- Orchestrator must track dependencies and completion state.
+For authoritative runtime state machine and orchestration flow, see `ORCHESTRATOR.md`.
 
 ## Cache lifecycle
 Warm -> Active -> Expiring -> Invalidated -> Purged.

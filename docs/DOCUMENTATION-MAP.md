@@ -119,3 +119,15 @@ These must not claim ownership and should only point to owners:
 - Dashboard layout: `docs/DASHBOARD-LAYOUT.md` (Authoritative; owned by desktop/UI authority; defines layout, grid, and responsive behavior.)
 - UX guidelines: `docs/UX-GUIDELINES.md` (Authoritative; owned by desktop/UI authority; defines interaction and presentation standards.)
 - Versioning: `docs/VERSIONING.md` (Support; owned by governance/schema/config/API authorities; describes versioning strategy.)
+
+
+## New autonomous OS contracts
+- Runtime orchestrator: `docs/ORCHESTRATOR.md`
+- AI orchestration: `docs/AI-ORCHESTRATION.md`
+- AI agent specification: `docs/AI-AGENT-SPECIFICATION.md`
+- AI consensus: `docs/AI-CONSENSUS.md`
+- Plugin SDK: `docs/PLUGIN-SDK.md`
+- Plugin marketplace: `docs/PLUGIN-MARKETPLACE.md`
+- Domain model: `docs/DOMAIN-MODEL.md`
+- Metrics: `docs/METRICS.md`
+- Healthchecks: `docs/HEALTHCHECKS.md`

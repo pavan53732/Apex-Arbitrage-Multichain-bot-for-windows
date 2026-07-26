@@ -8,6 +8,7 @@ Defines paper trading, replay, stress testing, and synthetic failure simulation.
 - Consumes strategy, execution, AI, market, and runtime snapshots.
 
 ## Shared simulation contract
+Simulation sequencing and when to invoke simulation are defined by `ORCHESTRATOR.md`.
 Every simulation defines purpose, inputs, configuration, initial state, execution flow, expected outputs, validation criteria, success metrics, failure scenarios, and recovery behaviour.
 
 ## Determinism rules

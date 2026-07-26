@@ -16,7 +16,7 @@ This document is the authoritative specification for AI decision lifecycle, prom
 ## Decision contract
 AI may rank, explain, or recommend, but it cannot bypass risk, security, wallet, or execution policy checks.
 
-## Decision lifecycle
+## For behavioral orchestration and multi-agent sequencing, see `ORCHESTRATOR.md` and `AI-ORCHESTRATION.md`.
 Ingest context -> retrieve memory -> assemble prompt -> select model -> generate candidate -> score confidence -> score opportunity -> score risk -> validate -> approve or reject -> execute or hold -> record outcome -> learn.
 
 ### Transition rules

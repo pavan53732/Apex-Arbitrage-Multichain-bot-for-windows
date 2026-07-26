@@ -21,7 +21,7 @@ Defines the system architecture, subsystem boundaries, and orchestration model.
 - Main process is the source of truth for all operational state.
 - Renderer state is derived and must not bypass typed IPC.
 - Risk gates must execute before any live submission.
-- Simulation modes must reuse the same decision logic as live modes, but with isolated side effects.
+- For the authoritative runtime state machine and orchestration flow, see `ORCHESTRATOR.md`.
 - Recovery must reconcile persisted state before new execution is admitted.
 
 ## Cross-references
