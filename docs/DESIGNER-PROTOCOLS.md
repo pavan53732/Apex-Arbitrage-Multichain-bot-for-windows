@@ -37,7 +37,7 @@ APEX is a professional trading desktop app for Windows. It must communicate
 |-------|-----|-------|
 | `text.primary` | `#e4e4e7` | Body text, headings |
 | `text.secondary` | `#a1a1aa` | Sub-labels, captions |
-| `text.muted` | `#52525b` | Disabled, placeholder |
+| `text.muted` | `#52525b` | Disabled, reserved example |
 | `text.inverted` | `#0a0a0f` | On light / accent backgrounds |
 
 ### 2.3 Accent

@@ -1,14 +1,89 @@
 # API-CONTRACTS.md
 
 ## Purpose
-Defines external and internal typed API contracts not fully covered by transport-specific docs.
+Defines internal service API contracts and external adapter contracts for APEX. This file is the contract-level counterpart to [`IPC-PROTOCOL.md`](./IPC-PROTOCOL.md) and [`PROJECT-STRUCTURE.md`](./PROJECT-STRUCTURE.md).
 
-## Related Documents
-- [IPC-PROTOCOL.md](./IPC-PROTOCOL.md)
-- [API-REFERENCE.md](./API-REFERENCE.md)
-- [CHAIN-INTEGRATION.md](./CHAIN-INTEGRATION.md)
+## Scope
+Service interfaces, repository contracts, provider contracts, return-shape conventions, error semantics, and lifecycle expectations.
 
-## Scope Boundaries
-- HTTP/RPC client request and response normalization contracts.
-- Provider-facing structured output contracts.
-- Shared DTO naming conventions.
+## Ownership
+- `packages/core` owns shared service abstractions.
+- Feature packages own their own interfaces.
+- UI code consumes only stable adapter interfaces or IPC endpoints.
+
+## Contract Design Rules
+- All external boundaries must be typed.
+- All contract payloads must be serializable.
+- Contracts must reject unknown fields where security or correctness depends on strict validation.
+- Every contract must define success shape, error shape, and retry semantics.
+
+## Core Service Interfaces
+| Interface | Responsibility | Owner |
+|---|---|---|
+| `ConfigService` | resolves validated runtime config | `packages/config` |
+| `Logger` | structured logging and redaction | `packages/logging` |
+| `DbService` | database access and migrations | `packages/db` |
+| `AiOrchestrator` | prompt assembly, provider routing, schema validation | `packages/ai-orchestrator` |
+| `StrategyEngine` | strategy lifecycle and evaluation | `packages/strategy-engine` |
+| `RiskEngine` | validate, size, approve, or reject actions | `packages/risk-engine` |
+| `ChainClient` | chain reads and transaction submission | `packages/chain-clients` |
+| `DexClient` | quote, route, and calldata generation | `packages/dex-clients` |
+
+## Service Contract Shape
+Every service should define:
+- input schema,
+- output schema,
+- error codes,
+- side-effect notes,
+- idempotency expectations,
+- concurrency expectations.
+
+## AI Contract Requirements
+AI-oriented contracts must include:
+- provider id,
+- model id,
+- prompt/task id,
+- structured response schema,
+- token/timeout budget,
+- fallback behavior.
+
+## Trading Contract Requirements
+Trading-related contracts must include:
+- chain id,
+- asset identifiers,
+- quote id,
+- slippage ceiling,
+- fee assumptions,
+- risk state snapshot,
+- execution mode.
+
+## Contract Ownership by Domain
+### Configuration
+- `loadConfig()` returns a validated app config object.
+- No consumer may mutate config in place.
+
+### Strategy
+- `registerStrategy()`, `listStrategies()`, `runStrategy()`, `disableStrategy()`.
+- Strategy execution must be cancelable and observable.
+
+### Risk
+- `evaluateRisk()`, `computePositionSize()`, `isExecutionAllowed()`.
+- Returns must clearly identify reject reasons.
+
+### AI
+- `requestAnalysis()`, `routeTask()`, `validateStructuredResponse()`.
+- Provider failures must be distinguishable from validation failures.
+
+### Database
+- repositories expose query-by-purpose methods; no generic arbitrary query surfaces unless explicitly approved.
+
+## Versioning and Compatibility
+- Stable contracts require version identifiers.
+- Breaking changes must introduce versioned endpoints or a migration path.
+- Deprecated contracts must be documented with replacement and removal timeline.
+
+## Cross-References
+- [`IPC-PROTOCOL.md`](./IPC-PROTOCOL.md)
+- [`MODULE-DEPENDENCY.md`](./MODULE-DEPENDENCY.md)
+- [`STATE-MANAGEMENT.md`](./STATE-MANAGEMENT.md)
+- [`ERROR-HANDLING-LOGGING.md`](./ERROR-HANDLING-LOGGING.md)
