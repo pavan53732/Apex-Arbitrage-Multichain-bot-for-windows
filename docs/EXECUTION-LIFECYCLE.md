@@ -45,3 +45,6 @@ Execution pauses if confirmations are not received within policy.
 
 ## Required details
 - Define preflight, send, pending, confirm, replace, cancel, and finality rules.
+
+## Execution flow
+- Preflight, send, pending, confirm, replace, cancel, and finality must be explicit.

@@ -12,3 +12,7 @@ Defines how this repository decides ownership, review, approval, and documentati
 - Changes to behavior must cite the canonical owner doc.
 - Ambiguous behavior must be escalated before implementation.
 - New docs must declare their role and authority.
+
+## Decision model
+- Repository changes must reference a single authoritative owner doc.
+- If ownership is unclear, the change is blocked until resolved.

@@ -21,3 +21,7 @@ Defines the Windows desktop shell for the trading application.
 ## Required details
 - Define tray menu actions, window restore, DPI scaling, and multi-monitor rules.
 - Define startup, shutdown, and offline state behavior.
+
+## UX details
+- Must define tray menu actions, restore behavior, multi-monitor placement, and DPI scaling.
+- Must define first-run and login recovery behavior.

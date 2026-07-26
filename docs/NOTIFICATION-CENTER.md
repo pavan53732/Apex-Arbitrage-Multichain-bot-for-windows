@@ -19,3 +19,8 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define toast vs in-app routing, severity mapping, and restart persistence.
+
+## Delivery behavior
+- Toast notifications handle critical alerts.
+- In-app notices handle noncritical updates.
+- User preferences control quiet hours and persistence.

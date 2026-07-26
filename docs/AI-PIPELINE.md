@@ -19,3 +19,6 @@ Defines AI request routing, prompt lifecycle, provider routing, confidence scori
 
 ## Required details
 - Define Windows proxy, notification, GPU fallback, and restart recovery.
+
+## Windows runtime
+- Must define proxy-aware requests, local GPU fallback, and restart recovery.

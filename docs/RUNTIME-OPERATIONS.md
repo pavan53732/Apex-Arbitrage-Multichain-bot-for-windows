@@ -19,3 +19,8 @@ Defines how the backend runs, recovers, and stays observable in production.
 
 ## Required details
 - Define service, tray, proxy, recovery, and monitoring behavior.
+
+## Runtime modes
+- Support service mode and tray mode on Windows.
+- Define startup checks, drain behavior, and recovery actions.
+- Define proxy, firewall, and restart handling.

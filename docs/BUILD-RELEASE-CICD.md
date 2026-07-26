@@ -20,3 +20,7 @@ Defines build, test, package, sign, and release stages for the Windows app.
 - `DEPLOYMENT.md`
 - `TESTING-GUIDE.md`
 - `CODE-SIGNING.md`
+
+## Windows gates
+- Build must produce signed artifacts, installer packages, and update metadata.
+- Release must block if signing, smoke tests, or rollback checks fail.

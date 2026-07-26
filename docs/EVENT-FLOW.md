@@ -24,3 +24,6 @@ OpportunityDiscovered leads to RiskCalculated, SimulationPassed, and ExecutionSu
 
 ## Required details
 - Define opportunity, execution, fill, failure, and expiry events.
+
+## Event set
+- Must define opportunity, execution, fill, failure, recovery, and expiry events.

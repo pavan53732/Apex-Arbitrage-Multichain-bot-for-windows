@@ -23,3 +23,6 @@ Raw pool data is normalized before reaching opportunity ranking.
 
 ## Required details
 - Define desktop/backend data paths, IPC flow, and persistence boundaries.
+
+## Desktop flow
+- Must define data flow from RPC and backend workers to UI components and cache.

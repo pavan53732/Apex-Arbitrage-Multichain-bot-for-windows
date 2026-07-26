@@ -20,3 +20,7 @@ Defines submission, confirmation, replacement, cancellation, and finality handli
 
 ## Required details
 - Define replacement logic, persistence, and Windows restart recovery.
+
+## Recovery
+- Replacement and nonce bump rules must be explicit.
+- Pending state must persist across app restarts.

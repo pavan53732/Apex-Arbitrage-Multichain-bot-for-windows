@@ -19,3 +19,7 @@ Defines reusable UI components for the desktop trading app.
 - `DASHBOARD-WIDGETS.md`
 - `UX-GUIDELINES.md`
 - `WINDOWS-DESKTOP.md`
+
+## Core components
+- Status banner, spread panel, P&L panel, health panel, and notification drawer.
+- Each component must define loading, empty, error, and live states.

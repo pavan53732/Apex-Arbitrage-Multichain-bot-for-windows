@@ -13,3 +13,8 @@ Defines the application IPC contract between desktop UI and backend services.
 
 ## Required details
 - Define Windows transport, schema, and version compatibility.
+
+## Envelope
+- Each message must include type, version, correlation id, timestamp, and payload.
+- Backward compatibility must be explicit.
+- Errors must return structured codes and human-readable details.

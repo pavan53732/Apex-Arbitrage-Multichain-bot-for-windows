@@ -19,3 +19,6 @@ Defines the system coordinator that sequences AI, trading, and runtime actions.
 
 ## Required details
 - Define startup, retry, and cross-subsystem sequencing.
+
+## Startup and recovery
+- Must define startup ordering, retry handling, and sleep/resume behavior.

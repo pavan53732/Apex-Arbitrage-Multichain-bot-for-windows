@@ -32,3 +32,8 @@ A wallet action requires explicit permission and audit logging.
 
 ## Required details
 - Define secret storage, signing, audit logs, and escalation rules.
+
+## Windows controls
+- Secrets must use DPAPI or Credential Manager.
+- Signed binaries and plugin checks are required.
+- Critical actions must log to an auditable trail.

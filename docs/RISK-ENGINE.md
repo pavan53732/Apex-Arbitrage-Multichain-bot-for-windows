@@ -22,3 +22,7 @@ Defines trading risk checks used before and during execution.
 
 ## Required details
 - Define formulas, limits, and abort behavior for arb risk.
+
+## Abort rules
+- Abort if loss limit, slippage, or timing budget is exceeded.
+- Abort if a leg is partially filled and recovery cannot restore limits.

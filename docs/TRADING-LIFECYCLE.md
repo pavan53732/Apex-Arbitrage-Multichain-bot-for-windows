@@ -54,3 +54,6 @@ Trading pauses if execution confirmation fails.
 
 ## Required details
 - Define arb scan, match, execute, settle, recover, and expire states.
+
+## Arb flow
+- Scan, rank, validate, execute, reconcile, expire, and recover must be explicit states or transitions.
