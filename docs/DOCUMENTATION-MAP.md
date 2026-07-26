@@ -475,3 +475,10 @@ These must not claim ownership and should only point to owners:
 - IPC Message Catalog
 - Execution Lifecycle
 - Knowledge Graph
+
+
+## Deepening pass - tranche 15
+- IPC Protocol
+- Opportunity Detection
+- Position Management
+- RPC Manager

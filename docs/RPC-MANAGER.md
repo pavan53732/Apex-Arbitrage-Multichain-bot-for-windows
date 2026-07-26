@@ -12,3 +12,9 @@ Define ownership, contracts, lifecycle, validation, and cross-references.
 ## Cross-references
 - `APEX-OS.md`
 - `ARCHITECTURE.md`
+
+## Operational Contract
+Defines provider pool management, health, rotation, failover, latency, routing, and rate-limit handling.
+
+## Example
+A slow RPC endpoint is rotated out after repeated latency breaches.

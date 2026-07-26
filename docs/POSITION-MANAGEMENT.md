@@ -12,3 +12,9 @@ Tracks active positions, exposure, cost basis, unrealized and realized PnL, and 
 - `docs/ORDER-MANAGEMENT.md`
 - `docs/PORTFOLIO-MANAGEMENT.md`
 - `docs/RISK-ENGINE.md`
+
+## Operational Contract
+Defines position creation, sizing, adjustment, risk limits, and closure handling.
+
+## Example
+A position is reduced when exposure breaches policy.

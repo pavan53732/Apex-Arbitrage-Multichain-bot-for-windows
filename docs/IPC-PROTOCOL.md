@@ -50,3 +50,9 @@ Defines typed inter-process commands, events, payload shapes, and reliability ru
 - `MARKET-INTELLIGENCE.md`
 - `MONITORING-OBSERVABILITY.md`
 - `RUNTIME-OPERATIONS.md`
+
+## Operational Contract
+Defines IPC transport rules, envelope format, routing, acknowledgement, retry, and version negotiation.
+
+## Example
+A UI request is acknowledged, routed, and confirmed with a correlation id.

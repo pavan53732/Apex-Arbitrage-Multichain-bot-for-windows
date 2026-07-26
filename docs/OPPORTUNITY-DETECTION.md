@@ -34,3 +34,8 @@ Determinism for same input snapshot.
 - `RISK-ENGINE.md`
 
 For opportunity lifecycle, see `OPPORTUNITY-LIFECYCLE.md`.
+## Operational Contract
+Defines the detection pipeline, signal sources, filters, validation, and promotion into ranking.
+
+## Example
+A detected spread passes minimum profit and liquidity checks before scoring.
