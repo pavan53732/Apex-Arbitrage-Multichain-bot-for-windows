@@ -12,3 +12,9 @@ Aggregates balances and positions into portfolio value, allocation, and utilizat
 - `docs/POSITION-MANAGEMENT.md`
 - `docs/WALLET-MANAGEMENT.md`
 - `docs/MARKET-DATA.md`
+
+## Operational Contract
+Defines portfolio ownership, allocation, rebalancing, exposure limits, and wallet/strategy bindings.
+
+## Example
+A portfolio rebalance is blocked if exposure exceeds policy.

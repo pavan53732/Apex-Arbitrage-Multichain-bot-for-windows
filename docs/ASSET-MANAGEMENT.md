@@ -31,3 +31,9 @@ Owns canonical asset metadata, identifiers, decimals, display symbols, and chain
 - `WALLET-MANAGEMENT.md`
 - `STRATEGIES.md`
 - `TOKEN-REGISTRY.md`
+
+## Operational Contract
+Defines asset tracking, balances, custody, approvals, and transfer governance.
+
+## Example
+A supported asset cannot be transferred until approval and balance checks pass.

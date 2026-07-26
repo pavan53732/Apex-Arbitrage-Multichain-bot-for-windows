@@ -461,3 +461,10 @@ These must not claim ownership and should only point to owners:
 - Cache Manager
 - Contract Management
 - Contract Registry
+
+
+## Deepening pass - tranche 13
+- Portfolio Management
+- Asset Management
+- Decision Ledger
+- Event Catalog

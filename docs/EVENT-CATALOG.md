@@ -12,3 +12,9 @@ Define ownership, contracts, lifecycle, validation, and cross-references.
 ## Cross-references
 - `APEX-OS.md`
 - `ARCHITECTURE.md`
+
+## Operational Contract
+Defines the canonical registry of events, payload fields, producers, consumers, and versioning rules.
+
+## Example
+TradeStarted includes trade id, wallet id, strategy id, chain id, and timestamp.

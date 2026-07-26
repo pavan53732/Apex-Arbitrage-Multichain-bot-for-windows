@@ -28,3 +28,9 @@ Rebuild from source logs, reject incomplete traces, escalate to audit.
 - `GOVERNANCE-EXPLAINABILITY.md`
 - `EXPLAINABILITY.md`
 - `DECISION-LOG.md`
+
+## Ledger Semantics
+Defines the immutable trace of autonomous decisions, simulation outputs, execution results, and outcomes.
+
+## Example
+A trade decision records market snapshot, risk score, and post-execution outcome.
