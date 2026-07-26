@@ -66,3 +66,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define Event Log, counters, dashboards, and alerting.
+
+## Observability rules
+- Define Event Log, counters, dashboards, and alerts.
+- Define live visibility for Windows runtime and trading state.

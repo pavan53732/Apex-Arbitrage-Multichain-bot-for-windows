@@ -22,3 +22,7 @@ Defines chain transaction execution, confirmation, cancellation, and recovery.
 
 ## Windows execution
 - Must define wallet permissions, firewall behavior, and crash recovery for in-flight trades.
+
+## Execution rules
+- Define wallet permissions, firewall handling, and crash recovery for in-flight trades.
+- Define how execution resumes after restart.

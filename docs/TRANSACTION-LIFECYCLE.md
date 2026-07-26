@@ -24,3 +24,7 @@ Defines submission, confirmation, replacement, cancellation, and finality handli
 ## Recovery
 - Replacement and nonce bump rules must be explicit.
 - Pending state must persist across app restarts.
+
+## Transaction rules
+- Define submission, pending, confirmation, replacement, cancellation, and finality.
+- Define persistence and recovery across restarts.

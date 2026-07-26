@@ -64,3 +64,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define deterministic replay and Windows file/timing differences.
+
+## Backtest rules
+- Define deterministic replay, Windows file handling, and timing differences.
+- Define comparison against live results.

@@ -61,3 +61,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define restart, failover, and cleanup recovery semantics.
+
+## Recovery rules
+- Define restart, failover, and cleanup recovery semantics.
+- Define how partial trades and pending txs are resolved.
