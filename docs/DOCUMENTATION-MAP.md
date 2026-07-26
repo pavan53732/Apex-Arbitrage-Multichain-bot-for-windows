@@ -18,7 +18,7 @@ Defines ownership, authority, and cross-reference rules for the documentation se
 ## Canonical owners
 - Documentation map: `docs/DOCUMENTATION-MAP.md`
 - Architecture: `docs/ARCHITECTURE.md`
-- Root architecture overview: `APEX-ARCHITECTURE.md`
+- Root architecture overview: `../APEX-ARCHITECTURE.md`
 - Project structure: `docs/PROJECT-STRUCTURE.md`
 - Module dependency: `docs/MODULE-DEPENDENCY.md`
 - Trading engine: `docs/TRADING-ENGINE.md`
@@ -106,7 +106,7 @@ These must not claim ownership and should only point to owners:
 - Matrix docs, registries, and UX guidance must link back to their authoritative subsystem owners and adjacent governance docs.
 
 ## Cross-references
-- `APEX-ARCHITECTURE.md`
+- `../APEX-ARCHITECTURE.md`
 - `docs/ARCHITECTURE.md`
 - `docs/PROJECT-STRUCTURE.md`
 
@@ -567,7 +567,7 @@ The documentation set is organised into layers. Each layer has a single authorit
 | Priority | Document | Role | Authority |
 |----------|----------|------|-----------|
 | 0 | docs/ARCHITECTURE.md | System boundaries | Layer anchor |
-| 1 | APEX-ARCHITECTURE.md | Root architecture index | Defers to ARCHITECTURE |
+| 1 | ../APEX-ARCHITECTURE.md | Root architecture index | Defers to ARCHITECTURE |
 | 2 | docs/PROJECT-STRUCTURE.md | Repo layout | Defers to ARCHITECTURE |
 | 3 | docs/MODULE-DEPENDENCY.md | Inter-module deps | Defers to ARCHITECTURE |
 | 4 | docs/COMPONENT-DIAGRAMS.md | Visual diagrams | Defers to ARCHITECTURE |
@@ -899,7 +899,7 @@ Each document in the repository should be listed once in each direction. The tab
 | Document | References |
 |----------|------------|
 | AGENTS.md | docs/ARCHITECTURE.md, docs/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/TRADING-LIFECYCLE.md, docs/EXECUTION-LIFECYCLE.md, docs/DATABASE-SCHEMA.md, docs/SECURITY-CONTRACTS.md |
-| APEX-ARCHITECTURE.md | docs/DOCUMENTATION-MAP.md, docs/ARCHITECTURE.md, docs/PROJECT-STRUCTURE.md, docs/TRADING-ENGINE.md, docs/EXECUTION-ENGINE.md, docs/ORCHESTRATOR.md, docs/DOMAIN-MODEL.md |
+| ../APEX-ARCHITECTURE.md | docs/DOCUMENTATION-MAP.md, docs/ARCHITECTURE.md, docs/PROJECT-STRUCTURE.md, docs/TRADING-ENGINE.md, docs/EXECUTION-ENGINE.md, docs/ORCHESTRATOR.md, docs/DOMAIN-MODEL.md |
 | docs/ARCHITECTURE.md | docs/ORCHESTRATOR.md, docs/TRADING-ENGINE.md, docs/EXECUTION-ENGINE.md, docs/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/STATE-MANAGEMENT.md, docs/CHAIN-REGISTRY.md, docs/DEX-REGISTRY.md, docs/TOKEN-REGISTRY.md, docs/ORACLE-REGISTRY.md, docs/DASHBOARD-LAYOUT.md, docs/DASHBOARD-WIDGETS.md, docs/UX-GUIDELINES.md, docs/VERSIONING.md, docs/DOMAIN-MODEL.md |
 | docs/RUNTIME-OPERATIONS.md | docs/ORCHESTRATOR.md, docs/BOOTSTRAP-SEQUENCE.md, docs/SHUTDOWN-LIFECYCLE.md, docs/SERVICE-LIFECYCLE.md, docs/RECOVERY-AND-FAILOVER.md, docs/HEALTHCHECKS.md, docs/WORKER-POOL.md, docs/CONFIGURATION.md, docs/STATE-MANAGEMENT.md |
 | docs/TRADING-ENGINE.md | docs/TRADING-LIFECYCLE.md, docs/EXECUTION-ENGINE.md, docs/ORCHESTRATOR.md, docs/RISK-ENGINE.md |
@@ -914,8 +914,8 @@ Each document in the repository should be listed once in each direction. The tab
 
 | Document | Referenced By |
 |----------|---------------|
-| docs/ARCHITECTURE.md | AGENTS.md, APEX-ARCHITECTURE.md, README.md, CLAUDE.md, OPENCODE.md, docs/AGENTS.md |
-| docs/ORCHESTRATOR.md | APEX-ARCHITECTURE.md, docs/ARCHITECTURE.md, docs/RUNTIME-OPERATIONS.md, docs/TRADING-ENGINE.md, docs/STATE-MANAGEMENT.md |
+| docs/ARCHITECTURE.md | AGENTS.md, ../APEX-ARCHITECTURE.md, README.md, CLAUDE.md, OPENCODE.md, docs/AGENTS.md |
+| docs/ORCHESTRATOR.md | ../APEX-ARCHITECTURE.md, docs/ARCHITECTURE.md, docs/RUNTIME-OPERATIONS.md, docs/TRADING-ENGINE.md, docs/STATE-MANAGEMENT.md |
 | docs/AI-PIPELINE.md | AGENTS.md, docs/ARCHITECTURE.md, README.md, CLAUDE.md, OPENCODE.md, docs/AGENTS.md |
 | docs/RUNTIME-OPERATIONS.md | AGENTS.md, README.md, CLAUDE.md, OPENCODE.md, docs/CONFIGURATION.md |
 | docs/TRADING-LIFECYCLE.md | AGENTS.md, README.md, CLAUDE.md, docs/ARCHITECTURE.md, docs/TRADING-ENGINE.md, docs/STATE-MANAGEMENT.md |

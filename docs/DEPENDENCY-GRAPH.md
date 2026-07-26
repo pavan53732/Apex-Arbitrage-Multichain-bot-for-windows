@@ -30,7 +30,7 @@ Break cycles through explicit ownership, reload graph, and isolate incompatible 
 
 ## Cross-references
 - `ARCHITECTURE.md`
-- `APEX-ARCHITECTURE.md`
+- `../APEX-ARCHITECTURE.md`
 - `SERVICE-REGISTRY.md`
 - `ORCHESTRATOR.md`
 
