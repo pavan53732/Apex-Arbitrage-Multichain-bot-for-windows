@@ -41,3 +41,9 @@ Workers in the same group compete for load. Orchestrator is a singleton consumer
 - `ORCHESTRATOR.md`
 - `AI-ORCHESTRATION.md`
 - `RUNTIME-OPERATIONS.md`
+
+## Interface Contract
+Defines topics, message envelope, delivery guarantees, retry policy, partitioning, consumer groups, and dead-letter behavior.
+
+## Example
+A trade event is published with correlation id, priority, and payload type.

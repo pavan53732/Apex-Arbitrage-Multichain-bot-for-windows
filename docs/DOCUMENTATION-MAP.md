@@ -405,3 +405,10 @@ These must not claim ownership and should only point to owners:
 - AI Orchestration
 - AI Provider Manager
 - AI Reflection
+
+
+## Deepening pass - tranche 5
+- AI Settings
+- Chain Registry
+- DEX Registry
+- Event Bus

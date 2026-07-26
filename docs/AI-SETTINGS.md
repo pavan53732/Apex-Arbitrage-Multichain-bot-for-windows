@@ -15,3 +15,9 @@ Defines user-facing AI configuration, provider selection, fallback ordering, and
 - `AI-CAPABILITY-MATRIX.md`
 - `PROMPT-ENGINEERING.md`
 - `AI-COST-MANAGEMENT.md`
+
+## Governance Rules
+Defines AI provider selection, model preferences, temperature, max tokens, streaming, vision, reasoning, JSON, embeddings, and save/test actions.
+
+## Example
+A balanced profile uses reasoning with a smaller context window and JSON output enabled.

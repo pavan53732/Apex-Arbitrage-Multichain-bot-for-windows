@@ -25,3 +25,9 @@ This registry is descriptive and feeds routing, liquidity, execution, and market
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.
+
+## Interface Contract
+Defines DEX identity, pool coverage, supported routes, status, and versioned metadata.
+
+## Example
+A DEX entry includes router address, supported features, and chain associations.
