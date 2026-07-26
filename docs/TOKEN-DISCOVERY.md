@@ -15,3 +15,7 @@ A discovered token is validated before being promoted into the token registry.
 
 ## Required details
 - Define discovery cadence, caching, and refresh triggers.
+
+## Discovery rules
+- Define refresh cadence, cache invalidation, and discovery triggers.
+- Define how new tokens are promoted into registries.

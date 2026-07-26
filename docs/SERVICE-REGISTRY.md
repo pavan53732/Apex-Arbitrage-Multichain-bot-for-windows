@@ -39,3 +39,7 @@ A service entry exposes health, version, and lifecycle state before it is schedu
 
 ## Required details
 - Define SCM mapping, dependencies, recovery, and lookup.
+
+## Registry rules
+- Define service names, dependencies, recovery actions, and lookup behavior.
+- Define Windows SCM mapping for each registered service.

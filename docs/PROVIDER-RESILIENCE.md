@@ -42,3 +42,7 @@ A backup provider takes over after repeated timeout errors.
 
 ## Required details
 - Define provider health, latency, weighting, and circuit breaker behavior.
+
+## Provider rules
+- Define health scoring, latency weighting, circuit breakers, and fallback order.
+- Define recovery timing after provider failure.

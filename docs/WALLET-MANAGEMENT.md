@@ -22,3 +22,7 @@ An active wallet is excluded from trading if its funding falls below threshold.
 
 ## Required details
 - Define credential storage, hardware wallet integration, and recovery.
+
+## Wallet rules
+- Define credential storage, hardware wallet support, and recovery handling on Windows.
+- Define clipboard safety and address validation.

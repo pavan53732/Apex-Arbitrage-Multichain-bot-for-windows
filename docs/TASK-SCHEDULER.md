@@ -37,3 +37,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define timing resolution and priority scheduling.
+
+## Scheduling rules
+- Define timing resolution, priority classes, and latency-sensitive task handling.
+- Define how background tasks are paused or resumed on Windows sleep.

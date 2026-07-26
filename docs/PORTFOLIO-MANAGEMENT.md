@@ -21,3 +21,7 @@ A portfolio rebalance is blocked if exposure exceeds policy.
 
 ## Required details
 - Define multi-wallet aggregation and reconciliation.
+
+## Portfolio rules
+- Define portfolio aggregation across multiple wallets and chains.
+- Define reconciliation after failed or partial trades.
