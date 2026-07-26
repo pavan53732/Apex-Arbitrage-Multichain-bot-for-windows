@@ -33,3 +33,9 @@ If all providers fail, enter degraded mode and alert operations.
 - `AI-GATEWAY.md`
 - `HEALTHCHECKS.md`
 - `PERFORMANCE-SLOS.md`
+
+## Operational Contract
+Defines provider failover, redundancy, circuit breaking, and recovery behavior.
+
+## Example
+A backup provider takes over after repeated timeout errors.

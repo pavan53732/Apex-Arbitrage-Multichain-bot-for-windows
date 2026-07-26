@@ -25,3 +25,9 @@ Rebind resource, replace endpoint, restart service, or retire resource.
 - `SERVICE-REGISTRY.md`
 - `REGISTRY-SYSTEM.md`
 - `WORKER-POOL.md`
+
+## Operational Contract
+Defines allocation, quotas, cleanup, contention handling, and resource lifecycle.
+
+## Example
+A worker is paused when resource usage exceeds limits.

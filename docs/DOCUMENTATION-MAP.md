@@ -538,3 +538,10 @@ These must not claim ownership and should only point to owners:
 - Domain Model
 - Permission Model
 - Route Scoring Model
+
+
+## Deepening pass - tranche 24
+- Policy Engine
+- Provider Resilience
+- Resource Manager
+- Route Optimization

@@ -30,3 +30,9 @@ If the best route fails simulation, fallback to the second best and log the fail
 - `SIMULATION-ENGINE.md`
 - `EXECUTION-LIFECYCLE.md`
 - `TRADING-LIFECYCLE.md`
+
+## Operational Contract
+Defines optimization objectives, constraints, scoring, and route comparison logic.
+
+## Example
+The optimizer prefers the route with the best net expected return.

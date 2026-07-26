@@ -24,3 +24,9 @@ Policies load from a central config file and can be hot-reloaded. Policy changes
 - `SECURITY-CONTRACTS.md`
 - `RISK-ENGINE.md`
 - `AI-COST-MANAGEMENT.md`
+
+## Governance Rules
+Defines policy evaluation, priority ordering, overrides, and final decision selection.
+
+## Example
+A routing policy blocks execution when cost exceeds target.
