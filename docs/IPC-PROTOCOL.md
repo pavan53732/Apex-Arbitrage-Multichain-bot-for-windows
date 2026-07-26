@@ -1,66 +1,52 @@
 # IPC Protocol
 
 ## Purpose
-Defines canonical IPC channels, message families, payload rules, and security boundaries.
+Defines typed inter-process commands, events, payload shapes, and reliability rules between renderer, main process, workers, and subsystems.
 
 ## Ownership
-- Owns typed IPC channel naming, payload validation, event subscriptions, and permission gating.
-- UI and preload clients must not invent ad-hoc channels.
+- Owns channel naming, payload contracts, request/response flows, and event semantics.
+- Does not own business logic.
 
-## Channel groups
-- app
-- settings
-- wallet
-- portfolio
-- strategy
-- execution
-- logs
-- updater
-- ai
-- monitoring
-- recovery
-- market
-- risk
-- routing
-- orders
-- transactions
+## Contract rules
+- Every IPC channel must have one authoritative owner and one payload schema.
+- Channel names must be stable, namespaced, and versioned when breaking changes occur.
+- Requests must include correlation id and schema version.
+- Responses must include success or error state, reason code, and payload.
+- Events must be immutable and replay-safe.
 
-## Message rules
-- Every request must have a correlation id.
-- Every response must return a stable success or error shape.
-- Events must be namespaced and versioned when breaking changes are introduced.
-- Handlers must validate payloads before reaching business logic.
-- Requests must be idempotent when they change durable state.
+## Major channel families
+- trading.
+- execution.
+- risk.
+- ai.
+- market.
+- monitoring.
+- runtime.
+- settings.
+- simulation.
+- session.
+- wallet.
+- chain.
+- diagnostics.
+- backup.
+- restore.
 
-## Error consistency
-- Error responses must include code, message, details, correlation id, and retryable flag.
-- Stable error codes must be reused across all IPC handlers.
-- Validation failures must be distinguishable from authorization or runtime failures.
+## Reliability rules
+- Handlers must validate payloads before execution.
+- Invalid requests must fail with typed errors, not partial work.
+- Duplicate request detection must use correlation id or idempotency key where applicable.
+- Long-running operations must emit progress and completion events.
 
-## Event ownership
-- `trading.*` events belong to the trading engine.
-- `execution.*` events belong to the execution engine.
-- `order.*` events belong to order management.
-- `transaction.*` events belong to transaction lifecycle.
-- `risk.*` events belong to risk engine.
-- `route.*` events belong to routing engine.
-- `market.*` events belong to market data and market intelligence.
-- `monitoring.*` events belong to monitoring and observability.
-- `recovery.*` events belong to runtime operations.
-
-## Security boundaries
-- Sensitive commands require explicit permission scope.
-- Secrets and signing operations are never exposed directly to the renderer.
-- File system operations must be allowlisted.
-- Transaction submission and wallet unlock flows must require the owning subsystem to validate state.
-
-## Persistence expectations
-- IPC handlers that change durable state must persist before acknowledging success unless the owner explicitly defines eventual persistence.
-- Event emissions for durable state changes must include the persisted entity id and terminal state.
+## Event semantics
+- State transition events must reflect authoritative durable state.
+- Monitoring events must never mutate state.
+- Recovery events must describe what was reconciled, not what is hoped for.
 
 ## Cross-references
-- `API-REFERENCE.md`
 - `TRADING-ENGINE.md`
 - `EXECUTION-ENGINE.md`
-- `WALLET-MANAGEMENT.md`
+- `AI-PIPELINE.md`
+- `MARKET-DATA.md`
+- `MARKET-INTELLIGENCE.md`
+- `MONITORING-OBSERVABILITY.md`
 - `RUNTIME-OPERATIONS.md`

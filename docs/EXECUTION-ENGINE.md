@@ -21,6 +21,7 @@ The execution engine converts validated trading intents into executable plans, s
 - Replacements are allowed only under fee policy and nonce safety rules.
 - Reconciliation is mandatory before a plan is considered closed.
 - Duplicate plan submission must be prevented by idempotency keys.
+- A routed plan cannot bypass route, gas, or MEV validation.
 
 ## State machine
 Draft -> Validated -> Routed -> Submitted -> Confirming -> Filled | Replaced | Cancelled | Failed -> Reconciled.
@@ -86,12 +87,15 @@ Draft -> Validated -> Routed -> Submitted -> Confirming -> Filled | Replaced | C
 - Partial fill tests.
 - RPC failure injection.
 - Reorg recovery tests.
-- Duplicate submission tests.
-- Idempotency replay tests.
+- Nonce and idempotency tests.
 
 ## Cross-references
 - `TRADING-ENGINE.md`
-- `ORDER-MANAGEMENT.md`
+- `RISK-ENGINE.md`
 - `TRANSACTION-LIFECYCLE.md`
-- `DATABASE-SCHEMA.md`
+- `ORDER-MANAGEMENT.md`
+- `ROUTING-ENGINE.md`
+- `MEV-PROTECTION.md`
+- `GAS-OPTIMISATION.md`
+- `SLIPPAGE-MODEL.md`
 - `MONITORING-OBSERVABILITY.md`
