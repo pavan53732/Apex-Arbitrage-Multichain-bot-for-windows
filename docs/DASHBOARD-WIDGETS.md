@@ -43,3 +43,7 @@ A wallet widget shows balance, exposure, and status in one view.
 
 ## Required details
 - Define widget behavior and live update cadence.
+
+## Widget rules
+- Define widget states, update cadence, and error handling.
+- Define the core widgets for spread, P&L, health, and execution.

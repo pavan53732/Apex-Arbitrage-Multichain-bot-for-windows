@@ -15,3 +15,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define formatting, testing, and packaging expectations.
+
+## Standards
+- Define formatting, tests, packaging, and review expectations.
+- Define rules for trading logic safety and Windows build output.

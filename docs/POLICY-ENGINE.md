@@ -36,3 +36,7 @@ A routing policy blocks execution when cost exceeds target.
 
 ## Required details
 - Define policy inputs, limits, and enforcement.
+
+## Policy rules
+- Define policy inputs, limits, enforcement, and override behavior.
+- Define how policy failures block execution.

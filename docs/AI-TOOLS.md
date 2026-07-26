@@ -19,3 +19,7 @@ The risk agent uses a tool to query exposure before consensus.
 
 ## Required details
 - Define tool schema and permissions.
+
+## Tool rules
+- Define tool names, arguments, outputs, and permission boundaries.
+- Define how tools are versioned and validated.

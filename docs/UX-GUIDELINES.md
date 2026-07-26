@@ -27,3 +27,7 @@ A destructive action requires clear confirmation and reversible feedback.
 
 ## Required details
 - Define trading UI layout, accessibility, and density rules.
+
+## UX rules
+- Define trading-density layouts, accessibility, and emphasis rules.
+- Define how critical data is visually prioritized.

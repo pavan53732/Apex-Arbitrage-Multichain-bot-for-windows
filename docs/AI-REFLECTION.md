@@ -26,3 +26,7 @@ A failed recommendation is analyzed and turned into a prompt refinement action.
 
 ## Required details
 - Define reflection inputs and decision quality criteria.
+
+## Reflection rules
+- Define the inputs, scoring, and outcomes used for reflection.
+- Tie reflections to trade quality and decision quality.
