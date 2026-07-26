@@ -25,3 +25,9 @@ Ranking throughput, score drift, execution conversion.
 ## Validation
 Same inputs must produce same ranking.
 
+
+## Cross-references
+- `MARKET-INTELLIGENCE.md`
+- `STRATEGIES.md`
+- `RISK-ENGINE.md`
+- `EXECUTION-ENGINE.md`

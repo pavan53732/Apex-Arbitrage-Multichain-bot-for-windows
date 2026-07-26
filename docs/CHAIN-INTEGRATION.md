@@ -365,3 +365,11 @@ When a chain is no longer viable (low liquidity, abandoned, exploited):
 ---
 
 *Adding a chain should be a focused PR. Use the testnet first, then mainnet, then community announcement.*
+
+## Cross-references
+- `TRANSACTION-LIFECYCLE.md`
+- `ROUTING-ENGINE.md`
+- `WALLET-MANAGEMENT.md`
+- `GAS-OPTIMISATION.md`
+- `MONITORING-OBSERVABILITY.md`
+- `DATABASE-SCHEMA.md`

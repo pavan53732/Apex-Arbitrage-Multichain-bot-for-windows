@@ -358,3 +358,11 @@ A strong provider abstraction is essential because APEX depends on AI for orches
 - Production AI must use approved cloud providers with paid API keys only.
 - Local LLM inference is unsupported in production.
 - Experimental local or self-hosted adapters, if ever added, must remain outside the production routing set.
+
+## Cross-references
+- `AI-PIPELINE.md`
+- `AI-SETTINGS.md`
+- `CONFIGURATION.md`
+- `SECURITY.md`
+- `MONITORING-OBSERVABILITY.md`
+- `PERFORMANCE-TARGETS.md`

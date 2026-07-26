@@ -301,3 +301,10 @@ If a DEX is exploited, abandoned, or supplanted:
 ---
 
 *Add DEXes carefully. Each new integration is a potential attack surface.*
+
+## Cross-references
+- `ROUTING-ENGINE.md`
+- `MARKET-DATA.md`
+- `CHAIN-INTEGRATION.md`
+- `EXECUTION-ENGINE.md`
+- `LIQUIDITY-ANALYSIS.md`

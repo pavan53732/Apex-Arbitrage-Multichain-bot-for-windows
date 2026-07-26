@@ -285,3 +285,11 @@ Before a release candidate is accepted:
 ---
 
 Testing in APEX is not only about correctness in isolated functions. It is the mechanism that prevents unsafe execution paths, broken desktop boundaries, and drift between documentation and implementation.
+
+## Cross-references
+- `SIMULATION-ENGINE.md`
+- `BACKTESTING.md`
+- `STRATEGIES.md`
+- `AI-PIPELINE.md`
+- `RUNTIME-OPERATIONS.md`
+- `MONITORING-OBSERVABILITY.md`

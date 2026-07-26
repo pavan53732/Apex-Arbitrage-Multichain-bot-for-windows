@@ -26,3 +26,9 @@ Candidate rate, rejection rate, freshness failures.
 ## Validation
 Determinism for same input snapshot.
 
+
+## Cross-references
+- `MARKET-INTELLIGENCE.md`
+- `MARKET-DATA.md`
+- `STRATEGIES.md`
+- `RISK-ENGINE.md`

@@ -411,3 +411,10 @@ Mobile and tablet are explicitly **not** goals.
 ---
 
 *If a designer or engineer is making a UI decision in APEX, this document has the answer. If it doesn't, propose the change here first.*
+
+## Cross-references
+- `UI-COMPONENT-SPEC.md`
+- `WINDOWS-DESKTOP.md`
+- `AI-SETTINGS.md`
+- `USER-FLOWS.md`
+- `CLOUD-AI-INTEGRATION.md`

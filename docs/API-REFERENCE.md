@@ -347,3 +347,9 @@ Standard error code format: `E_<CATEGORY>_<SPECIFIC>`.
 ---
 
 *This is the contract. Breaking changes require a major version bump and a migration window.*
+
+## Cross-references
+- `API-CONTRACTS.md`
+- `IPC-PROTOCOL.md`
+- `PROJECT-STRUCTURE.md`
+- `ERROR-HANDLING-LOGGING.md`
