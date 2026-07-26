@@ -1,7 +1,7 @@
-# FAQ
+# Faq
 
 ## Purpose
-Captures common questions and clarifies system behavior.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `USER-GUIDE.md`

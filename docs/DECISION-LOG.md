@@ -1,7 +1,7 @@
 # Decision Log
 
 ## Purpose
-Records durable architecture and product decisions with rationale and cross-links.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `ARCHITECTURE.md`

@@ -1,7 +1,7 @@
-# UI Component Specification
+# Ui Component Spec
 
 ## Purpose
-Defines implementation behavior for UI components, state bindings, validation, and interaction contracts.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `DESIGN-SYSTEM.md`

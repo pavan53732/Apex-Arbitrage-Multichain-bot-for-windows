@@ -1,7 +1,7 @@
 # Agents
 
 ## Purpose
-Defines agent roles, responsibilities, operating constraints, and interaction boundaries.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `SKILLS.md`

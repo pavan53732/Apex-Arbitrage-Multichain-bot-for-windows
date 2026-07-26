@@ -1,7 +1,7 @@
 # Changelog
 
 ## Purpose
-Tracks notable documentation and specification changes over time.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `DECISION-LOG.md`

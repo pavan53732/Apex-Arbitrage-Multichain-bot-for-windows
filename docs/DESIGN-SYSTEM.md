@@ -1,7 +1,7 @@
 # Design System
 
 ## Purpose
-Defines design tokens, layout primitives, visual standards, and accessibility rules.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `UI-COMPONENT-SPEC.md`

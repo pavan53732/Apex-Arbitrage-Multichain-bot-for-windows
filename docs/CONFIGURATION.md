@@ -3,13 +3,19 @@
 ## Purpose
 Defines runtime and operational configuration, precedence, validation, and secret handling.
 
-## Responsibilities
-- Define config sources, precedence, and environment overrides.
-- Validate schema before runtime startup.
-- Separate secret, runtime, and operator settings.
-- Provide configuration snapshots to all subsystems.
+## Ownership
+- Owns schema, defaults, override precedence, and validation rules.
+
+## Precedence
+1. Secure defaults.
+2. Bundled application defaults.
+3. Installation profile.
+4. Environment variables.
+5. Encrypted user overrides.
+6. Session-only runtime overrides where allowed.
 
 ## Cross-references
-- `docs/AI-SETTINGS.md`
-- `docs/SECURITY.md`
-- `docs/RUNTIME-OPERATIONS.md`
+- `AI-SETTINGS.md`
+- `SECURITY.md`
+- `RUNTIME-OPERATIONS.md`
+- `DATABASE-SCHEMA.md`

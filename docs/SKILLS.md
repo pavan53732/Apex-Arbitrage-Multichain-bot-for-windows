@@ -1,7 +1,7 @@
 # Skills
 
 ## Purpose
-Defines capability primitives available to agents and how skills are invoked and constrained.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `AGENTS.md`

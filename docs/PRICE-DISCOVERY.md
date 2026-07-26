@@ -1,5 +1,10 @@
 # Price Discovery
 
 ## Purpose
-Defines canonical price discovery, quote normalization, and validation rules.
+Provides navigation to the authoritative documentation set.
+
+## Cross-references
+- `MARKET-DATA.md`
+- `MARKET-INTELLIGENCE.md`
+- `ROUTING-ENGINE.md`
 

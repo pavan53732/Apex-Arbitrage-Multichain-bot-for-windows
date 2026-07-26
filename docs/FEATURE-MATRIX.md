@@ -1,7 +1,7 @@
 # Feature Matrix
 
 ## Purpose
-Maps platform capabilities to delivery status and owning subsystems.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `IMPLEMENTATION-ROADMAP.md`

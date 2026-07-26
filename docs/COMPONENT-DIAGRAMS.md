@@ -1,10 +1,11 @@
-# COMPONENT-DIAGRAMS.md
+# Component Diagrams
 
 ## Purpose
 Provides structural diagrams of major runtime components and their boundaries.
 
-## Scope
-This file owns diagram-oriented representations and should not duplicate long prose owned elsewhere.
+## Ownership
+- Owns diagrammatic representations only.
+- Does not define behavior or contracts.
 
 ## Desktop Runtime
 ```text

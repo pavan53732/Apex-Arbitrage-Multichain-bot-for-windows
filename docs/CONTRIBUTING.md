@@ -1,7 +1,7 @@
 # Contributing
 
 ## Purpose
-Defines contribution workflow, review expectations, and documentation discipline.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `CODING-STANDARDS.md`

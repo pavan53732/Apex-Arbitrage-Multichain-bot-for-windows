@@ -1,7 +1,7 @@
-# Build, Release, and CI/CD
+# Build Release Cicd
 
 ## Purpose
-Defines build pipeline, packaging, testing gates, release promotion, and rollback expectations.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `WINDOWS-DESKTOP.md`

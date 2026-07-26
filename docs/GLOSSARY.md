@@ -1,7 +1,7 @@
 # Glossary
 
 ## Purpose
-Defines canonical terminology used across the platform.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `ARCHITECTURE.md`

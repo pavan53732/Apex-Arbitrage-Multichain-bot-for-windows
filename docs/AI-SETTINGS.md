@@ -1,7 +1,7 @@
-# AI Settings
+# Ai Settings
 
 ## Purpose
-Defines user-facing AI configuration, model routing options, safety settings, and provider preferences.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `AI-PIPELINE.md`

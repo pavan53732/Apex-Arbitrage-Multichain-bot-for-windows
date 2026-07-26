@@ -1,10 +1,11 @@
 # User Guide
 
 ## Purpose
-Defines end-user operation of the platform and points to the canonical workflow specifications.
+Provides operator-facing usage guidance for the application.
+
+## Ownership
+- User guidance only.
 
 ## Cross-references
 - `USER-FLOWS.md`
 - `TROUBLESHOOTING.md`
-- `FAQ.md`
-

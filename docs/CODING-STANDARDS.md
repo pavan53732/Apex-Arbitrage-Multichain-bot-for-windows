@@ -1,7 +1,7 @@
 # Coding Standards
 
 ## Purpose
-Defines code style, structure, naming, testing, and review conventions for future implementation.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `PROJECT-STRUCTURE.md`

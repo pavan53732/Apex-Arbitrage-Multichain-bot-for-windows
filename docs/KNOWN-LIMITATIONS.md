@@ -1,7 +1,10 @@
-# KNOWN-LIMITATIONS.md
+# Known Limitations
 
 ## Purpose
-Documents current intentional constraints, unsupported scenarios, and accepted gaps so implementation remains honest and consistent.
+Provides navigation to the authoritative documentation set.
 
-## Scope
-Covers provider limitations, chain support limits, desktop-only constraints, unsupported wallet modes, and deferred features.
+## Cross-references
+- `DEPLOYMENT.md`
+- `SECURITY.md`
+- `WINDOWS-DESKTOP.md`
+

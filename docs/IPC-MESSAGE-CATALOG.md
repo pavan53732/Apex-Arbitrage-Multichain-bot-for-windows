@@ -1,11 +1,14 @@
-# IPC-MESSAGE-CATALOG.md
+# IPC Message Catalog
 
 ## Purpose
 Provides a browsable catalog of every IPC message, grouped by domain, for humans and AI agents.
 
+## Ownership
+- Catalog only; authoritative channel rules remain in `IPC-PROTOCOL.md`.
+
 ## Related Documents
-- [IPC-PROTOCOL.md](./IPC-PROTOCOL.md)
-- [STATE-MANAGEMENT.md](./STATE-MANAGEMENT.md)
+- `IPC-PROTOCOL.md`
+- `STATE-MANAGEMENT.md`
 
 ## Domains
 - app

@@ -1,5 +1,10 @@
 # Pair Discovery
 
 ## Purpose
-Defines how tradable pairs are discovered, validated, and monitored.
+Provides navigation to the authoritative documentation set.
+
+## Cross-references
+- `MARKET-DATA.md`
+- `MARKET-INTELLIGENCE.md`
+- `STRATEGIES.md`
 

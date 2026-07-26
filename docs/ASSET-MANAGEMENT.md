@@ -1,15 +1,32 @@
 # Asset Management
 
 ## Purpose
-Owns canonical asset identifiers, metadata, decimals, token lists, and asset normalization rules.
+Owns canonical asset metadata, identifiers, decimals, display symbols, and chain-specific asset normalization.
 
 ## Responsibilities
-- Normalize token, native asset, wrapped asset, and LP asset identities.
-- Maintain symbol, chain, decimals, contract, and risk metadata.
-- Provide stable ids for all downstream pricing and routing systems.
+- Maintain canonical asset registry across chains.
+- Resolve symbol collisions and wrapped asset aliases.
+- Validate asset metadata before it is used in execution or display.
+- Emit change events when asset metadata is updated.
+
+## Data model
+- Asset id.
+- Chain id.
+- Contract address or native marker.
+- Symbol.
+- Name.
+- Decimals.
+- Display precision.
+- Alias set.
+- Verification status.
+
+## Validation rules
+- Duplicate canonical ids are rejected.
+- Conflicting symbols must be resolved with chain-aware aliases.
+- Unknown decimals block execution until verified.
 
 ## Cross-references
-- `docs/TOKEN-DISCOVERY.md`
-- `docs/PAIR-DISCOVERY.md`
-- `docs/MARKET-DATA.md`
-- `docs/PORTFOLIO-MANAGEMENT.md`
+- `MARKET-DATA.md`
+- `PORTFOLIO-MANAGEMENT.md`
+- `WALLET-MANAGEMENT.md`
+- `STRATEGIES.md`

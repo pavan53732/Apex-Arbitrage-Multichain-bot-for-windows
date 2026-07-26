@@ -1,7 +1,7 @@
 # File Storage
 
 ## Purpose
-Defines file-based persistence, export/import, retention, and restore-related artifacts.
+Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `DATABASE-SCHEMA.md`
