@@ -31,3 +31,9 @@ Same inputs must produce same ranking.
 - `STRATEGIES.md`
 - `RISK-ENGINE.md`
 - `EXECUTION-ENGINE.md`
+
+## Operational Contract
+Defines the scoring inputs, weighting model, thresholds, tie-breaking, and confidence factors used to rank opportunities.
+
+## Example
+A route with low gas and high historical success outranks a marginally profitable alternative.

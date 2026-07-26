@@ -440,3 +440,10 @@ These must not claim ownership and should only point to owners:
 - Orchestrator
 - Plugin Lifecycle
 - Plugin SDK
+
+
+## Deepening pass - tranche 10
+- Opportunity Ranking
+- Prompt Engineering
+- Security Contracts
+- Service Lifecycle

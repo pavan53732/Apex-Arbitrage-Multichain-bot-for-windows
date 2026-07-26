@@ -22,3 +22,9 @@ This document covers system prompts, few-shot prompts, safety prompts, agent pro
 
 ## Orchestration boundary
 This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `AI-PIPELINE.md`.
+
+## Governance Rules
+Defines prompt templates, system prompts, context shaping, guardrails, and prompt versioning.
+
+## Example
+A risk prompt includes only the context required for exposure analysis.

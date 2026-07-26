@@ -23,3 +23,9 @@ Every state transition must log user ID, timestamp, and immutable hash.
 - `WALLET-COMMAND-CENTER.md`
 - `ORCHESTRATOR.md`
 - `HEALTHCHECKS.md`
+
+## Governance Rules
+Defines security invariants for wallets, plugins, secrets, approvals, permissions, and emergency controls.
+
+## Example
+A wallet action requires explicit permission and audit logging.
