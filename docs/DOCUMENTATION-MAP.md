@@ -218,3 +218,24 @@ These must not claim ownership and should only point to owners:
 ## Governance contracts
 - Decision Engine: `DECISION-ENGINE.md`
 - Policy Engine: `POLICY-ENGINE.md`
+
+- APEX-KERNEL.md — Authoritative
+
+- SERVICE-REGISTRY.md — Authoritative
+
+- DEPENDENCY-GRAPH.md — Authoritative
+
+- EXPLAINABILITY.md — Authoritative
+
+- WORKFLOW-BUILDER.md — Authoritative
+
+- KNOWLEDGE-GRAPH.md — Authoritative
+
+
+## APEX DNA contracts
+- APEX Kernel: `APEX-KERNEL.md`
+- Service Registry: `SERVICE-REGISTRY.md`
+- Dependency Graph: `DEPENDENCY-GRAPH.md`
+- Explainability: `EXPLAINABILITY.md`
+- Workflow Builder: `WORKFLOW-BUILDER.md`
+- Knowledge Graph: `KNOWLEDGE-GRAPH.md`

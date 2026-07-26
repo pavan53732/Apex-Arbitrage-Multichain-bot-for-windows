@@ -58,3 +58,4 @@ For execution lifecycle, see `EXECUTION-LIFECYCLE.md`.
 For event handling, see `EVENT-BUS.md`.
 For worker scheduling, see `WORKER-POOL.md`.
 For workspace persistence, see `DASHBOARD-WORKSPACES.md`.
+For dependency graph details, see `DEPENDENCY-GRAPH.md`.

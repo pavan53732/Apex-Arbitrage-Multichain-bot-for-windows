@@ -23,3 +23,7 @@ Idle -> Discovery -> Validation -> Risk -> Simulation -> Decision -> Queue -> Ex
 - `SIMULATION-ENGINE.md`
 - `EXECUTION-ENGINE.md`
 - `RISK-ENGINE.md`
+
+For kernel behavior, see `APEX-KERNEL.md`.
+For service registration, see `SERVICE-REGISTRY.md`.
+For dependency resolution, see `DEPENDENCY-GRAPH.md`.

@@ -39,3 +39,9 @@ Navigation-only document pointing to the authoritative owner(s).
 - [LEARNING-PIPELINE.md](./LEARNING-PIPELINE.md) – Defines the retraining, evaluation, and promotion pipeline.
 - [DECISION-ENGINE.md](./DECISION-ENGINE.md) – Defines the authoritative approval gate between recommendation and execution.
 - [POLICY-ENGINE.md](./POLICY-ENGINE.md) – Defines the central source of truth for configurable governance policies.
+- [APEX-KERNEL.md](./APEX-KERNEL.md) – Defines the runtime kernel for service registration, lifecycle, health, and plugin loading.
+- [SERVICE-REGISTRY.md](./SERVICE-REGISTRY.md) – Defines the canonical service registration and lookup mechanism.
+- [DEPENDENCY-GRAPH.md](./DEPENDENCY-GRAPH.md) – Defines the system-wide dependency graph for startup, upgrades, and debugging.
+- [EXPLAINABILITY.md](./EXPLAINABILITY.md) – Defines the mandatory trace format for decisions and actions.
+- [WORKFLOW-BUILDER.md](./WORKFLOW-BUILDER.md) – Defines event-driven user workflows and policy-checked automation.
+- [KNOWLEDGE-GRAPH.md](./KNOWLEDGE-GRAPH.md) – Defines the structured graph of protocols, tokens, strategies, chains, DEXs, risks, and agents.
