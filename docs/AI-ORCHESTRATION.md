@@ -19,3 +19,6 @@ Agent lifecycle, inputs, outputs, permissions, tools, and health checks are defi
 - `ORCHESTRATOR.md`
 - `AI-PIPELINE.md`
 - `AI-AGENT-SPECIFICATION.md`
+
+For decision authority, see `DECISION-ENGINE.md`.
+For policy governance, see `POLICY-ENGINE.md`.

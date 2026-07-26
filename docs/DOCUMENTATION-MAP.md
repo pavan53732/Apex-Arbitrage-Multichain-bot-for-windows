@@ -209,3 +209,12 @@ These must not claim ownership and should only point to owners:
 - Registry System: `REGISTRY-SYSTEM.md`
 - Dashboard Workspaces: `DASHBOARD-WORKSPACES.md`
 - Learning Pipeline: `LEARNING-PIPELINE.md`
+
+- DECISION-ENGINE.md — Authoritative
+
+- POLICY-ENGINE.md — Authoritative
+
+
+## Governance contracts
+- Decision Engine: `DECISION-ENGINE.md`
+- Policy Engine: `POLICY-ENGINE.md`

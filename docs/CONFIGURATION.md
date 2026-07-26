@@ -40,3 +40,4 @@ For provider setup and probe configuration, see `AI-PROVIDER-MANAGER.md` and `HE
 For provider setup, see `AI-PROVIDER-MANAGER.md`.
 For health probes, see `HEALTHCHECKS.md`.
 For security rules, see `SECURITY-CONTRACTS.md`.
+For policy governance, see `POLICY-ENGINE.md`.

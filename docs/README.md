@@ -37,3 +37,5 @@ Navigation-only document pointing to the authoritative owner(s).
 - [REGISTRY-SYSTEM.md](./REGISTRY-SYSTEM.md) – Defines the unified registry interface and governance rules.
 - [DASHBOARD-WORKSPACES.md](./DASHBOARD-WORKSPACES.md) – Defines workspace persistence, restore, and isolation.
 - [LEARNING-PIPELINE.md](./LEARNING-PIPELINE.md) – Defines the retraining, evaluation, and promotion pipeline.
+- [DECISION-ENGINE.md](./DECISION-ENGINE.md) – Defines the authoritative approval gate between recommendation and execution.
+- [POLICY-ENGINE.md](./POLICY-ENGINE.md) – Defines the central source of truth for configurable governance policies.
