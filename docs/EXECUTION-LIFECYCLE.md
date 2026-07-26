@@ -1,7 +1,7 @@
 # Execution Lifecycle
 
 ## Document type
-This document is an overview, reference, or index as noted below.
+This document is a reference.
 
 # Execution Lifecycle
 
@@ -61,3 +61,19 @@ Execution pauses if confirmations are not received within policy.
 - Forbidden transitions: explicitly listed by the lifecycle owner.
 - Recovery transitions: explicitly listed by the lifecycle owner.
 - Failure transitions: explicitly listed by the lifecycle owner.
+
+## Initial state
+- PENDING.
+
+## Terminal state
+- FINALIZED.
+- REVERTED is terminal for the failed attempt and may transition to QUEUED only via recovery.
+
+## Recovery transitions
+- REVERTED -> QUEUED.
+- BROADCASTING -> QUEUED when broadcast must be retried before confirmation.
+
+## Failure transitions
+- SIGNING -> REVERTED.
+- BROADCASTING -> REVERTED.
+- CONFIRMING -> REVERTED.

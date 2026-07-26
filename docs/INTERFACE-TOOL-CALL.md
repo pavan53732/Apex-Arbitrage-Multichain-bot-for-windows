@@ -1,7 +1,7 @@
 # Interface Tool Call
 
 ## Document type
-This document is an overview, reference, or index as noted below.
+This document is a reference.
 
 # Interface: Tool Call
 
@@ -35,10 +35,10 @@ The AI asks the risk tool for exposure metrics before recommending execution.
 - Define tool arguments, outputs, permissions, and sandbox constraints.
 
 ## Interface model
-- Producer: defined by the owning system.
-- Consumer: defined by the owning system.
-- Payload: defined by the owning system.
-- Schema: defined by the owning system.
-- Validation: defined by the owning system.
-- Versioning: defined by the owning system.
-- Failure behavior: defined by the owning system.
+- Producer: Agent Orchestrator.
+- Consumer: Tool Adapter.
+- Payload: Tool name, args, timeout, result, and error..
+- Schema: name, args, result, error, timeout, permissions.
+- Validation: name required, timeout > 0, result xor error, args validated by tool schema.
+- Versioning: v1.0 backward compatible with additive tool metadata.
+- Failure behavior: unknown tool, invalid args, timeout, permission denied, or tool runtime error.

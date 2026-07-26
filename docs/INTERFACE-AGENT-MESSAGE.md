@@ -1,7 +1,7 @@
 # Interface Agent Message
 
 ## Document type
-This document is an overview, reference, or index as noted below.
+This document is a reference.
 
 # Interface: Agent Message
 
@@ -35,10 +35,10 @@ A planner message includes task id, origin agent, destination agent, priority, a
 - Define transport-agnostic payloads and correlation IDs.
 
 ## Interface model
-- Producer: defined by the owning system.
-- Consumer: defined by the owning system.
-- Payload: defined by the owning system.
-- Schema: defined by the owning system.
-- Validation: defined by the owning system.
-- Versioning: defined by the owning system.
-- Failure behavior: defined by the owning system.
+- Producer: AI Orchestrator.
+- Consumer: Agent Worker.
+- Payload: Task routing, correlation, priority, and response context..
+- Schema: sender, recipient, payload, correlationId, deadline, priority.
+- Validation: sender and recipient required, correlationId unique, deadline ISO-8601, payload validated by message type.
+- Versioning: v1.0 backward compatible with additive fields only.
+- Failure behavior: missing required fields, invalid payload type, expired deadline, or unknown recipient.

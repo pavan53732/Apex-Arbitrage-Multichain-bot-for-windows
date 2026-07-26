@@ -1,7 +1,7 @@
 # Trading Lifecycle
 
 ## Document type
-This document is an overview, reference, or index as noted below.
+This document is a reference.
 
 # Trading Lifecycle
 
@@ -39,6 +39,8 @@ stateDiagram-v2
 ## Forbidden transitions
 - EXECUTING -> SETTLED.
 - IDLE -> EXECUTING.
+- SETTLED -> SCANNING.
+- IDLE -> EXECUTING.
 - SCANNING -> SETTLED.
 
 ## Recovery
@@ -70,3 +72,18 @@ Trading pauses if execution confirmation fails.
 - Forbidden transitions: explicitly listed by the lifecycle owner.
 - Recovery transitions: explicitly listed by the lifecycle owner.
 - Failure transitions: explicitly listed by the lifecycle owner.
+
+## Initial state
+- IDLE.
+
+## Terminal state
+- SETTLED.
+
+## Recovery transitions
+- FAILED -> RETRY.
+- RETRY -> SCANNING.
+
+## Failure transitions
+- VERIFYING -> FAILED.
+- EXECUTING -> FAILED.
+- SIMULATING -> FAILED.

@@ -1,7 +1,7 @@
 # Readme Governance
 
 ## Document type
-This document is an overview, reference, or index as noted below.
+[REFERENCE]
 
 # Governance
 
