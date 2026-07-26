@@ -74,3 +74,10 @@ Navigation-only document pointing to the authoritative owner(s).
 - [TRADE-EXPLAINER.md](./TRADE-EXPLAINER.md) – Defines human-readable trade explanations.
 - [MARKET-SESSION.md](./MARKET-SESSION.md) – Defines market condition labels for strategy selection.
 - [OPPORTUNITY-LIFECYCLE.md](./OPPORTUNITY-LIFECYCLE.md) – Defines the lifecycle from detection to archival.
+- [CONTRACT-REGISTRY.md](./CONTRACT-REGISTRY.md) – Defines the canonical registry of deployed contracts, versions, ABIs, and addresses.
+- [RPC-MANAGER.md](./RPC-MANAGER.md) – Defines provider pools, health, rotation, latency, failover, and load balancing.
+- [CACHE-MANAGER.md](./CACHE-MANAGER.md) – Defines cache ownership, invalidation, TTL, and compression policies.
+- [UPDATE-MANAGER.md](./UPDATE-MANAGER.md) – Defines application, plugin, prompt, and model update lifecycle.
+- [DIAGNOSTICS.md](./DIAGNOSTICS.md) – Defines support bundle generation and troubleshooting output.
+- [BOOTSTRAP-SEQUENCE.md](./BOOTSTRAP-SEQUENCE.md) – Defines deterministic platform startup order.
+- [EVENT-CATALOG.md](./EVENT-CATALOG.md) – Defines the canonical registry of platform events and payloads.

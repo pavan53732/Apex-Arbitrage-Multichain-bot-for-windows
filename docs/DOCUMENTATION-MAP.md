@@ -335,3 +335,38 @@ These must not claim ownership and should only point to owners:
 - Trade Explainer: `TRADE-EXPLAINER.md`
 - Market Session: `MARKET-SESSION.md`
 - Opportunity Lifecycle: `OPPORTUNITY-LIFECYCLE.md`
+
+- CONTRACT-REGISTRY.md — Authoritative
+
+- RPC-MANAGER.md — Authoritative
+
+- CACHE-MANAGER.md — Authoritative
+
+- UPDATE-MANAGER.md — Authoritative
+
+- DIAGNOSTICS.md — Authoritative
+
+- BOOTSTRAP-SEQUENCE.md — Authoritative
+
+- EVENT-CATALOG.md — Authoritative
+
+
+## Governance-mode owners
+- Contract Registry: `CONTRACT-REGISTRY.md`
+- RPC Manager: `RPC-MANAGER.md`
+- Cache Manager: `CACHE-MANAGER.md`
+- Update Manager: `UPDATE-MANAGER.md`
+- Diagnostics: `DIAGNOSTICS.md`
+- Bootstrap Sequence: `BOOTSTRAP-SEQUENCE.md`
+- Event Catalog: `EVENT-CATALOG.md`
+
+
+## ADRs
+- `adr/0001-provider-abstraction.md`
+- `adr/0002-event-driven-kernel.md`
+- `adr/0003-plugin-first-architecture.md`
+- `adr/0004-polygon-first.md`
+- `adr/0005-ai-memory.md`
+- `adr/0006-runtime-governance.md`
+- `adr/0007-workspace-model.md`
+- `adr/0008-orchestrator-state-machine.md`
