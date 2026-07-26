@@ -54,3 +54,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define private routing and sandbox protections.
+
+## Protection rules
+- Define private routing, sandwich mitigation, and simulation checks.
+- Define fallback behavior when MEV protection fails.

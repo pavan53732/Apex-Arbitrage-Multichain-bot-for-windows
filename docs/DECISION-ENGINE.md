@@ -42,3 +42,7 @@ An AI recommendation is blocked when policy or risk gates fail.
 
 ## Required details
 - Define UI approval and veto wiring.
+
+## Decision rules
+- Define approval, veto, and notification flow to the Windows UI.
+- Define how decision outcomes are logged and replayed.

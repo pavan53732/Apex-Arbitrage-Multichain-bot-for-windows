@@ -21,3 +21,7 @@ Defines the concrete health checks that prove the system is ready to trade.
 ## Checks
 - Define healthcheck cadence, threshold, and fail-closed behavior.
 - Include RPC, wallet, backend, UI bridge, and Windows network checks.
+
+## Check rules
+- Define actual checks, thresholds, cadence, and fail-closed behavior.
+- Define alert and recovery outputs.

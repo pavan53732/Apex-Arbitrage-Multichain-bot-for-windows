@@ -30,3 +30,7 @@ A stale price cache entry is invalidated after a new market tick arrives.
 
 ## Required details
 - Define TTL, eviction, and freshness values.
+
+## Cache rules
+- Define TTL, eviction, and freshness by data domain.
+- Define cache invalidation on chain, provider, and schema changes.

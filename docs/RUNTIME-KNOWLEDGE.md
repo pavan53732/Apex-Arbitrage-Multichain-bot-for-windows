@@ -39,3 +39,7 @@ The dashboard reads runtime knowledge to show active workers and healthy provide
 
 ## Required details
 - Define runtime state and Windows surfaces.
+
+## Runtime rules
+- Define service state, tray state, and Windows notification visibility.
+- Define how runtime knowledge survives restarts.
