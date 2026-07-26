@@ -23,3 +23,9 @@ Provides a browsable catalog of every IPC message, grouped by domain, for humans
 
 ## Cross-references
 - `IPC-PROTOCOL.md`
+
+## Operational Contract
+Defines IPC message types, payloads, versioning, routing, and consumer expectations.
+
+## Example
+A worker status message includes status, timestamp, and correlation id.

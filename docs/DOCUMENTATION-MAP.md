@@ -468,3 +468,10 @@ These must not claim ownership and should only point to owners:
 - Asset Management
 - Decision Ledger
 - Event Catalog
+
+
+## Deepening pass - tranche 14
+- Portfolio Analytics
+- IPC Message Catalog
+- Execution Lifecycle
+- Knowledge Graph

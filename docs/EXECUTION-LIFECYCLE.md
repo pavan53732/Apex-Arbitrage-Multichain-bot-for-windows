@@ -36,3 +36,9 @@ stateDiagram-v2
 - `TRADING-LIFECYCLE.md`
 - `ORCHESTRATOR.md`
 - `DOMAIN-MODEL.md`
+
+## Operational Contract
+Defines the lifecycle from pre-checks through simulation, approval, submission, confirmation, and post-trade reconciliation.
+
+## Example
+Execution pauses if confirmations are not received within policy.

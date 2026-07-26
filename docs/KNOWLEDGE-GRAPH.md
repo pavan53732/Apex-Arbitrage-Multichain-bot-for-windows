@@ -27,3 +27,8 @@ Refresh source nodes, revalidate relations, and isolate stale subgraphs.
 - `DOMAIN-MODEL.md`
 
 For data governance, see `DATA-GOVERNANCE.md`.
+## Governance Rules
+Defines node types, edges, indexing, update propagation, and retrieval semantics for the knowledge graph.
+
+## Example
+A strategy node links to market regime, risk policy, and execution history.
