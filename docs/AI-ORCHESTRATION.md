@@ -31,3 +31,7 @@ Defines the coordination of agents, tool calls, memory, consensus, and decision 
 
 ## Example
 Market analysis, risk review, and planning converge before the Decision Engine receives a recommendation.
+
+## Orchestration rules
+- Define routing, sequencing, fallback, and coordination across AI agents.
+- Define how orchestration degrades under failure.

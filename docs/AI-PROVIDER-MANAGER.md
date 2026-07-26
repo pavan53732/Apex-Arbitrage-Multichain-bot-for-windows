@@ -23,3 +23,7 @@ A degraded provider is demoted until capability and latency checks recover.
 - Demote providers that fail health or capability checks until recovery succeeds.
 - Failover remains synchronous for critical flows and must preserve auditability.
 - Capability negotiation detail remains owned by `MODEL-CAPABILITY-NEGOTIATION.md`.
+
+## Provider rules
+- Define provider selection, health checks, failover, and cost weighting.
+- Define capability negotiation handoff to the capability matrix.

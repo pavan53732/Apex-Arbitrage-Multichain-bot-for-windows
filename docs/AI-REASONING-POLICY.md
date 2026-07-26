@@ -32,3 +32,7 @@ Defines allowed reasoning patterns, confidence thresholds, escalation rules, and
 
 ## Example
 A low-confidence plan is escalated instead of executed automatically.
+
+## Reasoning rules
+- Define when reasoning is required, how it is summarized, and when it is blocked.
+- Define confidence thresholds and escalation rules.

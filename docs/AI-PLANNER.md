@@ -24,3 +24,7 @@ Defines goal decomposition, dependency ordering, sequencing, recovery, and plan 
 
 ## Example
 The planner breaks a multi-step execution request into risk, simulation, and trade tasks.
+
+## Planning rules
+- Define plan generation, plan revision, and plan validation.
+- Define how plans are rejected when constraints are violated.

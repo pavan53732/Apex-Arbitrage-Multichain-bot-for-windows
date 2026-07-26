@@ -28,3 +28,7 @@ Defines token budgeting, provider spend tracking, cost alerts, and budget enforc
 
 ## Example
 A model switch is rejected if projected cost exceeds the configured budget cap.
+
+## Cost rules
+- Define per-request and per-session cost tracking.
+- Define budget caps, warnings, and fallback behavior.

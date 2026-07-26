@@ -40,3 +40,7 @@ A balanced profile uses reasoning with a smaller context window and JSON output 
 ## Windows AI settings
 - Define local model paths, GPU fallback, and per-user profile isolation.
 - Define proxy-aware cloud model access.
+
+## AI settings
+- Define local inference, cloud fallback, proxy handling, and per-user profile isolation.
+- Define how settings are validated before use.
