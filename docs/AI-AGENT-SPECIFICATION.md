@@ -9,3 +9,9 @@ This document provides schemas for agent messages and tool calls. Lifecycle rule
 ## Cross-references
 - `AI-ORCHESTRATION.md`
 - `AI-PIPELINE.md`
+
+## Interface Contract
+Each agent defines purpose, inputs, outputs, tools, memory access, metrics, and lifecycle expectations.
+
+## Example
+The planner agent decomposes goals, orders dependencies, and emits a structured execution plan.

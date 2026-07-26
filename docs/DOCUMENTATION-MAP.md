@@ -384,3 +384,10 @@ These must not claim ownership and should only point to owners:
 - AI Gateway
 - AI Memory System
 - Decision Log
+
+
+## Deepening pass - tranche 2
+- Interface Provider Adapter
+- Plugin Marketplace
+- Risk Engine
+- AI Agent Specification

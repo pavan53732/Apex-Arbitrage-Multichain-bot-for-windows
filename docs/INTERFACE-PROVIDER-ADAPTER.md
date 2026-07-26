@@ -19,3 +19,9 @@ Defines provider adapter request and response contracts.
 - `AI-PROVIDER-MANAGER.md`
 - `AI-GATEWAY.md`
 - `AI-PIPELINE.md`
+
+## Interface Contract
+Defines provider adapter inputs, outputs, capability declarations, errors, and compatibility rules.
+
+## Example
+An OpenAI-compatible adapter exposes streaming, JSON, embeddings, and tool-calling capabilities.
