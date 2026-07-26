@@ -28,3 +28,7 @@ Defines prompt templates, system prompts, context shaping, guardrails, and promp
 
 ## Example
 A risk prompt includes only the context required for exposure analysis.
+
+## Prompt rules
+- Define prompt templates, versioning, and validation criteria.
+- Define how prompts change across model/provider contexts.

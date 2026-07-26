@@ -23,3 +23,7 @@ The risk agent uses a tool to query exposure before consensus.
 ## Tool rules
 - Define tool names, arguments, outputs, and permission boundaries.
 - Define how tools are versioned and validated.
+
+## Tool rules
+- Define tool names, arguments, outputs, permissions, and versioning.
+- Define tool validation before execution.

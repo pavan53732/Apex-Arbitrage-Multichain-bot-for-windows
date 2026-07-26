@@ -52,3 +52,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define local storage, model updates, and feedback loops.
+
+## Learning rules
+- Define feedback ingestion, model update cadence, and offline storage.
+- Define how learning is blocked when evidence is insufficient.

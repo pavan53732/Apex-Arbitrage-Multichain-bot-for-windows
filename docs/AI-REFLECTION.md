@@ -30,3 +30,7 @@ A failed recommendation is analyzed and turned into a prompt refinement action.
 ## Reflection rules
 - Define the inputs, scoring, and outcomes used for reflection.
 - Tie reflections to trade quality and decision quality.
+
+## Reflection rules
+- Define inputs, scoring, and outputs for reflection on decisions.
+- Tie reflection to trade and reasoning quality.

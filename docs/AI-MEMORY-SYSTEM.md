@@ -66,3 +66,7 @@ Additional retrieval backends may be added without changing memory layers.
 
 ## Required details
 - Define Windows persistence and memory tiers.
+
+## Memory rules
+- Define memory tiers, persistence, retention, and retrieval order.
+- Define Windows storage and profile isolation behavior.
