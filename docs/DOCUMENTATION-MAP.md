@@ -251,3 +251,51 @@ These must not claim ownership and should only point to owners:
 - Governance Explainability: `GOVERNANCE-EXPLAINABILITY.md`
 - Live Architecture Viewer: `LIVE-ARCHITECTURE-VIEWER.md`
 - Data Governance: `DATA-GOVERNANCE.md`
+
+- DECISION-LEDGER.md — Authoritative
+
+- CONTEXT-BUILDER.md — Authoritative
+
+- RUNTIME-KNOWLEDGE.md — Authoritative
+
+- SYSTEM-CAPABILITY-REGISTRY.md — Authoritative
+
+- FEATURE-FLAGS.md — Authoritative
+
+- CONFIGURATION-PROFILES.md — Authoritative
+
+- AI-REASONING-POLICY.md — Authoritative
+
+- AI-CONTEXT-WINDOW-MANAGEMENT.md — Authoritative
+
+- MODEL-CAPABILITY-NEGOTIATION.md — Authoritative
+
+- EXECUTION-POLICIES.md — Authoritative
+
+- ROUTE-SCORING-MODEL.md — Authoritative
+
+- MARKET-REGIME-DETECTION.md — Authoritative
+
+- RESOURCE-MANAGER.md — Authoritative
+
+- TASK-SCHEDULER.md — Authoritative
+
+- SELF-HEALING.md — Authoritative
+
+
+## Final platform doctrines
+- Decision Ledger: `DECISION-LEDGER.md`
+- Context Builder: `CONTEXT-BUILDER.md`
+- Runtime Knowledge: `RUNTIME-KNOWLEDGE.md`
+- System Capability Registry: `SYSTEM-CAPABILITY-REGISTRY.md`
+- Feature Flags: `FEATURE-FLAGS.md`
+- Configuration Profiles: `CONFIGURATION-PROFILES.md`
+- AI Reasoning Policy: `AI-REASONING-POLICY.md`
+- AI Context Window Management: `AI-CONTEXT-WINDOW-MANAGEMENT.md`
+- Model Capability Negotiation: `MODEL-CAPABILITY-NEGOTIATION.md`
+- Execution Policies: `EXECUTION-POLICIES.md`
+- Route Scoring Model: `ROUTE-SCORING-MODEL.md`
+- Market Regime Detection: `MARKET-REGIME-DETECTION.md`
+- Resource Manager: `RESOURCE-MANAGER.md`
+- Task Scheduler: `TASK-SCHEDULER.md`
+- Self-Healing: `SELF-HEALING.md`

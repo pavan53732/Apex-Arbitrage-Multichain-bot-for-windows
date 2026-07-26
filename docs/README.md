@@ -48,3 +48,18 @@ Navigation-only document pointing to the authoritative owner(s).
 - [GOVERNANCE-EXPLAINABILITY.md](./GOVERNANCE-EXPLAINABILITY.md) – Centralizes audit lineage, rationale retention, and trace governance.
 - [LIVE-ARCHITECTURE-VIEWER.md](./LIVE-ARCHITECTURE-VIEWER.md) – Centralizes live topology visualization and runtime graph rendering.
 - [DATA-GOVERNANCE.md](./DATA-GOVERNANCE.md) – Centralizes normalization, validation, provenance, caching, and graph linking.
+- [DECISION-LEDGER.md](./DECISION-LEDGER.md) – Defines the immutable record of autonomous decisions and outcomes.
+- [CONTEXT-BUILDER.md](./CONTEXT-BUILDER.md) – Defines how structured context is assembled before AI requests.
+- [RUNTIME-KNOWLEDGE.md](./RUNTIME-KNOWLEDGE.md) – Defines the system’s live self-knowledge at runtime.
+- [SYSTEM-CAPABILITY-REGISTRY.md](./SYSTEM-CAPABILITY-REGISTRY.md) – Defines platform capability discovery independent of names.
+- [FEATURE-FLAGS.md](./FEATURE-FLAGS.md) – Defines controlled rollout states for features.
+- [CONFIGURATION-PROFILES.md](./CONFIGURATION-PROFILES.md) – Defines profile inheritance and overrides.
+- [AI-REASONING-POLICY.md](./AI-REASONING-POLICY.md) – Defines when AI may advise versus when determinism is required.
+- [AI-CONTEXT-WINDOW-MANAGEMENT.md](./AI-CONTEXT-WINDOW-MANAGEMENT.md) – Defines context compression and token budgeting.
+- [MODEL-CAPABILITY-NEGOTIATION.md](./MODEL-CAPABILITY-NEGOTIATION.md) – Defines automatic AI capability detection and negotiation.
+- [EXECUTION-POLICIES.md](./EXECUTION-POLICIES.md) – Defines execution guardrails and stop conditions.
+- [ROUTE-SCORING-MODEL.md](./ROUTE-SCORING-MODEL.md) – Defines the mathematical route scoring model.
+- [MARKET-REGIME-DETECTION.md](./MARKET-REGIME-DETECTION.md) – Defines market regime classification.
+- [RESOURCE-MANAGER.md](./RESOURCE-MANAGER.md) – Defines lifecycle management for runtime resources.
+- [TASK-SCHEDULER.md](./TASK-SCHEDULER.md) – Defines priority, fair, adaptive task scheduling.
+- [SELF-HEALING.md](./SELF-HEALING.md) – Defines recovery actions for unhealthy components.
