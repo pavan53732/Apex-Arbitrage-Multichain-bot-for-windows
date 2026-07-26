@@ -21,3 +21,11 @@ A plugin without sandbox approval is blocked from loading.
 
 ## Required details
 - Define DPAPI, Credential Manager, Defender, AppContainer, and signing baseline.
+
+## Security rules
+- Define secrets handling, least privilege, and safe deployment expectations.
+- Define incident reporting and key rotation guidance.
+
+## Final rules
+- Define secrets handling, least privilege, and incident reporting.
+- Define key rotation and safe deployment guidance.

@@ -15,3 +15,10 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Maintain versioned release notes for Windows and trading changes.
+
+## Changelog rules
+- Record user-visible changes, fixes, and migrations by version.
+- Keep entries brief and release-oriented.
+
+## Final rules
+- Record user-visible changes, fixes, and migrations by version.

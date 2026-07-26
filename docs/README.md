@@ -85,3 +85,10 @@ Navigation-only document pointing to the authoritative owner(s).
 - [AI-CONSENSUS.md](./AI-CONSENSUS.md) – Defines multi-agent consensus and voting policy.
 - [AI-MEMORY-SYSTEM.md](./AI-MEMORY-SYSTEM.md) – Defines the layered AI memory model and retention rules.
 - [DECISION-LOG.md](./DECISION-LOG.md) – Defines the operational decision log and replay-friendly narratives.
+## Overview rules
+- Describe purpose, prerequisites, and quick start for Windows users.
+- Describe what the bot does and does not do.
+
+## Final rules
+- Define quick start, prerequisites, and scope for Windows users.
+- Define what the bot does and does not do.
