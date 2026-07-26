@@ -11,3 +11,7 @@ Defines the metric names and categories used across runtime, trading, and deskto
 ## Reporting
 - Metrics must be defined with names, units, and alert thresholds.
 - Critical metrics must map to alerts or notifications.
+
+## Definitions
+- Define each metric with name, unit, source, and alert threshold.
+- Include trading, runtime, Windows, and recovery metrics.

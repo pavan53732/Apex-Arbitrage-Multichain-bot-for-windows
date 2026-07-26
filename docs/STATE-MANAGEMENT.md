@@ -95,3 +95,7 @@ An input is validated before any state-changing action.
 
 ## Required details
 - Define sleep, resume, RDP, and fast user switching recovery.
+
+## Windows recovery
+- Define sleep, resume, fast user switching, and session reconnection behavior.
+- Define state synchronization after a suspended or restored desktop session.

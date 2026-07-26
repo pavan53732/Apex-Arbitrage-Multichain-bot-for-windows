@@ -35,3 +35,7 @@ A route with stronger liquidity and lower cost ranks higher.
 
 ## Required details
 - Define scoring formula, weights, calibration, and drift checks.
+
+## Scoring model
+- Define the scoring formula, weights, and normalization inputs.
+- Define calibration, regression, and drift detection.

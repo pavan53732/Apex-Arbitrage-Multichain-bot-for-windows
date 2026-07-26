@@ -17,3 +17,7 @@ Defines the concrete health checks that prove the system is ready to trade.
 
 ## Required details
 - Define concrete checks and thresholds.
+
+## Checks
+- Define healthcheck cadence, threshold, and fail-closed behavior.
+- Include RPC, wallet, backend, UI bridge, and Windows network checks.

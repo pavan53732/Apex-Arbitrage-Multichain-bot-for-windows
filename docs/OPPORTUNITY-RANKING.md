@@ -40,3 +40,7 @@ A route with low gas and high historical success outranks a marginally profitabl
 
 ## Required details
 - Define thresholds, tie-breaks, freshness, and score drift rules.
+
+## Ranking rules
+- Define freshness, tie-breakers, thresholds, and invalidation behavior.
+- Define how ranking output feeds execution.
