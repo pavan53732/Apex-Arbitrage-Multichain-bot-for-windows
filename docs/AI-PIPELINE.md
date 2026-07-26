@@ -4,7 +4,7 @@
 This document is the authoritative specification for AI decision lifecycle, prompt lifecycle, provider routing, confidence scoring, explainability, and learning behavior.
 
 ## Ownership
-- Owns AI request orchestration, provider routing, prompt lifecycle, and structured response validation.
+- Owns AI request routing, prompt lifecycle, and structured response validation. For multi-agent sequencing and consensus policy, see `AI-ORCHESTRATION.md` and `AI-CONSENSUS.md`.
 - Does not own execution authorization, which remains with risk and execution owners.
 
 ## Provider policy
@@ -108,3 +108,7 @@ Persist prompt versions, routing decisions, model ids, tokens used, confidence s
 
 ## Orchestration authority
 AI-PIPELINE.md is the single source for behavioural orchestration, provider routing, prompt lifecycle, and decision sequencing.
+
+- `AI-CONSENSUS.md`
+
+- `AI-AGENT-SPECIFICATION.md`

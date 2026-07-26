@@ -21,3 +21,7 @@ Defines runtime and operational configuration, precedence, validation, and secre
 - `DATABASE-SCHEMA.md`
 - `AI-COST-MANAGEMENT.md`
 - `VERSIONING.md`
+
+- `PLUGIN-SDK.md`
+
+- `HEALTHCHECKS.md`

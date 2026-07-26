@@ -18,3 +18,7 @@ Top-level index for the implementation specification set.
 
 ## Cross-references
 - `docs/ORCHESTRATOR.md`
+
+
+## System Contracts
+- `docs/DOMAIN-MODEL.md` — authoritative system contract.

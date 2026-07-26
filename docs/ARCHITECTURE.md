@@ -18,7 +18,8 @@ Defines the system architecture, subsystem boundaries, and orchestration model.
 - Runtime coordination is owned by runtime operations.
 
 ## Deterministic orchestration rules
-- Main process is the source of truth for all operational state.
+For authoritative runtime flow, see `ORCHESTRATOR.md`.
+- Main process is the source of truth for operational state. For authoritative runtime flow, see `ORCHESTRATOR.md`.
 - Renderer state is derived and must not bypass typed IPC.
 - Risk gates must execute before any live submission.
 - For the authoritative runtime state machine and orchestration flow, see `ORCHESTRATOR.md`.
@@ -38,3 +39,5 @@ Defines the system architecture, subsystem boundaries, and orchestration model.
 - `DASHBOARD-WIDGETS.md`
 - `UX-GUIDELINES.md`
 - `VERSIONING.md`
+
+- `DOMAIN-MODEL.md`

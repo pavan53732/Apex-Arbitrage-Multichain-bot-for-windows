@@ -82,3 +82,5 @@ Warm -> Active -> Expiring -> Invalidated -> Purged.
 - `TRADING-ENGINE.md`
 - `VERSIONING.md`
 - `AI-COST-MANAGEMENT.md`
+
+- `HEALTHCHECKS.md`
