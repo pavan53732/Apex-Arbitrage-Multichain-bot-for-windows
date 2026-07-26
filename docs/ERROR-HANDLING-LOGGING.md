@@ -11,6 +11,8 @@ Defines the canonical error taxonomy, logging policy, recovery paths, and escala
 ## Ownership
 - Owns error codes, log structure, redaction policy, escalation rules, and failure categories.
 - Every subsystem must reuse these codes rather than inventing local variants when possible.
+- **Subsystem-specific error codes** (e.g., `FAILURE-RECOVERY-MATRIX.md`, `ERROR-CATALOG.md`, `ERROR-CODES.md`) must map to the canonical taxonomy defined here.
+- Cross-cutting error handling defers to this document as the authority.
 
 ## Error taxonomy
 - ValidationError.
