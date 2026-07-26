@@ -1,38 +1,19 @@
 # Windows Desktop
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Defines the Windows desktop shell for the trading application.
+
+## Ownership
+- Owns tray behavior, window lifecycle, DPI scaling, and multi-monitor restore rules.
+- Does not own trading logic or execution policy.
+
+## Windows behavior
+- Must support minimize-to-tray and restore-from-tray behavior.
+- Must define startup, login, reconnect, and notification behavior.
+- Must define offline and degraded UI states.
 
 ## Cross-references
-- `BUILD-RELEASE-CICD.md`
-- `DEPLOYMENT.md`
-- `API-REFERENCE.md`
-- `DASHBOARD-LAYOUT.md`
-- `DASHBOARD-WIDGETS.md`
-- `UX-GUIDELINES.md`
-
-
-
-## State Machine
-- LAUNCHING -> LOADING_WORKSPACE -> READY -> SYNCING -> SHUTTING_DOWN.
-- SHUTTING_DOWN -> EXIT on successful drain.
-
-
-## Enterprise Contract – Windows Desktop
-- Desktop lifecycle: see `docs/WINDOWS-DESKTOP.md` and `docs/SHUTDOWN-LIFECYCLE.md`.
-- Startup sequencing: see `ORCHESTRATOR.md` and `HEALTHCHECKS.md`.
-- UI interactions: see `UI-DASHBOARD-SPEC.md`, `INTERFACE-NOTIFICATION-CHANNEL.md`, and `INTERFACE-TOOL-CALL.md`.
-- Recovery and session behavior: see `SHUTDOWN-LIFECYCLE.md` and `RUNTIME-OPERATIONS.md`.
-
-
-For workspace, see `DASHBOARD-WORKSPACES.md`.
-
-## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
-
-## Example
-An input is validated before any state-changing action.
-
-## Windows-specific behavior
-- Must define tray icon, multi-monitor, DPI scaling, and window restore behavior.
-- Must define startup, minimize-to-tray, and user session handling.
+- `WINDOWS-APP-ARCHITECTURE.md`
+- `UI-DASHBOARD-SPEC.md`
+- `WINDOWS-NOTIFICATION-INTEGRATION.md`
+- `WORKSPACE-MANAGER.md`

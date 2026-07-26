@@ -1,19 +1,16 @@
 # Healthchecks
 
 ## Purpose
-Defines runtime and AI health probes plus automated recovery actions.
+Defines the concrete health checks that prove the system is ready to trade.
 
-## Cross-references
-- `RUNTIME-OPERATIONS.md`
-- `MONITORING-OBSERVABILITY.md`
-- `AI-PIPELINE.md`
-- `ORCHESTRATOR.md`
+## Health checks
+- RPC connectivity.
+- Exchange connectivity.
+- Wallet readiness.
+- Service availability.
+- UI/backend bridge health.
+- Windows network and proxy health.
 
-## Operational Contract
-Defines health probes, status aggregation, thresholds, and degradation semantics for all services.
-
-## Example
-An RPC provider marked unhealthy triggers failover and operator alerting.
-
-## Health definitions
-- Must define actual health checks, thresholds, and alert outputs.
+## Failure handling
+- Any critical failure must block autonomous trading.
+- Health failures must publish alerts and recovery actions.

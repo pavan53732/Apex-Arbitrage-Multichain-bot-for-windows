@@ -1,20 +1,13 @@
 # Metrics
 
 ## Purpose
-Defines AI-layer and platform quality metrics, SLAs, and budgets.
+Defines the metric names and categories used across runtime, trading, and desktop monitoring.
 
-## Cross-references
-- `AI-PIPELINE.md`
-- `MONITORING-OBSERVABILITY.md`
-- `PERFORMANCE-TARGETS.md`
-- `AI-COST-MANAGEMENT.md`
+## Metric groups
+- Trading metrics: spread, fill rate, execution success, realized P&L.
+- Runtime metrics: uptime, restart count, queue depth, recovery count.
+- Windows metrics: startup time, UI responsiveness, tray status, network reconnects.
 
-## Operational Contract
-Defines metric names, dimensions, collection rules, export behavior, and retention expectations.
-
-## Example
-Worker queue depth, provider latency, and AI request cost are recorded as first-class metrics.
-
-## Metrics catalog
-- Must define named metrics, types, units, and thresholds.
-- Must define Windows performance counters and trading metrics.
+## Reporting
+- Metrics must be defined with names, units, and alert thresholds.
+- Critical metrics must map to alerts or notifications.

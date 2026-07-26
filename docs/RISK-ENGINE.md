@@ -1,19 +1,21 @@
 # Risk Engine
 
 ## Purpose
-Defines deterministic risk checks for liquidity, oracle deviation, gas spikes, protocol health, wallet risk, and execution confidence.
+Defines trading risk checks used before and during execution.
+
+## Ownership
+- Owns exposure limits, spread checks, liquidity checks, and leg failure protection.
+- Does not own route scoring or execution transport.
+
+## Risk checks
+- Maximum loss per trade.
+- Minimum liquidity threshold.
+- Maximum acceptable slippage.
+- Partial-fill exposure handling.
+- Cross-exchange timing risk.
 
 ## Cross-references
-- `ORCHESTRATOR.md`
-- `DOMAIN-MODEL.md`
-- `HEALTHCHECKS.md`
-
-## Example
-A route fails the risk gate when exposure, gas, slippage, or confidence breach policy limits.
-
-## Future compatibility notes
-Additional risk models may be introduced through configuration.
-
-## Risk rules
-- Must define spread, liquidity, exposure, and leg-failure risk checks.
-- Must define per-arbitrage-window loss limits and stop conditions.
+- `TRADING-LIFECYCLE.md`
+- `EXECUTION-ENGINE.md`
+- `ARBITRAGE-WINDOW-MANAGER.md`
+- `OPPORTUNITY-RANKING.md`

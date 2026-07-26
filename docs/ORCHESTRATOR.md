@@ -1,37 +1,18 @@
 # Orchestrator
 
 ## Purpose
-Defines the top-level operational state machine for the autonomous platform.
+Defines the system coordinator that sequences AI, trading, and runtime actions.
 
-## State machine
-Idle -> Discovery -> Validation -> Risk -> Simulation -> Decision -> Queue -> Execute -> Verify -> Learn -> Idle.
+## Ownership
+- Owns orchestration flow and priority among subsystems.
+- Does not own the internal behavior of trading, execution, or AI contracts.
 
-## Sequence
-1. Market scanning triggers discovery.
-2. AI analysis invokes multi-agent consensus.
-3. Risk gating performs deterministic pre-simulation checks.
-4. Simulation invokes `SIMULATION-ENGINE.md`.
-5. Execution invokes execution workers.
-6. Verification confirms post-execution outcomes.
-7. Learning feeds the persistent learning database.
-8. Recovery handles failover and retry logic.
+## Windows concerns
+- Must define tray actions, window state coordination, and service restart flow.
+- Must define behavior on app startup, sleep/resume, and reconnect.
 
 ## Cross-references
 - `AI-ORCHESTRATION.md`
-- `AI-PIPELINE.md`
 - `RUNTIME-OPERATIONS.md`
-- `SIMULATION-ENGINE.md`
-- `EXECUTION-ENGINE.md`
-- `RISK-ENGINE.md`
-
-For kernel behavior, see `APEX-KERNEL.md`.
-For service registration, see `SERVICE-REGISTRY.md`.
-For dependency resolution, see `DEPENDENCY-GRAPH.md`.
-## Operational Contract
-Defines coordination across registries, workers, policies, AI, and runtime state.
-
-## Example
-The orchestrator pauses execution during a health degradation event.
-
-## Orchestration detail
-- Must define cross-exchange timing, retry, and crash recovery.
+- `TRADING-LIFECYCLE.md`
+- `EXECUTION-LIFECYCLE.md`

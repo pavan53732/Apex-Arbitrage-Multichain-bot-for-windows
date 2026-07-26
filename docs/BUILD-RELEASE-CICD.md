@@ -1,20 +1,22 @@
-# BUILD RELEASE CICD
+# Build Release CICD
 
 ## Purpose
-Navigation-only document pointing to the authoritative owner(s).
+Defines build, test, package, sign, and release stages for the Windows app.
+
+## Ownership
+- Owns pipeline stages and build gates.
+- Does not own runtime behavior or trading policy.
+
+## Windows release stages
+- Build.
+- Test.
+- Package.
+- Sign.
+- Publish.
+- Verify update path.
 
 ## Cross-references
+- `WINDOWS-DEPLOYMENT.md`
 - `DEPLOYMENT.md`
-- `WINDOWS-DESKTOP.md`
 - `TESTING-GUIDE.md`
-- `RUNTIME-OPERATIONS.md`
-
-## Operational Contract
-Defines build stages, release gates, artifact checks, deployment triggers, and rollback conditions.
-
-## Example
-A release is blocked until validation and packaging succeed.
-
-## Windows release pipeline
-- Must define Windows runners, signing, packaging, and update artifact generation.
-- Must define build gates for installer, smoke test, and rollback verification.
+- `CODE-SIGNING.md`

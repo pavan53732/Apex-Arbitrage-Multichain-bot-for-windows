@@ -1,19 +1,21 @@
-# Ui Component Spec
+# UI Component Spec
 
 ## Purpose
-Provides navigation to the authoritative documentation set.
+Defines reusable UI components for the desktop trading app.
+
+## Ownership
+- Owns component props, states, and interaction behavior.
+- Does not own business logic or runtime orchestration.
+
+## Required components
+- Status badge.
+- Spread panel.
+- P&L panel.
+- Health panel.
+- Notification area.
 
 ## Cross-references
-- `DESIGN-SYSTEM.md`
-- `USER-FLOWS.md`
-- `STATE-MANAGEMENT.md`
+- `UI-DASHBOARD-SPEC.md`
 - `DASHBOARD-WIDGETS.md`
-- `DASHBOARD-LAYOUT.md`
 - `UX-GUIDELINES.md`
-
-
-## Operational Contract
-Defines reusable UI component behavior, props, event handling, and presentation constraints.
-
-## Example
-A status badge displays success, warning, or error state consistently.
+- `WINDOWS-DESKTOP.md`
