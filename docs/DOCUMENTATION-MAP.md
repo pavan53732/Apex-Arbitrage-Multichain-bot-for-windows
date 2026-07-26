@@ -560,3 +560,8 @@ An input is validated before any state-changing action.
 
 ## Final remaining tranche
 - Deepened 76 remaining owner docs.
+
+## End-to-End Ownership Flow
+- Documentation ownership flows from domain owner docs to cross-cutting references.
+- Use this map to locate the canonical owner before editing any related cross-cutting document.
+- Do not create new owner documents for views already owned by existing subsystem docs.
