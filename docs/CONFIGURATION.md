@@ -56,3 +56,7 @@ An input is validated before any state-changing action.
 ## Windows config
 - Define file locations, environment overrides, and per-user settings.
 - Define proxy and update channel configuration.
+
+## Configuration rules
+- Define config precedence, defaults, and environment overrides.
+- Define secure handling of secrets and local paths.

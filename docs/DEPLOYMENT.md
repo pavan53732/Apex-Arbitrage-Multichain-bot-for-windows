@@ -43,3 +43,7 @@ An input is validated before any state-changing action.
 ## Deployment rules
 - Define installer, update, rollback, and rollout behavior for Windows.
 - Define safe failure and recovery during deployment.
+
+## Deployment rules
+- Define Windows deployment packages, permissions, and upgrade flow.
+- Define rollback and verification steps.

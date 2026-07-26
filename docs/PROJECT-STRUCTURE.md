@@ -27,3 +27,7 @@ An input is validated before any state-changing action.
 ## Repository layout
 - Define the actual directories for docs, app, service, installers, and tests.
 - Define where Windows packaging artifacts live.
+
+## Structure rules
+- Define top-level folders for docs, services, workers, tests, and tools.
+- Define boundaries between core and Windows-specific code.

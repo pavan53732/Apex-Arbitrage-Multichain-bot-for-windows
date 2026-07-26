@@ -35,3 +35,7 @@ Re-scan adapters, revalidate manifests, and suspend stale capabilities.
 ## Capability rules
 - Define platform, runtime, service, and plugin capabilities explicitly.
 - Define how capability checks block unsupported features.
+
+## Capability rules
+- Define discoverable capabilities, feature flags, and compatibility.
+- Define capability ownership and versioning.

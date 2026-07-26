@@ -56,3 +56,7 @@ An input is validated before any state-changing action.
 ## Requirements
 - Define Windows performance, reliability, security, and recoverability targets.
 - Define latency and startup expectations.
+
+## NFR rules
+- Define latency, reliability, durability, and supportability targets.
+- Define Windows desktop and service constraints.
