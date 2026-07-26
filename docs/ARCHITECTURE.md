@@ -61,3 +61,5 @@ For workspace persistence, see `DASHBOARD-WORKSPACES.md`.
 For dependency graph details, see `DEPENDENCY-GRAPH.md`.
 For live architecture visualization, see `LIVE-ARCHITECTURE-VIEWER.md`.
 For data governance, see `DATA-GOVERNANCE.md`.
+For constitution and philosophy, see `APEX-OS.md`.
+For opportunity lifecycle, see `OPPORTUNITY-LIFECYCLE.md`.

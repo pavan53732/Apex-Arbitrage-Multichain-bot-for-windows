@@ -32,3 +32,5 @@ Determinism for same input snapshot.
 - `MARKET-DATA.md`
 - `STRATEGIES.md`
 - `RISK-ENGINE.md`
+
+For opportunity lifecycle, see `OPPORTUNITY-LIFECYCLE.md`.

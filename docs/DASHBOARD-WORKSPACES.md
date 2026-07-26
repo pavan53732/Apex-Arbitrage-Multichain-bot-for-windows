@@ -32,3 +32,5 @@ On startup restore last workspace; if corrupt, fall back to default workspace.
 - `UI-DASHBOARD-SPEC.md`
 - `WINDOWS-DESKTOP.md`
 - `RECOVERY-AND-FAILOVER.md`
+
+For workspace management, see `WORKSPACE-MANAGER.md`.

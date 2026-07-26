@@ -63,3 +63,14 @@ Navigation-only document pointing to the authoritative owner(s).
 - [RESOURCE-MANAGER.md](./RESOURCE-MANAGER.md) – Defines lifecycle management for runtime resources.
 - [TASK-SCHEDULER.md](./TASK-SCHEDULER.md) – Defines priority, fair, adaptive task scheduling.
 - [SELF-HEALING.md](./SELF-HEALING.md) – Defines recovery actions for unhealthy components.
+- [APEX-OS.md](./APEX-OS.md) – Defines the constitution, principles, roadmap, and evolution strategy of the platform.
+- [SERVICE-LIFECYCLE.md](./SERVICE-LIFECYCLE.md) – Defines the canonical lifecycle for all services.
+- [PLUGIN-LIFECYCLE.md](./PLUGIN-LIFECYCLE.md) – Defines the canonical lifecycle for all plugins.
+- [WORKSPACE-MANAGER.md](./WORKSPACE-MANAGER.md) – Defines workspace ownership, layout, settings, and isolation.
+- [AI-TOOLS.md](./AI-TOOLS.md) – Defines the tool surface available to AI agents.
+- [AI-PLANNER.md](./AI-PLANNER.md) – Defines the planning agent for decomposition and sequencing.
+- [AI-REFLECTION.md](./AI-REFLECTION.md) – Defines AI self-evaluation and refinement.
+- [AI-KNOWLEDGE-INDEX.md](./AI-KNOWLEDGE-INDEX.md) – Defines retrieval and ranking over the knowledge graph.
+- [TRADE-EXPLAINER.md](./TRADE-EXPLAINER.md) – Defines human-readable trade explanations.
+- [MARKET-SESSION.md](./MARKET-SESSION.md) – Defines market condition labels for strategy selection.
+- [OPPORTUNITY-LIFECYCLE.md](./OPPORTUNITY-LIFECYCLE.md) – Defines the lifecycle from detection to archival.

@@ -299,3 +299,39 @@ These must not claim ownership and should only point to owners:
 - Resource Manager: `RESOURCE-MANAGER.md`
 - Task Scheduler: `TASK-SCHEDULER.md`
 - Self-Healing: `SELF-HEALING.md`
+
+- APEX-OS.md — Authoritative
+
+- SERVICE-LIFECYCLE.md — Authoritative
+
+- PLUGIN-LIFECYCLE.md — Authoritative
+
+- WORKSPACE-MANAGER.md — Authoritative
+
+- AI-TOOLS.md — Authoritative
+
+- AI-PLANNER.md — Authoritative
+
+- AI-REFLECTION.md — Authoritative
+
+- AI-KNOWLEDGE-INDEX.md — Authoritative
+
+- TRADE-EXPLAINER.md — Authoritative
+
+- MARKET-SESSION.md — Authoritative
+
+- OPPORTUNITY-LIFECYCLE.md — Authoritative
+
+
+## Consolidated doctrinal owners
+- APEX OS: `APEX-OS.md`
+- Service Lifecycle: `SERVICE-LIFECYCLE.md`
+- Plugin Lifecycle: `PLUGIN-LIFECYCLE.md`
+- Workspace Manager: `WORKSPACE-MANAGER.md`
+- AI Tools: `AI-TOOLS.md`
+- AI Planner: `AI-PLANNER.md`
+- AI Reflection: `AI-REFLECTION.md`
+- AI Knowledge Index: `AI-KNOWLEDGE-INDEX.md`
+- Trade Explainer: `TRADE-EXPLAINER.md`
+- Market Session: `MARKET-SESSION.md`
+- Opportunity Lifecycle: `OPPORTUNITY-LIFECYCLE.md`
