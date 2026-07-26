@@ -20,3 +20,8 @@ Navigation-only document pointing to the authoritative owner(s).
 - `DOMAIN-MODEL.md` — authoritative system contract.
 - `METRICS.md` — authoritative system contract.
 - `HEALTHCHECKS.md` — authoritative system contract.
+
+- [TRADING-LIFECYCLE.md](./TRADING-LIFECYCLE.md) – Defines the complete state machine for trade discovery, risk, execution, and settlement.
+- [EXECUTION-LIFECYCLE.md](./EXECUTION-LIFECYCLE.md) – Specifies the order submission, signing, broadcasting, and confirmation state transitions.
+- [SECURITY-CONTRACTS.md](./SECURITY-CONTRACTS.md) – Codifies secret handling, wallet signing, plugin sandboxing, emergency stop, and audit logging.
+- [PERFORMANCE-SLOS.md](./PERFORMANCE-SLOS.md) – Declares numeric latency, throughput, and budget SLOs for all major subsystems.
