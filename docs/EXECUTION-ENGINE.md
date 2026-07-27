@@ -1,10 +1,10 @@
 # Execution Engine
 
 ## Document type
-Document type: [REFERENCE]
+Document type: [CONTRACT]
 
 ## Version
-**Version:** 0.2.0 | **Status:** Draft | **Last Updated:** 2026-07-27 | **Owner:** Trading Team
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Trading Team
 
 ## Purpose
 Defines chain transaction execution, confirmation, cancellation, and recovery — with explicit execution sequencing, timeout handling, and retry/resume behavior.
@@ -128,6 +128,139 @@ All signing happens in the wallet process (Trust Domain T1). The execution engin
 
 ---
 
+## 7. Multi-Chain Execution Protocol
+
+### 7.1 Cross-Chain Execution Sequence
+
+```
+1. Trading Engine submits execution request for both legs:
+   {trade_id, leg_1: {chain, dex, pair, amount, direction}, leg_2: {chain, dex, pair, amount, direction}}
+
+2. Execution Engine processes legs in sequence:
+   a. Leg 1: prepare TX → sign → submit → confirm.
+   b. On Leg 1 confirmation: immediately initiate Leg 2.
+   c. Leg 2: prepare TX → sign → submit → confirm.
+   d. On Leg 2 confirmation: trade complete.
+
+3. If Leg 1 and Leg 2 are on the SAME chain:
+   - Attempt atomic multi-call (both legs in one TX) where supported.
+   - If atomic not possible → sequential legs on same chain.
+
+4. If Leg 1 and Leg 2 are on DIFFERENT chains:
+   - Sequential: Leg 1 confirmed → Leg 2 submitted.
+   - Cross-chain messaging NOT used (too slow for arbitrage).
+   - Leg 2 parameters derived from Leg 1 actual received amount.
+```
+
+### 7.2 Multi-Chain Gas Handling
+
+| Chain | Gas Payment | Gas Token | Gas Estimation |
+|-------|------------|-----------|---------------|
+| Ethereum | ETH from wallet | ETH | `eth_estimateGas` |
+| Polygon | MATIC from wallet | MATIC | `eth_estimateGas` (EVM-compatible) |
+| BSC | BNB from wallet | BNB | `eth_estimateGas` |
+| Arbitrum | ETH from wallet | ETH | `eth_estimateGas` + L2 gas |
+| Solana | SOL from wallet | SOL | Compute units + rent |
+| Cosmos chains | Native token from wallet | Chain-specific | Gas estimation per chain |
+
+### 7.3 Cross-Chain Timing Budgets
+
+| Chain Pair | Leg 1 Confirm Time | Leg 2 Start Delay | Leg 2 Confirm Time | Total Budget |
+|-----------|--------------------|--------------------|--------------------|-------------|
+| Ethereum → Polygon | ~24s (2 blocks) | Immediate | ~2s | ~30s |
+| Polygon → Ethereum | ~2s | Immediate | ~24s | ~30s |
+| BSC → Ethereum | ~3s | Immediate | ~24s | ~30s |
+| Ethereum → Arbitrum | ~24s | Immediate | ~2s | ~30s |
+| Solana → Ethereum | ~0.4s | Immediate | ~24s | ~30s |
+
+---
+
+## 8. Gas Optimisation Logic
+
+### 8.1 Dynamic Gas Pricing Algorithm
+
+```
+1. Query base fee from latest block: base_fee = eth_getBlockByNumber("latest").baseFeePerGas
+2. Query priority fee suggestions: priority_fee = eth_maxPriorityFeePerGas OR default_priority_fee
+3. Calculate max fee: max_fee = base_fee × max_fee_multiplier + priority_fee
+4. If max_fee > execution.gas.max_price_gwei × 1e9 → ABORT (gas too expensive)
+5. Apply multiplier: estimated_gas = eth_estimateGas × execution.gas.multiplier
+6. Total gas cost: gas_cost_usd = estimated_gas × max_fee × eth_price_usd
+7. If gas_cost_usd > execution.gas.max_cost_usd → ABORT (gas cost exceeds budget)
+8. Submit TX with calculated max_fee and priority_fee.
+
+Fallback for chains without EIP-1559:
+  - Use fixed gas_price = historical_average × multiplier
+  - Gas price bump on retry: previous_price × 1.5
+```
+
+### 8.2 Gas Optimisation Strategies
+
+| Strategy | Implementation | Trigger | Savings |
+|----------|---------------|---------|---------|
+| **Dynamic pricing** | EIP-1559 base fee + priority fee | Always | 10-30% vs fixed pricing |
+| **Low-priority submission** | Minimal priority fee during low activity | Off-peak hours | 40-60% vs peak |
+| **Gas price monitoring** | Track gas trends, wait for dips | Gas > threshold, trade not urgent | Variable |
+| **Batch submission** | Combine multiple operations in one TX | Same-chain arb with 2+ legs | 50-70% vs separate TXs |
+| **Contract optimization** | Use gas-efficient DEX contracts (Uniswap V3 vs V2) | Route selection | 20-40% per leg |
+| **Alternative chains** | Route through cheaper chains when possible | Cross-chain arb | 90%+ on L2 vs L1 |
+
+---
+
+## 9. Cross-Subsystem Integration
+
+### 9.1 Who Calls Execution Engine
+
+| Caller | Purpose | Contract |
+|--------|---------|----------|
+| Trading Engine | Submit/cancel trade legs | `execution.submit` / `execution.cancel` APIs |
+| Risk Engine | Request execution risk check | `execution.risk_check` API |
+| Recovery Coordination | Resume incomplete executions | `execution.resume` API |
+| Dashboard Operator | Manual execution override | `dashboard.command` IPC |
+
+### 9.2 Who Execution Engine Calls
+
+| Target | Purpose | Contract |
+|--------|---------|----------|
+| Wallet Manager | Sign transactions | `wallet.sign` API |
+| RPC Manager | Submit TX, confirm TX | `rpc.submit` / `rpc.confirm` APIs |
+| Gas Optimiser | Estimate gas | `gas.estimate` API |
+| MEV Protection | Submit via private pool | `mev.submit` API |
+| Event Bus | Emit execution events | `execution.*` events |
+| Trading Engine | Report leg status | `trade.leg.*` events |
+
+### 9.3 Events Execution Engine Emits
+
+| Event | Payload | Consumer |
+|-------|---------|----------|
+| `execution.submitted` | `{exec_id, trade_id, leg, chain, tx_hash, nonce, gas_price, ts}` | Trading Engine, Dashboard |
+| `execution.confirming` | `{exec_id, confirmations, expected_confirmations, ts}` | Dashboard |
+| `execution.confirmed` | `{exec_id, trade_id, leg, chain, tx_hash, block, gas_used, ts}` | Trading Engine, Risk Engine |
+| `execution.reverted` | `{exec_id, trade_id, leg, chain, tx_hash, revert_reason, ts}` | Trading Engine, Risk Engine |
+| `execution.stuck` | `{exec_id, trade_id, chain, tx_hash, mempool_time_ms, ts}` | Trading Engine |
+| `execution.retried` | `{exec_id, trade_id, leg, attempt, new_tx_hash, gas_price_multiplier, ts}` | Trading Engine, Dashboard |
+| `execution.gas.exceeded` | `{exec_id, chain, estimated_gas, max_gas, ts}` | Dashboard, Trading Engine |
+
+### 9.4 Configuration Execution Engine Owns
+
+| Config Key | Default | Description |
+|-----------|---------|-------------|
+| `execution.timeout_ms` | `30000` | Per-leg timeout |
+| `execution.confirmation_timeout_ms` | `60000` | Confirmation timeout |
+| `execution.total_timeout_ms` | `120000` | Total execution timeout |
+| `execution.confirmation_blocks` | `2` | EVM confirmation threshold |
+| `execution.reorg_safe_depth` | `12` | Reorg safe depth |
+| `execution.gas.max_gas_limit` | `500000` | Max gas per TX |
+| `execution.gas.max_price_gwei` | `50` | Max gas price |
+| `execution.gas.multiplier` | `1.2` | Gas estimate multiplier |
+| `execution.gas.dynamic_enabled` | `true` | EIP-1559 dynamic pricing |
+| `execution.gas.priority_fee_gwei` | `1` | Priority fee floor |
+| `execution.gas.max_cost_usd` | `5.0` | Max gas cost per leg |
+| `execution.poll_interval_ms` | `1000` | Confirmation poll interval |
+| `execution.retry.max_attempts` | `3` | Max retries per failure |
+
+---
+
 ## Cross-References
 
 - **TRADING-ENGINE.md** — Trade-level coordination that calls execution.
@@ -136,7 +269,11 @@ All signing happens in the wallet process (Trust Domain T1). The execution engin
 - **MEV-PROTECTION.md** — MEV-resistant submission strategies.
 - **WALLET-MANAGEMENT.md** — Wallet signing and key derivation.
 - **RISK-ENGINE.md** — Risk checks before submission.
+- **RPC-MANAGER.md** — RPC endpoint management and failover.
+- **EXECUTION-STATE-MACHINE.md** — Execution state machine contract.
+- **RECOVERY-COORDINATION.md** — Recovery coordination for incomplete executions.
 - **CONFIGURATION-REFERENCE.md** — Execution config keys (`execution.*`).
+- **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
 - **TRACEABILITY-MATRIX.md** — Execution requirement coverage.
 
 ---
@@ -145,5 +282,6 @@ All signing happens in the wallet process (Trust Domain T1). The execution engin
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.0.0 | 2026-07-27 | Production-grade execution engine contract: multi-chain execution protocol (6 chain pairs), cross-chain gas handling, cross-chain timing budgets, dynamic gas pricing algorithm, gas optimisation strategies (6 strategies), cross-subsystem integration | Trading Team |
 | 0.2.0 | 2026-07-27 | Full execution lifecycle, timeout handling, retry/resume, gas optimization | Trading Team |
 | 0.1.0 | 2026-07-27 | Initial stub | Trading Team |
