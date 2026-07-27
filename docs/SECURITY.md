@@ -169,9 +169,96 @@ The permission model (detailed in `PERMISSION-MODEL.md`) defines:
 
 ---
 
+## 8. STRIDE Threat Model
+
+### 8.1 Threat Analysis
+
+| Threat Type | Example | Affected Component | Mitigation | Severity |
+|-------------|---------|-------------------|------------|----------|
+| **Spoofing** | Malicious plugin impersonates trusted subsystem | IPC bridge, Plugin Manager | Process identity verification (PID + signature), IPC authentication | High |
+| **Tampering** | Malicious plugin modifies trade data in transit | IPC messages, Event Bus | Schema validation, checksum per message, idempotency keys | Critical |
+| **Repudiation** | Operator denies executing a trade | Trading Engine, Audit Log | Immutable audit log, cryptographic signing of critical actions | Medium |
+| **Information Disclosure** | AI model receives wallet private key in context | AI Pipeline, Memory System | Secret masking before AI context injection, no secrets in T2 domain | Critical |
+| **Denial of Service** | Malicious plugin floods event bus | Event Bus, IPC Bridge | Rate limiting per producer, queue depth limits, DLQ overflow policy | High |
+| **Elevation of Privilege** | Plugin gains Operator-level permissions | Permission Model, IPC Bridge | Capability grants immutable after init, IPC permission enforcement per call | Critical |
+
+### 8.2 Per-Trust-Domain STRIDE Analysis
+
+| Trust Domain | Spoofing | Tampering | Repudiation | Info Disclosure | DoS | Elevation |
+|-------------|----------|-----------|-------------|----------------|-----|-----------|
+| **T0 Kernel** | Low (internal) | Low (internal) | Low (logged) | Low (internal) | Low (bounded) | Low (minimal) |
+| **T1 Application** | Medium (IPC auth) | Medium (IPC validate) | Medium (audit log) | Medium (internal data) | Medium (bounded resources) | Medium (role enforcement) |
+| **T2 AI** | Medium (IPC auth) | Medium (prompt injection) | Low (logged) | **Critical** (secret masking) | Medium (rate limited) | Medium (capability grants) |
+| **T3 Dashboard** | Medium (session auth) | Low (read-only action) | Low (action log) | Medium (data anonymization) | Low (queue bounded) | Medium (role check) |
+| **T4 Plugin** | **High** (impersonation risk) | **High** (data tampering risk) | Low (action log) | **High** (data access risk) | **High** (flood risk) | **Critical** (capability escalation) |
+| **T5 External** | **High** (API spoofing) | **High** (response tampering) | **High** (replay attacks) | **High** (credential exposure) | **High** (rate limiting) | **High** (API privilege) |
+
+---
+
+## 9. Secure Update Chain
+
+### 9.1 Update Verification Steps
+
+```
+1. Update manifest signed with Authenticode + SHA-256.
+2. Manifest contains: version, checksum, signature, download_url.
+3. Downloaded update package verified against manifest checksum.
+4. Signature chain validated: root CA → intermediate → leaf → manifest.
+5. Certificate revocation checked (OCSP/CRL).
+6. Timestamp verified (within validity period).
+7. Content hash verified (SHA-256 of all files matches manifest).
+8. If any step fails → update rejected, operator notified.
+```
+
+### 9.2 Update Signing Policy
+
+| Component | Signing Level | Certificate | Verification |
+|-----------|-------------|-------------|-------------|
+| **Update manifest** | Authenticode + SHA-256 | EV certificate | Full chain + revocation |
+| **Update package** | SHA-256 checksum | Manifest-declared | Compare checksum |
+| **Code signing** | Authenticode | Standard certificate | Verify binary signature |
+
+---
+
+## 10. Cross-Subsystem Integration
+
+### 10.1 Who Calls Security
+
+| Caller | Purpose | Contract |
+|--------|---------|----------|
+| Trading Engine | Risk check before trade | `security.risk.check` API |
+| Execution Engine | Validate TX before submit | `security.tx.validate` API |
+| AI Pipeline | Validate AI response safety | `security.ai.validate` API |
+| Plugin Manager | Plugin capability check | `security.plugin.authorize` API |
+| IPC Bridge | Per-message permission check | `security.ipc.authorize` API |
+| Event Bus | Producer/consumer auth | `security.event.authorize` API |
+
+### 10.2 Events Security Emits
+
+| Event | Payload | Consumer |
+|-------|---------|----------|
+| `security.violation` | `{violation_id, severity, domain_from, domain_to, reason, ts}` | Runtime, Audit, Notification |
+| `security.auth.failure` | `{source, action, role, required_role, ts}` | Audit, Dashboard |
+| `security.threat.detected` | `{threat_type, component, details, severity, ts}` | Dashboard, Operator |
+| `secret.compromised` | `{secret_id, classification, severity, ts}` | Runtime, Audit, Notification |
+
+### 10.3 Configuration Security Owns
+
+| Config Key | Default | Description |
+|-----------|---------|-------------|
+| `security.secret.storage_backend` | `windows_credential_manager` | Secret storage method |
+| `security.audit.immutable` | `true` | Audit log cannot be deleted |
+| `security.ipc.enforce_permissions` | `true` | IPC permission enforcement |
+| `security.plugin.max_capabilities` | `8` | Max capabilities per plugin |
+| `security.update.require_signature` | `true` | Updates must be signed |
+| `security.threat.auto_block` | `true` | Auto-block on threat detection |
+
+---
+
 ## Version History
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.0.0 | 2026-07-27 | Production-grade security contract: STRIDE threat model (6 threats + per-domain 6×6 analysis), secure update chain (8 verification steps + signing policy), cross-subsystem integration (who calls, events, config) | Security Team |
 | 0.2.0 | 2026-07-27 | Full security architecture with trust boundary integration, secret lifecycle binding, Windows baseline, incident response | Security Team |
 | 0.1.0 | 2026-07-27 | Initial stub | Security Team |

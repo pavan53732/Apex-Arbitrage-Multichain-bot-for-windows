@@ -370,7 +370,115 @@ CREATE INDEX idx_recovery_created ON recovery_records(created_at);
 - **CONFIGURATION-REFERENCE.md** — Storage config keys (`resource.disk_cache_max_mb`, `event.retention_days`).
 - **TRACEABILITY-MATRIX.md** — Data persistence requirements.
 - **SECURITY.md** — Secret storage and audit retention.
-- **AI-MEMORY.md** — AI memory store governance.
+- **AI-MEMORY-SYSTEM.md** — AI memory store governance.
+- **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
+
+---
+
+## 9. Query Patterns & Performance Expectations
+
+| Query Type | Table | Pattern | Expected Latency | Frequency |
+|-----------|-------|---------|-----------------|-----------|
+| **Trade lookup by ID** | `trades` | `SELECT * WHERE trade_id = ?` | < 1ms | Per trade event |
+| **Recent trades for dashboard** | `trades` | `SELECT * WHERE status IN (...) ORDER BY created_at DESC LIMIT 50` | < 5ms | Dashboard poll (10s) |
+| **Trade history by strategy** | `trades` | `SELECT * WHERE strategy_id = ? ORDER BY created_at DESC LIMIT 100` | < 10ms | Dashboard page load |
+| **Trade P&L aggregation** | `trades` | `SELECT strategy_id, SUM(profit_usd), COUNT(*) WHERE created_at > ?` | < 20ms | Dashboard poll (30s) |
+| **Execution lookup by trade** | `executions` | `SELECT * WHERE trade_id = ? ORDER BY leg, created_at` | < 2ms | Per trade event |
+| **Wallet balance query** | `wallets` | `SELECT * WHERE wallet_id = ?` | < 1ms | Wallet refresh (10s) |
+| **AI request history** | `ai_requests` | `SELECT * WHERE requestor = ? ORDER BY created_at DESC LIMIT 20` | < 5ms | Dashboard AI page |
+| **AI cost aggregation** | `ai_requests` | `SELECT provider, model, SUM(cost_usd), COUNT(*) WHERE created_at > ?` | < 20ms | Cost tracking |
+| **Secret audit trail** | `secret_audit` | `SELECT * WHERE secret_id = ? ORDER BY created_at DESC` | < 5ms | Audit query |
+| **Health check results** | `health_checks` | `SELECT * WHERE subsystem = ? ORDER BY checked_at DESC LIMIT 10` | < 5ms | Dashboard health page |
+| **Event DLQ query** | `dead_letter_queue` | `SELECT * WHERE topic LIKE ? ORDER BY dlq_timestamp DESC LIMIT 50` | < 10ms | Admin DLQ viewer |
+| **Plugin registry lookup** | `plugin_registry` | `SELECT * WHERE plugin_id = ?` | < 1ms | Plugin lifecycle |
+
+---
+
+## 10. Backup & Restore
+
+### 10.1 Backup Configuration
+
+| Setting | Value | Config Key |
+|---------|-------|------------|
+| **Auto-backup frequency** | Weekly (Sunday 03:00) | `database.backup.auto_frequency: weekly` |
+| **Backup format** | `.apex-backup` archive (encrypted) | `database.backup.format` |
+| **Encryption** | DPAPI + AES-256 (user master password) | `database.backup.encryption` |
+| **Backup location** | `%APPDATA%/Apex/backups/` | `database.backup.path` |
+| **Max backup files** | 10 (oldest auto-deleted) | `database.backup.max_files` |
+| **Manual backup** | Dashboard → Admin → "Create Backup" | — |
+
+### 10.2 Backup Process
+
+```
+1. Pause all trading (existing trades complete).
+2. Flush WAL checkpoint (PRAGMA wal_checkpoint(TRUNCATE)).
+3. Export all tables to backup archive.
+4. Encrypt archive with AES-256 (DPAPI for key).
+5. Write checksum file alongside backup.
+6. Resume trading.
+7. Backup duration: < 60s for 1 GB database.
+```
+
+### 10.3 Restore Process
+
+```
+1. Verify backup checksum.
+2. Decrypt archive with user master password.
+3. Pause all trading.
+4. Close all database connections.
+5. Replace current database with backup.
+6. Run integrity check (PRAGMA integrity_check).
+7. Run pending migrations (if backup is from older version).
+8. Resume trading.
+9. Restore duration: < 120s for 1 GB database.
+10. If integrity check fails → attempt repair → fallback to next backup.
+```
+
+---
+
+## 11. Partitioning Strategy
+
+| Table | Partitioning Method | Partition Key | Retention | Cleanup |
+|-------|-------------------|---------------|-----------|---------|
+| `trades` | Monthly range partitions | `created_at` (monthly) | Keep 12 months, archive older | Auto-prune at 03:00 daily |
+| `executions` | Monthly range partitions | `created_at` (monthly) | Keep 3 months, delete older | Auto-prune at 03:00 daily |
+| `ai_requests` | Monthly range partitions | `created_at` (monthly) | Keep 3 months, delete older | Auto-prune at 03:00 daily |
+| `health_checks` | Weekly range partitions | `checked_at` (weekly) | Keep 1 month, delete older | Auto-prune at 03:00 daily |
+| `secret_audit` | No partitioning (small table) | — | Keep 12 months | Auto-prune monthly |
+| `dead_letter_queue` | No partitioning (small table) | — | Keep 90 days | Auto-purge at 03:00 daily |
+| `plugin_registry` | No partitioning (small table) | — | Keep forever | Manual cleanup |
+| `wallets` | No partitioning (small table) | — | Keep forever | — |
+| `config_history` | Monthly range partitions | `created_at` (monthly) | Keep 6 months | Auto-prune monthly |
+| `system_events` | Monthly range partitions | `timestamp` (monthly) | Keep 1 month | Auto-prune daily |
+
+Note: SQLite does not have native partitioning. Partitioning is implemented via separate tables per time range (e.g., `trades_2026_07`, `trades_2026_08`) with a UNION ALL view for queries spanning multiple partitions.
+
+---
+
+## 12. Cross-Subsystem Integration
+
+| Caller | Purpose | Contract |
+|--------|---------|----------|
+| Trading Engine | Persist trade/execution records | `db.insert.trade` / `db.insert.execution` APIs |
+| AI Pipeline | Persist AI request records | `db.insert.ai_request` API |
+| Wallet Manager | Persist wallet records | `db.insert.wallet` / `db.update.wallet` APIs |
+| Plugin Manager | Persist plugin registry entries | `db.insert.plugin` / `db.update.plugin` APIs |
+| Health Checker | Persist health check results | `db.insert.health_check` API |
+| Event Bus | Persist events for replay | `db.insert.event` API |
+| Security Manager | Persist secret audit trail | `db.insert.secret_audit` API |
+| Config Manager | Persist config history | `db.insert.config_history` API |
+| Recovery Coordination | Query incomplete trades for recovery | `db.query.incomplete_trades` API |
+| Dashboard | Query trade/AI/wallet data | `db.query.dashboard.*` APIs |
+
+| Config Key | Default | Description |
+|-----------|---------|-------------|
+| `database.path` | `%APPDATA%/Apex/data/apex.db` | SQLite file path |
+| `database.backup.auto_frequency` | `weekly` | Auto-backup frequency |
+| `database.backup.max_files` | `10` | Maximum backup files |
+| `database.max_size_mb` | `5120` | Maximum database size (5 GB) |
+| `database.wal_mode` | `true` | WAL mode for concurrent read/write |
+| `database.vacuum_frequency` | `monthly` | VACUUM frequency |
+| `database.integrity_check_on_startup` | `true` | Check integrity on startup |
 
 ---
 
@@ -378,5 +486,6 @@ CREATE INDEX idx_recovery_created ON recovery_records(created_at);
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.2.0 | 2026-07-27 | Production-grade database contract: query patterns & performance expectations (12 queries), backup & restore (7+10 steps), partitioning strategy (10 tables), cross-subsystem integration | Data Team |
 | 1.1.0 | 2026-07-27 | Full DDL for 10 tables, indexes, access patterns, retention policies, migration strategy, Windows storage | Data Team |
 | 1.0.0 | 2025-01-15 | Initial stub (entity list only) | Data Team |
