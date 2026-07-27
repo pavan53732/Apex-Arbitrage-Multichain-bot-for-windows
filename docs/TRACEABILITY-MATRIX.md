@@ -1,9 +1,9 @@
 # Traceability Matrix
 
 **Owner:** Architecture Team  
-**Last Updated:** 2025-01-15  
+**Last Updated:** 2026-07-27  
 **Status:** Canonical Authority  
-**Version:** 1.0.0
+**Version:** 1.2.0
 
 ---
 
@@ -54,6 +54,27 @@ Each row represents one complete traceability chain.
 | REQ-DASHBOARD-002 | Dashboard must support workspace autosave and restore | ADR-0007 | workspace-manager | `dashboard.workspace_autosave_interval_ms` | test-workspace-autosave-001 | DASHBOARD-WORKSPACES.md | Dashboard Team | ✓ | Periodic persistence |
 | REQ-SECURITY-003 | Audit logging must have configurable retention | ADR-0006 | audit-logger | `security.audit.enabled`, `security.audit.retention_days` | test-audit-retention-001 | SECURITY.md | Security Team | ✓ | Configurable retention with rotation |
 | REQ-RESOURCE-002 | Resource manager must enforce per-plugin resource budgets | ADR-0006 | resource-manager | `plugin.sandbox.memory_limit_mb`, `plugin.sandbox.cpu_quota_percent` | test-resource-plugin-enforcement-001 | RESOURCE-BUDGET-SPECIFICATION.md | Ops Team | ✓ | Isolated per-plugin enforcement |
+| REQ-RUNTIME-005 | Orchestrator must coordinate 5-phase startup with latch gates | ADR-0006 | runtime-orchestrator | `runtime.startup_timeout_ms`, `runtime.startup.*_timeout_ms` | test-orchestrator-startup-001 | ORCHESTRATOR.md | Runtime Team | ✓ | Phase-gated initialization with per-phase budgets |
+| REQ-RUNTIME-006 | Platform mode must transition based on aggregate health score | ADR-0006 | runtime-orchestrator | `runtime.mode_transition_threshold` | test-mode-transition-001 | ORCHESTRATOR.md | Runtime Team | ✓ | 9-mode state machine with health score thresholds |
+| REQ-RUNTIME-007 | Shutdown must follow reverse startup order with drain timing | ADR-0006 | runtime-orchestrator | `runtime.shutdown_timeout_ms` | test-shutdown-order-001 | ORCHESTRATOR.md | Runtime Team | ✓ | Reverse-order drain with per-subsystem budgets |
+| REQ-RUNTIME-008 | Sleep/resume must coordinate checkpoint/reconnect/reconcile cycle | ADR-0006 | runtime-orchestrator | `runtime.sleep_checkpoint_timeout_ms` | test-sleep-resume-001 | ORCHESTRATOR.md | Runtime Team | ✓ | WM_POWERBROADCAST handling with checkpoint persistence |
+| REQ-IPC-001 | IPC must use named pipes with message-based envelope protocol | ADR-0002 | ipc-bridge | `ipc.connection_timeout_ms` | test-ipc-envelope-001 | IPC-PROTOCOL.md | Runtime Team | ✓ | Named pipe with DACL security, envelope schema |
+| REQ-IPC-002 | IPC must enforce delivery semantics per channel (at_most_once/at_least_once/exactly_once) | ADR-0002 | ipc-bridge | `ipc.dedup_window_ms` | test-ipc-delivery-001 | IPC-PROTOCOL.md | Runtime Team | ✓ | 3 delivery modes with ack protocol for exactly_once |
+| REQ-IPC-003 | IPC messages crossing trust boundaries must be anonymized | ADR-0006 | ipc-bridge | See IPC-PROTOCOL.md §8.1 | test-ipc-anonymization-001 | IPC-PROTOCOL.md | Security Team | ✓ | No wallet addresses, private keys, or trade details to T3 |
+| REQ-IPC-004 | IPC protocol must support backward-compatible version negotiation | ADR-0002 | ipc-bridge | See IPC-PROTOCOL.md §6 | test-ipc-version-001 | IPC-PROTOCOL.md | Runtime Team | ✓ | IPC-HELLO with version negotiation, additive-only changes |
+| REQ-E2E-001 | End-to-end signal flow must be documented from market data to dashboard | ADR-0002 | trading-engine | `trading.timeout_ms` | test-e2e-signal-flow-001 | END-TO-END-WIRING-CONTRACT.md | Architecture Team | ✓ | Full opportunity-to-dashboard flow with failure branching |
+| REQ-E2E-002 | Every runtime flow must have step-by-step sequencing with failure branches | ADR-0006 | runtime-orchestrator | See RUNTIME-FLOW-LIFECYCLE.md | test-runtime-flow-001 | RUNTIME-FLOW-LIFECYCLE.md | Runtime Team | ✓ | 10 documented flows with explicit step sequences |
+| REQ-STATE-001 | All state machines must be indexed with inter-machine coupling documented | ADR-0006 | runtime-orchestrator | See STATE-MACHINE-INDEX.md | test-state-machine-coupling-001 | STATE-MACHINE-INDEX.md | Architecture Team | ✓ | 9 state machines with coupling, startup/shutdown sequencing |
+| REQ-RECOVERY-001 | Recovery must follow phased ordering (foundation → infrastructure → application → extensions) | ADR-0006 | recovery-coordinator | See RECOVERY-COORDINATION.md | test-recovery-phasing-001 | RECOVERY-COORDINATION.md | Runtime Team | ✓ | 4-phase recovery with dependency ordering |
+| REQ-FF-001 | Feature flags must define rollout stages with canary/beta/production gates | ADR-0006 | feature-flag-manager | See FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md | test-feature-flag-001 | FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md | Architecture Team | ✓ | 3 rollout stages with percentage-based gates |
+| REQ-WIN-001 | Windows platform must support 4-process model with tray lifecycle | ADR-0006 | windows-app | `windows.tray_behavior` | test-windows-process-001 | WINDOWS-APP-ARCHITECTURE.md | Windows Team | ✓ | 4-process model, 7 tray states, sleep/resume handling |
+| REQ-WIN-002 | Windows service must have lifecycle state machine with recovery actions | ADR-0006 | windows-service | `windows.service.*` | test-windows-service-001 | WINDOWS-SERVICE-INTEGRATION.md | Windows Team | ✓ | 11 service states with SCM integration |
+| REQ-WIN-003 | Windows network must detect and recover from 8 network disruption types | ADR-0006 | windows-network | `windows.network.*` | test-windows-network-001 | WINDOWS-NETWORK-RESILIENCE.md | Windows Team | ✓ | 8 detections with reconnect backoff |
+| REQ-PLUGIN-004 | Plugin lifecycle must define discovery, dependency resolution, and capability negotiation | ADR-0003 | plugin-manager | `plugin.scan_interval`, `plugin.load_timeout_ms` | test-plugin-lifecycle-001 | PLUGIN-LIFECYCLE.md | Plugin Team | ✓ | 13 states from DISCOVERED to UNLOADED |
+| REQ-EVENT-004 | Event bus must support exactly_once delivery with ordering key dedup | ADR-0002 | event-bus | `event.dedup_window_ms` | test-event-exactly-once-001 | EVENT-BUS.md | Event Team | ✓ | SPSC per key, dedup window, ack protocol |
+| REQ-EVENT-005 | Event bus must route failed events to dead-letter queue with replay | ADR-0002 | event-bus | `event.dead_letter_enabled` | test-dlq-replay-001 | EVENT-BUS.md | Event Team | ✓ | DLQ with structured replay and max retries |
+| REQ-TEST-001 | Testing must cover 10 layers from unit to chaos to security testing | ADR-0006 | testing-framework | See TESTING.md | test-testing-layers-001 | TESTING.md | QA Team | ✓ | 10-layer pyramid with per-layer contracts |
+| REQ-DB-001 | Database must define query patterns and partitioning strategy | ADR-0006 | database | See DATABASE-SCHEMA.md §4 | test-db-query-pattern-001 | DATABASE-SCHEMA.md | Data Team | ✓ | Per-table query patterns, backup/restore, partitioning |
 
 ---
 
@@ -149,10 +170,12 @@ Each requirement is owned by one team. That team is responsible for:
 
 | Phase | Target | Status | Owner |
 |---|---|---|---|
-| Phase 1: Critical Contracts | Q1 2025 | In Progress | Architecture |
-| Phase 2: Threading & Concurrency | Q1 2025 | Pending | Runtime |
-| Phase 3: Engine Deepening | Q2 2025 | Pending | Domain Teams |
-| Phase 4: Full Audit & Validation | Q2 2025 | Pending | QA |
+| Phase 1: Critical Contracts | Q1 2025 | ✓ Complete | Architecture |
+| Phase 2: Threading & Concurrency | Q1 2025 | ✓ Complete | Runtime |
+| Phase 3: Engine Deepening | Q2 2025 | ✓ Complete | Domain Teams |
+| Phase 4: Full Audit & Validation | Q2 2025 | ✓ Complete | QA |
+| Phase 5: Cross-System Integration + Windows | Q3 2026 | ✓ Complete | Architecture + Windows |
+| Phase 6: Final Readiness Audit | Q3 2026 | ✓ Complete | Architecture |
 
 ---
 
@@ -200,4 +223,6 @@ Each requirement is owned by one team. That team is responsible for:
 | Version | Date | Changes | Author |
 |---|---|---|---|
 | 1.0.0 | 2025-01-15 | Initial canonical traceability matrix | Architecture |
+| 1.1.0 | 2026-07-27 | Add requirements for cross-system integration, state machine index, recovery coordination, feature flags | Architecture |
+| 1.2.0 | 2026-07-27 | Add requirements for orchestrator, IPC protocol, Windows platform, plugin lifecycle, event bus, testing, database | Architecture |
 

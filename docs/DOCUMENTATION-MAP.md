@@ -66,8 +66,8 @@ Defines ownership, authority, and cross-reference rules for the documentation se
 - Configuration: `docs/CONFIGURATION.md`
 - Database schema: `docs/DATABASE-SCHEMA.md`
 - State management: `docs/STATE-MANAGEMENT.md`
-- IPC protocol: `docs/IPC-PROTOCOL.md`
-- IPC message catalog: `docs/IPC-MESSAGE-CATALOG.md` (catalog under IPC protocol authority)
+- IPC protocol: `docs/IPC-PROTOCOL.md` (CONTRACT; v1.0.0)
+- IPC message catalog: `docs/IPC-MESSAGE-CATALOG.md` (REFERENCE; v1.0.0; catalog under IPC protocol authority — complete message type catalog)
 - API contracts: `docs/API-CONTRACTS.md`
 - API reference: `docs/API-REFERENCE.md`
 - Event flow: `docs/EVENT-FLOW.md`
@@ -134,18 +134,51 @@ These must not claim ownership and should only point to owners:
 
 
 ## New autonomous OS contracts
-- Runtime orchestrator: `docs/ORCHESTRATOR.md`
-- AI orchestration: `docs/AI-ORCHESTRATION.md`
-- AI agent specification: `docs/AI-AGENT-SPECIFICATION.md`
-- AI consensus: `docs/AI-CONSENSUS.md`
+- Runtime orchestrator: `docs/ORCHESTRATOR.md` (CONTRACT; v1.0.0; owns startup/shutdown sequencing, platform mode transitions, subsystem gating, recovery delegation)
+- AI orchestration: `docs/AI-ORCHESTRATION.md` (CONTRACT; v1.0.0; owns multi-agent coordination, orchestration modes, consensus protocol)
+- AI agent specification: `docs/AI-AGENT-SPECIFICATION.md` (stub; owned by AI-ORCHESTRATION.md)
+- AI consensus: `docs/AI-CONSENSUS.md` (stub; owned by AI-ORCHESTRATION.md)
 - Plugin SDK: `docs/PLUGIN-SDK.md`
 - Plugin marketplace: `docs/PLUGIN-MARKETPLACE.md`
-- Domain model: `docs/DOMAIN-MODEL.md`
-- Metrics: `docs/METRICS.md`
-- Healthchecks: `docs/HEALTHCHECKS.md`
+- Domain model: `docs/DOMAIN-MODEL.md` (CONTRACT; v1.1.0; owns entity definitions, PKs, relationships, invariants)
+- Metrics: `docs/METRICS.md` (stub)
+- Healthchecks: `docs/HEALTHCHECKS.md` (CONTRACT; v1.1.0; owns health probe definitions, health state machine, aggregate health score)
 
+## Cross-system integration contracts (Phase 1-4 additions)
+- End-to-end wiring: `docs/END-TO-END-WIRING-CONTRACT.md` (CONTRACT; v1.0.0; owns signal flow, data flow contract, event sequencing, failure branching, timing budget, config ownership)
+- Runtime flow lifecycle: `docs/RUNTIME-FLOW-LIFECYCLE.md` (CONTRACT; v1.0.0; owns 10 runtime flows with step-by-step sequencing)
+- State machine index: `docs/STATE-MACHINE-INDEX.md` (INDEX; v1.1.0; owns inter-state-machine coupling, startup/shutdown state coupling, recovery coordination)
+- Recovery coordination: `docs/RECOVERY-COORDINATION.md` (CONTRACT; owns multi-failure recovery coordination, phased recovery ordering)
+- Feature flag governance: `docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md` (CONTRACT; owns feature flag definitions, rollout stages)
+- Documentation status review: `docs/DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md` (CONTRACT; owns documentation review and lifecycle governance)
 
-## Product surface contracts
+## Windows Platform contracts (deepened Phase 5)
+- Windows app architecture: `docs/WINDOWS-APP-ARCHITECTURE.md` (CONTRACT; v1.0.0; owns 4-process model, tray lifecycle, sleep/resume, portable mode, crash dumps)
+- Windows service integration: `docs/WINDOWS-SERVICE-INTEGRATION.md` (CONTRACT; v1.0.0; owns service lifecycle state machine, recovery actions, session 0)
+- Windows network resilience: `docs/WINDOWS-NETWORK-RESILIENCE.md` (CONTRACT; v1.0.0; owns network detection, reconnect backoff, proxy handling, DNS)
+- Windows notification integration: `docs/WINDOWS-NOTIFICATION-INTEGRATION.md` (CONTRACT; v1.0.0; owns notification channels, severity mapping, rate limiting)
+- Windows security integration: `docs/WINDOWS-SECURITY-INTEGRATION.md` (CONTRACT; v1.0.0; owns DPAPI, code signing, update chain, AppContainer)
+- Windows desktop: `docs/WINDOWS-DESKTOP.md` (CONTRACT; v1.0.0; owns window states, first-run wizard, offline/degraded UI)
+- Windows deployment: `docs/WINDOWS-DEPLOYMENT.md` (CONTRACT; v1.0.0; owns 3 package formats, installer lifecycle, update/rollback)
+
+## Deepened subsystem contracts (Phase 5)
+- Dashboard widgets: `docs/DASHBOARD-WIDGETS.md` (CONTRACT; v1.0.0; deepened — lifecycle hooks, rendering pipeline, dependency graph)
+- Dashboard runtime: `docs/DASHBOARD-RUNTIME.md` (CONTRACT; v1.0.0; deepened — init sequence, IPC bridge contract)
+- Dashboard layout: `docs/DASHBOARD-LAYOUT.md` (CONTRACT; v1.0.0; deepened — dock contract schema, layout serialization + migration)
+- Dashboard workspaces: `docs/DASHBOARD-WORKSPACES.md` (CONTRACT; v1.0.0; deepened — cross-subsystem integration)
+- AI provider manager: `docs/AI-PROVIDER-MANAGER.md` (CONTRACT; v1.0.0; deepened — 7-provider inventory, scoring algorithm, failover matrix)
+- Trading engine: `docs/TRADING-ENGINE.md` (CONTRACT; v1.0.0; deepened — 11-step execution algorithm, risk scoring, MEV decision tree)
+- Execution engine: `docs/EXECUTION-ENGINE.md` (CONTRACT; v1.0.0; deepened — multi-chain execution, gas handling)
+- Threading model: `docs/THREADING-MODEL.md` (CONTRACT; v1.0.0; deepened — thread ownership matrix, deadlock prevention)
+- Worker pool: `docs/WORKER-POOL.md` (CONTRACT; v1.0.0; deepened — lifecycle state machine, priority queues, scaling policy)
+- Task scheduler: `docs/TASK-SCHEDULER.md` (CONTRACT; v1.0.0; deepened — 5 scheduler components, 16 scheduled tasks)
+- Plugin lifecycle: `docs/PLUGIN-LIFECYCLE.md` (CONTRACT; v1.0.0; deepened — discovery, dependency resolution, capability negotiation)
+- Event bus: `docs/EVENT-BUS.md` (CONTRACT; v1.0.0; deepened — producer/consumer contracts, exactly-once protocol, DLQ)
+- Database schema: `docs/DATABASE-SCHEMA.md` (CONTRACT; v1.0.0; deepened — query patterns, backup/restore, partitioning)
+- Security: `docs/SECURITY.md` (CONTRACT; v1.0.0; deepened — STRIDE threat model, secure update chain)
+- Testing: `docs/TESTING.md` (CONTRACT; v1.0.0; deepened — 10-layer pyramid, contract/state-machine/chaos testing)
+- IPC protocol: `docs/IPC-PROTOCOL.md` (CONTRACT; v1.0.0; deepened — named pipe transport, envelope schema, typed channel catalog, delivery semantics, versioning, anonymization)
+- IPC message catalog: `docs/IPC-MESSAGE-CATALOG.md` (REFERENCE; v1.0.0; deepened — complete message type catalog with 7 categories, payload schemas, error behavior)## Product surface contracts
 - UI Dashboard: `docs/UI-DASHBOARD-SPEC.md`
 - AI Provider Manager: `docs/AI-PROVIDER-MANAGER.md`
 - AI Gateway: `docs/AI-GATEWAY.md`

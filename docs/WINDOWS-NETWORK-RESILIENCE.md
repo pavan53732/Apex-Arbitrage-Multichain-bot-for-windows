@@ -177,6 +177,7 @@ Defines how the desktop app and backend survive Windows network changes — prox
 - **WINDOWS-APP-ARCHITECTURE.md** — Power event network recovery.
 - **TRADING-ENGINE.md** — Trading pause/resume on network change.
 - **CONFIGURATION-REFERENCE.md** — Network config keys.
+- **TRACEABILITY-MATRIX.md** — REQ-WIN-003.
 
 ---
 

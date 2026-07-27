@@ -255,6 +255,7 @@ describe('Execution State Machine', () => {
 - **THREADING-MODEL.md** — Threading test targets.
 - **CONFIGURATION-REFERENCE.md** — Test config keys.
 - **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem test wiring.
+- **TRACEABILITY-MATRIX.md** — REQ-TEST-001.
 
 ---
 

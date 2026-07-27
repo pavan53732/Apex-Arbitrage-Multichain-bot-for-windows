@@ -277,6 +277,7 @@ stateDiagram-v2
 - **PERMISSION-MODEL.md** — Plugin permission enforcement.
 - **CONFIGURATION-REFERENCE.md** — Plugin lifecycle config keys (`plugin.*`).
 - **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
+- **TRACEABILITY-MATRIX.md** — REQ-PLUGIN-004.
 
 ---
 

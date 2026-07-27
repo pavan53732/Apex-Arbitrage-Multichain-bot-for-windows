@@ -337,6 +337,7 @@ See **DASHBOARD-LAYOUT.md §6** for full multi-monitor layout rules. This docume
 - **SECRET-LIFECYCLE.md** — Secret zeroing on sleep, re-auth on wake.
 - **CONFIGURATION-REFERENCE.md** — Windows config keys (`windows.*`).
 - **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
+- **TRACEABILITY-MATRIX.md** — REQ-WIN-001.
 
 ---
 

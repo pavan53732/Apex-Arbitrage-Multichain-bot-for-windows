@@ -204,6 +204,7 @@ constraints:
 - **RESOURCE-BUDGET-SPECIFICATION.md** — Worker resource budgets.
 - **CONFIGURATION-REFERENCE.md** — Worker config keys.
 - **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
+- **TRACEABILITY-MATRIX.md** — REQ-RUNTIME-004, REQ-RESOURCE-002.
 
 ---
 

@@ -359,6 +359,7 @@ PARTITION_COUNT: event.bus.partition_count (default 8)
 - **RUNTIME-OPERATIONS.md** — Runtime event handling.
 - **RECOVERY-COORDINATION.md** — Event replay during recovery.
 - **CONFIGURATION-REFERENCE.md** — Event bus config keys.
+- **TRACEABILITY-MATRIX.md** — REQ-EVENT-001, REQ-EVENT-004, REQ-EVENT-005.
 
 ---
 

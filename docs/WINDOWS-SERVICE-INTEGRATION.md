@@ -165,6 +165,7 @@ stateDiagram-v2
 - **SHUTDOWN-LIFECYCLE.md** — Shutdown sequence.
 - **IPC-PROTOCOL.md** — Cross-session IPC protocol.
 - **CONFIGURATION-REFERENCE.md** — Windows service config keys.
+- **TRACEABILITY-MATRIX.md** — REQ-WIN-002.
 
 ---
 

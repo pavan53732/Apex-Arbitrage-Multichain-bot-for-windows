@@ -325,6 +325,7 @@ Defines the complete set of runtime flows — worker creation/shutdown, plugin d
 - **WORKER-STATE-MACHINE.md** — Worker lifecycle states.
 - **SERVICE-STATE-MACHINE.md** — Windows service and power events.
 - **APP-BUILDER-WORKFLOW.md** — Update pipeline and rollback.
+- **TRACEABILITY-MATRIX.md** — REQ-E2E-002, REQ-RUNTIME-008.
 
 ---
 

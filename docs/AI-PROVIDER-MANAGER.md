@@ -283,6 +283,7 @@ daily_total = Σ(all request costs in rolling 24-hour window)
 - **SECRET-LIFECYCLE.md** — API key storage and rotation.
 - **CONFIGURATION-REFERENCE.md** — Provider config keys (`ai.providers.*`).
 - **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
+- **TRACEABILITY-MATRIX.md** — REQ-AI-001, REQ-AI-006.
 
 ---
 

@@ -131,6 +131,7 @@ Every plugin must include a `plugin.yaml` manifest (see `PLUGIN-SDK.md` §1 for 
 - **TRUST-BOUNDARIES.md** — Plugin trust domain T4.
 - **APP-BUILDER-WORKFLOW.md** — Build pipeline for plugins.
 - **CONFIGURATION-REFERENCE.md** — `plugin.*` config keys.
+- **TRACEABILITY-MATRIX.md** — REQ-PLUGIN-001, REQ-PLUGIN-002.
 
 ---
 
