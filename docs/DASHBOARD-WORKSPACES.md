@@ -1,13 +1,13 @@
 # Dashboard Workspaces
 
 ## Document type
-Document type: [REFERENCE]
+Document type: [CONTRACT]
 
 ## Version
-**Version:** 0.3.0 | **Status:** Draft | **Last Updated:** 2026-07-27 | **Owner:** Dashboard Team
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Dashboard Team
 
 ## Purpose
-Defines workspace persistence, restore, sharing, and isolation for desktop sessions — with workspace lifecycle, autosave semantics, crash recovery, and multi-profile support.
+Defines workspace persistence, restore, sharing, and isolation for desktop sessions — with workspace lifecycle, autosave semantics, crash recovery, multi-profile support, workspace state synchronization, cross-subsystem integration, and workspace manager contracts.
 
 ---
 
@@ -123,13 +123,78 @@ Each workspace is a JSON object:
 
 ## Cross-References
 
-- **DASHBOARD-LAYOUT.md** — Layout model and panel placement.
-- **TRACEABILITY-MATRIX.md** — Requirement-to-document mapping and governance validation.
-- **DASHBOARD-WIDGETS.md** — Widget lifecycle and data binding.
-- **DASHBOARD-RUNTIME.md** — Dashboard initialization and data flow.
-- **WORKSPACE-MANAGER.md** — Workspace manager service.
+- **DASHBOARD-LAYOUT.md** — Layout model, panel placement, docking, serialization, multi-monitor.
+- **DASHBOARD-WIDGETS.md** — Widget lifecycle, dependency graph, communication, state synchronization.
+- **DASHBOARD-RUNTIME.md** — Dashboard initialization, IPC data flow, cross-subsystem integration.
+- **WORKSPACE-MANAGER.md** — Workspace manager service implementation.
 - **UI-COMPONENT-SPEC.md** — Design system.
 - **CONFIGURATION-REFERENCE.md** — Workspace config keys.
+- **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
+- **TRACEABILITY-MATRIX.md** — Workspace requirement coverage.
+
+---
+
+## 7. Cross-Subsystem Integration
+
+### 7.1 Who Calls Workspace Manager
+
+| Caller | Purpose | Contract |
+|--------|---------|----------|
+| Dashboard Runtime | Init workspace, workspace switch | `workspace.init` / `workspace.switch` API |
+| Layout Manager | Persist layout changes | `workspace.persistLayout` API |
+| Widget Registry | Persist widget config | `workspace.persistWidgetConfig` API |
+| Config Manager | Apply config to workspace | `workspace.applyConfig` API |
+| Windows Desktop | Sleep/resume triggers | `workspace.suspend` / `workspace.resume` OS events |
+
+### 7.2 Who Workspace Manager Calls
+
+| Target | Purpose | Contract |
+|--------|---------|----------|
+| Dashboard Runtime | Broadcast workspace switch | `dashboard.workspace.switched` broadcast |
+| Layout Manager | Load layout from workspace | `layout.load` API |
+| Widget Registry | Load widget config | `widget.loadConfig` API |
+| Config Manager | Get workspace-specific config | `config.get` API |
+| Event Bus | Emit workspace events | `workspace.*` events |
+
+### 7.3 Events Workspace Manager Emits
+
+| Event | Payload | Consumer |
+|-------|---------|----------|
+| `workspace.created` | `{workspace_id, name, profile}` | Dashboard, Audit |
+| `workspace.switched` | `{from_id, to_id, profile}` | Dashboard, Widgets (broadcast) |
+| `workspace.saved` | `{workspace_id, trigger, checksum}` | Audit |
+| `workspace.deleted` | `{workspace_id, profile}` | Dashboard, Audit |
+| `workspace.corrupted` | `{workspace_id, recovery_action}` | Dashboard, Health |
+
+### 7.4 Events Workspace Manager Consumes
+
+| Event | Source | Handler |
+|-------|--------|---------|
+| `dashboard.ready` | Dashboard Runtime | Load default workspace |
+| `config.updated` | Config Manager | Re-apply config to workspace |
+| `plugin.loaded` | Plugin Manager | Add plugin widgets to workspace |
+| `plugin.unloaded` | Plugin Manager | Remove plugin widgets from workspace |
+| `system.shutdown.phase` | Runtime | Flush workspace to disk |
+
+### 7.5 Configuration Workspace Manager Owns
+
+| Config Key | Default | Description |
+|-----------|---------|-------------|
+| `workspace.auto_save_interval_ms` | `30000` | Autosave debounce interval |
+| `workspace.max_per_profile` | `10` | Max workspaces per profile |
+| `workspace.storage_path` | `%APPDATA%/apex/workspaces` | Workspace storage directory |
+| `workspace.default_name` | `Default Trading` | Default workspace name |
+| `workspace.archive_on_delete` | `true` | Archive instead of permanently delete |
+
+### 7.6 State Workspace Manager Owns
+
+| State Domain | Type | Persistence | Recovery |
+|-------------|------|-------------|----------|
+| Active workspace | Workspace ID | Profile config | Default workspace |
+| Workspace list | Array of workspace metadata | Profile config | Scan storage directory |
+| Workspace layout | Panel positions, widget config | Workspace JSON | Default layout |
+| Workspace filters | Per-workspace filters | Workspace JSON | No filters (reset) |
+| Workspace preferences | Theme, font, autosave | Workspace JSON | Defaults |
 
 ---
 
@@ -137,5 +202,6 @@ Each workspace is a JSON object:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.0.0 | 2026-07-27 | Production-grade workspace contract: cross-subsystem integration (who calls, events, config, state), workspace manager contracts | Dashboard Team |
 | 0.3.0 | 2026-07-27 | Full workspace lifecycle, schema, save triggers, crash recovery, multi-profile, management API | Dashboard Team |
 | 0.1.0 | 2026-07-27 | Initial stub | Dashboard Team |
