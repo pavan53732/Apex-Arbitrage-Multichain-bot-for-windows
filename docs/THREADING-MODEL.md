@@ -1,10 +1,10 @@
 # Threading Model
 
 ## Document type
-Document type: [REFERENCE]
+Document type: [CONTRACT]
 
 ## Version
-**Version:** 0.2.0 | **Status:** Draft | **Last Updated:** 2026-07-27 | **Owner:** Runtime Team
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Runtime Team
 
 ## Purpose
 Defines the threading architecture — main thread, worker threads, background task rules, thread safety guarantees, and thread lifecycle.

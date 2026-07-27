@@ -1,10 +1,10 @@
 # Security
 
 ## Document type
-Document type: [REFERENCE]
+Document type: [CONTRACT]
 
 ## Version
-**Version:** 0.2.0 | **Status:** Draft | **Last Updated:** 2026-07-27 | **Owner:** Security Team
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Security Team
 
 ## Purpose
 Defines the platform security baseline — threat model, secret handling, trust boundaries, permission model, signing, incident response, and Windows-specific security integration.
