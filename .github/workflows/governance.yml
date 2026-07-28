@@ -1,0 +1,44 @@
+name: Governance Validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install -e tools/governance[dev]
+
+      - name: Run governance platform
+        run: |
+          PYTHONPATH=tools/governance python -m governance.cli.main run
+
+      - name: Validate governance
+        run: |
+          PYTHONPATH=tools/governance python -m governance.cli.main validate
+
+      - name: Check behavioural roots
+        run: |
+          PYTHONPATH=tools/governance python -m governance.cli.main roots
+
+      - name: Verify graphs generated
+        run: |
+          ls -la .governance/graphs/
+          test -f .governance/graphs/dependency_graph.graphml
+
+      - name: Verify exports generated
+        run: |
+          ls -la .governance/exports/
+          test -f .governance/exports/documents.json
