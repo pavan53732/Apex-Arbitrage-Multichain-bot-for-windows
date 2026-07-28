@@ -1,0 +1,248 @@
+{
+  "workstream_id": "WS0",
+  "name": "Governance Test Harness",
+  "status": "IMPLEMENTATION_START",
+  "fixtures": {
+    "minimal_valid_repository": {
+      "description": "Minimal valid repository with 1 root, 1 doc",
+      "expected_roots": 1,
+      "expected_docs": 1
+    },
+    "medium_repository": {
+      "description": "Medium repository with 10 roots, 50 docs",
+      "expected_roots": 10,
+      "expected_docs": 50
+    },
+    "full_apex_repository": {
+      "description": "Full Apex repository snapshot",
+      "expected_roots": 22,
+      "expected_docs": 360
+    },
+    "corrupted_repository": {
+      "description": "Corrupted repository with missing owners",
+      "expected_errors": [
+        "missing_owners"
+      ],
+      "expected_roots": 0
+    },
+    "duplicate_ownership_repository": {
+      "description": "Repository with duplicate authority",
+      "expected_errors": [
+        "duplicate_ownership"
+      ],
+      "expected_roots": 0
+    },
+    "broken_references_repository": {
+      "description": "Repository with broken cross-references",
+      "expected_errors": [
+        "broken_references"
+      ],
+      "expected_roots": 0
+    },
+    "cyclic_dependency_repository": {
+      "description": "Repository with cyclic dependencies",
+      "expected_errors": [
+        "cycles"
+      ],
+      "expected_roots": 0
+    },
+    "missing_metadata_repository": {
+      "description": "Repository with missing metadata",
+      "expected_errors": [
+        "missing_metadata"
+      ],
+      "expected_roots": 0
+    },
+    "invalid_graph_repository": {
+      "description": "Repository with invalid graph structure",
+      "expected_errors": [
+        "invalid_graph"
+      ],
+      "expected_roots": 0
+    },
+    "invalid_closure_repository": {
+      "description": "Repository with invalid closure",
+      "expected_errors": [
+        "invalid_closure"
+      ],
+      "expected_roots": 0
+    }
+  },
+  "golden_outputs": {
+    "root_registry": "golden_root_registry.json",
+    "dependency_graph": "golden_dependency_graph.graphml",
+    "ownership_graph": "golden_ownership_graph.graphml",
+    "closure_manifests": "golden_closures/",
+    "metrics": "golden_metrics.json",
+    "validator_findings": "golden_findings.json",
+    "evidence": "golden_evidence/",
+    "integrity_report": "golden_integrity.json"
+  },
+  "regression_suite": {
+    "fixtures": [
+      "minimal_valid_repository",
+      "medium_repository",
+      "full_apex_repository",
+      "corrupted_repository",
+      "duplicate_ownership_repository",
+      "broken_references_repository",
+      "cyclic_dependency_repository",
+      "missing_metadata_repository",
+      "invalid_graph_repository",
+      "invalid_closure_repository"
+    ],
+    "engines": [
+      "Indexer",
+      "Parser",
+      "Validator",
+      "GraphBuilder",
+      "RootDetector",
+      "ClosureEngine",
+      "IntegrityEngine"
+    ],
+    "expected_results": "per_fixture_per_engine"
+  },
+  "performance_benchmarks": {
+    "index_time_ms": {
+      "minimal": 100,
+      "medium": 500,
+      "full": 2000,
+      "threshold_ms": 5000
+    },
+    "parse_time_ms": {
+      "minimal": 50,
+      "medium": 250,
+      "full": 1000,
+      "threshold_ms": 2000
+    },
+    "graph_generation_ms": {
+      "minimal": 100,
+      "medium": 500,
+      "full": 2000,
+      "threshold_ms": 5000
+    },
+    "closure_generation_ms": {
+      "minimal": 200,
+      "medium": 1000,
+      "full": 5000,
+      "threshold_ms": 10000
+    },
+    "validation_ms": {
+      "minimal": 100,
+      "medium": 500,
+      "full": 2000,
+      "threshold_ms": 5000
+    },
+    "integrity_check_ms": {
+      "minimal": 200,
+      "medium": 1000,
+      "full": 5000,
+      "threshold_ms": 10000
+    }
+  },
+  "determinism_tests": {
+    "runs": 10,
+    "tolerance": "exact_match_excluding_timestamps_hashes",
+    "commands": [
+      "index",
+      "parse",
+      "validate",
+      "graphs",
+      "roots",
+      "closures",
+      "integrity"
+    ]
+  },
+  "fresh_clone_tests": {
+    "steps": [
+      "Clone",
+      "Install",
+      "Index",
+      "Parse",
+      "Graph",
+      "Validate",
+      "Integrity"
+    ],
+    "expected_match": "golden_outputs"
+  },
+  "corruption_tests": {
+    "missing_owners": {
+      "inject": "remove_owner_from_doc",
+      "detect": "validator",
+      "expected_severity": "HIGH"
+    },
+    "missing_references": {
+      "inject": "remove_referenced_doc",
+      "detect": "validator",
+      "expected_severity": "MEDIUM"
+    },
+    "cycles": {
+      "inject": "add_cyclic_dependency",
+      "detect": "graph_validator",
+      "expected_severity": "CRITICAL"
+    },
+    "duplicate_authority": {
+      "inject": "assign_same_owner_to_multiple_docs",
+      "detect": "ownership_validator",
+      "expected_severity": "HIGH"
+    },
+    "invalid_schemas": {
+      "inject": "corrupt_schema",
+      "detect": "schema_validator",
+      "expected_severity": "HIGH"
+    },
+    "broken_graphs": {
+      "inject": "remove_graph_edges",
+      "detect": "graph_validator",
+      "expected_severity": "HIGH"
+    }
+  },
+  "stress_tests": {
+    "docs_500": {
+      "expected_index_time_ms": 2500,
+      "expected_parse_time_ms": 1250
+    },
+    "docs_1000": {
+      "expected_index_time_ms": 5000,
+      "expected_parse_time_ms": 2500
+    },
+    "docs_5000": {
+      "expected_index_time_ms": 25000,
+      "expected_parse_time_ms": 12500
+    }
+  },
+  "fuzz_tests": {
+    "mutate_metadata": {
+      "probability": 0.1,
+      "expected": "graceful_failure"
+    },
+    "mutate_references": {
+      "probability": 0.1,
+      "expected": "graceful_failure"
+    },
+    "mutate_tables": {
+      "probability": 0.05,
+      "expected": "graceful_failure"
+    },
+    "mutate_graphs": {
+      "probability": 0.1,
+      "expected": "graceful_failure"
+    },
+    "mutate_closures": {
+      "probability": 0.05,
+      "expected": "graceful_failure"
+    }
+  },
+  "test_dashboard": {
+    "pass_rate": "percentage",
+    "coverage": "percentage",
+    "performance": "ms",
+    "determinism": "boolean",
+    "regression_status": "pass_fail"
+  },
+  "specification_drift_policy": {
+    "policy": "After Phase 0.75, no workstream may modify frozen architecture or specifications.",
+    "process": "If implementation reveals incorrect specification, implementation must stop. Change must be proposed through new ADR and specification update. Only after specification update may implementation continue.",
+    "purpose": "Prevent 'fixing the spec in code' and keep architecture as source of truth."
+  }
+}

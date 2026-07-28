@@ -76,5 +76,14 @@
     "release_process": ".governance/RELEASE.md",
     "migration_strategy": ".governance/MIGRATION.md",
     "compatibility_policy": ".governance/COMPATIBILITY.md"
+  },
+  "ws0": {
+    "status": "IMPLEMENTATION_START",
+    "implementation_plan": "ws0_implementation_plan.json"
+  },
+  "specification_drift_policy": {
+    "policy": "After Phase 0.75, no workstream may modify frozen architecture or specifications.",
+    "process": "If implementation reveals incorrect specification, implementation must stop. Change must be proposed through new ADR and specification update. Only after specification update may implementation continue.",
+    "purpose": "Prevent 'fixing the spec in code' and keep architecture as source of truth."
   }
 }
