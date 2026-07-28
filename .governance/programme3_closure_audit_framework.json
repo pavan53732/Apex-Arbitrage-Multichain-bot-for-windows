@@ -1,0 +1,329 @@
+{
+  "version": "1.0.0",
+  "name": "Programme 3 Closure Audit Framework",
+  "status": "FROZEN",
+  "1_document_classification": {
+    "classes": [
+      "BEHAVIOURAL_CONTRACT",
+      "SUPPORTING_CONTRACT",
+      "REFERENCE",
+      "INDEX",
+      "GUIDE",
+      "STANDARD",
+      "ADR",
+      "SCHEMA",
+      "TEST",
+      "POLICY",
+      "PROCEDURE"
+    ],
+    "required_by_class": {
+      "BEHAVIOURAL_CONTRACT": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "scope",
+        "responsibilities",
+        "owns",
+        "interfaces",
+        "events_produced",
+        "events_consumed",
+        "configuration",
+        "schemas",
+        "state_machines",
+        "recovery",
+        "security",
+        "validation",
+        "testing",
+        "performance",
+        "cross_references",
+        "canonical_source",
+        "version_history"
+      ],
+      "SUPPORTING_CONTRACT": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "scope",
+        "responsibilities",
+        "interfaces",
+        "configuration",
+        "schemas",
+        "recovery",
+        "security",
+        "validation",
+        "canonical_source"
+      ],
+      "REFERENCE": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "scope",
+        "canonical_source"
+      ],
+      "INDEX": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "canonical_source"
+      ],
+      "GUIDE": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "scope",
+        "canonical_source"
+      ],
+      "STANDARD": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "scope",
+        "canonical_source"
+      ],
+      "ADR": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "canonical_source"
+      ],
+      "SCHEMA": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "canonical_source"
+      ],
+      "TEST": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "canonical_source"
+      ],
+      "POLICY": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "scope",
+        "canonical_source"
+      ],
+      "PROCEDURE": [
+        "type",
+        "owner",
+        "status",
+        "version",
+        "purpose",
+        "scope",
+        "canonical_source"
+      ]
+    }
+  },
+  "2_closure_completeness": {
+    "audit_categories": [
+      "metadata",
+      "ownership",
+      "scope",
+      "responsibilities",
+      "dependencies",
+      "required_by",
+      "interfaces",
+      "events_produced",
+      "events_consumed",
+      "configuration",
+      "schemas",
+      "state_machines",
+      "recovery",
+      "security",
+      "validation",
+      "testing",
+      "performance",
+      "cross_references",
+      "version_history",
+      "canonical_source"
+    ],
+    "pass_criteria": {
+      "metadata": "All 8 fields present (type, owner, status, version, purpose, scope, last_updated, canonical_source)",
+      "ownership": "Exactly one canonical owner, no duplicates",
+      "dependencies": "All depends_on references resolve to existing documents",
+      "interfaces": "All interfaces documented with contracts",
+      "events": "All events have producer and consumer contracts",
+      "configuration": "All config keys have owners",
+      "schemas": "All schemas defined and versioned",
+      "state_machines": "All state machines have complete states and transitions",
+      "recovery": "All recovery paths documented",
+      "security": "All security boundaries documented",
+      "validation": "All validation rules defined",
+      "cross_references": "All cross-references resolve"
+    }
+  },
+  "3_gap_taxonomy": {
+    "categories": [
+      "METADATA",
+      "OWNERSHIP",
+      "DEPENDENCY",
+      "INTERFACE",
+      "EVENT",
+      "CONFIGURATION",
+      "SCHEMA",
+      "STATE_MACHINE",
+      "RECOVERY",
+      "SECURITY",
+      "VALIDATION",
+      "TESTING",
+      "PERFORMANCE",
+      "CROSS_REFERENCE",
+      "DUPLICATE_AUTHORITY",
+      "THIN_STUB",
+      "MISSING_ALGORITHM",
+      "MISSING_SEQUENCE",
+      "MISSING_FAILURE_BEHAVIOUR",
+      "MISSING_LIFECYCLE",
+      "MISSING_CONTRACT"
+    ],
+    "severity": {
+      "CRITICAL": [
+        "OWNERSHIP",
+        "DUPLICATE_AUTHORITY",
+        "MISSING_CONTRACT",
+        "MISSING_LIFECYCLE"
+      ],
+      "HIGH": [
+        "DEPENDENCY",
+        "INTERFACE",
+        "EVENT",
+        "SCHEMA",
+        "STATE_MACHINE",
+        "RECOVERY",
+        "SECURITY"
+      ],
+      "MEDIUM": [
+        "METADATA",
+        "CONFIGURATION",
+        "VALIDATION",
+        "MISSING_ALGORITHM",
+        "MISSING_SEQUENCE",
+        "MISSING_FAILURE_BEHAVIOUR"
+      ],
+      "LOW": [
+        "TESTING",
+        "PERFORMANCE",
+        "CROSS_REFERENCE",
+        "THIN_STUB"
+      ]
+    }
+  },
+  "4_repair_rules": {
+    "METADATA": "Update YAML front matter with missing fields",
+    "OWNERSHIP": "Assign canonical owner from repository authority, never invent",
+    "DEPENDENCY": "Add missing depends_on to canonical document only",
+    "INTERFACE": "Extend canonical interface document, never duplicate",
+    "EVENT": "Extend canonical event catalog or producer/consumer",
+    "CONFIGURATION": "Assign owner from configuration registry",
+    "SCHEMA": "Extend canonical schema document",
+    "STATE_MACHINE": "Extend canonical state machine document",
+    "RECOVERY": "Extend canonical recovery playbook",
+    "SECURITY": "Extend canonical security contracts",
+    "VALIDATION": "Extend canonical validation rules",
+    "DUPLICATE_AUTHORITY": "Retain one canonical owner, convert others to references",
+    "THIN_STUB": "Deepen only if belongs to active closure, otherwise reference",
+    "MISSING_ALGORITHM": "Document in canonical owner document",
+    "MISSING_SEQUENCE": "Document in lifecycle or procedure document",
+    "MISSING_FAILURE_BEHAVIOUR": "Document in recovery or state machine",
+    "MISSING_LIFECYCLE": "Create or extend lifecycle document under canonical owner",
+    "MISSING_CONTRACT": "Create contract under canonical owner"
+  },
+  "5_freeze_criteria": {
+    "required": [
+      "All required documents audited",
+      "No CRITICAL findings",
+      "No HIGH findings",
+      "No duplicate ownership",
+      "No unresolved dependencies",
+      "No missing interfaces",
+      "No missing schemas",
+      "No missing recovery",
+      "No missing security",
+      "No missing validation",
+      "No undocumented algorithms",
+      "Implementation readiness = 100%",
+      "Closure completeness = 100%"
+    ]
+  },
+  "6_evidence_requirements": {
+    "fields": [
+      "root_id",
+      "closure_id",
+      "document_modified",
+      "reason",
+      "audit_finding_resolved",
+      "validator_affected",
+      "commit_hash",
+      "timestamp"
+    ]
+  },
+  "7_regression_rules": {
+    "after_freeze": [
+      "Rebuild all graphs",
+      "Recompute all closures",
+      "Recompute completeness",
+      "Run all validators",
+      "Verify no previously frozen closure regressed"
+    ],
+    "on_regression": "Repair immediately, do not continue to next closure"
+  },
+  "8_closure_manifest_template": {
+    "root_id": "integer",
+    "root_path": "string",
+    "root_owner": "string",
+    "closure_documents": [
+      "list of paths"
+    ],
+    "closure_size": "integer",
+    "internal_dependency_graph": {
+      "from": [
+        "to"
+      ]
+    },
+    "external_dependencies": [
+      "paths to other roots"
+    ],
+    "shared_contracts": [
+      "paths"
+    ],
+    "shared_interfaces": [
+      "paths"
+    ],
+    "shared_events": [
+      "paths"
+    ],
+    "shared_configuration": [
+      "paths"
+    ],
+    "shared_schemas": [
+      "paths"
+    ],
+    "risk_level": "LOW|MEDIUM|HIGH",
+    "readiness_score": "0.0-1.0",
+    "freeze_status": "PENDING|FROZEN",
+    "freeze_timestamp": "ISO8601",
+    "freeze_commit": "hash"
+  }
+}
