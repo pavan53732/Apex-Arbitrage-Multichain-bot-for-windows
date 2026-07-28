@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Architecture Team
+status: Canonical
+version: 1.0.0
+purpose: Architecture documentation.
+scope: Reference documentation.
+canonical_source: docs/ARCHITECTURE.md if filename.startswith('docs/') else ARCHITECTURE.md
+---
+
 # Architecture
 
 ## Document type

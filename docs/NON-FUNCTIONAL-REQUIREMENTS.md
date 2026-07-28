@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: UI Team
+status: Canonical
+version: 1.0.0
+purpose: Non Functional Requirements documentation.
+scope: Reference documentation.
+canonical_source: docs/NON-FUNCTIONAL-REQUIREMENTS.md
+---
+
 # Non Functional Requirements
 
 ## Document type

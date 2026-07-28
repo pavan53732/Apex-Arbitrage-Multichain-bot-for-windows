@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Architecture Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the documentation review workflow — status metadata per document, review SLAs, approval gates, version tracking, and lifecycle transitions for every document in the repository.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md
+---
+
 # Documentation Status Review Workflow
 
 ## Document type

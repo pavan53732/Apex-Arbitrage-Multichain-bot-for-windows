@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Ops Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the canonical error namespace map, error taxonomy, retry classifications, severity mappings tied to error codes, logging policy, redaction rules, and escalation behavior. This document is the single authoritative source for all error handling governance.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/ERROR-HANDLING-LOGGING.md
+---
+
 # Error Handling Logging
 
 ## Document type

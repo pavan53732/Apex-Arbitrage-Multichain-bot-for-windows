@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: TABNINE AI tool documentation.
+scope: TABNINE reference.
+canonical_source: TABNINE.md
+---
+
 # TABNINE
 
 

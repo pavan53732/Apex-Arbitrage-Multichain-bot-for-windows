@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines concrete health probe definitions — check name, target, method, cadence, threshold, timeout, failure timing, and fail-closed behavior for every subsystem.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/HEALTHCHECKS.md
+---
+
 # Healthchecks
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: SPECIFICATION
+owner: UI Team
+status: Canonical
+version: 1.0.0
+purpose: Ui Dashboard Spec documentation.
+scope: Reference documentation.
+canonical_source: docs/UI-DASHBOARD-SPEC.md
+---
+
 # Ui Dashboard Spec
 
 ## Document type

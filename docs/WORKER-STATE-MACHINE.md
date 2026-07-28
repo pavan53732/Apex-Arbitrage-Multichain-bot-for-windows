@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete worker lifecycle state machine — states, transitions, timeouts, recovery transitions, forbidden transitions, and creation/shutdown flow.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/WORKER-STATE-MACHINE.md
+---
+
 # Worker State Machine
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Data Governance documentation.
+scope: Reference documentation.
+canonical_source: docs/DATA-GOVERNANCE.md
+---
+
 # Data Governance
 
 ## Document type

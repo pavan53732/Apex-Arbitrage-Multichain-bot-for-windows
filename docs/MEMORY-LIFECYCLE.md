@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines memory allocation, ownership, cleanup, and eviction policies for all subsystems — process memory, caches, AI memory stores, and workspace state.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/MEMORY-LIFECYCLE.md
+---
+
 # Memory Lifecycle
 
 ## Document type

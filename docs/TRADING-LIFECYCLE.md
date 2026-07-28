@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Trading Lifecycle documentation.
+scope: Reference documentation.
+canonical_source: docs/TRADING-LIFECYCLE.md
+---
+
 # Trading Lifecycle
 
 ## Document type

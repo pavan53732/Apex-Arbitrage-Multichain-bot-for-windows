@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: POLICY
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Ai Reasoning Policy documentation.
+scope: Reference documentation.
+canonical_source: docs/AI-REASONING-POLICY.md
+---
+
 # Ai Reasoning Policy
 
 ## Document type

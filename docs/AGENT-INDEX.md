@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: INDEX
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Agent Index documentation.
+scope: Reference documentation.
+canonical_source: docs/AGENT-INDEX.md
+---
+
 # Agent Index
 
 

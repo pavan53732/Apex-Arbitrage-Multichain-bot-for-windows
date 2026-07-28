@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: QODO AI tool documentation.
+scope: QODO reference.
+canonical_source: QODO.md
+---
+
 # QODO
 
 

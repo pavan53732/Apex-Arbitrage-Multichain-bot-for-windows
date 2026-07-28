@@ -1,7 +1,13 @@
-# Service Registry
-
-## Document type
-This document is an overview, reference, or index as noted below.
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines service registration, discovery, and lifecycle.
+scope: Service registry for runtime components.
+canonical_source: docs/SERVICE-REGISTRY.md
+---
 
 # Service Registry
 

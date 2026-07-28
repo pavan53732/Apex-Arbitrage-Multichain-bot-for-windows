@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: UI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines dashboard runtime.
+scope: Dashboard runtime management.
+canonical_source: docs/DASHBOARD-RUNTIME.md
+---
+
 # Dashboard Runtime
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Dashboard Team
 
 ## Purpose
 Defines the dashboard runtime composition — initialization sequence, page routing, rendering pipeline, IPC data flow, modal/overlay system, sandbox/preview modes, permission model, workspace persistence, state synchronization, event routing, and cross-subsystem integration contracts.
@@ -317,10 +322,3 @@ See **DASHBOARD-WIDGETS.md §7** for the complete event routing table. This docu
 - **TRACEABILITY-MATRIX.md** — Dashboard requirement coverage.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade runtime contract: initialization sequence with budgets, IPC bridge contract, cross-subsystem integration (who calls, who it calls, events, config, state, startup/shutdown/recovery dependencies), overlay system expansion | Dashboard Team |
-| 0.1.0 | 2026-07-27 | Full dashboard runtime spec | Dashboard Team |

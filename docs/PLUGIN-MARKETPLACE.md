@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Plugin Marketplace documentation.
+scope: Reference documentation.
+canonical_source: docs/PLUGIN-MARKETPLACE.md
+---
+
 # Plugin Marketplace
 
 ## Document type

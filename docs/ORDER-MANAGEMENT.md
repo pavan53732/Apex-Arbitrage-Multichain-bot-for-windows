@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Order Management documentation.
+scope: Reference documentation.
+canonical_source: docs/ORDER-MANAGEMENT.md
+---
+
 # Order Management
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Route Optimization documentation.
+scope: Reference documentation.
+canonical_source: docs/ROUTE-OPTIMIZATION.md
+---
+
 # Route Optimization
 
 ## Document type

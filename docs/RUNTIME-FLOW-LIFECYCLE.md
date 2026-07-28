@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete set of runtime flows — worker creation/shutdown, plugin discovery/load/unload/update, provider initialization/failure, configuration reload, dashboard initialization/workspace restore, AI initialization/fallback, recovery/failover, hot-reload/restart boundary, Windows sleep/resume/power events, and update installation/rollback.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/RUNTIME-FLOW-LIFECYCLE.md
+---
+
 # Runtime Flow Lifecycle
 
 ## Document type

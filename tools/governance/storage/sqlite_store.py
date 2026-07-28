@@ -13,13 +13,13 @@ class SqliteStore:
 
     def _init_schema(self):
         cur = self.conn.cursor()
-        cur.execute("CREATE TABLE IF NOT EXISTS documents (path TEXT PRIMARY KEY, type TEXT, owner TEXT, status TEXT, version TEXT)")
+        cur.execute("CREATE TABLE IF NOT EXISTS documents (path TEXT PRIMARY KEY, type TEXT, owner TEXT, status TEXT, version TEXT, purpose TEXT, scope TEXT, last_updated TEXT, canonical_source TEXT)")
         self.conn.commit()
 
     def upsert_documents(self, docs: Iterable[DocumentMetadata]):
         cur = self.conn.cursor()
         for d in docs:
-            cur.execute("INSERT OR REPLACE INTO documents (path, type, owner, status, version) VALUES (?, ?, ?, ?, ?)", (d.path, d.type, d.owner, d.status, d.version))
+            cur.execute("INSERT OR REPLACE INTO documents (path, type, owner, status, version, purpose, scope, last_updated, canonical_source) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", (d.path, d.type, d.owner, d.status, d.version, d.purpose, d.scope, d.last_updated, d.canonical_source))
         self.conn.commit()
 
     def get_all_paths(self) -> list[str]:

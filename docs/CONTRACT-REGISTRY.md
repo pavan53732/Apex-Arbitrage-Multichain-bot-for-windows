@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Contract Registry documentation.
+scope: Reference documentation.
+canonical_source: docs/CONTRACT-REGISTRY.md
+---
+
 # Contract Registry
 
 ## Document type

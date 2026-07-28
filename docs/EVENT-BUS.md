@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the central pub/sub backbone for asynchronous communication.
+scope: Producer/consumer contract, message schema, delivery guarantees, ordering, priority, retry, deduplication, timeout, persistence, replay, dead-letter handling, consumer groups, partitioning, and cross-subsystem integration.
+canonical_source: docs/EVENT-BUS.md
+---
+
 # Event Bus
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Runtime Team
 
 ## Purpose
 Defines the central pub/sub backbone for asynchronous communication — producer/consumer contract, message schema, delivery guarantees, ordering, priority, retry, deduplication, timeout, persistence, replay, dead-letter handling, consumer groups, partitioning, and cross-subsystem integration.
@@ -362,10 +367,3 @@ PARTITION_COUNT: event.bus.partition_count (default 8)
 - **TRACEABILITY-MATRIX.md** — REQ-EVENT-001, REQ-EVENT-004, REQ-EVENT-005.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade event bus contract: producer/consumer registration schema with rules, message envelope (9 required + 7 optional fields), exactly-once implementation (7 steps), ordering (3 types + partition assignment), priority (4 levels with retry budgets), retry algorithm with exponential backoff, deduplication protocol, timeout (4 types), persistence & replay (4 types + retention per category), DLQ configuration with entry schema, consumer groups (6 groups), cross-subsystem integration | Runtime Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Runtime Team |

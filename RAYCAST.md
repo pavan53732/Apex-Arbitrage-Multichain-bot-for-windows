@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: RAYCAST AI tool documentation.
+scope: RAYCAST reference.
+canonical_source: RAYCAST.md
+---
+
 # RAYCAST
 
 

@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines worker pool management, scaling, and worker lifecycle.
+scope: Worker pool for runtime components.
+canonical_source: docs/WORKER-POOL.md
+---
+
 # Worker Pool
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Runtime Team
 
 ## Purpose
 Defines formal worker capacity, lifecycle, queue priority, scheduling behavior, scaling policy, dynamic strategy weighting, crash recovery, and cross-subsystem integration contracts.
@@ -207,10 +212,3 @@ constraints:
 - **TRACEABILITY-MATRIX.md** — REQ-RUNTIME-004, REQ-RESOURCE-002.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade worker pool contract: lifecycle state machine with hooks, 4 priority queues with scheduling algorithm, dynamic strategy weighting formula, 11 task type budgets, scale-out/scale-in rules with constraints, crash recovery protocol, cross-subsystem integration | Runtime Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Runtime Team |

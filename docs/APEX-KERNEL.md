@@ -1,9 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the runtime kernel that owns service registration, lifecycle, events, health, dependency injection, configuration, and plugin loading.
+scope: Kernel is the root coordination layer beneath the UI, orchestrator, workers, strategies, AI, and blockchain adapters.
+canonical_source: docs/APEX-KERNEL.md
+---
+
 # Apex Kernel
-
-## Document type
-This document is an overview, reference, or index as noted below.
-
-# APEX Kernel
 
 ## Purpose
 Defines the runtime kernel that owns service registration, lifecycle, events, health, dependency injection, configuration, and plugin loading.

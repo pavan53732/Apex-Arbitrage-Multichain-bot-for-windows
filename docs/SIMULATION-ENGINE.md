@@ -1,7 +1,13 @@
-# Simulation Engine
-
-## Document type
-This document is an overview, reference, or index as noted below.
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Defines simulation engine.
+scope: Backtesting and simulation.
+canonical_source: docs/SIMULATION-ENGINE.md
+---
 
 # Simulation Engine
 

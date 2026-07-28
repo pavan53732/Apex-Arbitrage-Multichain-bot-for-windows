@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: GUIDE
+owner: UI Team
+status: Canonical
+version: 1.0.0
+purpose: App Builder Deployment Guide documentation.
+scope: Reference documentation.
+canonical_source: docs/APP-BUILDER-DEPLOYMENT-GUIDE.md
+---
+
 # App Builder Deployment Guide
 
 ## Document type

@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines runtime operational procedures and lifecycle management.
+scope: Operational runbook for runtime components.
+canonical_source: docs/RUNTIME-OPERATIONS.md
+---
+
 # Runtime Operations
-
-## Document type
-Document type: [REFERENCE]
-
-## Version
-**Version:** 0.2.0 | **Status:** Draft | **Last Updated:** 2026-07-27 | **Owner:** Runtime Team
 
 ## Purpose
 Defines how the backend runs, recovers, and stays observable in production — with explicit startup/shutdown/recovery sequencing, operator failure handling, and Windows-specific behavior.
@@ -182,10 +187,3 @@ Triggered when a critical subsystem fails and a backup is available.
 - **TRACEABILITY-MATRIX.md** — Runtime requirement coverage.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 0.2.0 | 2026-07-27 | Full startup/shutdown/recovery sequencing, operator failure handling, Windows behavior | Runtime Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Runtime Team |

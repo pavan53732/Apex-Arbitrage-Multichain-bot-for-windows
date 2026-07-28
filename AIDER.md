@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: AIDER AI tool documentation.
+scope: AIDER reference.
+canonical_source: AIDER.md
+---
+
 # AIDER
 
 

@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete precedence hierarchy for all context segments injected into AI prompts — pinned, critical, session, knowledge, reflection, history, and external — with enforcement rules, capacity allocation, and pruning strategy.
+scope: Context Priority Matrix scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/CONTEXT-PRIORITY-MATRIX.md
+---
+
 # Context Priority Matrix
 
 ## Document type

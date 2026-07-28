@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Execution Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete execution lifecycle state machine — states, transitions, timeouts, recovery transitions, forbidden transitions, failure transitions, and crash resume behavior for chain transaction execution.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/EXECUTION-STATE-MACHINE.md
+---
+
 # Execution State Machine
 
 ## Document type

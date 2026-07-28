@@ -1,3 +1,14 @@
+---
+type: OVERVIEW
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Readme documentation.
+scope: Reference documentation.
+last_updated: 2026-07-29
+canonical_source: docs/README.md if filename.startswith('docs/') else README.md
+---
+
 # Repository Agent Gates
 
 This repository uses root-level gate files to tell each coding assistant which canonical documents to read before making changes.

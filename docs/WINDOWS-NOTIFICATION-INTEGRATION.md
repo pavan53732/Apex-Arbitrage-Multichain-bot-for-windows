@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Windows Team
+status: Canonical
+version: 1.0.0
+purpose: Defines how the app uses Windows toasts, tray notifications, and Action Center behavior — severity mapping, click actions, delivery on restart, offline recovery, notification preferences, and cross-subsystem integration.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/WINDOWS-NOTIFICATION-INTEGRATION.md
+---
+
 # Windows Notification Integration
 
 ## Document type

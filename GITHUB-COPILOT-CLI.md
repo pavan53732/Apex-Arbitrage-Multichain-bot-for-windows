@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: GITHUB-COPILOT-CLI AI tool documentation.
+scope: GITHUB-COPILOT-CLI reference.
+canonical_source: GITHUB-COPILOT-CLI.md
+---
+
 # GITHUB COPILOT CLI
 
 

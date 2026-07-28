@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: UI Team
+status: Canonical
+version: 1.0.0
+purpose: Workflow Builder documentation.
+scope: Reference documentation.
+canonical_source: docs/WORKFLOW-BUILDER.md
+---
+
 # Workflow Builder
 
 ## Document type

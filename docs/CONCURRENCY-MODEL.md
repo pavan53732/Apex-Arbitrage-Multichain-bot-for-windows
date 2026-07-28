@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines concurrency primitives — locks, queues, cancellation, deadlock avoidance, atomic operations, and synchronization barriers.
+scope: Concurrency Model scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/CONCURRENCY-MODEL.md
+---
+
 # Concurrency Model
 
 ## Document type

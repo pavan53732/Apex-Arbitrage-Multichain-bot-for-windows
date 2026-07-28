@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Cross Exchange Arbitrage documentation.
+scope: Reference documentation.
+canonical_source: docs/CROSS-EXCHANGE-ARBITRAGE.md
+---
+
 # Cross Exchange Arbitrage
 
 ## Document type

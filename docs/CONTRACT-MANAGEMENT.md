@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Contract Management documentation.
+scope: Reference documentation.
+canonical_source: docs/CONTRACT-MANAGEMENT.md
+---
+
 # Contract Management
 
 ## Document type

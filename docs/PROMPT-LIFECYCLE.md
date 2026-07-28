@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete lifecycle of an AI prompt — construction, compression, memory injection, archival, and cleanup. This contract ensures deterministic, observable, and auditable prompt management.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/PROMPT-LIFECYCLE.md
+---
+
 # Prompt Lifecycle
 
 ## Document type

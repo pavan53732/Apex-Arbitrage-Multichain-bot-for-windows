@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Recovery And Failover documentation.
+scope: Reference documentation.
+canonical_source: docs/RECOVERY-AND-FAILOVER.md
+---
+
 # Recovery And Failover
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Interface Tool Call documentation.
+scope: Reference documentation.
+canonical_source: docs/INTERFACE-TOOL-CALL.md
+---
+
 # Interface Tool Call
 
 ## Document type

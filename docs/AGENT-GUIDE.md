@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: GUIDE
+owner: UI Team
+status: Canonical
+version: 1.0.0
+purpose: Agent Guide documentation.
+scope: Reference documentation.
+canonical_source: docs/AGENT-GUIDE.md
+---
+
 # Agent Guide
 
 

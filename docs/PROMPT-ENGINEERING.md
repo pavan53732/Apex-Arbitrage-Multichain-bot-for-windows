@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Prompt Engineering documentation.
+scope: Reference documentation.
+canonical_source: docs/PROMPT-ENGINEERING.md
+---
+
 # Prompt Engineering
 
 ## Document type

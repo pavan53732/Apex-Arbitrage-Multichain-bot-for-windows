@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines multi-agent orchestration and coordination.
+scope: AI agent sequencing within AI subsystem.
+canonical_source: docs/AI-ORCHESTRATION.md
+---
+
 # AI Orchestration
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** AI Team
 
 ## Purpose
 Defines lifecycle, coordination rules, multi-model orchestration, agent routing, sequencing, fallback, tool selection, memory coordination, consensus, decision handoff, and degradation behavior for the AI agent set.
@@ -382,10 +387,3 @@ Reflection produces structured output:
 - **CONFIGURATION-REFERENCE.md** — AI config keys.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade AI orchestration contract: 7-agent registry, multi-model orchestration (5 modes), tool selection algorithm, coordination rules, memory coordination, consensus protocol, streaming lifecycle, cancellation, provider scoring & cost optimisation, reflection cycles, cross-subsystem integration | AI Team |
-| 0.1.0 | 2026-07-27 | Initial stub | AI Team |

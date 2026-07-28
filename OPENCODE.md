@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: OPENCODE AI tool documentation.
+scope: OPENCODE reference.
+canonical_source: OPENCODE.md
+---
+
 # OpenCode
 
 

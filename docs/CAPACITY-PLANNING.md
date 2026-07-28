@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Ops Team
+status: Canonical
+version: 1.0.0
+purpose: Defines maximum supported throughput, concurrent operations, and sizing limits for all subsystems — workers, tasks, plugins, models, wallets, strategies, chains, and events per second.
+scope: Capacity Planning scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/CAPACITY-PLANNING.md
+---
+
 # Capacity Planning
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines recovery procedures by failure class — detection, classification, halt, retry, reconciliation, notification — with explicit playbooks for every subsystem.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/RECOVERY-PLAYBOOK.md
+---
+
 # Recovery Playbook
 
 ## Document type

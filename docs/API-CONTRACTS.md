@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Api Contracts documentation.
+scope: Reference documentation.
+canonical_source: docs/API-CONTRACTS.md
+---
+
 # Api Contracts
 
 ## Document type

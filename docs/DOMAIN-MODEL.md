@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Architecture Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the canonical platform entities, their identifiers, relationships, invariants, and vocabulary for the entire system domain — including trading, wallet, service, AI, plugin, and Windows desktop entities.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/DOMAIN-MODEL.md
+---
+
 # Domain Model
 
 ## Document type

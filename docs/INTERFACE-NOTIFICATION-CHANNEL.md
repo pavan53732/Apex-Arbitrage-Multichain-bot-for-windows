@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Interface Notification Channel documentation.
+scope: Reference documentation.
+canonical_source: docs/INTERFACE-NOTIFICATION-CHANNEL.md
+---
+
 # Interface Notification Channel
 
 ## Document type

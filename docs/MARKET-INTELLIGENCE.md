@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Market Intelligence documentation.
+scope: Reference documentation.
+canonical_source: docs/MARKET-INTELLIGENCE.md
+---
+
 # Market Intelligence
 
 ## Document type

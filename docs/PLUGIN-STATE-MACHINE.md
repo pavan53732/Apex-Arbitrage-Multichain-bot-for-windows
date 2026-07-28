@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Plugin Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete plugin lifecycle state machine — discovery, validation, installation, loading, activation, suspension, updating, failure, unloading — with transitions, timeouts, recovery paths, and forbidden transitions.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/PLUGIN-STATE-MACHINE.md
+---
+
 # Plugin State Machine
 
 ## Document type

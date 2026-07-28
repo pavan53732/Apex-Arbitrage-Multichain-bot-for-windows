@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: KILO-CODE AI tool documentation.
+scope: KILO-CODE reference.
+canonical_source: KILO-CODE.md
+---
+
 # Kilo Code
 
 

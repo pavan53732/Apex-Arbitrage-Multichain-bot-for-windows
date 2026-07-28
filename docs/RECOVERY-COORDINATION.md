@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the unified repository-wide recovery coordination contract — how subsystems coordinate during multi-failure scenarios, recovery ordering, escalation thresholds, reconciliation tasks, operator intervention rules, and failover orchestration across the entire platform.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/RECOVERY-COORDINATION.md
+---
+
 # Recovery Coordination
 
 ## Document type

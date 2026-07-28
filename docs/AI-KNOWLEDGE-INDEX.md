@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: INDEX
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Ai Knowledge Index documentation.
+scope: Reference documentation.
+canonical_source: docs/AI-KNOWLEDGE-INDEX.md
+---
+
 # Ai Knowledge Index
 
 ## Document type

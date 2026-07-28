@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Windows Team
+status: Canonical
+version: 1.0.0
+purpose: Defines how the trading backend can run under the Windows Service Control Manager — service lifecycle, auto-start, delayed start, recovery actions, session isolation, stop timeout, and installer lifecycle integration.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/WINDOWS-SERVICE-INTEGRATION.md
+---
+
 # Windows Service Integration
 
 ## Document type

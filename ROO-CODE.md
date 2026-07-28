@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: ROO-CODE AI tool documentation.
+scope: ROO-CODE reference.
+canonical_source: ROO-CODE.md
+---
+
 # ROO CODE
 
 

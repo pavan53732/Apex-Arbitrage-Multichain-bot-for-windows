@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Ops Team
+status: Canonical
+version: 1.0.0
+purpose: Defines metrics catalog, alert thresholds, health states, telemetry rules, dashboards, diagnostic exports, and Windows-specific observability integration for all subsystems.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/MONITORING-OBSERVABILITY.md
+---
+
 # Monitoring Observability
 
 ## Document type

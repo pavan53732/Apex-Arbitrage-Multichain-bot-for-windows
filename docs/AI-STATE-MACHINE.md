@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete AI orchestration state machine — states, transitions, timeouts, recovery transitions, forbidden transitions, prompt/tool/memory lifecycle state coupling, and provider routing lifecycle.
+scope: Ai State Machine scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/AI-STATE-MACHINE.md
+---
+
 # AI State Machine
 
 ## Document type

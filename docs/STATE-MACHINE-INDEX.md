@@ -1,3 +1,14 @@
+---
+type: INDEX
+owner: Architecture Team
+status: Canonical
+version: 1.0.0
+purpose: Provides a single authoritative index tying all major lifecycle state machines together — showing inter-state-machine coupling, shared transitions, startup/shutdown sequencing, and recovery coordination across the entire platform.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/STATE-MACHINE-INDEX.md
+---
+
 # System-Wide State Machine Index
 
 ## Document type

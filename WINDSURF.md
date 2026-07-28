@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: WINDSURF AI tool documentation.
+scope: WINDSURF reference.
+canonical_source: WINDSURF.md
+---
+
 # WINDSURF
 
 

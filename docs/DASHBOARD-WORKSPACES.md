@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: UI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines dashboard workspaces.
+scope: Workspace management.
+canonical_source: docs/DASHBOARD-WORKSPACES.md
+---
+
 # Dashboard Workspaces
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Dashboard Team
 
 ## Purpose
 Defines workspace persistence, restore, sharing, and isolation for desktop sessions — with workspace lifecycle, autosave semantics, crash recovery, multi-profile support, workspace state synchronization, cross-subsystem integration, and workspace manager contracts.
@@ -197,11 +202,3 @@ Each workspace is a JSON object:
 | Workspace preferences | Theme, font, autosave | Workspace JSON | Defaults |
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade workspace contract: cross-subsystem integration (who calls, events, config, state), workspace manager contracts | Dashboard Team |
-| 0.3.0 | 2026-07-27 | Full workspace lifecycle, schema, save triggers, crash recovery, multi-profile, management API | Dashboard Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Dashboard Team |

@@ -1,9 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Defines DEX registry.
+scope: DEX listing and metadata.
+canonical_source: docs/DEX-REGISTRY.md
+---
+
 # Dex Registry
-
-## Document type
-This document is an overview, reference, or index as noted below.
-
-# DEX Registry
 
 ## Purpose
 Defines the authoritative registry of supported DEXs and their capabilities.

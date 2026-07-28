@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Windows Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the Windows desktop shell behavior — tray lifecycle, window lifecycle, minimize-to-tray, restore-from-tray, first-run behavior, login recovery, offline UI, degraded states, multi-window, and cross-subsystem integration.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/WINDOWS-DESKTOP.md
+---
+
 # Windows Desktop
 
 ## Document type

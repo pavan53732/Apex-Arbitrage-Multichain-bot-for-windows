@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Ops Team
+status: Canonical
+version: 1.0.0
+purpose: Defines RAM, CPU, GPU, thread, queue, cache, network, and storage budgets per subsystem — with enforcement thresholds, backpressure behavior, and observability.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/RESOURCE-BUDGET-SPECIFICATION.md
+---
+
 # Resource Budget Specification
 
 ## Document type

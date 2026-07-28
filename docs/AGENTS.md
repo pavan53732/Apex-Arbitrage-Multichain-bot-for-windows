@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: AI agent documentation overview.
+scope: Agent reference.
+canonical_source: docs/AGENTS.md
+---
+
 # Agents
 
 
@@ -9,11 +20,6 @@ Before creating or modifying ANY markdown file, verify it complies with the 5 Pr
 - Cross-cutting docs must defer to canonical owners.
 - Short docs must explicitly declare whether they are an [INDEX], [OVERVIEW], or [REFERENCE].
 If a file fails any directive, abort and fix it before proceeding.
-
-## Document type
-[INDEX]
-
-# Agents
 
 ## Purpose
 Provides navigation to the authoritative documentation set.

@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Canonical registry of all platform events — including payload fields, producers, consumers, versioning rules, delivery guarantees, ordering constraints, retention, and ownership linkage.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/EVENT-CATALOG.md
+---
+
 # Event Catalog
 
 ## Document type

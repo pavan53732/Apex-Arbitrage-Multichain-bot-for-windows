@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the threading architecture — main thread, worker threads, background task rules, thread safety guarantees, and thread lifecycle.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/THREADING-MODEL.md
+---
+
 # Threading Model
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Windows Team
+status: Canonical
+version: 1.0.0
+purpose: Defines how the Windows desktop trading app is packaged, signed, installed, updated, and rolled back — installer lifecycle, update lifecycle, code signing, rollback rules, and cross-subsystem integration.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/WINDOWS-DEPLOYMENT.md
+---
+
 # Windows Deployment
 
 ## Document type

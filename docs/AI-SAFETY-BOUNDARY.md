@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete set of safety boundaries governing AI behavior — what AI may and may not do, when human approval is required, enforcement mechanisms, violation response, and integration with trust boundaries, permission model, and security contracts.
+scope: Ai Safety Boundary scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/AI-SAFETY-BOUNDARY.md
+---
+
 # AI Safety Boundary
 
 ## Document type

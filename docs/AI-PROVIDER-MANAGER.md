@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines provider abstraction, capability detection, provider scoring, health monitoring, failover, cost-aware selection, provider configuration, and test-connection behavior.
+scope: Ai Provider Manager scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/AI-PROVIDER-MANAGER.md
+---
+
 # AI Provider Manager
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Plugin Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the plugin sandbox contract — filesystem, memory, IPC, permissions, resource, network, and AI access boundaries for plugins.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/PLUGIN-SANDBOX-CONTRACT.md
+---
+
 # Plugin Sandbox Contract
 
 ## Document type

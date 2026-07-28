@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Ops Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the diagnostics subsystem — diagnosis workflow, artifact schema, export format, analysis pipeline, and integration with health checks, monitoring, and recovery coordination.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/DIAGNOSTICS.md
+---
+
 # Diagnostics
 
 ## Document type

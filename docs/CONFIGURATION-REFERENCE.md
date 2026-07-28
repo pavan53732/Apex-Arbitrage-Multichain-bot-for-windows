@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Config Team
+status: Canonical
+version: 1.0.0
+purpose: Enumerates every configuration key, owner, type, default, validation, reload, and restart requirement.
+scope: Configuration Reference scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/CONFIGURATION-REFERENCE.md
+---
+
 # Configuration Reference
 
 ## Document type

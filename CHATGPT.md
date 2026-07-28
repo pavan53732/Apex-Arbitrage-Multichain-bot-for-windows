@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: CHATGPT AI tool documentation.
+scope: CHATGPT reference.
+canonical_source: CHATGPT.md
+---
+
 # CHATGPT
 
 

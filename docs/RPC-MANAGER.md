@@ -1,9 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines RPC management, rate limiting, and RPC lifecycle.
+scope: RPC management for runtime components.
+canonical_source: docs/RPC-MANAGER.md
+---
+
 # Rpc Manager
-
-## Document type
-This document is an overview, reference, or index as noted below.
-
-# RPC Manager
 
 ## Purpose
 Authoritative owner for rpc manager.

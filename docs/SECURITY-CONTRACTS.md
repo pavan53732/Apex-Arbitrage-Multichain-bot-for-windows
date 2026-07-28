@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Security Team
+status: Canonical
+version: 1.0.0
+purpose: Security Contracts documentation.
+scope: Reference documentation.
+canonical_source: docs/SECURITY-CONTRACTS.md if filename.startswith('docs/') else SECURITY-CONTRACTS.md
+---
+
 # Security Contracts
 
 ## Document type

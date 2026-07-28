@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: UI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines dashboard widgets.
+scope: Widget specification.
+canonical_source: docs/DASHBOARD-WIDGETS.md
+---
+
 # Dashboard Widgets
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Dashboard Team
 
 ## Purpose
 Defines the reusable dashboard widgets — widget lifecycle, rendering pipeline, dependency graph, communication contracts, state synchronization, display states, refresh scheduling, performance budgets, lazy loading, virtualization, error overlays, offline behavior, plugin widget integration, and the Widget SDK lifecycle.
@@ -577,11 +582,3 @@ Widgets are registered in the widget registry (`registry://dashboard/widgets`):
 - **PERMISSION-MODEL.md** — Widget permission enforcement.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade widget contract: full lifecycle hooks, rendering pipeline, dependency graph, communication contracts, state synchronization, event routing, display states, error overlays, refresh scheduling, performance budgets, lazy loading, virtualization, multi-monitor, drag-and-drop, plugin widget integration, offline behavior, registration schema | Dashboard Team |
-| 0.3.0 | 2026-07-27 | Full widget lifecycle, display states, data binding, error handling, registration | Dashboard Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Dashboard Team |

@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: SPECIFICATION
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Ai Agent Specification documentation.
+scope: Reference documentation.
+canonical_source: docs/AI-AGENT-SPECIFICATION.md
+---
+
 # Ai Agent Specification
 
 

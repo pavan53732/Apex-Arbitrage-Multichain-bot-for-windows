@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Architecture Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the single authoritative end-to-end wiring contract connecting all subsystems — from AI signal through orchestration, decision, execution, wallet, trading, notification, to dashboard — with explicit data flow, event sequencing, failure branching, and recovery coordination.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/END-TO-END-WIRING-CONTRACT.md
+---
+
 # End-to-End Wiring Contract
 
 ## Document type

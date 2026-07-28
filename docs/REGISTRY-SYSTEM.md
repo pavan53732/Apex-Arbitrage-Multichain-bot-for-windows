@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Unified registry contract for chain, DEX, token, oracle, service, plugin, contract, and system capability registries — with common interface, versioning, validation, mutation, ownership, and reconciliation rules.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/REGISTRY-SYSTEM.md
+---
+
 # Registry System
 
 ## Document type

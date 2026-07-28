@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Quality Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete testing strategy — unit testing, integration testing, contract testing, state-machine testing, chaos testing, load testing, performance testing, recovery testing, security testing, end-to-end testing, Windows-specific testing, and cross-subsystem integration. See TESTING-GUIDE.md for detailed implementation guidance.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/TESTING.md
+---
+
 # Testing
 
 ## Document type

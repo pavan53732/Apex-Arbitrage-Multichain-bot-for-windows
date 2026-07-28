@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines task scheduling, priority queues, and task lifecycle.
+scope: Task scheduling for runtime components.
+canonical_source: docs/TASK-SCHEDULER.md
+---
+
 # Task Scheduler
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Runtime Team
 
 ## Purpose
 Defines the task scheduling system — cron-style scheduling, interval-based scheduling, one-shot tasks, scheduler behavior, task priority, queue integration, retry scheduling, and cross-subsystem integration contracts.
@@ -175,10 +180,3 @@ Schedule Definition → Cron Engine / Interval Timer / One-Shot Dispatcher
 - **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade task scheduler contract: 5 scheduler components, 16 scheduled task inventory, cron engine + interval timer + one-shot + retry scheduler behavior, priority integration with worker pool, cross-subsystem integration (who calls, events, config) | Runtime Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Runtime Team |

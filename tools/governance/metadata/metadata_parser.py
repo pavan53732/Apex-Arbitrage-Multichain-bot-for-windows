@@ -190,6 +190,14 @@ class MetadataParser:
             r"## Canonical Source\n+(.+?)(?=\n##|\n---|$)",
         ]) or front.get("canonical_source")
 
+
+        last_updated_val = self.extract_field(text, "last_updated", [
+            "last_updated", "last_updated:", "Last Updated", "Last updated", "Last-Updated"
+        ]) or front.get("last_updated")
+        if last_updated_val is not None and not isinstance(last_updated_val, str):
+            # Convert date/datetime to string
+            last_updated_val = str(last_updated_val)
+        meta_dict["last_updated"] = last_updated_val
         return DocumentMetadata(**meta_dict)
 
     def validate_required(self, meta: DocumentMetadata) -> list[str]:

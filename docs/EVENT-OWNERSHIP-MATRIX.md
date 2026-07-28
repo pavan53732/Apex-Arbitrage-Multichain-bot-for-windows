@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Maps publishers, consumers, delivery guarantees, ordering, priority, and retention for every event in the system.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/EVENT-OWNERSHIP-MATRIX.md
+---
+
 # Event Ownership Matrix
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Data Team
+status: Canonical
+version: 1.0.0
+purpose: Defines table-level DDL detail, indexes, access patterns, retention policies, migration strategy, and Windows-specific storage behavior for all persistent entities in the Apex platform.
+scope: Database Schema scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/DATABASE-SCHEMA.md
+---
+
 # Database Schema
 
 ## Document type

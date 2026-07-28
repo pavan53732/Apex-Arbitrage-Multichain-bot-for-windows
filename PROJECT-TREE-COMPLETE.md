@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: INDEX
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Project documentation index.
+scope: Documentation tree.
+canonical_source: PROJECT-TREE-COMPLETE.md
+---
+
 # 🌳 Apex-Arbitrage-Multichain-bot-for-windows — Complete Project Tree
 
 ## Repository Statistics

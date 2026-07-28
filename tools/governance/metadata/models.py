@@ -32,6 +32,7 @@ class DocumentMetadata(BaseModel):
     cross_references: list[str] = Field(default_factory=list)
     version_history: list[str] = Field(default_factory=list)
     canonical_source: Optional[str] = None
+    last_updated: Optional[str] = None
     raw_text: str = ""
 
 class BehaviouralRoot(BaseModel):

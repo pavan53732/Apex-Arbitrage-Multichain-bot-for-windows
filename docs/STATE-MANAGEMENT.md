@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines how APEX manages runtime state — state domains, ownership, synchronization rules, full subsystem state machine index, timeout semantics, Windows sleep/resume recovery, and persistence expectations.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/STATE-MANAGEMENT.md
+---
+
 # State Management
 
 ## Document type

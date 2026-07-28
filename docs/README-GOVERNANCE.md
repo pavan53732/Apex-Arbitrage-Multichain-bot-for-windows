@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: OVERVIEW
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Readme Governance documentation.
+scope: Reference documentation.
+canonical_source: docs/README-GOVERNANCE.md
+---
+
 # Readme Governance
 
 ## Document type

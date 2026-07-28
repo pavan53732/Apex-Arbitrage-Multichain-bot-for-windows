@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Windows Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the Windows desktop application structure — process model, Windows integration, tray lifecycle, sleep/resume handling, portable mode, auto-start, crash dump generation, registry usage, DPI scaling, multi-monitor support, and cross-subsystem integration contracts.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/WINDOWS-APP-ARCHITECTURE.md
+---
+
 # Windows App Architecture
 
 ## Document type

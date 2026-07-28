@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines plugin lifecycle.
+scope: Plugin lifecycle management.
+canonical_source: docs/PLUGIN-LIFECYCLE.md
+---
+
 # Plugin Lifecycle
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Plugin Team
 
 ## Purpose
 Defines the complete lifecycle for plugins — discovery, dependency resolution, capability negotiation, version compatibility, isolation, permissions, resource quotas, crash recovery, marketplace verification, digital signatures, update lifecycle, and cross-subsystem integration.
@@ -280,11 +285,3 @@ stateDiagram-v2
 - **TRACEABILITY-MATRIX.md** — REQ-PLUGIN-004.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade plugin lifecycle contract: discovery (4 sources + algorithm), dependency resolution (4 types + topological sort), capability negotiation (request-grant protocol + 8 capabilities), version compatibility (4 rules), update lifecycle (9 steps + rollback), marketplace verification + digital signatures (5 requirements), resource quotas (8 resources with enforcement), cross-subsystem integration | Plugin Team |
-| 0.2.0 | 2026-07-27 | Full lifecycle with state machine, transition details, failure recovery, side-by-side versioning | Plugin Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Plugin Team |

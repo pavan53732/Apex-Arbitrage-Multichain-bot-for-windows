@@ -1,7 +1,13 @@
-# Bootstrap Sequence
-
-## Document type
-This document is an overview, reference, or index as noted below.
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete bootstrap sequence for the application.
+scope: Startup ordering, dependency resolution, service registration, and initialisation.
+canonical_source: docs/BOOTSTRAP-SEQUENCE.md
+---
 
 # Bootstrap Sequence
 

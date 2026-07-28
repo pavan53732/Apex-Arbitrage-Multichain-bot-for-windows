@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines AI request routing, prompt assembly pipeline, context assembly, context compression, token budgeting, prompt construction, provider routing, confidence scoring, streaming lifecycle, cancellation, fallback policy, and recovery.
+scope: AI request processing from request to structured response.
+canonical_source: docs/AI-PIPELINE.md
+---
+
 # AI Pipeline
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** AI Team
 
 ## Purpose
 Defines AI request routing, prompt assembly pipeline, context assembly, context compression, token budgeting, prompt construction, provider routing, confidence scoring, streaming lifecycle, cancellation, fallback policy, and recovery — from request to structured response.
@@ -409,11 +414,3 @@ Allocation:
 - **TRACEABILITY-MATRIX.md** — AI requirement coverage.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade AI pipeline contract: prompt assembly pipeline (11 stages with budgets), context compression strategy, token budgeting algorithm, per-agent budget overrides, streaming lifecycle with cancellation, autonomous retry logic with token budget, cross-subsystem integration (who calls, events, config) | AI Team |
-| 0.2.0 | 2026-07-27 | Full pipeline with context assembly, prompt construction, provider routing, fallback, confidence scoring | AI Team |
-| 0.1.0 | 2026-07-27 | Initial stub | AI Team |

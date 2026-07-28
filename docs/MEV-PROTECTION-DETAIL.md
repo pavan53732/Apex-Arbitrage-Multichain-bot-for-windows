@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Mev Protection Detail documentation.
+scope: Reference documentation.
+canonical_source: docs/MEV-PROTECTION-DETAIL.md
+---
+
 # Mev Protection Detail
 
 ## Document type

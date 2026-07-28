@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Security Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete role/action permission matrix — roles, actions, scopes, enforcement points, Windows-specific permissions (UAC, service accounts, scheduled tasks), and integration with trust boundaries and security contracts.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/PERMISSION-MODEL.md
+---
+
 # Permission Model
 
 ## Document type

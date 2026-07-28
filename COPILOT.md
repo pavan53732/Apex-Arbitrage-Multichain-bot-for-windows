@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: COPILOT AI tool documentation.
+scope: COPILOT reference.
+canonical_source: COPILOT.md
+---
+
 # COPILOT
 
 

@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Live Architecture Viewer documentation.
+scope: Reference documentation.
+canonical_source: docs/LIVE-ARCHITECTURE-VIEWER.md
+---
+
 # Live Architecture Viewer
 
 ## Document type

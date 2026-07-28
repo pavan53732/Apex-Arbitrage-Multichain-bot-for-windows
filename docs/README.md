@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: OVERVIEW
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Readme documentation.
+scope: Reference documentation.
+canonical_source: docs/README.md
+---
+
 # Readme
 
 ## Document type

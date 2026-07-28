@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Strategy Rotation documentation.
+scope: Reference documentation.
+canonical_source: docs/STRATEGY-ROTATION.md
+---
+
 # Strategy Rotation
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Module Dependency documentation.
+scope: Reference documentation.
+canonical_source: docs/MODULE-DEPENDENCY.md
+---
+
 # Module Dependency
 
 ## Document type

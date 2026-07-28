@@ -1,7 +1,13 @@
-# Token Registry
-
-## Document type
-This document is an overview, reference, or index as noted below.
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Defines token registry.
+scope: Token listing and metadata.
+canonical_source: docs/TOKEN-REGISTRY.md
+---
 
 # Token Registry
 

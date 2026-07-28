@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Defines chain transaction execution, confirmation, cancellation, and recovery.
+scope: Explicit execution sequencing, timeout handling, and retry/resume behavior.
+canonical_source: docs/EXECUTION-ENGINE.md
+---
+
 # Execution Engine
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Trading Team
 
 ## Purpose
 Defines chain transaction execution, confirmation, cancellation, and recovery — with explicit execution sequencing, timeout handling, and retry/resume behavior.
@@ -277,11 +282,3 @@ Fallback for chains without EIP-1559:
 - **TRACEABILITY-MATRIX.md** — Execution requirement coverage.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade execution engine contract: multi-chain execution protocol (6 chain pairs), cross-chain gas handling, cross-chain timing budgets, dynamic gas pricing algorithm, gas optimisation strategies (6 strategies), cross-subsystem integration | Trading Team |
-| 0.2.0 | 2026-07-27 | Full execution lifecycle, timeout handling, retry/resume, gas optimization | Trading Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Trading Team |

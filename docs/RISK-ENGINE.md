@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Defines risk engine.
+scope: Risk scoring and management.
+canonical_source: docs/RISK-ENGINE.md
+---
+
 # Risk Engine
-
-## Document type
-Document type: [REFERENCE]
-
-## Version
-**Version:** 0.2.0 | **Status:** Draft | **Last Updated:** 2026-07-27 | **Owner:** Trading Team
 
 ## Purpose
 Defines trading risk checks used before and during execution — with explicit formulas, limits, circuit breakers, and abort behavior.
@@ -167,10 +172,3 @@ Every risk check produces an event:
 - **TRACEABILITY-MATRIX.md** — Risk requirement coverage.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 0.2.0 | 2026-07-27 | Full risk pipeline, formulas, circuit breakers, partial fill handling | Trading Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Trading Team |

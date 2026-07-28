@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: INDEX
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Interface Catalog documentation.
+scope: Reference documentation.
+canonical_source: docs/INTERFACE-CATALOG.md if filename.startswith('docs/') else INTERFACE-CATALOG.md
+---
+
 # Interface Catalog
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: OVERVIEW
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Apex architecture overview.
+scope: Architecture reference.
+canonical_source: APEX-ARCHITECTURE.md
+---
+
 # APEX Architecture
 
 

@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Dex Intelligence documentation.
+scope: Reference documentation.
+canonical_source: docs/DEX-INTELLIGENCE.md
+---
+
 # Dex Intelligence
 
 ## Document type

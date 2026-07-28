@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Catalogs every IPC message type used across the Apex platform — defining the type, producer, consumer, payload shape, delivery semantics, error behavior, and version for each message. This is the reference companion to IPC-PROTOCOL.md which defines the transport, envelope format, and channel structure. An autonomous engineer should use this catalog to implement exact message handlers for each typed channel.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/IPC-MESSAGE-CATALOG.md
+---
+
 # IPC Message Catalog
 
 ## Document type

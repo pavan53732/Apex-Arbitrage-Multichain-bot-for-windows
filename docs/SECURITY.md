@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Security Team
+status: Canonical
+version: 1.0.0
+purpose: Defines security model, threat boundaries, and security controls.
+scope: Security architecture, threat model, and security controls.
+canonical_source: docs/SECURITY.md
+---
+
 # Security
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Security Team
 
 ## Purpose
 Defines the platform security baseline — threat model, secret handling, trust boundaries, permission model, signing, incident response, and Windows-specific security integration.
@@ -254,11 +259,3 @@ The permission model (detailed in `PERMISSION-MODEL.md`) defines:
 | `security.threat.auto_block` | `true` | Auto-block on threat detection |
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade security contract: STRIDE threat model (6 threats + per-domain 6×6 analysis), secure update chain (8 verification steps + signing policy), cross-subsystem integration (who calls, events, config) | Security Team |
-| 0.2.0 | 2026-07-27 | Full security architecture with trust boundary integration, secret lifecycle binding, Windows baseline, incident response | Security Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Security Team |

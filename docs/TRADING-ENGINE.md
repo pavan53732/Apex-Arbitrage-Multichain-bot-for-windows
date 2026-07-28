@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the end-to-end trading decision and execution coordination layer.
+scope: Complete execution algorithm, order routing algorithm, risk scoring formulas, liquidity scoring, arbitrage scoring, opportunity expiry, partial fills, multi-chain execution, gas optimisation, MEV decision tree, wallet selection, retry matrices, rollback rules, position reconciliation.
+canonical_source: docs/TRADING-ENGINE.md
+---
+
 # Trading Engine
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Trading Team
 
 ## Purpose
 Defines the end-to-end trading decision and execution coordination layer — complete execution algorithm, order routing algorithm, risk scoring formulas, liquidity scoring, arbitrage scoring, opportunity expiry, partial fills, multi-chain execution, gas optimisation, MEV decision tree, wallet selection, retry matrices, rollback rules, position reconciliation, and cross-subsystem integration contracts.
@@ -494,11 +499,3 @@ When a position is held (cannot unwind):
 - **TRACEABILITY-MATRIX.md** — Trade requirement coverage.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | Production-grade trading engine contract: complete execution algorithm (11 steps), order routing algorithm with scoring components, risk scoring formulas (6 checks with formulas/thresholds), liquidity scoring formula, arbitrage scoring formula, opportunity expiry algorithm, partial fill decision tree, MEV decision tree (4 risk levels), wallet selection algorithm, retry matrices (leg + trade), rollback rules with unwind decision tree, position reconciliation algorithm, cross-subsystem integration | Trading Team |
-| 0.2.0 | 2026-07-27 | Full trade flow, state machine, failure branching, recovery paths | Trading Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Trading Team |

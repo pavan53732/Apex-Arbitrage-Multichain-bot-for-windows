@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: DevOps Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the workflow for building, testing, packaging, signing, and releasing the Windows desktop application — with explicit pipeline stages, gate checks, failure handling, and rollback procedures.
+scope: App Builder Workflow scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/APP-BUILDER-WORKFLOW.md
+---
+
 # App Builder Workflow
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Windows Team
+status: Canonical
+version: 1.0.0
+purpose: Defines how the desktop app and backend survive Windows network changes — proxy handling, Wi-Fi/Ethernet changes, VPN reconnects, DNS refresh, captive portals, reconnect backoff, offline recovery, and cross-subsystem integration.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/WINDOWS-NETWORK-RESILIENCE.md
+---
+
 # Windows Network Resilience
 
 ## Document type

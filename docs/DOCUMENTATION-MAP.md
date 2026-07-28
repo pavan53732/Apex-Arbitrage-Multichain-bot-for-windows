@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: INDEX
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Documentation Map documentation.
+scope: Reference documentation.
+canonical_source: docs/DOCUMENTATION-MAP.md if filename.startswith('docs/') else DOCUMENTATION-MAP.md
+---
+
 # Documentation Map
 
 ## Document type

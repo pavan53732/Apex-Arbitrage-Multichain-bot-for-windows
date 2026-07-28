@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Token Discovery documentation.
+scope: Reference documentation.
+canonical_source: docs/TOKEN-DISCOVERY.md
+---
+
 # Token Discovery
 
 ## Document type

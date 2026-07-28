@@ -1,87 +1,274 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="relation" attr.type="string"/>
-<graph edgedefault="directed"><node id="** `docs/AGENTS.md`"/>
+<graph edgedefault="directed"><node id="AI Team"/>
 <node id="AGENTS.md"/>
-<node id="** `AI-MEMORY-SYSTEM.md`"/>
+<node id="AIDER.md"/>
+<node id="ANTIGRAVITY.md"/>
+<node id="Runtime Team"/>
+<node id="APEX-ARCHITECTURE.md"/>
+<node id="CHATGPT.md"/>
+<node id="CLAUDE.md"/>
+<node id="CLINE.md"/>
+<node id="CODEBUFF.md"/>
+<node id="COPILOT.md"/>
+<node id="CURSOR.md"/>
+<node id="GEMINI.md"/>
+<node id="GITHUB-COPILOT-CLI.md"/>
+<node id="GOOGLE-CODE-ASSISTANT.md"/>
+<node id="KILO-CODE.md"/>
+<node id="LLAMA-CPP.md"/>
+<node id="OLLAMA.md"/>
+<node id="OPENCODE.md"/>
+<node id="PERPLEXITY.md"/>
+<node id="PROJECT-TREE-COMPLETE.md"/>
+<node id="QODO.md"/>
+<node id="QWEN.md"/>
+<node id="RAYCAST.md"/>
+<node id="README-GOVERNANCE.md"/>
+<node id="README.md"/>
+<node id="ROO-CODE.md"/>
+<node id="TABNINE.md"/>
+<node id="WARP.md"/>
+<node id="WINDSURF.md"/>
+<node id="ZED.md"/>
+<node id="UI Team"/>
+<node id="docs/AGENT-GUIDE.md"/>
+<node id="Trading Team"/>
+<node id="docs/AGENT-INDEX.md"/>
+<node id="docs/AGENTS.md"/>
+<node id="docs/AI-AGENT-SPECIFICATION.md"/>
+<node id="docs/AI-CAPABILITY-MATRIX.md"/>
+<node id="docs/AI-CONSENSUS.md"/>
+<node id="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md"/>
+<node id="docs/AI-COST-MANAGEMENT.md"/>
+<node id="docs/AI-GATEWAY.md"/>
+<node id="docs/AI-KNOWLEDGE-INDEX.md"/>
+<node id="docs/AI-MEMORY-SYSTEM.md"/>
 <node id="docs/AI-MEMORY.md"/>
-<node id="AI Team"/>
 <node id="docs/AI-ORCHESTRATION.md"/>
 <node id="docs/AI-PIPELINE.md"/>
+<node id="docs/AI-PLANNER.md"/>
 <node id="docs/AI-PROVIDER-MANAGER.md"/>
+<node id="docs/AI-REASONING-POLICY.md"/>
+<node id="docs/AI-REFLECTION.md"/>
 <node id="docs/AI-SAFETY-BOUNDARY.md"/>
+<node id="docs/AI-SETTINGS.md"/>
 <node id="docs/AI-STATE-MACHINE.md"/>
 <node id="docs/AI-TOOL-INVOCATION-CONTRACT.md"/>
+<node id="docs/AI-TOOLS.md"/>
+<node id="docs/APEX-KERNEL.md"/>
+<node id="docs/APEX-OS.md"/>
+<node id="docs/API-CONTRACTS.md"/>
+<node id="docs/API-REFERENCE.md"/>
+<node id="docs/APP-BUILDER-DEPLOYMENT-GUIDE.md"/>
 <node id="Plugin Team"/>
 <node id="docs/APP-BUILDER-PLUGIN-SYSTEM.md"/>
 <node id="DevOps Team"/>
 <node id="docs/APP-BUILDER-WORKFLOW.md"/>
+<node id="docs/ARBITRAGE-MONITORING.md"/>
+<node id="docs/ARBITRAGE-WINDOW-MANAGER.md"/>
+<node id="Architecture Team"/>
+<node id="docs/ARCHITECTURE.md"/>
+<node id="docs/ASSET-MANAGEMENT.md"/>
+<node id="docs/AUDIT-REPORT-PHASE4.md"/>
+<node id="docs/BACKTESTING.md"/>
+<node id="docs/BOOTSTRAP-SEQUENCE.md"/>
+<node id="docs/BUILD-RELEASE-CICD.md"/>
+<node id="docs/CACHE-MANAGER.md"/>
+<node id="docs/CANONICAL-SOURCE-RULES.md"/>
 <node id="Ops Team"/>
 <node id="docs/CAPACITY-PLANNING.md"/>
+<node id="docs/CHAIN-COMMAND-CENTER.md"/>
+<node id="docs/CHAIN-INTEGRATION.md"/>
+<node id="docs/CHAIN-INTELLIGENCE.md"/>
+<node id="docs/CHAIN-REGISTRY.md"/>
+<node id="docs/CHAIN-ROTATION.md"/>
+<node id="docs/CHANGELOG.md"/>
+<node id="docs/CLOUD-AI-INTEGRATION.md"/>
 <node id="docs/CODE-SIGNING.md"/>
-<node id="Runtime Team"/>
+<node id="docs/CODING-STANDARDS.md"/>
+<node id="docs/COMPONENT-DIAGRAMS.md"/>
 <node id="docs/CONCURRENCY-MODEL.md"/>
 <node id="Config Team"/>
+<node id="docs/CONFIGURATION-PROFILES.md"/>
 <node id="docs/CONFIGURATION-REFERENCE.md"/>
 <node id="docs/CONFIGURATION.md"/>
+<node id="docs/CONTEXT-BUILDER.md"/>
 <node id="docs/CONTEXT-PRIORITY-MATRIX.md"/>
+<node id="docs/CONTRACT-MANAGEMENT.md"/>
+<node id="docs/CONTRACT-REGISTRY.md"/>
+<node id="docs/CONTRIBUTING.md"/>
+<node id="docs/CROSS-EXCHANGE-ARBITRAGE.md"/>
+<node id="docs/CROSS-REFERENCE-INDEX.md"/>
 <node id="Dashboard Team"/>
 <node id="docs/DASHBOARD-LAYOUT.md"/>
 <node id="docs/DASHBOARD-RUNTIME.md"/>
 <node id="docs/DASHBOARD-WIDGETS.md"/>
 <node id="docs/DASHBOARD-WORKSPACES.md"/>
+<node id="docs/DATA-FLOW.md"/>
+<node id="docs/DATA-GOVERNANCE.md"/>
+<node id="Security Team"/>
+<node id="docs/DATA-OWNERSHIP.md"/>
 <node id="Data Team"/>
 <node id="docs/DATABASE-SCHEMA.md"/>
+<node id="docs/DECISION-ENGINE.md"/>
+<node id="docs/DECISION-LEDGER.md"/>
+<node id="docs/DECISION-LOG.md"/>
+<node id="docs/DEPENDENCY-AUTHORITY-RULES.md"/>
+<node id="docs/DEPENDENCY-GRAPH.md"/>
+<node id="docs/DEPLOYMENT.md"/>
+<node id="docs/DESIGN-SYSTEM.md"/>
+<node id="docs/DESIGNER-PROTOCOLS.md"/>
+<node id="docs/DEX-INTEGRATION.md"/>
+<node id="docs/DEX-INTELLIGENCE.md"/>
+<node id="docs/DEX-REGISTRY.md"/>
 <node id="docs/DIAGNOSTICS.md"/>
-<node id="Architecture Team"/>
+<node id="docs/DOCUMENTATION-LIFECYCLE.md"/>
+<node id="docs/DOCUMENTATION-MAP.md"/>
 <node id="docs/DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md"/>
 <node id="docs/DOMAIN-MODEL.md"/>
 <node id="docs/END-TO-END-WIRING-CONTRACT.md"/>
 <node id="docs/ENGINE-STATE-MACHINE.md"/>
+<node id="docs/ENHANCEMENT-ROADMAP.md"/>
+<node id="docs/ENTERPRISE-OPERATIONS.md"/>
+<node id="docs/ERROR-CATALOG.md"/>
+<node id="docs/ERROR-CODES.md"/>
 <node id="docs/ERROR-HANDLING-LOGGING.md"/>
 <node id="docs/EVENT-BUS.md"/>
 <node id="docs/EVENT-CATALOG.md"/>
+<node id="docs/EVENT-FLOW.md"/>
 <node id="docs/EVENT-OWNERSHIP-MATRIX.md"/>
-<node id="Trading Team"/>
 <node id="docs/EXECUTION-ENGINE.md"/>
+<node id="docs/EXECUTION-LIFECYCLE.md"/>
+<node id="docs/EXECUTION-POLICIES.md"/>
 <node id="Execution Team"/>
 <node id="docs/EXECUTION-STATE-MACHINE.md"/>
+<node id="docs/EXPLAINABILITY.md"/>
+<node id="docs/FAILURE-MATRIX.md"/>
+<node id="docs/FAILURE-RECOVERY-MATRIX.md"/>
+<node id="docs/FAQ.md"/>
 <node id="docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md"/>
-<node id="** STATE-MACHINE-INDEX.md (9 machines with explicit owners)"/>
+<node id="docs/FEATURE-FLAGS.md"/>
+<node id="docs/FEATURE-GATES.md"/>
+<node id="docs/FEATURE-MATRIX.md"/>
+<node id="docs/FILE-STORAGE.md"/>
 <node id="docs/FINAL-READINESS-AUDIT.md"/>
+<node id="docs/GAS-OPTIMISATION.md"/>
+<node id="docs/GLOSSARY.md"/>
+<node id="docs/GOVERNANCE-EXPLAINABILITY.md"/>
 <node id="docs/HEALTHCHECKS.md"/>
+<node id="docs/IMPLEMENTATION-ROADMAP.md"/>
+<node id="docs/INTERFACE-AGENT-MESSAGE.md"/>
+<node id="docs/INTERFACE-CATALOG.md"/>
+<node id="docs/INTERFACE-NOTIFICATION-CHANNEL.md"/>
+<node id="docs/INTERFACE-PROVIDER-ADAPTER.md"/>
+<node id="docs/INTERFACE-TOOL-CALL.md"/>
 <node id="docs/IPC-MESSAGE-CATALOG.md"/>
 <node id="docs/IPC-PROTOCOL.md"/>
+<node id="docs/KNOWLEDGE-GRAPH.md"/>
+<node id="docs/KNOWN-LIMITATIONS.md"/>
+<node id="docs/LEARNING-PIPELINE.md"/>
+<node id="docs/LIQUIDITY-ANALYSIS.md"/>
+<node id="docs/LIVE-ARCHITECTURE-VIEWER.md"/>
+<node id="docs/MARKET-DATA.md"/>
+<node id="docs/MARKET-INTELLIGENCE.md"/>
+<node id="docs/MARKET-REGIME-DETECTION.md"/>
+<node id="docs/MARKET-SESSION.md"/>
 <node id="docs/MEMORY-LIFECYCLE.md"/>
+<node id="docs/METRICS.md"/>
+<node id="docs/MEV-PROTECTION-DETAIL.md"/>
+<node id="docs/MEV-PROTECTION.md"/>
+<node id="docs/MODEL-CAPABILITY-NEGOTIATION.md"/>
+<node id="docs/MODULE-DEPENDENCY.md"/>
+<node id="docs/MODULE-OWNERSHIP-MATRIX.md"/>
 <node id="docs/MONITORING-OBSERVABILITY.md"/>
+<node id="docs/NON-FUNCTIONAL-REQUIREMENTS.md"/>
+<node id="docs/NOTIFICATION-CENTER.md"/>
+<node id="docs/OPERATIONS.md"/>
+<node id="docs/OPPORTUNITY-DETECTION.md"/>
+<node id="docs/OPPORTUNITY-LIFECYCLE.md"/>
+<node id="docs/OPPORTUNITY-RANKING.md"/>
+<node id="docs/ORACLE-REGISTRY.md"/>
 <node id="docs/ORCHESTRATOR.md"/>
-<node id="Security Team"/>
+<node id="docs/ORDER-MANAGEMENT.md"/>
+<node id="docs/PAIR-DISCOVERY.md"/>
+<node id="docs/PERFORMANCE-SLOS.md"/>
+<node id="docs/PERFORMANCE-TARGETS.md"/>
 <node id="docs/PERMISSION-MODEL.md"/>
 <node id="docs/PLUGIN-LIFECYCLE.md"/>
+<node id="docs/PLUGIN-MARKETPLACE.md"/>
 <node id="docs/PLUGIN-SANDBOX-CONTRACT.md"/>
 <node id="docs/PLUGIN-SDK.md"/>
 <node id="docs/PLUGIN-STATE-MACHINE.md"/>
+<node id="docs/POLICY-ENGINE.md"/>
+<node id="docs/PORTFOLIO-ANALYTICS.md"/>
+<node id="docs/PORTFOLIO-MANAGEMENT.md"/>
+<node id="docs/POSITION-MANAGEMENT.md"/>
+<node id="docs/PRICE-DISCOVERY.md"/>
+<node id="docs/PROJECT-STRUCTURE.md"/>
+<node id="docs/PROMPT-ENGINEERING.md"/>
 <node id="docs/PROMPT-LIFECYCLE.md"/>
+<node id="docs/PROVIDER-RESILIENCE.md"/>
+<node id="docs/QUEUE-MANAGEMENT.md"/>
+<node id="docs/README-GOVERNANCE.md"/>
+<node id="docs/README.md"/>
+<node id="docs/RECOVERY-AND-FAILOVER.md"/>
 <node id="docs/RECOVERY-COORDINATION.md"/>
 <node id="docs/RECOVERY-PLAYBOOK.md"/>
 <node id="docs/REGISTRY-SYSTEM.md"/>
 <node id="docs/RESOURCE-BUDGET-SPECIFICATION.md"/>
+<node id="docs/RESOURCE-MANAGER.md"/>
 <node id="docs/RISK-ENGINE.md"/>
+<node id="docs/ROADMAP.md"/>
+<node id="docs/ROUTE-OPTIMIZATION.md"/>
+<node id="docs/ROUTE-SCORING-MODEL.md"/>
+<node id="docs/ROUTING-ENGINE.md"/>
+<node id="docs/RPC-MANAGER.md"/>
 <node id="docs/RUNTIME-FLOW-LIFECYCLE.md"/>
+<node id="docs/RUNTIME-KNOWLEDGE.md"/>
 <node id="docs/RUNTIME-OPERATIONS.md"/>
 <node id="docs/SECRET-LIFECYCLE.md"/>
+<node id="docs/SECURITY-CONTRACTS.md"/>
 <node id="docs/SECURITY.md"/>
+<node id="docs/SELF-HEALING.md"/>
+<node id="docs/SERVICE-LIFECYCLE.md"/>
+<node id="docs/SERVICE-REGISTRY.md"/>
 <node id="docs/SERVICE-STATE-MACHINE.md"/>
+<node id="docs/SHUTDOWN-LIFECYCLE.md"/>
+<node id="docs/SIMULATION-ENGINE.md"/>
+<node id="docs/SKILLS.md"/>
+<node id="docs/SLIPPAGE-MODEL.md"/>
 <node id="docs/STATE-MACHINE-INDEX.md"/>
 <node id="docs/STATE-MANAGEMENT.md"/>
+<node id="docs/STRATEGIES.md"/>
+<node id="docs/STRATEGY-ROTATION.md"/>
+<node id="docs/SYSTEM-CAPABILITY-REGISTRY.md"/>
 <node id="docs/TASK-SCHEDULER.md"/>
 <node id="docs/TEST-CASE-REGISTRY.md"/>
+<node id="docs/TESTING-GUIDE.md"/>
 <node id="Quality Team"/>
 <node id="docs/TESTING.md"/>
 <node id="docs/THREADING-MODEL.md"/>
 <node id="docs/TIMING-SPECIFICATION.md"/>
+<node id="docs/TOKEN-DISCOVERY.md"/>
+<node id="docs/TOKEN-INTELLIGENCE.md"/>
+<node id="docs/TOKEN-REGISTRY.md"/>
 <node id="docs/TRACEABILITY-MATRIX.md"/>
+<node id="docs/TRADE-EXPLAINER.md"/>
 <node id="docs/TRADING-ENGINE.md"/>
+<node id="docs/TRADING-LIFECYCLE.md"/>
+<node id="docs/TRANSACTION-LIFECYCLE.md"/>
+<node id="docs/TROUBLESHOOTING.md"/>
 <node id="docs/TRUST-BOUNDARIES.md"/>
+<node id="docs/UI-COMPONENT-SPEC.md"/>
+<node id="docs/UI-DASHBOARD-SPEC.md"/>
+<node id="docs/UPDATE-MANAGER.md"/>
+<node id="docs/USER-FLOWS.md"/>
+<node id="docs/USER-GUIDE.md"/>
+<node id="docs/UX-GUIDELINES.md"/>
+<node id="docs/VERSIONING.md"/>
+<node id="docs/WALLET-COMMAND-CENTER.md"/>
+<node id="docs/WALLET-MANAGEMENT.md"/>
 <node id="Windows Team"/>
 <node id="docs/WINDOWS-APP-ARCHITECTURE.md"/>
 <node id="docs/WINDOWS-DEPLOYMENT.md"/>
@@ -90,12 +277,119 @@
 <node id="docs/WINDOWS-NOTIFICATION-INTEGRATION.md"/>
 <node id="docs/WINDOWS-SECURITY-INTEGRATION.md"/>
 <node id="docs/WINDOWS-SERVICE-INTEGRATION.md"/>
+<node id="docs/WORKER-ARCHITECTURE.md"/>
 <node id="docs/WORKER-POOL.md"/>
 <node id="docs/WORKER-STATE-MACHINE.md"/>
-<edge source="** `docs/AGENTS.md`" target="AGENTS.md">
+<node id="docs/WORKFLOW-BUILDER.md"/>
+<node id="docs/WORKSPACE-MANAGER.md"/>
+<node id="docs/adr/0001-provider-abstraction.md"/>
+<node id="docs/adr/0002-event-driven-kernel.md"/>
+<node id="docs/adr/0003-plugin-first-architecture.md"/>
+<node id="docs/adr/0004-polygon-first.md"/>
+<node id="docs/adr/0005-ai-memory.md"/>
+<node id="docs/adr/0006-runtime-governance.md"/>
+<node id="docs/adr/0007-workspace-model.md"/>
+<node id="docs/adr/0008-orchestrator-state-machine.md"/>
+<edge source="AI Team" target="AGENTS.md">
   <data key="d0">owns</data>
 </edge>
-<edge source="** `AI-MEMORY-SYSTEM.md`" target="docs/AI-MEMORY.md">
+<edge source="AI Team" target="AIDER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="ANTIGRAVITY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="CHATGPT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="CLAUDE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="CLINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="CODEBUFF.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="COPILOT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="CURSOR.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="GEMINI.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="GITHUB-COPILOT-CLI.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="KILO-CODE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="LLAMA-CPP.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="OLLAMA.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="OPENCODE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="PERPLEXITY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="QODO.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="QWEN.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="RAYCAST.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="ROO-CODE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="TABNINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="WARP.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="WINDSURF.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="ZED.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AGENTS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-AGENT-SPECIFICATION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-CAPABILITY-MATRIX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-CONSENSUS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-COST-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-GATEWAY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-KNOWLEDGE-INDEX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-MEMORY-SYSTEM.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-MEMORY.md">
   <data key="d0">owns</data>
 </edge>
 <edge source="AI Team" target="docs/AI-ORCHESTRATION.md">
@@ -104,10 +398,22 @@
 <edge source="AI Team" target="docs/AI-PIPELINE.md">
   <data key="d0">owns</data>
 </edge>
+<edge source="AI Team" target="docs/AI-PLANNER.md">
+  <data key="d0">owns</data>
+</edge>
 <edge source="AI Team" target="docs/AI-PROVIDER-MANAGER.md">
   <data key="d0">owns</data>
 </edge>
+<edge source="AI Team" target="docs/AI-REASONING-POLICY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-REFLECTION.md">
+  <data key="d0">owns</data>
+</edge>
 <edge source="AI Team" target="docs/AI-SAFETY-BOUNDARY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/AI-SETTINGS.md">
   <data key="d0">owns</data>
 </edge>
 <edge source="AI Team" target="docs/AI-STATE-MACHINE.md">
@@ -116,22 +422,589 @@
 <edge source="AI Team" target="docs/AI-TOOL-INVOCATION-CONTRACT.md">
   <data key="d0">owns</data>
 </edge>
+<edge source="AI Team" target="docs/AI-TOOLS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/CHAIN-COMMAND-CENTER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/CHAIN-INTELLIGENCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/CHAIN-ROTATION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/CLOUD-AI-INTEGRATION.md">
+  <data key="d0">owns</data>
+</edge>
 <edge source="AI Team" target="docs/CONTEXT-PRIORITY-MATRIX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/EXPLAINABILITY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/GOVERNANCE-EXPLAINABILITY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/MEV-PROTECTION-DETAIL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/PAIR-DISCOVERY.md">
   <data key="d0">owns</data>
 </edge>
 <edge source="AI Team" target="docs/PROMPT-LIFECYCLE.md">
   <data key="d0">owns</data>
 </edge>
+<edge source="AI Team" target="docs/RECOVERY-AND-FAILOVER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="AI Team" target="docs/TRADE-EXPLAINER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="APEX-ARCHITECTURE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="GOOGLE-CODE-ASSISTANT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="PROJECT-TREE-COMPLETE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="README-GOVERNANCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="README.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/APEX-KERNEL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/APEX-OS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/API-CONTRACTS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/API-REFERENCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ARBITRAGE-MONITORING.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ARBITRAGE-WINDOW-MANAGER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ASSET-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/AUDIT-REPORT-PHASE4.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/BACKTESTING.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/BOOTSTRAP-SEQUENCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CACHE-MANAGER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CANONICAL-SOURCE-RULES.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CHANGELOG.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CODING-STANDARDS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/COMPONENT-DIAGRAMS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CONCURRENCY-MODEL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CONTRACT-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CONTRACT-REGISTRY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CONTRIBUTING.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CROSS-EXCHANGE-ARBITRAGE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/CROSS-REFERENCE-INDEX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DATA-FLOW.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DATA-GOVERNANCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DECISION-LEDGER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DECISION-LOG.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DEPENDENCY-AUTHORITY-RULES.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DEPENDENCY-GRAPH.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DEPLOYMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DESIGN-SYSTEM.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DESIGNER-PROTOCOLS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DOCUMENTATION-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/DOCUMENTATION-MAP.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ENGINE-STATE-MACHINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ENHANCEMENT-ROADMAP.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ENTERPRISE-OPERATIONS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ERROR-CATALOG.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ERROR-CODES.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/EVENT-BUS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/EVENT-CATALOG.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/EVENT-FLOW.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/EVENT-OWNERSHIP-MATRIX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/EXECUTION-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/EXECUTION-POLICIES.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/FAILURE-MATRIX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/FAILURE-RECOVERY-MATRIX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/FAQ.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/FEATURE-FLAGS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/FEATURE-GATES.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/FEATURE-MATRIX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/FILE-STORAGE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/FINAL-READINESS-AUDIT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/GAS-OPTIMISATION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/GLOSSARY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/HEALTHCHECKS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/IMPLEMENTATION-ROADMAP.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/INTERFACE-AGENT-MESSAGE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/INTERFACE-CATALOG.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/INTERFACE-NOTIFICATION-CHANNEL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/INTERFACE-PROVIDER-ADAPTER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/INTERFACE-TOOL-CALL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/IPC-MESSAGE-CATALOG.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/IPC-PROTOCOL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/KNOWLEDGE-GRAPH.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/KNOWN-LIMITATIONS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/LEARNING-PIPELINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/LIVE-ARCHITECTURE-VIEWER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/MARKET-DATA.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/MARKET-INTELLIGENCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/MARKET-REGIME-DETECTION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/MARKET-SESSION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/MEMORY-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/METRICS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/MEV-PROTECTION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/MODEL-CAPABILITY-NEGOTIATION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/MODULE-DEPENDENCY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/MODULE-OWNERSHIP-MATRIX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/NOTIFICATION-CENTER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/OPERATIONS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/OPPORTUNITY-DETECTION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/OPPORTUNITY-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/OPPORTUNITY-RANKING.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ORCHESTRATOR.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ORDER-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PERFORMANCE-SLOS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PERFORMANCE-TARGETS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PLUGIN-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PLUGIN-MARKETPLACE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PLUGIN-SDK.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PORTFOLIO-ANALYTICS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PORTFOLIO-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/POSITION-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PRICE-DISCOVERY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PROJECT-STRUCTURE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PROMPT-ENGINEERING.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/PROVIDER-RESILIENCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/QUEUE-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/README-GOVERNANCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/README.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/RECOVERY-COORDINATION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/RECOVERY-PLAYBOOK.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/REGISTRY-SYSTEM.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/RESOURCE-MANAGER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ROADMAP.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ROUTE-OPTIMIZATION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/ROUTE-SCORING-MODEL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/RPC-MANAGER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/RUNTIME-FLOW-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/RUNTIME-KNOWLEDGE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/RUNTIME-OPERATIONS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/SELF-HEALING.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/SERVICE-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/SERVICE-REGISTRY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/SERVICE-STATE-MACHINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/SHUTDOWN-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/SKILLS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/SLIPPAGE-MODEL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/STATE-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/STRATEGIES.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/STRATEGY-ROTATION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/SYSTEM-CAPABILITY-REGISTRY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/TASK-SCHEDULER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/TEST-CASE-REGISTRY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/THREADING-MODEL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/TOKEN-DISCOVERY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/TOKEN-INTELLIGENCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/TRANSACTION-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/TROUBLESHOOTING.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/UPDATE-MANAGER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/USER-FLOWS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/VERSIONING.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/WALLET-COMMAND-CENTER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/WALLET-MANAGEMENT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/WORKER-ARCHITECTURE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/WORKER-POOL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/WORKER-STATE-MACHINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/WORKSPACE-MANAGER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/adr/0001-provider-abstraction.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/adr/0002-event-driven-kernel.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/adr/0003-plugin-first-architecture.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/adr/0004-polygon-first.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/adr/0005-ai-memory.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/adr/0006-runtime-governance.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/adr/0007-workspace-model.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Runtime Team" target="docs/adr/0008-orchestrator-state-machine.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/AGENT-GUIDE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/APP-BUILDER-DEPLOYMENT-GUIDE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/BUILD-RELEASE-CICD.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/CONTEXT-BUILDER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/DASHBOARD-RUNTIME.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/DASHBOARD-WIDGETS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/DASHBOARD-WORKSPACES.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/LIQUIDITY-ANALYSIS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/NON-FUNCTIONAL-REQUIREMENTS.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/TESTING-GUIDE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/UI-COMPONENT-SPEC.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/UI-DASHBOARD-SPEC.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/USER-GUIDE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/UX-GUIDELINES.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="UI Team" target="docs/WORKFLOW-BUILDER.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/AGENT-INDEX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/CHAIN-INTEGRATION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/CHAIN-REGISTRY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/DECISION-ENGINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/DEX-INTEGRATION.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/DEX-INTELLIGENCE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/DEX-REGISTRY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/EXECUTION-ENGINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/ORACLE-REGISTRY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/POLICY-ENGINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/RISK-ENGINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/ROUTING-ENGINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/SIMULATION-ENGINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/TOKEN-REGISTRY.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/TRADING-ENGINE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Trading Team" target="docs/TRADING-LIFECYCLE.md">
+  <data key="d0">owns</data>
+</edge>
 <edge source="Plugin Team" target="docs/APP-BUILDER-PLUGIN-SYSTEM.md">
   <data key="d0">owns</data>
 </edge>
-<edge source="Plugin Team" target="docs/PLUGIN-LIFECYCLE.md">
-  <data key="d0">owns</data>
-</edge>
 <edge source="Plugin Team" target="docs/PLUGIN-SANDBOX-CONTRACT.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Plugin Team" target="docs/PLUGIN-SDK.md">
   <data key="d0">owns</data>
 </edge>
 <edge source="Plugin Team" target="docs/PLUGIN-STATE-MACHINE.md">
@@ -141,6 +1014,24 @@
   <data key="d0">owns</data>
 </edge>
 <edge source="DevOps Team" target="docs/CODE-SIGNING.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Architecture Team" target="docs/ARCHITECTURE.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Architecture Team" target="docs/DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Architecture Team" target="docs/DOMAIN-MODEL.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Architecture Team" target="docs/END-TO-END-WIRING-CONTRACT.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Architecture Team" target="docs/STATE-MACHINE-INDEX.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Architecture Team" target="docs/TRACEABILITY-MATRIX.md">
   <data key="d0">owns</data>
 </edge>
 <edge source="Ops Team" target="docs/CAPACITY-PLANNING.md">
@@ -161,70 +1052,7 @@
 <edge source="Ops Team" target="docs/TIMING-SPECIFICATION.md">
   <data key="d0">owns</data>
 </edge>
-<edge source="Runtime Team" target="docs/CONCURRENCY-MODEL.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/ENGINE-STATE-MACHINE.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/EVENT-BUS.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/EVENT-CATALOG.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/EVENT-OWNERSHIP-MATRIX.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/HEALTHCHECKS.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/IPC-MESSAGE-CATALOG.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/IPC-PROTOCOL.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/MEMORY-LIFECYCLE.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/ORCHESTRATOR.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/RECOVERY-COORDINATION.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/RECOVERY-PLAYBOOK.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/REGISTRY-SYSTEM.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/RUNTIME-FLOW-LIFECYCLE.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/RUNTIME-OPERATIONS.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/SERVICE-STATE-MACHINE.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/STATE-MANAGEMENT.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/TASK-SCHEDULER.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/TEST-CASE-REGISTRY.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/THREADING-MODEL.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/WORKER-POOL.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Runtime Team" target="docs/WORKER-STATE-MACHINE.md">
+<edge source="Config Team" target="docs/CONFIGURATION-PROFILES.md">
   <data key="d0">owns</data>
 </edge>
 <edge source="Config Team" target="docs/CONFIGURATION-REFERENCE.md">
@@ -239,46 +1067,7 @@
 <edge source="Dashboard Team" target="docs/DASHBOARD-LAYOUT.md">
   <data key="d0">owns</data>
 </edge>
-<edge source="Dashboard Team" target="docs/DASHBOARD-RUNTIME.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Dashboard Team" target="docs/DASHBOARD-WIDGETS.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Dashboard Team" target="docs/DASHBOARD-WORKSPACES.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Data Team" target="docs/DATABASE-SCHEMA.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Architecture Team" target="docs/DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Architecture Team" target="docs/DOMAIN-MODEL.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Architecture Team" target="docs/END-TO-END-WIRING-CONTRACT.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Architecture Team" target="docs/STATE-MACHINE-INDEX.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Architecture Team" target="docs/TRACEABILITY-MATRIX.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Trading Team" target="docs/EXECUTION-ENGINE.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Trading Team" target="docs/RISK-ENGINE.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Trading Team" target="docs/TRADING-ENGINE.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="Execution Team" target="docs/EXECUTION-STATE-MACHINE.md">
-  <data key="d0">owns</data>
-</edge>
-<edge source="** STATE-MACHINE-INDEX.md (9 machines with explicit owners)" target="docs/FINAL-READINESS-AUDIT.md">
+<edge source="Security Team" target="docs/DATA-OWNERSHIP.md">
   <data key="d0">owns</data>
 </edge>
 <edge source="Security Team" target="docs/PERMISSION-MODEL.md">
@@ -287,10 +1076,19 @@
 <edge source="Security Team" target="docs/SECRET-LIFECYCLE.md">
   <data key="d0">owns</data>
 </edge>
+<edge source="Security Team" target="docs/SECURITY-CONTRACTS.md">
+  <data key="d0">owns</data>
+</edge>
 <edge source="Security Team" target="docs/SECURITY.md">
   <data key="d0">owns</data>
 </edge>
 <edge source="Security Team" target="docs/TRUST-BOUNDARIES.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Data Team" target="docs/DATABASE-SCHEMA.md">
+  <data key="d0">owns</data>
+</edge>
+<edge source="Execution Team" target="docs/EXECUTION-STATE-MACHINE.md">
   <data key="d0">owns</data>
 </edge>
 <edge source="Quality Team" target="docs/TESTING.md">

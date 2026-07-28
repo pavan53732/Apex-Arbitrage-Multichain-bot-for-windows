@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Ops Team
+status: Canonical
+version: 1.0.0
+purpose: Defines timeout budgets, retry intervals, worker heartbeats, shutdown timing, startup timing, inter-leg timing, and event delivery timing for every subsystem — with exact values, ranges, and config key references.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/TIMING-SPECIFICATION.md
+---
+
 # Timing Specification
 
 ## Document type

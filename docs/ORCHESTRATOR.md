@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the single authoritative runtime orchestrator that coordinates all subsystem sequencing.
+scope: Master lifecycle coordinator for startup ordering, subsystem priority, cross-system dependency resolution, health-driven state transitions, sleep/resume coordination, recovery delegation, and graceful shutdown ordering.
+canonical_source: docs/ORCHESTRATOR.md
+---
+
 # Orchestrator
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Runtime Team
 
 ## Purpose
 Defines the single authoritative runtime orchestrator that coordinates all subsystem sequencing — startup ordering, subsystem priority, cross-system dependency resolution, health-driven state transitions, sleep/resume coordination, recovery delegation, and graceful shutdown ordering. The Orchestrator is the master lifecycle coordinator; it does NOT own the internal behavior of any subsystem, but it does own the sequencing, gating, and coordination rules that govern when subsystems may start, stop, recover, or transition between operational states.
@@ -392,9 +397,3 @@ graph TD
 - **TRACEABILITY-MATRIX.md** — REQ-RUNTIME-001, REQ-RUNTIME-002.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-27 | New: complete orchestrator contract — 5-phase startup algorithm, platform mode state machine, shutdown sequencing, sleep/resume coordination, recovery delegation, subsystem gating matrix, dependency graph, performance expectations, config ownership | Runtime Team |

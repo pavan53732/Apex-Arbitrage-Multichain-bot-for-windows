@@ -1,14 +1,15 @@
-# Chain Integration
-
-## Document type
-This document is an overview, reference, or index as noted below.
-
-# APEX Chain Integration Guide
-
-> **Version:** 3.0.0 | **Last Updated:** July 25, 2026
-> **Scope:** Adding a new EVM-compatible chain to APEX.
-
 ---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Defines chain integration.
+scope: Blockchain connectivity.
+canonical_source: docs/CHAIN-INTEGRATION.md
+---
+
+# Chain Integration
 
 ## 1. Overview
 

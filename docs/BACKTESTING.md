@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: TEST
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Backtesting documentation.
+scope: Reference documentation.
+canonical_source: docs/BACKTESTING.md
+---
+
 # Backtesting
 
 ## Document type

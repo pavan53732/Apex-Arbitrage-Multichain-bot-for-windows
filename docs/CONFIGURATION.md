@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Config Team
+status: Canonical
+version: 1.1.0
+purpose: Defines configuration management, schema, and lifecycle.
+scope: Configuration schema, validation, hot-reload, and versioning.
+canonical_source: docs/CONFIGURATION.md
+---
+
 # Configuration
-
-## Document type
-Document type: [CONTRACT]
-
-## Version
-**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Config Team
 
 ## Purpose
 Defines runtime and operational configuration — precedence, validation, secret handling, profile management, hot-reload semantics, restart-required semantics, conflict resolution, Windows-specific config, and cross-system config ownership wiring.
@@ -147,10 +152,3 @@ risk:
 - **WINDOWS-DESKTOP.md** — Windows config locations.
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.1.0 | 2026-07-27 | Full precedence, hot-reload/restart semantics, secret-backed config, profile management, Windows config, cross-system ownership wiring | Config Team |
-| 1.0.0 | 2025-01-15 | Initial stub | Config Team |

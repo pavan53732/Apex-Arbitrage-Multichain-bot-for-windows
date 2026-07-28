@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: AI Team
+status: Canonical
+version: 1.0.0
+purpose: Defines when AI may call tools and under which priority, fallback, timeout, and retry policies. This contract is the single authoritative source for all tool invocation governance.
+scope: Ai Tool Invocation Contract scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/AI-TOOL-INVOCATION-CONTRACT.md
+---
+
 # AI Tool Invocation Contract
 
 ## Document type

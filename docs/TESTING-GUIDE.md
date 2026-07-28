@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: GUIDE
+owner: UI Team
+status: Canonical
+version: 1.0.0
+purpose: Testing Guide documentation.
+scope: Reference documentation.
+canonical_source: docs/TESTING-GUIDE.md
+---
+
 # Testing Guide
 
 ## Document type

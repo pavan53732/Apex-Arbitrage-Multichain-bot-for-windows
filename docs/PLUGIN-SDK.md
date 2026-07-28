@@ -1,10 +1,15 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines plugin SDK.
+scope: Plugin development.
+canonical_source: docs/PLUGIN-SDK.md
+---
+
 # Plugin SDK
-
-## Document type
-Document type: [REFERENCE]
-
-## Version
-**Version:** 0.2.0 | **Status:** Draft | **Last Updated:** 2026-07-27 | **Owner:** Plugin Team
 
 ## Purpose
 Defines the Plugin SDK — manifest format, lifecycle hooks, versioning rules, sandbox and security constraints, API stability, and extension patterns.
@@ -123,10 +128,3 @@ interface PluginHooks {
 - **CONFIGURATION-REFERENCE.md** — Plugin config keys (`plugin.*`).
 
 ---
-
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 0.2.0 | 2026-07-27 | Complete SDK spec — manifest, hooks, API surface, versioning, signing | Plugin Team |
-| 0.1.0 | 2026-07-27 | Initial stub | Plugin Team |

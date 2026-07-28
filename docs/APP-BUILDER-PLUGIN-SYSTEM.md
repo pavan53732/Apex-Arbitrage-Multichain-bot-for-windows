@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Plugin Team
+status: Canonical
+version: 1.0.0
+purpose: Defines how the desktop app discovers, registers, sandboxes, versions, loads, unloads, and updates plugins — with plugin manifest contract, signature requirements, version compatibility, hot reload behavior, failure isolation, uninstall behavior, and API stability policy.
+scope: App Builder Plugin System scope and boundaries.
+last_updated: 2026-07-29
+canonical_source: docs/APP-BUILDER-PLUGIN-SYSTEM.md
+---
+
 # App Builder Plugin System
 
 ## Document type

@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Security Team
+status: Canonical
+version: 1.0.0
+purpose: Defines trusted, semi-trusted, untrusted, plugin, AI, network, and filesystem trust boundaries — including trust-domain enforcement matrix.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/TRUST-BOUNDARIES.md
+---
+
 # Trust Boundaries
 
 ## Document type

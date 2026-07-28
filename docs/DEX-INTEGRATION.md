@@ -1,14 +1,15 @@
-# Dex Integration
-
-## Document type
-This document is an overview, reference, or index as noted below.
-
-# APEX DEX Integration Guide
-
-> **Version:** 3.0.0 | **Last Updated:** July 25, 2026
-> **Scope:** Adding a new DEX (decentralized exchange) adapter to APEX.
-
 ---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Trading Team
+status: Canonical
+version: 1.0.0
+purpose: Defines DEX integration.
+scope: DEX connectivity.
+canonical_source: docs/DEX-INTEGRATION.md
+---
+
+# Dex Integration
 
 ## 1. Overview
 

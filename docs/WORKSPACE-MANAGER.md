@@ -1,3 +1,14 @@
+---
+last_updated: 2026-07-29
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Workspace Manager documentation.
+scope: Reference documentation.
+canonical_source: docs/WORKSPACE-MANAGER.md
+---
+
 # Workspace Manager
 
 ## Document type

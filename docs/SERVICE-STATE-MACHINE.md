@@ -1,3 +1,14 @@
+---
+type: CONTRACT
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Defines the complete Windows service lifecycle state machine — states, transitions, timeouts, recovery transitions, forbidden transitions, and Windows-specific behavior (service mode, tray mode, power events, sleep/resume).
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/SERVICE-STATE-MACHINE.md
+---
+
 # Service State Machine
 
 ## Document type

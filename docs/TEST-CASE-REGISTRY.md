@@ -1,3 +1,14 @@
+---
+type: REFERENCE
+owner: Runtime Team
+status: Canonical
+version: 1.0.0
+purpose: Canonical registry of all architecture-level test case IDs referenced by the traceability matrix. Each ID maps to a subsystem, a test category, and the validating document.
+scope: None
+last_updated: 2026-07-29
+canonical_source: docs/TEST-CASE-REGISTRY.md
+---
+
 # Test Case Registry
 
 ## Document type
