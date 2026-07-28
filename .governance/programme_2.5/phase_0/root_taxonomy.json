@@ -1,0 +1,14 @@
+{
+  "taxonomy": [
+    "Tier A: Platform Root",
+    "Tier B: Kernel Root",
+    "Tier C: Runtime Root",
+    "Tier D: Subsystem Root",
+    "Tier E: Integration Root",
+    "Tier F: UI Root",
+    "Registry",
+    "Reference",
+    "Guide",
+    "ADR"
+  ]
+}

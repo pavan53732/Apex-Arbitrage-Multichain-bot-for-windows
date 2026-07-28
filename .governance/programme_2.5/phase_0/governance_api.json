@@ -1,0 +1,14 @@
+{
+  "methods": [
+    "Index()",
+    "Parse()",
+    "Validate()",
+    "BuildGraph()",
+    "ComputeClosure()",
+    "Freeze()",
+    "Repair()",
+    "GenerateEvidence()",
+    "ComputeMetrics()",
+    "Integrity()"
+  ]
+}

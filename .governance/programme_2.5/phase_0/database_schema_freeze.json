@@ -1,0 +1,24 @@
+{
+  "tables": [
+    "documents",
+    "behavioural_roots",
+    "closures",
+    "closure_documents",
+    "dimensions",
+    "sections",
+    "validators",
+    "validator_runs",
+    "repair_tasks",
+    "repair_history",
+    "graphs",
+    "graph_nodes",
+    "graph_edges",
+    "metrics",
+    "metric_history",
+    "freeze_records",
+    "freeze_history",
+    "evidence",
+    "reports",
+    "commits"
+  ]
+}

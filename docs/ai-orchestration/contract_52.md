@@ -3,94 +3,102 @@ type: CONTRACT
 owner: AI Team
 status: Canonical
 version: 1.0.0
-purpose: AI orchestration event contract for Contract 52
-scope: Defines event contracts for AI orchestration subsystem.
+purpose: AI orchestration schema contract for Contract 52
+scope: Defines data schemas for AI orchestration subsystem.
 last_updated: 2026-07-28
 canonical_source: docs/ai-orchestration/contract_52.md
 ---
 
 # Contract 52
 
-## Events
+## Schemas
 
-### Producer
-- **Producer:** AI-ORCHESTRATION
-- **Producer Type:** Behavioural root
-- **Event Source:** Orchestration engine
+### Owner
+- **Owner:** AI Team
+- **Schema Type:** AI Orchestration Data
+- **Authority:** Canonical for schema definitions
 
-### Consumer
-- **Primary Consumer:** AI-PIPELINE
-- **Secondary Consumers:** AI-TOOLS, AI-GATEWAY
-- **Consumer Type:** Event subscribers
+### Schema Version
+- **Version:** 1.0.0
+- **Format:** JSON Schema
+- **Registry:** Internal schema registry
 
-### Payload Schema
-- **Event Type:** OrchestrationEvent
-- **Schema Version:** 1.0.0
-- **Fields:**
-  - event_id: string (required)
-  - event_type: string (required)
-  - timestamp: ISO8601 (required)
-  - payload: object (required)
-  - correlation_id: string (optional)
+### Fields
+- **Field 1:** orchestration_id
+  - Type: string
+  - Required: Yes
+  - Constraints: UUID format
+  - Description: Unique identifier for orchestration instance
 
-### Ordering
-- **Ordering Guarantee:** Per-correlation-id ordering
-- **Delivery Order:** FIFO within correlation group
-- **Parallelism:** Across different correlation groups
+- **Field 2:** plan
+  - Type: object
+  - Required: Yes
+  - Constraints: Must contain steps array
+  - Description: Orchestration plan
 
-### Delivery Semantics
-- **Delivery Mode:** At-least-once
-- **Acknowledgement:** Required
-- **Retry:** On failure
+- **Field 3:** status
+  - Type: string
+  - Required: Yes
+  - Constraints: Enum ["pending", "running", "completed", "failed"]
+  - Description: Current orchestration status
 
-### Retry Policy
-- **Max Retries:** 3
-- **Backoff:** Exponential (1s, 2s, 4s)
-- **Dead Letter:** After max retries exceeded
+- **Field 4:** created_at
+  - Type: string (ISO8601)
+  - Required: Yes
+  - Constraints: Valid ISO8601 timestamp
+  - Description: Creation timestamp
 
-### Acknowledgement
-- **Ack Type:** Explicit
-- **Ack Timeout:** 30 seconds
-- **Nack Handling:** Retry or dead-letter
+- **Field 5:** updated_at
+  - Type: string (ISO8601)
+  - Required: Yes
+  - Constraints: Valid ISO8601 timestamp
+  - Description: Last update timestamp
 
-### Failure Behaviour
-- **Transient Failures:** Retry with backoff
-- **Permanent Failures:** Dead-letter queue
-- **Error Logging:** Structured logging
+### Types
+- orchestration_id: string (UUID)
+- plan: object with steps array
+- status: enum
+- timestamp: ISO8601 string
+
+### Constraints
+- orchestration_id must be valid UUID
+- plan.steps must be non-empty array
+- status must be one of allowed values
+- timestamps must be valid ISO8601
+
+### Validation
+- **Schema Validation:** JSON Schema Draft 7
+- **Runtime Validation:** Enabled
+- **Type Checking:** Strict
+
+### Migration
+- **From Version:** N/A (initial)
+- **To Version:** 1.0.0
+- **Migration Script:** N/A
+- **Backward Compatible:** N/A (initial)
+
+### Backward Compatibility
+- **Compatible:** N/A (initial version)
+- **Breaking Changes:** None
+
+### Forward Compatibility
+- **Compatible:** Yes (with extension fields)
+- **Extension Mechanism:** Additional properties allowed
 
 ### Persistence
-- **Event Store:** Event-sourced
-- **Retention:** 90 days
-- **Archival:** Cold storage after 30 days
-
-### Replay
-- **Replay Support:** Yes
-- **Replay Scope:** From checkpoint or time range
-- **Replay Idempotency:** Guaranteed
-
-### Dead-Letter Handling
-- **DLQ:** Enabled
-- **DLQ Processing:** Manual review + automated retry
-- **DLQ Retention:** 30 days
-
-### Version Compatibility
-- **Backward Compatible:** Yes
-- **Forward Compatible:** Partial
-- **Version Negotiation:** Schema registry
-
-### Ownership
-- **Event Owner:** AI Team
-- **Schema Owner:** AI Team
-- **Contract Owner:** AI-ORCHESTRATION
+- **Storage:** Event-sourced
+- **Format:** JSON
+- **Versioning:** Schema version included
 
 ## Acceptance Criteria
 
-- Producer defined ✓
-- Consumer(s) defined ✓
-- Payload schema defined ✓
-- Ordering specified ✓
-- Delivery semantics defined ✓
-- Retry policy defined ✓
-- Dead-letter handling defined ✓
-- Version compatibility defined ✓
-- Ownership documented ✓
+- Owner documented ✓
+- Version defined ✓
+- Fields defined ✓
+- Types defined ✓
+- Constraints defined ✓
+- Validation rules defined ✓
+- Migration strategy defined ✓
+- Backward compatibility documented ✓
+- Forward compatibility documented ✓
+- Persistence strategy defined ✓

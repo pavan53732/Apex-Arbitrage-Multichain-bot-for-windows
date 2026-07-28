@@ -1,0 +1,39 @@
+{
+  "root_detection": [
+    "Repository",
+    "Indexer",
+    "Metadata Parser",
+    "Candidate Roots",
+    "Classification",
+    "Validation",
+    "Registry",
+    "Freeze"
+  ],
+  "closure": [
+    "Root",
+    "Dependency Resolution",
+    "Transitive Closure",
+    "Manifest",
+    "Audit",
+    "Repair Queue",
+    "Validation",
+    "Freeze"
+  ],
+  "validator": [
+    "Repository",
+    "Validator Discovery",
+    "Execution",
+    "Evidence",
+    "Metrics",
+    "Integrity"
+  ],
+  "graph": [
+    "Repository",
+    "Extract Nodes",
+    "Extract Edges",
+    "Validate",
+    "Graph",
+    "Evidence",
+    "Freeze"
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "programme": "PROGRAMME_2.5",
+  "title": "Governance Platform Readiness Checklist",
+  "checklist": [
+    {
+      "id": "CHECK-WS1",
+      "workstream": "Root Detection Engine",
+      "checks": [
+        "Behavioural Root Registry exists and is valid",
+        "Root taxonomy is documented",
+        "Root validation is implemented",
+        "Root lifecycle is defined",
+        "Root ownership is clear",
+        "Zero false positive roots",
+        "Zero duplicate roots"
+      ],
+      "status": "PENDING"
+    },
+    {
+      "id": "CHECK-WS2",
+      "workstream": "Closure Engine",
+      "checks": [
+        "Transitive dependency closure implemented",
+        "Reverse closure implemented",
+        "Closure hashing implemented",
+        "Closure versioning implemented",
+        "Closure validation implemented",
+        "Every behavioural root has manifest",
+        "Every behavioural root has dependency graph",
+        "Every behavioural root has audit",
+        "Every behavioural root has work queue",
+        "Every behavioural root has maturity report"
+      ],
+      "status": "PENDING"
+    },
+    {
+      "id": "CHECK-WS3",
+      "workstream": "Validator Framework",
+      "checks": [
+        "validator/ownership/ implemented",
+        "validator/dependency/ implemented",
+        "validator/event/ implemented",
+        "validator/schema/ implemented",
+        "validator/interface/ implemented",
+        "validator/recovery/ implemented",
+        "validator/security/ implemented",
+        "validator/algorithm/ implemented",
+        "validator/state_machine/ implemented",
+        "validator/configuration/ implemented",
+        "validator/metadata/ implemented",
+        "validator/closure/ implemented",
+        "validator/graph/ implemented",
+        "validator/freeze/ implemented",
+        "Every validator independently executable",
+        "Every validator has test coverage",
+        "Every validator produces evidence"
+      ],
+      "status": "PENDING"
+    },
+    {
+      "id": "CHECK-WS4",
+      "workstream": "Knowledge Graph",
+      "checks": [
+        "Document graph has nodes AND edges",
+        "Dependency graph has nodes AND edges",
+        "Ownership graph has nodes AND edges",
+        "Interface graph has nodes AND edges",
+        "Event graph has nodes AND edges",
+        "Schema graph has nodes AND edges",
+        "Configuration graph has nodes AND edges",
+        "Service graph has nodes AND edges",
+        "Plugin graph has nodes AND edges",
+        "Runtime graph has nodes AND edges",
+        "Security graph has nodes AND edges",
+        "Recovery graph has nodes AND edges",
+        "Validation graph has nodes AND edges",
+        "Algorithm graph has nodes AND edges",
+        "Every graph is reproducible from repository",
+        "Every graph is validated against source documents"
+      ],
+      "status": "PENDING"
+    },
+    {
+      "id": "CHECK-WS5",
+      "workstream": "Database Consolidation",
+      "checks": [
+        "Database schema versioning implemented",
+        "Migration scripts created",
+        "Integrity validation implemented",
+        "Single canonical database exists",
+        "Obsolete databases archived/deleted",
+        "Exactly one governance.db",
+        "Zero duplicate databases",
+        "All data migrated successfully",
+        "Schema version documented"
+      ],
+      "status": "PENDING"
+    },
+    {
+      "id": "CHECK-WS6",
+      "workstream": "Freeze Framework",
+      "checks": [
+        "FreezeRecord class implemented",
+        "FreezeManifest implemented",
+        "FreezeHash implemented",
+        "FreezeValidator implemented",
+        "FreezeEvidence implemented",
+        "FreezeHistory implemented",
+        "Every frozen dimension generates immutable evidence",
+        "Freeze records are tamper-evident",
+        "Freeze history is queryable"
+      ],
+      "status": "PENDING"
+    },
+    {
+      "id": "CHECK-WS7",
+      "workstream": "Evidence System",
+      "checks": [
+        "Programme1/ evidence directory exists",
+        "Programme2/ evidence directory exists",
+        "Programme3/ evidence directory exists",
+        "validators/ evidence exists",
+        "metrics/ evidence exists",
+        "graphs/ evidence exists",
+        "closures/ evidence exists",
+        "hashes/ evidence exists",
+        "commits/ evidence exists",
+        "reports/ evidence exists",
+        "No programme complete without evidence",
+        "All evidence is timestamped and hashed",
+        "Evidence is queryable and auditable"
+      ],
+      "status": "PENDING"
+    },
+    {
+      "id": "CHECK-WS8",
+      "workstream": "Metrics Engine",
+      "checks": [
+        "Metrics specification documented",
+        "Metrics computation engine implemented",
+        "Metrics validation implemented",
+        "Metrics history tracking implemented",
+        "Every metric is reproducible",
+        "Metrics are timestamped",
+        "Metrics history is queryable"
+      ],
+      "status": "PENDING"
+    },
+    {
+      "id": "CHECK-WS9",
+      "workstream": "Integrity Engine",
+      "checks": [
+        "apex-governance integrity command implemented",
+        "Database integrity checks pass",
+        "Graph integrity checks pass",
+        "Validator integrity checks pass",
+        "Closure integrity checks pass",
+        "Work queue integrity checks pass",
+        "Freeze record integrity checks pass",
+        "Evidence integrity checks pass",
+        "Metrics integrity checks pass",
+        "Ownership integrity checks pass",
+        "Reference integrity checks pass",
+        "Single command verifies entire platform",
+        "All checks pass before Programme 3 can start",
+        "Failures are specific and actionable"
+      ],
+      "status": "PENDING"
+    }
+  ]
+}

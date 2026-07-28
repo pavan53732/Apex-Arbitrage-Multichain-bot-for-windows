@@ -1,0 +1,14 @@
+{
+  ".governance": {
+    "database": {},
+    "evidence": {},
+    "exports": {},
+    "graphs": {},
+    "closures": {},
+    "metrics": {},
+    "validators": {},
+    "freeze": {},
+    "reports": {},
+    "history": {}
+  }
+}

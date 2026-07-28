@@ -1,0 +1,3987 @@
+{
+  "timestamp": "2026-07-28T22:07:17.672754",
+  "root": "/home/user/apex_repo",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "filename": ".gitignore",
+      "extension": "",
+      "file_type": "Other",
+      "size_bytes": 682,
+      "line_count": 25,
+      "last_modified": "2026-07-28T18:38:19.966627"
+    },
+    {
+      "path": "AGENTS.md",
+      "filename": "AGENTS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 318,
+      "line_count": 16,
+      "last_modified": "2026-07-28T19:42:01.876822"
+    },
+    {
+      "path": "AIDER.md",
+      "filename": "AIDER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1529,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "ANTIGRAVITY.md",
+      "filename": "ANTIGRAVITY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1483,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "APEX-ARCHITECTURE.md",
+      "filename": "APEX-ARCHITECTURE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1497,
+      "line_count": 45,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "CHATGPT.md",
+      "filename": "CHATGPT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1533,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "CLAUDE.md",
+      "filename": "CLAUDE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1470,
+      "line_count": 41,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "CLINE.md",
+      "filename": "CLINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1403,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "CODEBUFF.md",
+      "filename": "CODEBUFF.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1544,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "COPILOT.md",
+      "filename": "COPILOT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1539,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "CURSOR.md",
+      "filename": "CURSOR.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1534,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "GEMINI.md",
+      "filename": "GEMINI.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1470,
+      "line_count": 43,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "GITHUB-COPILOT-CLI.md",
+      "filename": "GITHUB-COPILOT-CLI.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1588,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "GOOGLE-CODE-ASSISTANT.md",
+      "filename": "GOOGLE-CODE-ASSISTANT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1592,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "KILO-CODE.md",
+      "filename": "KILO-CODE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1479,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "LLAMA-CPP.md",
+      "filename": "LLAMA-CPP.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1543,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "OLLAMA.md",
+      "filename": "OLLAMA.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1528,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "OPENCODE.md",
+      "filename": "OPENCODE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1442,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "PERPLEXITY.md",
+      "filename": "PERPLEXITY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1548,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:03.996255"
+    },
+    {
+      "path": "PROJECT-TREE-COMPLETE.md",
+      "filename": "PROJECT-TREE-COMPLETE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 36572,
+      "line_count": 619,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "QODO.md",
+      "filename": "QODO.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1524,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "QWEN.md",
+      "filename": "QWEN.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1518,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "RAYCAST.md",
+      "filename": "RAYCAST.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1539,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "README-GOVERNANCE.md",
+      "filename": "README-GOVERNANCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 446,
+      "line_count": 16,
+      "last_modified": "2026-07-28T19:47:29.607121"
+    },
+    {
+      "path": "README.md",
+      "filename": "README.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2031,
+      "line_count": 55,
+      "last_modified": "2026-07-28T19:47:29.607121"
+    },
+    {
+      "path": "ROO-CODE.md",
+      "filename": "ROO-CODE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1544,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "TABNINE.md",
+      "filename": "TABNINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1539,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "WARP.md",
+      "filename": "WARP.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1524,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "WINDSURF.md",
+      "filename": "WINDSURF.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1544,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "ZED.md",
+      "filename": "ZED.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1519,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "audit-doc-governance.json",
+      "filename": "audit-doc-governance.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 3917,
+      "line_count": 128,
+      "last_modified": "2026-07-28T18:38:19.970627"
+    },
+    {
+      "path": "audit-run-summary.json",
+      "filename": "audit-run-summary.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 617,
+      "line_count": 24,
+      "last_modified": "2026-07-28T18:38:19.970627"
+    },
+    {
+      "path": "architecture-tests/README.md",
+      "filename": "README.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3068,
+      "line_count": 98,
+      "last_modified": "2026-07-28T18:38:19.970627"
+    },
+    {
+      "path": "architecture-tests/audit_duplicates.py",
+      "filename": "audit_duplicates.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 3941,
+      "line_count": 110,
+      "last_modified": "2026-07-28T18:38:19.970627"
+    },
+    {
+      "path": "architecture-tests/validate_contracts.py",
+      "filename": "validate_contracts.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 2790,
+      "line_count": 96,
+      "last_modified": "2026-07-28T18:38:19.970627"
+    },
+    {
+      "path": "architecture-tests/validate_cross_references.py",
+      "filename": "validate_cross_references.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 2742,
+      "line_count": 85,
+      "last_modified": "2026-07-28T18:38:19.970627"
+    },
+    {
+      "path": "architecture-tests/validate_ownership.py",
+      "filename": "validate_ownership.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 6685,
+      "line_count": 182,
+      "last_modified": "2026-07-28T18:38:19.970627"
+    },
+    {
+      "path": "architecture-tests/validate_traceability.py",
+      "filename": "validate_traceability.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 3893,
+      "line_count": 125,
+      "last_modified": "2026-07-28T18:38:19.970627"
+    },
+    {
+      "path": "docs/AGENT-GUIDE.md",
+      "filename": "AGENT-GUIDE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1803,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AGENT-INDEX.md",
+      "filename": "AGENT-INDEX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2844,
+      "line_count": 58,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AGENTS.md",
+      "filename": "AGENTS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1422,
+      "line_count": 41,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-AGENT-SPECIFICATION.md",
+      "filename": "AI-AGENT-SPECIFICATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1666,
+      "line_count": 47,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-CAPABILITY-MATRIX.md",
+      "filename": "AI-CAPABILITY-MATRIX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1911,
+      "line_count": 53,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-CONSENSUS.md",
+      "filename": "AI-CONSENSUS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2444,
+      "line_count": 87,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-CONTEXT-WINDOW-MANAGEMENT.md",
+      "filename": "AI-CONTEXT-WINDOW-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1329,
+      "line_count": 52,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-COST-MANAGEMENT.md",
+      "filename": "AI-COST-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1243,
+      "line_count": 50,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-GATEWAY.md",
+      "filename": "AI-GATEWAY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2524,
+      "line_count": 82,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-KNOWLEDGE-INDEX.md",
+      "filename": "AI-KNOWLEDGE-INDEX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1104,
+      "line_count": 45,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-MEMORY-SYSTEM.md",
+      "filename": "AI-MEMORY-SYSTEM.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2589,
+      "line_count": 88,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-MEMORY.md",
+      "filename": "AI-MEMORY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 360,
+      "line_count": 19,
+      "last_modified": "2026-07-28T19:53:04.000258"
+    },
+    {
+      "path": "docs/AI-ORCHESTRATION.md",
+      "filename": "AI-ORCHESTRATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 18457,
+      "line_count": 389,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-PIPELINE.md",
+      "filename": "AI-PIPELINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 17412,
+      "line_count": 416,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-PLANNER.md",
+      "filename": "AI-PLANNER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1092,
+      "line_count": 46,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-PROVIDER-MANAGER.md",
+      "filename": "AI-PROVIDER-MANAGER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 11954,
+      "line_count": 306,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-REASONING-POLICY.md",
+      "filename": "AI-REASONING-POLICY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1431,
+      "line_count": 54,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-REFLECTION.md",
+      "filename": "AI-REFLECTION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1291,
+      "line_count": 52,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-SAFETY-BOUNDARY.md",
+      "filename": "AI-SAFETY-BOUNDARY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 12232,
+      "line_count": 192,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-SETTINGS.md",
+      "filename": "AI-SETTINGS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1980,
+      "line_count": 62,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-STATE-MACHINE.md",
+      "filename": "AI-STATE-MACHINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 12414,
+      "line_count": 196,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-TOOL-INVOCATION-CONTRACT.md",
+      "filename": "AI-TOOL-INVOCATION-CONTRACT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8734,
+      "line_count": 222,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AI-TOOLS.md",
+      "filename": "AI-TOOLS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1112,
+      "line_count": 45,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/APEX-KERNEL.md",
+      "filename": "APEX-KERNEL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1769,
+      "line_count": 56,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/APEX-OS.md",
+      "filename": "APEX-OS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1028,
+      "line_count": 43,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/API-CONTRACTS.md",
+      "filename": "API-CONTRACTS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 4181,
+      "line_count": 124,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/API-REFERENCE.md",
+      "filename": "API-REFERENCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 11985,
+      "line_count": 388,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/APP-BUILDER-DEPLOYMENT-GUIDE.md",
+      "filename": "APP-BUILDER-DEPLOYMENT-GUIDE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 890,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/APP-BUILDER-PLUGIN-SYSTEM.md",
+      "filename": "APP-BUILDER-PLUGIN-SYSTEM.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8711,
+      "line_count": 154,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/APP-BUILDER-WORKFLOW.md",
+      "filename": "APP-BUILDER-WORKFLOW.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 6859,
+      "line_count": 186,
+      "last_modified": "2026-07-28T21:24:48.537745"
+    },
+    {
+      "path": "docs/ARBITRAGE-MONITORING.md",
+      "filename": "ARBITRAGE-MONITORING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1025,
+      "line_count": 37,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/ARBITRAGE-WINDOW-MANAGER.md",
+      "filename": "ARBITRAGE-WINDOW-MANAGER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 908,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "filename": "ARCHITECTURE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3482,
+      "line_count": 94,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/ASSET-MANAGEMENT.md",
+      "filename": "ASSET-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1383,
+      "line_count": 55,
+      "last_modified": "2026-07-28T19:53:04.004261"
+    },
+    {
+      "path": "docs/AUDIT-REPORT-PHASE4.md",
+      "filename": "AUDIT-REPORT-PHASE4.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 6394,
+      "line_count": 139,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/BACKTESTING.md",
+      "filename": "BACKTESTING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3511,
+      "line_count": 89,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/BOOTSTRAP-SEQUENCE.md",
+      "filename": "BOOTSTRAP-SEQUENCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1184,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/BUILD-RELEASE-CICD.md",
+      "filename": "BUILD-RELEASE-CICD.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 909,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CACHE-MANAGER.md",
+      "filename": "CACHE-MANAGER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1394,
+      "line_count": 47,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CANONICAL-SOURCE-RULES.md",
+      "filename": "CANONICAL-SOURCE-RULES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 551,
+      "line_count": 24,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CAPACITY-PLANNING.md",
+      "filename": "CAPACITY-PLANNING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 6592,
+      "line_count": 179,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CHAIN-COMMAND-CENTER.md",
+      "filename": "CHAIN-COMMAND-CENTER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 736,
+      "line_count": 31,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CHAIN-INTEGRATION.md",
+      "filename": "CHAIN-INTEGRATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 10455,
+      "line_count": 388,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CHAIN-INTELLIGENCE.md",
+      "filename": "CHAIN-INTELLIGENCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1371,
+      "line_count": 53,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CHAIN-REGISTRY.md",
+      "filename": "CHAIN-REGISTRY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1131,
+      "line_count": 46,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CHAIN-ROTATION.md",
+      "filename": "CHAIN-ROTATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1180,
+      "line_count": 53,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CHANGELOG.md",
+      "filename": "CHANGELOG.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 937,
+      "line_count": 40,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CLOUD-AI-INTEGRATION.md",
+      "filename": "CLOUD-AI-INTEGRATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 11399,
+      "line_count": 392,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CODE-SIGNING.md",
+      "filename": "CODE-SIGNING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1690,
+      "line_count": 46,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CODING-STANDARDS.md",
+      "filename": "CODING-STANDARDS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 890,
+      "line_count": 37,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/COMPONENT-DIAGRAMS.md",
+      "filename": "COMPONENT-DIAGRAMS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1176,
+      "line_count": 48,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CONCURRENCY-MODEL.md",
+      "filename": "CONCURRENCY-MODEL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 6420,
+      "line_count": 189,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CONFIGURATION-PROFILES.md",
+      "filename": "CONFIGURATION-PROFILES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1476,
+      "line_count": 61,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CONFIGURATION-REFERENCE.md",
+      "filename": "CONFIGURATION-REFERENCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 18804,
+      "line_count": 290,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CONFIGURATION.md",
+      "filename": "CONFIGURATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8155,
+      "line_count": 154,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CONTEXT-BUILDER.md",
+      "filename": "CONTEXT-BUILDER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1367,
+      "line_count": 55,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CONTEXT-PRIORITY-MATRIX.md",
+      "filename": "CONTEXT-PRIORITY-MATRIX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8077,
+      "line_count": 155,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CONTRACT-MANAGEMENT.md",
+      "filename": "CONTRACT-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1249,
+      "line_count": 54,
+      "last_modified": "2026-07-28T19:53:04.008264"
+    },
+    {
+      "path": "docs/CONTRACT-REGISTRY.md",
+      "filename": "CONTRACT-REGISTRY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 822,
+      "line_count": 36,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/CONTRIBUTING.md",
+      "filename": "CONTRIBUTING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 887,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/CROSS-EXCHANGE-ARBITRAGE.md",
+      "filename": "CROSS-EXCHANGE-ARBITRAGE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1067,
+      "line_count": 37,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/CROSS-REFERENCE-INDEX.md",
+      "filename": "CROSS-REFERENCE-INDEX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 438,
+      "line_count": 19,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DASHBOARD-LAYOUT.md",
+      "filename": "DASHBOARD-LAYOUT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 16042,
+      "line_count": 391,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DASHBOARD-RUNTIME.md",
+      "filename": "DASHBOARD-RUNTIME.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 15616,
+      "line_count": 324,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DASHBOARD-WIDGETS.md",
+      "filename": "DASHBOARD-WIDGETS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 27967,
+      "line_count": 584,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DASHBOARD-WORKSPACES.md",
+      "filename": "DASHBOARD-WORKSPACES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 7316,
+      "line_count": 204,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DATA-FLOW.md",
+      "filename": "DATA-FLOW.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1188,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DATA-GOVERNANCE.md",
+      "filename": "DATA-GOVERNANCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1490,
+      "line_count": 60,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DATA-OWNERSHIP.md",
+      "filename": "DATA-OWNERSHIP.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 439,
+      "line_count": 19,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DATABASE-SCHEMA.md",
+      "filename": "DATABASE-SCHEMA.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 23814,
+      "line_count": 502,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DECISION-ENGINE.md",
+      "filename": "DECISION-ENGINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1469,
+      "line_count": 59,
+      "last_modified": "2026-07-28T19:53:04.012267"
+    },
+    {
+      "path": "docs/DECISION-LEDGER.md",
+      "filename": "DECISION-LEDGER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1357,
+      "line_count": 52,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DECISION-LOG.md",
+      "filename": "DECISION-LOG.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2309,
+      "line_count": 83,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DEPENDENCY-AUTHORITY-RULES.md",
+      "filename": "DEPENDENCY-AUTHORITY-RULES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 478,
+      "line_count": 19,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DEPENDENCY-GRAPH.md",
+      "filename": "DEPENDENCY-GRAPH.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1580,
+      "line_count": 62,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "filename": "DEPLOYMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1659,
+      "line_count": 65,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DESIGN-SYSTEM.md",
+      "filename": "DESIGN-SYSTEM.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 990,
+      "line_count": 41,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DESIGNER-PROTOCOLS.md",
+      "filename": "DESIGNER-PROTOCOLS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 16266,
+      "line_count": 442,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DEX-INTEGRATION.md",
+      "filename": "DEX-INTEGRATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9122,
+      "line_count": 326,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DEX-INTELLIGENCE.md",
+      "filename": "DEX-INTELLIGENCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 859,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DEX-REGISTRY.md",
+      "filename": "DEX-REGISTRY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1048,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DIAGNOSTICS.md",
+      "filename": "DIAGNOSTICS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8358,
+      "line_count": 195,
+      "last_modified": "2026-07-28T20:10:51.044868"
+    },
+    {
+      "path": "docs/DOCUMENTATION-LIFECYCLE.md",
+      "filename": "DOCUMENTATION-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 461,
+      "line_count": 19,
+      "last_modified": "2026-07-28T19:53:30.033666"
+    },
+    {
+      "path": "docs/DOCUMENTATION-MAP.md",
+      "filename": "DOCUMENTATION-MAP.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 48328,
+      "line_count": 1009,
+      "last_modified": "2026-07-28T19:53:30.037669"
+    },
+    {
+      "path": "docs/DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md",
+      "filename": "DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 6168,
+      "line_count": 137,
+      "last_modified": "2026-07-28T20:10:51.044868"
+    },
+    {
+      "path": "docs/DOMAIN-MODEL.md",
+      "filename": "DOMAIN-MODEL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9135,
+      "line_count": 134,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/END-TO-END-WIRING-CONTRACT.md",
+      "filename": "END-TO-END-WIRING-CONTRACT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 13234,
+      "line_count": 272,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/ENGINE-STATE-MACHINE.md",
+      "filename": "ENGINE-STATE-MACHINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 10003,
+      "line_count": 170,
+      "last_modified": "2026-07-28T19:53:30.037669"
+    },
+    {
+      "path": "docs/ENHANCEMENT-ROADMAP.md",
+      "filename": "ENHANCEMENT-ROADMAP.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 992,
+      "line_count": 40,
+      "last_modified": "2026-07-28T19:53:30.037669"
+    },
+    {
+      "path": "docs/ENTERPRISE-OPERATIONS.md",
+      "filename": "ENTERPRISE-OPERATIONS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 890,
+      "line_count": 36,
+      "last_modified": "2026-07-28T19:53:30.037669"
+    },
+    {
+      "path": "docs/ERROR-CATALOG.md",
+      "filename": "ERROR-CATALOG.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 489,
+      "line_count": 24,
+      "last_modified": "2026-07-28T19:53:30.037669"
+    },
+    {
+      "path": "docs/ERROR-CODES.md",
+      "filename": "ERROR-CODES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 487,
+      "line_count": 23,
+      "last_modified": "2026-07-28T19:53:30.037669"
+    },
+    {
+      "path": "docs/ERROR-HANDLING-LOGGING.md",
+      "filename": "ERROR-HANDLING-LOGGING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 10349,
+      "line_count": 188,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/EVENT-BUS.md",
+      "filename": "EVENT-BUS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 14508,
+      "line_count": 369,
+      "last_modified": "2026-07-28T19:53:30.037669"
+    },
+    {
+      "path": "docs/EVENT-CATALOG.md",
+      "filename": "EVENT-CATALOG.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 10874,
+      "line_count": 183,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/EVENT-FLOW.md",
+      "filename": "EVENT-FLOW.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1142,
+      "line_count": 45,
+      "last_modified": "2026-07-28T19:53:30.041672"
+    },
+    {
+      "path": "docs/EVENT-OWNERSHIP-MATRIX.md",
+      "filename": "EVENT-OWNERSHIP-MATRIX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 11068,
+      "line_count": 151,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/EXECUTION-ENGINE.md",
+      "filename": "EXECUTION-ENGINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 13076,
+      "line_count": 284,
+      "last_modified": "2026-07-28T19:53:30.041672"
+    },
+    {
+      "path": "docs/EXECUTION-LIFECYCLE.md",
+      "filename": "EXECUTION-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2293,
+      "line_count": 90,
+      "last_modified": "2026-07-28T19:53:30.041672"
+    },
+    {
+      "path": "docs/EXECUTION-POLICIES.md",
+      "filename": "EXECUTION-POLICIES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1250,
+      "line_count": 53,
+      "last_modified": "2026-07-28T19:53:30.041672"
+    },
+    {
+      "path": "docs/EXECUTION-STATE-MACHINE.md",
+      "filename": "EXECUTION-STATE-MACHINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 10641,
+      "line_count": 165,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/EXPLAINABILITY.md",
+      "filename": "EXPLAINABILITY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1669,
+      "line_count": 65,
+      "last_modified": "2026-07-28T19:53:30.041672"
+    },
+    {
+      "path": "docs/FAILURE-MATRIX.md",
+      "filename": "FAILURE-MATRIX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 460,
+      "line_count": 22,
+      "last_modified": "2026-07-28T19:53:30.041672"
+    },
+    {
+      "path": "docs/FAILURE-RECOVERY-MATRIX.md",
+      "filename": "FAILURE-RECOVERY-MATRIX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 542,
+      "line_count": 26,
+      "last_modified": "2026-07-28T19:53:30.045675"
+    },
+    {
+      "path": "docs/FAQ.md",
+      "filename": "FAQ.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 700,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.045675"
+    },
+    {
+      "path": "docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md",
+      "filename": "FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8167,
+      "line_count": 156,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/FEATURE-FLAGS.md",
+      "filename": "FEATURE-FLAGS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1224,
+      "line_count": 57,
+      "last_modified": "2026-07-28T19:53:30.045675"
+    },
+    {
+      "path": "docs/FEATURE-GATES.md",
+      "filename": "FEATURE-GATES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 405,
+      "line_count": 19,
+      "last_modified": "2026-07-28T19:53:30.045675"
+    },
+    {
+      "path": "docs/FEATURE-MATRIX.md",
+      "filename": "FEATURE-MATRIX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 771,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:30.045675"
+    },
+    {
+      "path": "docs/FILE-STORAGE.md",
+      "filename": "FILE-STORAGE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 666,
+      "line_count": 31,
+      "last_modified": "2026-07-28T19:53:30.045675"
+    },
+    {
+      "path": "docs/FINAL-READINESS-AUDIT.md",
+      "filename": "FINAL-READINESS-AUDIT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 13884,
+      "line_count": 187,
+      "last_modified": "2026-07-28T19:53:30.045675"
+    },
+    {
+      "path": "docs/GAS-OPTIMISATION.md",
+      "filename": "GAS-OPTIMISATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1667,
+      "line_count": 62,
+      "last_modified": "2026-07-28T19:53:30.045675"
+    },
+    {
+      "path": "docs/GLOSSARY.md",
+      "filename": "GLOSSARY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 732,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:30.045675"
+    },
+    {
+      "path": "docs/GOVERNANCE-EXPLAINABILITY.md",
+      "filename": "GOVERNANCE-EXPLAINABILITY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1439,
+      "line_count": 55,
+      "last_modified": "2026-07-28T19:53:30.049677"
+    },
+    {
+      "path": "docs/HEALTHCHECKS.md",
+      "filename": "HEALTHCHECKS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8874,
+      "line_count": 151,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/IMPLEMENTATION-ROADMAP.md",
+      "filename": "IMPLEMENTATION-ROADMAP.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 908,
+      "line_count": 37,
+      "last_modified": "2026-07-28T19:53:30.049677"
+    },
+    {
+      "path": "docs/INTERFACE-AGENT-MESSAGE.md",
+      "filename": "INTERFACE-AGENT-MESSAGE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2319,
+      "line_count": 65,
+      "last_modified": "2026-07-28T19:53:30.049677"
+    },
+    {
+      "path": "docs/INTERFACE-CATALOG.md",
+      "filename": "INTERFACE-CATALOG.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 500,
+      "line_count": 23,
+      "last_modified": "2026-07-28T19:53:30.049677"
+    },
+    {
+      "path": "docs/INTERFACE-NOTIFICATION-CHANNEL.md",
+      "filename": "INTERFACE-NOTIFICATION-CHANNEL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1432,
+      "line_count": 51,
+      "last_modified": "2026-07-28T19:53:30.049677"
+    },
+    {
+      "path": "docs/INTERFACE-PROVIDER-ADAPTER.md",
+      "filename": "INTERFACE-PROVIDER-ADAPTER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1479,
+      "line_count": 55,
+      "last_modified": "2026-07-28T19:53:30.049677"
+    },
+    {
+      "path": "docs/INTERFACE-TOOL-CALL.md",
+      "filename": "INTERFACE-TOOL-CALL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1452,
+      "line_count": 55,
+      "last_modified": "2026-07-28T19:53:30.049677"
+    },
+    {
+      "path": "docs/IPC-MESSAGE-CATALOG.md",
+      "filename": "IPC-MESSAGE-CATALOG.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 11746,
+      "line_count": 194,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/IPC-PROTOCOL.md",
+      "filename": "IPC-PROTOCOL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 17231,
+      "line_count": 343,
+      "last_modified": "2026-07-28T19:53:30.049677"
+    },
+    {
+      "path": "docs/KNOWLEDGE-GRAPH.md",
+      "filename": "KNOWLEDGE-GRAPH.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1209,
+      "line_count": 50,
+      "last_modified": "2026-07-28T19:53:30.053680"
+    },
+    {
+      "path": "docs/KNOWN-LIMITATIONS.md",
+      "filename": "KNOWN-LIMITATIONS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 775,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:30.053680"
+    },
+    {
+      "path": "docs/LEARNING-PIPELINE.md",
+      "filename": "LEARNING-PIPELINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1954,
+      "line_count": 74,
+      "last_modified": "2026-07-28T19:53:30.053680"
+    },
+    {
+      "path": "docs/LIQUIDITY-ANALYSIS.md",
+      "filename": "LIQUIDITY-ANALYSIS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2963,
+      "line_count": 95,
+      "last_modified": "2026-07-28T19:53:30.053680"
+    },
+    {
+      "path": "docs/LIVE-ARCHITECTURE-VIEWER.md",
+      "filename": "LIVE-ARCHITECTURE-VIEWER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1354,
+      "line_count": 55,
+      "last_modified": "2026-07-28T19:53:30.053680"
+    },
+    {
+      "path": "docs/MARKET-DATA.md",
+      "filename": "MARKET-DATA.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3647,
+      "line_count": 91,
+      "last_modified": "2026-07-28T19:53:30.053680"
+    },
+    {
+      "path": "docs/MARKET-INTELLIGENCE.md",
+      "filename": "MARKET-INTELLIGENCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 6270,
+      "line_count": 164,
+      "last_modified": "2026-07-28T19:53:30.053680"
+    },
+    {
+      "path": "docs/MARKET-REGIME-DETECTION.md",
+      "filename": "MARKET-REGIME-DETECTION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1168,
+      "line_count": 50,
+      "last_modified": "2026-07-28T19:53:30.053680"
+    },
+    {
+      "path": "docs/MARKET-SESSION.md",
+      "filename": "MARKET-SESSION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 782,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:30.053680"
+    },
+    {
+      "path": "docs/MEMORY-LIFECYCLE.md",
+      "filename": "MEMORY-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 5968,
+      "line_count": 151,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/METRICS.md",
+      "filename": "METRICS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 936,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/MEV-PROTECTION-DETAIL.md",
+      "filename": "MEV-PROTECTION-DETAIL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 898,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/MEV-PROTECTION.md",
+      "filename": "MEV-PROTECTION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1913,
+      "line_count": 76,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/MODEL-CAPABILITY-NEGOTIATION.md",
+      "filename": "MODEL-CAPABILITY-NEGOTIATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1216,
+      "line_count": 50,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/MODULE-DEPENDENCY.md",
+      "filename": "MODULE-DEPENDENCY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 724,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/MODULE-OWNERSHIP-MATRIX.md",
+      "filename": "MODULE-OWNERSHIP-MATRIX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 454,
+      "line_count": 19,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/MONITORING-OBSERVABILITY.md",
+      "filename": "MONITORING-OBSERVABILITY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9927,
+      "line_count": 155,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/NON-FUNCTIONAL-REQUIREMENTS.md",
+      "filename": "NON-FUNCTIONAL-REQUIREMENTS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2990,
+      "line_count": 81,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/NOTIFICATION-CENTER.md",
+      "filename": "NOTIFICATION-CENTER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1131,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "filename": "OPERATIONS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 573,
+      "line_count": 24,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/OPPORTUNITY-DETECTION.md",
+      "filename": "OPPORTUNITY-DETECTION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1458,
+      "line_count": 57,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/OPPORTUNITY-LIFECYCLE.md",
+      "filename": "OPPORTUNITY-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1393,
+      "line_count": 52,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/OPPORTUNITY-RANKING.md",
+      "filename": "OPPORTUNITY-RANKING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1605,
+      "line_count": 62,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/ORACLE-REGISTRY.md",
+      "filename": "ORACLE-REGISTRY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1080,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:30.057683"
+    },
+    {
+      "path": "docs/ORCHESTRATOR.md",
+      "filename": "ORCHESTRATOR.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 19631,
+      "line_count": 399,
+      "last_modified": "2026-07-28T19:53:30.061686"
+    },
+    {
+      "path": "docs/ORDER-MANAGEMENT.md",
+      "filename": "ORDER-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3128,
+      "line_count": 94,
+      "last_modified": "2026-07-28T19:53:30.061686"
+    },
+    {
+      "path": "docs/PAIR-DISCOVERY.md",
+      "filename": "PAIR-DISCOVERY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 668,
+      "line_count": 31,
+      "last_modified": "2026-07-28T19:53:30.061686"
+    },
+    {
+      "path": "docs/PERFORMANCE-SLOS.md",
+      "filename": "PERFORMANCE-SLOS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1101,
+      "line_count": 43,
+      "last_modified": "2026-07-28T19:53:30.061686"
+    },
+    {
+      "path": "docs/PERFORMANCE-TARGETS.md",
+      "filename": "PERFORMANCE-TARGETS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2568,
+      "line_count": 68,
+      "last_modified": "2026-07-28T19:53:30.061686"
+    },
+    {
+      "path": "docs/PERMISSION-MODEL.md",
+      "filename": "PERMISSION-MODEL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9857,
+      "line_count": 199,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/PLUGIN-LIFECYCLE.md",
+      "filename": "PLUGIN-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 13119,
+      "line_count": 287,
+      "last_modified": "2026-07-28T19:53:30.061686"
+    },
+    {
+      "path": "docs/PLUGIN-MARKETPLACE.md",
+      "filename": "PLUGIN-MARKETPLACE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1099,
+      "line_count": 43,
+      "last_modified": "2026-07-28T19:53:30.061686"
+    },
+    {
+      "path": "docs/PLUGIN-SANDBOX-CONTRACT.md",
+      "filename": "PLUGIN-SANDBOX-CONTRACT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 5541,
+      "line_count": 130,
+      "last_modified": "2026-07-28T20:10:51.048867"
+    },
+    {
+      "path": "docs/PLUGIN-SDK.md",
+      "filename": "PLUGIN-SDK.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3881,
+      "line_count": 130,
+      "last_modified": "2026-07-28T19:53:30.061686"
+    },
+    {
+      "path": "docs/PLUGIN-STATE-MACHINE.md",
+      "filename": "PLUGIN-STATE-MACHINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 12296,
+      "line_count": 196,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/POLICY-ENGINE.md",
+      "filename": "POLICY-ENGINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1246,
+      "line_count": 53,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/PORTFOLIO-ANALYTICS.md",
+      "filename": "PORTFOLIO-ANALYTICS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 991,
+      "line_count": 40,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/PORTFOLIO-MANAGEMENT.md",
+      "filename": "PORTFOLIO-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1158,
+      "line_count": 43,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/POSITION-MANAGEMENT.md",
+      "filename": "POSITION-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 924,
+      "line_count": 36,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/PRICE-DISCOVERY.md",
+      "filename": "PRICE-DISCOVERY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 681,
+      "line_count": 31,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/PROJECT-STRUCTURE.md",
+      "filename": "PROJECT-STRUCTURE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1451,
+      "line_count": 52,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/PROMPT-ENGINEERING.md",
+      "filename": "PROMPT-ENGINEERING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1318,
+      "line_count": 50,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/PROMPT-LIFECYCLE.md",
+      "filename": "PROMPT-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9508,
+      "line_count": 243,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/PROVIDER-RESILIENCE.md",
+      "filename": "PROVIDER-RESILIENCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1596,
+      "line_count": 64,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/QUEUE-MANAGEMENT.md",
+      "filename": "QUEUE-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2594,
+      "line_count": 81,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/README-GOVERNANCE.md",
+      "filename": "README-GOVERNANCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 852,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/README.md",
+      "filename": "README.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8449,
+      "line_count": 113,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/RECOVERY-AND-FAILOVER.md",
+      "filename": "RECOVERY-AND-FAILOVER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2824,
+      "line_count": 84,
+      "last_modified": "2026-07-28T19:53:30.065689"
+    },
+    {
+      "path": "docs/RECOVERY-COORDINATION.md",
+      "filename": "RECOVERY-COORDINATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 13925,
+      "line_count": 235,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/RECOVERY-PLAYBOOK.md",
+      "filename": "RECOVERY-PLAYBOOK.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 6612,
+      "line_count": 168,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/REGISTRY-SYSTEM.md",
+      "filename": "REGISTRY-SYSTEM.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 5816,
+      "line_count": 147,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/RESOURCE-BUDGET-SPECIFICATION.md",
+      "filename": "RESOURCE-BUDGET-SPECIFICATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 6061,
+      "line_count": 148,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/RESOURCE-MANAGER.md",
+      "filename": "RESOURCE-MANAGER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1107,
+      "line_count": 49,
+      "last_modified": "2026-07-28T19:53:30.069692"
+    },
+    {
+      "path": "docs/RISK-ENGINE.md",
+      "filename": "RISK-ENGINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 5413,
+      "line_count": 174,
+      "last_modified": "2026-07-28T19:53:30.069692"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "filename": "ROADMAP.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 562,
+      "line_count": 24,
+      "last_modified": "2026-07-28T19:53:30.069692"
+    },
+    {
+      "path": "docs/ROUTE-OPTIMIZATION.md",
+      "filename": "ROUTE-OPTIMIZATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1548,
+      "line_count": 61,
+      "last_modified": "2026-07-28T19:53:30.069692"
+    },
+    {
+      "path": "docs/ROUTE-SCORING-MODEL.md",
+      "filename": "ROUTE-SCORING-MODEL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1345,
+      "line_count": 57,
+      "last_modified": "2026-07-28T19:53:30.069692"
+    },
+    {
+      "path": "docs/ROUTING-ENGINE.md",
+      "filename": "ROUTING-ENGINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3035,
+      "line_count": 95,
+      "last_modified": "2026-07-28T19:53:30.069692"
+    },
+    {
+      "path": "docs/RPC-MANAGER.md",
+      "filename": "RPC-MANAGER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1031,
+      "line_count": 39,
+      "last_modified": "2026-07-28T19:53:30.069692"
+    },
+    {
+      "path": "docs/RUNTIME-FLOW-LIFECYCLE.md",
+      "filename": "RUNTIME-FLOW-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 13751,
+      "line_count": 347,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/RUNTIME-KNOWLEDGE.md",
+      "filename": "RUNTIME-KNOWLEDGE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1550,
+      "line_count": 61,
+      "last_modified": "2026-07-28T19:53:30.069692"
+    },
+    {
+      "path": "docs/RUNTIME-OPERATIONS.md",
+      "filename": "RUNTIME-OPERATIONS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 7530,
+      "line_count": 189,
+      "last_modified": "2026-07-28T19:53:30.069692"
+    },
+    {
+      "path": "docs/SECRET-LIFECYCLE.md",
+      "filename": "SECRET-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 7882,
+      "line_count": 189,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/SECURITY-CONTRACTS.md",
+      "filename": "SECURITY-CONTRACTS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1426,
+      "line_count": 37,
+      "last_modified": "2026-07-28T19:53:30.073695"
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "filename": "SECURITY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 12244,
+      "line_count": 261,
+      "last_modified": "2026-07-28T19:53:30.073695"
+    },
+    {
+      "path": "docs/SELF-HEALING.md",
+      "filename": "SELF-HEALING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1088,
+      "line_count": 48,
+      "last_modified": "2026-07-28T19:53:30.073695"
+    },
+    {
+      "path": "docs/SERVICE-LIFECYCLE.md",
+      "filename": "SERVICE-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1952,
+      "line_count": 71,
+      "last_modified": "2026-07-28T19:53:30.073695"
+    },
+    {
+      "path": "docs/SERVICE-REGISTRY.md",
+      "filename": "SERVICE-REGISTRY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1484,
+      "line_count": 56,
+      "last_modified": "2026-07-28T19:53:30.073695"
+    },
+    {
+      "path": "docs/SERVICE-STATE-MACHINE.md",
+      "filename": "SERVICE-STATE-MACHINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 11545,
+      "line_count": 184,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/SHUTDOWN-LIFECYCLE.md",
+      "filename": "SHUTDOWN-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1745,
+      "line_count": 65,
+      "last_modified": "2026-07-28T19:53:30.073695"
+    },
+    {
+      "path": "docs/SIMULATION-ENGINE.md",
+      "filename": "SIMULATION-ENGINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 12125,
+      "line_count": 303,
+      "last_modified": "2026-07-28T19:53:30.073695"
+    },
+    {
+      "path": "docs/SKILLS.md",
+      "filename": "SKILLS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 690,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:30.073695"
+    },
+    {
+      "path": "docs/SLIPPAGE-MODEL.md",
+      "filename": "SLIPPAGE-MODEL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1691,
+      "line_count": 68,
+      "last_modified": "2026-07-28T19:53:30.073695"
+    },
+    {
+      "path": "docs/STATE-MACHINE-INDEX.md",
+      "filename": "STATE-MACHINE-INDEX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9976,
+      "line_count": 203,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/STATE-MANAGEMENT.md",
+      "filename": "STATE-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8903,
+      "line_count": 157,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/STRATEGIES.md",
+      "filename": "STRATEGIES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 46297,
+      "line_count": 1549,
+      "last_modified": "2026-07-28T19:53:30.077698"
+    },
+    {
+      "path": "docs/STRATEGY-ROTATION.md",
+      "filename": "STRATEGY-ROTATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1313,
+      "line_count": 57,
+      "last_modified": "2026-07-28T19:53:30.077698"
+    },
+    {
+      "path": "docs/SYSTEM-CAPABILITY-REGISTRY.md",
+      "filename": "SYSTEM-CAPABILITY-REGISTRY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1559,
+      "line_count": 60,
+      "last_modified": "2026-07-28T19:53:30.077698"
+    },
+    {
+      "path": "docs/TASK-SCHEDULER.md",
+      "filename": "TASK-SCHEDULER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9007,
+      "line_count": 182,
+      "last_modified": "2026-07-28T19:53:30.077698"
+    },
+    {
+      "path": "docs/TEST-CASE-REGISTRY.md",
+      "filename": "TEST-CASE-REGISTRY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 6309,
+      "line_count": 110,
+      "last_modified": "2026-07-28T20:10:51.052868"
+    },
+    {
+      "path": "docs/TESTING-GUIDE.md",
+      "filename": "TESTING-GUIDE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 7362,
+      "line_count": 320,
+      "last_modified": "2026-07-28T19:53:30.077698"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "filename": "TESTING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 15718,
+      "line_count": 278,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/THREADING-MODEL.md",
+      "filename": "THREADING-MODEL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 16968,
+      "line_count": 336,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/TIMING-SPECIFICATION.md",
+      "filename": "TIMING-SPECIFICATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9555,
+      "line_count": 163,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/TOKEN-DISCOVERY.md",
+      "filename": "TOKEN-DISCOVERY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 917,
+      "line_count": 37,
+      "last_modified": "2026-07-28T19:53:30.081700"
+    },
+    {
+      "path": "docs/TOKEN-INTELLIGENCE.md",
+      "filename": "TOKEN-INTELLIGENCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1234,
+      "line_count": 53,
+      "last_modified": "2026-07-28T19:53:30.081700"
+    },
+    {
+      "path": "docs/TOKEN-REGISTRY.md",
+      "filename": "TOKEN-REGISTRY.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1082,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:30.081700"
+    },
+    {
+      "path": "docs/TRACEABILITY-MATRIX.md",
+      "filename": "TRACEABILITY-MATRIX.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 19764,
+      "line_count": 239,
+      "last_modified": "2026-07-28T21:24:48.537745"
+    },
+    {
+      "path": "docs/TRADE-EXPLAINER.md",
+      "filename": "TRADE-EXPLAINER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 688,
+      "line_count": 31,
+      "last_modified": "2026-07-28T19:53:30.081700"
+    },
+    {
+      "path": "docs/TRADING-ENGINE.md",
+      "filename": "TRADING-ENGINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 21542,
+      "line_count": 501,
+      "last_modified": "2026-07-28T19:53:30.081700"
+    },
+    {
+      "path": "docs/TRADING-LIFECYCLE.md",
+      "filename": "TRADING-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2338,
+      "line_count": 100,
+      "last_modified": "2026-07-28T19:53:30.081700"
+    },
+    {
+      "path": "docs/TRANSACTION-LIFECYCLE.md",
+      "filename": "TRANSACTION-LIFECYCLE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1728,
+      "line_count": 54,
+      "last_modified": "2026-07-28T19:53:30.081700"
+    },
+    {
+      "path": "docs/TROUBLESHOOTING.md",
+      "filename": "TROUBLESHOOTING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 787,
+      "line_count": 34,
+      "last_modified": "2026-07-28T19:53:30.081700"
+    },
+    {
+      "path": "docs/TRUST-BOUNDARIES.md",
+      "filename": "TRUST-BOUNDARIES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 7719,
+      "line_count": 183,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/UI-COMPONENT-SPEC.md",
+      "filename": "UI-COMPONENT-SPEC.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 936,
+      "line_count": 41,
+      "last_modified": "2026-07-28T19:53:30.085703"
+    },
+    {
+      "path": "docs/UI-DASHBOARD-SPEC.md",
+      "filename": "UI-DASHBOARD-SPEC.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1220,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:30.085703"
+    },
+    {
+      "path": "docs/UPDATE-MANAGER.md",
+      "filename": "UPDATE-MANAGER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 784,
+      "line_count": 36,
+      "last_modified": "2026-07-28T19:53:30.085703"
+    },
+    {
+      "path": "docs/USER-FLOWS.md",
+      "filename": "USER-FLOWS.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 5614,
+      "line_count": 147,
+      "last_modified": "2026-07-28T19:53:30.085703"
+    },
+    {
+      "path": "docs/USER-GUIDE.md",
+      "filename": "USER-GUIDE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1006,
+      "line_count": 43,
+      "last_modified": "2026-07-28T19:53:30.085703"
+    },
+    {
+      "path": "docs/UX-GUIDELINES.md",
+      "filename": "UX-GUIDELINES.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1262,
+      "line_count": 49,
+      "last_modified": "2026-07-28T19:53:30.085703"
+    },
+    {
+      "path": "docs/VERSIONING.md",
+      "filename": "VERSIONING.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1189,
+      "line_count": 46,
+      "last_modified": "2026-07-28T19:53:30.085703"
+    },
+    {
+      "path": "docs/WALLET-COMMAND-CENTER.md",
+      "filename": "WALLET-COMMAND-CENTER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 920,
+      "line_count": 36,
+      "last_modified": "2026-07-28T19:53:30.085703"
+    },
+    {
+      "path": "docs/WALLET-MANAGEMENT.md",
+      "filename": "WALLET-MANAGEMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1246,
+      "line_count": 44,
+      "last_modified": "2026-07-28T19:53:30.085703"
+    },
+    {
+      "path": "docs/WINDOWS-APP-ARCHITECTURE.md",
+      "filename": "WINDOWS-APP-ARCHITECTURE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 16277,
+      "line_count": 360,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/WINDOWS-DEPLOYMENT.md",
+      "filename": "WINDOWS-DEPLOYMENT.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8629,
+      "line_count": 198,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/WINDOWS-DESKTOP.md",
+      "filename": "WINDOWS-DESKTOP.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9495,
+      "line_count": 217,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/WINDOWS-NETWORK-RESILIENCE.md",
+      "filename": "WINDOWS-NETWORK-RESILIENCE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 7816,
+      "line_count": 200,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/WINDOWS-NOTIFICATION-INTEGRATION.md",
+      "filename": "WINDOWS-NOTIFICATION-INTEGRATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 7909,
+      "line_count": 152,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/WINDOWS-SECURITY-INTEGRATION.md",
+      "filename": "WINDOWS-SECURITY-INTEGRATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9368,
+      "line_count": 206,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/WINDOWS-SERVICE-INTEGRATION.md",
+      "filename": "WINDOWS-SERVICE-INTEGRATION.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 7889,
+      "line_count": 188,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/WORKER-ARCHITECTURE.md",
+      "filename": "WORKER-ARCHITECTURE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3016,
+      "line_count": 97,
+      "last_modified": "2026-07-28T19:53:30.089706"
+    },
+    {
+      "path": "docs/WORKER-POOL.md",
+      "filename": "WORKER-POOL.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 9826,
+      "line_count": 214,
+      "last_modified": "2026-07-28T19:53:30.089706"
+    },
+    {
+      "path": "docs/WORKER-STATE-MACHINE.md",
+      "filename": "WORKER-STATE-MACHINE.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 8188,
+      "line_count": 156,
+      "last_modified": "2026-07-28T20:10:51.056868"
+    },
+    {
+      "path": "docs/WORKFLOW-BUILDER.md",
+      "filename": "WORKFLOW-BUILDER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1159,
+      "line_count": 52,
+      "last_modified": "2026-07-28T19:53:30.089706"
+    },
+    {
+      "path": "docs/WORKSPACE-MANAGER.md",
+      "filename": "WORKSPACE-MANAGER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 973,
+      "line_count": 42,
+      "last_modified": "2026-07-28T19:53:30.089706"
+    },
+    {
+      "path": "docs/PROGRAMME-3-CLOSURE-ORCHESTRATOR.md",
+      "filename": "PROGRAMME-3-CLOSURE-ORCHESTRATOR.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3499,
+      "line_count": 91,
+      "last_modified": "2026-07-28T21:02:02.019993"
+    },
+    {
+      "path": "docs/PROGRAMME-3-REPAIR-PLANNER.md",
+      "filename": "PROGRAMME-3-REPAIR-PLANNER.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 3576,
+      "line_count": 95,
+      "last_modified": "2026-07-28T21:02:02.019993"
+    },
+    {
+      "path": "docs/adr/0001-provider-abstraction.md",
+      "filename": "0001-provider-abstraction.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 504,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.089706"
+    },
+    {
+      "path": "docs/adr/0002-event-driven-kernel.md",
+      "filename": "0002-event-driven-kernel.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 501,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.089706"
+    },
+    {
+      "path": "docs/adr/0003-plugin-first-architecture.md",
+      "filename": "0003-plugin-first-architecture.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 519,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.089706"
+    },
+    {
+      "path": "docs/adr/0004-polygon-first.md",
+      "filename": "0004-polygon-first.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 483,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.089706"
+    },
+    {
+      "path": "docs/adr/0005-ai-memory.md",
+      "filename": "0005-ai-memory.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 471,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.089706"
+    },
+    {
+      "path": "docs/adr/0006-runtime-governance.md",
+      "filename": "0006-runtime-governance.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 498,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.093709"
+    },
+    {
+      "path": "docs/adr/0007-workspace-model.md",
+      "filename": "0007-workspace-model.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 489,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.093709"
+    },
+    {
+      "path": "docs/adr/0008-orchestrator-state-machine.md",
+      "filename": "0008-orchestrator-state-machine.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 522,
+      "line_count": 33,
+      "last_modified": "2026-07-28T19:53:30.093709"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_1.md",
+      "filename": "contract_1.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2501,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_2.md",
+      "filename": "contract_2.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2501,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_3.md",
+      "filename": "contract_3.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2501,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_4.md",
+      "filename": "contract_4.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2501,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_5.md",
+      "filename": "contract_5.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2501,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_6.md",
+      "filename": "contract_6.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2501,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_7.md",
+      "filename": "contract_7.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2501,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_8.md",
+      "filename": "contract_8.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2501,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_9.md",
+      "filename": "contract_9.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2501,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_10.md",
+      "filename": "contract_10.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_11.md",
+      "filename": "contract_11.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_12.md",
+      "filename": "contract_12.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.710685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_13.md",
+      "filename": "contract_13.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.714685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_14.md",
+      "filename": "contract_14.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.714685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_15.md",
+      "filename": "contract_15.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.714685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_16.md",
+      "filename": "contract_16.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.714685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_17.md",
+      "filename": "contract_17.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.714685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_18.md",
+      "filename": "contract_18.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.714685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_19.md",
+      "filename": "contract_19.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.714685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_20.md",
+      "filename": "contract_20.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.714685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_21.md",
+      "filename": "contract_21.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.742685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_22.md",
+      "filename": "contract_22.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.742685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_23.md",
+      "filename": "contract_23.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.742685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_24.md",
+      "filename": "contract_24.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.742685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_25.md",
+      "filename": "contract_25.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.742685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_26.md",
+      "filename": "contract_26.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.742685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_27.md",
+      "filename": "contract_27.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.742685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_28.md",
+      "filename": "contract_28.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_29.md",
+      "filename": "contract_29.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_30.md",
+      "filename": "contract_30.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_31.md",
+      "filename": "contract_31.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_32.md",
+      "filename": "contract_32.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_33.md",
+      "filename": "contract_33.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_34.md",
+      "filename": "contract_34.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_35.md",
+      "filename": "contract_35.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_36.md",
+      "filename": "contract_36.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_37.md",
+      "filename": "contract_37.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_38.md",
+      "filename": "contract_38.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_39.md",
+      "filename": "contract_39.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_40.md",
+      "filename": "contract_40.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.746685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_41.md",
+      "filename": "contract_41.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.770685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_42.md",
+      "filename": "contract_42.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.770685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_43.md",
+      "filename": "contract_43.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.770685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_44.md",
+      "filename": "contract_44.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.770685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_45.md",
+      "filename": "contract_45.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.770685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_46.md",
+      "filename": "contract_46.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_47.md",
+      "filename": "contract_47.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_48.md",
+      "filename": "contract_48.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_49.md",
+      "filename": "contract_49.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_50.md",
+      "filename": "contract_50.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_51.md",
+      "filename": "contract_51.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_52.md",
+      "filename": "contract_52.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_53.md",
+      "filename": "contract_53.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_54.md",
+      "filename": "contract_54.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_55.md",
+      "filename": "contract_55.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_56.md",
+      "filename": "contract_56.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_57.md",
+      "filename": "contract_57.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_58.md",
+      "filename": "contract_58.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_59.md",
+      "filename": "contract_59.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_60.md",
+      "filename": "contract_60.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.774685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_61.md",
+      "filename": "contract_61.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.798685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_62.md",
+      "filename": "contract_62.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.798685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_63.md",
+      "filename": "contract_63.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.798685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_64.md",
+      "filename": "contract_64.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.798685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_65.md",
+      "filename": "contract_65.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.798685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_66.md",
+      "filename": "contract_66.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.798685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_67.md",
+      "filename": "contract_67.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.798685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_68.md",
+      "filename": "contract_68.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_69.md",
+      "filename": "contract_69.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_70.md",
+      "filename": "contract_70.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_71.md",
+      "filename": "contract_71.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_72.md",
+      "filename": "contract_72.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_73.md",
+      "filename": "contract_73.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_74.md",
+      "filename": "contract_74.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_75.md",
+      "filename": "contract_75.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_76.md",
+      "filename": "contract_76.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/contract_77.md",
+      "filename": "contract_77.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2504,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/specification_1.md",
+      "filename": "specification_1.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2516,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/specification_2.md",
+      "filename": "specification_2.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2516,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "docs/ai-orchestration/specification_3.md",
+      "filename": "specification_3.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 2516,
+      "line_count": 104,
+      "last_modified": "2026-07-28T21:28:37.802685"
+    },
+    {
+      "path": "schemas/README.md",
+      "filename": "README.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 56,
+      "line_count": 3,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "schemas/configuration.schema.json",
+      "filename": "configuration.schema.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 170,
+      "line_count": 7,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "schemas/event.schema.json",
+      "filename": "event.schema.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 162,
+      "line_count": 7,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "schemas/notification.schema.json",
+      "filename": "notification.schema.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 169,
+      "line_count": 7,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "schemas/plugin.schema.json",
+      "filename": "plugin.schema.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 163,
+      "line_count": 7,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "schemas/provider.schema.json",
+      "filename": "provider.schema.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 165,
+      "line_count": 7,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "schemas/settings.schema.json",
+      "filename": "settings.schema.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 165,
+      "line_count": 7,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "schemas/strategy.schema.json",
+      "filename": "strategy.schema.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 165,
+      "line_count": 7,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "schemas/workspace.schema.json",
+      "filename": "workspace.schema.json",
+      "extension": ".json",
+      "file_type": "JSON",
+      "size_bytes": 166,
+      "line_count": 7,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "scripts/validate_markdown_refs.sh",
+      "filename": "validate_markdown_refs.sh",
+      "extension": ".sh",
+      "file_type": "Shell",
+      "size_bytes": 1028,
+      "line_count": 47,
+      "last_modified": "2026-07-28T18:38:19.982627"
+    },
+    {
+      "path": "tools/governance/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 51,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.878980"
+    },
+    {
+      "path": "tools/governance/pyproject.toml",
+      "filename": "pyproject.toml",
+      "extension": ".toml",
+      "file_type": "Other",
+      "size_bytes": 967,
+      "line_count": 51,
+      "last_modified": "2026-07-28T18:39:43.663270"
+    },
+    {
+      "path": "tools/governance/README.md",
+      "filename": "README.md",
+      "extension": ".md",
+      "file_type": "Markdown",
+      "size_bytes": 1282,
+      "line_count": 41,
+      "last_modified": "2026-07-28T18:39:43.663270"
+    },
+    {
+      "path": "tools/governance/cli/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/cli/main.py",
+      "filename": "main.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 9170,
+      "line_count": 214,
+      "last_modified": "2026-07-28T19:02:46.079682"
+    },
+    {
+      "path": "tools/governance/indexer/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/indexer/repo_indexer.py",
+      "filename": "repo_indexer.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 1550,
+      "line_count": 43,
+      "last_modified": "2026-07-28T18:56:57.195339"
+    },
+    {
+      "path": "tools/governance/parser/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/parser/section_parser.py",
+      "filename": "section_parser.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 444,
+      "line_count": 15,
+      "last_modified": "2026-07-28T18:42:52.115441"
+    },
+    {
+      "path": "tools/governance/parser/markdown_parser.py",
+      "filename": "markdown_parser.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 459,
+      "line_count": 15,
+      "last_modified": "2026-07-28T18:48:55.455791"
+    },
+    {
+      "path": "tools/governance/metadata/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/metadata/models.py",
+      "filename": "models.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 1927,
+      "line_count": 48,
+      "last_modified": "2026-07-28T19:54:47.115960"
+    },
+    {
+      "path": "tools/governance/metadata/metadata_parser.py",
+      "filename": "metadata_parser.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 8364,
+      "line_count": 208,
+      "last_modified": "2026-07-28T20:06:24.068057"
+    },
+    {
+      "path": "tools/governance/references/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/references/reference_parser.py",
+      "filename": "reference_parser.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 3250,
+      "line_count": 86,
+      "last_modified": "2026-07-28T19:15:09.716015"
+    },
+    {
+      "path": "tools/governance/graphs/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/graphs/graph_builder.py",
+      "filename": "graph_builder.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 1646,
+      "line_count": 35,
+      "last_modified": "2026-07-28T18:42:52.115441"
+    },
+    {
+      "path": "tools/governance/closure/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/closure/closure_engine.py",
+      "filename": "closure_engine.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 5976,
+      "line_count": 247,
+      "last_modified": "2026-07-28T19:20:34.134657"
+    },
+    {
+      "path": "tools/governance/closure/orchestrator.py",
+      "filename": "orchestrator.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 3398,
+      "line_count": 108,
+      "last_modified": "2026-07-28T21:02:02.031993"
+    },
+    {
+      "path": "tools/governance/validator/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/validator/governance_validator.py",
+      "filename": "governance_validator.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 2531,
+      "line_count": 69,
+      "last_modified": "2026-07-28T18:43:28.339720"
+    },
+    {
+      "path": "tools/governance/context/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/metrics/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/metrics/metrics_engine.py",
+      "filename": "metrics_engine.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 905,
+      "line_count": 18,
+      "last_modified": "2026-07-28T18:43:28.339720"
+    },
+    {
+      "path": "tools/governance/reporting/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/repair/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/repair/engine.py",
+      "filename": "engine.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 294,
+      "line_count": 9,
+      "last_modified": "2026-07-28T18:45:11.616514"
+    },
+    {
+      "path": "tools/governance/repair/planner.py",
+      "filename": "planner.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 3262,
+      "line_count": 96,
+      "last_modified": "2026-07-28T21:02:02.031993"
+    },
+    {
+      "path": "tools/governance/storage/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/storage/sqlite_store.py",
+      "filename": "sqlite_store.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 1288,
+      "line_count": 28,
+      "last_modified": "2026-07-28T20:00:30.374293"
+    },
+    {
+      "path": "tools/governance/storage/json_export.py",
+      "filename": "json_export.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 406,
+      "line_count": 11,
+      "last_modified": "2026-07-28T18:43:28.339720"
+    },
+    {
+      "path": "tools/governance/config/governance.yaml",
+      "filename": "governance.yaml",
+      "extension": ".yaml",
+      "file_type": "YAML",
+      "size_bytes": 2130,
+      "line_count": 121,
+      "last_modified": "2026-07-28T18:56:57.199339"
+    },
+    {
+      "path": "tools/governance/config/config_loader.py",
+      "filename": "config_loader.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 302,
+      "line_count": 10,
+      "last_modified": "2026-07-28T18:44:05.612006"
+    },
+    {
+      "path": "tools/governance/progress/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/progress/progress_tracker.py",
+      "filename": "progress_tracker.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 881,
+      "line_count": 17,
+      "last_modified": "2026-07-28T18:43:28.343720"
+    },
+    {
+      "path": "tools/governance/search/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/search/semantic.py",
+      "filename": "semantic.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 312,
+      "line_count": 9,
+      "last_modified": "2026-07-28T18:45:11.616514"
+    },
+    {
+      "path": "tools/governance/query/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/query/architecture.py",
+      "filename": "architecture.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 311,
+      "line_count": 9,
+      "last_modified": "2026-07-28T18:45:11.616514"
+    },
+    {
+      "path": "tools/governance/memory/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/memory/database.py",
+      "filename": "database.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 298,
+      "line_count": 12,
+      "last_modified": "2026-07-28T18:45:11.616514"
+    },
+    {
+      "path": "tools/governance/dashboard/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/dashboard/metrics_dashboard.py",
+      "filename": "metrics_dashboard.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 284,
+      "line_count": 9,
+      "last_modified": "2026-07-28T18:45:11.616514"
+    },
+    {
+      "path": "tools/governance/history/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/history/tracker.py",
+      "filename": "tracker.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 232,
+      "line_count": 9,
+      "last_modified": "2026-07-28T18:45:11.616514"
+    },
+    {
+      "path": "tools/governance/implementation/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/implementation/workflow.py",
+      "filename": "workflow.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 352,
+      "line_count": 9,
+      "last_modified": "2026-07-28T18:45:11.616514"
+    },
+    {
+      "path": "tools/governance/continuous/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/continuous/intelligence.py",
+      "filename": "intelligence.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 307,
+      "line_count": 9,
+      "last_modified": "2026-07-28T18:45:11.616514"
+    },
+    {
+      "path": "tools/governance/tests/__init__.py",
+      "filename": "__init__.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 18,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:39:05.882980"
+    },
+    {
+      "path": "tools/governance/tests/test_parsers.py",
+      "filename": "test_parsers.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 746,
+      "line_count": 31,
+      "last_modified": "2026-07-28T18:44:37.292250"
+    },
+    {
+      "path": "tools/governance/tests/test_indexer.py",
+      "filename": "test_indexer.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 343,
+      "line_count": 9,
+      "last_modified": "2026-07-28T18:44:37.292250"
+    },
+    {
+      "path": "tools/governance/tests/test_graphs.py",
+      "filename": "test_graphs.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 370,
+      "line_count": 8,
+      "last_modified": "2026-07-28T18:44:37.292250"
+    },
+    {
+      "path": "tools/governance/tests/test_closure.py",
+      "filename": "test_closure.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 704,
+      "line_count": 18,
+      "last_modified": "2026-07-28T18:44:37.292250"
+    },
+    {
+      "path": "tools/governance/tests/test_validator.py",
+      "filename": "test_validator.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 388,
+      "line_count": 10,
+      "last_modified": "2026-07-28T18:44:37.292250"
+    },
+    {
+      "path": "tools/governance/standardiser/standardiser.py",
+      "filename": "standardiser.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 2370,
+      "line_count": 45,
+      "last_modified": "2026-07-28T18:45:11.616514"
+    },
+    {
+      "path": "tools/governance/freeze/manager.py",
+      "filename": "manager.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 8706,
+      "line_count": 264,
+      "last_modified": "2026-07-28T21:11:29.508312"
+    },
+    {
+      "path": "tools/governance/scheduler/scheduler.py",
+      "filename": "scheduler.py",
+      "extension": ".py",
+      "file_type": "Python",
+      "size_bytes": 6170,
+      "line_count": 178,
+      "last_modified": "2026-07-28T21:11:29.504311"
+    },
+    {
+      "path": "tools/apex_governance.egg-info/requires.txt",
+      "filename": "requires.txt",
+      "extension": ".txt",
+      "file_type": "Other",
+      "size_bytes": 153,
+      "line_count": 13,
+      "last_modified": "2026-07-28T18:45:34.848693"
+    },
+    {
+      "path": "tools/apex_governance.egg-info/PKG-INFO",
+      "filename": "PKG-INFO",
+      "extension": "",
+      "file_type": "Other",
+      "size_bytes": 1910,
+      "line_count": 60,
+      "last_modified": "2026-07-28T18:45:34.848693"
+    },
+    {
+      "path": "tools/apex_governance.egg-info/dependency_links.txt",
+      "filename": "dependency_links.txt",
+      "extension": ".txt",
+      "file_type": "Other",
+      "size_bytes": 1,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:45:34.848693"
+    },
+    {
+      "path": "tools/apex_governance.egg-info/entry_points.txt",
+      "filename": "entry_points.txt",
+      "extension": ".txt",
+      "file_type": "Other",
+      "size_bytes": 53,
+      "line_count": 2,
+      "last_modified": "2026-07-28T18:45:34.848693"
+    },
+    {
+      "path": "tools/apex_governance.egg-info/top_level.txt",
+      "filename": "top_level.txt",
+      "extension": ".txt",
+      "file_type": "Other",
+      "size_bytes": 11,
+      "line_count": 1,
+      "last_modified": "2026-07-28T18:45:34.848693"
+    },
+    {
+      "path": "tools/apex_governance.egg-info/SOURCES.txt",
+      "filename": "SOURCES.txt",
+      "extension": ".txt",
+      "file_type": "Other",
+      "size_bytes": 2273,
+      "line_count": 65,
+      "last_modified": "2026-07-28T18:45:34.856693"
+    }
+  ],
+  "documents": [],
+  "python_modules": [],
+  "governance_engines": [],
+  "validators": [],
+  "graphs": [],
+  "database_schema": [],
+  "generated_artefacts": [],
+  "behavioural_roots": [],
+  "closures": [],
+  "architecture_tests": [],
+  "metrics": {},
+  "assumptions": []
+}

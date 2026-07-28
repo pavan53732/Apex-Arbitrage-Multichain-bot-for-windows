@@ -1,0 +1,60 @@
+{
+  "programme_id": "PROGRAMME_2.5",
+  "title": "Governance Platform Hardening",
+  "objective": "Make the governance platform itself deterministic, trustworthy, and self-consistent before allowing it to govern the repository.",
+  "status": "PENDING",
+  "workstreams": 9,
+  "phase_0": {
+    "phase_id": "PROGRAMME_2.5_PHASE_0",
+    "title": "Governance Architecture Freeze",
+    "status": "CREATED",
+    "purpose": "Freeze the governance platform architecture before implementing WS1-WS9.",
+    "accepted_order": [
+      "PHASE_0",
+      "WS1",
+      "WS5",
+      "WS3",
+      "WS4",
+      "WS2",
+      "WS6",
+      "WS7",
+      "WS8",
+      "WS9",
+      "RESUME_PROGRAMME_3"
+    ]
+  },
+  "workstream_order": [
+    "PHASE_0",
+    "PHASE_0.5",
+    "WS0",
+    "WS1",
+    "WS5",
+    "WS3",
+    "WS4",
+    "WS2",
+    "WS6",
+    "WS7",
+    "WS8",
+    "WS9",
+    "RESUME_PROGRAMME_3"
+  ],
+  "governance_certification_gate": {
+    "single_canonical_governance_database": true,
+    "zero_duplicate_generated_artefacts": true,
+    "every_validator_independently_executable": true,
+    "every_graph_reproducible": true,
+    "every_graph_validated_against_repository": true,
+    "every_behavioural_root_justified": true,
+    "every_closure_reproducible": true,
+    "every_freeze_record_verifiable": true,
+    "every_evidence_item_hashed": true,
+    "every_metric_reproducible": true,
+    "integrity_pass_on_fresh_clone": "required",
+    "behaviour_freeze_complete": true,
+    "test_harness_available": true
+  },
+  "phase_0.5": {
+    "status": "CREATED",
+    "purpose": "Governance specification freeze"
+  }
+}

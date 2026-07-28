@@ -1,0 +1,10 @@
+{
+  "validators": "VALIDATOR-XXX",
+  "graphs": "graph_name.graphml",
+  "metrics": "metric_name",
+  "databases": "governance.db",
+  "evidence": "evidence_YYYYMMDD_HHMMSS.json",
+  "freeze_records": "freeze_YYYYMMDD_HHMMSS.json",
+  "work_queues": "closure_name_queue.json",
+  "reports": "report_name.json"
+}

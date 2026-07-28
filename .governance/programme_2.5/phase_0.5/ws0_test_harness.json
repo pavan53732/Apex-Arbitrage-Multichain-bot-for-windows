@@ -1,0 +1,15 @@
+{
+  "workstream_id": "WS0",
+  "name": "Governance Test Harness",
+  "purpose": "Provide deterministic test fixtures and expected outputs for every engine.",
+  "deliverables": [
+    "test_fixtures/",
+    "expected_outputs/",
+    "test_harness.py"
+  ],
+  "acceptance_criteria": [
+    "Every engine has test fixtures",
+    "Every engine has expected outputs",
+    "Every test is deterministic"
+  ]
+}

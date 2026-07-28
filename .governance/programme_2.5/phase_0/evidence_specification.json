@@ -1,0 +1,12 @@
+{
+  "flow": [
+    "Evidence",
+    "Evidence Manifest",
+    "Hash",
+    "Timestamp",
+    "Validator Results",
+    "Commit",
+    "Report",
+    "Freeze"
+  ]
+}
