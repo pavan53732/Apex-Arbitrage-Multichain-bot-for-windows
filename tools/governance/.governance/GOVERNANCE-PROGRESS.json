@@ -1,0 +1,13 @@
+[
+  {
+    "programme": "Programme 1",
+    "phase": "Documentation Intelligence Platform",
+    "completed": true,
+    "last_commit": null,
+    "notes": [
+      "Indexed 1 documents",
+      "Detected 0 behavioural roots",
+      "Generated 1 validation findings"
+    ]
+  }
+]

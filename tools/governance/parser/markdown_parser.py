@@ -1,6 +1,6 @@
 from __future__ import annotations
 from pathlib import Path
-from markdown_it_py import MarkdownIt
+from markdown_it import MarkdownIt
 
 md = MarkdownIt()
 

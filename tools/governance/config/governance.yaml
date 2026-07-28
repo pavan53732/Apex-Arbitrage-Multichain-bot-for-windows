@@ -1,6 +1,7 @@
 repo_root: "."
 docs_globs:
-  - "docs/**/*.md"
+  - "docs/*.md"
+  - "docs/adr/*.md"
   - "docs/adr/**/*.md"
   - "APEX-ARCHITECTURE.md"
   - "README.md"

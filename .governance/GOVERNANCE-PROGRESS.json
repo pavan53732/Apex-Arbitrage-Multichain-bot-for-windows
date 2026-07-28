@@ -1,0 +1,20 @@
+[
+  {
+    "programme": "Programme 1",
+    "phase": "Documentation Intelligence Platform",
+    "completed": true,
+    "notes": [
+      "Indexed docs",
+      "Detected roots",
+      "Validation run"
+    ]
+  },
+  {
+    "programme": "Programme 2",
+    "phase": "Documentation Standardisation",
+    "completed": false,
+    "notes": [
+      "In progress"
+    ]
+  }
+]
