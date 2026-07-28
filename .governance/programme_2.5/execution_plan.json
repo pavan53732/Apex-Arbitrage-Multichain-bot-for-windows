@@ -26,6 +26,7 @@
   "workstream_order": [
     "PHASE_0",
     "PHASE_0.5",
+    "PHASE_0.75",
     "WS0",
     "WS1",
     "WS5",
@@ -51,10 +52,29 @@
     "every_metric_reproducible": true,
     "integrity_pass_on_fresh_clone": "required",
     "behaviour_freeze_complete": true,
-    "test_harness_available": true
+    "test_harness_available": true,
+    "specification_certification": true
   },
   "phase_0.5": {
     "status": "CREATED",
     "purpose": "Governance specification freeze"
+  },
+  "phase_0.75": {
+    "status": "CREATED",
+    "purpose": "Governance contract verification"
+  },
+  "governance_platform": {
+    "name": "Apex Governance Platform",
+    "version": "0.1.0",
+    "architecture_version": "1.0.0",
+    "semantic_versioning": true,
+    "adrs": [
+      "ADR-0009"
+    ],
+    "changelog": ".governance/CHANGELOG.md",
+    "test_suite": ".governance/tests/",
+    "release_process": ".governance/RELEASE.md",
+    "migration_strategy": ".governance/MIGRATION.md",
+    "compatibility_policy": ".governance/COMPATIBILITY.md"
   }
 }

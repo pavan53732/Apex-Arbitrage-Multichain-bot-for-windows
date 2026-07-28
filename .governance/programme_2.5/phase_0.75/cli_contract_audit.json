@@ -1,0 +1,90 @@
+{
+  "index": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "parse": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "validate": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "graphs": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "roots": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "closures": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "repair": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "freeze": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "metrics": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "integrity": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  },
+  "doctor": {
+    "arguments_valid": true,
+    "options_valid": true,
+    "exit_codes_valid": true,
+    "output_schema_valid": true,
+    "error_schema_valid": true,
+    "help_output_valid": true
+  }
+}

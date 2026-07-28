@@ -1,0 +1,14 @@
+{
+  "name": "Apex Governance Platform",
+  "version": "0.1.0",
+  "architecture_version": "1.0.0",
+  "semantic_versioning": true,
+  "adrs": [
+    "ADR-0009"
+  ],
+  "changelog": ".governance/CHANGELOG.md",
+  "test_suite": ".governance/tests/",
+  "release_process": ".governance/RELEASE.md",
+  "migration_strategy": ".governance/MIGRATION.md",
+  "compatibility_policy": ".governance/COMPATIBILITY.md"
+}

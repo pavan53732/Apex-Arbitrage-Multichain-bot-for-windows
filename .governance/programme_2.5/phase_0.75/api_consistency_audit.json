@@ -1,0 +1,73 @@
+{
+  "Index": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "Parse": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "Validate": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "BuildGraph": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "ComputeClosure": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "Freeze": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "Repair": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "GenerateEvidence": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "ComputeMetrics": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "Integrity": {
+    "input_types_exist": true,
+    "output_types_exist": true,
+    "exceptions_exist": true,
+    "entities_exist": true,
+    "validators_exist": true
+  },
+  "undefined_references": []
+}
