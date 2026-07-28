@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d29" for="node" attr.name="raw_text" attr.type="string"/>
+<key id="d28" for="node" attr.name="canonical_source" attr.type="string"/>
+<key id="d27" for="node" attr.name="version_history" attr.type="string"/>
+<key id="d26" for="node" attr.name="cross_references" attr.type="string"/>
+<key id="d25" for="node" attr.name="testing" attr.type="string"/>
+<key id="d24" for="node" attr.name="validation" attr.type="string"/>
+<key id="d23" for="node" attr.name="performance" attr.type="string"/>
+<key id="d22" for="node" attr.name="failure_behaviour" attr.type="string"/>
+<key id="d21" for="node" attr.name="recovery" attr.type="string"/>
+<key id="d20" for="node" attr.name="security" attr.type="string"/>
+<key id="d19" for="node" attr.name="state_machines" attr.type="string"/>
+<key id="d18" for="node" attr.name="schemas" attr.type="string"/>
+<key id="d17" for="node" attr.name="configuration" attr.type="string"/>
+<key id="d16" for="node" attr.name="events_consumed" attr.type="string"/>
+<key id="d15" for="node" attr.name="events_produced" attr.type="string"/>
+<key id="d14" for="node" attr.name="interfaces" attr.type="string"/>
+<key id="d13" for="node" attr.name="required_by" attr.type="string"/>
+<key id="d12" for="node" attr.name="depends_on" attr.type="string"/>
+<key id="d11" for="node" attr.name="outputs" attr.type="string"/>
+<key id="d10" for="node" attr.name="inputs" attr.type="string"/>
+<key id="d9" for="node" attr.name="does_not_own" attr.type="string"/>
+<key id="d8" for="node" attr.name="owns" attr.type="string"/>
+<key id="d7" for="node" attr.name="responsibilities" attr.type="string"/>
+<key id="d6" for="node" attr.name="scope" attr.type="string"/>
+<key id="d5" for="node" attr.name="purpose" attr.type="string"/>
+<key id="d4" for="node" attr.name="version" attr.type="string"/>
+<key id="d3" for="node" attr.name="status" attr.type="string"/>
+<key id="d2" for="node" attr.name="owner" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="path" attr.type="string"/>
+<graph edgedefault="directed"><node id="README.md">
+  <data key="d0">README.md</data>
+  <data key="d1"></data>
+  <data key="d2"></data>
+  <data key="d3"></data>
+  <data key="d4"></data>
+  <data key="d5"></data>
+  <data key="d6"></data>
+  <data key="d7"></data>
+  <data key="d8"></data>
+  <data key="d9"></data>
+  <data key="d10"></data>
+  <data key="d11"></data>
+  <data key="d12"></data>
+  <data key="d13"></data>
+  <data key="d14"></data>
+  <data key="d15"></data>
+  <data key="d16"></data>
+  <data key="d17"></data>
+  <data key="d18"></data>
+  <data key="d19"></data>
+  <data key="d20"></data>
+  <data key="d21"></data>
+  <data key="d22"></data>
+  <data key="d23"></data>
+  <data key="d24"></data>
+  <data key="d25"></data>
+  <data key="d26"></data>
+  <data key="d27"></data>
+  <data key="d28"></data>
+  <data key="d29"># APEX Repository Governance Platform
+
+Independent Python engineering toolchain that turns the repository documentation into a
+deterministic knowledge platform for autonomous AI agents.
+
+## Install
+
+```bash
+pip install -e "tools/governance[dev]"
+```
+
+## CLI
+
+```bash
+apex-gov run                 # full intelligence pipeline
+apex-gov index               # repository index only
+apex-gov validate            # governance validators
+apex-gov roots               # behavioural roots
+apex-gov closure ROOT.md     # dependency closure
+apex-gov completeness        # completeness scores
+apex-gov blockers            # implementation blockers
+apex-gov standardise         # metadata standardisation (Programme 2)
+apex-gov graphs              # build knowledge graphs
+apex-gov context ROOT.md     # AI context for subsystem
+apex-gov search "query"      # semantic search
+apex-gov metrics             # repository health metrics
+apex-gov repair              # autonomous repair suggestions
+apex-gov progress            # show GOVERNANCE-PROGRESS.json
+```
+
+## Architecture
+
+- Language: Python 3.11+ (target 3.13)
+- CLI: Typer
+- Parser: markdown-it-py + PyYAML
+- Graphs: NetworkX
+- Storage: SQLite + JSON exports
+- Config: YAML
+- Tests: pytest
+- Lint: Ruff + Black + mypy
+- CI: GitHub Actions
+</data>
+</node>
+</graph></graphml>

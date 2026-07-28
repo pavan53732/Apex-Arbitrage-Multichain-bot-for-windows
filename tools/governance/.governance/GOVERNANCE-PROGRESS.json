@@ -7,7 +7,9 @@
     "notes": [
       "Indexed 1 documents",
       "Detected 0 behavioural roots",
-      "Generated 1 validation findings"
+      "Generated 1 validation findings",
+      "Computed 0 closures",
+      "Exported 8 graphs"
     ]
   }
 ]

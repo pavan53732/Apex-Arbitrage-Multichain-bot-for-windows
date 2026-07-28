@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="relation" attr.type="string"/>
+<graph edgedefault="directed"><node id="docs/AI-CONSENSUS.md"/>
+<node id="Participant list, quorum rules, veto rules, confidence thresholds, timeout, override policy."/>
+<node id="docs/AI-GATEWAY.md"/>
+<node id="Provider list, routing policy, capability thresholds, timeout, retry, failover policy, cost limits."/>
+<node id="docs/AI-MEMORY-SYSTEM.md"/>
+<node id="Retention periods, privacy level, summary window, archival policy, retrieval limits, and purge rules."/>
+<node id="docs/API-CONTRACTS.md"/>
+<node id="`loadConfig()` returns a validated app config object."/>
+<node id="No consumer may mutate config in place."/>
+<node id="docs/CHAIN-ROTATION.md"/>
+<node id="CHAIN_WEIGHTS."/>
+<node id="MIN_GAS_LIMIT."/>
+<node id="ALLOCATION_QUANTUM."/>
+<node id="docs/CONTRACT-MANAGEMENT.md"/>
+<node id="DEPLOYMENT_WHITELIST."/>
+<node id="MIN_APPROVALS."/>
+<node id="ABI_STORAGE_PATH."/>
+<node id="docs/DECISION-LOG.md"/>
+<node id="Retention policy, index policy, redaction policy, and log verbosity."/>
+<node id="docs/LEARNING-PIPELINE.md"/>
+<node id="RETRAIN_TRIGGER_TYPE."/>
+<node id="MIN_TRADES_FOR_RETRAIN."/>
+<node id="SHADOW_DURATION_HOURS."/>
+<node id="ROLLBACK_THRESHOLD."/>
+<node id="docs/PROVIDER-RESILIENCE.md"/>
+<node id="PRIMARY_PROVIDER."/>
+<node id="SECONDARY_PROVIDERS."/>
+<node id="HEALTH_CHECK_INTERVAL."/>
+<node id="FAILOVER_THRESHOLD."/>
+<node id="FAILBACK_POLICY."/>
+<node id="docs/ROUTE-OPTIMIZATION.md"/>
+<node id="ROUTE_SCORE_WEIGHTS."/>
+<node id="MAX_ROUTES_TO_EVALUATE."/>
+<node id="MIN_PROFIT_THRESHOLD."/>
+<node id="docs/STRATEGY-ROTATION.md"/>
+<node id="ENABLED_STRATEGIES."/>
+<node id="MIN_PERFORMANCE_SCORE."/>
+<node id="ROTATION_COOLDOWN_MINUTES."/>
+<node id="docs/TOKEN-INTELLIGENCE.md"/>
+<node id="SCORE_WEIGHTS."/>
+<node id="MIN_SCORE."/>
+<node id="REFRESH_INTERVAL."/>
+<edge source="docs/AI-CONSENSUS.md" target="Participant list, quorum rules, veto rules, confidence thresholds, timeout, override policy.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="Provider list, routing policy, capability thresholds, timeout, retry, failover policy, cost limits.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="Retention periods, privacy level, summary window, archival policy, retrieval limits, and purge rules.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/API-CONTRACTS.md" target="`loadConfig()` returns a validated app config object.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/API-CONTRACTS.md" target="No consumer may mutate config in place.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="CHAIN_WEIGHTS.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="MIN_GAS_LIMIT.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="ALLOCATION_QUANTUM.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="DEPLOYMENT_WHITELIST.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="MIN_APPROVALS.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="ABI_STORAGE_PATH.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="Retention policy, index policy, redaction policy, and log verbosity.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/LEARNING-PIPELINE.md" target="RETRAIN_TRIGGER_TYPE.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/LEARNING-PIPELINE.md" target="MIN_TRADES_FOR_RETRAIN.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/LEARNING-PIPELINE.md" target="SHADOW_DURATION_HOURS.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/LEARNING-PIPELINE.md" target="ROLLBACK_THRESHOLD.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="PRIMARY_PROVIDER.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="SECONDARY_PROVIDERS.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="HEALTH_CHECK_INTERVAL.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="FAILOVER_THRESHOLD.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="FAILBACK_POLICY.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="ROUTE_SCORE_WEIGHTS.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="MAX_ROUTES_TO_EVALUATE.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="MIN_PROFIT_THRESHOLD.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="ENABLED_STRATEGIES.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="MIN_PERFORMANCE_SCORE.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="ROTATION_COOLDOWN_MINUTES.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="SCORE_WEIGHTS.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="MIN_SCORE.">
+  <data key="d0">configures</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="REFRESH_INTERVAL.">
+  <data key="d0">configures</data>
+</edge>
+</graph></graphml>

@@ -12,6 +12,7 @@ class RepoIndexer:
     def list_documents(self) -> list[str]:
         paths: list[str] = []
         for pattern in self.docs_globs:
+            # Handle both absolute and relative patterns
             if os.path.isabs(pattern):
                 base = self.repo_root
                 rel = os.path.relpath(pattern, self.repo_root)
@@ -21,7 +22,7 @@ class RepoIndexer:
             for p in base.glob(rel):
                 if p.is_file() and p.suffix == ".md":
                     paths.append(str(p.relative_to(self.repo_root)))
-        return sorted(paths)
+        return sorted(set(paths))
 
     def list_schemas(self) -> list[str]:
         if not self.schemas_glob:

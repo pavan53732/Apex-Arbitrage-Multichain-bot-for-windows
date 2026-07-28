@@ -1,20 +1,23 @@
 [
   {
-    "programme": "Programme 1",
-    "phase": "Documentation Intelligence Platform",
-    "completed": true,
-    "notes": [
-      "Indexed docs",
-      "Detected roots",
-      "Validation run"
-    ]
-  },
-  {
     "programme": "Programme 2",
     "phase": "Documentation Standardisation",
     "completed": false,
     "notes": [
       "In progress"
+    ]
+  },
+  {
+    "programme": "Programme 1",
+    "phase": "Documentation Intelligence Platform",
+    "completed": true,
+    "last_commit": null,
+    "notes": [
+      "Indexed 275 documents",
+      "Detected 16 behavioural roots",
+      "Generated 2265 validation findings",
+      "Computed 16 closures",
+      "Exported 8 graphs"
     ]
   }
 ]

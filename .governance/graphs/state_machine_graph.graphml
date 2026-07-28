@@ -1,0 +1,1291 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="relation" attr.type="string"/>
+<graph edgedefault="directed"><node id="docs/AI-CONSENSUS.md"/>
+<node id="stateDiagram-v2"/>
+<node id="[*] --&gt; COLLECTING"/>
+<node id="COLLECTING --&gt; SCORING"/>
+<node id="SCORING --&gt; VOTING"/>
+<node id="VOTING --&gt; RESOLVED"/>
+<node id="VOTING --&gt; FAILED"/>
+<node id="RESOLVED --&gt; [*]"/>
+<node id="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md"/>
+<node id="COLLECTING --&gt; SUMMARIZING"/>
+<node id="SUMMARIZING --&gt; BUDGETING"/>
+<node id="BUDGETING --&gt; CHUNKING"/>
+<node id="CHUNKING --&gt; DISPATCHING"/>
+<node id="docs/AI-GATEWAY.md"/>
+<node id="[*] --&gt; DISPATCHING"/>
+<node id="DISPATCHING --&gt; ROUTING"/>
+<node id="ROUTING --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; DEGRADED"/>
+<node id="DEGRADED --&gt; FAILOVER"/>
+<node id="FAILOVER --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; ERROR"/>
+<node id="docs/AI-KNOWLEDGE-INDEX.md"/>
+<node id="[*] --&gt; INDEXING"/>
+<node id="INDEXING --&gt; SEARCHING"/>
+<node id="SEARCHING --&gt; RANKING"/>
+<node id="RANKING --&gt; RETRIEVING"/>
+<node id="RETRIEVING --&gt; INDEXING"/>
+<node id="docs/AI-MEMORY-SYSTEM.md"/>
+<node id="[*] --&gt; WRITING"/>
+<node id="WRITING --&gt; INDEXING"/>
+<node id="INDEXING --&gt; RETRIEVING"/>
+<node id="RETRIEVING --&gt; SUMMARIZING"/>
+<node id="SUMMARIZING --&gt; ARCHIVING"/>
+<node id="ARCHIVING --&gt; RETAINED"/>
+<node id="docs/AI-PLANNER.md"/>
+<node id="[*] --&gt; RECEIVED"/>
+<node id="RECEIVED --&gt; DECOMPOSING"/>
+<node id="DECOMPOSING --&gt; ORDERING"/>
+<node id="ORDERING --&gt; SEQUENCING"/>
+<node id="SEQUENCING --&gt; READY"/>
+<node id="READY --&gt; MONITORING"/>
+<node id="docs/AI-REASONING-POLICY.md"/>
+<node id="[*] --&gt; EVALUATING"/>
+<node id="EVALUATING --&gt; ALLOW_AI"/>
+<node id="EVALUATING --&gt; REQUIRE_DETERMINISTIC"/>
+<node id="ALLOW_AI --&gt; DISPATCHED"/>
+<node id="REQUIRE_DETERMINISTIC --&gt; REJECTED"/>
+<node id="docs/AI-REFLECTION.md"/>
+<node id="[*] --&gt; REVIEWING"/>
+<node id="REVIEWING --&gt; SCORING"/>
+<node id="SCORING --&gt; ANALYZING"/>
+<node id="ANALYZING --&gt; REFINING"/>
+<node id="REFINING --&gt; STORED"/>
+<node id="docs/APEX-KERNEL.md"/>
+<node id="[*] --&gt; BOOTING"/>
+<node id="BOOTING --&gt; REGISTERING"/>
+<node id="REGISTERING --&gt; RESOLVING_DEPENDENCIES"/>
+<node id="RESOLVING_DEPENDENCIES --&gt; ACTIVE"/>
+<node id="DEGRADED --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; SHUTTING_DOWN"/>
+<node id="SHUTTING_DOWN --&gt; [*]"/>
+<node id="docs/APEX-OS.md"/>
+<node id="[*] --&gt; DEFINED"/>
+<node id="DEFINED --&gt; GOVERNING"/>
+<node id="GOVERNING --&gt; EVOLVING"/>
+<node id="EVOLVING --&gt; GOVERNING"/>
+<node id="docs/CHAIN-ROTATION.md"/>
+<node id="[*] --&gt; SCANNING"/>
+<node id="SCANNING --&gt; SCORING"/>
+<node id="SCORING --&gt; PRIORITIZING"/>
+<node id="PRIORITIZING --&gt; ALLOCATING"/>
+<node id="ALLOCATING --&gt; MONITORING"/>
+<node id="MONITORING --&gt; SCANNING"/>
+<node id="docs/CONFIGURATION-PROFILES.md"/>
+<node id="[*] --&gt; LOADED"/>
+<node id="LOADED --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; SWITCHING"/>
+<node id="SWITCHING --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; ARCHIVED"/>
+<node id="docs/CONTEXT-BUILDER.md"/>
+<node id="COLLECTING --&gt; MERGING"/>
+<node id="MERGING --&gt; TRIMMING"/>
+<node id="TRIMMING --&gt; VALIDATING"/>
+<node id="VALIDATING --&gt; DISPATCHING"/>
+<node id="DISPATCHING --&gt; [*]"/>
+<node id="docs/CONTRACT-MANAGEMENT.md"/>
+<node id="[*] --&gt; REGISTER"/>
+<node id="REGISTER --&gt; VERSION"/>
+<node id="VERSION --&gt; VALIDATE_ABI"/>
+<node id="VALIDATE_ABI --&gt; APPROVE"/>
+<node id="APPROVE --&gt; DEPLOY"/>
+<node id="DEPLOY --&gt; MONITOR"/>
+<node id="MONITOR --&gt; RETIRE"/>
+<node id="docs/DATA-GOVERNANCE.md"/>
+<node id="[*] --&gt; INGESTING"/>
+<node id="INGESTING --&gt; NORMALIZING"/>
+<node id="NORMALIZING --&gt; VALIDATING"/>
+<node id="VALIDATING --&gt; CACHING"/>
+<node id="CACHING --&gt; INDEXING"/>
+<node id="INDEXING --&gt; SERVING"/>
+<node id="SERVING --&gt; REFRESHING"/>
+<node id="REFRESHING --&gt; INGESTING"/>
+<node id="docs/DECISION-ENGINE.md"/>
+<node id="[*] --&gt; RECOMMEND_RECEIVED"/>
+<node id="RECOMMEND_RECEIVED --&gt; VALIDATE_INPUTS"/>
+<node id="VALIDATE_INPUTS --&gt; CHECK_CONSENSUS"/>
+<node id="CHECK_CONSENSUS --&gt; RISK_GATE"/>
+<node id="RISK_GATE --&gt; SIMULATION_GATE"/>
+<node id="SIMULATION_GATE --&gt; APPROVED"/>
+<node id="SIMULATION_GATE --&gt; REJECTED"/>
+<node id="SIMULATION_GATE --&gt; DEFER"/>
+<node id="DEFER --&gt; RECOMMEND_RECEIVED"/>
+<node id="docs/DECISION-LEDGER.md"/>
+<node id="[*] --&gt; CAPTURED"/>
+<node id="CAPTURED --&gt; VALIDATED"/>
+<node id="VALIDATED --&gt; HASHED"/>
+<node id="HASHED --&gt; STORED"/>
+<node id="STORED --&gt; REPLAYABLE"/>
+<node id="REPLAYABLE --&gt; ARCHIVED"/>
+<node id="docs/DECISION-LOG.md"/>
+<node id="[*] --&gt; APPENDING"/>
+<node id="APPENDING --&gt; STORED"/>
+<node id="STORED --&gt; INDEXED"/>
+<node id="INDEXED --&gt; QUERYABLE"/>
+<node id="QUERYABLE --&gt; ARCHIVED"/>
+<node id="docs/DEPENDENCY-GRAPH.md"/>
+<node id="[*] --&gt; BUILDING"/>
+<node id="BUILDING --&gt; VALIDATING"/>
+<node id="VALIDATING --&gt; RESOLVED"/>
+<node id="RESOLVED --&gt; MONITORING"/>
+<node id="MONITORING --&gt; REBUILDING"/>
+<node id="REBUILDING --&gt; VALIDATING"/>
+<node id="docs/EXECUTION-LIFECYCLE.md"/>
+<node id="[*] --&gt; PENDING"/>
+<node id="PENDING --&gt; QUEUED"/>
+<node id="QUEUED --&gt; SIGNING"/>
+<node id="SIGNING --&gt; BROADCASTING"/>
+<node id="BROADCASTING --&gt; CONFIRMING"/>
+<node id="CONFIRMING --&gt; FINALIZED"/>
+<node id="CONFIRMING --&gt; REVERTED"/>
+<node id="REVERTED --&gt; QUEUED"/>
+<node id="docs/EXECUTION-POLICIES.md"/>
+<node id="EVALUATING --&gt; APPROVED"/>
+<node id="EVALUATING --&gt; BLOCKED"/>
+<node id="APPROVED --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; PAUSED"/>
+<node id="PAUSED --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; EMERGENCY_STOPPED"/>
+<node id="docs/EXPLAINABILITY.md"/>
+<node id="CAPTURED --&gt; EXPLAINED"/>
+<node id="EXPLAINED --&gt; STORED"/>
+<node id="docs/FEATURE-FLAGS.md"/>
+<node id="[*] --&gt; DISABLED"/>
+<node id="DISABLED --&gt; EXPERIMENTAL"/>
+<node id="EXPERIMENTAL --&gt; BETA"/>
+<node id="BETA --&gt; PRODUCTION"/>
+<node id="PRODUCTION --&gt; DEPRECATED"/>
+<node id="DEPRECATED --&gt; DISABLED"/>
+<node id="docs/GOVERNANCE-EXPLAINABILITY.md"/>
+<node id="VALIDATED --&gt; STAMPED"/>
+<node id="STAMPED --&gt; STORED"/>
+<node id="docs/KNOWLEDGE-GRAPH.md"/>
+<node id="INGESTING --&gt; LINKING"/>
+<node id="LINKING --&gt; VALIDATING"/>
+<node id="VALIDATING --&gt; SERVING"/>
+<node id="docs/LIVE-ARCHITECTURE-VIEWER.md"/>
+<node id="[*] --&gt; DISCOVERING"/>
+<node id="DISCOVERING --&gt; RENDERING"/>
+<node id="RENDERING --&gt; SYNCED"/>
+<node id="SYNCED --&gt; STALE"/>
+<node id="STALE --&gt; REFRESHING"/>
+<node id="REFRESHING --&gt; SYNCED"/>
+<node id="docs/MARKET-REGIME-DETECTION.md"/>
+<node id="[*] --&gt; OBSERVING"/>
+<node id="OBSERVING --&gt; CLASSIFYING"/>
+<node id="CLASSIFYING --&gt; PUBLISHING"/>
+<node id="PUBLISHING --&gt; MONITORING"/>
+<node id="MONITORING --&gt; OBSERVING"/>
+<node id="docs/MODEL-CAPABILITY-NEGOTIATION.md"/>
+<node id="[*] --&gt; DETECTING"/>
+<node id="DETECTING --&gt; MATCHING"/>
+<node id="MATCHING --&gt; CONFIGURING"/>
+<node id="CONFIGURING --&gt; VERIFIED"/>
+<node id="VERIFIED --&gt; ACTIVE"/>
+<node id="docs/OPPORTUNITY-LIFECYCLE.md"/>
+<node id="[*] --&gt; DETECTED"/>
+<node id="DETECTED --&gt; VALIDATED"/>
+<node id="VALIDATED --&gt; SCORED"/>
+<node id="SCORED --&gt; SIMULATED"/>
+<node id="SIMULATED --&gt; APPROVED"/>
+<node id="APPROVED --&gt; EXECUTED"/>
+<node id="EXECUTED --&gt; CLOSED"/>
+<node id="CLOSED --&gt; ARCHIVED"/>
+<node id="docs/ORDER-MANAGEMENT.md"/>
+<node id="Draft -&gt; Validated -&gt; Placed -&gt; PartiallyFilled -&gt; Filled -&gt; Reconciled."/>
+<node id="Draft -&gt; Validated -&gt; Cancelled -&gt; Reconciled."/>
+<node id="Draft -&gt; Validated -&gt; Rejected -&gt; Reconciled."/>
+<node id="Placed -&gt; Replaced -&gt; Placed."/>
+<node id="Placed | PartiallyFilled -&gt; CancelRequested -&gt; Cancelled | Filled."/>
+<node id="docs/PROVIDER-RESILIENCE.md"/>
+<node id="[*] --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; HEALTH_CHECK"/>
+<node id="HEALTH_CHECK --&gt; UNHEALTHY"/>
+<node id="UNHEALTHY --&gt; FAILOVER"/>
+<node id="FAILOVER --&gt; RECOVER"/>
+<node id="RECOVER --&gt; REINSTATE"/>
+<node id="REINSTATE --&gt; ACTIVE"/>
+<node id="docs/RESOURCE-MANAGER.md"/>
+<node id="[*] --&gt; REGISTERED"/>
+<node id="REGISTERED --&gt; HEALTHY"/>
+<node id="HEALTHY --&gt; DEGRADED"/>
+<node id="DEGRADED --&gt; RECOVERING"/>
+<node id="RECOVERING --&gt; HEALTHY"/>
+<node id="HEALTHY --&gt; RETIRED"/>
+<node id="docs/ROUTE-OPTIMIZATION.md"/>
+<node id="[*] --&gt; GATHER_ROUTES"/>
+<node id="GATHER_ROUTES --&gt; SIMULATE_EACH"/>
+<node id="SIMULATE_EACH --&gt; SCORE"/>
+<node id="SCORE --&gt; SELECT_BEST"/>
+<node id="SELECT_BEST --&gt; EXECUTE"/>
+<node id="EXECUTE --&gt; VERIFY"/>
+<node id="VERIFY --&gt; [*]"/>
+<node id="docs/ROUTE-SCORING-MODEL.md"/>
+<node id="[*] --&gt; GATHERING_INPUTS"/>
+<node id="GATHERING_INPUTS --&gt; SCORING"/>
+<node id="SCORING --&gt; RANKING"/>
+<node id="RANKING --&gt; SELECTING"/>
+<node id="SELECTING --&gt; DISPATCHING"/>
+<node id="docs/RUNTIME-KNOWLEDGE.md"/>
+<node id="COLLECTING --&gt; INDEXING"/>
+<node id="REFRESHING --&gt; COLLECTING"/>
+<node id="docs/SELF-HEALING.md"/>
+<node id="DETECTING --&gt; TRIAGING"/>
+<node id="TRIAGING --&gt; RECOVERING"/>
+<node id="RECOVERING --&gt; VERIFYING"/>
+<node id="VERIFYING --&gt; STABLE"/>
+<node id="VERIFYING --&gt; FAILED"/>
+<node id="docs/SERVICE-LIFECYCLE.md"/>
+<node id="REGISTERED --&gt; INITIALIZING"/>
+<node id="INITIALIZING --&gt; STARTING"/>
+<node id="STARTING --&gt; HEALTHY"/>
+<node id="HEALTHY --&gt; PAUSED"/>
+<node id="PAUSED --&gt; RESTARTING"/>
+<node id="RESTARTING --&gt; STARTING"/>
+<node id="HEALTHY --&gt; STOPPING"/>
+<node id="STOPPING --&gt; DISPOSED"/>
+<node id="docs/SERVICE-REGISTRY.md"/>
+<node id="[*] --&gt; UNREGISTERED"/>
+<node id="UNREGISTERED --&gt; REGISTERING"/>
+<node id="REGISTERING --&gt; AVAILABLE"/>
+<node id="AVAILABLE --&gt; SUSPENDED"/>
+<node id="SUSPENDED --&gt; AVAILABLE"/>
+<node id="AVAILABLE --&gt; RETIRED"/>
+<node id="docs/SHUTDOWN-LIFECYCLE.md"/>
+<node id="[*] --&gt; GRACEFUL_DRAIN"/>
+<node id="GRACEFUL_DRAIN --&gt; CHECKPOINT_WORKERS"/>
+<node id="CHECKPOINT_WORKERS --&gt; FLUSH_QUEUES"/>
+<node id="FLUSH_QUEUES --&gt; CLOSE_CONNECTIONS"/>
+<node id="CLOSE_CONNECTIONS --&gt; EXIT"/>
+<node id="docs/STRATEGIES.md"/>
+<node id="### IPC interactions"/>
+<node id="docs/STRATEGY-ROTATION.md"/>
+<node id="[*] --&gt; IDLE"/>
+<node id="IDLE --&gt; EVALUATING"/>
+<node id="EVALUATING --&gt; SELECTING"/>
+<node id="SELECTING --&gt; DEPLOYING"/>
+<node id="DEPLOYING --&gt; MONITORING"/>
+<node id="MONITORING --&gt; ROTATING"/>
+<node id="MONITORING --&gt; FALLBACK"/>
+<node id="ROTATING --&gt; EVALUATING"/>
+<node id="FALLBACK --&gt; EVALUATING"/>
+<node id="docs/SYSTEM-CAPABILITY-REGISTRY.md"/>
+<node id="DISCOVERING --&gt; VALIDATING"/>
+<node id="VALIDATING --&gt; PUBLISHING"/>
+<node id="MONITORING --&gt; REFRESHING"/>
+<node id="REFRESHING --&gt; DISCOVERING"/>
+<node id="docs/TOKEN-INTELLIGENCE.md"/>
+<node id="[*] --&gt; FETCH_METADATA"/>
+<node id="FETCH_METADATA --&gt; COMPUTE_SCORE"/>
+<node id="COMPUTE_SCORE --&gt; RANK"/>
+<node id="RANK --&gt; CACHE"/>
+<node id="CACHE --&gt; REFRESH"/>
+<node id="REFRESH --&gt; FETCH_METADATA"/>
+<node id="docs/TRADING-LIFECYCLE.md"/>
+<node id="IDLE --&gt; SCANNING"/>
+<node id="SCANNING --&gt; OPPORTUNITY_DETECTED"/>
+<node id="OPPORTUNITY_DETECTED --&gt; RISK_CHECK"/>
+<node id="RISK_CHECK --&gt; SIMULATING"/>
+<node id="SIMULATING --&gt; EXECUTING"/>
+<node id="EXECUTING --&gt; VERIFYING"/>
+<node id="VERIFYING --&gt; SETTLED"/>
+<node id="docs/WALLET-COMMAND-CENTER.md"/>
+<node id="UNINITIALIZED -&gt; LOCKED -&gt; UNLOCKED -&gt; APPROVING -&gt; SIGNING -&gt; ERROR."/>
+<node id="ERROR -&gt; LOCKED on recovery."/>
+<node id="Signing requires desktop approval."/>
+<node id="docs/WORKFLOW-BUILDER.md"/>
+<node id="[*] --&gt; DRAFT"/>
+<node id="DRAFT --&gt; VALIDATING"/>
+<node id="VALIDATING --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; RETIRED"/>
+<node id="docs/WORKSPACE-MANAGER.md"/>
+<node id="[*] --&gt; LOADING"/>
+<node id="LOADING --&gt; RESTORING"/>
+<node id="RESTORING --&gt; ACTIVE"/>
+<node id="ACTIVE --&gt; SAVING"/>
+<node id="SAVING --&gt; SAVED"/>
+<node id="SAVED --&gt; ACTIVE"/>
+<edge source="docs/AI-CONSENSUS.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONSENSUS.md" target="[*] --&gt; COLLECTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONSENSUS.md" target="COLLECTING --&gt; SCORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONSENSUS.md" target="SCORING --&gt; VOTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONSENSUS.md" target="VOTING --&gt; RESOLVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONSENSUS.md" target="VOTING --&gt; FAILED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONSENSUS.md" target="RESOLVED --&gt; [*]">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="[*] --&gt; COLLECTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="COLLECTING --&gt; SUMMARIZING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="SUMMARIZING --&gt; BUDGETING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="BUDGETING --&gt; CHUNKING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="CHUNKING --&gt; DISPATCHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="[*] --&gt; DISPATCHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="DISPATCHING --&gt; ROUTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="ROUTING --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="ACTIVE --&gt; DEGRADED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="DEGRADED --&gt; FAILOVER">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="FAILOVER --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="ACTIVE --&gt; ERROR">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-KNOWLEDGE-INDEX.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-KNOWLEDGE-INDEX.md" target="[*] --&gt; INDEXING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-KNOWLEDGE-INDEX.md" target="INDEXING --&gt; SEARCHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-KNOWLEDGE-INDEX.md" target="SEARCHING --&gt; RANKING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-KNOWLEDGE-INDEX.md" target="RANKING --&gt; RETRIEVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-KNOWLEDGE-INDEX.md" target="RETRIEVING --&gt; INDEXING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="[*] --&gt; WRITING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="WRITING --&gt; INDEXING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="INDEXING --&gt; RETRIEVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="RETRIEVING --&gt; SUMMARIZING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="SUMMARIZING --&gt; ARCHIVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="ARCHIVING --&gt; RETAINED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-PLANNER.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-PLANNER.md" target="[*] --&gt; RECEIVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-PLANNER.md" target="RECEIVED --&gt; DECOMPOSING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-PLANNER.md" target="DECOMPOSING --&gt; ORDERING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-PLANNER.md" target="ORDERING --&gt; SEQUENCING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-PLANNER.md" target="SEQUENCING --&gt; READY">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-PLANNER.md" target="READY --&gt; MONITORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REASONING-POLICY.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REASONING-POLICY.md" target="[*] --&gt; EVALUATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REASONING-POLICY.md" target="EVALUATING --&gt; ALLOW_AI">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REASONING-POLICY.md" target="EVALUATING --&gt; REQUIRE_DETERMINISTIC">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REASONING-POLICY.md" target="ALLOW_AI --&gt; DISPATCHED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REASONING-POLICY.md" target="REQUIRE_DETERMINISTIC --&gt; REJECTED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REFLECTION.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REFLECTION.md" target="[*] --&gt; REVIEWING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REFLECTION.md" target="REVIEWING --&gt; SCORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REFLECTION.md" target="SCORING --&gt; ANALYZING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REFLECTION.md" target="ANALYZING --&gt; REFINING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/AI-REFLECTION.md" target="REFINING --&gt; STORED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-KERNEL.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-KERNEL.md" target="[*] --&gt; BOOTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-KERNEL.md" target="BOOTING --&gt; REGISTERING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-KERNEL.md" target="REGISTERING --&gt; RESOLVING_DEPENDENCIES">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-KERNEL.md" target="RESOLVING_DEPENDENCIES --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-KERNEL.md" target="ACTIVE --&gt; DEGRADED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-KERNEL.md" target="DEGRADED --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-KERNEL.md" target="ACTIVE --&gt; SHUTTING_DOWN">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-KERNEL.md" target="SHUTTING_DOWN --&gt; [*]">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-OS.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-OS.md" target="[*] --&gt; DEFINED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-OS.md" target="DEFINED --&gt; GOVERNING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-OS.md" target="GOVERNING --&gt; EVOLVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/APEX-OS.md" target="EVOLVING --&gt; GOVERNING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="[*] --&gt; SCANNING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="SCANNING --&gt; SCORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="SCORING --&gt; PRIORITIZING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="PRIORITIZING --&gt; ALLOCATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="ALLOCATING --&gt; MONITORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CHAIN-ROTATION.md" target="MONITORING --&gt; SCANNING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONFIGURATION-PROFILES.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONFIGURATION-PROFILES.md" target="[*] --&gt; LOADED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONFIGURATION-PROFILES.md" target="LOADED --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONFIGURATION-PROFILES.md" target="ACTIVE --&gt; SWITCHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONFIGURATION-PROFILES.md" target="SWITCHING --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONFIGURATION-PROFILES.md" target="ACTIVE --&gt; ARCHIVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTEXT-BUILDER.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTEXT-BUILDER.md" target="[*] --&gt; COLLECTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTEXT-BUILDER.md" target="COLLECTING --&gt; MERGING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTEXT-BUILDER.md" target="MERGING --&gt; TRIMMING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTEXT-BUILDER.md" target="TRIMMING --&gt; VALIDATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTEXT-BUILDER.md" target="VALIDATING --&gt; DISPATCHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTEXT-BUILDER.md" target="DISPATCHING --&gt; [*]">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="[*] --&gt; REGISTER">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="REGISTER --&gt; VERSION">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="VERSION --&gt; VALIDATE_ABI">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="VALIDATE_ABI --&gt; APPROVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="APPROVE --&gt; DEPLOY">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="DEPLOY --&gt; MONITOR">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/CONTRACT-MANAGEMENT.md" target="MONITOR --&gt; RETIRE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DATA-GOVERNANCE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DATA-GOVERNANCE.md" target="[*] --&gt; INGESTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DATA-GOVERNANCE.md" target="INGESTING --&gt; NORMALIZING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DATA-GOVERNANCE.md" target="NORMALIZING --&gt; VALIDATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DATA-GOVERNANCE.md" target="VALIDATING --&gt; CACHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DATA-GOVERNANCE.md" target="CACHING --&gt; INDEXING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DATA-GOVERNANCE.md" target="INDEXING --&gt; SERVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DATA-GOVERNANCE.md" target="SERVING --&gt; REFRESHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DATA-GOVERNANCE.md" target="REFRESHING --&gt; INGESTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="[*] --&gt; RECOMMEND_RECEIVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="RECOMMEND_RECEIVED --&gt; VALIDATE_INPUTS">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="VALIDATE_INPUTS --&gt; CHECK_CONSENSUS">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="CHECK_CONSENSUS --&gt; RISK_GATE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="RISK_GATE --&gt; SIMULATION_GATE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="SIMULATION_GATE --&gt; APPROVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="SIMULATION_GATE --&gt; REJECTED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="SIMULATION_GATE --&gt; DEFER">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-ENGINE.md" target="DEFER --&gt; RECOMMEND_RECEIVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LEDGER.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LEDGER.md" target="[*] --&gt; CAPTURED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LEDGER.md" target="CAPTURED --&gt; VALIDATED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LEDGER.md" target="VALIDATED --&gt; HASHED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LEDGER.md" target="HASHED --&gt; STORED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LEDGER.md" target="STORED --&gt; REPLAYABLE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LEDGER.md" target="REPLAYABLE --&gt; ARCHIVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="[*] --&gt; APPENDING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="APPENDING --&gt; STORED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="STORED --&gt; INDEXED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="INDEXED --&gt; QUERYABLE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="QUERYABLE --&gt; ARCHIVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DEPENDENCY-GRAPH.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DEPENDENCY-GRAPH.md" target="[*] --&gt; BUILDING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DEPENDENCY-GRAPH.md" target="BUILDING --&gt; VALIDATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DEPENDENCY-GRAPH.md" target="VALIDATING --&gt; RESOLVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DEPENDENCY-GRAPH.md" target="RESOLVED --&gt; MONITORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DEPENDENCY-GRAPH.md" target="MONITORING --&gt; REBUILDING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/DEPENDENCY-GRAPH.md" target="REBUILDING --&gt; VALIDATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-LIFECYCLE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-LIFECYCLE.md" target="[*] --&gt; PENDING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-LIFECYCLE.md" target="PENDING --&gt; QUEUED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-LIFECYCLE.md" target="QUEUED --&gt; SIGNING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-LIFECYCLE.md" target="SIGNING --&gt; BROADCASTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-LIFECYCLE.md" target="BROADCASTING --&gt; CONFIRMING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-LIFECYCLE.md" target="CONFIRMING --&gt; FINALIZED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-LIFECYCLE.md" target="CONFIRMING --&gt; REVERTED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-LIFECYCLE.md" target="REVERTED --&gt; QUEUED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-POLICIES.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-POLICIES.md" target="[*] --&gt; EVALUATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-POLICIES.md" target="EVALUATING --&gt; APPROVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-POLICIES.md" target="EVALUATING --&gt; BLOCKED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-POLICIES.md" target="APPROVED --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-POLICIES.md" target="ACTIVE --&gt; PAUSED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-POLICIES.md" target="PAUSED --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXECUTION-POLICIES.md" target="ACTIVE --&gt; EMERGENCY_STOPPED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXPLAINABILITY.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXPLAINABILITY.md" target="[*] --&gt; CAPTURED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXPLAINABILITY.md" target="CAPTURED --&gt; EXPLAINED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXPLAINABILITY.md" target="EXPLAINED --&gt; STORED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/EXPLAINABILITY.md" target="STORED --&gt; REPLAYABLE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/FEATURE-FLAGS.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/FEATURE-FLAGS.md" target="[*] --&gt; DISABLED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/FEATURE-FLAGS.md" target="DISABLED --&gt; EXPERIMENTAL">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/FEATURE-FLAGS.md" target="EXPERIMENTAL --&gt; BETA">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/FEATURE-FLAGS.md" target="BETA --&gt; PRODUCTION">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/FEATURE-FLAGS.md" target="PRODUCTION --&gt; DEPRECATED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/FEATURE-FLAGS.md" target="DEPRECATED --&gt; DISABLED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="[*] --&gt; CAPTURED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="CAPTURED --&gt; VALIDATED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="VALIDATED --&gt; STAMPED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="STAMPED --&gt; STORED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="STORED --&gt; REPLAYABLE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="REPLAYABLE --&gt; ARCHIVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/KNOWLEDGE-GRAPH.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/KNOWLEDGE-GRAPH.md" target="[*] --&gt; INGESTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/KNOWLEDGE-GRAPH.md" target="INGESTING --&gt; LINKING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/KNOWLEDGE-GRAPH.md" target="LINKING --&gt; VALIDATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/KNOWLEDGE-GRAPH.md" target="VALIDATING --&gt; SERVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/KNOWLEDGE-GRAPH.md" target="SERVING --&gt; REFRESHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/KNOWLEDGE-GRAPH.md" target="REFRESHING --&gt; INGESTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/LIVE-ARCHITECTURE-VIEWER.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/LIVE-ARCHITECTURE-VIEWER.md" target="[*] --&gt; DISCOVERING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/LIVE-ARCHITECTURE-VIEWER.md" target="DISCOVERING --&gt; RENDERING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/LIVE-ARCHITECTURE-VIEWER.md" target="RENDERING --&gt; SYNCED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/LIVE-ARCHITECTURE-VIEWER.md" target="SYNCED --&gt; STALE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/LIVE-ARCHITECTURE-VIEWER.md" target="STALE --&gt; REFRESHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/LIVE-ARCHITECTURE-VIEWER.md" target="REFRESHING --&gt; SYNCED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MARKET-REGIME-DETECTION.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MARKET-REGIME-DETECTION.md" target="[*] --&gt; OBSERVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MARKET-REGIME-DETECTION.md" target="OBSERVING --&gt; CLASSIFYING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MARKET-REGIME-DETECTION.md" target="CLASSIFYING --&gt; PUBLISHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MARKET-REGIME-DETECTION.md" target="PUBLISHING --&gt; MONITORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MARKET-REGIME-DETECTION.md" target="MONITORING --&gt; OBSERVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="[*] --&gt; DETECTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="DETECTING --&gt; MATCHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="MATCHING --&gt; CONFIGURING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="CONFIGURING --&gt; VERIFIED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="VERIFIED --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="[*] --&gt; DETECTED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="DETECTED --&gt; VALIDATED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="VALIDATED --&gt; SCORED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="SCORED --&gt; SIMULATED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="SIMULATED --&gt; APPROVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="APPROVED --&gt; EXECUTED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="EXECUTED --&gt; CLOSED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="CLOSED --&gt; ARCHIVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ORDER-MANAGEMENT.md" target="Draft -&gt; Validated -&gt; Placed -&gt; PartiallyFilled -&gt; Filled -&gt; Reconciled.">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ORDER-MANAGEMENT.md" target="Draft -&gt; Validated -&gt; Cancelled -&gt; Reconciled.">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ORDER-MANAGEMENT.md" target="Draft -&gt; Validated -&gt; Rejected -&gt; Reconciled.">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ORDER-MANAGEMENT.md" target="Placed -&gt; Replaced -&gt; Placed.">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ORDER-MANAGEMENT.md" target="Placed | PartiallyFilled -&gt; CancelRequested -&gt; Cancelled | Filled.">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="[*] --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="ACTIVE --&gt; HEALTH_CHECK">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="HEALTH_CHECK --&gt; UNHEALTHY">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="UNHEALTHY --&gt; FAILOVER">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="FAILOVER --&gt; RECOVER">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="RECOVER --&gt; REINSTATE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/PROVIDER-RESILIENCE.md" target="REINSTATE --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RESOURCE-MANAGER.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RESOURCE-MANAGER.md" target="[*] --&gt; REGISTERED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RESOURCE-MANAGER.md" target="REGISTERED --&gt; HEALTHY">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RESOURCE-MANAGER.md" target="HEALTHY --&gt; DEGRADED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RESOURCE-MANAGER.md" target="DEGRADED --&gt; RECOVERING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RESOURCE-MANAGER.md" target="RECOVERING --&gt; HEALTHY">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RESOURCE-MANAGER.md" target="HEALTHY --&gt; RETIRED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="[*] --&gt; GATHER_ROUTES">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="GATHER_ROUTES --&gt; SIMULATE_EACH">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="SIMULATE_EACH --&gt; SCORE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="SCORE --&gt; SELECT_BEST">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="SELECT_BEST --&gt; EXECUTE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="EXECUTE --&gt; VERIFY">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-OPTIMIZATION.md" target="VERIFY --&gt; [*]">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-SCORING-MODEL.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-SCORING-MODEL.md" target="[*] --&gt; GATHERING_INPUTS">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-SCORING-MODEL.md" target="GATHERING_INPUTS --&gt; SCORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-SCORING-MODEL.md" target="SCORING --&gt; RANKING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-SCORING-MODEL.md" target="RANKING --&gt; SELECTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/ROUTE-SCORING-MODEL.md" target="SELECTING --&gt; DISPATCHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RUNTIME-KNOWLEDGE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RUNTIME-KNOWLEDGE.md" target="[*] --&gt; COLLECTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RUNTIME-KNOWLEDGE.md" target="COLLECTING --&gt; INDEXING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RUNTIME-KNOWLEDGE.md" target="INDEXING --&gt; SERVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RUNTIME-KNOWLEDGE.md" target="SERVING --&gt; REFRESHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/RUNTIME-KNOWLEDGE.md" target="REFRESHING --&gt; COLLECTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SELF-HEALING.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SELF-HEALING.md" target="[*] --&gt; DETECTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SELF-HEALING.md" target="DETECTING --&gt; TRIAGING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SELF-HEALING.md" target="TRIAGING --&gt; RECOVERING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SELF-HEALING.md" target="RECOVERING --&gt; VERIFYING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SELF-HEALING.md" target="VERIFYING --&gt; STABLE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SELF-HEALING.md" target="VERIFYING --&gt; FAILED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="[*] --&gt; REGISTERED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="REGISTERED --&gt; INITIALIZING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="INITIALIZING --&gt; STARTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="STARTING --&gt; HEALTHY">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="HEALTHY --&gt; PAUSED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="PAUSED --&gt; RESTARTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="RESTARTING --&gt; STARTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="HEALTHY --&gt; STOPPING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-LIFECYCLE.md" target="STOPPING --&gt; DISPOSED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-REGISTRY.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-REGISTRY.md" target="[*] --&gt; UNREGISTERED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-REGISTRY.md" target="UNREGISTERED --&gt; REGISTERING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-REGISTRY.md" target="REGISTERING --&gt; AVAILABLE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-REGISTRY.md" target="AVAILABLE --&gt; SUSPENDED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-REGISTRY.md" target="SUSPENDED --&gt; AVAILABLE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SERVICE-REGISTRY.md" target="AVAILABLE --&gt; RETIRED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SHUTDOWN-LIFECYCLE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SHUTDOWN-LIFECYCLE.md" target="[*] --&gt; GRACEFUL_DRAIN">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SHUTDOWN-LIFECYCLE.md" target="GRACEFUL_DRAIN --&gt; CHECKPOINT_WORKERS">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SHUTDOWN-LIFECYCLE.md" target="CHECKPOINT_WORKERS --&gt; FLUSH_QUEUES">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SHUTDOWN-LIFECYCLE.md" target="FLUSH_QUEUES --&gt; CLOSE_CONNECTIONS">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SHUTDOWN-LIFECYCLE.md" target="CLOSE_CONNECTIONS --&gt; EXIT">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGIES.md" target="### IPC interactions">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="[*] --&gt; IDLE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="IDLE --&gt; EVALUATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="EVALUATING --&gt; SELECTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="SELECTING --&gt; DEPLOYING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="DEPLOYING --&gt; MONITORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="MONITORING --&gt; ROTATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="MONITORING --&gt; FALLBACK">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="ROTATING --&gt; EVALUATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/STRATEGY-ROTATION.md" target="FALLBACK --&gt; EVALUATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SYSTEM-CAPABILITY-REGISTRY.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SYSTEM-CAPABILITY-REGISTRY.md" target="[*] --&gt; DISCOVERING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SYSTEM-CAPABILITY-REGISTRY.md" target="DISCOVERING --&gt; VALIDATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SYSTEM-CAPABILITY-REGISTRY.md" target="VALIDATING --&gt; PUBLISHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SYSTEM-CAPABILITY-REGISTRY.md" target="PUBLISHING --&gt; MONITORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SYSTEM-CAPABILITY-REGISTRY.md" target="MONITORING --&gt; REFRESHING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/SYSTEM-CAPABILITY-REGISTRY.md" target="REFRESHING --&gt; DISCOVERING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="[*] --&gt; FETCH_METADATA">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="FETCH_METADATA --&gt; COMPUTE_SCORE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="COMPUTE_SCORE --&gt; RANK">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="RANK --&gt; CACHE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="CACHE --&gt; REFRESH">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TOKEN-INTELLIGENCE.md" target="REFRESH --&gt; FETCH_METADATA">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="[*] --&gt; IDLE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="IDLE --&gt; SCANNING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="SCANNING --&gt; OPPORTUNITY_DETECTED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="OPPORTUNITY_DETECTED --&gt; RISK_CHECK">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="RISK_CHECK --&gt; SIMULATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="SIMULATING --&gt; EXECUTING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="EXECUTING --&gt; VERIFYING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="VERIFYING --&gt; SETTLED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/TRADING-LIFECYCLE.md" target="VERIFYING --&gt; FAILED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WALLET-COMMAND-CENTER.md" target="UNINITIALIZED -&gt; LOCKED -&gt; UNLOCKED -&gt; APPROVING -&gt; SIGNING -&gt; ERROR.">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WALLET-COMMAND-CENTER.md" target="ERROR -&gt; LOCKED on recovery.">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WALLET-COMMAND-CENTER.md" target="Signing requires desktop approval.">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKFLOW-BUILDER.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKFLOW-BUILDER.md" target="[*] --&gt; DRAFT">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKFLOW-BUILDER.md" target="DRAFT --&gt; VALIDATING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKFLOW-BUILDER.md" target="VALIDATING --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKFLOW-BUILDER.md" target="ACTIVE --&gt; PAUSED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKFLOW-BUILDER.md" target="PAUSED --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKFLOW-BUILDER.md" target="ACTIVE --&gt; RETIRED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKSPACE-MANAGER.md" target="stateDiagram-v2">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKSPACE-MANAGER.md" target="[*] --&gt; LOADING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKSPACE-MANAGER.md" target="LOADING --&gt; RESTORING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKSPACE-MANAGER.md" target="RESTORING --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKSPACE-MANAGER.md" target="ACTIVE --&gt; SAVING">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKSPACE-MANAGER.md" target="SAVING --&gt; SAVED">
+  <data key="d0">defines</data>
+</edge>
+<edge source="docs/WORKSPACE-MANAGER.md" target="SAVED --&gt; ACTIVE">
+  <data key="d0">defines</data>
+</edge>
+</graph></graphml>

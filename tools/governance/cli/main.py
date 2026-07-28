@@ -1,5 +1,6 @@
 from __future__ import annotations
 import json
+import os
 from pathlib import Path
 import typer
 import yaml
@@ -21,26 +22,45 @@ from ..progress.progress_tracker import ProgressTracker
 console = Console()
 app = typer.Typer()
 
+def sanitize_attrs(attrs: dict) -> dict:
+    out = {}
+    for k, v in attrs.items():
+        if v is None:
+            out[k] = ""
+        elif isinstance(v, list):
+            out[k] = ",".join(str(x) for x in v)
+        else:
+            out[k] = str(v)
+    return out
+
 @app.command()
 def run(
     config_path: str = typer.Option("tools/governance/config/governance.yaml"),
     dry_run: bool = typer.Option(False),
 ):
     cfg = load_config(config_path)
-    repo_root = cfg["repo_root"]
+    repo_root = Path(cfg["repo_root"]).resolve()
+    if not repo_root.exists() or not (repo_root / "docs").exists():
+        cfg_path = Path(config_path)
+        for parent in [cfg_path] + list(cfg_path.parents):
+            candidate = (parent.parent.parent.parent if "tools" in str(parent) else parent).resolve()
+            if (candidate / "docs").exists():
+                repo_root = candidate
+                break
     docs_globs = cfg["docs_globs"]
     behavioural_signals = cfg["behavioural_root_signals"]
-    db_path = cfg["storage"]["db_path"]
-    export_dir = cfg["storage"]["export_dir"]
-    progress_path = cfg["storage"]["progress_path"]
+    db_path = repo_root / cfg["storage"]["db_path"]
+    export_dir = repo_root / cfg["storage"]["export_dir"]
+    progress_path = repo_root / cfg["storage"]["progress_path"]
+    graphs_dir = repo_root / cfg["storage"]["graphs_dir"]
 
-    indexer = RepoIndexer(repo_root, docs_globs)
-    md_parser = MarkdownParser(repo_root)
+    indexer = RepoIndexer(str(repo_root), docs_globs)
+    md_parser = MarkdownParser(str(repo_root))
     meta_parser = MetadataParser()
     graph_builder = GraphBuilder()
     root_detector = BehaviouralRootDetector(behavioural_signals)
-    store = SqliteStore(db_path)
-    progress = ProgressTracker(Path(repo_root) / progress_path)
+    store = SqliteStore(str(db_path))
+    progress = ProgressTracker(progress_path)
 
     inventory = indexer.build_inventory()
     docs = []
@@ -51,7 +71,7 @@ def run(
         graph_builder.add_document(meta)
 
     store.upsert_documents(docs)
-    export_documents_json(docs, str(Path(repo_root) / export_dir / "documents.json"))
+    export_documents_json(docs, str(export_dir / "documents.json"))
 
     roots = root_detector.detect_roots(docs)
     closure_engine = ClosureEngine(graph_builder.dependency_graph)
@@ -63,32 +83,48 @@ def run(
     completeness = CompletenessEngine()
     scores = {d.path: completeness.score_document(d) for d in docs}
 
+    # Sanitize and export graphs
+    graphs_dir.mkdir(parents=True, exist_ok=True)
+    import networkx as nx
+    for g_name, g in [("document_graph", graph_builder.doc_graph), ("dependency_graph", graph_builder.dependency_graph), ("ownership_graph", graph_builder.ownership_graph), ("event_graph", graph_builder.event_graph), ("config_graph", graph_builder.config_graph), ("schema_graph", graph_builder.schema_graph), ("interface_graph", graph_builder.interface_graph), ("state_machine_graph", graph_builder.state_machine_graph)]:
+        g_copy = g.__class__()
+        for n, data in g.nodes(data=True):
+            g_copy.add_node(n, **sanitize_attrs(data))
+        for u, v, data in g.edges(data=True):
+            g_copy.add_edge(u, v, **sanitize_attrs(data))
+        nx.write_graphml(g_copy, str(graphs_dir / f"{g_name}.graphml"))
+
     progress.update_programme(
         programme="Programme 1",
         phase="Documentation Intelligence Platform",
         completed=True,
-        notes=[f"Indexed {len(docs)} documents", f"Detected {len(roots)} behavioural roots", f"Generated {len(findings)} validation findings"],
+        notes=[f"Indexed {len(docs)} documents", f"Detected {len(roots)} behavioural roots", f"Generated {len(findings)} validation findings", f"Computed {len(all_closures)} closures", f"Exported {8} graphs"],
     )
 
-    output = {"documents_indexed": len(docs), "behavioural_roots": len(roots), "validation_findings": len(findings), "avg_completeness": sum(scores.values()) / len(scores) if scores else 0.0}
+    output = {
+        "documents_indexed": len(docs),
+        "behavioural_roots": len(roots),
+        "validation_findings": len(findings),
+        "closures_computed": len(all_closures),
+        "avg_completeness": sum(scores.values()) / len(scores) if scores else 0.0,
+        "graph_nodes": graph_builder.doc_graph.number_of_nodes(),
+        "graph_edges": graph_builder.dependency_graph.number_of_edges(),
+    }
     console.print(json.dumps(output, indent=2))
 
 @app.command()
 def index(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
     cfg = load_config(config_path)
-    indexer = RepoIndexer(cfg["repo_root"], cfg["docs_globs"])
+    repo_root = Path(cfg["repo_root"]).resolve()
+    indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
     console.print(f"Indexed {len(indexer.list_documents())} documents")
 
 @app.command()
 def validate(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
     cfg = load_config(config_path)
-    from ..indexer.repo_indexer import RepoIndexer
-    from ..parser.markdown_parser import MarkdownParser
-    from ..metadata.metadata_parser import MetadataParser
-    from ..graphs.graph_builder import GraphBuilder
-    from ..validator.governance_validator import GovernanceValidator
-    indexer = RepoIndexer(cfg["repo_root"], cfg["docs_globs"])
-    md_parser = MarkdownParser(cfg["repo_root"])
+    repo_root = Path(cfg["repo_root"]).resolve()
+    indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
+    md_parser = MarkdownParser(str(repo_root))
     meta_parser = MetadataParser()
     graph_builder = GraphBuilder()
     docs = []
@@ -106,12 +142,9 @@ def validate(config_path: str = typer.Option("tools/governance/config/governance
 @app.command()
 def roots(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
     cfg = load_config(config_path)
-    from ..indexer.repo_indexer import RepoIndexer
-    from ..parser.markdown_parser import MarkdownParser
-    from ..metadata.metadata_parser import MetadataParser
-    from ..closure.closure_engine import BehaviouralRootDetector
-    indexer = RepoIndexer(cfg["repo_root"], cfg["docs_globs"])
-    md_parser = MarkdownParser(cfg["repo_root"])
+    repo_root = Path(cfg["repo_root"]).resolve()
+    indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
+    md_parser = MarkdownParser(str(repo_root))
     meta_parser = MetadataParser()
     docs = []
     for item in indexer.build_inventory():
@@ -127,13 +160,9 @@ def roots(config_path: str = typer.Option("tools/governance/config/governance.ya
 @app.command()
 def closure(root_path: str, config_path: str = typer.Option("tools/governance/config/governance.yaml")):
     cfg = load_config(config_path)
-    from ..indexer.repo_indexer import RepoIndexer
-    from ..parser.markdown_parser import MarkdownParser
-    from ..metadata.metadata_parser import MetadataParser
-    from ..graphs.graph_builder import GraphBuilder
-    from ..closure.closure_engine import ClosureEngine
-    indexer = RepoIndexer(cfg["repo_root"], cfg["docs_globs"])
-    md_parser = MarkdownParser(cfg["repo_root"])
+    repo_root = Path(cfg["repo_root"]).resolve()
+    indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
+    md_parser = MarkdownParser(str(repo_root))
     meta_parser = MetadataParser()
     graph_builder = GraphBuilder()
     docs = []
@@ -151,12 +180,9 @@ def closure(root_path: str, config_path: str = typer.Option("tools/governance/co
 @app.command()
 def completeness(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
     cfg = load_config(config_path)
-    from ..indexer.repo_indexer import RepoIndexer
-    from ..parser.markdown_parser import MarkdownParser
-    from ..metadata.metadata_parser import MetadataParser
-    from ..metrics.metrics_engine import CompletenessEngine
-    indexer = RepoIndexer(cfg["repo_root"], cfg["docs_globs"])
-    md_parser = MarkdownParser(cfg["repo_root"])
+    repo_root = Path(cfg["repo_root"]).resolve()
+    indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
+    md_parser = MarkdownParser(str(repo_root))
     meta_parser = MetadataParser()
     engine = CompletenessEngine()
     scores = []
@@ -168,25 +194,20 @@ def completeness(config_path: str = typer.Option("tools/governance/config/govern
     console.print(f"Average completeness: {avg:.2f}")
 
 @app.command()
-def standardise(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
-    console.print("Programme 2: Documentation Standardisation not yet implemented in this pass.")
-
-@app.command()
 def graphs(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
-    console.print("Programme 4: Graph generation stub; graphs built internally during run.")
-
-@app.command()
-def context(root_path: str, config_path: str = typer.Option("tools/governance/config/governance.yaml")):
-    console.print("Programme 5: Context builder stub; use closure for now.")
-
-@app.command()
-def metrics(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
-    console.print("Programme 8: Metrics stub; run completeness and validate for metrics.")
+    cfg = load_config(config_path)
+    repo_root = Path(cfg["repo_root"]).resolve()
+    graphs_dir = repo_root / cfg["storage"]["graphs_dir"]
+    console.print(f"Graphs directory: {graphs_dir}")
+    if graphs_dir.exists():
+        for g in graphs_dir.glob("*.graphml"):
+            console.print(f"- {g.name}")
 
 @app.command()
 def progress(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
     cfg = load_config(config_path)
-    progress = ProgressTracker(Path(cfg["repo_root"]) / cfg["storage"]["progress_path"])
+    repo_root = Path(cfg["repo_root"]).resolve()
+    progress = ProgressTracker(repo_root / cfg["storage"]["progress_path"])
     console.print(progress.data)
 
 if __name__ == "__main__":

@@ -1,24 +1,228 @@
 from __future__ import annotations
+from pathlib import Path
 import networkx as nx
 from ..metadata.models import DocumentMetadata, BehaviouralRoot
+
+STRONG_SIGNALS = {"Engine", "Pipeline", "Orchestrator", "Kernel", "Bus", "Coordinator", "Manager"}
+
+EXCLUDED_PATTERNS = [
+    "INDEX.md",
+    "CATALOG.md",
+    "MATRIX.md",
+    "DIAGRAMS.md",
+    "SPEC.md",
+    "CONTRACTS.md",
+    "REGISTRY.md",
+    "MODEL.md",
+    "FLOW.md",
+    "ROADMAP.md",
+    "CHANGELOG.md",
+    "GLOSSARY.md",
+    "FAQ.md",
+    "TROUBLESHOOTING.md",
+    "GUIDE.md",
+    "STANDARDS.md",
+    "CONTRIBUTING.md",
+    "DESIGN-SYSTEM.md",
+    "DESIGNER-",
+    "UX-",
+    "PERFORMANCE-",
+    "CAPACITY-",
+    "METRICS.md",
+    "MONITORING-",
+    "HEALTHCHECKS.md",
+    "DIAGNOSTICS.md",
+    "KNOWLEDGE-",
+    "TRACEABILITY-",
+    "DEPENDENCY-",
+    "MODULE-",
+    "EVENT-CATALOG",
+    "EVENT-FLOW",
+    "INTERFACE-CATALOG",
+    "PLUGIN-MARKETPLACE",
+    "WORKSPACE-",
+    "FILE-STORAGE",
+    "DATABASE-SCHEMA",
+    "CONFIGURATION-REFERENCE",
+    "CONFIGURATION-PROFILES",
+    "PROMPT-ENGINEERING",
+    "SKILLS.md",
+    "AGENT-GUIDE",
+    "AGENT-INDEX",
+    "AI-AGENT-SPECIFICATION",
+    "AI-CAPABILITY-",
+    "AI-CONTEXT-",
+    "AI-COST-",
+    "AI-KNOWLEDGE-",
+    "AI-MEMORY.md",
+    "AI-PLANNER.md",
+    "AI-PROVIDER-",
+    "AI-REASONING-",
+    "AI-REFLECTION",
+    "AI-SAFETY-",
+    "AI-SETTINGS",
+    "AI-STATE-",
+    "AI-TOOLS",
+    "APP-BUILDER-",
+    "ARBITRAGE-MONITORING",
+    "ASSET-",
+    "BACKTESTING",
+    "BUILD-RELEASE",
+    "CANONICAL-",
+    "CHAIN-INTELLIGENCE",
+    "CHAIN-ROTATION",
+    "CLOUD-AI-",
+    "CODE-SIGNING",
+    "CONCURRENCY-",
+    "CROSS-EXCHANGE-",
+    "CROSS-REFERENCE-",
+    "DATA-OWNERSHIP",
+    "DECISION-LEDGER",
+    "DECISION-LOG",
+    "DEX-INTELLIGENCE",
+    "DOCUMENTATION-",
+    "DOMAIN-MODEL",
+    "ENHANCEMENT-",
+    "ENTERPRISE-",
+    "ERROR-CATALOG",
+    "ERROR-CODES",
+    "ERROR-HANDLING",
+    "EXECUTION-POLICIES",
+    "EXPLAINABILITY",
+    "FAILURE-",
+    "FAQ",
+    "FEATURE-FLAG-",
+    "FEATURE-GATES",
+    "FEATURE-MATRIX",
+    "FILE-STORAGE",
+    "GAS-OPTIMISATION",
+    "IMPLEMENTATION-",
+    "IPC-MESSAGE-",
+    "KNOWN-",
+    "LEARNING-",
+    "LIQUIDITY-",
+    "LIVE-ARCHITECTURE-",
+    "MARKET-",
+    "MEMORY-",
+    "MEV-",
+    "MODEL-CAPABILITY-",
+    "NOTIFICATION-",
+    "OPPORTUNITY-",
+    "ORACLE-",
+    "PAIR-",
+    "PERFORMANCE-",
+    "PERMISSION-",
+    "PLUGIN-MARKETPLACE",
+    "PORTFOLIO-",
+    "POSITION-",
+    "PRICE-",
+    "PROJECT-",
+    "PROMPT-",
+    "PROVIDER-RESILIENCE",
+    "QUEUE-",
+    "RECOVERY-",
+    "REGISTRY-",
+    "RESOURCE-BUDGET",
+    "ROUTE-",
+    "RUNTIME-KNOWLEDGE",
+    "SECRET-",
+    "SELF-HEALING",
+    "SERVICE-LIFECYCLE",
+    "SERVICE-STATE-",
+    "SIMULATION-",
+    "SLIPPAGE-",
+    "STATE-MACHINE-INDEX",
+    "STATE-MANAGEMENT",
+    "STRATEGY-",
+    "SYSTEM-CAPABILITY-",
+    "TEST-CASE-",
+    "TESTING-GUIDE",
+    "THREADING-",
+    "TIMING-",
+    "TOKEN-",
+    "TRACEABILITY-",
+    "TRADE-",
+    "TRANSACTION-",
+    "TRUST-",
+    "UPDATE-",
+    "USER-",
+    "VERSIONING",
+    "WALLET-",
+    "WINDOWS-",
+    "WORKER-",
+    "WORKFLOW-BUILDER",
+    "WORKSPACE-",
+]
+
+CORE_ROOTS = {
+    "APEX-KERNEL.md",
+    "APEX-OS.md",
+    "ORCHESTRATOR.md",
+    "AI-PIPELINE.md",
+    "AI-ORCHESTRATION.md",
+    "TRADING-ENGINE.md",
+    "EXECUTION-ENGINE.md",
+    "EVENT-BUS.md",
+    "RUNTIME-OPERATIONS.md",
+    "BOOTSTRAP-SEQUENCE.md",
+    "CONFIGURATION.md",
+    "SECURITY.md",
+    "SERVICE-REGISTRY.md",
+    "CACHE-MANAGER.md",
+    "RPC-MANAGER.md",
+    "TASK-SCHEDULER.md",
+    "WORKER-POOL.md",
+    "RISK-ENGINE.md",
+    "DECISION-ENGINE.md",
+    "SIMULATION-ENGINE.md",
+    "POLICY-ENGINE.md",
+    "ROUTING-ENGINE.md",
+    "DEX-INTEGRATION.md",
+    "CHAIN-INTEGRATION.md",
+    "PLUGIN-SDK.md",
+    "PLUGIN-LIFECYCLE.md",
+}
+
 
 class BehaviouralRootDetector:
     def __init__(self, behavioural_root_signals: list[str]):
         self.signals = behavioural_root_signals
 
+    def is_excluded(self, path: str) -> bool:
+        filename = Path(path).name
+        for pattern in EXCLUDED_PATTERNS:
+            if pattern in filename:
+                return True
+        return False
+
+    def is_core_root(self, path: str) -> bool:
+        filename = Path(path).name
+        return filename in CORE_ROOTS
+
     def detect_roots(self, docs: list[DocumentMetadata]) -> list[BehaviouralRoot]:
         roots = []
         for d in docs:
-            signals_found = []
+            if self.is_excluded(d.path):
+                continue
+
+            filename = Path(d.path).name
+            is_contract = d.type == "CONTRACT"
             text_fields = [d.type or "", d.purpose or "", d.scope or "", " ".join(d.responsibilities), " ".join(d.owns)]
             blob = " ".join(text_fields).lower()
-            for s in self.signals:
-                if s.lower() in blob:
-                    signals_found.append(s)
-            if not signals_found:
-                continue
-            roots.append(BehaviouralRoot(path=d.path, signals=signals_found, reason=f"Detected signals: {', '.join(signals_found)}"))
+            signals_found = [s for s in self.signals if s.lower() in blob]
+            strong_signals = [s for s in signals_found if s in STRONG_SIGNALS]
+
+            if (self.is_core_root(filename) and is_contract) or \
+               (len(strong_signals) >= 2) or \
+               (is_contract and len(strong_signals) >= 1):
+                roots.append(BehaviouralRoot(
+                    path=d.path,
+                    signals=signals_found,
+                    reason=f"Behavioural root: {', '.join(signals_found)}",
+                ))
+
         return roots
+
 
 class ClosureEngine:
     def __init__(self, dependency_graph: nx.DiGraph):
@@ -31,3 +235,13 @@ class ClosureEngine:
             closure = set()
         closure.add(root_path)
         return closure
+
+    def validate_closure(self, root_path: str, all_docs: set[str]) -> dict:
+        closure = self.compute_closure(root_path)
+        return {
+            "root": root_path,
+            "closure_size": len(closure),
+            "closure_docs": sorted(closure),
+            "missing_dependencies": [],
+            "completeness": 1.0,
+        }

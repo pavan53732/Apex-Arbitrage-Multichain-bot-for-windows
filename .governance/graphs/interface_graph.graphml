@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d0" for="edge" attr.name="relation" attr.type="string"/>
+<graph edgedefault="directed"><node id="docs/AI-CONSENSUS.md"/>
+<node id="Input: structured opinions from participating agents."/>
+<node id="Output: consensus result, dissent summary, confidence score, and veto reasons."/>
+<node id="Events: consensus started, consensus reached, consensus failed."/>
+<node id="docs/AI-GATEWAY.md"/>
+<node id="Input: structured AI request with model preferences, capability requirements, and context bundle."/>
+<node id="Output: normalized AI response, telemetry, and error classification."/>
+<node id="Events: provider selected, request dispatched, response received, failover triggered."/>
+<node id="docs/AI-MEMORY-SYSTEM.md"/>
+<node id="Input: memory write, recall, summarization request, purge request."/>
+<node id="Output: memory items, summaries, retrieval results, archival status."/>
+<node id="Events: memory stored, memory recalled, memory expired, memory purged."/>
+<node id="docs/DECISION-LOG.md"/>
+<node id="Input: decision summary, actor, timestamp, related ids."/>
+<node id="Output: append-only log entry and queryable references."/>
+<node id="Events: decision logged, decision updated by follow-up note, replay requested."/>
+<edge source="docs/AI-CONSENSUS.md" target="Input: structured opinions from participating agents.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/AI-CONSENSUS.md" target="Output: consensus result, dissent summary, confidence score, and veto reasons.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/AI-CONSENSUS.md" target="Events: consensus started, consensus reached, consensus failed.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="Input: structured AI request with model preferences, capability requirements, and context bundle.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="Output: normalized AI response, telemetry, and error classification.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/AI-GATEWAY.md" target="Events: provider selected, request dispatched, response received, failover triggered.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="Input: memory write, recall, summarization request, purge request.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="Output: memory items, summaries, retrieval results, archival status.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/AI-MEMORY-SYSTEM.md" target="Events: memory stored, memory recalled, memory expired, memory purged.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="Input: decision summary, actor, timestamp, related ids.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="Output: append-only log entry and queryable references.">
+  <data key="d0">implements</data>
+</edge>
+<edge source="docs/DECISION-LOG.md" target="Events: decision logged, decision updated by follow-up note, replay requested.">
+  <data key="d0">implements</data>
+</edge>
+</graph></graphml>

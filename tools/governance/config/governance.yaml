@@ -2,12 +2,8 @@ repo_root: "."
 docs_globs:
   - "docs/*.md"
   - "docs/adr/*.md"
-  - "docs/adr/**/*.md"
-  - "APEX-ARCHITECTURE.md"
-  - "README.md"
-  - "README-GOVERNANCE.md"
-  - "AGENTS.md"
-schemas_glob: "schemas/**/*.json"
+  - "*.md"
+schemas_glob: "schemas/*.json"
 scripts_glob: "scripts/**/*"
 architecture_tests_glob: "architecture-tests/**/*"
 
@@ -70,6 +66,7 @@ behavioural_root_signals:
   - Lifecycle
   - Coordinator
   - Manager
+  - Builder
 
 tier_a_patterns:
   - "*-ENGINE.md"
