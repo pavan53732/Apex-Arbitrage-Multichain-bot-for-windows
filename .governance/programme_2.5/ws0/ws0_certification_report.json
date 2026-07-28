@@ -1,0 +1,291 @@
+{
+  "audit_1_evidence_verification": [
+    {
+      "file": "determinism_report.json",
+      "exists": true,
+      "size": 12103,
+      "checksum": "e89e4381b0dd63a9a87e43bb58cb4a54f575169ee5a45c32437c255d2ae1a6a2",
+      "created": "2026-07-28T22:30:40.360614",
+      "modified": "2026-07-28T22:30:40.360614",
+      "schema_valid": true
+    },
+    {
+      "file": "fresh_clone_report.json",
+      "exists": true,
+      "size": 260,
+      "checksum": "0dd64b9da6b70e2dcc589aa42d3dba69d74e68c97e61941ed9747f5661f98881",
+      "created": "2026-07-28T22:30:40.360614",
+      "modified": "2026-07-28T22:30:40.360614",
+      "schema_valid": true
+    },
+    {
+      "file": "corruption_report.json",
+      "exists": true,
+      "size": 1368,
+      "checksum": "639f68d995ededd631d2a886e2d430ce6a26ec68bd8727ec7e22d714c75f298b",
+      "created": "2026-07-28T22:30:40.360614",
+      "modified": "2026-07-28T22:30:40.360614",
+      "schema_valid": true
+    },
+    {
+      "file": "stress_report.json",
+      "exists": true,
+      "size": 1352,
+      "checksum": "873e293b1283285e8a13d2d2e1ab2a79a6fcb107c7e5067021670a116d4c94c5",
+      "created": "2026-07-28T22:30:40.360614",
+      "modified": "2026-07-28T22:30:40.360614",
+      "schema_valid": true
+    },
+    {
+      "file": "fuzz_report.json",
+      "exists": true,
+      "size": 95,
+      "checksum": "2ddb6c2bfa3d373492d5d8659742b286000c4f29d3d8d02547eec54fae4dbdf2",
+      "created": "2026-07-28T22:30:40.360614",
+      "modified": "2026-07-28T22:30:40.360614",
+      "schema_valid": true
+    },
+    {
+      "file": "evidence_report.json",
+      "exists": true,
+      "size": 797,
+      "checksum": "c88409f9cd3fb61fedccfd7172b749ce593610d419cbefab55266d52ad9fcbd1",
+      "created": "2026-07-28T22:30:40.360614",
+      "modified": "2026-07-28T22:30:40.360614",
+      "schema_valid": true
+    },
+    {
+      "file": "dashboard.json",
+      "exists": true,
+      "size": 5569,
+      "checksum": "4f5eb05a63c28bbefd60e2fa30e3e7a840a651a28c63a776702d10c4a94c4b9e",
+      "created": "2026-07-28T22:30:40.360614",
+      "modified": "2026-07-28T22:30:40.360614",
+      "schema_valid": true
+    }
+  ],
+  "audit_2_freeze_record": {
+    "valid": true,
+    "fields": {
+      "ws": true,
+      "version": false,
+      "commit_hash": true,
+      "repository_hash": false,
+      "validator_list": false,
+      "evidence_hashes": false,
+      "timestamp": true,
+      "execution_metrics": false,
+      "integrity_checksum": false
+    },
+    "hash": "79e51668b3294280d3bd2452158f86293c7e136e35067b70ee4625e8589994ad"
+  },
+  "audit_3_determinism": {
+    "total_executions": 100,
+    "successful_executions": 100,
+    "mismatches": 0,
+    "hash_drift": 0,
+    "graph_drift": 0,
+    "closure_drift": 0,
+    "validator_drift": 0
+  },
+  "audit_4_fresh_clone": {
+    "fresh_clone": true,
+    "install": "PASS",
+    "index": "PASS",
+    "parse": "PASS",
+    "graphs": "PASS",
+    "closures": "PASS",
+    "validators": "PASS",
+    "evidence": "PASS",
+    "integrity": "PASS",
+    "compare_against_golden": "PASS",
+    "identical_outputs": true
+  },
+  "audit_5_corruption": {
+    "cases": [
+      "duplicate_owner",
+      "broken_reference",
+      "missing_owner",
+      "missing_metadata",
+      "missing_schema",
+      "broken_graph",
+      "broken_closure",
+      "cycle",
+      "duplicate_authority",
+      "orphan_document"
+    ],
+    "all_detected": true
+  },
+  "audit_6_stress": {
+    "cases": [
+      250,
+      500,
+      1000,
+      2500,
+      5000
+    ]
+  },
+  "audit_7_fuzz": {
+    "mutations": 10000,
+    "crashes": 0,
+    "deterministic_failures": 10000
+  },
+  "audit_8_dashboard": {
+    "dynamic": true,
+    "regression_pass_rate": 1.0,
+    "determinism": "PASS",
+    "fresh_clone": "PASS",
+    "corruption": "PASS",
+    "stress": "PASS",
+    "fuzz": "PASS"
+  },
+  "audit_9_repository_placeholders": {
+    "found": 1,
+    "details": [
+      {
+        "file": ".governance/programme_2.5/ws0/test_harness.py",
+        "term": "placeholder"
+      }
+    ]
+  },
+  "audit_10_runtime": {
+    "index": {
+      "executed": true,
+      "success": true
+    },
+    "parse": {
+      "executed": true,
+      "success": true
+    },
+    "graphs": {
+      "executed": true,
+      "success": true
+    },
+    "roots": {
+      "executed": true,
+      "success": true
+    },
+    "closures": {
+      "executed": true,
+      "success": true
+    },
+    "validators": {
+      "executed": true,
+      "success": true
+    },
+    "integrity": {
+      "executed": true,
+      "success": true
+    },
+    "doctor": {
+      "executed": true,
+      "success": true
+    }
+  },
+  "audit_11_test_coverage": {
+    "modules": [
+      ".governance/programme_2.5/ws0/test_harness.py",
+      ".governance/programme_2.5/ws0/__init__.py",
+      ".governance/programme_2.5/ws0/loader/fixture_loader.py",
+      ".governance/programme_2.5/ws0/loader/__init__.py",
+      ".governance/programme_2.5/ws0/generator/golden_generator.py",
+      ".governance/programme_2.5/ws0/generator/__init__.py",
+      ".governance/programme_2.5/ws0/comparator/golden_comparator.py",
+      ".governance/programme_2.5/ws0/comparator/__init__.py",
+      ".governance/programme_2.5/ws0/dashboard/test_dashboard.py",
+      ".governance/programme_2.5/ws0/dashboard/__init__.py"
+    ],
+    "tests": [],
+    "coverage": 0.0,
+    "untested": [
+      ".governance/programme_2.5/ws0/test_harness.py",
+      ".governance/programme_2.5/ws0/__init__.py",
+      ".governance/programme_2.5/ws0/loader/fixture_loader.py",
+      ".governance/programme_2.5/ws0/loader/__init__.py",
+      ".governance/programme_2.5/ws0/generator/golden_generator.py",
+      ".governance/programme_2.5/ws0/generator/__init__.py",
+      ".governance/programme_2.5/ws0/comparator/golden_comparator.py",
+      ".governance/programme_2.5/ws0/comparator/__init__.py",
+      ".governance/programme_2.5/ws0/dashboard/test_dashboard.py",
+      ".governance/programme_2.5/ws0/dashboard/__init__.py"
+    ]
+  },
+  "audit_12_canonical_authority": {
+    "database": 1,
+    "freeze_records": 1,
+    "evidence": 1,
+    "metrics": 1,
+    "graphs": 1,
+    "closures": 1,
+    "validator_catalogue": 1
+  },
+  "certification_decision": "FAIL",
+  "evidence_references": [
+    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/determinism_report.json",
+    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/fresh_clone_report.json",
+    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/corruption_report.json",
+    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/stress_report.json",
+    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/fuzz_report.json",
+    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/evidence_report.json",
+    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/dashboard.json"
+  ],
+  "freeze_record_hash": "79e51668b3294280d3bd2452158f86293c7e136e35067b70ee4625e8589994ad",
+  "repository_hash": "fb099bc5acb3d08be8c64967bc27a753b530ba9a3818dcb980e06956a71251d2",
+  "validator_summary": {
+    "governance_validator": "PASS"
+  },
+  "execution_summary": {
+    "determinism": {
+      "total_executions": 100,
+      "successful_executions": 100,
+      "mismatches": 0,
+      "hash_drift": 0,
+      "graph_drift": 0,
+      "closure_drift": 0,
+      "validator_drift": 0
+    },
+    "fresh_clone": {
+      "fresh_clone": true,
+      "install": "PASS",
+      "index": "PASS",
+      "parse": "PASS",
+      "graphs": "PASS",
+      "closures": "PASS",
+      "validators": "PASS",
+      "evidence": "PASS",
+      "integrity": "PASS",
+      "compare_against_golden": "PASS",
+      "identical_outputs": true
+    },
+    "corruption": {
+      "cases": [
+        "duplicate_owner",
+        "broken_reference",
+        "missing_owner",
+        "missing_metadata",
+        "missing_schema",
+        "broken_graph",
+        "broken_closure",
+        "cycle",
+        "duplicate_authority",
+        "orphan_document"
+      ],
+      "all_detected": true
+    },
+    "stress": {
+      "cases": [
+        250,
+        500,
+        1000,
+        2500,
+        5000
+      ]
+    },
+    "fuzz": {
+      "mutations": 10000,
+      "crashes": 0,
+      "deterministic_failures": 10000
+    }
+  },
+  "certification_timestamp": "2026-07-28T22:34:00.884514+00:00"
+}
