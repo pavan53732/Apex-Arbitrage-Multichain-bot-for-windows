@@ -194,7 +194,7 @@ Each requirement is owned by one team. That team is responsible for:
 
 ### Automated Checks
 - Run `validate_traceability.sh` to detect orphaned requirements, missing implementations, or untested features.
-- GitHub Actions workflow `.github/workflows/validate-traceability.yml` runs on every PR.
+- Local Governance Platform workflow `.local governance/validate-traceability.yml` runs on every PR.
 
 ### Manual Review
 - Monthly traceability review in Architecture sync.

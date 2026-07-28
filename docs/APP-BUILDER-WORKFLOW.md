@@ -168,7 +168,7 @@ Each gate must pass before the pipeline proceeds to the next stage.
 
 ## Cross-References
 
-- **BUILD-RELEASE-CICD.md** — CI/CD pipeline configuration.
+- **BUILD-RELEASE-CICD.md** — local governance pipeline configuration.
 - **WINDOWS-DEPLOYMENT.md** — Windows-specific deployment details.
 - **TESTING-GUIDE.md** — Test framework and writing tests.
 - **DEPLOYMENT.md** — Deployment configuration.
