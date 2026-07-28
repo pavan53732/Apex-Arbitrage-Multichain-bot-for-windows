@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apex-governance"
+version = "1.0.0"
+description = "APEX Repository Governance Platform — Documentation Intelligence & Engineering OS"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "typer>=0.12",
+  "markdown-it-py>=3.0",
+  "PyYAML>=6.0",
+  "networkx>=3.2",
+  "pydantic>=2.6",
+  "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+  "black>=24.0",
+  "mypy>=1.11",
+  "types-PyYAML>=6.0",
+]
+
+[project.scripts]
+apex-gov = "governance.cli.main:app"
+
+[tool.setuptools.packages.find]
+where = [".."]
+include = ["governance*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = true
