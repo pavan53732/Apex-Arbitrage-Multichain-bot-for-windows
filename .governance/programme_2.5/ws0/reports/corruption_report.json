@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case": "duplicate_owner",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    },
+    {
+      "case": "broken_reference",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    },
+    {
+      "case": "missing_owner",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    },
+    {
+      "case": "missing_metadata",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    },
+    {
+      "case": "missing_schema",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    },
+    {
+      "case": "broken_graph",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    },
+    {
+      "case": "broken_closure",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    },
+    {
+      "case": "cycle",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    },
+    {
+      "case": "duplicate_authority",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    },
+    {
+      "case": "orphan_document",
+      "detected": true,
+      "validator": "governance_validator",
+      "status": "PASS"
+    }
+  ]
+}

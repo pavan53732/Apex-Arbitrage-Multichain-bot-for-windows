@@ -1,0 +1,18 @@
+{
+  "repository_hash": "b32ea453a44d01cf960f16ac531183f09721bbcd8c4d4356984ac655b4a2c67a",
+  "commit_hash": "530edbed5f92bf0c71d51579c1f8442a175dfb69",
+  "fixture_hash": "5b4818f81c7256e686ba2e0537258c852c6f5c3e646e84f9625f8744ede6a8f8",
+  "execution_id": "2026-07-28T22:30:40.363074+00:00",
+  "input_hash": "c96c6d5be8d08a12e7b5cdc1b207fa6b2430974c86803d8891675e76fd992c20",
+  "output_hash": "e0ee8bb50685e05fa0f47ed04203ae953fdfd055f5bd2892ea186504254f8c3a",
+  "validator_list": [
+    "governance_validator"
+  ],
+  "execution_duration_ms": 1234,
+  "timestamp": "2026-07-28T22:30:40.363087+00:00",
+  "machine_information": {
+    "platform": "Linux-6.1.158-x86_64-with-glibc2.41",
+    "python": "3.12.12"
+  },
+  "evidence_hash": "ee8250fb76e094b34b471f13a73dbbe51d1ae142e9df59d7c0d31ec20f0a0a8e"
+}

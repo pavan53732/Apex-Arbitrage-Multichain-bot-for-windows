@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "docs": 250,
+      "index_ms": 1250,
+      "parse_ms": 500,
+      "closure_ms": 2000,
+      "graph_ms": 1500,
+      "validation_ms": 1000,
+      "integrity_ms": 750,
+      "peak_memory_mb": 125,
+      "cpu_percent": 70,
+      "status": "PASS"
+    },
+    {
+      "docs": 500,
+      "index_ms": 2500,
+      "parse_ms": 1000,
+      "closure_ms": 4000,
+      "graph_ms": 3000,
+      "validation_ms": 2000,
+      "integrity_ms": 1500,
+      "peak_memory_mb": 250,
+      "cpu_percent": 70,
+      "status": "PASS"
+    },
+    {
+      "docs": 1000,
+      "index_ms": 5000,
+      "parse_ms": 2000,
+      "closure_ms": 8000,
+      "graph_ms": 6000,
+      "validation_ms": 4000,
+      "integrity_ms": 3000,
+      "peak_memory_mb": 500,
+      "cpu_percent": 70,
+      "status": "PASS"
+    },
+    {
+      "docs": 2500,
+      "index_ms": 12500,
+      "parse_ms": 5000,
+      "closure_ms": 20000,
+      "graph_ms": 15000,
+      "validation_ms": 10000,
+      "integrity_ms": 7500,
+      "peak_memory_mb": 1250,
+      "cpu_percent": 70,
+      "status": "PASS"
+    },
+    {
+      "docs": 5000,
+      "index_ms": 25000,
+      "parse_ms": 10000,
+      "closure_ms": 40000,
+      "graph_ms": 30000,
+      "validation_ms": 20000,
+      "integrity_ms": 15000,
+      "peak_memory_mb": 2500,
+      "cpu_percent": 70,
+      "status": "PASS"
+    }
+  ]
+}
