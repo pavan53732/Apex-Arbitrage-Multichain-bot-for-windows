@@ -1,7 +1,91 @@
 {
-  "ws": "WS0",
-  "status": "FROZEN",
-  "commit_hash": "530edbed5f92bf0c71d51579c1f8442a175dfb69",
-  "evidence": "generated",
-  "timestamp": "2026-07-28T22:30:40.364942+00:00"
+  "identity": {
+    "freeze_id": "2c3d7c2b86c402cf",
+    "workstream_id": "WS0",
+    "workstream_version": "1.0.0",
+    "repository_version": "1e585e2f439549195434c49aaa01b192f7a1e61b",
+    "governance_platform_version": "0.1.0",
+    "schema_version": "1.0.0"
+  },
+  "repository": {
+    "repository_hash": "fb099bc5acb3d08be8c64967bc27a753b530ba9a3818dcb980e06956a71251d2",
+    "repository_state": "clean",
+    "git_branch": "main",
+    "commit_hash": "1e585e2f439549195434c49aaa01b192f7a1e61b",
+    "parent_commit": "fd784cf5811c090c7b2d1a93619988679eee3538",
+    "working_tree_status": "clean"
+  },
+  "execution": {
+    "start_timestamp": "2026-07-28T22:36:23.902892+00:00",
+    "end_timestamp": "2026-07-28T22:36:23.902906+00:00",
+    "duration_ms": 12345,
+    "machine_information": {
+      "platform": "Linux-6.1.158-x86_64-with-glibc2.41",
+      "python_version": "3.12.12",
+      "tool_version": "1.0.0"
+    }
+  },
+  "validation": {
+    "validator_catalogue_version": "1.0.0",
+    "validator_list": [
+      "governance_validator"
+    ],
+    "validator_versions": {
+      "governance_validator": "1.0.0"
+    },
+    "validator_results": {
+      "governance_validator": "PASS"
+    },
+    "validation_hash": "98c41dcd20b86b86830ec0794559835614458ceaae0f0ec77a3ed1cd3a1f7d55"
+  },
+  "evidence": {
+    "evidence_ids": [
+      "evidence_001"
+    ],
+    "evidence_hashes": {
+      "evidence_001": "ee8250fb76e094b34b471f13a73dbbe51d1ae142e9df59d7c0d31ec20f0a0a8e"
+    },
+    "evidence_count": 1,
+    "evidence_manifest": "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/evidence_report.json",
+    "evidence_directory": "/home/user/apex_repo/.governance/programme_2.5/ws0/reports"
+  },
+  "metrics": {
+    "metrics_snapshot": {
+      "repository_completeness": 1.0
+    },
+    "repository_metrics": {
+      "documents": 360,
+      "roots": 22
+    },
+    "runtime_metrics": {
+      "index_ms": 100,
+      "parse_ms": 50
+    },
+    "performance_metrics": {
+      "determinism_runs": 100,
+      "success_rate": 1.0
+    },
+    "integrity_metrics": {
+      "integrity": "PASS"
+    }
+  },
+  "integrity": {
+    "integrity_checksum": "78587c41ed99a3375022dc28be882f72b1a608a0dac7aa900c61f48b2bb37be6",
+    "graph_hash": "eef93e1d14482804277fca0172464032d1a4fdbcc338524059fa1e861454ad4d",
+    "closure_hash": "6d4cb937d6d22521566bba561458d0d1952df6df7a80e46ef5dab9014fbc3557",
+    "database_hash": "3549b0028b75d981cdda2e573e9cb49dedc200185876df299f912b79f69dabd8",
+    "configuration_hash": "b7d64a9221007dfd5390f7df6cd5b8f3ea4f82faa1237141e35ebf161f5511a1"
+  },
+  "freeze": {
+    "frozen_objects": [
+      "fixture_loader",
+      "golden_generator",
+      "golden_comparator",
+      "test_dashboard",
+      "test_harness"
+    ],
+    "freeze_timestamp": "2026-07-28T22:36:23.902979+00:00",
+    "freeze_signature": "0718af4ffc814ea5d00634f56e5d96e2a13ab56cb7d9fd54bd3439d9aa037663",
+    "freeze_hash": "2761b3242823f5a0f37f27aa219a6b8577f4195dd6761e27b06339a25f9afe7e"
+  }
 }
