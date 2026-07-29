@@ -2,20 +2,27 @@
 type: REFERENCE
 owner: Governance Platform
 status: Canonical
-version: 1.0.0
+version: 1.1.0
 purpose: Governance Certification Report produced at the end of Repository Canonicality Repair (Phases A-D), before Programme 2.5 WS1 may resume.
-scope: Certification record only. No architectural changes were made while producing this report beyond the two commits it certifies.
+scope: Certification record only. No architectural changes were made while producing this report beyond the commits it certifies.
 last_updated: 2026-07-29
 canonical_source: .governance/programme_2.5/GOVERNANCE-CERTIFICATION-REPORT.md
 ---
 
 # Governance Certification Report
 
-**Certification Version:** 1.0.0
-**Certification Date:** 2026-07-29T09:19:44Z (UTC)
-**Certified commit:** `b0bb1e4f8180bfa7b89e698a0632a1b9dcd7ff58`
-**Repository (tree) hash:** `994525c27ae17ca080b8f937fbc638a1fcf134bb`
-**Method:** all figures below were computed against a **fresh `git clone` of the pushed remote** (`/tmp/fresh_clone_test`, discarded after use), in a fresh Python virtual environment, independent of the working copy that produced the repair commits. This is deliberate: certifying against the same working directory that made the changes would not prove the repository is correct when checked out independently, which is the actual bar for "certification."
+**Certification Version:** 1.1.0 (supersedes 1.0.0 — see "Update" note below)
+**Certification Date:** 2026-07-29T09:19:44Z (UTC), updated after closing the freeze-currency gap
+**Certified commit:** `ce86aa85d` (final; `b0bb1e4f8` was certified by v1.0.0 of this report, with one known gap)
+**Repository (tree) hash:** see `.governance/freeze/freeze_WS0.json` for the current value (regenerated alongside this update)
+**Method:** all figures below were computed against a **fresh `git clone` of the pushed remote**, in a fresh Python virtual environment, independent of the working copy that produced the repair commits. This is deliberate: certifying against the same working directory that made the changes would not prove the repository is correct when checked out independently, which is the actual bar for "certification."
+
+**Update (v1.1.0):** v1.0.0 of this report certified commit `b0bb1e4f8` with a disclosed, honest 12/13 integrity result (the `freeze` check failed due to a self-reference limitation in how freeze currency was checked). Three follow-up commits closed that gap:
+1. `a8fdfc9c6` — this certification report itself (v1.0.0).
+2. `a8c70f47d` — fixed `IntegrityEngine.check_freeze()` to correctly accept a freeze record that references HEAD's immediate parent, provided the only file changed since then is the freeze record itself (the exact shape of a "regenerate freeze" commit). Added a regression test.
+3. `ce86aa85d` — regenerated `freeze_WS0.json` one final time, in a commit that changes *only* that file, satisfying the new acceptance rule.
+
+**Fresh-clone verification of `ce86aa85d` (this final commit) confirms `apex-gov integrity` now returns a clean, unconditional 13/13 PASS**, and all 21 tests pass (20 from the original repair + 1 new regression test for the freeze-currency fix).
 
 ---
 
@@ -65,20 +72,16 @@ Full evidence record: `.governance/programme_2.5/phase_d_fresh_clone_evidence.js
 
 ## 5. Freeze Hashes
 
-**Known limitation, disclosed rather than hidden:** the freeze record at `.governance/freeze/freeze_WS0.json` was regenerated against commit `dfbee2ff7` (the Repository Canonicality Repair commit) in commit `b0bb1e4f8`. Because committing that regeneration itself changes the tree hash, `freeze_WS0.json`'s embedded `commit_hash` (`dfbee2ff7`) does **not** equal the certified commit of this report (`b0bb1e4f8`). This is the structural self-reference limitation documented in commit `b0bb1e4f8`'s message and is exactly why `apex-gov integrity`'s `freeze` check reports **FAIL** on a fresh clone of `b0bb1e4f8` today — confirmed live:
+**RESOLVED (v1.1.0).** The self-reference limitation described in v1.0.0 of this report has been fixed properly rather than chased indefinitely. `IntegrityEngine.check_freeze()` (commit `a8c70f47d`) now correctly treats a freeze record as current if it references either (a) HEAD exactly, or (b) HEAD's immediate parent, *provided* the commit that moved HEAD past that parent changed nothing except the freeze record itself. This is exactly the semantic the freeze record's own `reason_for_regeneration` field already described in prose; the check now enforces it programmatically instead of doing a naive exact-hash comparison that would fail by construction on every regeneration commit.
 
-```
-freeze FAIL   (fresh-clone apex-gov integrity result, commit b0bb1e4f8)
-```
-
-This is disclosed here rather than papered over. **A follow-up commit that regenerates `freeze_WS0.json` one more time against `b0bb1e4f8` (or, preferably, a redesign of the freeze semantic per WS6's remit — see recommendation in commit `b0bb1e4f8`'s message) is required before `apex-gov integrity` will show a clean 13/13 PASS on a fresh clone.** All 12 other integrity checks pass cleanly on a fresh clone of the certified commit.
+Commit `ce86aa85d` regenerates `freeze_WS0.json` one final time in a commit that changes only that file, satisfying the new rule. **Fresh-clone verification confirms `apex-gov integrity`'s `freeze` check now returns PASS unconditionally**, and this will remain true for any future commit that follows the same "regenerate freeze in its own commit" pattern — it is no longer a perpetual, unfixable FAIL.
 
 | Field | Value |
 |---|---|
 | Freeze record path | `.governance/freeze/freeze_WS0.json` |
-| Freeze record's embedded `commit_hash` | `dfbee2ff7b548581533a516e93676b45444d9c1a` (parent of certified commit) |
+| Freeze record's embedded `commit_hash` | `a8c70f47d...` (parent of certified commit `ce86aa85d`, per the new accepted pattern) |
 | Freeze `all_pass` (validator_results at freeze time) | `true` |
-| Freeze integrity_checksum | `15fa1dc8...` through `...938613ee` at time of last regeneration (see freeze_WS0.json directly for full value — omitted here to avoid this report itself going stale in the same way) |
+| `apex-gov integrity` freeze check result (fresh clone of `ce86aa85d`) | **PASS** |
 
 ## 6. Validator Versions
 
@@ -137,7 +140,7 @@ Root-detection-specific determinism (`apex-gov roots` run twice, output compared
 
 ## 10. Integrity
 
-`apex-gov integrity`, fresh clone of certified commit `b0bb1e4f8`:
+`apex-gov integrity`, fresh clone of final certified commit `ce86aa85d`:
 
 | Check | Result |
 |---|---|
@@ -150,12 +153,12 @@ Root-detection-specific determinism (`apex-gov roots` run twice, output compared
 | validators | PASS |
 | ownership | PASS |
 | cross_references | PASS |
-| **freeze** | **FAIL** (see §5 — known, disclosed, structural limitation, follow-up required) |
+| freeze | **PASS** (fixed — see §5) |
 | evidence | PASS |
 | metrics | PASS |
 | repository | PASS |
 
-**Overall: 12/13 PASS.** This report does not round this up to a false "PASS" — it is reported honestly as **conditional**: the repository is canonical, deterministic, and internally consistent on every check except the freeze record's self-referential commit hash, which requires one more small follow-up commit (documented in §5) before a clean 13/13 fresh-clone result is achievable.
+**Overall: 13/13 PASS**, verified on an independent fresh clone of `ce86aa85d`. The original v1.0.0 certification of `b0bb1e4f8` disclosed a 12/13 result rather than rounding up; the gap has since been closed properly (fixed check logic + one clean regeneration commit), not hidden or worked around.
 
 ---
 
@@ -172,18 +175,18 @@ Root-detection-specific determinism (`apex-gov roots` run twice, output compared
 | One integrity engine | ⚪ N/A (did not exist) | ✅ **PASS** — implemented (Work Item 6) |
 | One evidence engine | ⚪ N/A (did not exist) | ✅ **PASS** — implemented (Work Item 5) |
 | One freeze engine (code) | ✅ PASS | ✅ PASS (unchanged) |
-| One freeze *record* that is current | ❌ FAIL (6 commits stale) | ⚠️ **PARTIAL** — regenerated twice, now 1 commit stale due to the self-reference limitation (§5); requires one more follow-up commit |
+| One freeze *record* that is current | ❌ FAIL (6 commits stale) | ✅ **PASS** — regenerated, and the currency check itself fixed to correctly recognise a valid "regenerate freeze" commit pattern (§5) |
 | One canonical database | ❌ FAIL (3 databases) | ✅ **PASS** — 2 archived (Work Item 2) |
 | Document inventory count explained | ✅ PASS | ✅ PASS (unchanged; now also has a single canonical enriched view, Work Item 9) |
 | Behavioural root count explained | ✅ PASS (with defects flagged) | ✅ PASS — all 146 exclusion patterns now documented (Work Item 8); 3 `CORE_ROOTS` self-contradictions and ~10 plausibly-missed roots flagged for WS1, not fixed here |
 | Determinism | ❌ FAIL (non-deterministic ordering) | ✅ **PASS** — 100/100 identical, in-place AND fresh-clone (Work Item 1) |
 
-**9 of 14 checks moved from FAIL/PARTIAL/N/A to a clean PASS.** One check (freeze record currency) improved from "6 commits stale" to "1 commit stale due to a documented structural limitation" but is not yet a clean PASS. One check (validator framework unification) remains an intentional PARTIAL by design, not a defect.
+**10 of 14 checks moved from FAIL/PARTIAL/N/A to a clean PASS.** One check (validator framework unification) remains an intentional PARTIAL by design (two validator layers check genuinely different things — see §6/Work Item 7 in the repair commit message), not a defect.
 
 ---
 
 ## Recommendation
 
-Per the user's directive, **WS1 (Root Detection Engine) may proceed once the one remaining freeze-currency gap (§5) is closed** with a follow-up commit that regenerates `freeze_WS0.json` against `b0bb1e4f8` (or implements the redesigned freeze semantic recommended in that commit's message). Every other canonicality requirement — single runtime, single database, single graph producer, deterministic execution (fresh-clone verified), reproducible evidence, and a working Integrity Engine — is met and verified against an independent fresh clone, not merely the working copy that made the changes.
+**All Repository Canonicality Repair work items are closed, and `apex-gov integrity` returns an unconditional 13/13 PASS on an independent fresh clone of commit `ce86aa85d`.** Per the user's directive, **Programme 2.5 WS1 (Root Detection Engine) may now proceed.** Every canonicality requirement — single runtime, single database, single graph producer, deterministic execution (fresh-clone verified, twice, with matching hashes), reproducible evidence, a working Integrity Engine, and a current freeze record — is met and verified against an independent fresh clone, not merely the working copy that made the changes.
 
 WS1 should also treat `.governance/programme_2.5/BEHAVIOURAL-ROOT-EXCLUSION-REVIEW.md` (§8 of the audit) as its authoritative starting backlog, rather than beginning from an unreviewed 146-pattern exclusion list.
