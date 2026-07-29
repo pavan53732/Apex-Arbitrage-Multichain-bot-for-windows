@@ -106,6 +106,16 @@ class EvidenceEngine:
         ".governance/graphs/ownership_graph.graphml",
         ".governance/graphs/schema_graph.graphml",
         ".governance/graphs/state_machine_graph.graphml",
+        # WS4: the remaining 6 Phase-0-frozen graphs (security/recovery/
+        # validation/service/plugin/runtime) + algorithm_graph, added
+        # when the 14-graph specification was fully implemented.
+        ".governance/graphs/security_graph.graphml",
+        ".governance/graphs/recovery_graph.graphml",
+        ".governance/graphs/validation_graph.graphml",
+        ".governance/graphs/service_graph.graphml",
+        ".governance/graphs/plugin_graph.graphml",
+        ".governance/graphs/runtime_graph.graphml",
+        ".governance/graphs/algorithm_graph.graphml",
     ]
 
     def __init__(self, repo_root: Path):

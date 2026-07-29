@@ -84,6 +84,13 @@ class IntegrityEngine:
     # therefore excluded from the "stray graph location" check below,
     # same as the archive/ exclusion already in place.
     CANONICAL_CLOSURES_DIR = ".governance/closures"
+    # WS4 (Programme 2.5 Phase-0 graph_specification.json): the 14 frozen
+    # graphs (document/dependency/ownership/interface/event/schema/
+    # configuration/service/plugin/runtime/security/recovery/validation/
+    # algorithm) plus state_machine_graph, a 15th graph kept beyond the
+    # frozen spec because multiple existing consumers (evidence_engine.py,
+    # freeze_engine.py, tests) already depend on it and removing it would
+    # be a regression, not a fix.
     EXPECTED_GRAPH_NAMES = {
         "config_graph.graphml",
         "dependency_graph.graphml",
@@ -93,6 +100,13 @@ class IntegrityEngine:
         "ownership_graph.graphml",
         "schema_graph.graphml",
         "state_machine_graph.graphml",
+        "security_graph.graphml",
+        "recovery_graph.graphml",
+        "validation_graph.graphml",
+        "service_graph.graphml",
+        "plugin_graph.graphml",
+        "runtime_graph.graphml",
+        "algorithm_graph.graphml",
     }
 
     def __init__(self, repo_root: Path, config_path: str = "tools/governance/config/governance.yaml"):

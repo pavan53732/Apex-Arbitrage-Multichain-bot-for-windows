@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="edge" attr.name="relation" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="docs/AI-CONSENSUS.md" />
+    <node id="Extend timeout within policy, exclude failing participant, or escalate to human review." />
+    <node id="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" />
+    <node id="Compress, trim, retrieve alternate memory, or refuse request." />
+    <node id="docs/AI-GATEWAY.md" />
+    <node id="Retry within policy, route to backup provider, degrade features, or reject unsupported requests." />
+    <node id="docs/AI-MEMORY-SYSTEM.md" />
+    <node id="Reindex memory, regenerate summaries, or fall back to durable archives." />
+    <node id="docs/AI-REASONING-POLICY.md" />
+    <node id="Reject the action, route to deterministic logic, and log the violation." />
+    <node id="docs/APEX-KERNEL.md" />
+    <node id="Retry registration, isolate failed plugins, fall back to safe defaults, and alert through the observability stack." />
+    <node id="docs/CONFIGURATION-PROFILES.md" />
+    <node id="Fallback to safe defaults and validate merged config." />
+    <node id="docs/CONTEXT-BUILDER.md" />
+    <node id="Compress context, fall back to curated memory, or refuse dispatch if policy fails." />
+    <node id="docs/DATA-GOVERNANCE.md" />
+    <node id="Reject invalid records, refresh from source, and replay lineage from durable storage." />
+    <node id="docs/DECISION-LEDGER.md" />
+    <node id="Rebuild from source logs, reject incomplete traces, escalate to audit." />
+    <node id="docs/DECISION-LOG.md" />
+    <node id="Rebuild index, rehydrate from source record, or mark entry incomplete." />
+    <node id="docs/DEPENDENCY-GRAPH.md" />
+    <node id="Break cycles through explicit ownership, reload graph, and isolate incompatible components." />
+    <node id="docs/EXECUTION-LIFECYCLE.md" />
+    <node id="REVERTED may return to QUEUED after retry policy succeeds." />
+    <node id="docs/EXECUTION-POLICIES.md" />
+    <node id="Stop execution, notify operators, and require approval to resume." />
+    <node id="docs/EXPLAINABILITY.md" />
+    <node id="Reject storage, request re-evaluation, or mark the decision as non-compliant." />
+    <node id="docs/FEATURE-FLAGS.md" />
+    <node id="Rollback, disable, or pin to previous version." />
+    <node id="docs/GOVERNANCE-EXPLAINABILITY.md" />
+    <node id="Reject non-compliant traces, rebuild from source logs, and escalate to audit." />
+    <node id="docs/KNOWLEDGE-GRAPH.md" />
+    <node id="Refresh source nodes, revalidate relations, and isolate stale subgraphs." />
+    <node id="docs/LIVE-ARCHITECTURE-VIEWER.md" />
+    <node id="Refresh topology from kernel, requery registries, and fall back to cached graph." />
+    <node id="docs/MARKET-REGIME-DETECTION.md" />
+    <node id="Reclassify with fresh data and reduce confidence if unstable." />
+    <node id="docs/MODEL-CAPABILITY-NEGOTIATION.md" />
+    <node id="Downgrade features, switch providers, or reject unsupported capability use." />
+    <node id="docs/RESOURCE-MANAGER.md" />
+    <node id="Rebind resource, replace endpoint, restart service, or retire resource." />
+    <node id="docs/ROUTE-SCORING-MODEL.md" />
+    <node id="Recompute score, refresh data, or fall back to next-best route." />
+    <node id="docs/RUNTIME-KNOWLEDGE.md" />
+    <node id="Refresh from kernel, registries, health probes, and event stream." />
+    <node id="docs/SELF-HEALING.md" />
+    <node id="Restart worker, reconnect RPC, switch provider, reload cache, recover queue, notify operators." />
+    <node id="docs/SERVICE-REGISTRY.md" />
+    <node id="Unregister stale services, rebind dependencies, and rehydrate from kernel state." />
+    <node id="docs/SHUTDOWN-LIFECYCLE.md" />
+    <node id="If checkpoint fails, the process remains in GRACEFUL_DRAIN and retries checkpointing." />
+    <node id="docs/SYSTEM-CAPABILITY-REGISTRY.md" />
+    <node id="Re-scan adapters, revalidate manifests, and suspend stale capabilities." />
+    <node id="docs/TRADING-LIFECYCLE.md" />
+    <node id="FAILED transitions to RETRY." />
+    <node id="RETRY returns to SCANNING after operator or policy approval." />
+    <node id="docs/TRANSACTION-LIFECYCLE.md" />
+    <node id="Replacement and nonce bump rules must be explicit." />
+    <node id="Pending state must persist across app restarts." />
+    <node id="docs/WORKFLOW-BUILDER.md" />
+    <node id="Pause workflow, require correction, or route to fallback manual operation." />
+    <edge source="docs/AI-CONSENSUS.md" target="Extend timeout within policy, exclude failing participant, or escalate to human review.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="Compress, trim, retrieve alternate memory, or refuse request.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/AI-GATEWAY.md" target="Retry within policy, route to backup provider, degrade features, or reject unsupported requests.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/AI-MEMORY-SYSTEM.md" target="Reindex memory, regenerate summaries, or fall back to durable archives.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/AI-REASONING-POLICY.md" target="Reject the action, route to deterministic logic, and log the violation.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/APEX-KERNEL.md" target="Retry registration, isolate failed plugins, fall back to safe defaults, and alert through the observability stack.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-PROFILES.md" target="Fallback to safe defaults and validate merged config.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/CONTEXT-BUILDER.md" target="Compress context, fall back to curated memory, or refuse dispatch if policy fails.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/DATA-GOVERNANCE.md" target="Reject invalid records, refresh from source, and replay lineage from durable storage.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/DECISION-LEDGER.md" target="Rebuild from source logs, reject incomplete traces, escalate to audit.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/DECISION-LOG.md" target="Rebuild index, rehydrate from source record, or mark entry incomplete.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/DEPENDENCY-GRAPH.md" target="Break cycles through explicit ownership, reload graph, and isolate incompatible components.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/EXECUTION-LIFECYCLE.md" target="REVERTED may return to QUEUED after retry policy succeeds.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/EXECUTION-POLICIES.md" target="Stop execution, notify operators, and require approval to resume.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/EXPLAINABILITY.md" target="Reject storage, request re-evaluation, or mark the decision as non-compliant.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/FEATURE-FLAGS.md" target="Rollback, disable, or pin to previous version.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="Reject non-compliant traces, rebuild from source logs, and escalate to audit.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/KNOWLEDGE-GRAPH.md" target="Refresh source nodes, revalidate relations, and isolate stale subgraphs.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/LIVE-ARCHITECTURE-VIEWER.md" target="Refresh topology from kernel, requery registries, and fall back to cached graph.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/MARKET-REGIME-DETECTION.md" target="Reclassify with fresh data and reduce confidence if unstable.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="Downgrade features, switch providers, or reject unsupported capability use.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/RESOURCE-MANAGER.md" target="Rebind resource, replace endpoint, restart service, or retire resource.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/ROUTE-SCORING-MODEL.md" target="Recompute score, refresh data, or fall back to next-best route.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/RUNTIME-KNOWLEDGE.md" target="Refresh from kernel, registries, health probes, and event stream.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/SELF-HEALING.md" target="Restart worker, reconnect RPC, switch provider, reload cache, recover queue, notify operators.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/SERVICE-REGISTRY.md" target="Unregister stale services, rebind dependencies, and rehydrate from kernel state.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/SHUTDOWN-LIFECYCLE.md" target="If checkpoint fails, the process remains in GRACEFUL_DRAIN and retries checkpointing.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/SYSTEM-CAPABILITY-REGISTRY.md" target="Re-scan adapters, revalidate manifests, and suspend stale capabilities.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/TRADING-LIFECYCLE.md" target="FAILED transitions to RETRY.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/TRADING-LIFECYCLE.md" target="RETRY returns to SCANNING after operator or policy approval.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/TRANSACTION-LIFECYCLE.md" target="Replacement and nonce bump rules must be explicit.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/TRANSACTION-LIFECYCLE.md" target="Pending state must persist across app restarts.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+    <edge source="docs/WORKFLOW-BUILDER.md" target="Pause workflow, require correction, or route to fallback manual operation.">
+      <data key="d0">declares_recovery_behaviour</data>
+    </edge>
+  </graph>
+</graphml>

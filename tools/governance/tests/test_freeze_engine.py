@@ -42,9 +42,13 @@ def test_freeze_engine_produces_all_required_fields():
     assert "evidence_record_hash" in record["evidence"]
     # metrics (canonical_output)
     assert "documents_indexed" in record["canonical_output"]
-    # graphs
+    # graphs -- 15 total after WS4 (Programme 2.5 Phase-0 graph
+    # specification) added the 6 remaining frozen graphs (security,
+    # recovery, validation, service, plugin, runtime) plus algorithm_graph,
+    # to the original 8 (document/dependency/ownership/interface/event/
+    # config/schema/state_machine).
     assert "graph_hashes" in record["graphs"]
-    assert record["graphs"]["graph_count"] == 8
+    assert record["graphs"]["graph_count"] == 15
     # database hash
     assert record["database"]["database_hash"] is not None
     # timestamp

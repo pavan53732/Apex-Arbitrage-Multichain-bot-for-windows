@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="edge" attr.name="relation" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="docs/APEX-KERNEL.md" />
+    <node id="docs/BOOTSTRAP-SEQUENCE.md" />
+    <node id="docs/CACHE-MANAGER.md" />
+    <node id="docs/CONFIGURATION.md" />
+    <node id="docs/ENGINE-STATE-MACHINE.md" />
+    <node id="docs/EVENT-BUS.md" />
+    <node id="docs/IPC-PROTOCOL.md" />
+    <node id="docs/ORCHESTRATOR.md" />
+    <node id="docs/PLUGIN-LIFECYCLE.md" />
+    <node id="docs/PLUGIN-SDK.md" />
+    <node id="docs/RPC-MANAGER.md" />
+    <node id="docs/RUNTIME-OPERATIONS.md" />
+    <node id="docs/SECURITY.md" />
+    <node id="docs/TASK-SCHEDULER.md" />
+    <node id="docs/WORKER-POOL.md" />
+    <edge source="docs/APEX-KERNEL.md" target="docs/EVENT-BUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-KERNEL.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-KERNEL.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ENGINE-STATE-MACHINE.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ENGINE-STATE-MACHINE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-BUS.md" target="docs/IPC-PROTOCOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-BUS.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-PROTOCOL.md" target="docs/EVENT-BUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-PROTOCOL.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-LIFECYCLE.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SDK.md" target="docs/PLUGIN-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-OPERATIONS.md" target="docs/BOOTSTRAP-SEQUENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TASK-SCHEDULER.md" target="docs/WORKER-POOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-POOL.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-POOL.md" target="docs/TASK-SCHEDULER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+  </graph>
+</graphml>

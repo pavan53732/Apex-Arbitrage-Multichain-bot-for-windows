@@ -182,10 +182,41 @@ def run(
     category_report_path = export_dir / "category_validator_findings.json"
     save_category_validator_report(category_report, category_report_path)
 
-    # Sanitize and export graphs
+    # WS4: 4 derived graphs (service/plugin/runtime/algorithm) completing
+    # the 14-graph Phase-0 specification. Computed from data the
+    # canonical pipeline already has (dependency graph, tier report,
+    # docs) -- no second document indexing/parsing pass.
+    from ..graphs.derived_graphs import (
+        build_algorithm_graph, build_plugin_graph, build_runtime_graph, build_service_graph,
+    )
+    service_graph = build_service_graph(graph_builder.dependency_graph, tier_report["root_tiers"])
+    runtime_graph = build_runtime_graph(graph_builder.dependency_graph, tier_report["root_tiers"])
+    plugin_graph = build_plugin_graph(graph_builder.dependency_graph, docs)
+    algorithm_graph = build_algorithm_graph(graph_builder.dependency_graph, docs)
+
+    # Sanitize and export graphs (14 total: the Phase-0-frozen 7 core +
+    # security/recovery/validation + service/plugin/runtime/algorithm =
+    # 14, plus state_machine_graph as a 15th bonus graph beyond spec).
     graphs_dir.mkdir(parents=True, exist_ok=True)
     import networkx as nx
-    for g_name, g in [("document_graph", graph_builder.doc_graph), ("dependency_graph", graph_builder.dependency_graph), ("ownership_graph", graph_builder.ownership_graph), ("event_graph", graph_builder.event_graph), ("config_graph", graph_builder.config_graph), ("schema_graph", graph_builder.schema_graph), ("interface_graph", graph_builder.interface_graph), ("state_machine_graph", graph_builder.state_machine_graph)]:
+    all_graphs = [
+        ("document_graph", graph_builder.doc_graph),
+        ("dependency_graph", graph_builder.dependency_graph),
+        ("ownership_graph", graph_builder.ownership_graph),
+        ("event_graph", graph_builder.event_graph),
+        ("config_graph", graph_builder.config_graph),
+        ("schema_graph", graph_builder.schema_graph),
+        ("interface_graph", graph_builder.interface_graph),
+        ("state_machine_graph", graph_builder.state_machine_graph),
+        ("security_graph", graph_builder.security_graph),
+        ("recovery_graph", graph_builder.recovery_graph),
+        ("validation_graph", graph_builder.validation_graph),
+        ("service_graph", service_graph),
+        ("plugin_graph", plugin_graph),
+        ("runtime_graph", runtime_graph),
+        ("algorithm_graph", algorithm_graph),
+    ]
+    for g_name, g in all_graphs:
         g_copy = g.__class__()
         for n, data in g.nodes(data=True):
             g_copy.add_node(n, **sanitize_attrs(data))
