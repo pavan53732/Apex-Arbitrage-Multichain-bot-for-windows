@@ -65,9 +65,14 @@ class FreezeRecord:
 class FreezeEngine:
     """Produces a repository-level freeze record from live canonical outputs."""
 
-    def __init__(self, repo_root: Path, workstream_id: str = "WS0"):
+    def __init__(self, repo_root: Path, workstream_id: str = "WS0", signing_key_path: Path | None = None):
         self.repo_root = Path(repo_root).resolve()
         self.workstream_id = workstream_id
+        # Overridable so tests (and any caller signing against an
+        # isolated environment) never touch the shared production
+        # signing keypair under <repo_root>/.governance/freeze/ --
+        # defaults to that path for real `apex-gov freeze` invocations.
+        self._signing_key_path_override = Path(signing_key_path) if signing_key_path else None
 
     def _git(self, *args: str) -> str:
         return subprocess.run(
@@ -180,13 +185,24 @@ class FreezeEngine:
         # FreezeValidator.verify() against it.
         from .freeze_manifest import FreezeHistory, FreezeManifest, FreezeValidator
 
-        signing_key_path = self.repo_root / ".governance" / "freeze" / ".signing_key"
+        signing_key_path = self._signing_key_path_override or (self.repo_root / ".governance" / "freeze" / ".signing_key")
         validator = FreezeValidator(signing_key_path)
         signature = validator.sign(record.data)
+
+        def _display_path(p: Path) -> str:
+            try:
+                return str(p.relative_to(self.repo_root))
+            except ValueError:
+                # Path is outside repo_root (e.g. a test-isolated
+                # tmp_path signing key) -- store the absolute path
+                # rather than raising, since this is a valid, supported
+                # configuration (signing_key_path override), not an error.
+                return str(p)
+
         record.data["tamper_evidence"] = {
             "signature": signature,
-            "signing_key_path": str(signing_key_path.relative_to(self.repo_root)),
-            "public_key_path": str(validator.public_key_path.relative_to(self.repo_root)),
+            "signing_key_path": _display_path(signing_key_path),
+            "public_key_path": _display_path(validator.public_key_path),
             "algorithm": "Ed25519",
             "verify_with": "tools.governance.freeze.freeze_manifest.FreezeValidator.verify",
         }

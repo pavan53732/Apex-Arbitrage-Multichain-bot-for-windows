@@ -79,10 +79,22 @@ def test_freeze_engine_commit_hash_matches_actual_git_head():
 
 
 def test_freeze_and_save_writes_a_file(tmp_path):
-    engine = FreezeEngine(_repo_root())
+    # signing_key_path is deliberately isolated to tmp_path, NOT the
+    # real repository's shared production signing keypair under
+    # <repo_root>/.governance/freeze/ -- signing against the real repo's
+    # keys from a test would either (a) silently create/reuse the real
+    # production private key as a side effect of running the test suite
+    # (a real problem in itself: tests should never touch production
+    # secrets), or (b), after the fresh-clone-corruption fix, correctly
+    # raise RuntimeError in any checkout that has a committed public key
+    # but no private key (e.g. a fresh clone running the test suite,
+    # confirmed as a real failure via this session's own fresh-clone
+    # re-verification). Using an isolated tmp_path keypair avoids both.
+    engine = FreezeEngine(_repo_root(), signing_key_path=tmp_path / "isolated_signing_key" / ".signing_key")
     output_path = tmp_path / "freeze_TEST.json"
     engine.freeze_and_save(output_path)
     assert output_path.exists()
     import json
     data = json.loads(output_path.read_text())
     assert data["identity"]["workstream_id"] == "WS0"
+    assert data["tamper_evidence"]["algorithm"] == "Ed25519"
