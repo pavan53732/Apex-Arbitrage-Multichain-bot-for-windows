@@ -74,6 +74,16 @@ class IntegrityEngine:
     CANONICAL_DB = ".governance/governance.db"
     CANONICAL_EXPORT_DIR = ".governance/exports"
     CANONICAL_GRAPHS_DIR = ".governance/graphs"
+    # Per-behavioural-root closure dependency graphs (WS2,
+    # closure_artefacts.py's dependency_graph.graphml, one per root
+    # under .governance/closures/<root>/) are a DELIBERATE, canonical
+    # second location for .graphml files -- each is an induced subgraph
+    # of the single canonical dependency_graph.graphml restricted to
+    # one root's closure, not an independent computation or a stray
+    # duplicate of the repository-wide graph set. This directory is
+    # therefore excluded from the "stray graph location" check below,
+    # same as the archive/ exclusion already in place.
+    CANONICAL_CLOSURES_DIR = ".governance/closures"
     EXPECTED_GRAPH_NAMES = {
         "config_graph.graphml",
         "dependency_graph.graphml",
@@ -163,9 +173,12 @@ class IntegrityEngine:
         # Also check for any duplicate graph sets elsewhere in the repo
         # (outside archive), which would indicate a regression to the
         # duplicated-graph state found by the Canonicality Audit.
+        closures_dir = self.repo_root / self.CANONICAL_CLOSURES_DIR
         all_graphml = [
             p for p in self.repo_root.rglob("*.graphml")
-            if ".git" not in p.parts and "archive" not in p.parts
+            if ".git" not in p.parts
+            and "archive" not in p.parts
+            and closures_dir not in p.parents
         ]
         stray_dirs = {p.parent for p in all_graphml if p.parent != graphs_dir}
 
@@ -279,10 +292,31 @@ class IntegrityEngine:
             self._record("closures", "FAIL", f"reverse closure verification raised an exception: {exc}")
             return
 
+        # WS2: every behavioural root must have its full 5-artefact set
+        # (manifest, dependency_graph, audit, work_queue, maturity_report)
+        # persisted under .governance/closures/<root>/ -- verified by
+        # checking the files actually exist on disk (produced by the
+        # preceding `apex-gov run` invocation above), not merely that the
+        # writer function exists.
+        closures_dir = self.repo_root / self.CANONICAL_CLOSURES_DIR
+        required_files = {"manifest.json", "dependency_graph.graphml", "audit.json", "work_queue.json", "maturity_report.json"}
+        incomplete_roots = []
+        for r in live_roots:
+            root_dir = closures_dir / Path(r.path).stem
+            present = {p.name for p in root_dir.glob("*")} if root_dir.exists() else set()
+            if not required_files.issubset(present):
+                incomplete_roots.append(r.path)
+        if incomplete_roots:
+            self._record(
+                "closures", "FAIL",
+                f"{len(incomplete_roots)} root(s) missing one or more of the 5 required closure artefacts: {sorted(incomplete_roots)}",
+            )
+            return
+
         self._record(
             "closures", "PASS",
-            f"every one of {roots} behavioural roots has both a computed forward closure and a computed reverse closure",
-            {"roots": roots, "closures": closures, "reverse_closures_verified": reverse_closures_ok},
+            f"every one of {roots} behavioural roots has a computed forward closure, reverse closure, and full 5-artefact set (manifest/dependency_graph/audit/work_queue/maturity_report)",
+            {"roots": roots, "closures": closures, "reverse_closures_verified": reverse_closures_ok, "roots_with_full_artefact_set": len(live_roots) - len(incomplete_roots)},
         )
 
     def check_validators(self) -> None:

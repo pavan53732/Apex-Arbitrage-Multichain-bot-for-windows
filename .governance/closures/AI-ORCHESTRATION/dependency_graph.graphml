@@ -1,0 +1,2284 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d0" for="edge" attr.name="relation" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="APEX-ARCHITECTURE.md" />
+    <node id="docs/DOCUMENTATION-MAP.md" />
+    <node id="docs/ARCHITECTURE.md" />
+    <node id="docs/PROJECT-STRUCTURE.md" />
+    <node id="docs/TRADING-ENGINE.md" />
+    <node id="docs/EXECUTION-ENGINE.md" />
+    <node id="docs/AI-PIPELINE.md" />
+    <node id="docs/USER-FLOWS.md" />
+    <node id="docs/AI-AGENT-SPECIFICATION.md" />
+    <node id="docs/AI-ORCHESTRATION.md" />
+    <node id="docs/AI-CAPABILITY-MATRIX.md" />
+    <node id="docs/CLOUD-AI-INTEGRATION.md" />
+    <node id="docs/AI-SETTINGS.md" />
+    <node id="docs/CONFIGURATION.md" />
+    <node id="docs/AI-CONSENSUS.md" />
+    <node id="docs/DECISION-ENGINE.md" />
+    <node id="docs/RISK-ENGINE.md" />
+    <node id="docs/EXPLAINABILITY.md" />
+    <node id="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" />
+    <node id="docs/AI-MEMORY-SYSTEM.md" />
+    <node id="docs/CONTEXT-BUILDER.md" />
+    <node id="docs/TRACEABILITY-MATRIX.md" />
+    <node id="docs/AI-COST-MANAGEMENT.md" />
+    <node id="docs/MONITORING-OBSERVABILITY.md" />
+    <node id="docs/AI-GATEWAY.md" />
+    <node id="docs/AI-TOOLS.md" />
+    <node id="docs/MODEL-CAPABILITY-NEGOTIATION.md" />
+    <node id="docs/AI-REASONING-POLICY.md" />
+    <node id="docs/PROVIDER-RESILIENCE.md" />
+    <node id="docs/AI-KNOWLEDGE-INDEX.md" />
+    <node id="docs/KNOWLEDGE-GRAPH.md" />
+    <node id="docs/LEARNING-PIPELINE.md" />
+    <node id="docs/AI-MEMORY.md" />
+    <node id="docs/ORCHESTRATOR.md" />
+    <node id="docs/AI-PROVIDER-MANAGER.md" />
+    <node id="docs/AI-STATE-MACHINE.md" />
+    <node id="docs/AI-SAFETY-BOUNDARY.md" />
+    <node id="docs/PROMPT-LIFECYCLE.md" />
+    <node id="docs/AI-TOOL-INVOCATION-CONTRACT.md" />
+    <node id="docs/TRUST-BOUNDARIES.md" />
+    <node id="docs/SECURITY.md" />
+    <node id="docs/SECURITY-CONTRACTS.md" />
+    <node id="docs/PERMISSION-MODEL.md" />
+    <node id="docs/PROMPT-ENGINEERING.md" />
+    <node id="docs/INTERFACE-TOOL-CALL.md" />
+    <node id="docs/API-REFERENCE.md" />
+    <node id="docs/APEX-KERNEL.md" />
+    <node id="docs/EVENT-BUS.md" />
+    <node id="docs/SERVICE-REGISTRY.md" />
+    <node id="docs/HEALTHCHECKS.md" />
+    <node id="docs/PLUGIN-SDK.md" />
+    <node id="docs/APEX-OS.md" />
+    <node id="docs/POLICY-ENGINE.md" />
+    <node id="docs/WINDOWS-DESKTOP.md" />
+    <node id="docs/API-CONTRACTS.md" />
+    <node id="docs/IPC-PROTOCOL.md" />
+    <node id="docs/MODULE-DEPENDENCY.md" />
+    <node id="docs/STATE-MANAGEMENT.md" />
+    <node id="docs/ERROR-HANDLING-LOGGING.md" />
+    <node id="docs/VERSIONING.md" />
+    <node id="docs/WINDOWS-DEPLOYMENT.md" />
+    <node id="docs/APP-BUILDER-PLUGIN-SYSTEM.md" />
+    <node id="docs/PLUGIN-LIFECYCLE.md" />
+    <node id="docs/PLUGIN-STATE-MACHINE.md" />
+    <node id="docs/PLUGIN-SANDBOX-CONTRACT.md" />
+    <node id="docs/PLUGIN-MARKETPLACE.md" />
+    <node id="docs/APP-BUILDER-WORKFLOW.md" />
+    <node id="docs/BUILD-RELEASE-CICD.md" />
+    <node id="docs/TESTING-GUIDE.md" />
+    <node id="docs/DEPLOYMENT.md" />
+    <node id="SIGNING-POLICY.md" />
+    <node id="docs/METRICS.md" />
+    <node id="docs/OPPORTUNITY-RANKING.md" />
+    <node id="docs/PERFORMANCE-SLOS.md" />
+    <node id="docs/DECISION-LOG.md" />
+    <node id="docs/ARBITRAGE-WINDOW-MANAGER.md" />
+    <node id="docs/TRADING-LIFECYCLE.md" />
+    <node id="docs/CHAIN-REGISTRY.md" />
+    <node id="docs/DEX-REGISTRY.md" />
+    <node id="docs/TOKEN-REGISTRY.md" />
+    <node id="docs/ORACLE-REGISTRY.md" />
+    <node id="docs/DASHBOARD-LAYOUT.md" />
+    <node id="docs/ASSET-MANAGEMENT.md" />
+    <node id="docs/MARKET-DATA.md" />
+    <node id="docs/PORTFOLIO-MANAGEMENT.md" />
+    <node id="docs/WALLET-MANAGEMENT.md" />
+    <node id="docs/STRATEGIES.md" />
+    <node id="docs/BACKTESTING.md" />
+    <node id="docs/SIMULATION-ENGINE.md" />
+    <node id="docs/BOOTSTRAP-SEQUENCE.md" />
+    <node id="docs/CODE-SIGNING.md" />
+    <node id="docs/CACHE-MANAGER.md" />
+    <node id="docs/CAPACITY-PLANNING.md" />
+    <node id="docs/RESOURCE-BUDGET-SPECIFICATION.md" />
+    <node id="docs/PERFORMANCE-TARGETS.md" />
+    <node id="docs/WORKER-POOL.md" />
+    <node id="docs/CONCURRENCY-MODEL.md" />
+    <node id="docs/DOMAIN-MODEL.md" />
+    <node id="docs/CHAIN-INTEGRATION.md" />
+    <node id="docs/TRANSACTION-LIFECYCLE.md" />
+    <node id="docs/ROUTING-ENGINE.md" />
+    <node id="docs/GAS-OPTIMISATION.md" />
+    <node id="docs/CHAIN-INTELLIGENCE.md" />
+    <node id="docs/DATABASE-SCHEMA.md" />
+    <node id="docs/IMPLEMENTATION-ROADMAP.md" />
+    <node id="RELEASE-PROCESS.md" />
+    <node id="docs/RUNTIME-OPERATIONS.md" />
+    <node id="docs/THREADING-MODEL.md" />
+    <node id="LOCK-ORDER.md" />
+    <node id="docs/CONFIGURATION-PROFILES.md" />
+    <node id="docs/DASHBOARD-WORKSPACES.md" />
+    <node id="docs/CONFIGURATION-REFERENCE.md" />
+    <node id="docs/FEATURE-FLAGS.md" />
+    <node id="docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md" />
+    <node id="docs/SECRET-LIFECYCLE.md" />
+    <node id="docs/CONTRACT-REGISTRY.md" />
+    <node id="docs/DEX-INTEGRATION.md" />
+    <node id="docs/EXECUTION-LIFECYCLE.md" />
+    <node id="docs/DASHBOARD-WIDGETS.md" />
+    <node id="docs/DASHBOARD-RUNTIME.md" />
+    <node id="docs/UI-COMPONENT-SPEC.md" />
+    <node id="docs/WORKSPACE-MANAGER.md" />
+    <node id="docs/DATA-FLOW.md" />
+    <node id="docs/EVENT-FLOW.md" />
+    <node id="docs/DATA-GOVERNANCE.md" />
+    <node id="docs/REGISTRY-SYSTEM.md" />
+    <node id="docs/EVENT-CATALOG.md" />
+    <node id="docs/DECISION-LEDGER.md" />
+    <node id="docs/GOVERNANCE-EXPLAINABILITY.md" />
+    <node id="docs/DESIGNER-PROTOCOLS.md" />
+    <node id="docs/LIQUIDITY-ANALYSIS.md" />
+    <node id="docs/DIAGNOSTICS.md" />
+    <node id="docs/RECOVERY-COORDINATION.md" />
+    <node id="docs/RECOVERY-PLAYBOOK.md" />
+    <node id="docs/ERROR-CATALOG.md" />
+    <node id="docs/ENGINE-STATE-MACHINE.md" />
+    <node id="docs/RECOVERY-AND-FAILOVER.md" />
+    <node id="docs/ERROR-CODES.md" />
+    <node id="docs/FAILURE-MATRIX.md" />
+    <node id="docs/FAILURE-RECOVERY-MATRIX.md" />
+    <node id="docs/EVENT-OWNERSHIP-MATRIX.md" />
+    <node id="EVENT-SCHEMA-REGISTRY.md" />
+    <node id="docs/MEV-PROTECTION.md" />
+    <node id="docs/EXECUTION-STATE-MACHINE.md" />
+    <node id="docs/FEATURE-GATES.md" />
+    <node id="docs/INTERFACE-NOTIFICATION-CHANNEL.md" />
+    <node id="docs/NOTIFICATION-CENTER.md" />
+    <node id="docs/INTERFACE-PROVIDER-ADAPTER.md" />
+    <node id="docs/IPC-MESSAGE-CATALOG.md" />
+    <node id="docs/MARKET-INTELLIGENCE.md" />
+    <node id="docs/SLIPPAGE-MODEL.md" />
+    <node id="docs/UI-DASHBOARD-SPEC.md" />
+    <node id="docs/OPPORTUNITY-DETECTION.md" />
+    <node id="docs/MEMORY-LIFECYCLE.md" />
+    <node id="docs/OPPORTUNITY-LIFECYCLE.md" />
+    <node id="docs/RUNTIME-FLOW-LIFECYCLE.md" />
+    <node id="docs/STATE-MACHINE-INDEX.md" />
+    <node id="docs/ORDER-MANAGEMENT.md" />
+    <node id="docs/POSITION-MANAGEMENT.md" />
+    <node id="docs/QUEUE-MANAGEMENT.md" />
+    <node id="docs/WORKER-ARCHITECTURE.md" />
+    <node id="docs/RESOURCE-MANAGER.md" />
+    <node id="docs/RPC-MANAGER.md" />
+    <node id="docs/SERVICE-LIFECYCLE.md" />
+    <node id="docs/SHUTDOWN-LIFECYCLE.md" />
+    <node id="docs/SERVICE-STATE-MACHINE.md" />
+    <node id="docs/WINDOWS-SERVICE-INTEGRATION.md" />
+    <node id="docs/WORKER-STATE-MACHINE.md" />
+    <node id="docs/TASK-SCHEDULER.md" />
+    <node id="docs/MODULE-OWNERSHIP-MATRIX.md" />
+    <node id="docs/UX-GUIDELINES.md" />
+    <node id="docs/UPDATE-MANAGER.md" />
+    <node id="docs/WINDOWS-APP-ARCHITECTURE.md" />
+    <node id="docs/WINDOWS-NETWORK-RESILIENCE.md" />
+    <node id="docs/WINDOWS-NOTIFICATION-INTEGRATION.md" />
+    <edge source="APEX-ARCHITECTURE.md" target="docs/DOCUMENTATION-MAP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="APEX-ARCHITECTURE.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="APEX-ARCHITECTURE.md" target="docs/PROJECT-STRUCTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="APEX-ARCHITECTURE.md" target="docs/TRADING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="APEX-ARCHITECTURE.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOCUMENTATION-MAP.md" target="APEX-ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOCUMENTATION-MAP.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOCUMENTATION-MAP.md" target="docs/PROJECT-STRUCTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/CHAIN-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/DEX-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/TOKEN-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/ORACLE-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/DASHBOARD-LAYOUT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/MODULE-DEPENDENCY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/BUILD-RELEASE-CICD.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/VERSIONING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/OPPORTUNITY-DETECTION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/OPPORTUNITY-RANKING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/OPPORTUNITY-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/TRADING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/TRANSACTION-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/GAS-OPTIMISATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/MEV-PROTECTION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/WALLET-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PIPELINE.md" target="docs/AI-PROVIDER-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PIPELINE.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PIPELINE.md" target="docs/MODEL-CAPABILITY-NEGOTIATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PIPELINE.md" target="docs/PROMPT-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PIPELINE.md" target="docs/AI-TOOL-INVOCATION-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/USER-FLOWS.md" target="docs/TRADING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/USER-FLOWS.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/USER-FLOWS.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/USER-FLOWS.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/USER-FLOWS.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-AGENT-SPECIFICATION.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-AGENT-SPECIFICATION.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-ORCHESTRATION.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-ORCHESTRATION.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-ORCHESTRATION.md" target="docs/AI-PROVIDER-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-ORCHESTRATION.md" target="docs/AI-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-ORCHESTRATION.md" target="docs/AI-SAFETY-BOUNDARY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CAPABILITY-MATRIX.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CAPABILITY-MATRIX.md" target="docs/CLOUD-AI-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CAPABILITY-MATRIX.md" target="docs/AI-SETTINGS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CAPABILITY-MATRIX.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CLOUD-AI-INTEGRATION.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CLOUD-AI-INTEGRATION.md" target="docs/AI-SETTINGS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CLOUD-AI-INTEGRATION.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CLOUD-AI-INTEGRATION.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CLOUD-AI-INTEGRATION.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SETTINGS.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SETTINGS.md" target="docs/CLOUD-AI-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SETTINGS.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SETTINGS.md" target="docs/AI-CAPABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SETTINGS.md" target="docs/PROMPT-ENGINEERING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION.md" target="docs/CONFIGURATION-PROFILES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION.md" target="docs/FEATURE-FLAGS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION.md" target="docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION.md" target="docs/SECRET-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CONSENSUS.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CONSENSUS.md" target="docs/DECISION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CONSENSUS.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CONSENSUS.md" target="docs/EXPLAINABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-ENGINE.md" target="docs/AI-CONSENSUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-ENGINE.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-ENGINE.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-ENGINE.md" target="docs/TRADING-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RISK-ENGINE.md" target="docs/TRADING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RISK-ENGINE.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RISK-ENGINE.md" target="docs/TRADING-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RISK-ENGINE.md" target="docs/ARBITRAGE-WINDOW-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RISK-ENGINE.md" target="docs/OPPORTUNITY-RANKING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXPLAINABILITY.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXPLAINABILITY.md" target="docs/DECISION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXPLAINABILITY.md" target="docs/LEARNING-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXPLAINABILITY.md" target="docs/METRICS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXPLAINABILITY.md" target="docs/GOVERNANCE-EXPLAINABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="docs/AI-MEMORY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="docs/CONTEXT-BUILDER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-MEMORY-SYSTEM.md" target="docs/CONTEXT-BUILDER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-MEMORY-SYSTEM.md" target="docs/AI-KNOWLEDGE-INDEX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-MEMORY-SYSTEM.md" target="docs/LEARNING-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-MEMORY-SYSTEM.md" target="docs/KNOWLEDGE-GRAPH.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONTEXT-BUILDER.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONTEXT-BUILDER.md" target="docs/AI-MEMORY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONTEXT-BUILDER.md" target="docs/KNOWLEDGE-GRAPH.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONTEXT-BUILDER.md" target="docs/AI-GATEWAY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRACEABILITY-MATRIX.md" target="docs/DOCUMENTATION-MAP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRACEABILITY-MATRIX.md" target="docs/MODULE-OWNERSHIP-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRACEABILITY-MATRIX.md" target="docs/FAILURE-RECOVERY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRACEABILITY-MATRIX.md" target="docs/AI-TOOL-INVOCATION-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRACEABILITY-MATRIX.md" target="docs/PROMPT-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-COST-MANAGEMENT.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-COST-MANAGEMENT.md" target="docs/CLOUD-AI-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-COST-MANAGEMENT.md" target="docs/AI-SETTINGS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-COST-MANAGEMENT.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MONITORING-OBSERVABILITY.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MONITORING-OBSERVABILITY.md" target="docs/METRICS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MONITORING-OBSERVABILITY.md" target="docs/DIAGNOSTICS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MONITORING-OBSERVABILITY.md" target="docs/RECOVERY-COORDINATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MONITORING-OBSERVABILITY.md" target="docs/RESOURCE-BUDGET-SPECIFICATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-GATEWAY.md" target="docs/AI-TOOLS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-GATEWAY.md" target="docs/MODEL-CAPABILITY-NEGOTIATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-GATEWAY.md" target="docs/AI-REASONING-POLICY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-GATEWAY.md" target="docs/PROVIDER-RESILIENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-TOOLS.md" target="docs/INTERFACE-TOOL-CALL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-TOOLS.md" target="docs/AI-AGENT-SPECIFICATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-TOOLS.md" target="docs/API-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="docs/AI-PROVIDER-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="docs/AI-GATEWAY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MODEL-CAPABILITY-NEGOTIATION.md" target="docs/INTERFACE-PROVIDER-ADAPTER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-REASONING-POLICY.md" target="docs/AI-CONSENSUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-REASONING-POLICY.md" target="docs/DECISION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-REASONING-POLICY.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROVIDER-RESILIENCE.md" target="docs/AI-PROVIDER-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROVIDER-RESILIENCE.md" target="docs/AI-GATEWAY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROVIDER-RESILIENCE.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROVIDER-RESILIENCE.md" target="docs/PERFORMANCE-SLOS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-KNOWLEDGE-INDEX.md" target="docs/KNOWLEDGE-GRAPH.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-KNOWLEDGE-INDEX.md" target="docs/AI-MEMORY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-KNOWLEDGE-INDEX.md" target="docs/CONTEXT-BUILDER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/KNOWLEDGE-GRAPH.md" target="docs/AI-MEMORY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/KNOWLEDGE-GRAPH.md" target="docs/CHAIN-INTELLIGENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/KNOWLEDGE-GRAPH.md" target="docs/MARKET-INTELLIGENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/KNOWLEDGE-GRAPH.md" target="docs/DOMAIN-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/KNOWLEDGE-GRAPH.md" target="docs/DATA-GOVERNANCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/LEARNING-PIPELINE.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/LEARNING-PIPELINE.md" target="docs/AI-MEMORY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/LEARNING-PIPELINE.md" target="docs/METRICS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/LEARNING-PIPELINE.md" target="docs/SIMULATION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-MEMORY.md" target="docs/AI-MEMORY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="docs/RUNTIME-FLOW-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="docs/RECOVERY-COORDINATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="docs/STATE-MACHINE-INDEX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PROVIDER-MANAGER.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PROVIDER-MANAGER.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PROVIDER-MANAGER.md" target="docs/MODEL-CAPABILITY-NEGOTIATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PROVIDER-MANAGER.md" target="docs/AI-COST-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-PROVIDER-MANAGER.md" target="docs/AI-GATEWAY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-STATE-MACHINE.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-STATE-MACHINE.md" target="docs/PROMPT-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-STATE-MACHINE.md" target="docs/AI-TOOL-INVOCATION-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-STATE-MACHINE.md" target="docs/AI-MEMORY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-STATE-MACHINE.md" target="docs/AI-SAFETY-BOUNDARY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SAFETY-BOUNDARY.md" target="docs/TRUST-BOUNDARIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SAFETY-BOUNDARY.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SAFETY-BOUNDARY.md" target="docs/SECURITY-CONTRACTS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SAFETY-BOUNDARY.md" target="docs/PERMISSION-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-SAFETY-BOUNDARY.md" target="docs/AI-TOOL-INVOCATION-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROMPT-LIFECYCLE.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROMPT-LIFECYCLE.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROMPT-LIFECYCLE.md" target="docs/AI-MEMORY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROMPT-LIFECYCLE.md" target="docs/AI-CONTEXT-WINDOW-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROMPT-LIFECYCLE.md" target="docs/AI-TOOL-INVOCATION-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-TOOL-INVOCATION-CONTRACT.md" target="docs/AI-TOOLS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-TOOL-INVOCATION-CONTRACT.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-TOOL-INVOCATION-CONTRACT.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-TOOL-INVOCATION-CONTRACT.md" target="docs/AI-SAFETY-BOUNDARY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/AI-TOOL-INVOCATION-CONTRACT.md" target="docs/TRUST-BOUNDARIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRUST-BOUNDARIES.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRUST-BOUNDARIES.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRUST-BOUNDARIES.md" target="docs/SECURITY-CONTRACTS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRUST-BOUNDARIES.md" target="docs/SECRET-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRUST-BOUNDARIES.md" target="docs/PERMISSION-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY.md" target="docs/TRUST-BOUNDARIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY.md" target="docs/SECRET-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY.md" target="docs/PERMISSION-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY.md" target="docs/SECURITY-CONTRACTS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY.md" target="docs/EVENT-OWNERSHIP-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY-CONTRACTS.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY-CONTRACTS.md" target="docs/PERMISSION-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY-CONTRACTS.md" target="docs/TRUST-BOUNDARIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY-CONTRACTS.md" target="docs/SECRET-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECURITY-CONTRACTS.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERMISSION-MODEL.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERMISSION-MODEL.md" target="docs/SECURITY-CONTRACTS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERMISSION-MODEL.md" target="docs/TRUST-BOUNDARIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERMISSION-MODEL.md" target="docs/PLUGIN-SANDBOX-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERMISSION-MODEL.md" target="docs/AI-SAFETY-BOUNDARY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROMPT-ENGINEERING.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROMPT-ENGINEERING.md" target="docs/AI-SETTINGS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROMPT-ENGINEERING.md" target="docs/CLOUD-AI-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROMPT-ENGINEERING.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/INTERFACE-TOOL-CALL.md" target="docs/AI-AGENT-SPECIFICATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/INTERFACE-TOOL-CALL.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/API-REFERENCE.md" target="docs/API-CONTRACTS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/API-REFERENCE.md" target="docs/IPC-PROTOCOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/API-REFERENCE.md" target="docs/PROJECT-STRUCTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/API-REFERENCE.md" target="docs/ERROR-HANDLING-LOGGING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/API-REFERENCE.md" target="docs/VERSIONING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-KERNEL.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-KERNEL.md" target="docs/EVENT-BUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-KERNEL.md" target="docs/SERVICE-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-KERNEL.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-KERNEL.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-BUS.md" target="docs/EVENT-CATALOG.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-BUS.md" target="docs/EVENT-OWNERSHIP-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-BUS.md" target="docs/IPC-PROTOCOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-BUS.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-BUS.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-REGISTRY.md" target="docs/APEX-KERNEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-REGISTRY.md" target="docs/REGISTRY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-REGISTRY.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/HEALTHCHECKS.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/HEALTHCHECKS.md" target="docs/RECOVERY-AND-FAILOVER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/HEALTHCHECKS.md" target="docs/RECOVERY-COORDINATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/HEALTHCHECKS.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/HEALTHCHECKS.md" target="docs/ENGINE-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SDK.md" target="docs/PLUGIN-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SDK.md" target="docs/PLUGIN-SANDBOX-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SDK.md" target="docs/PLUGIN-MARKETPLACE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SDK.md" target="docs/TRUST-BOUNDARIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SDK.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-OS.md" target="docs/APEX-KERNEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-OS.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-OS.md" target="docs/POLICY-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-OS.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APEX-OS.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/POLICY-ENGINE.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/POLICY-ENGINE.md" target="docs/SECURITY-CONTRACTS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/POLICY-ENGINE.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/POLICY-ENGINE.md" target="docs/AI-COST-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DESKTOP.md" target="docs/WINDOWS-APP-ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DESKTOP.md" target="docs/DASHBOARD-RUNTIME.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DESKTOP.md" target="docs/DASHBOARD-LAYOUT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DESKTOP.md" target="docs/WINDOWS-NOTIFICATION-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DESKTOP.md" target="docs/WORKSPACE-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/API-CONTRACTS.md" target="docs/IPC-PROTOCOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/API-CONTRACTS.md" target="docs/MODULE-DEPENDENCY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/API-CONTRACTS.md" target="docs/STATE-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/API-CONTRACTS.md" target="docs/ERROR-HANDLING-LOGGING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-PROTOCOL.md" target="docs/IPC-MESSAGE-CATALOG.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-PROTOCOL.md" target="docs/EVENT-BUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-PROTOCOL.md" target="docs/EVENT-OWNERSHIP-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-PROTOCOL.md" target="docs/DASHBOARD-RUNTIME.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-PROTOCOL.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MODULE-DEPENDENCY.md" target="docs/PROJECT-STRUCTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MODULE-DEPENDENCY.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MANAGEMENT.md" target="docs/STATE-MACHINE-INDEX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MANAGEMENT.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MANAGEMENT.md" target="docs/IPC-PROTOCOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MANAGEMENT.md" target="docs/DATA-FLOW.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MANAGEMENT.md" target="docs/EVENT-FLOW.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ERROR-HANDLING-LOGGING.md" target="docs/ERROR-CATALOG.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ERROR-HANDLING-LOGGING.md" target="docs/ERROR-CODES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ERROR-HANDLING-LOGGING.md" target="docs/FAILURE-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ERROR-HANDLING-LOGGING.md" target="docs/FAILURE-RECOVERY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ERROR-HANDLING-LOGGING.md" target="docs/RECOVERY-PLAYBOOK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/VERSIONING.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/VERSIONING.md" target="docs/API-CONTRACTS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/VERSIONING.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/VERSIONING.md" target="docs/IMPLEMENTATION-ROADMAP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/VERSIONING.md" target="docs/MODULE-DEPENDENCY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DEPLOYMENT.md" target="docs/DEPLOYMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DEPLOYMENT.md" target="docs/BUILD-RELEASE-CICD.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DEPLOYMENT.md" target="docs/UPDATE-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DEPLOYMENT.md" target="docs/WINDOWS-APP-ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-DEPLOYMENT.md" target="docs/WINDOWS-SERVICE-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-PLUGIN-SYSTEM.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-PLUGIN-SYSTEM.md" target="docs/PLUGIN-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-PLUGIN-SYSTEM.md" target="docs/PLUGIN-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-PLUGIN-SYSTEM.md" target="docs/PLUGIN-SANDBOX-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-PLUGIN-SYSTEM.md" target="docs/PLUGIN-MARKETPLACE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-LIFECYCLE.md" target="docs/PLUGIN-SANDBOX-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-LIFECYCLE.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-LIFECYCLE.md" target="docs/PLUGIN-MARKETPLACE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-LIFECYCLE.md" target="docs/PLUGIN-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-LIFECYCLE.md" target="docs/APP-BUILDER-PLUGIN-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-STATE-MACHINE.md" target="docs/PLUGIN-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-STATE-MACHINE.md" target="docs/PLUGIN-SANDBOX-CONTRACT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-STATE-MACHINE.md" target="docs/APP-BUILDER-PLUGIN-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-STATE-MACHINE.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-STATE-MACHINE.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SANDBOX-CONTRACT.md" target="docs/PLUGIN-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SANDBOX-CONTRACT.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SANDBOX-CONTRACT.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SANDBOX-CONTRACT.md" target="docs/PLUGIN-MARKETPLACE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-SANDBOX-CONTRACT.md" target="docs/TRUST-BOUNDARIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-MARKETPLACE.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PLUGIN-MARKETPLACE.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-WORKFLOW.md" target="docs/BUILD-RELEASE-CICD.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-WORKFLOW.md" target="docs/WINDOWS-DEPLOYMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-WORKFLOW.md" target="docs/TESTING-GUIDE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-WORKFLOW.md" target="docs/DEPLOYMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/APP-BUILDER-WORKFLOW.md" target="SIGNING-POLICY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BUILD-RELEASE-CICD.md" target="docs/WINDOWS-DEPLOYMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BUILD-RELEASE-CICD.md" target="docs/DEPLOYMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BUILD-RELEASE-CICD.md" target="docs/TESTING-GUIDE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BUILD-RELEASE-CICD.md" target="docs/CODE-SIGNING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TESTING-GUIDE.md" target="docs/SIMULATION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TESTING-GUIDE.md" target="docs/BACKTESTING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TESTING-GUIDE.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TESTING-GUIDE.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TESTING-GUIDE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEPLOYMENT.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEPLOYMENT.md" target="docs/BUILD-RELEASE-CICD.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEPLOYMENT.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEPLOYMENT.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-RANKING.md" target="docs/MARKET-INTELLIGENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-RANKING.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-RANKING.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-RANKING.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERFORMANCE-SLOS.md" target="docs/AI-COST-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERFORMANCE-SLOS.md" target="docs/METRICS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERFORMANCE-SLOS.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-LOG.md" target="docs/DECISION-LEDGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-LOG.md" target="docs/GOVERNANCE-EXPLAINABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-LOG.md" target="docs/EXPLAINABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARBITRAGE-WINDOW-MANAGER.md" target="docs/TRADING-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARBITRAGE-WINDOW-MANAGER.md" target="docs/OPPORTUNITY-RANKING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARBITRAGE-WINDOW-MANAGER.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARBITRAGE-WINDOW-MANAGER.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-LIFECYCLE.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-LIFECYCLE.md" target="docs/EXECUTION-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-LIFECYCLE.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-LIFECYCLE.md" target="docs/SIMULATION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-REGISTRY.md" target="docs/CHAIN-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-REGISTRY.md" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-REGISTRY.md" target="docs/WALLET-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-REGISTRY.md" target="docs/GAS-OPTIMISATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-REGISTRY.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-REGISTRY.md" target="docs/DEX-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-REGISTRY.md" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-REGISTRY.md" target="docs/LIQUIDITY-ANALYSIS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-REGISTRY.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-REGISTRY.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TOKEN-REGISTRY.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TOKEN-REGISTRY.md" target="docs/ASSET-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TOKEN-REGISTRY.md" target="docs/PORTFOLIO-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TOKEN-REGISTRY.md" target="docs/WALLET-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TOKEN-REGISTRY.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORACLE-REGISTRY.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORACLE-REGISTRY.md" target="docs/LIQUIDITY-ANALYSIS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORACLE-REGISTRY.md" target="docs/SLIPPAGE-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORACLE-REGISTRY.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORACLE-REGISTRY.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-LAYOUT.md" target="docs/DASHBOARD-WIDGETS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-LAYOUT.md" target="docs/DASHBOARD-WORKSPACES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-LAYOUT.md" target="docs/DASHBOARD-RUNTIME.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-LAYOUT.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-LAYOUT.md" target="docs/UI-COMPONENT-SPEC.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ASSET-MANAGEMENT.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ASSET-MANAGEMENT.md" target="docs/PORTFOLIO-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ASSET-MANAGEMENT.md" target="docs/WALLET-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ASSET-MANAGEMENT.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ASSET-MANAGEMENT.md" target="docs/TOKEN-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-DATA.md" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-DATA.md" target="docs/LIQUIDITY-ANALYSIS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-DATA.md" target="docs/MARKET-INTELLIGENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-DATA.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-DATA.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PORTFOLIO-MANAGEMENT.md" target="docs/POSITION-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PORTFOLIO-MANAGEMENT.md" target="docs/WALLET-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PORTFOLIO-MANAGEMENT.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WALLET-MANAGEMENT.md" target="docs/TOKEN-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WALLET-MANAGEMENT.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WALLET-MANAGEMENT.md" target="docs/PERMISSION-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WALLET-MANAGEMENT.md" target="docs/TRANSACTION-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STRATEGIES.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STRATEGIES.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STRATEGIES.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STRATEGIES.md" target="docs/MARKET-INTELLIGENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STRATEGIES.md" target="docs/SIMULATION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BACKTESTING.md" target="docs/SIMULATION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BACKTESTING.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BACKTESTING.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BACKTESTING.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BACKTESTING.md" target="docs/TESTING-GUIDE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SIMULATION-ENGINE.md" target="docs/BACKTESTING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SIMULATION-ENGINE.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SIMULATION-ENGINE.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SIMULATION-ENGINE.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SIMULATION-ENGINE.md" target="docs/TESTING-GUIDE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BOOTSTRAP-SEQUENCE.md" target="docs/APEX-OS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BOOTSTRAP-SEQUENCE.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/BOOTSTRAP-SEQUENCE.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CODE-SIGNING.md" target="docs/APP-BUILDER-WORKFLOW.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CODE-SIGNING.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CODE-SIGNING.md" target="RELEASE-PROCESS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CACHE-MANAGER.md" target="docs/APEX-OS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CACHE-MANAGER.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CAPACITY-PLANNING.md" target="docs/RESOURCE-BUDGET-SPECIFICATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CAPACITY-PLANNING.md" target="docs/PERFORMANCE-TARGETS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CAPACITY-PLANNING.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CAPACITY-PLANNING.md" target="docs/WORKER-POOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CAPACITY-PLANNING.md" target="docs/CONCURRENCY-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RESOURCE-BUDGET-SPECIFICATION.md" target="docs/CAPACITY-PLANNING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RESOURCE-BUDGET-SPECIFICATION.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RESOURCE-BUDGET-SPECIFICATION.md" target="docs/MEMORY-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RESOURCE-BUDGET-SPECIFICATION.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RESOURCE-BUDGET-SPECIFICATION.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERFORMANCE-TARGETS.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERFORMANCE-TARGETS.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERFORMANCE-TARGETS.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PERFORMANCE-TARGETS.md" target="docs/CLOUD-AI-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-POOL.md" target="docs/THREADING-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-POOL.md" target="docs/CONCURRENCY-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-POOL.md" target="docs/TASK-SCHEDULER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-POOL.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-POOL.md" target="docs/PERFORMANCE-SLOS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONCURRENCY-MODEL.md" target="docs/THREADING-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONCURRENCY-MODEL.md" target="docs/EVENT-BUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONCURRENCY-MODEL.md" target="docs/WORKER-POOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONCURRENCY-MODEL.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONCURRENCY-MODEL.md" target="LOCK-ORDER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOMAIN-MODEL.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOMAIN-MODEL.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOMAIN-MODEL.md" target="docs/STATE-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOMAIN-MODEL.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOMAIN-MODEL.md" target="docs/API-CONTRACTS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-INTEGRATION.md" target="docs/TRANSACTION-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-INTEGRATION.md" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-INTEGRATION.md" target="docs/WALLET-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-INTEGRATION.md" target="docs/GAS-OPTIMISATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-INTEGRATION.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRANSACTION-LIFECYCLE.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRANSACTION-LIFECYCLE.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRANSACTION-LIFECYCLE.md" target="docs/GAS-OPTIMISATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRANSACTION-LIFECYCLE.md" target="docs/WALLET-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ROUTING-ENGINE.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ROUTING-ENGINE.md" target="docs/LIQUIDITY-ANALYSIS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ROUTING-ENGINE.md" target="docs/SLIPPAGE-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ROUTING-ENGINE.md" target="docs/GAS-OPTIMISATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ROUTING-ENGINE.md" target="docs/MEV-PROTECTION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/GAS-OPTIMISATION.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/GAS-OPTIMISATION.md" target="docs/TRANSACTION-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/GAS-OPTIMISATION.md" target="docs/MEV-PROTECTION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-INTELLIGENCE.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-INTELLIGENCE.md" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-INTELLIGENCE.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CHAIN-INTELLIGENCE.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATABASE-SCHEMA.md" target="docs/STATE-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATABASE-SCHEMA.md" target="docs/CACHE-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATABASE-SCHEMA.md" target="docs/EVENT-CATALOG.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATABASE-SCHEMA.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATABASE-SCHEMA.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IMPLEMENTATION-ROADMAP.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IMPLEMENTATION-ROADMAP.md" target="docs/PROJECT-STRUCTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IMPLEMENTATION-ROADMAP.md" target="docs/TRADING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-OPERATIONS.md" target="docs/SERVICE-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-OPERATIONS.md" target="docs/SHUTDOWN-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-OPERATIONS.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-OPERATIONS.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-OPERATIONS.md" target="docs/BOOTSTRAP-SEQUENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/THREADING-MODEL.md" target="docs/CONCURRENCY-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/THREADING-MODEL.md" target="docs/WORKER-POOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/THREADING-MODEL.md" target="docs/RESOURCE-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/THREADING-MODEL.md" target="docs/TASK-SCHEDULER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/THREADING-MODEL.md" target="docs/EVENT-BUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-PROFILES.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-PROFILES.md" target="docs/AI-SETTINGS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-PROFILES.md" target="docs/DASHBOARD-WORKSPACES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-PROFILES.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WORKSPACES.md" target="docs/DASHBOARD-LAYOUT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WORKSPACES.md" target="docs/DASHBOARD-WIDGETS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WORKSPACES.md" target="docs/DASHBOARD-RUNTIME.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WORKSPACES.md" target="docs/WORKSPACE-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WORKSPACES.md" target="docs/UI-COMPONENT-SPEC.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-REFERENCE.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-REFERENCE.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-REFERENCE.md" target="docs/CONFIGURATION-PROFILES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-REFERENCE.md" target="docs/FEATURE-FLAGS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONFIGURATION-REFERENCE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/FEATURE-FLAGS.md" target="docs/CONFIGURATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/FEATURE-FLAGS.md" target="docs/POLICY-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/FEATURE-FLAGS.md" target="docs/VERSIONING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md" target="docs/FEATURE-FLAGS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md" target="docs/FEATURE-GATES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md" target="docs/CONFIGURATION-PROFILES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECRET-LIFECYCLE.md" target="docs/SECURITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECRET-LIFECYCLE.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECRET-LIFECYCLE.md" target="docs/TRUST-BOUNDARIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECRET-LIFECYCLE.md" target="docs/EVENT-OWNERSHIP-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SECRET-LIFECYCLE.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONTRACT-REGISTRY.md" target="docs/APEX-OS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/CONTRACT-REGISTRY.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-INTEGRATION.md" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-INTEGRATION.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-INTEGRATION.md" target="docs/CHAIN-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-INTEGRATION.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DEX-INTEGRATION.md" target="docs/LIQUIDITY-ANALYSIS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-LIFECYCLE.md" target="docs/TRADING-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-LIFECYCLE.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-LIFECYCLE.md" target="docs/DOMAIN-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WIDGETS.md" target="docs/DASHBOARD-LAYOUT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WIDGETS.md" target="docs/DASHBOARD-WORKSPACES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WIDGETS.md" target="docs/DASHBOARD-RUNTIME.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WIDGETS.md" target="docs/WORKSPACE-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-WIDGETS.md" target="docs/UI-COMPONENT-SPEC.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-RUNTIME.md" target="docs/DASHBOARD-LAYOUT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-RUNTIME.md" target="docs/DASHBOARD-WIDGETS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-RUNTIME.md" target="docs/DASHBOARD-WORKSPACES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-RUNTIME.md" target="docs/WORKSPACE-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DASHBOARD-RUNTIME.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UI-COMPONENT-SPEC.md" target="docs/UI-DASHBOARD-SPEC.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UI-COMPONENT-SPEC.md" target="docs/DASHBOARD-WIDGETS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UI-COMPONENT-SPEC.md" target="docs/UX-GUIDELINES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UI-COMPONENT-SPEC.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKSPACE-MANAGER.md" target="docs/DASHBOARD-WORKSPACES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKSPACE-MANAGER.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKSPACE-MANAGER.md" target="docs/CONFIGURATION-PROFILES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATA-FLOW.md" target="docs/EVENT-FLOW.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATA-FLOW.md" target="docs/STATE-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATA-FLOW.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-FLOW.md" target="docs/DATA-FLOW.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-FLOW.md" target="docs/IPC-PROTOCOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-FLOW.md" target="docs/STATE-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATA-GOVERNANCE.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATA-GOVERNANCE.md" target="docs/KNOWLEDGE-GRAPH.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATA-GOVERNANCE.md" target="docs/AI-MEMORY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DATA-GOVERNANCE.md" target="docs/REGISTRY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/REGISTRY-SYSTEM.md" target="docs/CHAIN-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/REGISTRY-SYSTEM.md" target="docs/DEX-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/REGISTRY-SYSTEM.md" target="docs/TOKEN-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/REGISTRY-SYSTEM.md" target="docs/ORACLE-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/REGISTRY-SYSTEM.md" target="docs/CONTRACT-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-CATALOG.md" target="docs/EVENT-OWNERSHIP-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-CATALOG.md" target="EVENT-SCHEMA-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-CATALOG.md" target="docs/TRADING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-CATALOG.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-CATALOG.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-LEDGER.md" target="docs/DECISION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-LEDGER.md" target="docs/GOVERNANCE-EXPLAINABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-LEDGER.md" target="docs/EXPLAINABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DECISION-LEDGER.md" target="docs/DECISION-LOG.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="docs/EXPLAINABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="docs/DECISION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="docs/POLICY-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/GOVERNANCE-EXPLAINABILITY.md" target="docs/DECISION-LOG.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DESIGNER-PROTOCOLS.md" target="docs/UI-COMPONENT-SPEC.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DESIGNER-PROTOCOLS.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DESIGNER-PROTOCOLS.md" target="docs/AI-SETTINGS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DESIGNER-PROTOCOLS.md" target="docs/USER-FLOWS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DESIGNER-PROTOCOLS.md" target="docs/CLOUD-AI-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/LIQUIDITY-ANALYSIS.md" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/LIQUIDITY-ANALYSIS.md" target="docs/MARKET-INTELLIGENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/LIQUIDITY-ANALYSIS.md" target="docs/SLIPPAGE-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/LIQUIDITY-ANALYSIS.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DIAGNOSTICS.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DIAGNOSTICS.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DIAGNOSTICS.md" target="docs/RECOVERY-COORDINATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DIAGNOSTICS.md" target="docs/RECOVERY-PLAYBOOK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DIAGNOSTICS.md" target="docs/ERROR-CATALOG.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-COORDINATION.md" target="docs/RECOVERY-AND-FAILOVER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-COORDINATION.md" target="docs/RECOVERY-PLAYBOOK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-COORDINATION.md" target="docs/FAILURE-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-COORDINATION.md" target="docs/FAILURE-RECOVERY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-COORDINATION.md" target="docs/ENGINE-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-PLAYBOOK.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-PLAYBOOK.md" target="docs/TRADING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-PLAYBOOK.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-PLAYBOOK.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-PLAYBOOK.md" target="docs/PLUGIN-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ENGINE-STATE-MACHINE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ENGINE-STATE-MACHINE.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ENGINE-STATE-MACHINE.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ENGINE-STATE-MACHINE.md" target="docs/RECOVERY-AND-FAILOVER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ENGINE-STATE-MACHINE.md" target="docs/STATE-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-AND-FAILOVER.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-AND-FAILOVER.md" target="docs/QUEUE-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-AND-FAILOVER.md" target="docs/WORKER-ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-AND-FAILOVER.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RECOVERY-AND-FAILOVER.md" target="docs/ERROR-HANDLING-LOGGING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/FAILURE-RECOVERY-MATRIX.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-OWNERSHIP-MATRIX.md" target="docs/EVENT-CATALOG.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-OWNERSHIP-MATRIX.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-OWNERSHIP-MATRIX.md" target="docs/EVENT-BUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-OWNERSHIP-MATRIX.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EVENT-OWNERSHIP-MATRIX.md" target="docs/FAILURE-RECOVERY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MEV-PROTECTION.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MEV-PROTECTION.md" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MEV-PROTECTION.md" target="docs/TRANSACTION-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-STATE-MACHINE.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-STATE-MACHINE.md" target="docs/TRADING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-STATE-MACHINE.md" target="docs/TRANSACTION-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-STATE-MACHINE.md" target="docs/TRACEABILITY-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-STATE-MACHINE.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/INTERFACE-NOTIFICATION-CHANNEL.md" target="docs/NOTIFICATION-CENTER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/INTERFACE-NOTIFICATION-CHANNEL.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/NOTIFICATION-CENTER.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/NOTIFICATION-CENTER.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/INTERFACE-PROVIDER-ADAPTER.md" target="docs/AI-PROVIDER-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/INTERFACE-PROVIDER-ADAPTER.md" target="docs/AI-GATEWAY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/INTERFACE-PROVIDER-ADAPTER.md" target="docs/AI-PIPELINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-MESSAGE-CATALOG.md" target="docs/IPC-PROTOCOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-MESSAGE-CATALOG.md" target="docs/EVENT-OWNERSHIP-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-MESSAGE-CATALOG.md" target="docs/DASHBOARD-RUNTIME.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-MESSAGE-CATALOG.md" target="docs/PLUGIN-SDK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/IPC-MESSAGE-CATALOG.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-INTELLIGENCE.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-INTELLIGENCE.md" target="docs/OPPORTUNITY-DETECTION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-INTELLIGENCE.md" target="docs/OPPORTUNITY-RANKING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-INTELLIGENCE.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MARKET-INTELLIGENCE.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SLIPPAGE-MODEL.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SLIPPAGE-MODEL.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SLIPPAGE-MODEL.md" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UI-DASHBOARD-SPEC.md" target="docs/DOMAIN-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UI-DASHBOARD-SPEC.md" target="docs/METRICS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UI-DASHBOARD-SPEC.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UI-DASHBOARD-SPEC.md" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-DETECTION.md" target="docs/MARKET-INTELLIGENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-DETECTION.md" target="docs/MARKET-DATA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-DETECTION.md" target="docs/STRATEGIES.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-DETECTION.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-DETECTION.md" target="docs/OPPORTUNITY-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MEMORY-LIFECYCLE.md" target="docs/RESOURCE-BUDGET-SPECIFICATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MEMORY-LIFECYCLE.md" target="docs/AI-MEMORY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MEMORY-LIFECYCLE.md" target="docs/PROMPT-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MEMORY-LIFECYCLE.md" target="docs/CACHE-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/MEMORY-LIFECYCLE.md" target="docs/EVENT-BUS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="docs/OPPORTUNITY-DETECTION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="docs/OPPORTUNITY-RANKING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-LIFECYCLE.md" target="docs/TRADING-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-FLOW-LIFECYCLE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-FLOW-LIFECYCLE.md" target="docs/RECOVERY-COORDINATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-FLOW-LIFECYCLE.md" target="docs/RECOVERY-PLAYBOOK.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-FLOW-LIFECYCLE.md" target="docs/STATE-MACHINE-INDEX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RUNTIME-FLOW-LIFECYCLE.md" target="docs/CONFIGURATION-REFERENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MACHINE-INDEX.md" target="docs/ENGINE-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MACHINE-INDEX.md" target="docs/EXECUTION-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MACHINE-INDEX.md" target="docs/WORKER-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MACHINE-INDEX.md" target="docs/PLUGIN-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/STATE-MACHINE-INDEX.md" target="docs/SERVICE-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORDER-MANAGEMENT.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORDER-MANAGEMENT.md" target="docs/TRANSACTION-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORDER-MANAGEMENT.md" target="docs/DATABASE-SCHEMA.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ORDER-MANAGEMENT.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/POSITION-MANAGEMENT.md" target="docs/ORDER-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/POSITION-MANAGEMENT.md" target="docs/PORTFOLIO-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/POSITION-MANAGEMENT.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/QUEUE-MANAGEMENT.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/QUEUE-MANAGEMENT.md" target="docs/WORKER-ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/QUEUE-MANAGEMENT.md" target="docs/RECOVERY-AND-FAILOVER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/QUEUE-MANAGEMENT.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-ARCHITECTURE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-ARCHITECTURE.md" target="docs/QUEUE-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-ARCHITECTURE.md" target="docs/RECOVERY-AND-FAILOVER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-ARCHITECTURE.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RESOURCE-MANAGER.md" target="docs/APEX-KERNEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RESOURCE-MANAGER.md" target="docs/SERVICE-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RESOURCE-MANAGER.md" target="docs/REGISTRY-SYSTEM.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RESOURCE-MANAGER.md" target="docs/WORKER-POOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RPC-MANAGER.md" target="docs/APEX-OS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/RPC-MANAGER.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-LIFECYCLE.md" target="docs/APEX-KERNEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-LIFECYCLE.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-LIFECYCLE.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SHUTDOWN-LIFECYCLE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SHUTDOWN-LIFECYCLE.md" target="docs/ORCHESTRATOR.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-STATE-MACHINE.md" target="docs/WINDOWS-SERVICE-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-STATE-MACHINE.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-STATE-MACHINE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-STATE-MACHINE.md" target="docs/ENGINE-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/SERVICE-STATE-MACHINE.md" target="docs/RECOVERY-AND-FAILOVER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-SERVICE-INTEGRATION.md" target="docs/SERVICE-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-SERVICE-INTEGRATION.md" target="docs/SERVICE-STATE-MACHINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-SERVICE-INTEGRATION.md" target="docs/WINDOWS-APP-ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-SERVICE-INTEGRATION.md" target="docs/RECOVERY-COORDINATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-SERVICE-INTEGRATION.md" target="docs/SHUTDOWN-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-STATE-MACHINE.md" target="docs/WORKER-POOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-STATE-MACHINE.md" target="docs/WORKER-ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-STATE-MACHINE.md" target="docs/THREADING-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-STATE-MACHINE.md" target="docs/CONCURRENCY-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WORKER-STATE-MACHINE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TASK-SCHEDULER.md" target="docs/WORKER-POOL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TASK-SCHEDULER.md" target="docs/THREADING-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TASK-SCHEDULER.md" target="docs/HEALTHCHECKS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TASK-SCHEDULER.md" target="docs/AI-PROVIDER-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TASK-SCHEDULER.md" target="docs/WALLET-MANAGEMENT.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UX-GUIDELINES.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UX-GUIDELINES.md" target="docs/UI-COMPONENT-SPEC.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UX-GUIDELINES.md" target="docs/DESIGNER-PROTOCOLS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UX-GUIDELINES.md" target="docs/USER-FLOWS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UPDATE-MANAGER.md" target="docs/APEX-OS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/UPDATE-MANAGER.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-APP-ARCHITECTURE.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-APP-ARCHITECTURE.md" target="docs/WINDOWS-DESKTOP.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-APP-ARCHITECTURE.md" target="docs/WINDOWS-SERVICE-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-APP-ARCHITECTURE.md" target="docs/WINDOWS-NETWORK-RESILIENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-APP-ARCHITECTURE.md" target="docs/WINDOWS-NOTIFICATION-INTEGRATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NETWORK-RESILIENCE.md" target="docs/PROVIDER-RESILIENCE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NETWORK-RESILIENCE.md" target="docs/RPC-MANAGER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NETWORK-RESILIENCE.md" target="docs/AI-GATEWAY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NETWORK-RESILIENCE.md" target="docs/RUNTIME-OPERATIONS.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NETWORK-RESILIENCE.md" target="docs/WINDOWS-APP-ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NOTIFICATION-INTEGRATION.md" target="docs/NOTIFICATION-CENTER.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NOTIFICATION-INTEGRATION.md" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NOTIFICATION-INTEGRATION.md" target="docs/EVENT-OWNERSHIP-MATRIX.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NOTIFICATION-INTEGRATION.md" target="docs/INTERFACE-NOTIFICATION-CHANNEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/WINDOWS-NOTIFICATION-INTEGRATION.md" target="docs/PERMISSION-MODEL.md">
+      <data key="d0">depends_on</data>
+    </edge>
+  </graph>
+</graphml>

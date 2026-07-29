@@ -15,6 +15,7 @@ from ..graphs.graph_builder import GraphBuilder
 from ..closure.closure_engine import BehaviouralRootDetector, ClosureEngine
 from ..closure.root_taxonomy import build_tier_report
 from ..closure.root_registry import build_registry, load_lifecycle_overrides, save_registry
+from ..closure.closure_artefacts import write_all_root_artefacts
 from ..validator.governance_validator import GovernanceValidator
 from ..metrics.metrics_engine import CompletenessEngine
 from ..storage.sqlite_store import SqliteStore
@@ -108,6 +109,47 @@ def run(
     completeness = CompletenessEngine()
     scores = {d.path: completeness.score_document(d) for d in docs}
 
+    # WS2: per-behavioural-root closure artefacts (manifest with hash +
+    # version, dependency graph, audit, work queue, maturity report).
+    # All derived from the single canonical pipeline's own already-
+    # computed data (all_closures, findings, scores) -- no second,
+    # independent closure computation is introduced.
+    import subprocess as _subprocess
+    from datetime import datetime as _datetime, timezone as _timezone
+
+    docs_by_path = {d.path: d for d in docs}
+    findings_by_path: dict[str, list] = {}
+    for f in findings:
+        findings_by_path.setdefault(f.path, []).append({
+            "severity": f.severity.value if hasattr(f.severity, "value") else str(f.severity),
+            "message": f.message,
+            "rule": f.rule,
+        })
+    try:
+        _commit = _subprocess.run(
+            ["git", "rev-parse", "HEAD"], cwd=repo_root, capture_output=True, text=True
+        ).stdout.strip() or "unknown"
+    except Exception:
+        _commit = "unknown"
+    _generated_at = _datetime.now(_timezone.utc).isoformat()
+    closures_dir = repo_root / cfg["storage"].get("closures_dir", ".governance/closures")
+    closure_artefact_summaries = []
+    for r in roots:
+        summary = write_all_root_artefacts(
+            root_path=r.path,
+            graph=graph_builder.dependency_graph,
+            closure_docs=all_closures[r.path],
+            reverse_closure_docs=closure_engine.compute_reverse_closure(r.path),
+            docs_by_path=docs_by_path,
+            findings_by_path=findings_by_path,
+            completeness_by_path=scores,
+            completeness_threshold=cfg.get("completeness", {}).get("critical_threshold", 0.85),
+            closures_dir=closures_dir,
+            generated_at=_generated_at,
+            generated_at_commit=_commit,
+        )
+        closure_artefact_summaries.append(summary)
+
     # Sanitize and export graphs
     graphs_dir.mkdir(parents=True, exist_ok=True)
     import networkx as nx
@@ -136,6 +178,8 @@ def run(
         "graph_edges": graph_builder.dependency_graph.number_of_edges(),
         "behavioural_root_registry_valid": json.loads(registry_path.read_text())["valid"],
         "behavioural_root_tiers_assigned": len(tier_report["root_tiers"]),
+        "closure_artefacts_written": len(closure_artefact_summaries) * 5,
+        "roots_with_full_artefact_set": len(closure_artefact_summaries),
     }
     console.print(json.dumps(output, indent=2))
 

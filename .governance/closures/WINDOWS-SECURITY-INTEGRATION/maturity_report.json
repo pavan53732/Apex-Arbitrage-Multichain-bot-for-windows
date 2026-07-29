@@ -1,0 +1,8 @@
+{
+  "avg_completeness": 0.2402,
+  "closure_size": 176,
+  "documents_with_findings": 10,
+  "maturity_score": 0.2356,
+  "root_path": "docs/WINDOWS-SECURITY-INTEGRATION.md",
+  "total_findings": 16
+}

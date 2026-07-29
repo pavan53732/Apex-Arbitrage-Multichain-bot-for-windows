@@ -1,0 +1,8 @@
+{
+  "avg_completeness": 0.2403,
+  "closure_size": 175,
+  "documents_with_findings": 10,
+  "maturity_score": 0.2357,
+  "root_path": "docs/CACHE-MANAGER.md",
+  "total_findings": 16
+}

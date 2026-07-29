@@ -94,6 +94,7 @@ storage:
   progress_path: ".governance/GOVERNANCE-PROGRESS.json"
   graphs_dir: ".governance/graphs"
   root_lifecycle_overrides_path: ".governance/root_lifecycle_overrides.json"
+  closures_dir: ".governance/closures"
 
 completeness:
   critical_threshold: 0.85
