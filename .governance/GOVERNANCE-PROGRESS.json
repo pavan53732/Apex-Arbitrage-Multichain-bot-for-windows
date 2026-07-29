@@ -6,9 +6,9 @@
     "last_commit": null,
     "notes": [
       "Indexed 277 documents",
-      "Detected 28 behavioural roots",
+      "Detected 35 behavioural roots",
       "Generated 22 validation findings",
-      "Computed 28 closures",
+      "Computed 35 closures",
       "Exported 8 graphs"
     ]
   }

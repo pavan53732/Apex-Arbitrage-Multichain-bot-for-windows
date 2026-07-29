@@ -13,6 +13,8 @@ from ..metadata.metadata_parser import MetadataParser
 from ..references.reference_parser import ReferenceParser
 from ..graphs.graph_builder import GraphBuilder
 from ..closure.closure_engine import BehaviouralRootDetector, ClosureEngine
+from ..closure.root_taxonomy import build_tier_report
+from ..closure.root_registry import build_registry, load_lifecycle_overrides, save_registry
 from ..validator.governance_validator import GovernanceValidator
 from ..metrics.metrics_engine import CompletenessEngine
 from ..storage.sqlite_store import SqliteStore
@@ -83,6 +85,23 @@ def run(
     closure_engine = ClosureEngine(graph_builder.dependency_graph)
     all_closures = {r.path: closure_engine.compute_closure(r.path) for r in roots}
 
+    # WS1: Behavioural Root Registry (persisted, schema-validated,
+    # lifecycle-aware) and Root Taxonomy tier report -- both regenerated
+    # on every `apex-gov run` so they can never silently go stale.
+    lifecycle_overrides_path = repo_root / cfg["storage"].get(
+        "root_lifecycle_overrides_path", ".governance/root_lifecycle_overrides.json"
+    )
+    lifecycle_overrides = load_lifecycle_overrides(lifecycle_overrides_path)
+    registry_entries = build_registry(docs, roots, lifecycle_overrides=lifecycle_overrides)
+    registry_path = export_dir / "behavioural_root_registry.json"
+    save_registry(registry_entries, registry_path)
+
+    root_paths = {r.path for r in roots}
+    tier_report = build_tier_report(docs, root_paths)
+    tier_report_path = export_dir / "root_taxonomy_report.json"
+    tier_report_path.parent.mkdir(parents=True, exist_ok=True)
+    tier_report_path.write_text(json.dumps(tier_report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
     validator = GovernanceValidator(docs, graph_builder.dependency_graph)
     findings = validator.validate_all()
 
@@ -115,6 +134,8 @@ def run(
         "avg_completeness": sum(scores.values()) / len(scores) if scores else 0.0,
         "graph_nodes": graph_builder.doc_graph.number_of_nodes(),
         "graph_edges": graph_builder.dependency_graph.number_of_edges(),
+        "behavioural_root_registry_valid": json.loads(registry_path.read_text())["valid"],
+        "behavioural_root_tiers_assigned": len(tier_report["root_tiers"]),
     }
     console.print(json.dumps(output, indent=2))
 
@@ -176,9 +197,12 @@ def roots(config_path: str = typer.Option("tools/governance/config/governance.ya
         docs.append(meta)
     detector = BehaviouralRootDetector(cfg["behavioural_root_signals"])
     roots = detector.detect_roots(docs)
+    root_paths = {r.path for r in roots}
+    tier_report = build_tier_report(docs, root_paths)
     console.print(f"Behavioural roots: {len(roots)}")
-    for r in roots:
-        console.print(f"- {r.path}: {r.reason}")
+    for r in sorted(roots, key=lambda x: x.path):
+        tier = tier_report["root_tiers"].get(r.path, "UNKNOWN")
+        console.print(f"- {r.path} [{tier}]: {r.reason}")
 
 @app.command()
 def closure(root_path: str, config_path: str = typer.Option("tools/governance/config/governance.yaml")):

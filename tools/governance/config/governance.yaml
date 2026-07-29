@@ -93,6 +93,7 @@ storage:
   export_dir: ".governance/exports"
   progress_path: ".governance/GOVERNANCE-PROGRESS.json"
   graphs_dir: ".governance/graphs"
+  root_lifecycle_overrides_path: ".governance/root_lifecycle_overrides.json"
 
 completeness:
   critical_threshold: 0.85

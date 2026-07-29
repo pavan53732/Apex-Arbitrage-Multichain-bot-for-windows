@@ -185,10 +185,73 @@ CORE_ROOTS = {
 
 
 class BehaviouralRootDetector:
+    """Detects behavioural roots among the repository's documents.
+
+    Detection rule (Repository Canonicality Repair / Programme 2.5
+    Phase-0 Root Taxonomy implementation):
+
+        a document is a behavioural root iff it is `type: CONTRACT` AND
+        (it is a named CORE_ROOTS document OR it carries >=1 STRONG_SIGNALS
+        word in its type/purpose/scope/responsibilities/owns text).
+
+    This replaces an earlier rule that additionally required a document
+    to pass `is_excluded()` (a large filename-substring blocklist) before
+    being considered at all. That blocklist created two confirmed
+    defects, both fixed by this rule:
+
+    1. **CORE_ROOTS/EXCLUDED_PATTERNS contradictions.** Three filenames
+       were simultaneously listed in CORE_ROOTS (meant to force-include
+       them as roots) and matched by an EXCLUDED_PATTERNS substring
+       (meant to force-exclude them), with exclusion applied first:
+       `SERVICE-REGISTRY.md` (matched by `"REGISTRY.md"`),
+       `SIMULATION-ENGINE.md` (matched by `"SIMULATION-"`), and
+       `WORKER-POOL.md` (matched by `"WORKER-"`). All three are
+       CONTRACT documents that define genuine, active runtime
+       subsystem behaviour (service registration/discovery/lifecycle;
+       paper-trading/replay/stress simulation; worker capacity/
+       lifecycle/scheduling) -- not static reference catalogues -- so
+       excluding them was a defect, not intentional scope-narrowing.
+    2. **8 false-negative roots.** `AI-PROVIDER-MANAGER.md`,
+       `DIAGNOSTICS.md`, `UPDATE-MANAGER.md`,
+       `WINDOWS-SECURITY-INTEGRATION.md`,
+       `WINDOWS-SERVICE-INTEGRATION.md` were blocked by broad prefix
+       patterns (`AI-PROVIDER-`, `DIAGNOSTICS.md`, `UPDATE-`,
+       `WINDOWS-`) that were designed to exclude *reference/index*
+       documents sharing those prefixes (e.g. `AI-PROVIDER-...` index
+       pages, `WINDOWS-DEPLOYMENT.md`'s installer reference material)
+       but incidentally also excluded these five genuine CONTRACT
+       subsystem-behaviour documents. `SERVICE-REGISTRY.md`,
+       `SIMULATION-ENGINE.md`, `WORKER-POOL.md` (already covered by
+       point 1) complete the set of 8.
+
+    `is_excluded()` is retained (unchanged) purely as a still-useful
+    signal for other consumers (e.g. document-inventory tooling that
+    wants to distinguish "catalogue-like" documents), but it is no
+    longer consulted by `detect_roots()`. The blocklist substring
+    approach proved impossible to keep contradiction-free against
+    CORE_ROOTS as the corpus grew; type+signal detection does not have
+    this failure mode because it has no notion of "excluded filename
+    patterns" to contradict a fixed inclusion list.
+
+    A third, related defect this rule also fixes: the previous rule's
+    `(len(strong_signals) >= 2)` branch admitted non-CONTRACT documents
+    as roots purely by strong-signal word count, which incorrectly
+    classified `PROGRAMME-3-CLOSURE-ORCHESTRATOR.md` (`type:
+    SPECIFICATION`) as a root (the only non-CONTRACT root in the prior
+    28) merely because its purpose text contains both "Engine" and
+    "Orchestrator". The new rule requires `type == CONTRACT`
+    unconditionally, so a SPECIFICATION document can never qualify
+    regardless of signal count.
+    """
+
     def __init__(self, behavioural_root_signals: list[str]):
         self.signals = behavioural_root_signals
 
     def is_excluded(self, path: str) -> bool:
+        """Whether `path`'s filename matches a catalogue/reference-like
+        exclusion pattern. No longer consulted by `detect_roots()` (see
+        class docstring) -- retained for other tooling that wants this
+        signal (e.g. reporting/document_inventory.py)."""
         filename = Path(path).name
         for pattern in EXCLUDED_PATTERNS:
             if pattern in filename:
@@ -202,19 +265,17 @@ class BehaviouralRootDetector:
     def detect_roots(self, docs: list[DocumentMetadata]) -> list[BehaviouralRoot]:
         roots = []
         for d in docs:
-            if self.is_excluded(d.path):
-                continue
-
             filename = Path(d.path).name
             is_contract = d.type == "CONTRACT"
+            if not is_contract:
+                continue
+
             text_fields = [d.type or "", d.purpose or "", d.scope or "", " ".join(d.responsibilities), " ".join(d.owns)]
             blob = " ".join(text_fields).lower()
             signals_found = [s for s in self.signals if s.lower() in blob]
             strong_signals = [s for s in signals_found if s in STRONG_SIGNALS]
 
-            if (self.is_core_root(filename) and is_contract) or \
-               (len(strong_signals) >= 2) or \
-               (is_contract and len(strong_signals) >= 1):
+            if self.is_core_root(filename) or len(strong_signals) >= 1:
                 roots.append(BehaviouralRoot(
                     path=d.path,
                     signals=signals_found,
