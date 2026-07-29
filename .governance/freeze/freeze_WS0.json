@@ -1,20 +1,20 @@
 {
   "identity": {
-    "freeze_id": "2f44869e2409614d",
+    "freeze_id": "e533097fdf030081",
     "workstream_id": "WS0",
-    "workstream_version": "2.3.0",
-    "repository_version": "a8c70f47d6b9d4a1dabb07fccd02359a5fd7fd5a",
+    "workstream_version": "2.4.0",
+    "repository_version": "ae300f640ecbbff8ad2f3a27841f73fcb6dbd45b",
     "governance_platform_version": "1.0.0",
     "schema_version": "2.1.0"
   },
   "repository": {
-    "repository_tree_hash": "99ac64e9314861caf32c69748bc41cecc5146c5a",
+    "repository_tree_hash": "233632b2d91abfef4c877db8629921aecf1f37c6",
     "git_branch": "main",
-    "commit_hash": "a8c70f47d6b9d4a1dabb07fccd02359a5fd7fd5a",
+    "commit_hash": "ae300f640ecbbff8ad2f3a27841f73fcb6dbd45b",
     "working_tree_status": "clean"
   },
   "execution": {
-    "timestamp": "2026-07-29T09:24:48.316896+00:00",
+    "timestamp": "2026-07-29T09:28:19.411205+00:00",
     "runtime_command": "apex-gov run",
     "machine_information": {
       "python_version": "Python 3.13.14"
@@ -83,8 +83,8 @@
     ]
   },
   "freeze": {
-    "freeze_timestamp": "2026-07-29T09:24:48.318866+00:00",
+    "freeze_timestamp": "2026-07-29T09:28:19.413086+00:00",
     "supersedes": ".governance/archive/pre-consolidation-2026-07-29/freeze_WS0_stale.json",
-    "reason_for_regeneration": "Regenerated against commit a8c70f47d (the commit that fixed IntegrityEngine.check_freeze() to correctly accept parent-commit-only regeneration commits). This commit changes ONLY this file, satisfying the new acceptance rule: the freeze record's commit_hash equals HEAD's parent, and this commit's diff contains only .governance/freeze/freeze_WS0.json."
+    "reason_for_regeneration": "Final freeze regeneration for this Repository Canonicality Repair session, referencing commit ae300f640 (Governance Certification Report v1.1.0). This commit changes ONLY this file, satisfying IntegrityEngine.check_freeze()'s parent-commit acceptance rule. This is the last commit of the session; the freeze record is current as of this point and should be regenerated again by whichever agent/session makes the next content change, following the same 'freeze-only commit' pattern documented in commit a8c70f47d."
   }
 }
