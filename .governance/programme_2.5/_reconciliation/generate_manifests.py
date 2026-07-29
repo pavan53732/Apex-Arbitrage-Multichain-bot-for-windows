@@ -105,6 +105,19 @@ def main():
         print(f"{ws_id}: {status} ({passed}/{total}) -> {out_path.relative_to(REPO)}")
 
     # Also emit a single rollup for convenience / evidence.
+    ws_statuses = {ws_id: classify(items) for ws_id, items in results.items()}
+    fully_implemented = [ws for ws, s in ws_statuses.items() if s == "IMPLEMENTED"]
+    partial = [ws for ws, s in ws_statuses.items() if s == "PARTIALLY_IMPLEMENTED"]
+    not_started = [ws for ws, s in ws_statuses.items() if s == "NOT_STARTED"]
+    if not partial and not not_started:
+        overall_status_message = f"ALL {len(ws_statuses)} WORKSTREAMS IMPLEMENTED -- every checkable readiness-checklist item passes as of this run"
+    else:
+        overall_status_message = (
+            f"NOT_COMPLETE -- {len(fully_implemented)}/{len(ws_statuses)} workstreams fully IMPLEMENTED "
+            f"({', '.join(sorted(fully_implemented)) if fully_implemented else 'none'}); "
+            f"remaining gaps in {', '.join(sorted(partial + not_started))} -- see each workstream's "
+            f"manifest.json checklist_evidence for the itemized, disclosed reasons"
+        )
     rollup = {
         "programme": "PROGRAMME_2.5",
         "generated_at": now,
@@ -117,7 +130,7 @@ def main():
             }
             for ws_id, items in results.items()
         },
-        "overall_programme_status": "NOT_COMPLETE -- no workstream is fully IMPLEMENTED as of this run",
+        "overall_programme_status": overall_status_message,
     }
     rollup_path = REPO / ".governance" / "programme_2.5" / "WORKSTREAM-STATUS-ROLLUP.json"
     rollup_path.write_text(json.dumps(rollup, indent=2) + "\n", encoding="utf-8")

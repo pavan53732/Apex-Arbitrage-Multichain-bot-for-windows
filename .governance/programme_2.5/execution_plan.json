@@ -2,7 +2,7 @@
   "programme_id": "PROGRAMME_2.5",
   "title": "Governance Platform Hardening",
   "objective": "Make the governance platform itself deterministic, trustworthy, and self-consistent before allowing it to govern the repository.",
-  "status": "IN_PROGRESS_NOT_CERTIFIED",
+  "status": "SUBSTANTIALLY_IMPLEMENTED_NOT_YET_CERTIFIED",
   "workstreams": 9,
   "phase_0": {
     "phase_id": "PROGRAMME_2.5_PHASE_0",
@@ -87,5 +87,5 @@
     "purpose": "Prevent 'fixing the spec in code' and keep architecture as source of truth."
   },
   "status_last_reconciled_at": "2026-07-29",
-  "status_note": "Not PENDING: substantial engineering (determinism, single-canonical-runtime, Evidence/Integrity/Freeze engines, reverse closure, validator exit semantics, identifier-normalization fix) is complete and live-verified. Not CERTIFIED: Phase-0-frozen specification is only partially implemented across all 9 workstreams -- see WORKSTREAM-STATUS-ROLLUP.json. See also phase_0.75/adr_0012_phase0_specification_revision_PROPOSED.md for a proposed (not yet ratified) path to resolve the specification-vs-implementation gap."
+  "status_note": "Phase-0-as-written implementation programme completed for WS1-WS9: 7 of 9 workstreams (WS1 Root Detection, WS2 Closure Engine, WS3 Validator Framework, WS5 Database Consolidation, WS6 Freeze Framework, WS7 Evidence System, WS8 Metrics Engine) are now fully IMPLEMENTED against every readiness-checklist item, verified live. WS4 (Knowledge Graph) and WS9 (Integrity Engine) are PARTIALLY_IMPLEMENTED: WS4's remaining gaps are a genuine, disclosed data-completeness limitation (event_graph/schema_graph require corpus fields no document populates) and a not-yet-built graph-vs-source cross-validation feature; WS9's remaining gap is the freeze-record staleness check, which resolves once a freeze is regenerated against final HEAD (mechanistic, not a missing capability). See .governance/programme_2.5/WORKSTREAM-STATUS-ROLLUP.json and each ws{N}/manifest.json for full itemized evidence. Certification decision requires independent fresh-clone re-verification before being issued."
 }

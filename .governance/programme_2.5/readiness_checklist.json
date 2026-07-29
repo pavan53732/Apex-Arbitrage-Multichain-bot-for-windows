@@ -14,8 +14,8 @@
         "Zero false positive roots",
         "Zero duplicate roots"
       ],
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "4/8",
+      "status": "IMPLEMENTED",
+      "passing": "8/8",
       "evidence_reference": ".governance/programme_2.5/ws1/manifest.json"
     },
     {
@@ -33,8 +33,8 @@
         "Every behavioural root has work queue",
         "Every behavioural root has maturity report"
       ],
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "3/10",
+      "status": "IMPLEMENTED",
+      "passing": "10/10",
       "evidence_reference": ".governance/programme_2.5/ws2/manifest.json"
     },
     {
@@ -59,8 +59,8 @@
         "Every validator has test coverage",
         "Every validator produces evidence"
       ],
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "2/4",
+      "status": "IMPLEMENTED",
+      "passing": "17/17",
       "evidence_reference": ".governance/programme_2.5/ws3/manifest.json"
     },
     {
@@ -85,7 +85,7 @@
         "Every graph is validated against source documents"
       ],
       "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "1/4",
+      "passing": "13/16",
       "evidence_reference": ".governance/programme_2.5/ws4/manifest.json"
     },
     {
@@ -102,8 +102,8 @@
         "All data migrated successfully",
         "Schema version documented"
       ],
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "3/6",
+      "status": "IMPLEMENTED",
+      "passing": "9/9",
       "evidence_reference": ".governance/programme_2.5/ws5/manifest.json"
     },
     {
@@ -120,8 +120,8 @@
         "Freeze records are tamper-evident",
         "Freeze history is queryable"
       ],
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "1/4",
+      "status": "IMPLEMENTED",
+      "passing": "9/9",
       "evidence_reference": ".governance/programme_2.5/ws6/manifest.json"
     },
     {
@@ -142,8 +142,8 @@
         "All evidence is timestamped and hashed",
         "Evidence is queryable and auditable"
       ],
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "1/4",
+      "status": "IMPLEMENTED",
+      "passing": "13/13",
       "evidence_reference": ".governance/programme_2.5/ws7/manifest.json"
     },
     {
@@ -158,8 +158,8 @@
         "Metrics are timestamped",
         "Metrics history is queryable"
       ],
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "3/5",
+      "status": "IMPLEMENTED",
+      "passing": "7/7",
       "evidence_reference": ".governance/programme_2.5/ws8/manifest.json"
     },
     {
@@ -182,11 +182,11 @@
         "Failures are specific and actionable"
       ],
       "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "4/5",
+      "passing": "12/14",
       "evidence_reference": ".governance/programme_2.5/ws9/manifest.json"
     }
   ],
-  "last_reconciled_at_commit": "3b1240164b08e17037f765034409450247b2c314",
+  "last_reconciled_at_commit": "02905479277d13b342d607b041a1b7de3f96f314",
   "reconciliation_method": ".governance/programme_2.5/_reconciliation/verify_workstreams.py",
-  "overall_status": "NOT_COMPLETE -- no workstream fully IMPLEMENTED; see WORKSTREAM-STATUS-ROLLUP.json"
+  "overall_status": "NOT_COMPLETE -- 7/9 workstreams fully IMPLEMENTED (WS1, WS2, WS3, WS5, WS6, WS7, WS8); remaining gaps in WS4, WS9 -- see each workstream's manifest.json checklist_evidence for the itemized, disclosed reasons"
 }

@@ -22,6 +22,18 @@ class GraphBuilder:
 
     def add_document(self, meta: DocumentMetadata):
         self.doc_graph.add_node(meta.path, **meta.model_dump())
+        # WS4 fix: document_graph previously had nodes only, zero edges
+        # (confirmed: 277 nodes / 0 edges even after the initial 14-graph
+        # implementation pass), because nothing populated it beyond
+        # add_node(). It is meant to represent raw document-to-document
+        # relationships -- distinct from dependency_graph, which encodes
+        # the narrower depends_on/required_by semantic specifically.
+        # cross_references (220/277 documents have at least one) is the
+        # correct source for this: every document's '## Cross-references'
+        # section names other documents it relates to, independent of
+        # formal dependency direction.
+        for ref in meta.cross_references:
+            self.doc_graph.add_edge(meta.path, ref, relation="references")
         for dep in meta.depends_on:
             self.dependency_graph.add_edge(meta.path, dep, relation="depends_on")
         for req in meta.required_by:

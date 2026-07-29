@@ -1,53 +1,53 @@
 {
   "programme": "PROGRAMME_2.5",
-  "generated_at": "2026-07-29T14:46:34.283562+00:00",
-  "generated_at_commit": "3b1240164b08e17037f765034409450247b2c314",
+  "generated_at": "2026-07-29T21:05:01.477548+00:00",
+  "generated_at_commit": "02905479277d13b342d607b041a1b7de3f96f314",
   "workstreams": {
     "WS1": {
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 4,
+      "status": "IMPLEMENTED",
+      "passing": 8,
       "total": 8
     },
     "WS2": {
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 3,
+      "status": "IMPLEMENTED",
+      "passing": 10,
       "total": 10
     },
     "WS3": {
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 2,
-      "total": 4
+      "status": "IMPLEMENTED",
+      "passing": 17,
+      "total": 17
     },
     "WS4": {
       "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 1,
-      "total": 4
+      "passing": 13,
+      "total": 16
     },
     "WS5": {
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 3,
-      "total": 6
+      "status": "IMPLEMENTED",
+      "passing": 9,
+      "total": 9
     },
     "WS6": {
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 1,
-      "total": 4
+      "status": "IMPLEMENTED",
+      "passing": 9,
+      "total": 9
     },
     "WS7": {
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 1,
-      "total": 4
+      "status": "IMPLEMENTED",
+      "passing": 13,
+      "total": 13
     },
     "WS8": {
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 3,
-      "total": 5
+      "status": "IMPLEMENTED",
+      "passing": 7,
+      "total": 7
     },
     "WS9": {
       "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 4,
-      "total": 5
+      "passing": 12,
+      "total": 14
     }
   },
-  "overall_programme_status": "NOT_COMPLETE -- no workstream is fully IMPLEMENTED as of this run"
+  "overall_programme_status": "NOT_COMPLETE -- 7/9 workstreams fully IMPLEMENTED (WS1, WS2, WS3, WS5, WS6, WS7, WS8); remaining gaps in WS4, WS9 -- see each workstream's manifest.json checklist_evidence for the itemized, disclosed reasons"
 }

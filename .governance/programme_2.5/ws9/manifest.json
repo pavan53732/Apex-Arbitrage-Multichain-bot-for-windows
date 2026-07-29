@@ -2,37 +2,82 @@
   "workstream_id": "WS9",
   "name": "Integrity Engine",
   "status": "PARTIALLY_IMPLEMENTED",
-  "checklist_items_passing": "4/5",
+  "checklist_items_passing": "12/14",
   "checklist_evidence": [
     {
-      "item": "apex-gov integrity command implemented",
+      "item": "apex-governance integrity command implemented",
       "status": "PASS",
-      "detail": "Wired via cli/main.py, confirmed exit 0/1 based on PASS/FAIL, executed live this session."
+      "detail": "apex-gov integrity executes and returns a verdict"
     },
     {
-      "item": "13 integrity checks implemented",
+      "item": "Database integrity checks pass",
       "status": "PASS",
-      "detail": "Checks found: ['check_configuration', 'check_database', 'check_graphs', 'check_runtime', 'check_roots', 'check_closures', 'check_validators', 'check_ownership', 'check_cross_references', 'check_freeze', 'check_evidence', 'check_metrics', 'check_repository']"
+      "detail": "database check: PASS -- exactly one canonical database exists with 277 document rows, schema_version=1, all 20 frozen tables present"
     },
     {
-      "item": "Work queue integrity checks exist",
+      "item": "Graph integrity checks pass",
+      "status": "PASS",
+      "detail": "graphs check: PASS -- exactly 15 canonical graphs present, no stray copies found"
+    },
+    {
+      "item": "Validator integrity checks pass",
+      "status": "PASS",
+      "detail": "validators check: PASS -- all 7 validator executions completed AND reported zero findings at or above the failure threshold"
+    },
+    {
+      "item": "Closure integrity checks pass",
+      "status": "PASS",
+      "detail": "closures check: PASS -- every one of 35 behavioural roots has a computed forward closure, reverse closure, and full 5-artefact set (manifest/dependency_graph/audit/work_queue/maturity_report)"
+    },
+    {
+      "item": "Work queue integrity checks pass",
+      "status": "PASS",
+      "detail": "work_queue check: PASS -- 2 work-queue file(s), 800 total tasks, 0 problem(s)"
+    },
+    {
+      "item": "Freeze record integrity checks pass",
       "status": "FAIL",
-      "detail": "No work_queue-specific check among the 13; work_queue/ directory (837KB AI-ORCHESTRATION_full_queue.json) is entirely unvalidated by IntegrityEngine."
+      "detail": "freeze check: FAIL -- freeze record commit_hash (43dd03928d7240ebaf2314bffe4734d36ffb24ee) is neither current HEAD (02905479277d13b342d607b041a1b7de3f96f314) nor its immediate parent; freeze record is stale and must be regenerated"
+    },
+    {
+      "item": "Evidence integrity checks pass",
+      "status": "PASS",
+      "detail": "evidence check: PASS -- evidence collection succeeded: 17 artefact hashes, 23 validators recorded, commit=02905479277d; structured evidence store has 8 total entries across 10 subdirectories"
+    },
+    {
+      "item": "Metrics integrity checks pass",
+      "status": "PASS",
+      "detail": "metrics check: PASS -- avg_completeness = 0.2235; all 10 Phase-0-frozen metrics present and valid"
+    },
+    {
+      "item": "Ownership integrity checks pass",
+      "status": "PASS",
+      "detail": "ownership check: PASS --   All key documents registered in DOCUMENTATION-MAP.md"
+    },
+    {
+      "item": "Reference integrity checks pass",
+      "status": "PASS",
+      "detail": "cross_references check: PASS -- All 240 docs checked, 0 broken references"
     },
     {
       "item": "Single command verifies entire platform",
       "status": "PASS",
-      "detail": "`apex-gov integrity` runs all 13 checks in one invocation."
+      "detail": "14 checks run in one `apex-gov integrity` invocation"
+    },
+    {
+      "item": "All checks pass before Programme 3 can start",
+      "status": "FAIL",
+      "detail": "integrity overall: FAIL (failed_checks=['freeze'])"
     },
     {
       "item": "Failures are specific and actionable",
       "status": "PASS",
-      "detail": "Each IntegrityCheckResult carries check/status/detail/evidence fields (confirmed structure live)."
+      "detail": "every check result includes a detail string + evidence dict"
     }
   ],
   "created_at": "2026-07-28T22:18:54.000000+00:00",
-  "last_verified_at": "2026-07-29T14:46:34.283562+00:00",
-  "last_verified_commit": "3b1240164b08e17037f765034409450247b2c314",
+  "last_verified_at": "2026-07-29T21:05:01.477548+00:00",
+  "last_verified_commit": "02905479277d13b342d607b041a1b7de3f96f314",
   "verification_method": "governance/programme_2.5/_reconciliation/verify_workstreams.py (live execution against installed `governance` package + direct source inspection; no field is asserted without a corresponding executed check)",
   "notes": [
     "This manifest replaces a stale hand-authored manifest that reported status=PENDING unconditionally from programme inception through commit 3b1240164, regardless of actual implementation progress made in prior remediation rounds. That was a governance self-description defect (repository's own governance metadata did not reflect actual implementation state) -- flagged as CRITICAL in the Programme 2.5 Final Certification Audit.",
