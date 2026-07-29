@@ -623,6 +623,31 @@ class IntegrityEngine:
         # run mid-repair); it is reported explicitly rather than hidden.
         self._record("repository", "PASS", f"HEAD={commit}, working tree is {tree_state}", {"commit": commit, "tree_state": tree_state, "changed_files": status.stdout.strip().splitlines()})
 
+    def check_work_queue(self) -> None:
+        """WS9 (readiness_checklist.json CHECK-WS9): 'Work queue
+        integrity checks pass' -- previously entirely unvalidated by
+        this engine's 13 checks (confirmed by the Programme 2.5 Final
+        Certification Audit: the 837KB AI-ORCHESTRATION_full_queue.json
+        was completely unvalidated). Delegates to
+        validator/work_queue/checks.py's check_all_work_queues(), which
+        validates schema well-formedness, task_id uniqueness,
+        document_path existence on disk, and valid status/priority
+        enums for every *.json file under .governance/work_queue/."""
+        try:
+            from ..validator.work_queue.checks import check_all_work_queues
+        except ImportError:
+            from governance.validator.work_queue.checks import check_all_work_queues  # type: ignore
+        work_queue_dir = self.repo_root / ".governance" / "work_queue"
+        result = check_all_work_queues(work_queue_dir, self.repo_root)
+        if result["status"] == "FAIL":
+            failing_files = [f for f in result.get("files", []) if f["status"] == "FAIL"]
+            problem_summary = []
+            for f in failing_files:
+                problem_summary.extend(f["problems"][:3])
+            self._record("work_queue", "FAIL", f"{result['detail']}; sample problems: {problem_summary[:10]}")
+            return
+        self._record("work_queue", "PASS", result["detail"], {"files": [f["file"] for f in result.get("files", [])]})
+
     # -- orchestration -----------------------------------------------------
 
     def run_all(self) -> dict[str, Any]:
@@ -643,6 +668,7 @@ class IntegrityEngine:
         self.check_evidence()
         self.check_metrics()
         self.check_repository()
+        self.check_work_queue()
 
         overall = "PASS" if all(r.status == "PASS" for r in self.results) else "FAIL"
         return {

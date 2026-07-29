@@ -17,7 +17,7 @@ def test_integrity_engine_runs_all_checks_and_returns_overall_verdict():
     expected_checks = {
         "configuration", "database", "graphs", "runtime", "roots",
         "closures", "validators", "ownership", "cross_references",
-        "freeze", "evidence", "metrics", "repository",
+        "freeze", "evidence", "metrics", "repository", "work_queue",
     }
     actual_checks = {c["check"] for c in report["checks"]}
     assert expected_checks.issubset(actual_checks), (
