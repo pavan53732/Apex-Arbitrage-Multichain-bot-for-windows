@@ -1,20 +1,20 @@
 {
   "identity": {
-    "freeze_id": "64e8284a40e75ea6",
+    "freeze_id": "e88cf5effd21fe38",
     "workstream_id": "WS0",
-    "workstream_version": "2.0.0",
-    "repository_version": "9262bb55a47aae5418a21e7b79682b09f25ba5a8",
+    "workstream_version": "2.1.0",
+    "repository_version": "dfbee2ff7b548581533a516e93676b45444d9c1a",
     "governance_platform_version": "1.0.0",
     "schema_version": "2.0.0"
   },
   "repository": {
-    "repository_tree_hash": "5a83446b607a3dbf1cbb845bd2c548212b747490",
+    "repository_tree_hash": "3f708de3538e2156d3b823bb6947a7e6d5b82929",
     "git_branch": "main",
-    "commit_hash": "9262bb55a47aae5418a21e7b79682b09f25ba5a8",
-    "working_tree_status": "dirty (repair in progress; see repair commit)"
+    "commit_hash": "dfbee2ff7b548581533a516e93676b45444d9c1a",
+    "working_tree_status": "clean"
   },
   "execution": {
-    "timestamp": "2026-07-29T08:57:24.876575+00:00",
+    "timestamp": "2026-07-29T09:14:54.985011+00:00",
     "runtime_command": "apex-gov run",
     "machine_information": {
       "python_version": "Python 3.13.14"
@@ -31,19 +31,21 @@
   },
   "validation": {
     "validator_list": [
-      "audit_duplicates",
-      "tools_governance_pytest",
-      "validate_contracts",
-      "validate_cross_references",
-      "validate_ownership",
-      "validate_traceability"
+      "architecture_test.audit_duplicates",
+      "architecture_test.validate_contracts",
+      "architecture_test.validate_cross_references",
+      "architecture_test.validate_ownership",
+      "architecture_test.validate_traceability",
+      "governance_validator.missing_owners",
+      "tools_governance_pytest"
     ],
     "validator_results": {
-      "audit_duplicates": "PASS",
-      "validate_contracts": "PASS",
-      "validate_cross_references": "PASS",
-      "validate_ownership": "PASS",
-      "validate_traceability": "PASS",
+      "governance_validator.missing_owners": "PASS",
+      "architecture_test.audit_duplicates": "PASS",
+      "architecture_test.validate_contracts": "PASS",
+      "architecture_test.validate_cross_references": "PASS",
+      "architecture_test.validate_ownership": "PASS",
+      "architecture_test.validate_traceability": "PASS",
       "tools_governance_pytest": "PASS"
     },
     "all_pass": true
@@ -64,15 +66,15 @@
   },
   "database": {
     "canonical_database_path": ".governance/governance.db",
-    "database_hash": "7774853edb206b07a1381ff145f4f6a3dfc5191f72a32fc150bea1e168578f02",
-    "note": "Exactly one canonical database exists as of this freeze. See .governance/archive/pre-consolidation-2026-07-29/ARCHIVE-MANIFEST.md for the two duplicate databases that were archived (not deleted) prior to this freeze."
+    "database_hash": "2c2366ad2f90a497a039fb555fc03d9c0fdcefab19270a6d8442f959e1c71e3d",
+    "note": "Exactly one canonical database exists. See .governance/archive/pre-consolidation-2026-07-29/ARCHIVE-MANIFEST.md for the two duplicate databases archived during Repository Canonicality Repair."
   },
   "configuration": {
     "configuration_hash": "7175cbed9abdb67914d2e595c55f71c26716333451b69944b0b033708bc13693",
     "path": "tools/governance/config/governance.yaml"
   },
   "integrity": {
-    "integrity_checksum": "15fa1dc8516215c470c3ce5dd520d9f96a05248945985c9a8f754e6f938613ee",
+    "integrity_checksum": "e5df535855baf98139fced7a57995477773ea9bfdfa1942e5ac7b8b1157d4c51",
     "computed_from": [
       "combined_graph_hash",
       "database_hash",
@@ -81,8 +83,8 @@
     ]
   },
   "freeze": {
-    "freeze_timestamp": "2026-07-29T08:57:24.878580+00:00",
+    "freeze_timestamp": "2026-07-29T09:14:54.987144+00:00",
     "supersedes": ".governance/archive/pre-consolidation-2026-07-29/freeze_WS0_stale.json",
-    "reason_for_regeneration": "Prior freeze_WS0.json referenced commit 1e585e2f4 (6+ commits stale), hardcoded repository_metrics {documents: 360, roots: 22} that disagreed with the live canonical runtime (277 documents, 28 roots), and listed frozen_objects (fixture_loader, golden_generator, golden_comparator, test_dashboard, test_harness) that were deleted by the WS0 verification-layer refactor (ADR-0011) before this freeze was ever regenerated. See Repository Canonicality Audit, section 5d."
+    "reason_for_regeneration": "Regenerated a second time to reference the final Repository Canonicality Repair commit (dfbee2ff7) rather than the pre-repair commit (9262bb55a) referenced by the intermediate regeneration performed mid-repair. See Repository Canonicality Repair commit message, Work Item 4."
   }
 }
