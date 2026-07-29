@@ -80,3 +80,40 @@ def test_sqlite_store_get_all_paths_is_sorted(tmp_path):
     store.upsert_documents(docs)
     paths = store.get_all_paths()
     assert paths == sorted(paths)
+
+
+def test_upsert_closure_documents_sorts_input_for_determinism(tmp_path):
+    """Regression test for a real non-determinism defect found during
+    WS5 implementation: cli/main.py's `run` command passed
+    `all_closures[r.path]` (a `set[str]`, as returned by
+    ClosureEngine.compute_closure()) directly to
+    SqliteStore.upsert_closure_documents(), whose target table
+    (closure_documents) is WITHOUT ROWID -- meaning SQLite's B-tree page
+    layout, and therefore the database file's exact bytes, depends on
+    INSERT order. Iterating a Python set is subject to per-process
+    string-hash randomisation (PYTHONHASHSEED), so two consecutive
+    `apex-gov run` invocations in the SAME process produced different
+    governance.db byte content, confirmed via
+    test_evidence_engine_record_hash_is_reproducible failing. Fixed by
+    sorting inside upsert_closure_documents() itself (defense in depth,
+    not just at the call site) -- this test passes an intentionally
+    unsorted/set-derived iterable and asserts the resulting database
+    bytes are identical regardless of insertion order.
+    """
+    db_path1 = tmp_path / "order1.db"
+    db_path2 = tmp_path / "order2.db"
+
+    store1 = SqliteStore(str(db_path1))
+    store1.upsert_closures([{"root_path": "root.md", "closure_hash": "h", "version": 1}])
+    store1.upsert_closure_documents("root.md", ["c.md", "a.md", "b.md"])
+    store1.conn.close()
+
+    store2 = SqliteStore(str(db_path2))
+    store2.upsert_closures([{"root_path": "root.md", "closure_hash": "h", "version": 1}])
+    store2.upsert_closure_documents("root.md", ["b.md", "c.md", "a.md"])  # different insertion order
+    store2.conn.close()
+
+    assert db_path1.read_bytes() == db_path2.read_bytes(), (
+        "closure_documents rows must produce byte-identical database files "
+        "regardless of the input iterable's order"
+    )

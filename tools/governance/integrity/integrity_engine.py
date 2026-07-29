@@ -170,11 +170,47 @@ class IntegrityEngine:
             cur = conn.cursor()
             cur.execute("SELECT COUNT(*) FROM documents")
             row_count = cur.fetchone()[0]
+            cur.execute("PRAGMA user_version")
+            schema_version = cur.fetchone()[0]
             conn.close()
         except Exception as exc:
             self._record("database", "FAIL", f"canonical database could not be queried: {exc}")
             return
-        self._record("database", "PASS", f"exactly one canonical database exists with {row_count} document rows", {"row_count": row_count})
+
+        # WS5: verify the live database is at the current expected
+        # schema version (imported from the single source of truth,
+        # storage/schema.py's SCHEMA_VERSION) -- catches a database file
+        # that predates a schema migration and was never regenerated.
+        try:
+            from ..storage.schema import SCHEMA_VERSION, FROZEN_TABLE_NAMES
+        except ImportError:
+            from governance.storage.schema import SCHEMA_VERSION, FROZEN_TABLE_NAMES  # type: ignore
+        if schema_version != SCHEMA_VERSION:
+            self._record(
+                "database", "FAIL",
+                f"canonical database schema_version={schema_version} does not match expected SCHEMA_VERSION={SCHEMA_VERSION}",
+            )
+            return
+        try:
+            conn = sqlite3.connect(str(canonical_path))
+            cur = conn.cursor()
+            cur.execute("SELECT name FROM sqlite_master WHERE type='table'")
+            existing_tables = {row[0] for row in cur.fetchall()}
+            conn.close()
+        except Exception as exc:
+            self._record("database", "FAIL", f"could not enumerate tables: {exc}")
+            return
+        missing_tables = set(FROZEN_TABLE_NAMES) - existing_tables
+        if missing_tables:
+            self._record("database", "FAIL", f"missing frozen table(s): {sorted(missing_tables)}")
+            return
+
+        self._record(
+            "database", "PASS",
+            f"exactly one canonical database exists with {row_count} document rows, "
+            f"schema_version={schema_version}, all {len(FROZEN_TABLE_NAMES)} frozen tables present",
+            {"row_count": row_count, "schema_version": schema_version},
+        )
 
     def check_graphs(self) -> None:
         graphs_dir = self.repo_root / self.CANONICAL_GRAPHS_DIR

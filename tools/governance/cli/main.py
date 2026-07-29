@@ -133,6 +133,27 @@ def run(
     except Exception:
         _commit = "unknown"
     _generated_at = _datetime.now(_timezone.utc).isoformat()
+    # Deterministic timestamp for anything written INTO governance.db
+    # (graphs/metrics/commits tables). governance.db's byte-for-byte
+    # reproducibility across repeated `apex-gov run` invocations against
+    # an unchanged repository is a long-standing, explicitly tested
+    # invariant (test_determinism.py, test_evidence.py's record_hash
+    # reproducibility test) -- unlike JSON artefacts (closure manifests,
+    # evidence records), which explicitly EXCLUDE their own `timestamp`
+    # field before hashing/comparison, a raw SQLite file has no such
+    # exclusion mechanism: any wall-clock value written into any row
+    # changes the file's bytes on every run. Using the git commit's own
+    # timestamp (stable for as long as HEAD doesn't change) instead of
+    # `datetime.now()` for DB-bound timestamps preserves this invariant.
+    # This bug was found via
+    # test_evidence_engine_record_hash_is_reproducible failing after
+    # WS5's DB population was wired in.
+    try:
+        _db_timestamp = _subprocess.run(
+            ["git", "log", "-1", "--format=%cI", "HEAD"], cwd=repo_root, capture_output=True, text=True
+        ).stdout.strip() or _generated_at
+    except Exception:
+        _db_timestamp = _generated_at
     closures_dir = repo_root / cfg["storage"].get("closures_dir", ".governance/closures")
     closure_artefact_summaries = []
     for r in roots:
@@ -224,6 +245,34 @@ def run(
             g_copy.add_edge(u, v, **sanitize_attrs(data))
         nx.write_graphml(g_copy, str(graphs_dir / f"{g_name}.graphml"))
 
+    # WS5: populate the remaining tables of the 20-table frozen schema
+    # from data the pipeline already computed above -- no second,
+    # independent computation of any of this.
+    from ..validator.registry import list_validators as _list_validators
+    store.upsert_behavioural_roots(registry_entries)
+    store.upsert_closures(closure_artefact_summaries)
+    for r in roots:
+        store.upsert_closure_documents(r.path, all_closures[r.path])
+    store.upsert_validators(_list_validators())
+    graph_stats_for_db = []
+    for g_name, g in all_graphs:
+        g_path = graphs_dir / f"{g_name}.graphml"
+        file_hash = None
+        if g_path.exists():
+            import hashlib as _hashlib
+            file_hash = _hashlib.sha256(g_path.read_bytes()).hexdigest()
+        graph_stats_for_db.append({
+            "graph_name": g_name,
+            "node_count": g.number_of_nodes(),
+            "edge_count": g.number_of_edges(),
+            "file_hash": file_hash,
+            "generated_at": _db_timestamp,
+        })
+    store.upsert_graphs(graph_stats_for_db)
+    avg_completeness_value = sum(scores.values()) / len(scores) if scores else 0.0
+    store.upsert_metrics({"avg_completeness": avg_completeness_value}, computed_at=_db_timestamp, commit_hash=_commit)
+    store.insert_commit(_commit, _db_timestamp, len(docs), len(roots))
+
     progress.update_programme(
         programme="Programme 1",
         phase="Documentation Intelligence Platform",
@@ -245,6 +294,7 @@ def run(
         "roots_with_full_artefact_set": len(closure_artefact_summaries),
         "category_validators_executed": category_report["total_categories"],
         "category_validator_findings": category_report["total_findings"],
+        "database_schema_version": store.schema_version(),
     }
     console.print(json.dumps(output, indent=2))
 

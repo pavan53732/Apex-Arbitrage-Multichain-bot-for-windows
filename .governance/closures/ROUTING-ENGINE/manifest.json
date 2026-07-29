@@ -178,8 +178,8 @@
   ],
   "closure_hash": "08fedf3fb5f1e0992a3a7ef350eef1f12ba26e495697c0919fc751ccece76fe2",
   "closure_size": 175,
-  "generated_at": "2026-07-29T20:21:26.080016+00:00",
-  "generated_at_commit": "e532ef8238a1dc6be3a52cdd7a9c3dbe970f0449",
+  "generated_at": "2026-07-29T20:35:26.843137+00:00",
+  "generated_at_commit": "5a71acc658c56d525b9f927197891bd47f110987",
   "reverse_closure_documents": [
     "APEX-ARCHITECTURE.md",
     "docs/AGENTS.md",

@@ -95,6 +95,16 @@ storage:
   graphs_dir: ".governance/graphs"
   root_lifecycle_overrides_path: ".governance/root_lifecycle_overrides.json"
   closures_dir: ".governance/closures"
+  # WS5 (Database Consolidation): schema version is the single source
+  # of truth in tools/governance/storage/schema.py's SCHEMA_VERSION
+  # constant, stored live in the database via SQLite's PRAGMA
+  # user_version. This config value is documentation only (kept in sync
+  # by tests/test_schema.py::test_schema_version_is_documented_in_this_module
+  # and by IntegrityEngine.check_database(), which compares the live
+  # database's PRAGMA user_version against schema.py's SCHEMA_VERSION
+  # directly, NOT against this yaml value) -- never read by code as the
+  # authoritative version number.
+  documented_schema_version: 1
 
 completeness:
   critical_threshold: 0.85
