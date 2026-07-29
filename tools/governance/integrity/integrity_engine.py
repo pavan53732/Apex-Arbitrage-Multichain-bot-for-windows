@@ -265,6 +265,35 @@ class IntegrityEngine:
         self._record("cross_references", status, result.stdout.strip().splitlines()[-1] if result.stdout.strip() else "no output")
 
     def check_freeze(self) -> None:
+        """Verify the freeze record is current.
+
+        A freeze record embeds the commit hash of the repository state it
+        was computed against. This creates an inherent self-reference
+        problem: committing the freeze record changes the tree, which
+        changes the commit hash, which the freeze record cannot have
+        embedded in advance (it would need to know its own resulting hash
+        before it exists). A naive `freeze_commit == HEAD` check therefore
+        FAILs by construction on every commit that regenerates the freeze
+        record, forever — see the Repository Canonicality Repair session's
+        commit b0bb1e4f8 and GOVERNANCE-CERTIFICATION-REPORT.md §5 for the
+        full writeup of this limitation.
+
+        The correct semantic (documented in freeze_WS0.json's own
+        "reason_for_regeneration" field): the freeze record represents the
+        repository state as of "the last commit BEFORE this freeze was
+        taken". This check therefore treats the freeze as current if
+        EITHER:
+          1. freeze_commit == current HEAD (the ideal case, achievable
+             only when nothing else changes between freeze generation and
+             the next commit), OR
+          2. freeze_commit == HEAD's parent AND the only file that differs
+             between that parent and HEAD is the freeze record itself
+             (i.e. the freeze-regenerating commit changed nothing else,
+             which is the expected shape of a "regenerate freeze" commit).
+        Any other relationship means real repository content changed after
+        the freeze was taken without a corresponding freeze regeneration,
+        which is a genuine staleness FAIL.
+        """
         freeze_path = self.repo_root / ".governance/freeze/freeze_WS0.json"
         if not freeze_path.exists():
             self._record("freeze", "FAIL", "no freeze record found at .governance/freeze/freeze_WS0.json")
@@ -274,17 +303,43 @@ class IntegrityEngine:
         except Exception as exc:
             self._record("freeze", "FAIL", f"freeze record failed to parse: {exc}")
             return
+
         current_commit = self._run(["git", "rev-parse", "HEAD"]).stdout.strip()
         freeze_commit = freeze.get("repository", {}).get("commit_hash") or freeze.get("identity", {}).get("repository_version")
-        if freeze_commit != current_commit:
+
+        if freeze_commit == current_commit:
+            self._record("freeze", "PASS", "freeze record commit_hash matches current HEAD exactly", {"commit": current_commit})
+            return
+
+        # Case 2: freeze_commit is HEAD's immediate parent, and the only
+        # change since then is the freeze record itself.
+        parent_commit = self._run(["git", "rev-parse", "HEAD~1"]).stdout.strip()
+        if freeze_commit == parent_commit:
+            diff = self._run(["git", "diff", "--name-only", parent_commit, current_commit])
+            changed_files = [f for f in diff.stdout.strip().splitlines() if f]
+            freeze_rel_path = str(freeze_path.relative_to(self.repo_root))
+            if changed_files == [freeze_rel_path]:
+                self._record(
+                    "freeze", "PASS",
+                    f"freeze record references parent commit {freeze_commit[:12]}; "
+                    f"HEAD ({current_commit[:12]}) differs only by the freeze-regeneration commit itself",
+                    {"freeze_commit": freeze_commit, "current_commit": current_commit, "changed_files": changed_files},
+                )
+                return
             self._record(
                 "freeze", "FAIL",
-                f"freeze record commit_hash ({freeze_commit}) does not match current HEAD ({current_commit}); "
-                "freeze record is stale and must be regenerated after this commit is made",
-                {"freeze_commit": freeze_commit, "current_commit": current_commit},
+                f"freeze record references parent commit {freeze_commit[:12]}, but HEAD ({current_commit[:12]}) "
+                f"also changed other files beyond the freeze record: {changed_files}",
+                {"freeze_commit": freeze_commit, "current_commit": current_commit, "changed_files": changed_files},
             )
             return
-        self._record("freeze", "PASS", "freeze record commit_hash matches current HEAD", {"commit": current_commit})
+
+        self._record(
+            "freeze", "FAIL",
+            f"freeze record commit_hash ({freeze_commit}) is neither current HEAD ({current_commit}) "
+            "nor its immediate parent; freeze record is stale and must be regenerated",
+            {"freeze_commit": freeze_commit, "current_commit": current_commit},
+        )
 
     def check_evidence(self) -> None:
         # Uses the canonical Evidence Engine (Work Item 5), not WS0's
