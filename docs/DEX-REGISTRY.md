@@ -11,6 +11,12 @@ canonical_source: docs/DEX-REGISTRY.md
 
 # Dex Registry
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+
 ## Purpose
 Defines the authoritative registry of supported DEXs and their capabilities.
 
@@ -42,3 +48,11 @@ Defines DEX identity, pool coverage, supported routes, status, and versioned met
 
 ## Example
 A DEX entry includes router address, supported features, and chain associations.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

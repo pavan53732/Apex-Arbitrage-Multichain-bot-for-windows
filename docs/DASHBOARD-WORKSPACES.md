@@ -11,6 +11,12 @@ canonical_source: docs/DASHBOARD-WORKSPACES.md
 
 # Dashboard Workspaces
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** UI Team
+
 ## Purpose
 Defines workspace persistence, restore, sharing, and isolation for desktop sessions — with workspace lifecycle, autosave semantics, crash recovery, multi-profile support, workspace state synchronization, cross-subsystem integration, and workspace manager contracts.
 
@@ -202,3 +208,9 @@ Each workspace is a JSON object:
 | Workspace preferences | Theme, font, autosave | Workspace JSON | Defaults |
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | UI Team |

@@ -11,6 +11,12 @@ canonical_source: docs/IPC-PROTOCOL.md
 
 # IPC Protocol
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines the single authoritative IPC (Inter-Process Communication) protocol for the Apex platform — covering the transport mechanism, message envelope format, serialization, typed channels, error handling, versioning, backward compatibility, and the complete channel catalog that connects all subsystems across trust boundaries. This contract enables an autonomous engineer to implement the exact IPC infrastructure without making assumptions.
 
@@ -341,3 +347,9 @@ JSON is the default because it is debuggable, schema-verifiable, and compatible 
 - **TRACEABILITY-MATRIX.md** — REQ-RUNTIME-001, REQ-EVENT-001.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

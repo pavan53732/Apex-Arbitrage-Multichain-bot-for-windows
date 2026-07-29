@@ -11,6 +11,12 @@ canonical_source: docs/ROUTING-ENGINE.md
 
 # Routing Engine
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+
 ## Purpose
 Determines optimal execution paths across DEXs, chains, pools, and bridges.
 
@@ -93,3 +99,11 @@ An input is validated before any state-changing action.
 ## Routing rules
 - Define route selection, failover, and proxy-aware decision inputs.
 - Define handling for changing network conditions.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

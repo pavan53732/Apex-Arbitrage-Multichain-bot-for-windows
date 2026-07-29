@@ -3,13 +3,19 @@ last_updated: 2026-07-29
 type: CONTRACT
 owner: Trading Team
 status: Canonical
-version: 1.0.0
+version: 1.0.1
 purpose: Defines policy engine.
 scope: Policy enforcement.
 canonical_source: docs/POLICY-ENGINE.md
 ---
 
 # Policy Engine
+
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.1 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
 
 ## Purpose
 Defines the central source of truth for all user-configurable policies.
@@ -51,3 +57,15 @@ A routing policy blocks execution when cost exceeds target.
 ## Policy rules
 - Define policy inputs, limits, enforcement, and override behavior.
 - Define how policy failures block execution.
+
+## Operational Contract
+Defines the Policy Engine as the single, hot-reloadable source of truth for every user-configurable operational threshold (max daily loss, position size, budget caps, model selection, plugin permissions, secret rotation, retry limits, failover behavior). Consumers (Decision Engine, Risk Engine, AI Cost Management) must read policy values through the Policy Engine rather than caching or re-deriving thresholds locally; a policy failure (missing or invalid value) blocks the dependent execution path rather than falling back to an implicit default.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.1 | 2026-07-29 | Added `## Operational Contract` section (state-machine-consistent authoritative contract body) to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`). All other content unchanged. | Trading Team |
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

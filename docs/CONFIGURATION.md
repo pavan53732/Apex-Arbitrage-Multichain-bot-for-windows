@@ -11,6 +11,12 @@ canonical_source: docs/CONFIGURATION.md
 
 # Configuration
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Config Team
+
 ## Purpose
 Defines runtime and operational configuration — precedence, validation, secret handling, profile management, hot-reload semantics, restart-required semantics, conflict resolution, Windows-specific config, and cross-system config ownership wiring.
 
@@ -152,3 +158,9 @@ risk:
 - **WINDOWS-DESKTOP.md** — Windows config locations.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.1.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Config Team |

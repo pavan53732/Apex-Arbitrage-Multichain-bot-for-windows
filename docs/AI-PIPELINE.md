@@ -11,6 +11,12 @@ canonical_source: docs/AI-PIPELINE.md
 
 # AI Pipeline
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** AI Team
+
 ## Purpose
 Defines AI request routing, prompt assembly pipeline, context assembly, context compression, token budgeting, prompt construction, provider routing, confidence scoring, streaming lifecycle, cancellation, fallback policy, and recovery — from request to structured response.
 
@@ -414,3 +420,9 @@ Allocation:
 - **TRACEABILITY-MATRIX.md** — AI requirement coverage.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | AI Team |

@@ -11,6 +11,12 @@ canonical_source: docs/SIMULATION-ENGINE.md
 
 # Simulation Engine
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+
 ## Purpose
 Defines paper trading, replay, stress testing, and synthetic failure simulation.
 
@@ -301,3 +307,11 @@ An input is validated before any state-changing action.
 ## Simulation rules
 - Define deterministic timing, headless mode, and Windows replay behavior.
 - Define result comparison and failure reporting.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

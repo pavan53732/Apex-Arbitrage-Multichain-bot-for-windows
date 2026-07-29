@@ -17,7 +17,7 @@ import json
 import subprocess
 import hashlib
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List, Any, Optional
 
 
@@ -50,7 +50,28 @@ class WS0VerificationLayer:
         self.repo_root = Path(repo_root).resolve()
         self.ws0_dir = self.repo_root / ".governance" / "programme_2.5" / "ws0"
         self.reports_dir = self.ws0_dir / "reports"
+        self.baseline_path = self.reports_dir / "baseline_output.json"
         self.canonical_cli = "tools/governance/cli/main.py"
+
+    def load_baseline(self) -> Optional[Dict[str, Any]]:
+        """Load the stored baseline canonical output, if one exists.
+
+        The baseline is the canonical governance output (documents_indexed,
+        behavioural_roots, etc.) captured at the time of the last successful
+        certification. `run_regression_check` compares the current run
+        against this baseline to detect governance-state drift.
+        """
+        if not self.baseline_path.exists():
+            return None
+        with open(self.baseline_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    def save_baseline(self, canonical_output: Dict[str, Any]) -> Path:
+        """Persist the current canonical output as the new regression baseline."""
+        self.reports_dir.mkdir(parents=True, exist_ok=True)
+        with open(self.baseline_path, "w", encoding="utf-8") as f:
+            json.dump(canonical_output, f, indent=2)
+        return self.baseline_path
     
     def invoke_canonical_runtime(self, command: str, config_path: Optional[str] = None) -> Dict[str, Any]:
         """
@@ -95,7 +116,7 @@ class WS0VerificationLayer:
         - Required fields present
         """
         verification = {
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "output_hash": self._hash_dict(output),
             "checks": {}
         }
@@ -135,7 +156,7 @@ class WS0VerificationLayer:
         """
         evidence = {
             "repository_hash": self._get_repo_hash(),
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "canonical_output_hash": self._hash_dict(canonical_output),
             "evidence_files": []
         }
@@ -168,7 +189,7 @@ class WS0VerificationLayer:
         Run regression check between current and baseline canonical outputs.
         """
         regression = {
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "fields_compared": [],
             "regressions": [],
             "passed": True
@@ -205,7 +226,7 @@ class WS0VerificationLayer:
             "certification_id": self._generate_cert_id(),
             "workstream_id": "WS0",
             "version": "1.0.0",
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "verification": verification,
             "evidence": evidence,
             "regression": regression,
@@ -252,7 +273,7 @@ class WS0VerificationLayer:
     def _generate_cert_id(self) -> str:
         """Generate certification ID."""
         return hashlib.sha256(
-            f"{datetime.utcnow().isoformat()}{self._get_repo_hash()}".encode()
+            f"{datetime.now(timezone.utc).isoformat()}{self._get_repo_hash()}".encode()
         ).hexdigest()[:16]
 
 
@@ -274,7 +295,7 @@ def main():
         if output["success"]:
             canonical = json.loads(output["stdout"])
             verification = ws0.verify_canonical_output(canonical)
-            ws0.save_report(verification, f"verification_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+            ws0.save_report(verification, f"verification_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
             print(json.dumps(verification, indent=2))
         else:
             print(f"Canonical runtime failed: {output['stderr']}")
@@ -286,20 +307,63 @@ def main():
             canonical = json.loads(output["stdout"])
             verification = ws0.verify_canonical_output(canonical)
             evidence = ws0.collect_evidence(canonical)
-            regression = {"passed": True, "regressions": []}  # No baseline for initial cert
+
+            baseline = ws0.load_baseline()
+            if baseline is None:
+                # No baseline exists yet (first certification run). This is
+                # NOT the same as "regression passed" — it is explicitly
+                # marked as an un-compared first run so certification
+                # reports never claim a regression check that did not
+                # actually happen.
+                regression = {
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
+                    "fields_compared": [],
+                    "regressions": [],
+                    "passed": True,
+                    "baseline_available": False,
+                    "note": "No baseline present; this is the initial certification run. Baseline saved for future regression checks.",
+                }
+            else:
+                regression = ws0.run_regression_check(canonical, baseline)
+                regression["baseline_available"] = True
+
             package = ws0.generate_certification_package(verification, evidence, regression)
-            ws0.save_report(package, f"ws0_certification_package_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+            ws0.save_report(package, f"ws0_certification_package_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
+
+            # Only advance the baseline when certification actually passed —
+            # a failed run must not silently become the new "known good" state.
+            if package["certification_decision"] == "PASS":
+                ws0.save_baseline(canonical)
+
             print(json.dumps(package, indent=2))
         else:
             print(f"Canonical runtime failed: {output['stderr']}")
             sys.exit(1)
-    
+
+    elif command == "regress":
+        baseline = ws0.load_baseline()
+        if baseline is None:
+            print("No baseline found. Run `certify` at least once to establish a baseline.")
+            sys.exit(1)
+        output = ws0.run_full_pipeline()
+        if output["success"]:
+            canonical = json.loads(output["stdout"])
+            regression = ws0.run_regression_check(canonical, baseline)
+            regression["baseline_available"] = True
+            ws0.save_report(regression, f"regression_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
+            print(json.dumps(regression, indent=2))
+            if not regression["passed"]:
+                sys.exit(1)
+        else:
+            print(f"Canonical runtime failed: {output['stderr']}")
+            sys.exit(1)
+
     elif command == "evidence":
         output = ws0.run_full_pipeline()
         if output["success"]:
             canonical = json.loads(output["stdout"])
             evidence = ws0.collect_evidence(canonical)
-            ws0.save_report(evidence, f"evidence_report_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+            ws0.save_report(evidence, f"evidence_report_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.json")
             print(json.dumps(evidence, indent=2))
         else:
             print(f"Canonical runtime failed: {output['stderr']}")

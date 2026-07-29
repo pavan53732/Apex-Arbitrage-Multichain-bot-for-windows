@@ -11,6 +11,12 @@ canonical_source: docs/EVENT-BUS.md
 
 # Event Bus
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines the central pub/sub backbone for asynchronous communication — producer/consumer contract, message schema, delivery guarantees, ordering, priority, retry, deduplication, timeout, persistence, replay, dead-letter handling, consumer groups, partitioning, and cross-subsystem integration.
 
@@ -367,3 +373,9 @@ PARTITION_COUNT: event.bus.partition_count (default 8)
 - **TRACEABILITY-MATRIX.md** — REQ-EVENT-001, REQ-EVENT-004, REQ-EVENT-005.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

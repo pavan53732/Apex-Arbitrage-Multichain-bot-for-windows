@@ -11,6 +11,12 @@ canonical_source: docs/ENGINE-STATE-MACHINE.md
 
 # Engine State Machine
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines the complete engine lifecycle state machine — states, transitions, timeouts, recovery transitions, forbidden transitions, failure transitions, and startup/shutdown state coupling.
 
@@ -168,3 +174,9 @@ Every state transition emits an event:
 - **CONFIGURATION-REFERENCE.md** — `runtime.*` config keys.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

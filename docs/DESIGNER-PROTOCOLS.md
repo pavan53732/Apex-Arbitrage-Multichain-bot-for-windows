@@ -1,9 +1,9 @@
 ---
 last_updated: 2026-07-29
-type: CONTRACT
+type: REFERENCE
 owner: Runtime Team
 status: Canonical
-version: 1.0.0
+version: 1.0.1
 purpose: Designer Protocols documentation.
 scope: Reference documentation.
 canonical_source: docs/DESIGNER-PROTOCOLS.md
@@ -12,7 +12,15 @@ canonical_source: docs/DESIGNER-PROTOCOLS.md
 # Designer Protocols
 
 ## Document type
-This document is an overview, reference, or index as noted below.
+[REFERENCE]. This document's front-matter `type` was previously set to
+`CONTRACT` while its own body stated "This document is an overview,
+reference, or index" — a direct Prime-Directive violation (a document
+must declare a single, consistent type). This file is a UI/UX design
+system reference (color, typography, spacing, components, accessibility,
+patterns) and is correctly classified as [REFERENCE], not [CONTRACT].
+
+## Version
+**Version:** 1.0.1 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
 
 # APEX Designer Protocols - UI/UX Design System, Components, Patterns, and Standards
 
@@ -440,3 +448,12 @@ Defines design review flow, component conventions, naming, and artifact handoff 
 
 ## Example
 A new panel must pass layout and accessibility review before release.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.1 | 2026-07-29 | Corrected front-matter `type` from `CONTRACT` to `REFERENCE` to resolve an internal self-contradiction (body previously stated this is "an overview, reference, or index"). Rewrote the Document type section to state the correction explicitly. Substantive design-system content unchanged. | Runtime Team |
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section (superseded by 1.0.1 above; incorrectly declared [CONTRACT] compliance at the time). | Runtime Team |

@@ -11,6 +11,12 @@ canonical_source: docs/DASHBOARD-WIDGETS.md
 
 # Dashboard Widgets
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** UI Team
+
 ## Purpose
 Defines the reusable dashboard widgets — widget lifecycle, rendering pipeline, dependency graph, communication contracts, state synchronization, display states, refresh scheduling, performance budgets, lazy loading, virtualization, error overlays, offline behavior, plugin widget integration, and the Widget SDK lifecycle.
 
@@ -582,3 +588,9 @@ Widgets are registered in the widget registry (`registry://dashboard/widgets`):
 - **PERMISSION-MODEL.md** — Widget permission enforcement.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | UI Team |

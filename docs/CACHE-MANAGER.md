@@ -11,6 +11,12 @@ canonical_source: docs/CACHE-MANAGER.md
 
 # Cache Manager
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Authoritative owner for cache manager.
 
@@ -45,3 +51,11 @@ A stale price cache entry is invalidated after a new market tick arrives.
 ## Cache rules
 - Define TTL, eviction, and freshness by data domain.
 - Define cache invalidation on chain, provider, and schema changes.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

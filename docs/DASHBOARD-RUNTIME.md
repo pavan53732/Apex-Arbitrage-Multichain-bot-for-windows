@@ -11,6 +11,12 @@ canonical_source: docs/DASHBOARD-RUNTIME.md
 
 # Dashboard Runtime
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** UI Team
+
 ## Purpose
 Defines the dashboard runtime composition — initialization sequence, page routing, rendering pipeline, IPC data flow, modal/overlay system, sandbox/preview modes, permission model, workspace persistence, state synchronization, event routing, and cross-subsystem integration contracts.
 
@@ -322,3 +328,9 @@ See **DASHBOARD-WIDGETS.md §7** for the complete event routing table. This docu
 - **TRACEABILITY-MATRIX.md** — Dashboard requirement coverage.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | UI Team |

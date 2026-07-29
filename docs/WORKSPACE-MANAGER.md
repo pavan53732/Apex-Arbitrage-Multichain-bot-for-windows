@@ -1,9 +1,9 @@
 ---
 last_updated: 2026-07-29
-type: CONTRACT
+type: REFERENCE
 owner: Runtime Team
 status: Canonical
-version: 1.0.0
+version: 1.0.1
 purpose: Workspace Manager documentation.
 scope: Reference documentation.
 canonical_source: docs/WORKSPACE-MANAGER.md
@@ -12,9 +12,17 @@ canonical_source: docs/WORKSPACE-MANAGER.md
 # Workspace Manager
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Workspace Manager
+[REFERENCE]. This document is a short reference pointer. It is not a
+[CONTRACT] and must not be treated as one — the front-matter `type` was
+previously set to `CONTRACT` while the body explicitly stated "This
+document is an overview, reference, or index", which is a direct
+Prime-Directive violation (short docs must declare their type
+consistently). The authoritative Workspace Manager service CONTRACT —
+state machine, schema, API, events, configuration ownership, and
+cross-subsystem wiring — is owned exclusively by
+**`docs/DASHBOARD-WORKSPACES.md`**. This file exists only as a stable,
+short-form entry point referenced elsewhere in the documentation set
+(see `docs/DOCUMENTATION-MAP.md`, `docs/README.md`).
 
 ## Purpose
 Defines workspace ownership, layout, settings, providers, dashboards, strategies, and wallets for each workspace.

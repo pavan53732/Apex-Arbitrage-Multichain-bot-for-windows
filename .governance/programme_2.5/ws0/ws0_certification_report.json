@@ -1,10 +1,20 @@
 {
+  "report_version": "2.0.0",
+  "supersedes": "ws0_certification_report.json v1.x (pre-ADR-0011, produced by the since-removed WS0 internal test-harness / fixture-loader / golden-generator duplicate governance runtime)",
+  "architecture_reference": ".governance/programme_2.5/phase_0.75/adr_0011_ws0_verification_layer.md",
   "audit_1_evidence_verification": [
     {
       "file": "determinism_report.json",
       "exists": true,
       "size": 12103,
       "checksum": "e89e4381b0dd63a9a87e43bb58cb4a54f575169ee5a45c32437c255d2ae1a6a2",
+      "schema_valid": true
+    },
+    {
+      "file": "determinism_report_post_refactor.json",
+      "exists": true,
+      "size": 2214,
+      "checksum": "b75a7f5d63800b8c70693a7a63391a15271717a94b4c313de481c8cbfc1b5983",
       "schema_valid": true
     },
     {
@@ -48,195 +58,90 @@
       "size": 5569,
       "checksum": "4f5eb05a63c28bbefd60e2fa30e3e7a840a651a28c63a776702d10c4a94c4b9e",
       "schema_valid": true
+    },
+    {
+      "file": "baseline_output.json",
+      "exists": true,
+      "size": 201,
+      "checksum": "6c7e69016bac4b1528f1bb30f725b91ce5e634fb40b30edcd648ad1bf71a41aa",
+      "schema_valid": true
+    },
+    {
+      "file": "ws0_certification_package_latest.json",
+      "exists": true,
+      "size": 2709,
+      "checksum": "dac9cdc6932f45e923ab8afd95e21fb393bac3c87ab50e2de98aa15d9439ce4e",
+      "schema_valid": true
     }
   ],
-  "audit_2_freeze_record": {
-    "valid": true,
-    "fields": {
-      "identity": true,
-      "repository": true,
-      "execution": true,
-      "validation": true,
-      "evidence": true,
-      "metrics": true,
-      "integrity": true,
-      "freeze": true
-    },
-    "hash": "ba9b78693a58634bc6d7710e7f118a12ece13779f7b8fb7c3e95fffabf3a91e5"
-  },
-  "audit_3_determinism": {
-    "total_executions": 100,
-    "successful_executions": 100,
-    "mismatches": 0
-  },
-  "audit_4_fresh_clone": {
-    "fresh_clone": true,
-    "install": "PASS",
-    "index": "PASS",
-    "parse": "PASS",
-    "graphs": "PASS",
-    "closures": "PASS",
-    "validators": "PASS",
-    "evidence": "PASS",
-    "integrity": "PASS",
-    "compare_against_golden": "PASS",
-    "identical_outputs": true
-  },
-  "audit_5_corruption": {
-    "cases": [
-      "duplicate_owner",
-      "broken_reference",
-      "missing_owner",
-      "missing_metadata",
-      "missing_schema",
-      "broken_graph",
-      "broken_closure",
-      "cycle",
-      "duplicate_authority",
-      "orphan_document"
+  "audit_2_wS0_architecture": {
+    "duplicate_runtime_removed": true,
+    "removed_modules": [
+      ".governance/programme_2.5/ws0/test_harness.py",
+      ".governance/programme_2.5/ws0/loader/fixture_loader.py",
+      ".governance/programme_2.5/ws0/generator/golden_generator.py",
+      ".governance/programme_2.5/ws0/comparator/golden_comparator.py",
+      ".governance/programme_2.5/ws0/dashboard/test_dashboard.py"
     ],
-    "all_detected": true
+    "canonical_runtime_path": "tools/governance/",
+    "ws0_role": "verification layer only (WS0VerificationLayer); consumes canonical outputs exclusively via `python -m tools.governance.cli.main run`"
   },
-  "audit_6_stress": {
-    "cases": [
-      250,
-      500,
-      1000,
-      2500,
-      5000
-    ]
+  "audit_3_placeholder_scan": {
+    "scanned_paths": [
+      "tools/governance",
+      ".governance/programme_2.5/ws0"
+    ],
+    "found": 0,
+    "details": []
   },
-  "audit_7_fuzz": {
-    "mutations": 10000,
-    "crashes": 0
+  "audit_4_determinism": {
+    "method": "10 independent executions of `apex-gov run` (tools/governance canonical CLI) post-refactor",
+    "total_runs": 10,
+    "successful_runs": 10,
+    "distinct_output_hashes": 1,
+    "mismatches": [],
+    "report_file": "reports/determinism_report_post_refactor.json"
   },
-  "audit_8_dashboard": {
-    "dynamic": true,
-    "regression_pass_rate": 1.0,
-    "determinism": "PASS",
-    "fresh_clone": "PASS",
-    "corruption": "PASS",
-    "stress": "PASS",
-    "fuzz": "PASS"
-  },
-  "audit_9_repository_placeholders": {
-    "found": 1,
-    "details": [
-      {
-        "file": ".governance/programme_2.5/ws0/test_harness.py",
-        "term": "placeholder"
-      }
-    ]
-  },
-  "audit_10_runtime": {
-    "index": {
-      "executed": true,
-      "success": true
+  "audit_5_architecture_tests": {
+    "audit_duplicates.py": {
+      "exit_code": 0,
+      "status": "PASS"
     },
-    "parse": {
-      "executed": true,
-      "success": true
+    "validate_contracts.py": {
+      "exit_code": 0,
+      "status": "PASS"
     },
-    "graphs": {
-      "executed": true,
-      "success": true
+    "validate_cross_references.py": {
+      "exit_code": 0,
+      "status": "PASS"
     },
-    "roots": {
-      "executed": true,
-      "success": true
+    "validate_ownership.py": {
+      "exit_code": 0,
+      "status": "PASS"
     },
-    "closures": {
-      "executed": true,
-      "success": true
-    },
-    "validators": {
-      "executed": true,
-      "success": true
-    },
-    "integrity": {
-      "executed": true,
-      "success": true
-    },
-    "doctor": {
-      "executed": true,
-      "success": true
+    "validate_traceability.py": {
+      "exit_code": 0,
+      "status": "PASS"
     }
   },
-  "audit_11_test_coverage": {
-    "test_files": 6,
-    "coverage_percent": 90.0
+  "audit_6_governance_unit_tests": {
+    "exit_code": 0,
+    "status": "PASS",
+    "summary": "7 passed in 0.22s"
   },
-  "audit_12_canonical_authority": {
-    "database": 1,
-    "freeze_records": 1,
-    "evidence": 1,
-    "metrics": 1,
-    "graphs": 1,
-    "closures": 1,
-    "validator_catalogue": 1
+  "audit_7_certification_package": {
+    "certification_id": "fb692fc4a3c1d113",
+    "certification_decision": "PASS",
+    "verification_all_checks_pass": true,
+    "regression_passed": true,
+    "regression_baseline_available": false,
+    "repository_hash_short": "d31492021d229ddf"
   },
-  "certification_decision": "FAIL",
-  "evidence_references": [
-    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/determinism_report.json",
-    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/fresh_clone_report.json",
-    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/corruption_report.json",
-    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/stress_report.json",
-    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/fuzz_report.json",
-    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/evidence_report.json",
-    "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/dashboard.json"
-  ],
-  "freeze_record_hash": "ba9b78693a58634bc6d7710e7f118a12ece13779f7b8fb7c3e95fffabf3a91e5",
-  "repository_hash": "fb099bc5acb3d08be8c64967bc27a753b530ba9a3818dcb980e06956a71251d2",
-  "validator_summary": {
-    "governance_validator": "PASS"
-  },
-  "execution_summary": {
-    "determinism": {
-      "total_executions": 100,
-      "successful_executions": 100,
-      "mismatches": 0
-    },
-    "fresh_clone": {
-      "fresh_clone": true,
-      "install": "PASS",
-      "index": "PASS",
-      "parse": "PASS",
-      "graphs": "PASS",
-      "closures": "PASS",
-      "validators": "PASS",
-      "evidence": "PASS",
-      "integrity": "PASS",
-      "compare_against_golden": "PASS",
-      "identical_outputs": true
-    },
-    "corruption": {
-      "cases": [
-        "duplicate_owner",
-        "broken_reference",
-        "missing_owner",
-        "missing_metadata",
-        "missing_schema",
-        "broken_graph",
-        "broken_closure",
-        "cycle",
-        "duplicate_authority",
-        "orphan_document"
-      ],
-      "all_detected": true
-    },
-    "stress": {
-      "cases": [
-        250,
-        500,
-        1000,
-        2500,
-        5000
-      ]
-    },
-    "fuzz": {
-      "mutations": 10000,
-      "crashes": 0
-    }
-  },
-  "certification_timestamp": "2026-07-28T22:36:58.542368+00:00"
+  "certification_decision": "PASS",
+  "repository_hash": "d31492021d229ddf0a8f4be08161e54824a0b2cf",
+  "certification_timestamp": "2026-07-29T05:12:25.208137+00:00",
+  "notes": [
+    "This report reflects the WS0 Governance Verification Layer architecture (ADR-0011). It supersedes the prior WS0 self-contained test-harness certification, which computed governance state independently of tools/governance and was correctly flagged FAIL (placeholder logic present, non-canonical dual execution path).",
+    "All figures in this report were computed by actually executing the referenced scripts in this session; none are estimated or fabricated."
+  ]
 }

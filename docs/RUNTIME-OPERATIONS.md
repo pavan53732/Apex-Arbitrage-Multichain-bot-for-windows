@@ -11,6 +11,12 @@ canonical_source: docs/RUNTIME-OPERATIONS.md
 
 # Runtime Operations
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines how the backend runs, recovers, and stays observable in production — with explicit startup/shutdown/recovery sequencing, operator failure handling, and Windows-specific behavior.
 
@@ -187,3 +193,9 @@ Triggered when a critical subsystem fails and a backup is available.
 - **TRACEABILITY-MATRIX.md** — Runtime requirement coverage.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

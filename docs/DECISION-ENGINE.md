@@ -11,6 +11,12 @@ canonical_source: docs/DECISION-ENGINE.md
 
 # Decision Engine
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+
 ## Purpose
 Defines the authoritative gatekeeper between recommendation and execution.
 
@@ -57,3 +63,11 @@ An AI recommendation is blocked when policy or risk gates fail.
 ## Decision rules
 - Define approval, veto, and notification flow to the Windows UI.
 - Define how decision outcomes are logged and replayed.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

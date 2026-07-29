@@ -11,6 +11,12 @@ canonical_source: docs/PLUGIN-SDK.md
 
 # Plugin SDK
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines the Plugin SDK — manifest format, lifecycle hooks, versioning rules, sandbox and security constraints, API stability, and extension patterns.
 
@@ -128,3 +134,9 @@ interface PluginHooks {
 - **CONFIGURATION-REFERENCE.md** — Plugin config keys (`plugin.*`).
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

@@ -11,6 +11,12 @@ canonical_source: docs/WORKER-POOL.md
 
 # Worker Pool
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines formal worker capacity, lifecycle, queue priority, scheduling behavior, scaling policy, dynamic strategy weighting, crash recovery, and cross-subsystem integration contracts.
 
@@ -210,5 +216,13 @@ constraints:
 - **CONFIGURATION-REFERENCE.md** — Worker config keys.
 - **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
 - **TRACEABILITY-MATRIX.md** — REQ-RUNTIME-004, REQ-RESOURCE-002.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`). Content (lifecycle state machine, priority queues, scaling policy, crash recovery, cross-subsystem integration) unchanged from initial authoring. | Runtime Team |
 
 ---

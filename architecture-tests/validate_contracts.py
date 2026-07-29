@@ -26,7 +26,16 @@ REQUIRED_SECTIONS = [
     ("Version metadata", r"## Version"),
     ("Purpose section", r"## Purpose"),
     ("Owner / Ownership", r"(Owner:|## Ownership)"),
-    ("Terms / Contract body", r"(## Terms|## Contract|## Clauses|## Mandates|## \d+\.)"),
+    # A contract body may be expressed as a numbered section ("## 1. ..."),
+    # or as a heading that contains one of the canonical contract-body
+    # keywords anywhere in its text (e.g. "## Operational Contract",
+    # "## Interface Contract", "## Cache contract", "## Window contract",
+    # "## Mandated Controls", "## Governance Rules", "## Enterprise
+    # Contract - Simulation Engine"). The previous pattern only matched
+    # headings that literally *started* with "Contract"/"Terms"/etc,
+    # which produced false FAILs on 19 real [CONTRACT] documents whose
+    # body section is legitimately named e.g. "## Operational Contract".
+    ("Terms / Contract body", r"(^## \d+\.|^##.*\b(Terms|Contract|Clauses|Mandate[ds]?)\b)"),
     ("Cross-references", r"## Cross-?references"),
     ("Version History", r"## Version History"),
 ]
@@ -40,12 +49,47 @@ def check_contract(filepath):
     found = []
 
     for label, pattern in REQUIRED_SECTIONS:
-        if re.search(pattern, content, re.IGNORECASE):
+        if re.search(pattern, content, re.IGNORECASE | re.MULTILINE):
             found.append(label)
         else:
             missing.append(label)
 
     return found, missing
+
+
+def get_front_matter_type(content):
+    """Extract the `type:` field from YAML front matter, if present.
+
+    Returns the front-matter type value (e.g. "CONTRACT", "REFERENCE"),
+    or None if there is no front matter / no type field.
+    """
+    fm_match = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
+    if not fm_match:
+        return None
+    type_match = re.search(r"^type:\s*(\S+)", fm_match.group(1), re.MULTILINE)
+    return type_match.group(1) if type_match else None
+
+
+def is_self_declared_contract(content):
+    """Determine whether a document declares itself as [CONTRACT] type.
+
+    A document is only a self-declared CONTRACT when either:
+      1. Its YAML front-matter `type:` field is exactly `CONTRACT`, or
+      2. It contains an explicit "Document type: [CONTRACT]" declaration
+         (the canonical inline declaration used by non-front-matter docs).
+
+    Merely mentioning the string "[CONTRACT]" in prose (e.g. a document
+    that discusses "the 51 [CONTRACT] documents") must NOT be treated as
+    a self-declaration. The previous substring-only check produced a false
+    positive on FINAL-READINESS-AUDIT.md, which is `type: REFERENCE` but
+    references other contracts by name in its executive summary.
+    """
+    if get_front_matter_type(content) == "CONTRACT":
+        return True
+    if re.search(r"Document type:\s*\[CONTRACT\]", content, re.IGNORECASE):
+        return True
+    return False
+
 
 def main():
     if not os.path.exists(DOCS_DIR):
@@ -60,8 +104,8 @@ def main():
             continue
         filepath = os.path.join(DOCS_DIR, f)
         with open(filepath) as fh:
-            first_30 = fh.read(3000)
-        if re.search(r"\[CONTRACT\]", first_30):
+            content = fh.read()
+        if is_self_declared_contract(content):
             contract_files.append(filepath)
 
     if not contract_files:

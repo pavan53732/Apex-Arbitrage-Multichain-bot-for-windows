@@ -11,6 +11,12 @@ canonical_source: docs/ORCHESTRATOR.md
 
 # Orchestrator
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines the single authoritative runtime orchestrator that coordinates all subsystem sequencing — startup ordering, subsystem priority, cross-system dependency resolution, health-driven state transitions, sleep/resume coordination, recovery delegation, and graceful shutdown ordering. The Orchestrator is the master lifecycle coordinator; it does NOT own the internal behavior of any subsystem, but it does own the sequencing, gating, and coordination rules that govern when subsystems may start, stop, recover, or transition between operational states.
 
@@ -397,3 +403,9 @@ graph TD
 - **TRACEABILITY-MATRIX.md** — REQ-RUNTIME-001, REQ-RUNTIME-002.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

@@ -11,6 +11,16 @@ canonical_source: docs/CHAIN-INTEGRATION.md
 
 # Chain Integration
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+
+## Purpose
+Defines chain integration.
+
+---
 ## 1. Overview
 
 APEX is **chain-agnostic by design**. Every supported chain is an adapter
@@ -386,3 +396,11 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

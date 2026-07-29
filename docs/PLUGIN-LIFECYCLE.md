@@ -11,6 +11,12 @@ canonical_source: docs/PLUGIN-LIFECYCLE.md
 
 # Plugin Lifecycle
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines the complete lifecycle for plugins — discovery, dependency resolution, capability negotiation, version compatibility, isolation, permissions, resource quotas, crash recovery, marketplace verification, digital signatures, update lifecycle, and cross-subsystem integration.
 
@@ -285,3 +291,9 @@ stateDiagram-v2
 - **TRACEABILITY-MATRIX.md** — REQ-PLUGIN-004.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

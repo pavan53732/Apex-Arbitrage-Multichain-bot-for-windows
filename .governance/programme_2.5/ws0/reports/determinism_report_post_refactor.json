@@ -1,0 +1,62 @@
+{
+  "description": "Real determinism verification executed against the canonical governance runtime (tools/governance) AFTER the WS0 verification-layer refactor (ADR-0011). Each run independently re-indexes the repository, re-parses metadata, rebuilds graphs, recomputes closures and validators, and re-scores completeness. This supersedes reliance on WS0's own historical pre-refactor determinism_report.json (preserved separately as historical evidence per ADR-0011).",
+  "total_runs": 10,
+  "successful_runs": 10,
+  "failed_runs": 0,
+  "distinct_output_hashes": 1,
+  "mismatches": [],
+  "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8",
+  "repository_hash": "d31492021d229ddf0a8f4be08161e54824a0b2cf",
+  "sample_output": {
+    "documents_indexed": 277,
+    "behavioural_roots": 28,
+    "validation_findings": 2065,
+    "closures_computed": 28,
+    "avg_completeness": 0.2234985231375123,
+    "graph_nodes": 277,
+    "graph_edges": 879
+  },
+  "timestamp": "2026-07-29T05:11:17.460829+00:00",
+  "runs": [
+    {
+      "run": 1,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    },
+    {
+      "run": 2,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    },
+    {
+      "run": 3,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    },
+    {
+      "run": 4,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    },
+    {
+      "run": 5,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    },
+    {
+      "run": 6,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    },
+    {
+      "run": 7,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    },
+    {
+      "run": 8,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    },
+    {
+      "run": 9,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    },
+    {
+      "run": 10,
+      "output_hash": "fbea66c8280485b2371d5031b5cb55bad773444dac795d1a60ff7de08adf7ed8"
+    }
+  ]
+}

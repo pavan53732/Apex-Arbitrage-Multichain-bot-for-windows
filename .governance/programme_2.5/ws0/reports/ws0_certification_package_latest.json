@@ -1,0 +1,103 @@
+{
+  "certification_id": "fb692fc4a3c1d113",
+  "workstream_id": "WS0",
+  "version": "1.0.0",
+  "timestamp": "2026-07-29T05:11:52.282516+00:00",
+  "verification": {
+    "timestamp": "2026-07-29T05:11:52.274248+00:00",
+    "output_hash": "fbea66c8280485b2",
+    "checks": {
+      "documents_indexed": {
+        "present": true,
+        "value": 277
+      },
+      "behavioural_roots": {
+        "present": true,
+        "value": 28
+      },
+      "validation_findings": {
+        "present": true,
+        "value": 2065
+      },
+      "closures_computed": {
+        "present": true,
+        "value": 28
+      },
+      "avg_completeness": {
+        "present": true,
+        "value": 0.2234985231375123
+      },
+      "graph_nodes": {
+        "present": true,
+        "value": 277
+      },
+      "graph_edges": {
+        "present": true,
+        "value": 879
+      }
+    },
+    "all_checks_pass": true
+  },
+  "evidence": {
+    "repository_hash": "d31492021d229ddf",
+    "timestamp": "2026-07-29T05:11:52.276847+00:00",
+    "canonical_output_hash": "fbea66c8280485b2",
+    "evidence_files": [
+      {
+        "path": ".governance/graphs/config_graph.graphml",
+        "hash": "da2abed38e985039",
+        "type": "graph"
+      },
+      {
+        "path": ".governance/graphs/event_graph.graphml",
+        "hash": "724647f298b5441c",
+        "type": "graph"
+      },
+      {
+        "path": ".governance/graphs/dependency_graph.graphml",
+        "hash": "34f93110a481e292",
+        "type": "graph"
+      },
+      {
+        "path": ".governance/graphs/document_graph.graphml",
+        "hash": "1de06c1d781dd741",
+        "type": "graph"
+      },
+      {
+        "path": ".governance/graphs/interface_graph.graphml",
+        "hash": "12d90214d80b4559",
+        "type": "graph"
+      },
+      {
+        "path": ".governance/graphs/ownership_graph.graphml",
+        "hash": "914366dd96fb6be4",
+        "type": "graph"
+      },
+      {
+        "path": ".governance/graphs/schema_graph.graphml",
+        "hash": "724647f298b5441c",
+        "type": "graph"
+      },
+      {
+        "path": ".governance/graphs/state_machine_graph.graphml",
+        "hash": "9644eee6f22385ef",
+        "type": "graph"
+      },
+      {
+        "path": ".governance/freeze/freeze_WS0.json",
+        "hash": "766c5d4b2a7da804",
+        "type": "freeze"
+      }
+    ]
+  },
+  "regression": {
+    "timestamp": "2026-07-29T05:11:52.280715+00:00",
+    "fields_compared": [],
+    "regressions": [],
+    "passed": true,
+    "baseline_available": false,
+    "note": "No baseline present; this is the initial certification run. Baseline saved for future regression checks."
+  },
+  "certification_decision": "PASS",
+  "repository_hash": "d31492021d229ddf"
+}

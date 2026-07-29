@@ -49,6 +49,34 @@ def find_owner_conflicts():
         if len(docs) > 1:
             errors.append(f"OWNERSHIP CONFLICT: '{claim}' claimed by {len(docs)} docs: {', '.join(docs)}")
 
+def _get_front_matter_type(content):
+    """Extract the `type:` field from YAML front matter, if present."""
+    fm_match = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
+    if not fm_match:
+        return None
+    type_match = re.search(r"^type:\s*(\S+)", fm_match.group(1), re.MULTILINE)
+    return type_match.group(1) if type_match else None
+
+
+def _is_self_declared_contract(content):
+    """Determine whether a document declares ITSELF as [CONTRACT] type.
+
+    A naive `"[CONTRACT]" in content` substring check produces false
+    positives whenever a document merely *mentions* contracts in prose
+    (e.g. "the 51 [CONTRACT] documents", or a REFERENCE doc explaining
+    that it is "not a [CONTRACT] and must not be treated as one"). Only
+    treat a document as self-declaring CONTRACT type when either:
+      1. Its YAML front-matter `type:` field is exactly `CONTRACT`, or
+      2. It contains the canonical inline declaration
+         "Document type: [CONTRACT]".
+    """
+    if _get_front_matter_type(content) == "CONTRACT":
+        return True
+    if re.search(r"Document type:\s*\[CONTRACT\]", content, re.IGNORECASE):
+        return True
+    return False
+
+
 def check_contract_metadata():
     """Verify all [CONTRACT] documents have required metadata."""
     for f in sorted(os.listdir(DOCS_DIR)):
@@ -56,21 +84,23 @@ def check_contract_metadata():
             continue
         filepath = os.path.join(DOCS_DIR, f)
         with open(filepath) as fh:
-            content = fh.read(3000)
-        
-        if "[CONTRACT]" not in content:
+            content = fh.read()
+
+        if not _is_self_declared_contract(content):
             continue
-        
+
+        head = content[:3000]
+
         # Check for version block
-        if not re.search(r'## Version', content, re.IGNORECASE):
+        if not re.search(r'## Version', head, re.IGNORECASE):
             errors.append(f"MISSING VERSION: {f} declares [CONTRACT] but has no ## Version section")
         
         # Check for purpose section
-        if not re.search(r'## Purpose', content, re.IGNORECASE):
+        if not re.search(r'## Purpose', head, re.IGNORECASE):
             errors.append(f"MISSING PURPOSE: {f} declares [CONTRACT] but has no ## Purpose section")
         
         # Check for owner
-        if not re.search(r'(Owner:|## Ownership)', content, re.IGNORECASE):
+        if not re.search(r'(Owner:|## Ownership)', head, re.IGNORECASE):
             warnings.append(f"NO EXPLICIT OWNER: {f} declares [CONTRACT] but has no explicit Owner line")
 
 def check_doc_map_registration():

@@ -11,6 +11,12 @@ canonical_source: docs/TASK-SCHEDULER.md
 
 # Task Scheduler
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines the task scheduling system — cron-style scheduling, interval-based scheduling, one-shot tasks, scheduler behavior, task priority, queue integration, retry scheduling, and cross-subsystem integration contracts.
 
@@ -180,3 +186,9 @@ Schedule Definition → Cron Engine / Interval Timer / One-Shot Dispatcher
 - **END-TO-END-WIRING-CONTRACT.md** — Cross-subsystem wiring.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

@@ -11,6 +11,12 @@ canonical_source: docs/TRADING-ENGINE.md
 
 # Trading Engine
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+
 ## Purpose
 Defines the end-to-end trading decision and execution coordination layer — complete execution algorithm, order routing algorithm, risk scoring formulas, liquidity scoring, arbitrage scoring, opportunity expiry, partial fills, multi-chain execution, gas optimisation, MEV decision tree, wallet selection, retry matrices, rollback rules, position reconciliation, and cross-subsystem integration contracts.
 
@@ -499,3 +505,9 @@ When a position is held (cannot unwind):
 - **TRACEABILITY-MATRIX.md** — Trade requirement coverage.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

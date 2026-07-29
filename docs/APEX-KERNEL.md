@@ -11,6 +11,12 @@ canonical_source: docs/APEX-KERNEL.md
 
 # Apex Kernel
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
 ## Purpose
 Defines the runtime kernel that owns service registration, lifecycle, events, health, dependency injection, configuration, and plugin loading.
 
@@ -54,3 +60,11 @@ Defines the responsibilities, invariants, and expected behavior for this compone
 
 ## Example
 An input is validated before any state-changing action.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

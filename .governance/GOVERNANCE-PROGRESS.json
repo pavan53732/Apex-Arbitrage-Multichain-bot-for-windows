@@ -5,10 +5,10 @@
     "completed": true,
     "last_commit": null,
     "notes": [
-      "Indexed 275 documents",
-      "Detected 27 behavioural roots",
+      "Indexed 277 documents",
+      "Detected 28 behavioural roots",
       "Generated 2065 validation findings",
-      "Computed 27 closures",
+      "Computed 28 closures",
       "Exported 8 graphs"
     ]
   }

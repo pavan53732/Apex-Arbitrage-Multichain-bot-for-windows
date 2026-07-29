@@ -11,6 +11,12 @@ canonical_source: docs/AI-ORCHESTRATION.md
 
 # AI Orchestration
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** AI Team
+
 ## Purpose
 Defines lifecycle, coordination rules, multi-model orchestration, agent routing, sequencing, fallback, tool selection, memory coordination, consensus, decision handoff, and degradation behavior for the AI agent set.
 
@@ -387,3 +393,9 @@ Reflection produces structured output:
 - **CONFIGURATION-REFERENCE.md** — AI config keys.
 
 ---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | AI Team |

@@ -11,6 +11,16 @@ canonical_source: docs/DEX-INTEGRATION.md
 
 # Dex Integration
 
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+
+## Purpose
+Defines DEX integration.
+
+---
 ## 1. Overview
 
 A DEX adapter gives APEX the ability to:
@@ -324,3 +334,11 @@ An input is validated before any state-changing action.
 
 ## Desktop app integration
 - Must define UI-facing DEX selection, slippage controls, and arbitrage settings exposure.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |
