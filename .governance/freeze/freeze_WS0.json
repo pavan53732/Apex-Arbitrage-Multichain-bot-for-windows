@@ -1,20 +1,20 @@
 {
   "identity": {
-    "freeze_id": "b0cf3fe5e28ec0c5",
+    "freeze_id": "2f44869e2409614d",
     "workstream_id": "WS0",
-    "workstream_version": "2.2.0",
-    "repository_version": "a8fdfc9c6a0f175ac0de4a111f385a99b3a26fb1",
+    "workstream_version": "2.3.0",
+    "repository_version": "a8c70f47d6b9d4a1dabb07fccd02359a5fd7fd5a",
     "governance_platform_version": "1.0.0",
     "schema_version": "2.1.0"
   },
   "repository": {
-    "repository_tree_hash": "4b4ce71cab4481120e5e5493aac34a8655a09f14",
+    "repository_tree_hash": "99ac64e9314861caf32c69748bc41cecc5146c5a",
     "git_branch": "main",
-    "commit_hash": "a8fdfc9c6a0f175ac0de4a111f385a99b3a26fb1",
+    "commit_hash": "a8c70f47d6b9d4a1dabb07fccd02359a5fd7fd5a",
     "working_tree_status": "clean"
   },
   "execution": {
-    "timestamp": "2026-07-29T09:21:46.713819+00:00",
+    "timestamp": "2026-07-29T09:24:48.316896+00:00",
     "runtime_command": "apex-gov run",
     "machine_information": {
       "python_version": "Python 3.13.14"
@@ -83,8 +83,8 @@
     ]
   },
   "freeze": {
-    "freeze_timestamp": "2026-07-29T09:21:46.715654+00:00",
+    "freeze_timestamp": "2026-07-29T09:24:48.318866+00:00",
     "supersedes": ".governance/archive/pre-consolidation-2026-07-29/freeze_WS0_stale.json",
-    "reason_for_regeneration": "Third and final regeneration in the Repository Canonicality Repair session, referencing commit a8fdfc9c6 (Phase D certification commit). KNOWN LIMITATION, disclosed in GOVERNANCE-CERTIFICATION-REPORT.md and in commit b0bb1e4f8's message: this freeze record's commit_hash will itself go stale the instant this regeneration is committed, since a commit cannot embed its own resulting hash. This is a structural property of any self-referential freeze design, not a bug specific to this repair. WS6 (Freeze Framework) should redefine the freeze semantic as 'last commit BEFORE this freeze was taken' (which this field already correctly represents) and adjust the Integrity Engine's freeze check to compare against 'previous commit' rather than literal current-HEAD equality, so this class of check does not perpetually FAIL by construction."
+    "reason_for_regeneration": "Regenerated against commit a8c70f47d (the commit that fixed IntegrityEngine.check_freeze() to correctly accept parent-commit-only regeneration commits). This commit changes ONLY this file, satisfying the new acceptance rule: the freeze record's commit_hash equals HEAD's parent, and this commit's diff contains only .governance/freeze/freeze_WS0.json."
   }
 }
