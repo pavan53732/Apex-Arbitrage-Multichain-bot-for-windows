@@ -45,12 +45,23 @@ concerns the checklist names separately:
 from __future__ import annotations
 
 import hashlib
-import hmac
 import json
-import secrets
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Optional
+
+from cryptography.exceptions import InvalidSignature
+from cryptography.hazmat.primitives.asymmetric.ed25519 import (
+    Ed25519PrivateKey,
+    Ed25519PublicKey,
+)
+from cryptography.hazmat.primitives.serialization import (
+    Encoding,
+    NoEncryption,
+    PrivateFormat,
+    PublicFormat,
+    load_pem_public_key,
+)
 
 
 @dataclass(frozen=True)
@@ -123,44 +134,97 @@ class FreezeHash:
 
 
 class FreezeValidator:
-    """Tamper-evidence layer for freeze records: HMAC-SHA256 signatures
-    keyed by a repository-local secret, generated on first use and
-    stored outside version control (`.governance/freeze/.signing_key`,
-    listed in .gitignore-equivalent handling -- callers are responsible
-    for ensuring this path is git-ignored; this class does not modify
-    .gitignore itself).
+    """Tamper-evidence layer for freeze records: Ed25519 asymmetric
+    digital signatures.
 
     A `FreezeHash` content hash alone is NOT tamper-evident: anyone who
     can edit a freeze record can also recompute a matching content hash
-    from the edited content and paste it back in. An HMAC signature
-    requires possession of the secret key to produce a signature that
-    verifies -- editing the record without the key invalidates the
-    signature, which IS what "tamper-evident" means.
+    from the edited content and paste it back in. A real signature
+    requires possession of the PRIVATE key to produce a signature that
+    verifies -- editing the record without the private key invalidates
+    the signature, which IS what "tamper-evident" means.
+
+    IMPORTANT (asymmetric, not symmetric): an earlier version of this
+    class used HMAC-SHA256 with a single shared secret key, generated
+    on first use and stored at `.governance/freeze/.signing_key`
+    (git-ignored, since committing a symmetric key would let anyone
+    with repo read access forge signatures). That correctly protected
+    against tampering IN THE SAME WORKING COPY, but made verification
+    from any OTHER checkout -- most importantly, a fresh `git clone`,
+    exactly the verification method this entire governance platform's
+    own audit discipline requires -- impossible in principle: the
+    private key never left the machine that generated it, so
+    `FreezeValidator.verify()` in a fresh clone always failed (not
+    because of tampering, but because the key file doesn't exist there
+    at all). This was confirmed as a real defect via this session's own
+    mandatory fresh-clone re-verification step
+    (`apex-gov integrity`'s freeze check failed in a fresh clone with
+    "record content does not match its embedded signature" even though
+    the record was never touched).
+
+    Fixed by switching to Ed25519 asymmetric signing: the PRIVATE key
+    (`.governance/freeze/.signing_key`) remains local-only and
+    git-ignored (only the machine that produces freeze records can sign
+    them), but the PUBLIC key
+    (`.governance/freeze/signing_public_key.pem`) is committed to the
+    repository -- verification only ever needs the public key, so a
+    fresh clone (or any third party) can genuinely verify a freeze
+    record's signature without needing access to the original signing
+    machine, while a would-be tamperer still cannot forge a valid
+    signature without the private key.
     """
 
-    def __init__(self, key_path: Path):
+    def __init__(self, key_path: Path, public_key_path: Optional[Path] = None):
         self.key_path = Path(key_path)
+        self.public_key_path = Path(public_key_path) if public_key_path else self.key_path.parent / "signing_public_key.pem"
 
-    def _load_or_create_key(self) -> bytes:
+    def _load_or_create_private_key(self) -> Ed25519PrivateKey:
         if self.key_path.exists():
-            return self.key_path.read_bytes()
+            return Ed25519PrivateKey.from_private_bytes(self.key_path.read_bytes())
         self.key_path.parent.mkdir(parents=True, exist_ok=True)
-        key = secrets.token_bytes(32)
-        self.key_path.write_bytes(key)
-        return key
+        private_key = Ed25519PrivateKey.generate()
+        raw_private = private_key.private_bytes(Encoding.Raw, PrivateFormat.Raw, NoEncryption())
+        self.key_path.write_bytes(raw_private)
+        self._write_public_key(private_key)
+        return private_key
+
+    def _write_public_key(self, private_key: Ed25519PrivateKey) -> None:
+        public_key = private_key.public_key()
+        pem = public_key.public_bytes(Encoding.PEM, PublicFormat.SubjectPublicKeyInfo)
+        self.public_key_path.parent.mkdir(parents=True, exist_ok=True)
+        self.public_key_path.write_bytes(pem)
 
     def sign(self, record_data: dict[str, Any]) -> str:
-        key = self._load_or_create_key()
+        private_key = self._load_or_create_private_key()
+        # Ensure the public key file is always present/current alongside
+        # the private key (idempotent -- re-derives the same public key
+        # from the same private key every time, so this never changes
+        # the public key file's content once created).
+        self._write_public_key(private_key)
         content_hash = FreezeHash.compute(record_data)
-        return hmac.new(key, content_hash.encode(), hashlib.sha256).hexdigest()
+        signature = private_key.sign(content_hash.encode())
+        return signature.hex()
 
     def verify(self, record_data: dict[str, Any], signature: str) -> bool:
-        if not self.key_path.exists():
+        """Verify using ONLY the public key -- this must succeed in a
+        fresh clone that has never seen the private key, as long as the
+        public key file is committed to the repository (which `sign()`
+        ensures happens automatically whenever a freeze record is
+        produced)."""
+        if not self.public_key_path.exists():
             return False
-        key = self.key_path.read_bytes()
+        try:
+            public_key = load_pem_public_key(self.public_key_path.read_bytes())
+            if not isinstance(public_key, Ed25519PublicKey):
+                return False
+        except ValueError:
+            return False
         content_hash = FreezeHash.compute(record_data)
-        expected = hmac.new(key, content_hash.encode(), hashlib.sha256).hexdigest()
-        return hmac.compare_digest(expected, signature)
+        try:
+            public_key.verify(bytes.fromhex(signature), content_hash.encode())
+            return True
+        except (InvalidSignature, ValueError):
+            return False
 
 
 @dataclass(frozen=True)

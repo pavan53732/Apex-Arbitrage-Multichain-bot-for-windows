@@ -179,8 +179,8 @@
   ],
   "closure_hash": "27986c2c2feeac7b876f3849f05b1cdf7acf86ff2bd6c8a39019b093d2c396f0",
   "closure_size": 176,
-  "generated_at": "2026-07-29T21:12:37.815707+00:00",
-  "generated_at_commit": "03846c8afa0ab1254e3c02b583b4e20e86b26e32",
+  "generated_at": "2026-07-29T21:53:58.085323+00:00",
+  "generated_at_commit": "4c57a4399fdef489f7dd65d74bcc2b863f8427e1",
   "reverse_closure_documents": [
     "docs/WINDOWS-SECURITY-INTEGRATION.md"
   ],

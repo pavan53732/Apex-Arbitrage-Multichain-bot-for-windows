@@ -31,10 +31,14 @@ __pycache__/
 .pytest_cache/
 *.egg-info/
 
-# Governance Freeze Framework (WS6) HMAC signing key -- NEVER COMMIT.
-# If this key is ever committed to version control, tamper-evidence is
-# void: anyone with read access to the repo history could forge valid
-# signatures for arbitrary freeze record content. Generated locally on
-# first `apex-gov freeze` invocation by
+# Governance Freeze Framework (WS6) Ed25519 PRIVATE signing key --
+# NEVER COMMIT. If this key is ever committed to version control,
+# tamper-evidence is void: anyone with read access to the repo history
+# could forge valid signatures for arbitrary freeze record content.
+# Generated locally on first `apex-gov freeze` invocation by
 # tools/governance/freeze/freeze_manifest.py's FreezeValidator.
+# The corresponding PUBLIC key (.governance/freeze/signing_public_key.pem)
+# is deliberately NOT ignored -- it MUST be committed so that a fresh
+# clone (or any third party) can verify freeze-record signatures
+# without needing access to the machine that produced them.
 .governance/freeze/.signing_key

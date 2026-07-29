@@ -1,0 +1,21 @@
+{
+  "commit": "4c57a4399fdef489f7dd65d74bcc2b863f8427e1",
+  "outputs": {
+    "avg_completeness": 0.2234985231375123,
+    "behavioural_root_registry_valid": true,
+    "behavioural_root_tiers_assigned": 35,
+    "behavioural_roots": 35,
+    "category_validator_findings": 72,
+    "category_validators_executed": 14,
+    "closure_artefacts_written": 175,
+    "closures_computed": 35,
+    "database_schema_version": 1,
+    "documents_indexed": 277,
+    "graph_edges": 878,
+    "graph_nodes": 281,
+    "roots_with_full_artefact_set": 35,
+    "validation_findings": 22
+  },
+  "record_hash": "a259bf630aea3de1a3f1f5fdf13056d6b20aba14171639e79f4b97256cbfb41d",
+  "timestamp": "2026-07-29T21:50:48.416210+00:00"
+}

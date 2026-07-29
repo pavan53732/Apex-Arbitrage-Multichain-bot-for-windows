@@ -15,6 +15,7 @@ dependencies = [
   "networkx>=3.2",
   "pydantic>=2.6",
   "rich>=13.0",
+  "cryptography>=42.0",
 ]
 
 [project.optional-dependencies]

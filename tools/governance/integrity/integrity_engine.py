@@ -464,11 +464,26 @@ class IntegrityEngine:
         current_commit = self._run(["git", "rev-parse", "HEAD"]).stdout.strip()
         freeze_commit = freeze.get("repository", {}).get("commit_hash") or freeze.get("identity", {}).get("repository_version")
 
-        # WS6/WS9: verify tamper-evidence (HMAC signature) BEFORE trusting
-        # anything else in the record -- if the signature does not
-        # verify, the record's content (including freeze_commit itself)
-        # cannot be trusted, regardless of what the staleness check below
-        # would otherwise conclude.
+        # WS6/WS9: verify tamper-evidence (Ed25519 signature) BEFORE
+        # trusting anything else in the record -- if the signature does
+        # not verify, the record's content (including freeze_commit
+        # itself) cannot be trusted, regardless of what the staleness
+        # check below would otherwise conclude.
+        #
+        # IMPORTANT: verification uses ONLY the public key
+        # (public_key_path), never the private signing key
+        # (signing_key_path, git-ignored, absent in any fresh clone).
+        # An earlier version of this check defaulted to constructing
+        # FreezeValidator from signing_key_path alone, which made
+        # verification silently impossible in a fresh clone (the exact
+        # defect this session's own mandatory fresh-clone
+        # re-verification step caught: `apex-gov integrity` failed the
+        # freeze check in a genuinely fresh `git clone` with "record
+        # content does not match its embedded signature", even though
+        # the record was never tampered with -- the private key file
+        # simply didn't exist there). Fixed by reading public_key_path
+        # explicitly and passing it as FreezeValidator's public_key_path
+        # argument, which is all `verify()` ever needs.
         tamper_evidence = freeze.get("tamper_evidence")
         if tamper_evidence:
             try:
@@ -476,12 +491,13 @@ class IntegrityEngine:
             except ImportError:
                 from governance.freeze.freeze_manifest import FreezeValidator  # type: ignore
             key_path = self.repo_root / tamper_evidence.get("signing_key_path", ".governance/freeze/.signing_key")
-            validator = FreezeValidator(key_path)
+            public_key_path = self.repo_root / tamper_evidence.get("public_key_path", ".governance/freeze/signing_public_key.pem")
+            validator = FreezeValidator(key_path, public_key_path=public_key_path)
             signature = tamper_evidence.get("signature", "")
             if not validator.verify(freeze, signature):
                 self._record(
                     "freeze", "FAIL",
-                    "freeze record failed tamper-evidence (HMAC signature) verification -- "
+                    "freeze record failed tamper-evidence (Ed25519 signature) verification -- "
                     "record content does not match its embedded signature",
                 )
                 return

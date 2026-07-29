@@ -95,6 +95,58 @@ def test_freeze_validator_reuses_same_key_across_instances(tmp_path):
     assert v2.verify(data, sig1) is True
 
 
+def test_freeze_validator_writes_a_committable_public_key_file(tmp_path):
+    """WS6 checklist item 'Freeze records are tamper-evident' requires
+    verification to be possible from a FRESH CLONE, not just the
+    machine that produced the signature -- this is the entire reason
+    for using asymmetric (not symmetric HMAC) signing."""
+    key_path = tmp_path / ".signing_key"
+    validator = FreezeValidator(key_path)
+    data = _sample_record_data()
+    validator.sign(data)
+    assert validator.public_key_path.exists()
+    assert validator.public_key_path.name == "signing_public_key.pem"
+    assert b"BEGIN PUBLIC KEY" in validator.public_key_path.read_bytes()
+
+
+def test_freeze_validator_verifies_using_only_public_key_without_private_key(tmp_path):
+    """Regression test for the exact defect found via this session's
+    mandatory fresh-clone re-verification step: a prior HMAC-based
+    implementation stored only a symmetric secret key, git-ignored, so
+    a fresh clone (which never has that file) could NEVER verify any
+    signature, regardless of tampering -- confirmed failing in a real
+    fresh `git clone` via `apex-gov integrity`. This test simulates
+    exactly that scenario: sign with the private key present, then
+    verify using a SEPARATE FreezeValidator instance pointed at a
+    private-key path that does not exist (simulating a fresh clone that
+    has the public key file -- which IS committed -- but not the
+    private key -- which is NOT).
+    """
+    signing_dir = tmp_path / "signing_machine"
+    signing_validator = FreezeValidator(signing_dir / ".signing_key")
+    data = _sample_record_data()
+    signature = signing_validator.sign(data)
+
+    # Simulate a fresh clone: copy ONLY the public key file, not the
+    # private key, to a separate location.
+    fresh_clone_dir = tmp_path / "fresh_clone"
+    fresh_clone_dir.mkdir()
+    public_key_copy = fresh_clone_dir / "signing_public_key.pem"
+    public_key_copy.write_bytes(signing_validator.public_key_path.read_bytes())
+
+    fresh_clone_validator = FreezeValidator(
+        key_path=fresh_clone_dir / ".signing_key",  # does NOT exist
+        public_key_path=public_key_copy,
+    )
+    assert not (fresh_clone_dir / ".signing_key").exists()
+    assert fresh_clone_validator.verify(data, signature) is True, (
+        "Verification must succeed using only the public key, with no "
+        "private key present -- this is the entire point of asymmetric "
+        "signing for a governance tool that must be auditable from a "
+        "fresh clone."
+    )
+
+
 def test_freeze_evidence_extracts_evidence_fields():
     data = _sample_record_data()
     evidence = FreezeEvidence.from_record_dict(data)

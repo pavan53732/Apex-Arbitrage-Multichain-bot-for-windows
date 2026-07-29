@@ -186,7 +186,8 @@ class FreezeEngine:
         record.data["tamper_evidence"] = {
             "signature": signature,
             "signing_key_path": str(signing_key_path.relative_to(self.repo_root)),
-            "algorithm": "HMAC-SHA256",
+            "public_key_path": str(validator.public_key_path.relative_to(self.repo_root)),
+            "algorithm": "Ed25519",
             "verify_with": "tools.governance.freeze.freeze_manifest.FreezeValidator.verify",
         }
 

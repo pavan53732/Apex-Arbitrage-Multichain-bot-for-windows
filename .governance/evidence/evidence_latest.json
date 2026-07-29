@@ -15,7 +15,7 @@
     "validation_findings": 22,
     "closures_computed": 35,
     "avg_completeness": 0.2234985231375123,
-    "graph_nodes": 277,
+    "graph_nodes": 281,
     "graph_edges": 878,
     "behavioural_root_registry_valid": true,
     "behavioural_root_tiers_assigned": 35,
@@ -27,10 +27,10 @@
   },
   "hashes": {
     ".governance/exports/documents.json": "72ad23f462d8fa3c18e1c6dcba019a4364526f0562ab762240e61c75d56a3367",
-    ".governance/governance.db": "5a6ce3c5e7b5835cebd000ca739d8c726af71548a149fe2265f003e4d5a371db",
+    ".governance/governance.db": "f99343ef9cbf5bcc0ee707450278f18b54eebca630074f0ed0556b27b50dd365",
     ".governance/graphs/config_graph.graphml": "da2abed38e9850390803e472e5e5a2db526e2951e4ad7022cbf5a09b0f92d5e1",
     ".governance/graphs/dependency_graph.graphml": "1a27fe5b26191585684336db8ad61a57594745af46a089f9bc398c1e302fcc79",
-    ".governance/graphs/document_graph.graphml": "15545162fd5883c5b7fbf925d3b5fa1e2224e33f5bff2fb4d468435babc91a50",
+    ".governance/graphs/document_graph.graphml": "b21ea80c1928fa79fcd21d2a154f237ef9ed921ad65a35967e00af988491840a",
     ".governance/graphs/event_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
     ".governance/graphs/interface_graph.graphml": "12d90214d80b4559b6ccb0a2075d9c24e7a8b2ab70dd53322f8c5e07bb3c4c65",
     ".governance/graphs/ownership_graph.graphml": "914366dd96fb6be4f810d2011017aa70ae03ec3de353f29124ca5dd1fbb79931",
@@ -44,7 +44,7 @@
     ".governance/graphs/runtime_graph.graphml": "60484b0270c9cead8970939066d1f6fea68d39037ebca02f2c74b32ae0162588",
     ".governance/graphs/algorithm_graph.graphml": "d09bb8a26d85465bf04db2fe8f66bbc6a61d5d6e352106edaa7a7f3b8cba3c28"
   },
-  "execution_time_ms": 2314.791,
+  "execution_time_ms": 2364.238,
   "validator_ids": [
     "governance_validator.missing_owners",
     "governance_validator.duplicate_owners",
@@ -79,13 +79,13 @@
     "architecture_test.validate_traceability": "PASS",
     "OWNERSHIP-001": "PASS"
   },
-  "commit": "b38f4975aef85ef47efec98e85374e804093cadd",
-  "repository_hash": "f6ba9367471ec49886fa7edba8e66106cb7b350b",
+  "commit": "4c57a4399fdef489f7dd65d74bcc2b863f8427e1",
+  "repository_hash": "1345deb1fbabc4c3f30d7f521f7069603b326bc3",
   "producer": "tools.governance.evidence.evidence_engine.EvidenceEngine",
   "consumer": [
     ".governance/programme_2.5/ws0/__init__.py (WS0VerificationLayer certification)",
     "tools.governance.integrity.integrity_engine.IntegrityEngine (check_evidence)",
     ".governance/freeze/freeze_WS0.json (Freeze Framework)"
   ],
-  "timestamp": "2026-07-29T20:43:26.655268+00:00"
+  "timestamp": "2026-07-29T21:50:48.416210+00:00"
 }
