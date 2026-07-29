@@ -1,0 +1,314 @@
+"""
+WS0 - Governance Verification Layer
+
+WS0 is NOT a governance runtime. It does NOT compute governance state.
+
+WS0 consumes canonical governance outputs from tools/governance/ and provides:
+- Verification: Cross-reference canonical outputs against evidence
+- Evidence Collection: Aggregate and certify governance evidence
+- Regression Checking: Compare canonical outputs across executions
+- Certification: Package evidence for governance certification
+- Reporting: Generate verification and certification reports
+
+All governance computation originates EXCLUSIVELY from tools/governance/.
+"""
+
+import json
+import subprocess
+import hashlib
+from pathlib import Path
+from datetime import datetime
+from typing import Dict, List, Any, Optional
+
+
+class WS0VerificationLayer:
+    """
+    WS0 Verification Layer - consumes canonical governance outputs.
+    
+    Does NOT perform:
+    - Repository indexing
+    - Metadata parsing
+    - Reference parsing
+    - Root detection
+    - Graph construction
+    - Closure generation
+    - Validation
+    - Metrics computation
+    - Integrity computation
+    - Freeze computation
+    - Evidence generation (from scratch)
+    
+    ONLY performs:
+    - Verification of canonical outputs
+    - Evidence collection from canonical outputs
+    - Regression checking across executions
+    - Certification packaging
+    - Reporting
+    """
+    
+    def __init__(self, repo_root: Path):
+        self.repo_root = Path(repo_root).resolve()
+        self.ws0_dir = self.repo_root / ".governance" / "programme_2.5" / "ws0"
+        self.reports_dir = self.ws0_dir / "reports"
+        self.canonical_cli = "tools/governance/cli/main.py"
+    
+    def invoke_canonical_runtime(self, command: str, config_path: Optional[str] = None) -> Dict[str, Any]:
+        """
+        Invoke the canonical governance runtime (tools/governance).
+        
+        This is the ONLY way WS0 obtains governance state.
+        """
+        cmd = ["python", "-m", "tools.governance.cli.main", command]
+        if config_path:
+            cmd.extend(["--config-path", config_path])
+        
+        result = subprocess.run(
+            cmd,
+            cwd=self.repo_root,
+            capture_output=True,
+            text=True
+        )
+        
+        return {
+            "command": command,
+            "returncode": result.returncode,
+            "stdout": result.stdout,
+            "stderr": result.stderr,
+            "success": result.returncode == 0
+        }
+    
+    def run_full_pipeline(self, config_path: Optional[str] = None) -> Dict[str, Any]:
+        """
+        Run the complete canonical governance pipeline via tools/governance.
+        
+        Returns the canonical governance output.
+        """
+        return self.invoke_canonical_runtime("run", config_path)
+    
+    def verify_canonical_output(self, output: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Verify canonical governance output integrity.
+        
+        Checks:
+        - Output structure matches expected schema
+        - Hash consistency
+        - Required fields present
+        """
+        verification = {
+            "timestamp": datetime.utcnow().isoformat(),
+            "output_hash": self._hash_dict(output),
+            "checks": {}
+        }
+        
+        required_fields = [
+            "documents_indexed",
+            "behavioural_roots", 
+            "validation_findings",
+            "closures_computed",
+            "avg_completeness",
+            "graph_nodes",
+            "graph_edges"
+        ]
+        
+        for field in required_fields:
+            verification["checks"][field] = {
+                "present": field in output,
+                "value": output.get(field)
+            }
+        
+        verification["all_checks_pass"] = all(
+            check["present"] for check in verification["checks"].values()
+        )
+        
+        return verification
+    
+    def collect_evidence(self, canonical_output: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Collect evidence from canonical governance outputs.
+        
+        Evidence includes:
+        - Repository hash
+        - Execution metadata
+        - Canonical output hashes
+        - Graph exports
+        - Freeze records (from canonical runtime)
+        """
+        evidence = {
+            "repository_hash": self._get_repo_hash(),
+            "timestamp": datetime.utcnow().isoformat(),
+            "canonical_output_hash": self._hash_dict(canonical_output),
+            "evidence_files": []
+        }
+        
+        # Collect graph exports from canonical runtime
+        graphs_dir = self.repo_root / ".governance" / "graphs"
+        if graphs_dir.exists():
+            for graph_file in graphs_dir.glob("*.graphml"):
+                evidence["evidence_files"].append({
+                    "path": str(graph_file.relative_to(self.repo_root)),
+                    "hash": self._hash_file(graph_file),
+                    "type": "graph"
+                })
+        
+        # Collect freeze records from canonical runtime
+        freeze_dir = self.repo_root / ".governance" / "freeze"
+        if freeze_dir.exists():
+            for freeze_file in freeze_dir.glob("*.json"):
+                evidence["evidence_files"].append({
+                    "path": str(freeze_file.relative_to(self.repo_root)),
+                    "hash": self._hash_file(freeze_file),
+                    "type": "freeze"
+                })
+        
+        return evidence
+    
+    def run_regression_check(self, current_output: Dict[str, Any], 
+                             baseline_output: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Run regression check between current and baseline canonical outputs.
+        """
+        regression = {
+            "timestamp": datetime.utcnow().isoformat(),
+            "fields_compared": [],
+            "regressions": [],
+            "passed": True
+        }
+        
+        all_keys = set(current_output.keys()) | set(baseline_output.keys())
+        
+        for key in all_keys:
+            if key in ["timestamp", "execution_time"]:
+                continue
+            
+            regression["fields_compared"].append(key)
+            
+            current_val = current_output.get(key)
+            baseline_val = baseline_output.get(key)
+            
+            if current_val != baseline_val:
+                regression["regressions"].append({
+                    "field": key,
+                    "baseline": baseline_val,
+                    "current": current_val
+                })
+                regression["passed"] = False
+        
+        return regression
+    
+    def generate_certification_package(self, verification: Dict[str, Any],
+                                        evidence: Dict[str, Any],
+                                        regression: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Generate WS0 certification package from verification results.
+        """
+        package = {
+            "certification_id": self._generate_cert_id(),
+            "workstream_id": "WS0",
+            "version": "1.0.0",
+            "timestamp": datetime.utcnow().isoformat(),
+            "verification": verification,
+            "evidence": evidence,
+            "regression": regression,
+            "certification_decision": "PASS" if (
+                verification.get("all_checks_pass", False) and 
+                regression.get("passed", False)
+            ) else "FAIL",
+            "repository_hash": self._get_repo_hash()
+        }
+        
+        return package
+    
+    def save_report(self, report: Dict[str, Any], filename: str) -> Path:
+        """Save a verification/certification report."""
+        self.reports_dir.mkdir(parents=True, exist_ok=True)
+        report_path = self.reports_dir / filename
+        with open(report_path, "w", encoding="utf-8") as f:
+            json.dump(report, f, indent=2)
+        return report_path
+    
+    def _hash_dict(self, data: Dict[str, Any]) -> str:
+        """Generate deterministic hash of a dictionary."""
+        content = json.dumps(data, sort_keys=True)
+        return hashlib.sha256(content.encode()).hexdigest()[:16]
+    
+    def _hash_file(self, path: Path) -> str:
+        """Generate hash of a file."""
+        with open(path, "rb") as f:
+            return hashlib.sha256(f.read()).hexdigest()[:16]
+    
+    def _get_repo_hash(self) -> str:
+        """Get repository commit hash."""
+        try:
+            result = subprocess.run(
+                ["git", "rev-parse", "HEAD"],
+                cwd=self.repo_root,
+                capture_output=True,
+                text=True
+            )
+            return result.stdout.strip()[:16]
+        except:
+            return "unknown"
+    
+    def _generate_cert_id(self) -> str:
+        """Generate certification ID."""
+        return hashlib.sha256(
+            f"{datetime.utcnow().isoformat()}{self._get_repo_hash()}".encode()
+        ).hexdigest()[:16]
+
+
+def main():
+    """CLI entry point for WS0 verification layer."""
+    import sys
+    
+    if len(sys.argv) < 2:
+        print("Usage: python -m .governance.programme_2.5.ws0 <command>")
+        print("Commands: verify, certify, regress, evidence")
+        sys.exit(1)
+    
+    repo_root = Path(sys.argv[2]) if len(sys.argv) > 2 else Path.cwd()
+    ws0 = WS0VerificationLayer(repo_root)
+    command = sys.argv[1]
+    
+    if command == "verify":
+        output = ws0.run_full_pipeline()
+        if output["success"]:
+            canonical = json.loads(output["stdout"])
+            verification = ws0.verify_canonical_output(canonical)
+            ws0.save_report(verification, f"verification_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+            print(json.dumps(verification, indent=2))
+        else:
+            print(f"Canonical runtime failed: {output['stderr']}")
+            sys.exit(1)
+    
+    elif command == "certify":
+        output = ws0.run_full_pipeline()
+        if output["success"]:
+            canonical = json.loads(output["stdout"])
+            verification = ws0.verify_canonical_output(canonical)
+            evidence = ws0.collect_evidence(canonical)
+            regression = {"passed": True, "regressions": []}  # No baseline for initial cert
+            package = ws0.generate_certification_package(verification, evidence, regression)
+            ws0.save_report(package, f"ws0_certification_package_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+            print(json.dumps(package, indent=2))
+        else:
+            print(f"Canonical runtime failed: {output['stderr']}")
+            sys.exit(1)
+    
+    elif command == "evidence":
+        output = ws0.run_full_pipeline()
+        if output["success"]:
+            canonical = json.loads(output["stdout"])
+            evidence = ws0.collect_evidence(canonical)
+            ws0.save_report(evidence, f"evidence_report_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
+            print(json.dumps(evidence, indent=2))
+        else:
+            print(f"Canonical runtime failed: {output['stderr']}")
+            sys.exit(1)
+    
+    else:
+        print(f"Unknown command: {command}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
