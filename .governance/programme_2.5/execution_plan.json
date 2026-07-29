@@ -2,7 +2,7 @@
   "programme_id": "PROGRAMME_2.5",
   "title": "Governance Platform Hardening",
   "objective": "Make the governance platform itself deterministic, trustworthy, and self-consistent before allowing it to govern the repository.",
-  "status": "PENDING",
+  "status": "IN_PROGRESS_NOT_CERTIFIED",
   "workstreams": 9,
   "phase_0": {
     "phase_id": "PROGRAMME_2.5_PHASE_0",
@@ -85,5 +85,7 @@
     "policy": "After Phase 0.75, no workstream may modify frozen architecture or specifications.",
     "process": "If implementation reveals incorrect specification, implementation must stop. Change must be proposed through new ADR and specification update. Only after specification update may implementation continue.",
     "purpose": "Prevent 'fixing the spec in code' and keep architecture as source of truth."
-  }
+  },
+  "status_last_reconciled_at": "2026-07-29",
+  "status_note": "Not PENDING: substantial engineering (determinism, single-canonical-runtime, Evidence/Integrity/Freeze engines, reverse closure, validator exit semantics, identifier-normalization fix) is complete and live-verified. Not CERTIFIED: Phase-0-frozen specification is only partially implemented across all 9 workstreams -- see WORKSTREAM-STATUS-ROLLUP.json. See also phase_0.75/adr_0012_phase0_specification_revision_PROPOSED.md for a proposed (not yet ratified) path to resolve the specification-vs-implementation gap."
 }

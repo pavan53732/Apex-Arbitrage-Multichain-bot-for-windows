@@ -1,6 +1,37 @@
 {
   "workstream_id": "WS3",
   "name": "Validator Framework",
-  "status": "PENDING",
-  "created_at": "2026-07-28T22:18:54.504791+00:00"
+  "status": "PARTIALLY_IMPLEMENTED",
+  "checklist_items_passing": "2/4",
+  "checklist_evidence": [
+    {
+      "item": "14 validator/<category>/ subdirectories implemented",
+      "status": "FAIL",
+      "detail": "validator/ contains no category subdirectories at all (only governance_validator.py, registry.py, __init__.py as flat files). Found dirs: []"
+    },
+    {
+      "item": "Every validator independently executable",
+      "status": "PASS",
+      "detail": "9 validator IDs catalogued in registry.py, each with an `invoke` callable: ['governance_validator.missing_owners', 'governance_validator.duplicate_owners', 'governance_validator.broken_references', 'governance_validator.cycles', 'architecture_test.audit_duplicates', 'architecture_test.validate_contracts', 'architecture_test.validate_cross_references', 'architecture_test.validate_ownership', 'architecture_test.validate_traceability']"
+    },
+    {
+      "item": "Every validator has test coverage",
+      "status": "FAIL",
+      "detail": "Not independently verified per-ID; test_validator.py and test_validator_registry.py exist but do not assert 1:1 per-validator-ID coverage."
+    },
+    {
+      "item": "Every validator produces evidence",
+      "status": "PASS",
+      "detail": "EvidenceEngine.collect() records validator_ids + validator_results for every run_all_validators() execution."
+    }
+  ],
+  "created_at": "2026-07-28T22:18:54.000000+00:00",
+  "last_verified_at": "2026-07-29T14:46:34.283562+00:00",
+  "last_verified_commit": "3b1240164b08e17037f765034409450247b2c314",
+  "verification_method": "governance/programme_2.5/_reconciliation/verify_workstreams.py (live execution against installed `governance` package + direct source inspection; no field is asserted without a corresponding executed check)",
+  "notes": [
+    "This manifest replaces a stale hand-authored manifest that reported status=PENDING unconditionally from programme inception through commit 3b1240164, regardless of actual implementation progress made in prior remediation rounds. That was a governance self-description defect (repository's own governance metadata did not reflect actual implementation state) -- flagged as CRITICAL in the Programme 2.5 Final Certification Audit.",
+    "PARTIALLY_IMPLEMENTED is not a passing grade. It means some checklist items are genuinely satisfied by live, executable code and some are not. See checklist_evidence for the itemized breakdown.",
+    "This manifest is derived data. Re-run verify_workstreams.py + this script after any future change to tools/governance/ to keep it truthful; do not hand-edit the status field."
+  ]
 }

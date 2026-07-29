@@ -14,7 +14,9 @@
         "Zero false positive roots",
         "Zero duplicate roots"
       ],
-      "status": "PENDING"
+      "status": "PARTIALLY_IMPLEMENTED",
+      "passing": "4/8",
+      "evidence_reference": ".governance/programme_2.5/ws1/manifest.json"
     },
     {
       "id": "CHECK-WS2",
@@ -31,7 +33,9 @@
         "Every behavioural root has work queue",
         "Every behavioural root has maturity report"
       ],
-      "status": "PENDING"
+      "status": "PARTIALLY_IMPLEMENTED",
+      "passing": "3/10",
+      "evidence_reference": ".governance/programme_2.5/ws2/manifest.json"
     },
     {
       "id": "CHECK-WS3",
@@ -55,7 +59,9 @@
         "Every validator has test coverage",
         "Every validator produces evidence"
       ],
-      "status": "PENDING"
+      "status": "PARTIALLY_IMPLEMENTED",
+      "passing": "2/4",
+      "evidence_reference": ".governance/programme_2.5/ws3/manifest.json"
     },
     {
       "id": "CHECK-WS4",
@@ -78,7 +84,9 @@
         "Every graph is reproducible from repository",
         "Every graph is validated against source documents"
       ],
-      "status": "PENDING"
+      "status": "PARTIALLY_IMPLEMENTED",
+      "passing": "1/4",
+      "evidence_reference": ".governance/programme_2.5/ws4/manifest.json"
     },
     {
       "id": "CHECK-WS5",
@@ -94,7 +102,9 @@
         "All data migrated successfully",
         "Schema version documented"
       ],
-      "status": "PENDING"
+      "status": "PARTIALLY_IMPLEMENTED",
+      "passing": "3/6",
+      "evidence_reference": ".governance/programme_2.5/ws5/manifest.json"
     },
     {
       "id": "CHECK-WS6",
@@ -110,7 +120,9 @@
         "Freeze records are tamper-evident",
         "Freeze history is queryable"
       ],
-      "status": "PENDING"
+      "status": "PARTIALLY_IMPLEMENTED",
+      "passing": "1/4",
+      "evidence_reference": ".governance/programme_2.5/ws6/manifest.json"
     },
     {
       "id": "CHECK-WS7",
@@ -130,7 +142,9 @@
         "All evidence is timestamped and hashed",
         "Evidence is queryable and auditable"
       ],
-      "status": "PENDING"
+      "status": "PARTIALLY_IMPLEMENTED",
+      "passing": "1/4",
+      "evidence_reference": ".governance/programme_2.5/ws7/manifest.json"
     },
     {
       "id": "CHECK-WS8",
@@ -144,7 +158,9 @@
         "Metrics are timestamped",
         "Metrics history is queryable"
       ],
-      "status": "PENDING"
+      "status": "PARTIALLY_IMPLEMENTED",
+      "passing": "3/5",
+      "evidence_reference": ".governance/programme_2.5/ws8/manifest.json"
     },
     {
       "id": "CHECK-WS9",
@@ -165,7 +181,12 @@
         "All checks pass before Programme 3 can start",
         "Failures are specific and actionable"
       ],
-      "status": "PENDING"
+      "status": "PARTIALLY_IMPLEMENTED",
+      "passing": "4/5",
+      "evidence_reference": ".governance/programme_2.5/ws9/manifest.json"
     }
-  ]
+  ],
+  "last_reconciled_at_commit": "3b1240164b08e17037f765034409450247b2c314",
+  "reconciliation_method": ".governance/programme_2.5/_reconciliation/verify_workstreams.py",
+  "overall_status": "NOT_COMPLETE -- no workstream fully IMPLEMENTED; see WORKSTREAM-STATUS-ROLLUP.json"
 }

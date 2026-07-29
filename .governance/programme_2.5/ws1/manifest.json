@@ -1,6 +1,57 @@
 {
   "workstream_id": "WS1",
   "name": "Root Detection Engine",
-  "status": "PENDING",
-  "created_at": "2026-07-28T22:18:54.503839+00:00"
+  "status": "PARTIALLY_IMPLEMENTED",
+  "checklist_items_passing": "4/8",
+  "checklist_evidence": [
+    {
+      "item": "Behavioural Root Registry exists and is valid",
+      "status": "FAIL",
+      "detail": "No persisted registry file (JSON) is produced by the CLI; roots are only emitted to stdout by `apex-gov roots`. A stray prior registry (behavioural_root_registry.json) was archived as stale/incorrect (claimed 34, had 22 entries)."
+    },
+    {
+      "item": "Root taxonomy is documented",
+      "status": "PASS",
+      "detail": "phase_0/root_taxonomy.json documents a 6-tier taxonomy (frozen spec exists)."
+    },
+    {
+      "item": "Root taxonomy is implemented",
+      "status": "FAIL",
+      "detail": "BehaviouralRootDetector has zero tier concept -- flat boolean is_core_root()/detect_roots() only. Spec and implementation diverge."
+    },
+    {
+      "item": "Root validation is implemented",
+      "status": "PASS",
+      "detail": "apex-gov validate + IntegrityEngine.check_roots() both execute against live roots."
+    },
+    {
+      "item": "Root lifecycle is defined",
+      "status": "FAIL",
+      "detail": "No lifecycle states (proposed/active/deprecated) exist for behavioural roots anywhere in code or schema."
+    },
+    {
+      "item": "Root ownership is clear",
+      "status": "PASS",
+      "detail": "Every document (incl. roots) carries an `owner` front-matter field, consumed by GraphBuilder.ownership_graph."
+    },
+    {
+      "item": "Zero false positive roots",
+      "status": "FAIL",
+      "detail": "3 CORE_ROOTS/EXCLUDED_PATTERNS contradictions unchanged: SIMULATION-ENGINE.md, WORKER-POOL.md, SERVICE-REGISTRY.md."
+    },
+    {
+      "item": "Zero duplicate roots",
+      "status": "PASS",
+      "detail": "28 roots detected, all distinct paths (verified via apex-gov roots, no path repeats)."
+    }
+  ],
+  "created_at": "2026-07-28T22:18:54.000000+00:00",
+  "last_verified_at": "2026-07-29T14:46:34.283562+00:00",
+  "last_verified_commit": "3b1240164b08e17037f765034409450247b2c314",
+  "verification_method": "governance/programme_2.5/_reconciliation/verify_workstreams.py (live execution against installed `governance` package + direct source inspection; no field is asserted without a corresponding executed check)",
+  "notes": [
+    "This manifest replaces a stale hand-authored manifest that reported status=PENDING unconditionally from programme inception through commit 3b1240164, regardless of actual implementation progress made in prior remediation rounds. That was a governance self-description defect (repository's own governance metadata did not reflect actual implementation state) -- flagged as CRITICAL in the Programme 2.5 Final Certification Audit.",
+    "PARTIALLY_IMPLEMENTED is not a passing grade. It means some checklist items are genuinely satisfied by live, executable code and some are not. See checklist_evidence for the itemized breakdown.",
+    "This manifest is derived data. Re-run verify_workstreams.py + this script after any future change to tools/governance/ to keep it truthful; do not hand-edit the status field."
+  ]
 }
