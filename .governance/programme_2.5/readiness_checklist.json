@@ -181,12 +181,12 @@
         "All checks pass before Programme 3 can start",
         "Failures are specific and actionable"
       ],
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "12/14",
+      "status": "IMPLEMENTED",
+      "passing": "14/14",
       "evidence_reference": ".governance/programme_2.5/ws9/manifest.json"
     }
   ],
-  "last_reconciled_at_commit": "02905479277d13b342d607b041a1b7de3f96f314",
+  "last_reconciled_at_commit": "7aed373eae04cc0c32bbd23a4948c0944890af94",
   "reconciliation_method": ".governance/programme_2.5/_reconciliation/verify_workstreams.py",
-  "overall_status": "NOT_COMPLETE -- 7/9 workstreams fully IMPLEMENTED (WS1, WS2, WS3, WS5, WS6, WS7, WS8); remaining gaps in WS4, WS9 -- see each workstream's manifest.json checklist_evidence for the itemized, disclosed reasons"
+  "overall_status": "NOT_COMPLETE -- 8/9 workstreams fully IMPLEMENTED (WS1, WS2, WS3, WS5, WS6, WS7, WS8, WS9); remaining gaps in WS4 -- see each workstream's manifest.json checklist_evidence for the itemized, disclosed reasons"
 }
