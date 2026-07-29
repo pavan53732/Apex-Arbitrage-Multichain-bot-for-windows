@@ -169,5 +169,32 @@ class FreezeEngine:
     def freeze_and_save(self, output_path: Path) -> FreezeRecord:
         record = self.freeze()
         output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        # WS6 (Freeze Framework): tamper-evidence (FreezeValidator) and
+        # queryable history (FreezeHistory), completing the checklist
+        # items "Freeze records are tamper-evident" and "Freeze history
+        # is queryable" -- neither existed before this. The signature is
+        # embedded in the saved record itself (under a new top-level
+        # "tamper_evidence" key) so a consumer of the JSON file alone
+        # (without re-running FreezeEngine) can still call
+        # FreezeValidator.verify() against it.
+        from .freeze_manifest import FreezeHistory, FreezeManifest, FreezeValidator
+
+        signing_key_path = self.repo_root / ".governance" / "freeze" / ".signing_key"
+        validator = FreezeValidator(signing_key_path)
+        signature = validator.sign(record.data)
+        record.data["tamper_evidence"] = {
+            "signature": signature,
+            "signing_key_path": str(signing_key_path.relative_to(self.repo_root)),
+            "algorithm": "HMAC-SHA256",
+            "verify_with": "tools.governance.freeze.freeze_manifest.FreezeValidator.verify",
+        }
+
         output_path.write_text(json.dumps(record.to_dict(), indent=2), encoding="utf-8")
+
+        history_dir = self.repo_root / ".governance" / "freeze" / "history"
+        history = FreezeHistory(history_dir)
+        manifest = FreezeManifest.from_record_dict(record.data)
+        history.append(manifest, signature=signature)
+
         return record

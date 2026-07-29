@@ -464,6 +464,28 @@ class IntegrityEngine:
         current_commit = self._run(["git", "rev-parse", "HEAD"]).stdout.strip()
         freeze_commit = freeze.get("repository", {}).get("commit_hash") or freeze.get("identity", {}).get("repository_version")
 
+        # WS6/WS9: verify tamper-evidence (HMAC signature) BEFORE trusting
+        # anything else in the record -- if the signature does not
+        # verify, the record's content (including freeze_commit itself)
+        # cannot be trusted, regardless of what the staleness check below
+        # would otherwise conclude.
+        tamper_evidence = freeze.get("tamper_evidence")
+        if tamper_evidence:
+            try:
+                from ..freeze.freeze_manifest import FreezeValidator
+            except ImportError:
+                from governance.freeze.freeze_manifest import FreezeValidator  # type: ignore
+            key_path = self.repo_root / tamper_evidence.get("signing_key_path", ".governance/freeze/.signing_key")
+            validator = FreezeValidator(key_path)
+            signature = tamper_evidence.get("signature", "")
+            if not validator.verify(freeze, signature):
+                self._record(
+                    "freeze", "FAIL",
+                    "freeze record failed tamper-evidence (HMAC signature) verification -- "
+                    "record content does not match its embedded signature",
+                )
+                return
+
         if freeze_commit == current_commit:
             self._record("freeze", "PASS", "freeze record commit_hash matches current HEAD exactly", {"commit": current_commit})
             return
