@@ -172,7 +172,7 @@ Each gate must pass before the pipeline proceeds to the next stage.
 - **WINDOWS-DEPLOYMENT.md** — Windows-specific deployment details.
 - **TESTING-GUIDE.md** — Test framework and writing tests.
 - **DEPLOYMENT.md** — Deployment configuration.
-- **SIGNING-POLICY.md** — Code signing policy and certificate management.
+- **SIGNING-POLICY.md** (future) — Code signing policy and certificate management. Not yet authored; tracked as a known forward reference, not a broken link, per the Repository Canonicality Repair's identifier-normalization remediation (`tools/governance/references/path_resolver.py`).
 - **CONFIGURATION-REFERENCE.md** — Build config keys (`build.*`).
 - **TRACEABILITY-MATRIX.md** — Build/release requirement coverage.
 

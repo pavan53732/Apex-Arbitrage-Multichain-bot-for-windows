@@ -38,7 +38,7 @@ All release builds published through the build pipeline must be signed. Develope
 ## Cross-References
 - **APP-BUILDER-WORKFLOW.md** — Build pipeline.
 - **SECURITY.md** — Security policies.
-- **RELEASE-PROCESS.md** — Release management.
+- **RELEASE-PROCESS.md** (future) — Release management. Not yet authored; tracked as a known forward reference, not a broken link, per the Repository Canonicality Repair's identifier-normalization remediation.
 
 ## Version History
 | Version | Date | Changes | Author |

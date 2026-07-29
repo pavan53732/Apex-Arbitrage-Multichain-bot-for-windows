@@ -56,13 +56,19 @@ def run(
 
     indexer = RepoIndexer(str(repo_root), docs_globs)
     md_parser = MarkdownParser(str(repo_root))
-    meta_parser = MetadataParser()
     graph_builder = GraphBuilder()
     root_detector = BehaviouralRootDetector(behavioural_signals)
     store = SqliteStore(str(db_path))
     progress = ProgressTracker(progress_path)
 
     inventory = indexer.build_inventory()
+    # known_paths built BEFORE parsing so every document's cross-references
+    # can be resolved against the full canonical document set (Remediation
+    # Item 1: identifier normalization) rather than a blind docs/ prefix
+    # strip that previously caused ~2,000 false-positive broken-reference
+    # findings and 178 phantom dependency-graph nodes.
+    known_paths = [item["path"] for item in inventory]
+    meta_parser = MetadataParser(known_paths=known_paths)
     docs = []
     for item in inventory:
         parsed = md_parser.parse_file(item["path"])
@@ -125,19 +131,34 @@ def validate(config_path: str = typer.Option("tools/governance/config/governance
     repo_root = Path(cfg["repo_root"]).resolve()
     indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
     md_parser = MarkdownParser(str(repo_root))
-    meta_parser = MetadataParser()
+    inventory = indexer.build_inventory()
+    known_paths = [item["path"] for item in inventory]
+    meta_parser = MetadataParser(known_paths=known_paths)
     graph_builder = GraphBuilder()
     docs = []
-    for item in indexer.build_inventory():
+    for item in inventory:
         parsed = md_parser.parse_file(item["path"])
         meta = meta_parser.parse_document(parsed["raw_text"], item["path"])
         docs.append(meta)
         graph_builder.add_document(meta)
     validator = GovernanceValidator(docs, graph_builder.dependency_graph)
     findings = validator.validate_all()
+    failing = GovernanceValidator.has_failing_findings(findings)
     console.print(f"Findings: {len(findings)}")
     for f in findings[:20]:
         console.print(f"- [{f.severity.value}] {f.path}: {f.message}")
+    if len(findings) > 20:
+        console.print(f"... and {len(findings) - 20} more findings")
+    # FIX (Remediation Item 3): previously this command always exited 0
+    # regardless of findings count/severity, meaning "apex-gov validate"
+    # never actually failed even with CRITICAL/HIGH findings present. It
+    # now fails (non-zero exit) whenever any finding meets or exceeds
+    # GovernanceValidator.FAILURE_THRESHOLD (currently HIGH).
+    if failing:
+        console.print(f"\nRESULT: FAIL ({sum(1 for f in findings if f.severity.value in ('CRITICAL', 'HIGH'))} CRITICAL/HIGH findings)")
+        raise typer.Exit(code=1)
+    else:
+        console.print("\nRESULT: PASS (no findings at or above failure threshold)")
 
 @app.command()
 def roots(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
@@ -145,9 +166,11 @@ def roots(config_path: str = typer.Option("tools/governance/config/governance.ya
     repo_root = Path(cfg["repo_root"]).resolve()
     indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
     md_parser = MarkdownParser(str(repo_root))
-    meta_parser = MetadataParser()
+    inventory = indexer.build_inventory()
+    known_paths = [item["path"] for item in inventory]
+    meta_parser = MetadataParser(known_paths=known_paths)
     docs = []
-    for item in indexer.build_inventory():
+    for item in inventory:
         parsed = md_parser.parse_file(item["path"])
         meta = meta_parser.parse_document(parsed["raw_text"], item["path"])
         docs.append(meta)
@@ -163,18 +186,24 @@ def closure(root_path: str, config_path: str = typer.Option("tools/governance/co
     repo_root = Path(cfg["repo_root"]).resolve()
     indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
     md_parser = MarkdownParser(str(repo_root))
-    meta_parser = MetadataParser()
+    inventory = indexer.build_inventory()
+    known_paths = [item["path"] for item in inventory]
+    meta_parser = MetadataParser(known_paths=known_paths)
     graph_builder = GraphBuilder()
     docs = []
-    for item in indexer.build_inventory():
+    for item in inventory:
         parsed = md_parser.parse_file(item["path"])
         meta = meta_parser.parse_document(parsed["raw_text"], item["path"])
         docs.append(meta)
         graph_builder.add_document(meta)
     closure_engine = ClosureEngine(graph_builder.dependency_graph)
     closure = closure_engine.compute_closure(root_path)
-    console.print(f"Closure for {root_path}: {len(closure)} documents")
+    reverse_closure = closure_engine.compute_reverse_closure(root_path)
+    console.print(f"Forward closure for {root_path}: {len(closure)} documents")
     for p in sorted(closure):
+        console.print(f"  - {p}")
+    console.print(f"\nReverse closure for {root_path}: {len(reverse_closure)} documents")
+    for p in sorted(reverse_closure):
         console.print(f"  - {p}")
 
 @app.command()
@@ -183,10 +212,12 @@ def completeness(config_path: str = typer.Option("tools/governance/config/govern
     repo_root = Path(cfg["repo_root"]).resolve()
     indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
     md_parser = MarkdownParser(str(repo_root))
-    meta_parser = MetadataParser()
+    inventory = indexer.build_inventory()
+    known_paths = [item["path"] for item in inventory]
+    meta_parser = MetadataParser(known_paths=known_paths)
     engine = CompletenessEngine()
     scores = []
-    for item in indexer.build_inventory():
+    for item in inventory:
         parsed = md_parser.parse_file(item["path"])
         meta = meta_parser.parse_document(parsed["raw_text"], item["path"])
         scores.append(engine.score_document(meta))
@@ -282,6 +313,34 @@ def integrity(config_path: str = typer.Option("tools/governance/config/governanc
     print(_json.dumps(report, indent=2))
     if report["overall"] != "PASS":
         raise typer.Exit(code=1)
+
+@app.command()
+def freeze(
+    config_path: str = typer.Option("tools/governance/config/governance.yaml"),
+    workstream_id: str = typer.Option("WS0"),
+):
+    """Produce a repository-level freeze record via the canonical Freeze
+    Engine (Remediation Item 4: Freeze Framework must have a real runtime
+    producer, not just a manually-maintained data file).
+
+    Writes .governance/freeze/freeze_<workstream_id>.json, composed
+    entirely from live canonical outputs (Evidence Engine, Validator
+    Registry, graph/database/config hashes, git commit/tree hash)."""
+    import json as _json
+    from ..freeze.freeze_engine import FreezeEngine
+    cfg = load_config(config_path)
+    repo_root = Path(cfg["repo_root"]).resolve()
+    if not repo_root.exists() or not (repo_root / "docs").exists():
+        cfg_path = Path(config_path)
+        for parent in [cfg_path] + list(cfg_path.parents):
+            candidate = (parent.parent.parent.parent if "tools" in str(parent) else parent).resolve()
+            if (candidate / "docs").exists():
+                repo_root = candidate
+                break
+    engine = FreezeEngine(repo_root, workstream_id=workstream_id)
+    output_path = repo_root / ".governance" / "freeze" / f"freeze_{workstream_id}.json"
+    record = engine.freeze_and_save(output_path)
+    print(_json.dumps(record.to_dict(), indent=2))
 
 if __name__ == "__main__":
     app()

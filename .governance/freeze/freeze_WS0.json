@@ -1,33 +1,32 @@
 {
   "identity": {
-    "freeze_id": "e533097fdf030081",
+    "freeze_id": "1d0b62ded56c5106",
     "workstream_id": "WS0",
-    "workstream_version": "2.4.0",
-    "repository_version": "ae300f640ecbbff8ad2f3a27841f73fcb6dbd45b",
+    "workstream_version": "3.0.0",
+    "repository_version": "4e615eb96c0903a7bc5b2393a16d653c9ff51cb9",
     "governance_platform_version": "1.0.0",
-    "schema_version": "2.1.0"
+    "schema_version": "3.0.0",
+    "producer": "tools.governance.freeze.freeze_engine.FreezeEngine"
   },
   "repository": {
-    "repository_tree_hash": "233632b2d91abfef4c877db8629921aecf1f37c6",
+    "repository_tree_hash": "319e8f47e23166d289c360ddc8f7fce0c2bdb661",
     "git_branch": "main",
-    "commit_hash": "ae300f640ecbbff8ad2f3a27841f73fcb6dbd45b",
-    "working_tree_status": "clean"
+    "commit_hash": "4e615eb96c0903a7bc5b2393a16d653c9ff51cb9",
+    "working_tree_status": "dirty"
   },
   "execution": {
-    "timestamp": "2026-07-29T09:28:19.411205+00:00",
+    "timestamp": "2026-07-29T10:33:53.013444+00:00",
     "runtime_command": "apex-gov run",
-    "machine_information": {
-      "python_version": "Python 3.13.14"
-    }
+    "execution_time_ms": 1422.926
   },
   "canonical_output": {
     "documents_indexed": 277,
     "behavioural_roots": 28,
-    "validation_findings": 2065,
+    "validation_findings": 22,
     "closures_computed": 28,
     "avg_completeness": 0.2234985231375123,
     "graph_nodes": 277,
-    "graph_edges": 879
+    "graph_edges": 878
   },
   "validation": {
     "validator_list": [
@@ -36,8 +35,7 @@
       "architecture_test.validate_cross_references",
       "architecture_test.validate_ownership",
       "architecture_test.validate_traceability",
-      "governance_validator.missing_owners",
-      "tools_governance_pytest"
+      "governance_validator.missing_owners"
     ],
     "validator_results": {
       "governance_validator.missing_owners": "PASS",
@@ -45,36 +43,49 @@
       "architecture_test.validate_contracts": "PASS",
       "architecture_test.validate_cross_references": "PASS",
       "architecture_test.validate_ownership": "PASS",
-      "architecture_test.validate_traceability": "PASS",
-      "tools_governance_pytest": "PASS"
+      "architecture_test.validate_traceability": "PASS"
     },
     "all_pass": true
+  },
+  "evidence": {
+    "evidence_record_hash": "a481cabc973d4b6bdcb498e583e383a97d93ec85d47a45f435c51be17f1929f5",
+    "artefact_hashes": {
+      ".governance/exports/documents.json": "72ad23f462d8fa3c18e1c6dcba019a4364526f0562ab762240e61c75d56a3367",
+      ".governance/governance.db": "2c2366ad2f90a497a039fb555fc03d9c0fdcefab19270a6d8442f959e1c71e3d",
+      ".governance/graphs/config_graph.graphml": "da2abed38e9850390803e472e5e5a2db526e2951e4ad7022cbf5a09b0f92d5e1",
+      ".governance/graphs/dependency_graph.graphml": "1a27fe5b26191585684336db8ad61a57594745af46a089f9bc398c1e302fcc79",
+      ".governance/graphs/document_graph.graphml": "15545162fd5883c5b7fbf925d3b5fa1e2224e33f5bff2fb4d468435babc91a50",
+      ".governance/graphs/event_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
+      ".governance/graphs/interface_graph.graphml": "12d90214d80b4559b6ccb0a2075d9c24e7a8b2ab70dd53322f8c5e07bb3c4c65",
+      ".governance/graphs/ownership_graph.graphml": "914366dd96fb6be4f810d2011017aa70ae03ec3de353f29124ca5dd1fbb79931",
+      ".governance/graphs/schema_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
+      ".governance/graphs/state_machine_graph.graphml": "9644eee6f22385efccabfb0b2eef0a1a324ae760de70af7bd2e1bcc4fb0d1dd2"
+    }
   },
   "graphs": {
     "graph_hashes": {
       "config_graph.graphml": "da2abed38e9850390803e472e5e5a2db526e2951e4ad7022cbf5a09b0f92d5e1",
-      "dependency_graph.graphml": "d3d262a72bf9b78cd19bc69553882dfc17119af9244d3c920fda578bf487c74f",
-      "document_graph.graphml": "dae6a609f72c5220a6ee09131ca554d8a40edbd54d16ba6041a206f60ad9a1d5",
+      "dependency_graph.graphml": "1a27fe5b26191585684336db8ad61a57594745af46a089f9bc398c1e302fcc79",
+      "document_graph.graphml": "15545162fd5883c5b7fbf925d3b5fa1e2224e33f5bff2fb4d468435babc91a50",
       "event_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
       "interface_graph.graphml": "12d90214d80b4559b6ccb0a2075d9c24e7a8b2ab70dd53322f8c5e07bb3c4c65",
       "ownership_graph.graphml": "914366dd96fb6be4f810d2011017aa70ae03ec3de353f29124ca5dd1fbb79931",
       "schema_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
       "state_machine_graph.graphml": "9644eee6f22385efccabfb0b2eef0a1a324ae760de70af7bd2e1bcc4fb0d1dd2"
     },
-    "combined_graph_hash": "a75501bac167d4dc204e1ed4f1791b9f258a1553bd2c5fa6fd45b07f7f14afd6",
+    "combined_graph_hash": "dbbf301dbde7c6638f365afc3b96ac88eb8edd678a089117b85f751cf6bd2ad0",
     "graph_count": 8
   },
   "database": {
     "canonical_database_path": ".governance/governance.db",
-    "database_hash": "2c2366ad2f90a497a039fb555fc03d9c0fdcefab19270a6d8442f959e1c71e3d",
-    "note": "Exactly one canonical database exists. See .governance/archive/pre-consolidation-2026-07-29/ARCHIVE-MANIFEST.md."
+    "database_hash": "2c2366ad2f90a497a039fb555fc03d9c0fdcefab19270a6d8442f959e1c71e3d"
   },
   "configuration": {
     "configuration_hash": "7175cbed9abdb67914d2e595c55f71c26716333451b69944b0b033708bc13693",
     "path": "tools/governance/config/governance.yaml"
   },
   "integrity": {
-    "integrity_checksum": "e5df535855baf98139fced7a57995477773ea9bfdfa1942e5ac7b8b1157d4c51",
+    "integrity_checksum": "81c8a6b3f45d8d547ff1715db7c6b725c97b15bc993440a5cabf5fea0f968ac6",
     "computed_from": [
       "combined_graph_hash",
       "database_hash",
@@ -83,8 +94,6 @@
     ]
   },
   "freeze": {
-    "freeze_timestamp": "2026-07-29T09:28:19.413086+00:00",
-    "supersedes": ".governance/archive/pre-consolidation-2026-07-29/freeze_WS0_stale.json",
-    "reason_for_regeneration": "Final freeze regeneration for this Repository Canonicality Repair session, referencing commit ae300f640 (Governance Certification Report v1.1.0). This commit changes ONLY this file, satisfying IntegrityEngine.check_freeze()'s parent-commit acceptance rule. This is the last commit of the session; the freeze record is current as of this point and should be regenerated again by whichever agent/session makes the next content change, following the same 'freeze-only commit' pattern documented in commit a8c70f47d."
+    "freeze_timestamp": "2026-07-29T10:33:53.013514+00:00"
   }
 }

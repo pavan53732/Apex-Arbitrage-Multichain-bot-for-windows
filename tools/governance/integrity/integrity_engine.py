@@ -228,7 +228,62 @@ class IntegrityEngine:
         if roots != closures:
             self._record("closures", "FAIL", f"behavioural_roots ({roots}) != closures_computed ({closures}); every root must have exactly one closure")
             return
-        self._record("closures", "PASS", f"every one of {roots} behavioural roots has a computed closure", {"roots": roots, "closures": closures})
+
+        # FIX (Remediation Item 5: reverse-closure support): also verify
+        # reverse closure is computable for every root, in-process (not
+        # merely that ClosureEngine.compute_reverse_closure exists as a
+        # method -- actually invoke it against the live corpus).
+        try:
+            import yaml as _yaml
+            try:
+                from ..indexer.repo_indexer import RepoIndexer
+                from ..parser.markdown_parser import MarkdownParser
+                from ..metadata.metadata_parser import MetadataParser
+                from ..graphs.graph_builder import GraphBuilder
+                from ..closure.closure_engine import BehaviouralRootDetector, ClosureEngine
+            except ImportError:
+                from governance.indexer.repo_indexer import RepoIndexer  # type: ignore
+                from governance.parser.markdown_parser import MarkdownParser  # type: ignore
+                from governance.metadata.metadata_parser import MetadataParser  # type: ignore
+                from governance.graphs.graph_builder import GraphBuilder  # type: ignore
+                from governance.closure.closure_engine import BehaviouralRootDetector, ClosureEngine  # type: ignore
+
+            cfg = _yaml.safe_load((self.repo_root / "tools/governance/config/governance.yaml").read_text())
+            indexer = RepoIndexer(str(self.repo_root), cfg["docs_globs"])
+            inventory = indexer.build_inventory()
+            known_paths = [item["path"] for item in inventory]
+            md_parser = MarkdownParser(str(self.repo_root))
+            meta_parser = MetadataParser(known_paths=known_paths)
+            graph_builder = GraphBuilder()
+            docs = []
+            for item in inventory:
+                parsed = md_parser.parse_file(item["path"])
+                meta = meta_parser.parse_document(parsed["raw_text"], item["path"])
+                docs.append(meta)
+                graph_builder.add_document(meta)
+            detector = BehaviouralRootDetector(cfg["behavioural_root_signals"])
+            live_roots = detector.detect_roots(docs)
+            closure_engine = ClosureEngine(graph_builder.dependency_graph)
+            reverse_closures_ok = 0
+            for r in live_roots:
+                rc = closure_engine.compute_reverse_closure(r.path)
+                if r.path in rc:  # a root's reverse closure always contains itself
+                    reverse_closures_ok += 1
+            if reverse_closures_ok != len(live_roots):
+                self._record(
+                    "closures", "FAIL",
+                    f"reverse closure could not be computed for all roots: {reverse_closures_ok}/{len(live_roots)}",
+                )
+                return
+        except Exception as exc:
+            self._record("closures", "FAIL", f"reverse closure verification raised an exception: {exc}")
+            return
+
+        self._record(
+            "closures", "PASS",
+            f"every one of {roots} behavioural roots has both a computed forward closure and a computed reverse closure",
+            {"roots": roots, "closures": closures, "reverse_closures_verified": reverse_closures_ok},
+        )
 
     def check_validators(self) -> None:
         # NOTE: the installed console-script package is named `governance`
@@ -247,12 +302,30 @@ class IntegrityEngine:
             except Exception as exc:
                 self._record("validators", "FAIL", f"could not import validator registry: {exc}")
                 return
+        # FIX (Remediation Item 3): this check's PASS/FAIL now genuinely
+        # reflects "did the repository pass validation", not merely "did
+        # the validator process execute without crashing". Previously,
+        # `apex-gov validate` (which `run_all_validators()` shells out to
+        # for in-engine validators) always returned exit code 0 regardless
+        # of findings count/severity, so `run_validator()`'s
+        # `"PASS" if returncode == 0 else "FAIL"` logic was checking
+        # execution success only. `apex-gov validate` now exits non-zero
+        # when GovernanceValidator.has_failing_findings() is true (any
+        # finding at or above FAILURE_THRESHOLD), so this check's result
+        # is now a genuine repository-passed-validation signal.
         results = run_all_validators(self.repo_root)
         failed = [r["id"] for r in results if r["status"] != "PASS"]
         if failed:
-            self._record("validators", "FAIL", f"{len(failed)}/{len(results)} validators failed: {failed}")
+            self._record(
+                "validators", "FAIL",
+                f"{len(failed)}/{len(results)} validator executions reported failing findings (not merely a crash): {failed}",
+            )
             return
-        self._record("validators", "PASS", f"all {len(results)} registered validators pass", {"validator_count": len(results)})
+        self._record(
+            "validators", "PASS",
+            f"all {len(results)} validator executions completed AND reported zero findings at or above the failure threshold",
+            {"validator_count": len(results)},
+        )
 
     def check_ownership(self) -> None:
         result = self._run(["python3", "architecture-tests/validate_ownership.py"])

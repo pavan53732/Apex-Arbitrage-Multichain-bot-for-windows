@@ -5,13 +5,34 @@ from typing import Optional
 from .models import DocumentMetadata
 from ..parser.section_parser import SectionParser
 from ..references.reference_parser import ReferenceParser
+from ..references.path_resolver import DocumentIdentityResolver
 
 class MetadataParser:
     REQUIRED_FIELDS = ["type", "owner", "status", "version"]
 
-    def __init__(self, repo_root: str = "."):
+    def __init__(self, repo_root: str = ".", known_paths: Optional[list[str]] = None):
+        """
+        Args:
+            repo_root: repository root path.
+            known_paths: the full set of canonically indexed document paths
+                (i.e. `RepoIndexer.list_documents()`'s output), used to
+                build a `DocumentIdentityResolver` so that every reference
+                extracted from a document's text (depends_on,
+                cross_references) is resolved to the SAME canonical path
+                convention used by the indexer itself. Without this, a
+                document at `docs/X.md` referencing another document by
+                bare filename (`Y.md`) or with a `docs/` prefix
+                (`docs/Y.md`) would produce inconsistent identifiers that
+                do not match `Y.md`'s actual indexed key, causing broken-
+                reference false positives and phantom graph nodes (see
+                tools/governance/references/path_resolver.py). If omitted,
+                falls back to unresolved references (whitespace/`./`
+                stripped only) for backward compatibility with callers
+                that do not yet have the full document set available.
+        """
         self.repo_root = repo_root
-        self.ref_parser = ReferenceParser(repo_root)
+        resolver = DocumentIdentityResolver(known_paths) if known_paths is not None else None
+        self.ref_parser = ReferenceParser(repo_root, resolver=resolver)
 
     def extract_field(self, text: str, field: str, patterns: list[str]) -> Optional[str]:
         for pattern in patterns:

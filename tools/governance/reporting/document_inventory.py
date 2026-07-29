@@ -41,11 +41,13 @@ def build_document_inventory(repo_root: Path, config_path: str = "tools/governan
 
     indexer = RepoIndexer(str(repo_root), cfg["docs_globs"])
     md_parser = MarkdownParser(str(repo_root))
-    meta_parser = MetadataParser()
+    inventory_items = indexer.build_inventory()
+    known_paths = [item["path"] for item in inventory_items]
+    meta_parser = MetadataParser(known_paths=known_paths)
     graph_builder = GraphBuilder()
 
     docs = []
-    for item in indexer.build_inventory():
+    for item in inventory_items:
         parsed = md_parser.parse_file(item["path"])
         meta = meta_parser.parse_document(parsed["raw_text"], item["path"])
         docs.append(meta)
@@ -57,6 +59,7 @@ def build_document_inventory(repo_root: Path, config_path: str = "tools/governan
 
     closure_engine = ClosureEngine(graph_builder.dependency_graph)
     closures = {r.path: closure_engine.compute_closure(r.path) for r in roots}
+    reverse_closures = {r.path: closure_engine.compute_reverse_closure(r.path) for r in roots}
 
     # Consumers: documents that depend_on / required_by this one, i.e.
     # reverse edges in the dependency graph. Sorted for determinism.
@@ -78,6 +81,7 @@ def build_document_inventory(repo_root: Path, config_path: str = "tools/governan
     for idx, d in enumerate(sorted(docs, key=lambda x: x.path), start=1):
         is_root = d.path in root_paths
         closure = closures.get(d.path)
+        reverse_closure = reverse_closures.get(d.path)
         inventory.append({
             "document_id": f"DOC-{idx:04d}",
             "path": d.path,
@@ -88,6 +92,7 @@ def build_document_inventory(repo_root: Path, config_path: str = "tools/governan
             "category": _categorize(d.path),
             "behavioural_root": is_root,
             "closure_size": len(closure) if closure is not None else None,
+            "reverse_closure_size": len(reverse_closure) if reverse_closure is not None else None,
             # NOTE on validator_coverage / evidence: every validator in the
             # Validator Registry (Work Item 7) operates over the whole
             # document corpus at once (e.g. cycle detection, cross-reference

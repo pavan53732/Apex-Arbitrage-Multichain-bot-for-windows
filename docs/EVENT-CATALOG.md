@@ -168,7 +168,7 @@ trade_seq  = trade._ events are sequenced by trade lifecycle step (0, 1, 2...)
 ## Cross-References
 
 - **EVENT-OWNERSHIP-MATRIX.md** — Publisher/consumer mapping, delivery guarantees, ordering, priority.
-- **EVENT-SCHEMA-REGISTRY.md** — Event schema definitions and versioning.
+- **EVENT-SCHEMA-REGISTRY.md** (future) — Event schema definitions and versioning. Not yet authored; tracked as a known forward reference, not a broken link, per the Repository Canonicality Repair's identifier-normalization remediation.
 - **TRADING-ENGINE.md** — Trade event flow.
 - **CONFIGURATION-REFERENCE.md** — Event config keys (`event.*`).
 - **TRACEABILITY-MATRIX.md** — Event requirement coverage.

@@ -229,6 +229,12 @@ class ClosureEngine:
         self.graph = dependency_graph
 
     def compute_closure(self, root_path: str) -> set[str]:
+        """Forward closure: every document the root (transitively)
+        depends on. Edges in `dependency_graph` point from a document to
+        its dependency (`meta.path -> dep`, see GraphBuilder.add_document),
+        so `nx.descendants()` (everything reachable by following edges
+        forward from `root_path`) is the correct forward-closure
+        traversal."""
         try:
             closure = set(nx.descendants(self.graph, root_path))
         except nx.NetworkXError:
@@ -236,12 +242,42 @@ class ClosureEngine:
         closure.add(root_path)
         return closure
 
+    def compute_reverse_closure(self, root_path: str) -> set[str]:
+        """Reverse closure: every document that (transitively) depends on
+        the root -- i.e. everything that would be impacted if `root_path`
+        changed.
+
+        IMPLEMENTED (Repository Canonicality Repair, Remediation Item 5:
+        "Complete reverse-closure support if it remains part of
+        Programme 2.5's acceptance criteria."). Previously `ClosureEngine`
+        had no reverse-closure method at all (confirmed by direct
+        `hasattr` check during the Evidence-First Verification pass).
+
+        `nx.ancestors()` finds every node that has a path TO `root_path`
+        by following edges forward -- i.e. every node from which
+        `root_path` is reachable. Since edges point from a document to its
+        dependency, a node `X` with an edge (or path) to `root_path` means
+        "X depends on root_path" (directly or transitively), which is
+        exactly the reverse-closure / "impact analysis" semantic:
+        everything that would need to be reconsidered if `root_path`
+        changed.
+        """
+        try:
+            reverse_closure = set(nx.ancestors(self.graph, root_path))
+        except nx.NetworkXError:
+            reverse_closure = set()
+        reverse_closure.add(root_path)
+        return reverse_closure
+
     def validate_closure(self, root_path: str, all_docs: set[str]) -> dict:
         closure = self.compute_closure(root_path)
+        reverse_closure = self.compute_reverse_closure(root_path)
         return {
             "root": root_path,
             "closure_size": len(closure),
             "closure_docs": sorted(closure),
+            "reverse_closure_size": len(reverse_closure),
+            "reverse_closure_docs": sorted(reverse_closure),
             "missing_dependencies": [],
             "completeness": 1.0,
         }
