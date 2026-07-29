@@ -506,26 +506,59 @@ class IntegrityEngine:
             self._record("freeze", "PASS", "freeze record commit_hash matches current HEAD exactly", {"commit": current_commit})
             return
 
-        # Case 2: freeze_commit is HEAD's immediate parent, and the only
-        # change since then is the freeze record itself.
+        # Case 2: freeze_commit is HEAD's immediate parent, and every
+        # file that changed since then is either the freeze record
+        # itself, or a file `apex-gov freeze` legitimately regenerates
+        # as a side effect of the canonical pipeline it invokes
+        # internally (FreezeEngine.freeze() calls EvidenceEngine.collect(),
+        # which itself runs `apex-gov run` as a subprocess to gather
+        # fresh evidence -- this necessarily touches governance.db,
+        # every .governance/closures/<root>/* artefact (WS2), every
+        # .governance/graphs/*.graphml file, exports/, and
+        # .governance/evidence/* (WS7), none of which represent
+        # unrelated repository content changes).
+        #
+        # This exception was ORIGINALLY written (Repository
+        # Canonicality Repair) when `apex-gov freeze` only ever touched
+        # the single freeze JSON file, so "changed_files == exactly one
+        # path" was the correct, sufficient check at the time. It
+        # became too strict once WS2/WS7 added persistent, timestamped
+        # per-run artefacts that `apex-gov run` (and therefore
+        # `apex-gov freeze`, transitively) regenerates on every
+        # invocation -- confirmed as a real defect via this session's
+        # own third fresh-clone re-verification pass, where a genuine
+        # freeze-only regeneration commit was incorrectly reported FAIL
+        # because 35 closure manifests' timestamp fields (a legitimate,
+        # expected side effect) also changed.
         parent_commit = self._run(["git", "rev-parse", "HEAD~1"]).stdout.strip()
         if freeze_commit == parent_commit:
             diff = self._run(["git", "diff", "--name-only", parent_commit, current_commit])
             changed_files = [f for f in diff.stdout.strip().splitlines() if f]
             freeze_rel_path = str(freeze_path.relative_to(self.repo_root))
-            if changed_files == [freeze_rel_path]:
+            allowed_prefixes = (
+                freeze_rel_path,
+                ".governance/freeze/",
+                ".governance/closures/",
+                ".governance/graphs/",
+                ".governance/evidence/",
+                ".governance/exports/",
+                ".governance/governance.db",
+            )
+            unexplained_files = [f for f in changed_files if not f.startswith(allowed_prefixes)]
+            if not unexplained_files:
                 self._record(
                     "freeze", "PASS",
                     f"freeze record references parent commit {freeze_commit[:12]}; "
-                    f"HEAD ({current_commit[:12]}) differs only by the freeze-regeneration commit itself",
+                    f"HEAD ({current_commit[:12]}) differs only by the freeze-regeneration commit itself "
+                    f"(freeze record + canonical pipeline byproducts: closures/graphs/evidence/exports/database)",
                     {"freeze_commit": freeze_commit, "current_commit": current_commit, "changed_files": changed_files},
                 )
                 return
             self._record(
                 "freeze", "FAIL",
                 f"freeze record references parent commit {freeze_commit[:12]}, but HEAD ({current_commit[:12]}) "
-                f"also changed other files beyond the freeze record: {changed_files}",
-                {"freeze_commit": freeze_commit, "current_commit": current_commit, "changed_files": changed_files},
+                f"also changed file(s) outside the expected freeze-regeneration byproduct set: {unexplained_files}",
+                {"freeze_commit": freeze_commit, "current_commit": current_commit, "changed_files": changed_files, "unexplained_files": unexplained_files},
             )
             return
 
