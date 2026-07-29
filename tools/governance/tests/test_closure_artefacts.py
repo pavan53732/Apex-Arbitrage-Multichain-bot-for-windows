@@ -128,6 +128,74 @@ def test_build_closure_maturity_report_penalizes_findings():
     assert with_findings["maturity_score"] < no_findings["maturity_score"]
 
 
+def test_build_closure_dependency_graph_is_deterministic_across_processes():
+    """Regression test for a real non-determinism defect found via a
+    live 'apex-gov freeze' re-run producing different work_queue.json/
+    manifest bytes at the identical commit: build_closure_dependency_graph
+    used to call graph.subgraph(closure_docs) directly, which -- like
+    graphs/derived_graphs.py's identical prior defect -- does not
+    preserve node/edge order regardless of input order, because
+    networkx internally re-wraps the node collection in a `set` whose
+    iteration is subject to per-process PYTHONHASHSEED randomisation.
+    """
+    import subprocess
+    import sys
+
+    script = """
+import sys
+sys.path.insert(0, "tools/governance")
+import networkx as nx
+from governance.closure.closure_artefacts import build_closure_dependency_graph
+
+g = nx.DiGraph()
+for i in range(30):
+    g.add_edge(f"doc-{i}.md", f"doc-{(i + 1) % 30}.md")
+closure = {f"doc-{i}.md" for i in range(0, 30, 2)}
+result = build_closure_dependency_graph("root.md", g, closure)
+import io
+buf = io.BytesIO()
+nx.write_graphml(result, buf)
+print(buf.getvalue().hex())
+"""
+    hashes = set()
+    for _ in range(5):
+        proc = subprocess.run([sys.executable, "-c", script], capture_output=True, text=True)
+        assert proc.returncode == 0, proc.stderr
+        hashes.add(proc.stdout.strip())
+    assert len(hashes) == 1, f"build_closure_dependency_graph is non-deterministic across processes: {len(hashes)} distinct outputs"
+
+
+def test_build_closure_work_queue_breaks_ties_deterministically_across_processes():
+    """Regression test for the exact defect found in a live
+    'apex-gov freeze' re-run: work_queue.json's item ORDER changed
+    between two runs at the identical commit, because
+    build_closure_work_queue iterated a `set[str]` before scoring, and
+    the subsequent items.sort() is a stable sort -- so tied-completeness
+    documents (common in this corpus, e.g. many 0.0-completeness docs)
+    leaked the set's randomised insertion order through the sort."""
+    import subprocess
+    import sys
+
+    script = """
+import sys
+sys.path.insert(0, "tools/governance")
+from governance.closure.closure_artefacts import build_closure_work_queue
+from governance.metadata.models import DocumentMetadata
+
+closure = {f"doc-{i}.md" for i in range(20)}
+docs_by_path = {p: DocumentMetadata(path=p, owner="Team") for p in closure}
+completeness = {p: 0.0 for p in closure}  # all tied at 0.0 -- forces tie-break to matter
+wq = build_closure_work_queue("root.md", docs_by_path, closure, completeness, completeness_threshold=0.85)
+print(",".join(item["path"] for item in wq["items"]))
+"""
+    outputs = set()
+    for _ in range(5):
+        proc = subprocess.run([sys.executable, "-c", script], capture_output=True, text=True)
+        assert proc.returncode == 0, proc.stderr
+        outputs.add(proc.stdout.strip())
+    assert len(outputs) == 1, f"build_closure_work_queue tie-breaking is non-deterministic across processes: {len(outputs)} distinct orderings"
+
+
 def test_write_all_root_artefacts_creates_all_5_files(tmp_path):
     g = _graph()
     docs_by_path = {

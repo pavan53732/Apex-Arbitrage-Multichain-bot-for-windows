@@ -155,8 +155,34 @@ def build_closure_dependency_graph(
 ) -> nx.DiGraph:
     """Extract the subgraph of `graph` induced by `closure_docs` -- i.e.
     this root's own dependency graph, not the full repository-wide
-    dependency graph."""
-    return graph.subgraph(closure_docs).copy()
+    dependency graph.
+
+    IMPORTANT (determinism): does NOT use `graph.subgraph(closure_docs)`
+    directly. `nx.DiGraph.subgraph(nodes)` does not preserve the order
+    of whatever iterable is passed to it (even a pre-sorted list) --
+    internally it wraps the node filter in
+    `networkx.classes.filters.show_nodes`, whose `__init__` immediately
+    converts it to a bare `set`, and the resulting view's
+    `FilterAtlas.__iter__` then iterates that set directly whenever it
+    is smaller than the parent graph (always true here), subject to
+    Python's per-process PYTHONHASHSEED string-hash randomisation. This
+    is the identical defect class already found and fixed in
+    graphs/derived_graphs.py's `_deterministic_induced_subgraph()`;
+    fixed here the same way: build a fresh nx.DiGraph via explicit
+    sorted() iteration rather than using subgraph()'s node view.
+    """
+    result = nx.DiGraph()
+    for n in sorted(closure_docs):
+        if n in graph:
+            result.add_node(n, **graph.nodes[n])
+        else:
+            result.add_node(n)
+    for u, v, data in sorted(
+        ((u, v, d) for u, v, d in graph.edges(data=True) if u in closure_docs and v in closure_docs),
+        key=lambda t: (t[0], t[1]),
+    ):
+        result.add_edge(u, v, **data)
+    return result
 
 
 def build_closure_audit(
@@ -202,9 +228,24 @@ def build_closure_work_queue(
 ) -> dict:
     """Work queue for a root: documents in its closure below the
     completeness threshold, ordered by ascending completeness (i.e. the
-    documents most in need of attention first)."""
+    documents most in need of attention first).
+
+    IMPORTANT (determinism): `closure_docs` is a `set[str]`, whose
+    iteration order is subject to Python's per-process string-hash
+    randomisation (PYTHONHASHSEED). The final `items.sort()` below is a
+    STABLE sort, which means ties (multiple documents at the identical
+    completeness score -- common in this corpus, e.g. several
+    0.0-completeness documents) preserve whatever order they were
+    inserted in -- i.e. the set's randomised order leaks through ties
+    into the final, supposedly-deterministic output. Confirmed via a
+    real regression: two `apex-gov freeze` invocations at the same
+    commit produced different work_queue.json byte content purely from
+    tied-score reordering. Fixed by iterating `sorted(closure_docs)`
+    (alphabetical by path) before scoring, so any stable sort on top
+    always breaks ties in the same, deterministic (alphabetical) order.
+    """
     items = []
-    for path in closure_docs:
+    for path in sorted(closure_docs):
         score = completeness_by_path.get(path, 0.0)
         if score < completeness_threshold:
             doc = docs_by_path.get(path)

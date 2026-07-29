@@ -5,12 +5,6 @@
       "completeness": 0.0,
       "gap": 0.85,
       "owner": null,
-      "path": "RELEASE-PROCESS.md"
-    },
-    {
-      "completeness": 0.0,
-      "gap": 0.85,
-      "owner": null,
       "path": "EVENT-SCHEMA-REGISTRY.md"
     },
     {
@@ -23,25 +17,19 @@
       "completeness": 0.0,
       "gap": 0.85,
       "owner": null,
+      "path": "RELEASE-PROCESS.md"
+    },
+    {
+      "completeness": 0.0,
+      "gap": 0.85,
+      "owner": null,
       "path": "SIGNING-POLICY.md"
     },
     {
       "completeness": 0.13636363636363635,
       "gap": 0.7136,
       "owner": "Runtime Team",
-      "path": "docs/MODULE-OWNERSHIP-MATRIX.md"
-    },
-    {
-      "completeness": 0.13636363636363635,
-      "gap": 0.7136,
-      "owner": "Runtime Team",
-      "path": "docs/METRICS.md"
-    },
-    {
-      "completeness": 0.13636363636363635,
-      "gap": 0.7136,
-      "owner": "Runtime Team",
-      "path": "docs/FEATURE-GATES.md"
+      "path": "docs/ERROR-CATALOG.md"
     },
     {
       "completeness": 0.13636363636363635,
@@ -59,13 +47,19 @@
       "completeness": 0.13636363636363635,
       "gap": 0.7136,
       "owner": "Runtime Team",
-      "path": "docs/ERROR-CATALOG.md"
+      "path": "docs/FEATURE-GATES.md"
     },
     {
-      "completeness": 0.18181818181818182,
-      "gap": 0.6682,
-      "owner": "Architecture Team",
-      "path": "docs/ARCHITECTURE.md"
+      "completeness": 0.13636363636363635,
+      "gap": 0.7136,
+      "owner": "Runtime Team",
+      "path": "docs/METRICS.md"
+    },
+    {
+      "completeness": 0.13636363636363635,
+      "gap": 0.7136,
+      "owner": "Runtime Team",
+      "path": "docs/MODULE-OWNERSHIP-MATRIX.md"
     },
     {
       "completeness": 0.18181818181818182,
@@ -77,19 +71,37 @@
       "completeness": 0.18181818181818182,
       "gap": 0.6682,
       "owner": "AI Team",
+      "path": "docs/AI-CAPABILITY-MATRIX.md"
+    },
+    {
+      "completeness": 0.18181818181818182,
+      "gap": 0.6682,
+      "owner": "AI Team",
+      "path": "docs/AI-COST-MANAGEMENT.md"
+    },
+    {
+      "completeness": 0.18181818181818182,
+      "gap": 0.6682,
+      "owner": "AI Team",
       "path": "docs/AI-MEMORY.md"
     },
     {
       "completeness": 0.18181818181818182,
       "gap": 0.6682,
-      "owner": "Runtime Team",
-      "path": "docs/PROJECT-STRUCTURE.md"
+      "owner": "AI Team",
+      "path": "docs/AI-TOOLS.md"
     },
     {
       "completeness": 0.18181818181818182,
       "gap": 0.6682,
-      "owner": "UI Team",
-      "path": "docs/UI-DASHBOARD-SPEC.md"
+      "owner": "Runtime Team",
+      "path": "docs/API-REFERENCE.md"
+    },
+    {
+      "completeness": 0.18181818181818182,
+      "gap": 0.6682,
+      "owner": "Architecture Team",
+      "path": "docs/ARCHITECTURE.md"
     },
     {
       "completeness": 0.18181818181818182,
@@ -106,32 +118,8 @@
     {
       "completeness": 0.18181818181818182,
       "gap": 0.6682,
-      "owner": "AI Team",
-      "path": "docs/AI-CAPABILITY-MATRIX.md"
-    },
-    {
-      "completeness": 0.18181818181818182,
-      "gap": 0.6682,
       "owner": "Runtime Team",
-      "path": "docs/PERFORMANCE-SLOS.md"
-    },
-    {
-      "completeness": 0.18181818181818182,
-      "gap": 0.6682,
-      "owner": "AI Team",
-      "path": "docs/AI-COST-MANAGEMENT.md"
-    },
-    {
-      "completeness": 0.18181818181818182,
-      "gap": 0.6682,
-      "owner": "AI Team",
-      "path": "docs/AI-TOOLS.md"
-    },
-    {
-      "completeness": 0.18181818181818182,
-      "gap": 0.6682,
-      "owner": "Runtime Team",
-      "path": "docs/USER-FLOWS.md"
+      "path": "docs/FAILURE-RECOVERY-MATRIX.md"
     },
     {
       "completeness": 0.18181818181818182,
@@ -143,19 +131,7 @@
       "completeness": 0.18181818181818182,
       "gap": 0.6682,
       "owner": "Runtime Team",
-      "path": "docs/PLUGIN-MARKETPLACE.md"
-    },
-    {
-      "completeness": 0.18181818181818182,
-      "gap": 0.6682,
-      "owner": "Runtime Team",
-      "path": "docs/API-REFERENCE.md"
-    },
-    {
-      "completeness": 0.18181818181818182,
-      "gap": 0.6682,
-      "owner": "UI Team",
-      "path": "docs/UX-GUIDELINES.md"
+      "path": "docs/PERFORMANCE-SLOS.md"
     },
     {
       "completeness": 0.18181818181818182,
@@ -167,13 +143,13 @@
       "completeness": 0.18181818181818182,
       "gap": 0.6682,
       "owner": "Runtime Team",
-      "path": "docs/FAILURE-RECOVERY-MATRIX.md"
+      "path": "docs/PLUGIN-MARKETPLACE.md"
     },
     {
       "completeness": 0.18181818181818182,
       "gap": 0.6682,
       "owner": "Runtime Team",
-      "path": "docs/VERSIONING.md"
+      "path": "docs/PROJECT-STRUCTURE.md"
     },
     {
       "completeness": 0.18181818181818182,
@@ -182,52 +158,40 @@
       "path": "docs/TESTING-GUIDE.md"
     },
     {
+      "completeness": 0.18181818181818182,
+      "gap": 0.6682,
+      "owner": "UI Team",
+      "path": "docs/UI-DASHBOARD-SPEC.md"
+    },
+    {
+      "completeness": 0.18181818181818182,
+      "gap": 0.6682,
+      "owner": "Runtime Team",
+      "path": "docs/USER-FLOWS.md"
+    },
+    {
+      "completeness": 0.18181818181818182,
+      "gap": 0.6682,
+      "owner": "UI Team",
+      "path": "docs/UX-GUIDELINES.md"
+    },
+    {
+      "completeness": 0.18181818181818182,
+      "gap": 0.6682,
+      "owner": "Runtime Team",
+      "path": "docs/VERSIONING.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "APEX-ARCHITECTURE.md"
+    },
+    {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "AI Team",
-      "path": "docs/AI-STATE-MACHINE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/EVENT-FLOW.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/THREADING-MODEL.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Trading Team",
-      "path": "docs/POLICY-ENGINE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/RUNTIME-FLOW-LIFECYCLE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/PORTFOLIO-MANAGEMENT.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Windows Team",
-      "path": "docs/WINDOWS-APP-ARCHITECTURE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Windows Team",
-      "path": "docs/WINDOWS-NETWORK-RESILIENCE.md"
+      "path": "docs/AI-KNOWLEDGE-INDEX.md"
     },
     {
       "completeness": 0.22727272727272727,
@@ -238,14 +202,80 @@
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/OPPORTUNITY-LIFECYCLE.md"
+      "owner": "AI Team",
+      "path": "docs/AI-PIPELINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "AI Team",
+      "path": "docs/AI-PROVIDER-MANAGER.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "AI Team",
+      "path": "docs/AI-SAFETY-BOUNDARY.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "AI Team",
+      "path": "docs/AI-SETTINGS.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "AI Team",
+      "path": "docs/AI-STATE-MACHINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "AI Team",
+      "path": "docs/AI-TOOL-INVOCATION-CONTRACT.md"
     },
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Runtime Team",
-      "path": "docs/CONCURRENCY-MODEL.md"
+      "path": "docs/APEX-OS.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Plugin Team",
+      "path": "docs/APP-BUILDER-PLUGIN-SYSTEM.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "DevOps Team",
+      "path": "docs/APP-BUILDER-WORKFLOW.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/ASSET-MANAGEMENT.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/BACKTESTING.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "UI Team",
+      "path": "docs/BUILD-RELEASE-CICD.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Ops Team",
+      "path": "docs/CAPACITY-PLANNING.md"
     },
     {
       "completeness": 0.22727272727272727,
@@ -256,14 +286,38 @@
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/EVENT-BUS.md"
+      "owner": "Trading Team",
+      "path": "docs/CHAIN-REGISTRY.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "DevOps Team",
+      "path": "docs/CODE-SIGNING.md"
     },
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Runtime Team",
-      "path": "docs/SERVICE-LIFECYCLE.md"
+      "path": "docs/CONCURRENCY-MODEL.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Config Team",
+      "path": "docs/CONFIGURATION-REFERENCE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Config Team",
+      "path": "docs/CONFIGURATION.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Dashboard Team",
+      "path": "docs/DASHBOARD-LAYOUT.md"
     },
     {
       "completeness": 0.22727272727272727,
@@ -280,386 +334,14 @@
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
-      "owner": "Plugin Team",
-      "path": "docs/APP-BUILDER-PLUGIN-SYSTEM.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
       "owner": "UI Team",
       "path": "docs/DASHBOARD-WORKSPACES.md"
     },
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
-      "owner": "DevOps Team",
-      "path": "docs/APP-BUILDER-WORKFLOW.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/ORCHESTRATOR.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/RUNTIME-OPERATIONS.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/PLUGIN-SDK.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/IMPLEMENTATION-ROADMAP.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Config Team",
-      "path": "docs/CONFIGURATION-REFERENCE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Trading Team",
-      "path": "docs/ORACLE-REGISTRY.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "AI Team",
-      "path": "docs/AI-TOOL-INVOCATION-CONTRACT.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Plugin Team",
-      "path": "docs/PLUGIN-SANDBOX-CONTRACT.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Execution Team",
-      "path": "docs/EXECUTION-STATE-MACHINE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "UI Team",
-      "path": "docs/BUILD-RELEASE-CICD.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/MARKET-INTELLIGENCE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Config Team",
-      "path": "docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "AI Team",
-      "path": "docs/AI-PROVIDER-MANAGER.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/MEMORY-LIFECYCLE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Architecture Team",
-      "path": "docs/STATE-MACHINE-INDEX.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "AI Team",
-      "path": "docs/AI-SAFETY-BOUNDARY.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Architecture Team",
-      "path": "docs/TRACEABILITY-MATRIX.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/DESIGNER-PROTOCOLS.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/RECOVERY-PLAYBOOK.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Config Team",
-      "path": "docs/CONFIGURATION.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/INTERFACE-TOOL-CALL.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/INTERFACE-PROVIDER-ADAPTER.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "UI Team",
-      "path": "docs/UI-COMPONENT-SPEC.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Plugin Team",
-      "path": "docs/PLUGIN-STATE-MACHINE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Security Team",
-      "path": "docs/SECURITY-CONTRACTS.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Ops Team",
-      "path": "docs/ERROR-HANDLING-LOGGING.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Security Team",
-      "path": "docs/SECRET-LIFECYCLE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "DevOps Team",
-      "path": "docs/CODE-SIGNING.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/POSITION-MANAGEMENT.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/EVENT-OWNERSHIP-MATRIX.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
       "owner": "Runtime Team",
       "path": "docs/DATA-FLOW.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Windows Team",
-      "path": "docs/WINDOWS-DEPLOYMENT.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Trading Team",
-      "path": "docs/TOKEN-REGISTRY.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Windows Team",
-      "path": "docs/WINDOWS-NOTIFICATION-INTEGRATION.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/DEPLOYMENT.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/BACKTESTING.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/TASK-SCHEDULER.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "AI Team",
-      "path": "docs/PROMPT-LIFECYCLE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Ops Team",
-      "path": "docs/DIAGNOSTICS.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Security Team",
-      "path": "docs/TRUST-BOUNDARIES.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "APEX-ARCHITECTURE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "AI Team",
-      "path": "docs/AI-PIPELINE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Architecture Team",
-      "path": "docs/DOMAIN-MODEL.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "AI Team",
-      "path": "docs/AI-SETTINGS.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/STATE-MANAGEMENT.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Windows Team",
-      "path": "docs/WINDOWS-SERVICE-INTEGRATION.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/REGISTRY-SYSTEM.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/INTERFACE-NOTIFICATION-CHANNEL.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/LEARNING-PIPELINE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Ops Team",
-      "path": "docs/RESOURCE-BUDGET-SPECIFICATION.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/WORKER-POOL.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Security Team",
-      "path": "docs/SECURITY.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Trading Team",
-      "path": "docs/DEX-REGISTRY.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/WALLET-MANAGEMENT.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Trading Team",
-      "path": "docs/EXECUTION-ENGINE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Trading Team",
-      "path": "docs/DEX-INTEGRATION.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Ops Team",
-      "path": "docs/CAPACITY-PLANNING.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/IPC-PROTOCOL.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/WORKER-STATE-MACHINE.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/APEX-OS.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/PLUGIN-LIFECYCLE.md"
     },
     {
       "completeness": 0.22727272727272727,
@@ -671,25 +353,145 @@
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Runtime Team",
-      "path": "docs/PROMPT-ENGINEERING.md"
+      "path": "docs/DEPLOYMENT.md"
     },
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Runtime Team",
-      "path": "docs/WORKSPACE-MANAGER.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "docs/ASSET-MANAGEMENT.md"
+      "path": "docs/DESIGNER-PROTOCOLS.md"
     },
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Trading Team",
-      "path": "docs/TRADING-ENGINE.md"
+      "path": "docs/DEX-INTEGRATION.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Trading Team",
+      "path": "docs/DEX-REGISTRY.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Ops Team",
+      "path": "docs/DIAGNOSTICS.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Architecture Team",
+      "path": "docs/DOMAIN-MODEL.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/ENGINE-STATE-MACHINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Ops Team",
+      "path": "docs/ERROR-HANDLING-LOGGING.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/EVENT-BUS.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/EVENT-CATALOG.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/EVENT-FLOW.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/EVENT-OWNERSHIP-MATRIX.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Trading Team",
+      "path": "docs/EXECUTION-ENGINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Execution Team",
+      "path": "docs/EXECUTION-STATE-MACHINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Config Team",
+      "path": "docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/HEALTHCHECKS.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/IMPLEMENTATION-ROADMAP.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/INTERFACE-NOTIFICATION-CHANNEL.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/INTERFACE-PROVIDER-ADAPTER.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/INTERFACE-TOOL-CALL.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/IPC-PROTOCOL.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/LEARNING-PIPELINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/MARKET-INTELLIGENCE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/MEMORY-LIFECYCLE.md"
     },
     {
       "completeness": 0.22727272727272727,
@@ -700,14 +502,110 @@
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
-      "owner": "Trading Team",
-      "path": "docs/CHAIN-REGISTRY.md"
+      "owner": "Ops Team",
+      "path": "docs/MONITORING-OBSERVABILITY.md"
     },
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Runtime Team",
-      "path": "docs/HEALTHCHECKS.md"
+      "path": "docs/OPPORTUNITY-LIFECYCLE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Trading Team",
+      "path": "docs/ORACLE-REGISTRY.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/ORCHESTRATOR.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Security Team",
+      "path": "docs/PERMISSION-MODEL.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/PLUGIN-LIFECYCLE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Plugin Team",
+      "path": "docs/PLUGIN-SANDBOX-CONTRACT.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/PLUGIN-SDK.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Plugin Team",
+      "path": "docs/PLUGIN-STATE-MACHINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Trading Team",
+      "path": "docs/POLICY-ENGINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/PORTFOLIO-MANAGEMENT.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/POSITION-MANAGEMENT.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/PROMPT-ENGINEERING.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "AI Team",
+      "path": "docs/PROMPT-LIFECYCLE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/RECOVERY-COORDINATION.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/RECOVERY-PLAYBOOK.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/REGISTRY-SYSTEM.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Ops Team",
+      "path": "docs/RESOURCE-BUDGET-SPECIFICATION.md"
     },
     {
       "completeness": 0.22727272727272727,
@@ -719,13 +617,115 @@
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Runtime Team",
-      "path": "docs/SERVICE-STATE-MACHINE.md"
+      "path": "docs/RUNTIME-FLOW-LIFECYCLE.md"
     },
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Runtime Team",
-      "path": "docs/RECOVERY-COORDINATION.md"
+      "path": "docs/RUNTIME-OPERATIONS.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Security Team",
+      "path": "docs/SECRET-LIFECYCLE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Security Team",
+      "path": "docs/SECURITY-CONTRACTS.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Security Team",
+      "path": "docs/SECURITY.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/SERVICE-LIFECYCLE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/SERVICE-STATE-MACHINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Architecture Team",
+      "path": "docs/STATE-MACHINE-INDEX.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/STATE-MANAGEMENT.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/TASK-SCHEDULER.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/THREADING-MODEL.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Trading Team",
+      "path": "docs/TOKEN-REGISTRY.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Architecture Team",
+      "path": "docs/TRACEABILITY-MATRIX.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Trading Team",
+      "path": "docs/TRADING-ENGINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Security Team",
+      "path": "docs/TRUST-BOUNDARIES.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "UI Team",
+      "path": "docs/UI-COMPONENT-SPEC.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/WALLET-MANAGEMENT.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Windows Team",
+      "path": "docs/WINDOWS-APP-ARCHITECTURE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Windows Team",
+      "path": "docs/WINDOWS-DEPLOYMENT.md"
     },
     {
       "completeness": 0.22727272727272727,
@@ -736,56 +736,44 @@
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
-      "owner": "Dashboard Team",
-      "path": "docs/DASHBOARD-LAYOUT.md"
+      "owner": "Windows Team",
+      "path": "docs/WINDOWS-NETWORK-RESILIENCE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Windows Team",
+      "path": "docs/WINDOWS-NOTIFICATION-INTEGRATION.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Windows Team",
+      "path": "docs/WINDOWS-SERVICE-INTEGRATION.md"
     },
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Runtime Team",
-      "path": "docs/EVENT-CATALOG.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Security Team",
-      "path": "docs/PERMISSION-MODEL.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Ops Team",
-      "path": "docs/MONITORING-OBSERVABILITY.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "AI Team",
-      "path": "docs/AI-KNOWLEDGE-INDEX.md"
+      "path": "docs/WORKER-POOL.md"
     },
     {
       "completeness": 0.22727272727272727,
       "gap": 0.6227,
       "owner": "Runtime Team",
-      "path": "docs/ENGINE-STATE-MACHINE.md"
+      "path": "docs/WORKER-STATE-MACHINE.md"
+    },
+    {
+      "completeness": 0.22727272727272727,
+      "gap": 0.6227,
+      "owner": "Runtime Team",
+      "path": "docs/WORKSPACE-MANAGER.md"
     },
     {
       "completeness": 0.2727272727272727,
       "gap": 0.5773,
       "owner": "Runtime Team",
-      "path": "docs/QUEUE-MANAGEMENT.md"
-    },
-    {
-      "completeness": 0.2727272727272727,
-      "gap": 0.5773,
-      "owner": "Runtime Team",
-      "path": "docs/TRANSACTION-LIFECYCLE.md"
-    },
-    {
-      "completeness": 0.2727272727272727,
-      "gap": 0.5773,
-      "owner": "Runtime Team",
-      "path": "docs/UPDATE-MANAGER.md"
+      "path": "docs/ARBITRAGE-WINDOW-MANAGER.md"
     },
     {
       "completeness": 0.2727272727272727,
@@ -803,43 +791,7 @@
       "completeness": 0.2727272727272727,
       "gap": 0.5773,
       "owner": "Runtime Team",
-      "path": "docs/STRATEGIES.md"
-    },
-    {
-      "completeness": 0.2727272727272727,
-      "gap": 0.5773,
-      "owner": "Runtime Team",
-      "path": "docs/ARBITRAGE-WINDOW-MANAGER.md"
-    },
-    {
-      "completeness": 0.2727272727272727,
-      "gap": 0.5773,
-      "owner": "Runtime Team",
-      "path": "docs/WORKER-ARCHITECTURE.md"
-    },
-    {
-      "completeness": 0.2727272727272727,
-      "gap": 0.5773,
-      "owner": "Runtime Team",
-      "path": "docs/RPC-MANAGER.md"
-    },
-    {
-      "completeness": 0.2727272727272727,
-      "gap": 0.5773,
-      "owner": "Trading Team",
-      "path": "docs/SIMULATION-ENGINE.md"
-    },
-    {
-      "completeness": 0.2727272727272727,
-      "gap": 0.5773,
-      "owner": "Trading Team",
-      "path": "docs/TRADING-LIFECYCLE.md"
-    },
-    {
-      "completeness": 0.2727272727272727,
-      "gap": 0.5773,
-      "owner": "AI Team",
-      "path": "docs/RECOVERY-AND-FAILOVER.md"
+      "path": "docs/CONTRACT-REGISTRY.md"
     },
     {
       "completeness": 0.2727272727272727,
@@ -851,13 +803,7 @@
       "completeness": 0.2727272727272727,
       "gap": 0.5773,
       "owner": "Runtime Team",
-      "path": "docs/SHUTDOWN-LIFECYCLE.md"
-    },
-    {
-      "completeness": 0.2727272727272727,
-      "gap": 0.5773,
-      "owner": "Runtime Team",
-      "path": "docs/CONTRACT-REGISTRY.md"
+      "path": "docs/EXECUTION-LIFECYCLE.md"
     },
     {
       "completeness": 0.2727272727272727,
@@ -875,73 +821,61 @@
       "completeness": 0.2727272727272727,
       "gap": 0.5773,
       "owner": "Runtime Team",
-      "path": "docs/EXECUTION-LIFECYCLE.md"
+      "path": "docs/QUEUE-MANAGEMENT.md"
     },
     {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
-      "owner": "Runtime Team",
-      "path": "docs/GAS-OPTIMISATION.md"
-    },
-    {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
-      "owner": "Runtime Team",
-      "path": "docs/PROVIDER-RESILIENCE.md"
-    },
-    {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
+      "completeness": 0.2727272727272727,
+      "gap": 0.5773,
       "owner": "AI Team",
-      "path": "docs/GOVERNANCE-EXPLAINABILITY.md"
+      "path": "docs/RECOVERY-AND-FAILOVER.md"
     },
     {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
+      "completeness": 0.2727272727272727,
+      "gap": 0.5773,
       "owner": "Runtime Team",
-      "path": "docs/API-CONTRACTS.md"
+      "path": "docs/RPC-MANAGER.md"
     },
     {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
+      "completeness": 0.2727272727272727,
+      "gap": 0.5773,
       "owner": "Runtime Team",
-      "path": "docs/MODEL-CAPABILITY-NEGOTIATION.md"
+      "path": "docs/SHUTDOWN-LIFECYCLE.md"
     },
     {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
-      "owner": "AI Team",
-      "path": "docs/CHAIN-INTELLIGENCE.md"
+      "completeness": 0.2727272727272727,
+      "gap": 0.5773,
+      "owner": "Trading Team",
+      "path": "docs/SIMULATION-ENGINE.md"
     },
     {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
-      "owner": "AI Team",
-      "path": "docs/AI-REASONING-POLICY.md"
-    },
-    {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
+      "completeness": 0.2727272727272727,
+      "gap": 0.5773,
       "owner": "Runtime Team",
-      "path": "docs/DATA-GOVERNANCE.md"
+      "path": "docs/STRATEGIES.md"
     },
     {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
-      "owner": "Config Team",
-      "path": "docs/CONFIGURATION-PROFILES.md"
+      "completeness": 0.2727272727272727,
+      "gap": 0.5773,
+      "owner": "Trading Team",
+      "path": "docs/TRADING-LIFECYCLE.md"
     },
     {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
+      "completeness": 0.2727272727272727,
+      "gap": 0.5773,
       "owner": "Runtime Team",
-      "path": "docs/DECISION-LEDGER.md"
+      "path": "docs/TRANSACTION-LIFECYCLE.md"
     },
     {
-      "completeness": 0.3181818181818182,
-      "gap": 0.5318,
+      "completeness": 0.2727272727272727,
+      "gap": 0.5773,
       "owner": "Runtime Team",
-      "path": "docs/KNOWLEDGE-GRAPH.md"
+      "path": "docs/UPDATE-MANAGER.md"
+    },
+    {
+      "completeness": 0.2727272727272727,
+      "gap": 0.5773,
+      "owner": "Runtime Team",
+      "path": "docs/WORKER-ARCHITECTURE.md"
     },
     {
       "completeness": 0.3181818181818182,
@@ -953,7 +887,25 @@
       "completeness": 0.3181818181818182,
       "gap": 0.5318,
       "owner": "AI Team",
-      "path": "docs/EXPLAINABILITY.md"
+      "path": "docs/AI-REASONING-POLICY.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "Runtime Team",
+      "path": "docs/API-CONTRACTS.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "AI Team",
+      "path": "docs/CHAIN-INTELLIGENCE.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "Config Team",
+      "path": "docs/CONFIGURATION-PROFILES.md"
     },
     {
       "completeness": 0.3181818181818182,
@@ -965,13 +917,55 @@
       "completeness": 0.3181818181818182,
       "gap": 0.5318,
       "owner": "Runtime Team",
+      "path": "docs/DATA-GOVERNANCE.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "Runtime Team",
+      "path": "docs/DECISION-LEDGER.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "AI Team",
+      "path": "docs/EXPLAINABILITY.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "Runtime Team",
       "path": "docs/FEATURE-FLAGS.md"
     },
     {
-      "completeness": 0.36363636363636365,
-      "gap": 0.4864,
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
       "owner": "Runtime Team",
-      "path": "docs/RESOURCE-MANAGER.md"
+      "path": "docs/GAS-OPTIMISATION.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "AI Team",
+      "path": "docs/GOVERNANCE-EXPLAINABILITY.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "Runtime Team",
+      "path": "docs/KNOWLEDGE-GRAPH.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "Runtime Team",
+      "path": "docs/MODEL-CAPABILITY-NEGOTIATION.md"
+    },
+    {
+      "completeness": 0.3181818181818182,
+      "gap": 0.5318,
+      "owner": "Runtime Team",
+      "path": "docs/PROVIDER-RESILIENCE.md"
     },
     {
       "completeness": 0.36363636363636365,
@@ -983,19 +977,43 @@
       "completeness": 0.36363636363636365,
       "gap": 0.4864,
       "owner": "Runtime Team",
-      "path": "docs/SLIPPAGE-MODEL.md"
+      "path": "docs/OPPORTUNITY-RANKING.md"
     },
     {
       "completeness": 0.36363636363636365,
       "gap": 0.4864,
       "owner": "Runtime Team",
-      "path": "docs/OPPORTUNITY-RANKING.md"
+      "path": "docs/RESOURCE-MANAGER.md"
+    },
+    {
+      "completeness": 0.36363636363636365,
+      "gap": 0.4864,
+      "owner": "Runtime Team",
+      "path": "docs/SLIPPAGE-MODEL.md"
     },
     {
       "completeness": 0.4090909090909091,
       "gap": 0.4409,
-      "owner": "Trading Team",
-      "path": "docs/ROUTING-ENGINE.md"
+      "owner": "AI Team",
+      "path": "docs/AI-CONSENSUS.md"
+    },
+    {
+      "completeness": 0.4090909090909091,
+      "gap": 0.4409,
+      "owner": "AI Team",
+      "path": "docs/AI-GATEWAY.md"
+    },
+    {
+      "completeness": 0.4090909090909091,
+      "gap": 0.4409,
+      "owner": "AI Team",
+      "path": "docs/AI-MEMORY-SYSTEM.md"
+    },
+    {
+      "completeness": 0.4090909090909091,
+      "gap": 0.4409,
+      "owner": "Runtime Team",
+      "path": "docs/DECISION-LOG.md"
     },
     {
       "completeness": 0.4090909090909091,
@@ -1013,37 +1031,19 @@
       "completeness": 0.4090909090909091,
       "gap": 0.4409,
       "owner": "Runtime Team",
-      "path": "docs/DECISION-LOG.md"
+      "path": "docs/ORDER-MANAGEMENT.md"
+    },
+    {
+      "completeness": 0.4090909090909091,
+      "gap": 0.4409,
+      "owner": "Trading Team",
+      "path": "docs/ROUTING-ENGINE.md"
     },
     {
       "completeness": 0.4090909090909091,
       "gap": 0.4409,
       "owner": "Runtime Team",
       "path": "docs/SERVICE-REGISTRY.md"
-    },
-    {
-      "completeness": 0.4090909090909091,
-      "gap": 0.4409,
-      "owner": "AI Team",
-      "path": "docs/AI-CONSENSUS.md"
-    },
-    {
-      "completeness": 0.4090909090909091,
-      "gap": 0.4409,
-      "owner": "AI Team",
-      "path": "docs/AI-MEMORY-SYSTEM.md"
-    },
-    {
-      "completeness": 0.4090909090909091,
-      "gap": 0.4409,
-      "owner": "AI Team",
-      "path": "docs/AI-GATEWAY.md"
-    },
-    {
-      "completeness": 0.4090909090909091,
-      "gap": 0.4409,
-      "owner": "Runtime Team",
-      "path": "docs/ORDER-MANAGEMENT.md"
     },
     {
       "completeness": 0.5,
