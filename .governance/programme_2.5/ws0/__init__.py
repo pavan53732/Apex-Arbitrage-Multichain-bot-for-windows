@@ -145,42 +145,56 @@ class WS0VerificationLayer:
     
     def collect_evidence(self, canonical_output: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Collect evidence from canonical governance outputs.
-        
-        Evidence includes:
-        - Repository hash
-        - Execution metadata
-        - Canonical output hashes
-        - Graph exports
-        - Freeze records (from canonical runtime)
+        Collect evidence for this certification run.
+
+        SUPERSEDED IMPLEMENTATION NOTICE (Repository Canonicality Repair,
+        Work Item 5): this method previously performed its own ad hoc file
+        hashing (repository hash + a flat list of graph/freeze file
+        hashes), independent of any canonical evidence engine, because no
+        such engine existed yet. A canonical Evidence Engine now exists at
+        tools/governance/evidence/evidence_engine.py, which additionally
+        records the producing command, inputs, execution time, and
+        validator results — the full field set required by the
+        Repository Canonicality Repair directive. This method now
+        delegates to it and returns a superset of the original shape
+        (all original keys are preserved for backward compatibility with
+        existing certification-package consumers; new fields are added
+        alongside them, not in place of them).
         """
-        evidence = {
-            "repository_hash": self._get_repo_hash(),
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "canonical_output_hash": self._hash_dict(canonical_output),
-            "evidence_files": []
-        }
-        
-        # Collect graph exports from canonical runtime
-        graphs_dir = self.repo_root / ".governance" / "graphs"
-        if graphs_dir.exists():
-            for graph_file in graphs_dir.glob("*.graphml"):
-                evidence["evidence_files"].append({
-                    "path": str(graph_file.relative_to(self.repo_root)),
-                    "hash": self._hash_file(graph_file),
-                    "type": "graph"
-                })
-        
-        # Collect freeze records from canonical runtime
+        try:
+            from tools.governance.evidence.evidence_engine import EvidenceEngine
+        except ImportError:
+            from governance.evidence.evidence_engine import EvidenceEngine  # type: ignore
+
+        engine = EvidenceEngine(self.repo_root)
+        record = engine.collect()
+
+        # Preserve the original flat evidence_files shape (path/hash/type)
+        # for graphs and freeze records, derived from the canonical
+        # EvidenceRecord's `hashes` dict, so existing consumers of this
+        # method's return value keep working unchanged.
+        evidence_files = []
+        for rel_path, file_hash in sorted(record.hashes.items()):
+            if rel_path.endswith(".graphml"):
+                evidence_files.append({"path": rel_path, "hash": file_hash, "type": "graph"})
         freeze_dir = self.repo_root / ".governance" / "freeze"
         if freeze_dir.exists():
-            for freeze_file in freeze_dir.glob("*.json"):
-                evidence["evidence_files"].append({
+            for freeze_file in sorted(freeze_dir.glob("*.json")):
+                evidence_files.append({
                     "path": str(freeze_file.relative_to(self.repo_root)),
                     "hash": self._hash_file(freeze_file),
                     "type": "freeze"
                 })
-        
+
+        evidence = {
+            "repository_hash": self._get_repo_hash(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "canonical_output_hash": self._hash_dict(canonical_output),
+            "evidence_files": evidence_files,
+            # New fields from the canonical Evidence Engine:
+            "evidence_engine_record": record.to_dict(),
+            "evidence_record_hash": record.record_hash(),
+        }
         return evidence
     
     def run_regression_check(self, current_output: Dict[str, Any], 

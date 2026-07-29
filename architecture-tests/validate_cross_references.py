@@ -46,7 +46,9 @@ def main():
         print(f"FAIL: {DOCS_DIR} directory not found")
         sys.exit(1)
 
-    doc_files = [f for f in os.listdir(DOCS_DIR) if f.endswith(".md")]
+    # sorted(): os.listdir() order is filesystem-dependent, not guaranteed
+    # deterministic across platforms/processes.
+    doc_files = sorted(f for f in os.listdir(DOCS_DIR) if f.endswith(".md"))
     
     for doc_file in doc_files:
         doc_path = os.path.join(DOCS_DIR, doc_file)

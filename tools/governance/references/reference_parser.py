@@ -4,6 +4,26 @@ import re
 from pathlib import Path
 from typing import Iterable
 
+
+def _dedupe_preserve_order(items: list[str]) -> list[str]:
+    """Deduplicate a list while preserving first-seen order.
+
+    `list(set(items))` is non-deterministic across process restarts because
+    Python's string hashing (and therefore `set` iteration order) is
+    randomized per-process by default (`PYTHONHASHSEED`). Regex extraction
+    order from a fixed input text is itself deterministic, so preserving
+    that order while dropping duplicates gives a fully deterministic,
+    reproducible result across any process, shell, or `PYTHONHASHSEED`.
+    """
+    seen: set[str] = set()
+    out: list[str] = []
+    for item in items:
+        if item not in seen:
+            seen.add(item)
+            out.append(item)
+    return out
+
+
 class ReferenceParser:
     def __init__(self, repo_root: str):
         self.repo_root = Path(repo_root)
@@ -61,7 +81,7 @@ class ReferenceParser:
                             ref = ref[5:]
                         refs.append(ref)
 
-        return list(set(refs))
+        return _dedupe_preserve_order(refs)
 
     def extract_depends_on(self, text: str, source_path: str) -> list[str]:
         """Extract dependencies from Depends On section."""
@@ -83,4 +103,4 @@ class ReferenceParser:
                             ref = ref[5:]
                         deps.append(ref)
 
-        return list(set(deps))
+        return _dedupe_preserve_order(deps)

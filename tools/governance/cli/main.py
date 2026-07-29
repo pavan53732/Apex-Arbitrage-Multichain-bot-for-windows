@@ -200,7 +200,7 @@ def graphs(config_path: str = typer.Option("tools/governance/config/governance.y
     graphs_dir = repo_root / cfg["storage"]["graphs_dir"]
     console.print(f"Graphs directory: {graphs_dir}")
     if graphs_dir.exists():
-        for g in graphs_dir.glob("*.graphml"):
+        for g in sorted(graphs_dir.glob("*.graphml")):
             console.print(f"- {g.name}")
 
 @app.command()
@@ -209,6 +209,79 @@ def progress(config_path: str = typer.Option("tools/governance/config/governance
     repo_root = Path(cfg["repo_root"]).resolve()
     progress = ProgressTracker(repo_root / cfg["storage"]["progress_path"])
     console.print(progress.data)
+
+@app.command()
+def evidence(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
+    """Collect a reproducible Evidence Record (Work Item 5: Evidence Framework).
+
+    Writes .governance/evidence/evidence_latest.json (overwritten each run,
+    not accumulated as timestamped files) and prints the record to stdout."""
+    import json as _json
+    from ..evidence.evidence_engine import EvidenceEngine
+    cfg = load_config(config_path)
+    repo_root = Path(cfg["repo_root"]).resolve()
+    if not repo_root.exists() or not (repo_root / "docs").exists():
+        cfg_path = Path(config_path)
+        for parent in [cfg_path] + list(cfg_path.parents):
+            candidate = (parent.parent.parent.parent if "tools" in str(parent) else parent).resolve()
+            if (candidate / "docs").exists():
+                repo_root = candidate
+                break
+    engine = EvidenceEngine(repo_root)
+    record = engine.collect_and_save(repo_root / ".governance" / "evidence" / "evidence_latest.json")
+    print(_json.dumps(record.to_dict(), indent=2))
+
+@app.command()
+def inventory(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
+    """Generate the single canonical document inventory (Work Item 9).
+
+    Writes .governance/exports/document_inventory.json — the only enriched
+    inventory view; see tools/governance/reporting/document_inventory.py
+    for why the four previously-competing inventory files were archived."""
+    from ..reporting.document_inventory import save_document_inventory
+    cfg = load_config(config_path)
+    repo_root = Path(cfg["repo_root"]).resolve()
+    if not repo_root.exists() or not (repo_root / "docs").exists():
+        cfg_path = Path(config_path)
+        for parent in [cfg_path] + list(cfg_path.parents):
+            candidate = (parent.parent.parent.parent if "tools" in str(parent) else parent).resolve()
+            if (candidate / "docs").exists():
+                repo_root = candidate
+                break
+    count = save_document_inventory(repo_root, repo_root / ".governance" / "exports" / "document_inventory.json", config_path)
+    console.print(f"Document inventory written: {count} documents -> .governance/exports/document_inventory.json")
+
+@app.command()
+def validators(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
+    """List every validator in the Validator Registry (Work Item 7: Validator Consolidation)."""
+    from ..validator.registry import list_validators
+    for v in list_validators():
+        console.print(f"[{v.layer}] {v.id} (owner={v.owner}, severity={v.severity}) -> {v.invoke}")
+
+@app.command()
+def integrity(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
+    """Run the Integrity Engine: database, graphs, closures, validators, roots,
+    ownership, cross references, freeze, evidence, metrics, configuration,
+    runtime, and repository checks. Prints PASS/FAIL with diagnostics."""
+    import json as _json
+    from ..integrity.integrity_engine import IntegrityEngine
+    cfg = load_config(config_path)
+    repo_root = Path(cfg["repo_root"]).resolve()
+    if not repo_root.exists() or not (repo_root / "docs").exists():
+        cfg_path = Path(config_path)
+        for parent in [cfg_path] + list(cfg_path.parents):
+            candidate = (parent.parent.parent.parent if "tools" in str(parent) else parent).resolve()
+            if (candidate / "docs").exists():
+                repo_root = candidate
+                break
+    engine = IntegrityEngine(repo_root, config_path=config_path)
+    report = engine.run_all()
+    # Plain print (not console.print/rich): rich wraps long lines with
+    # embedded newlines, which corrupts the JSON for any caller piping
+    # this output (e.g. `apex-gov integrity | python -m json.tool`).
+    print(_json.dumps(report, indent=2))
+    if report["overall"] != "PASS":
+        raise typer.Exit(code=1)
 
 if __name__ == "__main__":
     app()

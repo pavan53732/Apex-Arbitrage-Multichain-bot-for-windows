@@ -11,12 +11,16 @@ pyproject.toml
 ../governance/cli/main.py
 ../governance/closure/__init__.py
 ../governance/closure/closure_engine.py
+../governance/closure/orchestrator.py
 ../governance/config/config_loader.py
 ../governance/context/__init__.py
 ../governance/continuous/__init__.py
 ../governance/continuous/intelligence.py
 ../governance/dashboard/__init__.py
 ../governance/dashboard/metrics_dashboard.py
+../governance/evidence/__init__.py
+../governance/evidence/evidence_engine.py
+../governance/freeze/manager.py
 ../governance/graphs/__init__.py
 ../governance/graphs/graph_builder.py
 ../governance/history/__init__.py
@@ -25,6 +29,8 @@ pyproject.toml
 ../governance/implementation/workflow.py
 ../governance/indexer/__init__.py
 ../governance/indexer/repo_indexer.py
+../governance/integrity/__init__.py
+../governance/integrity/integrity_engine.py
 ../governance/memory/__init__.py
 ../governance/memory/database.py
 ../governance/metadata/__init__.py
@@ -43,7 +49,10 @@ pyproject.toml
 ../governance/references/reference_parser.py
 ../governance/repair/__init__.py
 ../governance/repair/engine.py
+../governance/repair/planner.py
 ../governance/reporting/__init__.py
+../governance/reporting/document_inventory.py
+../governance/scheduler/scheduler.py
 ../governance/search/__init__.py
 ../governance/search/semantic.py
 ../governance/standardiser/standardiser.py
@@ -58,6 +67,7 @@ pyproject.toml
 ../governance/tests/test_validator.py
 ../governance/validator/__init__.py
 ../governance/validator/governance_validator.py
+../governance/validator/registry.py
 tests/test_closure.py
 tests/test_graphs.py
 tests/test_indexer.py

@@ -1,91 +1,88 @@
 {
   "identity": {
-    "freeze_id": "2c3d7c2b86c402cf",
+    "freeze_id": "64e8284a40e75ea6",
     "workstream_id": "WS0",
-    "workstream_version": "1.0.0",
-    "repository_version": "1e585e2f439549195434c49aaa01b192f7a1e61b",
-    "governance_platform_version": "0.1.0",
-    "schema_version": "1.0.0"
+    "workstream_version": "2.0.0",
+    "repository_version": "9262bb55a47aae5418a21e7b79682b09f25ba5a8",
+    "governance_platform_version": "1.0.0",
+    "schema_version": "2.0.0"
   },
   "repository": {
-    "repository_hash": "fb099bc5acb3d08be8c64967bc27a753b530ba9a3818dcb980e06956a71251d2",
-    "repository_state": "clean",
+    "repository_tree_hash": "5a83446b607a3dbf1cbb845bd2c548212b747490",
     "git_branch": "main",
-    "commit_hash": "1e585e2f439549195434c49aaa01b192f7a1e61b",
-    "parent_commit": "fd784cf5811c090c7b2d1a93619988679eee3538",
-    "working_tree_status": "clean"
+    "commit_hash": "9262bb55a47aae5418a21e7b79682b09f25ba5a8",
+    "working_tree_status": "dirty (repair in progress; see repair commit)"
   },
   "execution": {
-    "start_timestamp": "2026-07-28T22:36:23.902892+00:00",
-    "end_timestamp": "2026-07-28T22:36:23.902906+00:00",
-    "duration_ms": 12345,
+    "timestamp": "2026-07-29T08:57:24.876575+00:00",
+    "runtime_command": "apex-gov run",
     "machine_information": {
-      "platform": "Linux-6.1.158-x86_64-with-glibc2.41",
-      "python_version": "3.12.12",
-      "tool_version": "1.0.0"
+      "python_version": "Python 3.13.14"
     }
+  },
+  "canonical_output": {
+    "documents_indexed": 277,
+    "behavioural_roots": 28,
+    "validation_findings": 2065,
+    "closures_computed": 28,
+    "avg_completeness": 0.2234985231375123,
+    "graph_nodes": 277,
+    "graph_edges": 879
   },
   "validation": {
-    "validator_catalogue_version": "1.0.0",
     "validator_list": [
-      "governance_validator"
+      "audit_duplicates",
+      "tools_governance_pytest",
+      "validate_contracts",
+      "validate_cross_references",
+      "validate_ownership",
+      "validate_traceability"
     ],
-    "validator_versions": {
-      "governance_validator": "1.0.0"
-    },
     "validator_results": {
-      "governance_validator": "PASS"
+      "audit_duplicates": "PASS",
+      "validate_contracts": "PASS",
+      "validate_cross_references": "PASS",
+      "validate_ownership": "PASS",
+      "validate_traceability": "PASS",
+      "tools_governance_pytest": "PASS"
     },
-    "validation_hash": "98c41dcd20b86b86830ec0794559835614458ceaae0f0ec77a3ed1cd3a1f7d55"
+    "all_pass": true
   },
-  "evidence": {
-    "evidence_ids": [
-      "evidence_001"
-    ],
-    "evidence_hashes": {
-      "evidence_001": "ee8250fb76e094b34b471f13a73dbbe51d1ae142e9df59d7c0d31ec20f0a0a8e"
+  "graphs": {
+    "graph_hashes": {
+      "config_graph.graphml": "da2abed38e9850390803e472e5e5a2db526e2951e4ad7022cbf5a09b0f92d5e1",
+      "dependency_graph.graphml": "d3d262a72bf9b78cd19bc69553882dfc17119af9244d3c920fda578bf487c74f",
+      "document_graph.graphml": "dae6a609f72c5220a6ee09131ca554d8a40edbd54d16ba6041a206f60ad9a1d5",
+      "event_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
+      "interface_graph.graphml": "12d90214d80b4559b6ccb0a2075d9c24e7a8b2ab70dd53322f8c5e07bb3c4c65",
+      "ownership_graph.graphml": "914366dd96fb6be4f810d2011017aa70ae03ec3de353f29124ca5dd1fbb79931",
+      "schema_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
+      "state_machine_graph.graphml": "9644eee6f22385efccabfb0b2eef0a1a324ae760de70af7bd2e1bcc4fb0d1dd2"
     },
-    "evidence_count": 1,
-    "evidence_manifest": "/home/user/apex_repo/.governance/programme_2.5/ws0/reports/evidence_report.json",
-    "evidence_directory": "/home/user/apex_repo/.governance/programme_2.5/ws0/reports"
+    "combined_graph_hash": "a75501bac167d4dc204e1ed4f1791b9f258a1553bd2c5fa6fd45b07f7f14afd6",
+    "graph_count": 8
   },
-  "metrics": {
-    "metrics_snapshot": {
-      "repository_completeness": 1.0
-    },
-    "repository_metrics": {
-      "documents": 360,
-      "roots": 22
-    },
-    "runtime_metrics": {
-      "index_ms": 100,
-      "parse_ms": 50
-    },
-    "performance_metrics": {
-      "determinism_runs": 100,
-      "success_rate": 1.0
-    },
-    "integrity_metrics": {
-      "integrity": "PASS"
-    }
+  "database": {
+    "canonical_database_path": ".governance/governance.db",
+    "database_hash": "7774853edb206b07a1381ff145f4f6a3dfc5191f72a32fc150bea1e168578f02",
+    "note": "Exactly one canonical database exists as of this freeze. See .governance/archive/pre-consolidation-2026-07-29/ARCHIVE-MANIFEST.md for the two duplicate databases that were archived (not deleted) prior to this freeze."
+  },
+  "configuration": {
+    "configuration_hash": "7175cbed9abdb67914d2e595c55f71c26716333451b69944b0b033708bc13693",
+    "path": "tools/governance/config/governance.yaml"
   },
   "integrity": {
-    "integrity_checksum": "78587c41ed99a3375022dc28be882f72b1a608a0dac7aa900c61f48b2bb37be6",
-    "graph_hash": "eef93e1d14482804277fca0172464032d1a4fdbcc338524059fa1e861454ad4d",
-    "closure_hash": "6d4cb937d6d22521566bba561458d0d1952df6df7a80e46ef5dab9014fbc3557",
-    "database_hash": "3549b0028b75d981cdda2e573e9cb49dedc200185876df299f912b79f69dabd8",
-    "configuration_hash": "b7d64a9221007dfd5390f7df6cd5b8f3ea4f82faa1237141e35ebf161f5511a1"
+    "integrity_checksum": "15fa1dc8516215c470c3ce5dd520d9f96a05248945985c9a8f754e6f938613ee",
+    "computed_from": [
+      "combined_graph_hash",
+      "database_hash",
+      "configuration_hash",
+      "canonical_output"
+    ]
   },
   "freeze": {
-    "frozen_objects": [
-      "fixture_loader",
-      "golden_generator",
-      "golden_comparator",
-      "test_dashboard",
-      "test_harness"
-    ],
-    "freeze_timestamp": "2026-07-28T22:36:23.902979+00:00",
-    "freeze_signature": "0718af4ffc814ea5d00634f56e5d96e2a13ab56cb7d9fd54bd3439d9aa037663",
-    "freeze_hash": "2761b3242823f5a0f37f27aa219a6b8577f4195dd6761e27b06339a25f9afe7e"
+    "freeze_timestamp": "2026-07-29T08:57:24.878580+00:00",
+    "supersedes": ".governance/archive/pre-consolidation-2026-07-29/freeze_WS0_stale.json",
+    "reason_for_regeneration": "Prior freeze_WS0.json referenced commit 1e585e2f4 (6+ commits stale), hardcoded repository_metrics {documents: 360, roots: 22} that disagreed with the live canonical runtime (277 documents, 28 roots), and listed frozen_objects (fixture_loader, golden_generator, golden_comparator, test_dashboard, test_harness) that were deleted by the WS0 verification-layer refactor (ADR-0011) before this freeze was ever regenerated. See Repository Canonicality Audit, section 5d."
   }
 }

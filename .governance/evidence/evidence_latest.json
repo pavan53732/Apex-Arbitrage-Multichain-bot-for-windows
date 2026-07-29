@@ -1,0 +1,62 @@
+{
+  "engine": "tools.governance.cli.main:run",
+  "command": "apex-gov run",
+  "inputs": {
+    "config_path": "tools/governance/config/governance.yaml",
+    "docs_globs": [
+      "docs/*.md",
+      "docs/adr/*.md",
+      "*.md"
+    ]
+  },
+  "outputs": {
+    "documents_indexed": 277,
+    "behavioural_roots": 28,
+    "validation_findings": 2065,
+    "closures_computed": 28,
+    "avg_completeness": 0.2234985231375123,
+    "graph_nodes": 277,
+    "graph_edges": 879
+  },
+  "hashes": {
+    ".governance/exports/documents.json": "e2174664ea1a6547976c5d9a36e5df3d724d28a584428ee47e9885f038024da6",
+    ".governance/governance.db": "2c2366ad2f90a497a039fb555fc03d9c0fdcefab19270a6d8442f959e1c71e3d",
+    ".governance/graphs/config_graph.graphml": "da2abed38e9850390803e472e5e5a2db526e2951e4ad7022cbf5a09b0f92d5e1",
+    ".governance/graphs/dependency_graph.graphml": "d3d262a72bf9b78cd19bc69553882dfc17119af9244d3c920fda578bf487c74f",
+    ".governance/graphs/document_graph.graphml": "dae6a609f72c5220a6ee09131ca554d8a40edbd54d16ba6041a206f60ad9a1d5",
+    ".governance/graphs/event_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
+    ".governance/graphs/interface_graph.graphml": "12d90214d80b4559b6ccb0a2075d9c24e7a8b2ab70dd53322f8c5e07bb3c4c65",
+    ".governance/graphs/ownership_graph.graphml": "914366dd96fb6be4f810d2011017aa70ae03ec3de353f29124ca5dd1fbb79931",
+    ".governance/graphs/schema_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
+    ".governance/graphs/state_machine_graph.graphml": "9644eee6f22385efccabfb0b2eef0a1a324ae760de70af7bd2e1bcc4fb0d1dd2"
+  },
+  "execution_time_ms": 1439.709,
+  "validator_ids": [
+    "governance_validator.missing_owners",
+    "governance_validator.duplicate_owners",
+    "governance_validator.broken_references",
+    "governance_validator.cycles",
+    "architecture_test.audit_duplicates",
+    "architecture_test.validate_contracts",
+    "architecture_test.validate_cross_references",
+    "architecture_test.validate_ownership",
+    "architecture_test.validate_traceability"
+  ],
+  "validator_results": {
+    "governance_validator.missing_owners": "PASS",
+    "architecture_test.audit_duplicates": "PASS",
+    "architecture_test.validate_contracts": "PASS",
+    "architecture_test.validate_cross_references": "PASS",
+    "architecture_test.validate_ownership": "PASS",
+    "architecture_test.validate_traceability": "PASS"
+  },
+  "commit": "9262bb55a47aae5418a21e7b79682b09f25ba5a8",
+  "repository_hash": "5a83446b607a3dbf1cbb845bd2c548212b747490",
+  "producer": "tools.governance.evidence.evidence_engine.EvidenceEngine",
+  "consumer": [
+    ".governance/programme_2.5/ws0/__init__.py (WS0VerificationLayer certification)",
+    "tools.governance.integrity.integrity_engine.IntegrityEngine (check_evidence)",
+    ".governance/freeze/freeze_WS0.json (Freeze Framework)"
+  ],
+  "timestamp": "2026-07-29T09:10:10.581587+00:00"
+}

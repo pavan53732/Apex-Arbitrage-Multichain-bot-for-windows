@@ -116,11 +116,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ARCHITECTURE.md",
-      "EXECUTION-ENGINE.md",
       "DOCUMENTATION-MAP.md",
+      "ARCHITECTURE.md",
       "PROJECT-STRUCTURE.md",
-      "TRADING-ENGINE.md"
+      "TRADING-ENGINE.md",
+      "EXECUTION-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -136,11 +136,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ARCHITECTURE.md",
-      "EXECUTION-ENGINE.md",
       "DOCUMENTATION-MAP.md",
+      "ARCHITECTURE.md",
       "PROJECT-STRUCTURE.md",
-      "TRADING-ENGINE.md"
+      "TRADING-ENGINE.md",
+      "EXECUTION-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "APEX-ARCHITECTURE.md",
@@ -1054,9 +1054,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "USER-FLOWS.md",
+      "SKILLS.md",
       "AI-PIPELINE.md",
-      "SKILLS.md"
+      "USER-FLOWS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1072,9 +1072,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "USER-FLOWS.md",
+      "SKILLS.md",
       "AI-PIPELINE.md",
-      "SKILLS.md"
+      "USER-FLOWS.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AGENTS.md",
@@ -1134,10 +1134,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "CLOUD-AI-INTEGRATION.md",
       "AI-PIPELINE.md",
-      "CONFIGURATION.md",
-      "AI-SETTINGS.md"
+      "CLOUD-AI-INTEGRATION.md",
+      "AI-SETTINGS.md",
+      "CONFIGURATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1153,10 +1153,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "CLOUD-AI-INTEGRATION.md",
       "AI-PIPELINE.md",
-      "CONFIGURATION.md",
-      "AI-SETTINGS.md"
+      "CLOUD-AI-INTEGRATION.md",
+      "AI-SETTINGS.md",
+      "CONFIGURATION.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AI-CAPABILITY-MATRIX.md",
@@ -1183,8 +1183,8 @@
     "outputs": [],
     "depends_on": [
       "AI-ORCHESTRATION.md",
-      "RISK-ENGINE.md",
       "DECISION-ENGINE.md",
+      "RISK-ENGINE.md",
       "EXPLAINABILITY.md"
     ],
     "required_by": [],
@@ -1218,8 +1218,8 @@
     "testing": [],
     "cross_references": [
       "AI-ORCHESTRATION.md",
-      "RISK-ENGINE.md",
       "DECISION-ENGINE.md",
+      "RISK-ENGINE.md",
       "EXPLAINABILITY.md"
     ],
     "version_history": [],
@@ -1241,10 +1241,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "CONTEXT-BUILDER.md",
       "AI-PIPELINE.md",
-      "TRACEABILITY-MATRIX.md",
-      "AI-MEMORY-SYSTEM.md"
+      "AI-MEMORY-SYSTEM.md",
+      "CONTEXT-BUILDER.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1271,10 +1271,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "CONTEXT-BUILDER.md",
       "AI-PIPELINE.md",
-      "TRACEABILITY-MATRIX.md",
-      "AI-MEMORY-SYSTEM.md"
+      "AI-MEMORY-SYSTEM.md",
+      "CONTEXT-BUILDER.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AI-CONTEXT-WINDOW-MANAGEMENT.md",
@@ -1295,10 +1295,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "CLOUD-AI-INTEGRATION.md",
       "AI-PIPELINE.md",
-      "MONITORING-OBSERVABILITY.md",
-      "AI-SETTINGS.md"
+      "CLOUD-AI-INTEGRATION.md",
+      "AI-SETTINGS.md",
+      "MONITORING-OBSERVABILITY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1314,10 +1314,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "CLOUD-AI-INTEGRATION.md",
       "AI-PIPELINE.md",
-      "MONITORING-OBSERVABILITY.md",
-      "AI-SETTINGS.md"
+      "CLOUD-AI-INTEGRATION.md",
+      "AI-SETTINGS.md",
+      "MONITORING-OBSERVABILITY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AI-COST-MANAGEMENT.md",
@@ -1343,10 +1343,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "AI-TOOLS.md",
       "MODEL-CAPABILITY-NEGOTIATION.md",
-      "PROVIDER-RESILIENCE.md",
       "AI-REASONING-POLICY.md",
-      "AI-TOOLS.md"
+      "PROVIDER-RESILIENCE.md"
     ],
     "required_by": [],
     "interfaces": [
@@ -1379,10 +1379,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "AI-TOOLS.md",
       "MODEL-CAPABILITY-NEGOTIATION.md",
-      "PROVIDER-RESILIENCE.md",
       "AI-REASONING-POLICY.md",
-      "AI-TOOLS.md"
+      "PROVIDER-RESILIENCE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AI-GATEWAY.md",
@@ -1403,9 +1403,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "CONTEXT-BUILDER.md",
+      "KNOWLEDGE-GRAPH.md",
       "AI-MEMORY-SYSTEM.md",
-      "KNOWLEDGE-GRAPH.md"
+      "CONTEXT-BUILDER.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1428,9 +1428,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "CONTEXT-BUILDER.md",
+      "KNOWLEDGE-GRAPH.md",
       "AI-MEMORY-SYSTEM.md",
-      "KNOWLEDGE-GRAPH.md"
+      "CONTEXT-BUILDER.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AI-KNOWLEDGE-INDEX.md",
@@ -1457,9 +1457,9 @@
     "outputs": [],
     "depends_on": [
       "CONTEXT-BUILDER.md",
-      "KNOWLEDGE-GRAPH.md",
+      "AI-KNOWLEDGE-INDEX.md",
       "LEARNING-PIPELINE.md",
-      "AI-KNOWLEDGE-INDEX.md"
+      "KNOWLEDGE-GRAPH.md"
     ],
     "required_by": [],
     "interfaces": [
@@ -1492,9 +1492,9 @@
     "testing": [],
     "cross_references": [
       "CONTEXT-BUILDER.md",
-      "KNOWLEDGE-GRAPH.md",
+      "AI-KNOWLEDGE-INDEX.md",
       "LEARNING-PIPELINE.md",
-      "AI-KNOWLEDGE-INDEX.md"
+      "KNOWLEDGE-GRAPH.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AI-MEMORY-SYSTEM.md",
@@ -1552,11 +1552,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "AI-PLANNER.md",
-      "CONTEXT-PRIORITY-MATRIX.md",
-      "EXPLAINABILITY.md",
+      "ORCHESTRATOR.md",
       "AI-PIPELINE.md",
-      "AI-MEMORY-SYSTEM.md"
+      "AI-PROVIDER-MANAGER.md",
+      "AI-STATE-MACHINE.md",
+      "AI-SAFETY-BOUNDARY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1572,21 +1572,21 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "AI-PLANNER.md",
-      "CONTEXT-PRIORITY-MATRIX.md",
-      "EXPLAINABILITY.md",
+      "ORCHESTRATOR.md",
       "AI-PIPELINE.md",
-      "AI-MEMORY-SYSTEM.md",
       "AI-PROVIDER-MANAGER.md",
       "AI-STATE-MACHINE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "AI-TOOL-INVOCATION-CONTRACT.md",
-      "AI-CONSENSUS.md",
       "AI-SAFETY-BOUNDARY.md",
-      "ORCHESTRATOR.md",
-      "END-TO-END-WIRING-CONTRACT.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md",
+      "AI-MEMORY-SYSTEM.md",
+      "AI-PLANNER.md",
+      "AI-REFLECTION.md",
+      "AI-CONSENSUS.md",
+      "CONTEXT-PRIORITY-MATRIX.md",
       "DECISION-ENGINE.md",
-      "AI-REFLECTION.md"
+      "EXPLAINABILITY.md",
+      "END-TO-END-WIRING-CONTRACT.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -1611,11 +1611,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "CONTEXT-PRIORITY-MATRIX.md",
-      "TRACEABILITY-MATRIX.md",
+      "AI-PROVIDER-MANAGER.md",
+      "AI-ORCHESTRATION.md",
       "MODEL-CAPABILITY-NEGOTIATION.md",
-      "AI-MEMORY-SYSTEM.md",
-      "INTERFACE-AGENT-MESSAGE.md"
+      "PROMPT-LIFECYCLE.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1631,18 +1631,18 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "CONTEXT-PRIORITY-MATRIX.md",
-      "TRACEABILITY-MATRIX.md",
-      "MODEL-CAPABILITY-NEGOTIATION.md",
-      "AI-MEMORY-SYSTEM.md",
-      "INTERFACE-AGENT-MESSAGE.md",
       "AI-PROVIDER-MANAGER.md",
       "AI-ORCHESTRATION.md",
-      "CONFIGURATION-REFERENCE.md",
-      "AI-TOOL-INVOCATION-CONTRACT.md",
+      "MODEL-CAPABILITY-NEGOTIATION.md",
       "PROMPT-LIFECYCLE.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md",
+      "AI-MEMORY-SYSTEM.md",
       "AI-SAFETY-BOUNDARY.md",
-      "END-TO-END-WIRING-CONTRACT.md"
+      "CONTEXT-PRIORITY-MATRIX.md",
+      "INTERFACE-AGENT-MESSAGE.md",
+      "CONFIGURATION-REFERENCE.md",
+      "END-TO-END-WIRING-CONTRACT.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -1716,11 +1716,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "AI-GATEWAY.md",
-      "TRACEABILITY-MATRIX.md",
-      "MODEL-CAPABILITY-NEGOTIATION.md",
+      "AI-ORCHESTRATION.md",
       "AI-PIPELINE.md",
-      "SECRET-LIFECYCLE.md"
+      "MODEL-CAPABILITY-NEGOTIATION.md",
+      "AI-COST-MANAGEMENT.md",
+      "AI-GATEWAY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1736,15 +1736,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "AI-GATEWAY.md",
-      "TRACEABILITY-MATRIX.md",
-      "MODEL-CAPABILITY-NEGOTIATION.md",
-      "AI-PIPELINE.md",
-      "SECRET-LIFECYCLE.md",
-      "AI-COST-MANAGEMENT.md",
       "AI-ORCHESTRATION.md",
+      "AI-PIPELINE.md",
+      "MODEL-CAPABILITY-NEGOTIATION.md",
+      "AI-COST-MANAGEMENT.md",
+      "AI-GATEWAY.md",
+      "SECRET-LIFECYCLE.md",
       "CONFIGURATION-REFERENCE.md",
-      "END-TO-END-WIRING-CONTRACT.md"
+      "END-TO-END-WIRING-CONTRACT.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -1770,9 +1770,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RISK-ENGINE.md",
+      "AI-CONSENSUS.md",
       "DECISION-ENGINE.md",
-      "AI-CONSENSUS.md"
+      "RISK-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1799,9 +1799,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RISK-ENGINE.md",
+      "AI-CONSENSUS.md",
       "DECISION-ENGINE.md",
-      "AI-CONSENSUS.md"
+      "RISK-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AI-REASONING-POLICY.md",
@@ -1870,11 +1870,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
       "TRUST-BOUNDARIES.md",
       "SECURITY.md",
-      "AI-PIPELINE.md",
-      "CONFIGURATION-REFERENCE.md"
+      "SECURITY-CONTRACTS.md",
+      "PERMISSION-MODEL.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1890,15 +1890,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
       "TRUST-BOUNDARIES.md",
       "SECURITY.md",
-      "AI-PIPELINE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "AI-TOOL-INVOCATION-CONTRACT.md",
       "SECURITY-CONTRACTS.md",
+      "PERMISSION-MODEL.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md",
+      "AI-PIPELINE.md",
       "PROMPT-LIFECYCLE.md",
-      "PERMISSION-MODEL.md"
+      "TRACEABILITY-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -1924,11 +1924,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "PROMPT-ENGINEERING.md",
-      "AI-CAPABILITY-MATRIX.md",
       "AI-PIPELINE.md",
-      "AI-COST-MANAGEMENT.md",
-      "CONFIGURATION.md"
+      "CLOUD-AI-INTEGRATION.md",
+      "CONFIGURATION.md",
+      "AI-CAPABILITY-MATRIX.md",
+      "PROMPT-ENGINEERING.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1948,12 +1948,12 @@
     ],
     "testing": [],
     "cross_references": [
-      "PROMPT-ENGINEERING.md",
-      "AI-CAPABILITY-MATRIX.md",
       "AI-PIPELINE.md",
-      "AI-COST-MANAGEMENT.md",
+      "CLOUD-AI-INTEGRATION.md",
       "CONFIGURATION.md",
-      "CLOUD-AI-INTEGRATION.md"
+      "AI-CAPABILITY-MATRIX.md",
+      "PROMPT-ENGINEERING.md",
+      "AI-COST-MANAGEMENT.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AI-SETTINGS.md",
@@ -1974,11 +1974,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "CONTEXT-PRIORITY-MATRIX.md",
-      "TRACEABILITY-MATRIX.md",
-      "AI-MEMORY.md",
       "AI-PIPELINE.md",
-      "CONFIGURATION-REFERENCE.md"
+      "PROMPT-LIFECYCLE.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md",
+      "AI-MEMORY.md",
+      "AI-SAFETY-BOUNDARY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -1994,14 +1994,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "AI-PIPELINE.md",
+      "PROMPT-LIFECYCLE.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md",
+      "AI-MEMORY.md",
+      "AI-SAFETY-BOUNDARY.md",
       "CONTEXT-PRIORITY-MATRIX.md",
       "TRACEABILITY-MATRIX.md",
-      "AI-MEMORY.md",
-      "AI-PIPELINE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "AI-TOOL-INVOCATION-CONTRACT.md",
-      "PROMPT-LIFECYCLE.md",
-      "AI-SAFETY-BOUNDARY.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -2027,11 +2027,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ERROR-CODES.md",
+      "AI-TOOLS.md",
       "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
       "AI-PIPELINE.md",
-      "EVENT-OWNERSHIP-MATRIX.md"
+      "AI-SAFETY-BOUNDARY.md",
+      "TRUST-BOUNDARIES.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2047,15 +2047,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ERROR-CODES.md",
+      "AI-TOOLS.md",
       "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
       "AI-PIPELINE.md",
+      "AI-SAFETY-BOUNDARY.md",
+      "TRUST-BOUNDARIES.md",
+      "ERROR-CODES.md",
       "EVENT-OWNERSHIP-MATRIX.md",
       "CONFIGURATION-REFERENCE.md",
-      "PROMPT-LIFECYCLE.md",
-      "AI-SAFETY-BOUNDARY.md",
-      "AI-TOOLS.md"
+      "PROMPT-LIFECYCLE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -2081,9 +2081,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "API-REFERENCE.md",
       "INTERFACE-TOOL-CALL.md",
-      "AI-AGENT-SPECIFICATION.md"
+      "AI-AGENT-SPECIFICATION.md",
+      "API-REFERENCE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2099,9 +2099,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "API-REFERENCE.md",
       "INTERFACE-TOOL-CALL.md",
-      "AI-AGENT-SPECIFICATION.md"
+      "AI-AGENT-SPECIFICATION.md",
+      "API-REFERENCE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/AI-TOOLS.md",
@@ -2128,11 +2128,11 @@
       "Registered services, lifecycle events, dependency bindings, health state, and plugin activation results."
     ],
     "depends_on": [
-      "SERVICE-REGISTRY.md",
+      "ORCHESTRATOR.md",
       "EVENT-BUS.md",
+      "SERVICE-REGISTRY.md",
       "HEALTHCHECKS.md",
-      "PLUGIN-SDK.md",
-      "ORCHESTRATOR.md"
+      "PLUGIN-SDK.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2162,11 +2162,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "SERVICE-REGISTRY.md",
+      "ORCHESTRATOR.md",
       "EVENT-BUS.md",
+      "SERVICE-REGISTRY.md",
       "HEALTHCHECKS.md",
-      "PLUGIN-SDK.md",
-      "ORCHESTRATOR.md"
+      "PLUGIN-SDK.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -2191,11 +2191,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-DESKTOP.md",
-      "POLICY-ENGINE.md",
       "APEX-KERNEL.md",
+      "ORCHESTRATOR.md",
+      "POLICY-ENGINE.md",
       "PLUGIN-SDK.md",
-      "ORCHESTRATOR.md"
+      "WINDOWS-DESKTOP.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2217,11 +2217,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
-      "POLICY-ENGINE.md",
       "APEX-KERNEL.md",
-      "PLUGIN-SDK.md",
       "ORCHESTRATOR.md",
+      "POLICY-ENGINE.md",
+      "PLUGIN-SDK.md",
+      "WINDOWS-DESKTOP.md",
       "ENTERPRISE-OPERATIONS.md"
     ],
     "version_history": [],
@@ -2248,10 +2248,10 @@
     "outputs": [],
     "depends_on": [
       "./IPC-PROTOCOL.md",
-      "STATE-MANAGEMENT.md",
       "./MODULE-DEPENDENCY.md",
-      "MODULE-DEPENDENCY.md",
-      "./STATE-MANAGEMENT.md"
+      "./STATE-MANAGEMENT.md",
+      "./ERROR-HANDLING-LOGGING.md",
+      "IPC-PROTOCOL.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2271,13 +2271,13 @@
     "testing": [],
     "cross_references": [
       "./IPC-PROTOCOL.md",
-      "STATE-MANAGEMENT.md",
       "./MODULE-DEPENDENCY.md",
-      "MODULE-DEPENDENCY.md",
       "./STATE-MANAGEMENT.md",
-      "ERROR-HANDLING-LOGGING.md",
       "./ERROR-HANDLING-LOGGING.md",
-      "IPC-PROTOCOL.md"
+      "IPC-PROTOCOL.md",
+      "MODULE-DEPENDENCY.md",
+      "STATE-MANAGEMENT.md",
+      "ERROR-HANDLING-LOGGING.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -2302,11 +2302,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "VERSIONING.md",
       "API-CONTRACTS.md",
-      "ERROR-HANDLING-LOGGING.md",
+      "IPC-PROTOCOL.md",
       "PROJECT-STRUCTURE.md",
-      "IPC-PROTOCOL.md"
+      "ERROR-HANDLING-LOGGING.md",
+      "VERSIONING.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2322,11 +2322,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "VERSIONING.md",
       "API-CONTRACTS.md",
-      "ERROR-HANDLING-LOGGING.md",
+      "IPC-PROTOCOL.md",
       "PROJECT-STRUCTURE.md",
-      "IPC-PROTOCOL.md"
+      "ERROR-HANDLING-LOGGING.md",
+      "VERSIONING.md"
     ],
     "version_history": [],
     "canonical_source": "docs/API-REFERENCE.md",
@@ -2350,10 +2350,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "SECURITY-CONTRACTS.md",
-      "CHANGELOG.md",
+      "WINDOWS-DEPLOYMENT.md",
       "CONFIGURATION.md",
-      "WINDOWS-DEPLOYMENT.md"
+      "SECURITY-CONTRACTS.md",
+      "CHANGELOG.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2369,10 +2369,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "SECURITY-CONTRACTS.md",
-      "CHANGELOG.md",
+      "WINDOWS-DEPLOYMENT.md",
       "CONFIGURATION.md",
-      "WINDOWS-DEPLOYMENT.md"
+      "SECURITY-CONTRACTS.md",
+      "CHANGELOG.md"
     ],
     "version_history": [],
     "canonical_source": "docs/APP-BUILDER-DEPLOYMENT-GUIDE.md",
@@ -2393,11 +2393,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "PLUGIN-SDK.md",
+      "PLUGIN-LIFECYCLE.md",
       "PLUGIN-STATE-MACHINE.md",
-      "PLUGIN-MARKETPLACE.md",
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
-      "PLUGIN-SANDBOX-CONTRACT.md"
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "PLUGIN-MARKETPLACE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2413,15 +2413,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "PLUGIN-STATE-MACHINE.md",
-      "PLUGIN-MARKETPLACE.md",
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
+      "PLUGIN-SDK.md",
       "PLUGIN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
+      "PLUGIN-STATE-MACHINE.md",
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "PLUGIN-MARKETPLACE.md",
+      "TRUST-BOUNDARIES.md",
       "APP-BUILDER-WORKFLOW.md",
-      "PLUGIN-SDK.md"
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -2447,11 +2447,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
       "BUILD-RELEASE-CICD.md",
-      "SIGNING-POLICY.md",
+      "WINDOWS-DEPLOYMENT.md",
+      "TESTING-GUIDE.md",
       "DEPLOYMENT.md",
-      "TESTING-GUIDE.md"
+      "SIGNING-POLICY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2467,13 +2467,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
       "BUILD-RELEASE-CICD.md",
-      "SIGNING-POLICY.md",
-      "DEPLOYMENT.md",
+      "WINDOWS-DEPLOYMENT.md",
       "TESTING-GUIDE.md",
+      "DEPLOYMENT.md",
+      "SIGNING-POLICY.md",
       "CONFIGURATION-REFERENCE.md",
-      "WINDOWS-DEPLOYMENT.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -2502,10 +2502,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "DECISION-LOG.md",
+      "METRICS.md",
       "OPPORTUNITY-RANKING.md",
       "PERFORMANCE-SLOS.md",
-      "METRICS.md"
+      "DECISION-LOG.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2521,10 +2521,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "DECISION-LOG.md",
+      "METRICS.md",
       "OPPORTUNITY-RANKING.md",
       "PERFORMANCE-SLOS.md",
-      "METRICS.md"
+      "DECISION-LOG.md"
     ],
     "version_history": [],
     "canonical_source": "docs/ARBITRAGE-MONITORING.md",
@@ -2548,9 +2548,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RISK-ENGINE.md",
-      "OPPORTUNITY-RANKING.md",
       "TRADING-LIFECYCLE.md",
+      "OPPORTUNITY-RANKING.md",
+      "RISK-ENGINE.md",
       "ORCHESTRATOR.md"
     ],
     "required_by": [],
@@ -2567,9 +2567,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RISK-ENGINE.md",
-      "OPPORTUNITY-RANKING.md",
       "TRADING-LIFECYCLE.md",
+      "OPPORTUNITY-RANKING.md",
+      "RISK-ENGINE.md",
       "ORCHESTRATOR.md"
     ],
     "version_history": [
@@ -2595,11 +2595,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "DASHBOARD-WIDGETS.md",
-      "VERSIONING.md",
-      "DOMAIN-MODEL.md",
-      "RUNTIME-OPERATIONS.md",
-      "STATE-MANAGEMENT.md"
+      "CHAIN-REGISTRY.md",
+      "DEX-REGISTRY.md",
+      "TOKEN-REGISTRY.md",
+      "ORACLE-REGISTRY.md",
+      "DASHBOARD-LAYOUT.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2615,20 +2615,20 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "CHAIN-REGISTRY.md",
+      "DEX-REGISTRY.md",
+      "TOKEN-REGISTRY.md",
+      "ORACLE-REGISTRY.md",
+      "DASHBOARD-LAYOUT.md",
       "DASHBOARD-WIDGETS.md",
+      "UX-GUIDELINES.md",
       "VERSIONING.md",
       "DOMAIN-MODEL.md",
-      "RUNTIME-OPERATIONS.md",
-      "STATE-MANAGEMENT.md",
-      "CHAIN-REGISTRY.md",
+      "TRADING-ENGINE.md",
       "EXECUTION-ENGINE.md",
       "AI-PIPELINE.md",
-      "UX-GUIDELINES.md",
-      "TOKEN-REGISTRY.md",
-      "TRADING-ENGINE.md",
-      "DASHBOARD-LAYOUT.md",
-      "DEX-REGISTRY.md",
-      "ORACLE-REGISTRY.md"
+      "RUNTIME-OPERATIONS.md",
+      "STATE-MANAGEMENT.md"
     ],
     "version_history": [],
     "canonical_source": "docs/ARCHITECTURE.md if filename.startswith('docs/') else ARCHITECTURE.md",
@@ -2654,11 +2654,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
+      "MARKET-DATA.md",
       "PORTFOLIO-MANAGEMENT.md",
-      "TOKEN-REGISTRY.md",
+      "WALLET-MANAGEMENT.md",
       "STRATEGIES.md",
-      "MARKET-DATA.md"
+      "TOKEN-REGISTRY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2674,11 +2674,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
+      "MARKET-DATA.md",
       "PORTFOLIO-MANAGEMENT.md",
-      "TOKEN-REGISTRY.md",
+      "WALLET-MANAGEMENT.md",
       "STRATEGIES.md",
-      "MARKET-DATA.md"
+      "TOKEN-REGISTRY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/ASSET-MANAGEMENT.md",
@@ -2735,10 +2735,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "VERSIONING.md",
       "SIMULATION-ENGINE.md",
-      "AI-PIPELINE.md",
+      "STRATEGIES.md",
       "EXECUTION-ENGINE.md",
+      "AI-PIPELINE.md",
       "TESTING-GUIDE.md"
     ],
     "required_by": [],
@@ -2755,12 +2755,12 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "VERSIONING.md",
       "SIMULATION-ENGINE.md",
-      "AI-PIPELINE.md",
+      "STRATEGIES.md",
       "EXECUTION-ENGINE.md",
+      "AI-PIPELINE.md",
       "TESTING-GUIDE.md",
-      "STRATEGIES.md"
+      "VERSIONING.md"
     ],
     "version_history": [],
     "canonical_source": "docs/BACKTESTING.md",
@@ -2783,8 +2783,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ARCHITECTURE.md",
       "APEX-OS.md",
+      "ARCHITECTURE.md",
       "TRACEABILITY-MATRIX.md"
     ],
     "required_by": [],
@@ -2801,8 +2801,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ARCHITECTURE.md",
       "APEX-OS.md",
+      "ARCHITECTURE.md",
       "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
@@ -2831,10 +2831,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TESTING-GUIDE.md",
       "WINDOWS-DEPLOYMENT.md",
-      "CODE-SIGNING.md",
-      "DEPLOYMENT.md"
+      "DEPLOYMENT.md",
+      "TESTING-GUIDE.md",
+      "CODE-SIGNING.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2850,10 +2850,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TESTING-GUIDE.md",
       "WINDOWS-DEPLOYMENT.md",
-      "CODE-SIGNING.md",
-      "DEPLOYMENT.md"
+      "DEPLOYMENT.md",
+      "TESTING-GUIDE.md",
+      "CODE-SIGNING.md"
     ],
     "version_history": [],
     "canonical_source": "docs/BUILD-RELEASE-CICD.md",
@@ -2876,8 +2876,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ARCHITECTURE.md",
-      "APEX-OS.md"
+      "APEX-OS.md",
+      "ARCHITECTURE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2893,8 +2893,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ARCHITECTURE.md",
-      "APEX-OS.md"
+      "APEX-OS.md",
+      "ARCHITECTURE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -2953,10 +2953,10 @@
     "outputs": [],
     "depends_on": [
       "RESOURCE-BUDGET-SPECIFICATION.md",
-      "WORKER-POOL.md",
-      "DATABASE-SCHEMA.md",
       "PERFORMANCE-TARGETS.md",
-      "CONFIGURATION-REFERENCE.md"
+      "MONITORING-OBSERVABILITY.md",
+      "WORKER-POOL.md",
+      "CONCURRENCY-MODEL.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -2973,12 +2973,12 @@
     "testing": [],
     "cross_references": [
       "RESOURCE-BUDGET-SPECIFICATION.md",
-      "WORKER-POOL.md",
-      "DATABASE-SCHEMA.md",
       "PERFORMANCE-TARGETS.md",
-      "CONFIGURATION-REFERENCE.md",
+      "MONITORING-OBSERVABILITY.md",
+      "WORKER-POOL.md",
       "CONCURRENCY-MODEL.md",
-      "MONITORING-OBSERVABILITY.md"
+      "CONFIGURATION-REFERENCE.md",
+      "DATABASE-SCHEMA.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -3045,11 +3045,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
+      "TRANSACTION-LIFECYCLE.md",
       "ROUTING-ENGINE.md",
+      "WALLET-MANAGEMENT.md",
       "GAS-OPTIMISATION.md",
-      "CHAIN-REGISTRY.md",
-      "DATABASE-SCHEMA.md"
+      "MONITORING-OBSERVABILITY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3065,13 +3065,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
+      "TRANSACTION-LIFECYCLE.md",
       "ROUTING-ENGINE.md",
+      "WALLET-MANAGEMENT.md",
       "GAS-OPTIMISATION.md",
-      "CHAIN-REGISTRY.md",
-      "DATABASE-SCHEMA.md",
       "MONITORING-OBSERVABILITY.md",
-      "TRANSACTION-LIFECYCLE.md"
+      "DATABASE-SCHEMA.md",
+      "CHAIN-REGISTRY.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -3111,9 +3111,9 @@
       "Health events."
     ],
     "depends_on": [
+      "MARKET-DATA.md",
       "ROUTING-ENGINE.md",
       "EXECUTION-ENGINE.md",
-      "MARKET-DATA.md",
       "MONITORING-OBSERVABILITY.md"
     ],
     "required_by": [],
@@ -3130,9 +3130,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "MARKET-DATA.md",
       "ROUTING-ENGINE.md",
       "EXECUTION-ENGINE.md",
-      "MARKET-DATA.md",
       "MONITORING-OBSERVABILITY.md"
     ],
     "version_history": [],
@@ -3154,10 +3154,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
-      "ROUTING-ENGINE.md",
-      "GAS-OPTIMISATION.md",
       "CHAIN-INTEGRATION.md",
+      "ROUTING-ENGINE.md",
+      "WALLET-MANAGEMENT.md",
+      "GAS-OPTIMISATION.md",
       "DATABASE-SCHEMA.md"
     ],
     "required_by": [],
@@ -3174,10 +3174,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
-      "ROUTING-ENGINE.md",
-      "GAS-OPTIMISATION.md",
       "CHAIN-INTEGRATION.md",
+      "ROUTING-ENGINE.md",
+      "WALLET-MANAGEMENT.md",
+      "GAS-OPTIMISATION.md",
       "DATABASE-SCHEMA.md"
     ],
     "version_history": [
@@ -3204,8 +3204,8 @@
     "outputs": [],
     "depends_on": [
       "CHAIN-REGISTRY.md",
-      "HEALTHCHECKS.md",
-      "ORCHESTRATOR.md"
+      "ORCHESTRATOR.md",
+      "HEALTHCHECKS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3236,8 +3236,8 @@
     "testing": [],
     "cross_references": [
       "CHAIN-REGISTRY.md",
-      "HEALTHCHECKS.md",
-      "ORCHESTRATOR.md"
+      "ORCHESTRATOR.md",
+      "HEALTHCHECKS.md"
     ],
     "version_history": [],
     "canonical_source": "docs/CHAIN-ROTATION.md",
@@ -3258,8 +3258,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "IMPLEMENTATION-ROADMAP.md",
-      "DECISION-LOG.md"
+      "DECISION-LOG.md",
+      "IMPLEMENTATION-ROADMAP.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3275,8 +3275,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "IMPLEMENTATION-ROADMAP.md",
-      "DECISION-LOG.md"
+      "DECISION-LOG.md",
+      "IMPLEMENTATION-ROADMAP.md"
     ],
     "version_history": [],
     "canonical_source": "docs/CHANGELOG.md",
@@ -3297,11 +3297,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "AI-CAPABILITY-MATRIX.md",
-      "SECURITY.md",
       "AI-PIPELINE.md",
-      "AI-COST-MANAGEMENT.md",
-      "PERFORMANCE-TARGETS.md"
+      "AI-SETTINGS.md",
+      "CONFIGURATION.md",
+      "SECURITY.md",
+      "MONITORING-OBSERVABILITY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3317,14 +3317,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "AI-CAPABILITY-MATRIX.md",
-      "SECURITY.md",
       "AI-PIPELINE.md",
-      "AI-COST-MANAGEMENT.md",
-      "PERFORMANCE-TARGETS.md",
+      "AI-SETTINGS.md",
       "CONFIGURATION.md",
+      "SECURITY.md",
       "MONITORING-OBSERVABILITY.md",
-      "AI-SETTINGS.md"
+      "PERFORMANCE-TARGETS.md",
+      "AI-CAPABILITY-MATRIX.md",
+      "AI-COST-MANAGEMENT.md"
     ],
     "version_history": [],
     "canonical_source": "docs/CLOUD-AI-INTEGRATION.md",
@@ -3345,9 +3345,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RELEASE-PROCESS.md",
+      "APP-BUILDER-WORKFLOW.md",
       "SECURITY.md",
-      "APP-BUILDER-WORKFLOW.md"
+      "RELEASE-PROCESS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3363,9 +3363,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RELEASE-PROCESS.md",
+      "APP-BUILDER-WORKFLOW.md",
       "SECURITY.md",
-      "APP-BUILDER-WORKFLOW.md"
+      "RELEASE-PROCESS.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -3390,8 +3390,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TESTING-GUIDE.md",
-      "PROJECT-STRUCTURE.md"
+      "PROJECT-STRUCTURE.md",
+      "TESTING-GUIDE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3407,8 +3407,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TESTING-GUIDE.md",
-      "PROJECT-STRUCTURE.md"
+      "PROJECT-STRUCTURE.md",
+      "TESTING-GUIDE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/CODING-STANDARDS.md",
@@ -3433,9 +3433,9 @@
     "outputs": [],
     "depends_on": [
       "ARCHITECTURE.md",
+      "PROJECT-STRUCTURE.md",
       "MODULE-DEPENDENCY.md",
-      "RUNTIME-OPERATIONS.md",
-      "PROJECT-STRUCTURE.md"
+      "RUNTIME-OPERATIONS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3452,9 +3452,9 @@
     "testing": [],
     "cross_references": [
       "ARCHITECTURE.md",
+      "PROJECT-STRUCTURE.md",
       "MODULE-DEPENDENCY.md",
-      "RUNTIME-OPERATIONS.md",
-      "PROJECT-STRUCTURE.md"
+      "RUNTIME-OPERATIONS.md"
     ],
     "version_history": [],
     "canonical_source": "docs/COMPONENT-DIAGRAMS.md",
@@ -3475,11 +3475,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "THREADING-MODEL.md",
       "EVENT-BUS.md",
-      "LOCK-ORDER.md",
       "WORKER-POOL.md",
       "DATABASE-SCHEMA.md",
-      "CONFIGURATION-REFERENCE.md"
+      "LOCK-ORDER.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3495,12 +3495,12 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "THREADING-MODEL.md",
       "EVENT-BUS.md",
-      "LOCK-ORDER.md",
       "WORKER-POOL.md",
       "DATABASE-SCHEMA.md",
-      "CONFIGURATION-REFERENCE.md",
-      "THREADING-MODEL.md"
+      "LOCK-ORDER.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -3527,9 +3527,9 @@
     "outputs": [],
     "depends_on": [
       "CONFIGURATION.md",
+      "AI-SETTINGS.md",
       "DASHBOARD-WORKSPACES.md",
-      "TRACEABILITY-MATRIX.md",
-      "AI-SETTINGS.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3557,9 +3557,9 @@
     "testing": [],
     "cross_references": [
       "CONFIGURATION.md",
+      "AI-SETTINGS.md",
       "DASHBOARD-WORKSPACES.md",
-      "TRACEABILITY-MATRIX.md",
-      "AI-SETTINGS.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [],
     "canonical_source": "docs/CONFIGURATION-PROFILES.md",
@@ -3580,11 +3580,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "CONFIGURATION.md",
       "TRACEABILITY-MATRIX.md",
-      "RUNTIME-OPERATIONS.md",
-      "SECURITY.md",
-      "SECRET-LIFECYCLE.md",
-      "CONFIGURATION.md"
+      "CONFIGURATION-PROFILES.md",
+      "FEATURE-FLAGS.md",
+      "RUNTIME-OPERATIONS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3600,13 +3600,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
-      "RUNTIME-OPERATIONS.md",
-      "SECURITY.md",
-      "SECRET-LIFECYCLE.md",
       "CONFIGURATION.md",
+      "TRACEABILITY-MATRIX.md",
       "CONFIGURATION-PROFILES.md",
-      "FEATURE-FLAGS.md"
+      "FEATURE-FLAGS.md",
+      "RUNTIME-OPERATIONS.md",
+      "SECRET-LIFECYCLE.md",
+      "SECURITY.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -3632,10 +3632,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-DESKTOP.md",
-      "TRACEABILITY-MATRIX.md",
-      "RUNTIME-OPERATIONS.md",
-      "SECURITY.md",
+      "CONFIGURATION-REFERENCE.md",
+      "CONFIGURATION-PROFILES.md",
+      "FEATURE-FLAGS.md",
+      "FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md",
       "SECRET-LIFECYCLE.md"
     ],
     "required_by": [],
@@ -3652,15 +3652,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
-      "TRACEABILITY-MATRIX.md",
-      "RUNTIME-OPERATIONS.md",
-      "SECURITY.md",
-      "SECRET-LIFECYCLE.md",
       "CONFIGURATION-REFERENCE.md",
-      "FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md",
+      "CONFIGURATION-PROFILES.md",
       "FEATURE-FLAGS.md",
-      "CONFIGURATION-PROFILES.md"
+      "FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md",
+      "SECRET-LIFECYCLE.md",
+      "TRACEABILITY-MATRIX.md",
+      "SECURITY.md",
+      "RUNTIME-OPERATIONS.md",
+      "WINDOWS-DESKTOP.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -3685,10 +3685,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "AI-GATEWAY.md",
       "AI-PIPELINE.md",
+      "AI-MEMORY-SYSTEM.md",
       "KNOWLEDGE-GRAPH.md",
-      "AI-MEMORY-SYSTEM.md"
+      "AI-GATEWAY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3716,10 +3716,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "AI-GATEWAY.md",
       "AI-PIPELINE.md",
+      "AI-MEMORY-SYSTEM.md",
       "KNOWLEDGE-GRAPH.md",
-      "AI-MEMORY-SYSTEM.md"
+      "AI-GATEWAY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/CONTEXT-BUILDER.md",
@@ -3740,11 +3740,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
-      "AI-MEMORY.md",
+      "PROMPT-LIFECYCLE.md",
+      "AI-CONTEXT-WINDOW-MANAGEMENT.md",
       "AI-STATE-MACHINE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "AI-TOOLS.md"
+      "AI-MEMORY.md",
+      "AI-REFLECTION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3760,14 +3760,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
-      "AI-MEMORY.md",
-      "AI-STATE-MACHINE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "AI-TOOLS.md",
       "PROMPT-LIFECYCLE.md",
       "AI-CONTEXT-WINDOW-MANAGEMENT.md",
-      "AI-REFLECTION.md"
+      "AI-STATE-MACHINE.md",
+      "AI-MEMORY.md",
+      "AI-REFLECTION.md",
+      "AI-TOOLS.md",
+      "TRACEABILITY-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -3793,8 +3793,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "CHAIN-REGISTRY.md",
       "SECURITY-CONTRACTS.md",
+      "CHAIN-REGISTRY.md",
       "ORCHESTRATOR.md"
     ],
     "required_by": [],
@@ -3826,8 +3826,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "CHAIN-REGISTRY.md",
       "SECURITY-CONTRACTS.md",
+      "CHAIN-REGISTRY.md",
       "ORCHESTRATOR.md"
     ],
     "version_history": [
@@ -3856,8 +3856,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ARCHITECTURE.md",
-      "APEX-OS.md"
+      "APEX-OS.md",
+      "ARCHITECTURE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3873,8 +3873,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ARCHITECTURE.md",
-      "APEX-OS.md"
+      "APEX-OS.md",
+      "ARCHITECTURE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -3899,8 +3899,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "IMPLEMENTATION-ROADMAP.md",
-      "CODING-STANDARDS.md"
+      "CODING-STANDARDS.md",
+      "IMPLEMENTATION-ROADMAP.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3916,8 +3916,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "IMPLEMENTATION-ROADMAP.md",
-      "CODING-STANDARDS.md"
+      "CODING-STANDARDS.md",
+      "IMPLEMENTATION-ROADMAP.md"
     ],
     "version_history": [],
     "canonical_source": "docs/CONTRIBUTING.md",
@@ -3941,10 +3941,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RISK-ENGINE.md",
-      "TRADING-LIFECYCLE.md",
+      "DEX-INTEGRATION.md",
       "EXECUTION-LIFECYCLE.md",
-      "DEX-INTEGRATION.md"
+      "TRADING-LIFECYCLE.md",
+      "RISK-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -3960,10 +3960,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RISK-ENGINE.md",
-      "TRADING-LIFECYCLE.md",
+      "DEX-INTEGRATION.md",
       "EXECUTION-LIFECYCLE.md",
-      "DEX-INTEGRATION.md"
+      "TRADING-LIFECYCLE.md",
+      "RISK-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/CROSS-EXCHANGE-ARBITRAGE.md",
@@ -4017,10 +4017,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-DESKTOP.md",
       "DASHBOARD-WIDGETS.md",
       "DASHBOARD-WORKSPACES.md",
-      "TRACEABILITY-MATRIX.md",
+      "DASHBOARD-RUNTIME.md",
+      "WINDOWS-DESKTOP.md",
       "UI-COMPONENT-SPEC.md"
     ],
     "required_by": [],
@@ -4037,14 +4037,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
       "DASHBOARD-WIDGETS.md",
       "DASHBOARD-WORKSPACES.md",
-      "TRACEABILITY-MATRIX.md",
+      "DASHBOARD-RUNTIME.md",
+      "WINDOWS-DESKTOP.md",
       "UI-COMPONENT-SPEC.md",
       "CONFIGURATION-REFERENCE.md",
-      "DASHBOARD-RUNTIME.md",
-      "END-TO-END-WIRING-CONTRACT.md"
+      "END-TO-END-WIRING-CONTRACT.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -4071,11 +4071,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-DESKTOP.md",
+      "DASHBOARD-LAYOUT.md",
       "DASHBOARD-WIDGETS.md",
       "DASHBOARD-WORKSPACES.md",
-      "TRACEABILITY-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md"
+      "WORKSPACE-MANAGER.md",
+      "WINDOWS-DESKTOP.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4091,16 +4091,16 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
+      "DASHBOARD-LAYOUT.md",
       "DASHBOARD-WIDGETS.md",
       "DASHBOARD-WORKSPACES.md",
-      "TRACEABILITY-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
-      "PERMISSION-MODEL.md",
-      "DASHBOARD-LAYOUT.md",
       "WORKSPACE-MANAGER.md",
+      "WINDOWS-DESKTOP.md",
+      "IPC-PROTOCOL.md",
+      "PERMISSION-MODEL.md",
+      "CONFIGURATION-REFERENCE.md",
       "END-TO-END-WIRING-CONTRACT.md",
-      "IPC-PROTOCOL.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -4125,11 +4125,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "PLUGIN-SDK.md",
-      "PERFORMANCE-SLOS.md",
+      "DASHBOARD-LAYOUT.md",
       "DASHBOARD-WORKSPACES.md",
-      "UI-COMPONENT-SPEC.md",
-      "PLUGIN-SANDBOX-CONTRACT.md"
+      "DASHBOARD-RUNTIME.md",
+      "WORKSPACE-MANAGER.md",
+      "UI-COMPONENT-SPEC.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4145,19 +4145,19 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "PLUGIN-SDK.md",
-      "PERFORMANCE-SLOS.md",
-      "DASHBOARD-WORKSPACES.md",
-      "UI-COMPONENT-SPEC.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
-      "TIMING-SPECIFICATION.md",
-      "CONFIGURATION-REFERENCE.md",
-      "PERMISSION-MODEL.md",
       "DASHBOARD-LAYOUT.md",
+      "DASHBOARD-WORKSPACES.md",
       "DASHBOARD-RUNTIME.md",
+      "WORKSPACE-MANAGER.md",
+      "UI-COMPONENT-SPEC.md",
       "IPC-PROTOCOL.md",
-      "WORKSPACE-MANAGER.md"
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "PLUGIN-SDK.md",
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "CONFIGURATION-REFERENCE.md",
+      "TIMING-SPECIFICATION.md",
+      "PERFORMANCE-SLOS.md",
+      "PERMISSION-MODEL.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -4182,11 +4182,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "DASHBOARD-LAYOUT.md",
       "DASHBOARD-WIDGETS.md",
-      "TRACEABILITY-MATRIX.md",
-      "UI-COMPONENT-SPEC.md",
-      "CONFIGURATION-REFERENCE.md",
-      "DASHBOARD-LAYOUT.md"
+      "DASHBOARD-RUNTIME.md",
+      "WORKSPACE-MANAGER.md",
+      "UI-COMPONENT-SPEC.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4202,14 +4202,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "DASHBOARD-LAYOUT.md",
       "DASHBOARD-WIDGETS.md",
-      "TRACEABILITY-MATRIX.md",
+      "DASHBOARD-RUNTIME.md",
+      "WORKSPACE-MANAGER.md",
       "UI-COMPONENT-SPEC.md",
       "CONFIGURATION-REFERENCE.md",
-      "DASHBOARD-LAYOUT.md",
-      "DASHBOARD-RUNTIME.md",
       "END-TO-END-WIRING-CONTRACT.md",
-      "WORKSPACE-MANAGER.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -4236,9 +4236,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RUNTIME-OPERATIONS.md",
+      "EVENT-FLOW.md",
       "STATE-MANAGEMENT.md",
-      "EVENT-FLOW.md"
+      "RUNTIME-OPERATIONS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4254,9 +4254,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RUNTIME-OPERATIONS.md",
+      "EVENT-FLOW.md",
       "STATE-MANAGEMENT.md",
-      "EVENT-FLOW.md"
+      "RUNTIME-OPERATIONS.md"
     ],
     "version_history": [],
     "canonical_source": "docs/DATA-FLOW.md",
@@ -4277,10 +4277,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "AI-MEMORY-SYSTEM.md",
-      "REGISTRY-SYSTEM.md",
+      "MARKET-DATA.md",
       "KNOWLEDGE-GRAPH.md",
-      "MARKET-DATA.md"
+      "AI-MEMORY-SYSTEM.md",
+      "REGISTRY-SYSTEM.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4310,10 +4310,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "AI-MEMORY-SYSTEM.md",
-      "REGISTRY-SYSTEM.md",
+      "MARKET-DATA.md",
       "KNOWLEDGE-GRAPH.md",
-      "MARKET-DATA.md"
+      "AI-MEMORY-SYSTEM.md",
+      "REGISTRY-SYSTEM.md"
     ],
     "version_history": [],
     "canonical_source": "docs/DATA-GOVERNANCE.md",
@@ -4367,11 +4367,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
       "STATE-MANAGEMENT.md",
       "CACHE-MANAGER.md",
-      "SECURITY.md",
-      "AI-MEMORY-SYSTEM.md"
+      "EVENT-CATALOG.md",
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4387,14 +4387,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
       "STATE-MANAGEMENT.md",
       "CACHE-MANAGER.md",
+      "EVENT-CATALOG.md",
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md",
       "SECURITY.md",
       "AI-MEMORY-SYSTEM.md",
-      "END-TO-END-WIRING-CONTRACT.md",
-      "CONFIGURATION-REFERENCE.md",
-      "EVENT-CATALOG.md"
+      "END-TO-END-WIRING-CONTRACT.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -4421,10 +4421,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRADING-LIFECYCLE.md",
+      "AI-CONSENSUS.md",
       "RISK-ENGINE.md",
       "ORCHESTRATOR.md",
-      "AI-CONSENSUS.md"
+      "TRADING-LIFECYCLE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4451,10 +4451,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRADING-LIFECYCLE.md",
+      "AI-CONSENSUS.md",
       "RISK-ENGINE.md",
       "ORCHESTRATOR.md",
-      "AI-CONSENSUS.md"
+      "TRADING-LIFECYCLE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -4479,10 +4479,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "GOVERNANCE-EXPLAINABILITY.md",
-      "DECISION-LOG.md",
       "DECISION-ENGINE.md",
-      "EXPLAINABILITY.md"
+      "GOVERNANCE-EXPLAINABILITY.md",
+      "EXPLAINABILITY.md",
+      "DECISION-LOG.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4510,10 +4510,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "GOVERNANCE-EXPLAINABILITY.md",
-      "DECISION-LOG.md",
       "DECISION-ENGINE.md",
-      "EXPLAINABILITY.md"
+      "GOVERNANCE-EXPLAINABILITY.md",
+      "EXPLAINABILITY.md",
+      "DECISION-LOG.md"
     ],
     "version_history": [],
     "canonical_source": "docs/DECISION-LEDGER.md",
@@ -4539,8 +4539,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "GOVERNANCE-EXPLAINABILITY.md",
       "DECISION-LEDGER.md",
+      "GOVERNANCE-EXPLAINABILITY.md",
       "EXPLAINABILITY.md"
     ],
     "required_by": [],
@@ -4572,8 +4572,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "GOVERNANCE-EXPLAINABILITY.md",
       "DECISION-LEDGER.md",
+      "GOVERNANCE-EXPLAINABILITY.md",
       "EXPLAINABILITY.md"
     ],
     "version_history": [],
@@ -4729,9 +4729,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-DESKTOP.md",
+      "DESIGNER-PROTOCOLS.md",
       "UI-COMPONENT-SPEC.md",
-      "DESIGNER-PROTOCOLS.md"
+      "WINDOWS-DESKTOP.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4747,9 +4747,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
+      "DESIGNER-PROTOCOLS.md",
       "UI-COMPONENT-SPEC.md",
-      "DESIGNER-PROTOCOLS.md"
+      "WINDOWS-DESKTOP.md"
     ],
     "version_history": [],
     "canonical_source": "docs/DESIGN-SYSTEM.md",
@@ -4770,11 +4770,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-DESKTOP.md",
-      "USER-FLOWS.md",
       "UI-COMPONENT-SPEC.md",
-      "CLOUD-AI-INTEGRATION.md",
-      "AI-SETTINGS.md"
+      "WINDOWS-DESKTOP.md",
+      "AI-SETTINGS.md",
+      "USER-FLOWS.md",
+      "CLOUD-AI-INTEGRATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4790,11 +4790,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
-      "USER-FLOWS.md",
       "UI-COMPONENT-SPEC.md",
-      "CLOUD-AI-INTEGRATION.md",
-      "AI-SETTINGS.md"
+      "WINDOWS-DESKTOP.md",
+      "AI-SETTINGS.md",
+      "USER-FLOWS.md",
+      "CLOUD-AI-INTEGRATION.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -4821,10 +4821,10 @@
     "outputs": [],
     "depends_on": [
       "ROUTING-ENGINE.md",
+      "MARKET-DATA.md",
       "CHAIN-INTEGRATION.md",
-      "LIQUIDITY-ANALYSIS.md",
       "EXECUTION-ENGINE.md",
-      "DEX-REGISTRY.md"
+      "LIQUIDITY-ANALYSIS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4841,11 +4841,11 @@
     "testing": [],
     "cross_references": [
       "ROUTING-ENGINE.md",
+      "MARKET-DATA.md",
       "CHAIN-INTEGRATION.md",
-      "LIQUIDITY-ANALYSIS.md",
       "EXECUTION-ENGINE.md",
-      "DEX-REGISTRY.md",
-      "MARKET-DATA.md"
+      "LIQUIDITY-ANALYSIS.md",
+      "DEX-REGISTRY.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -4909,11 +4909,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "DEX-INTEGRATION.md",
       "ROUTING-ENGINE.md",
       "LIQUIDITY-ANALYSIS.md",
-      "DATABASE-SCHEMA.md",
-      "DEX-INTEGRATION.md",
-      "MARKET-DATA.md"
+      "MARKET-DATA.md",
+      "DATABASE-SCHEMA.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4929,11 +4929,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "DEX-INTEGRATION.md",
       "ROUTING-ENGINE.md",
       "LIQUIDITY-ANALYSIS.md",
-      "DATABASE-SCHEMA.md",
-      "DEX-INTEGRATION.md",
-      "MARKET-DATA.md"
+      "MARKET-DATA.md",
+      "DATABASE-SCHEMA.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -4958,11 +4958,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ERROR-CODES.md",
+      "MONITORING-OBSERVABILITY.md",
       "HEALTHCHECKS.md",
-      "ERROR-CATALOG.md",
-      "TRACEABILITY-MATRIX.md",
-      "FAILURE-MATRIX.md"
+      "RECOVERY-COORDINATION.md",
+      "RECOVERY-PLAYBOOK.md",
+      "ERROR-CATALOG.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -4978,14 +4978,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ERROR-CODES.md",
-      "HEALTHCHECKS.md",
-      "ERROR-CATALOG.md",
-      "TRACEABILITY-MATRIX.md",
-      "FAILURE-MATRIX.md",
       "MONITORING-OBSERVABILITY.md",
+      "HEALTHCHECKS.md",
+      "RECOVERY-COORDINATION.md",
       "RECOVERY-PLAYBOOK.md",
-      "RECOVERY-COORDINATION.md"
+      "ERROR-CATALOG.md",
+      "ERROR-CODES.md",
+      "FAILURE-MATRIX.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5085,11 +5085,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "DOCUMENTATION-LIFECYCLE.md",
-      "TRACEABILITY-MATRIX.md",
-      "CROSS-REFERENCE-INDEX.md",
       "DOCUMENTATION-MAP.md",
-      "CANONICAL-SOURCE-RULES.md"
+      "CANONICAL-SOURCE-RULES.md",
+      "DOCUMENTATION-LIFECYCLE.md",
+      "CROSS-REFERENCE-INDEX.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5105,11 +5105,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "DOCUMENTATION-LIFECYCLE.md",
-      "TRACEABILITY-MATRIX.md",
-      "CROSS-REFERENCE-INDEX.md",
       "DOCUMENTATION-MAP.md",
-      "CANONICAL-SOURCE-RULES.md"
+      "CANONICAL-SOURCE-RULES.md",
+      "DOCUMENTATION-LIFECYCLE.md",
+      "CROSS-REFERENCE-INDEX.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5134,11 +5134,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "STATE-MANAGEMENT.md",
-      "TRACEABILITY-MATRIX.md",
       "ARCHITECTURE.md",
-      "API-CONTRACTS.md",
-      "DATABASE-SCHEMA.md"
+      "DATABASE-SCHEMA.md",
+      "STATE-MANAGEMENT.md",
+      "CONFIGURATION.md",
+      "API-CONTRACTS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5154,12 +5154,12 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "STATE-MANAGEMENT.md",
-      "TRACEABILITY-MATRIX.md",
       "ARCHITECTURE.md",
-      "API-CONTRACTS.md",
       "DATABASE-SCHEMA.md",
-      "CONFIGURATION.md"
+      "STATE-MANAGEMENT.md",
+      "CONFIGURATION.md",
+      "API-CONTRACTS.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5185,11 +5185,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
+      "AI-PIPELINE.md",
+      "TRADING-ENGINE.md",
+      "EXECUTION-ENGINE.md",
       "RISK-ENGINE.md",
-      "TRACEABILITY-MATRIX.md",
-      "STATE-MACHINE-INDEX.md",
-      "TRUST-BOUNDARIES.md"
+      "DECISION-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5205,17 +5205,17 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
-      "RISK-ENGINE.md",
-      "TRACEABILITY-MATRIX.md",
-      "STATE-MACHINE-INDEX.md",
-      "TRUST-BOUNDARIES.md",
       "AI-PIPELINE.md",
-      "EXECUTION-ENGINE.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
       "TRADING-ENGINE.md",
-      "DECISION-ENGINE.md"
+      "EXECUTION-ENGINE.md",
+      "RISK-ENGINE.md",
+      "DECISION-ENGINE.md",
+      "WALLET-MANAGEMENT.md",
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "TRUST-BOUNDARIES.md",
+      "CONFIGURATION-REFERENCE.md",
+      "STATE-MACHINE-INDEX.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5240,11 +5240,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "HEALTHCHECKS.md",
       "RUNTIME-OPERATIONS.md",
-      "STATE-MANAGEMENT.md",
-      "TRACEABILITY-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md"
+      "ORCHESTRATOR.md",
+      "HEALTHCHECKS.md",
+      "RECOVERY-AND-FAILOVER.md",
+      "STATE-MANAGEMENT.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5260,13 +5260,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "HEALTHCHECKS.md",
       "RUNTIME-OPERATIONS.md",
+      "ORCHESTRATOR.md",
+      "HEALTHCHECKS.md",
+      "RECOVERY-AND-FAILOVER.md",
       "STATE-MANAGEMENT.md",
       "TRACEABILITY-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
-      "RECOVERY-AND-FAILOVER.md",
-      "ORCHESTRATOR.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5291,8 +5291,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "IMPLEMENTATION-ROADMAP.md",
-      "FEATURE-MATRIX.md"
+      "FEATURE-MATRIX.md",
+      "IMPLEMENTATION-ROADMAP.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5308,8 +5308,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "IMPLEMENTATION-ROADMAP.md",
-      "FEATURE-MATRIX.md"
+      "FEATURE-MATRIX.md",
+      "IMPLEMENTATION-ROADMAP.md"
     ],
     "version_history": [],
     "canonical_source": "docs/ENHANCEMENT-ROADMAP.md",
@@ -5331,8 +5331,8 @@
     "outputs": [],
     "depends_on": [
       "CONFIGURATION.md",
-      "DASHBOARD-WORKSPACES.md",
-      "RUNTIME-OPERATIONS.md"
+      "RUNTIME-OPERATIONS.md",
+      "DASHBOARD-WORKSPACES.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5349,8 +5349,8 @@
     "testing": [],
     "cross_references": [
       "CONFIGURATION.md",
-      "DASHBOARD-WORKSPACES.md",
-      "RUNTIME-OPERATIONS.md"
+      "RUNTIME-OPERATIONS.md",
+      "DASHBOARD-WORKSPACES.md"
     ],
     "version_history": [],
     "canonical_source": "docs/ENTERPRISE-OPERATIONS.md",
@@ -5437,11 +5437,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ERROR-CODES.md",
       "ERROR-CATALOG.md",
-      "TRACEABILITY-MATRIX.md",
-      "SECURITY.md",
-      "IPC-PROTOCOL.md"
+      "ERROR-CODES.md",
+      "FAILURE-MATRIX.md",
+      "FAILURE-RECOVERY-MATRIX.md",
+      "RECOVERY-PLAYBOOK.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5457,16 +5457,16 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ERROR-CODES.md",
       "ERROR-CATALOG.md",
-      "TRACEABILITY-MATRIX.md",
-      "SECURITY.md",
-      "IPC-PROTOCOL.md",
+      "ERROR-CODES.md",
       "FAILURE-MATRIX.md",
-      "MONITORING-OBSERVABILITY.md",
       "FAILURE-RECOVERY-MATRIX.md",
       "RECOVERY-PLAYBOOK.md",
-      "RECOVERY-COORDINATION.md"
+      "RECOVERY-COORDINATION.md",
+      "SECURITY.md",
+      "MONITORING-OBSERVABILITY.md",
+      "IPC-PROTOCOL.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5492,10 +5492,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RECOVERY-COORDINATION.md",
-      "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
+      "EVENT-CATALOG.md",
       "EVENT-OWNERSHIP-MATRIX.md",
+      "IPC-PROTOCOL.md",
+      "ORCHESTRATOR.md",
       "AI-ORCHESTRATION.md"
     ],
     "required_by": [],
@@ -5512,15 +5512,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RECOVERY-COORDINATION.md",
-      "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
-      "AI-ORCHESTRATION.md",
-      "CONFIGURATION-REFERENCE.md",
-      "ORCHESTRATOR.md",
       "EVENT-CATALOG.md",
-      "IPC-PROTOCOL.md"
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "IPC-PROTOCOL.md",
+      "ORCHESTRATOR.md",
+      "AI-ORCHESTRATION.md",
+      "RUNTIME-OPERATIONS.md",
+      "RECOVERY-COORDINATION.md",
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5545,11 +5545,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
       "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
+      "EVENT-SCHEMA-REGISTRY.md",
       "TRADING-ENGINE.md",
-      "EVENT-SCHEMA-REGISTRY.md"
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5565,11 +5565,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
       "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
+      "EVENT-SCHEMA-REGISTRY.md",
       "TRADING-ENGINE.md",
-      "EVENT-SCHEMA-REGISTRY.md"
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5598,8 +5598,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "IPC-PROTOCOL.md",
       "DATA-FLOW.md",
+      "IPC-PROTOCOL.md",
       "STATE-MANAGEMENT.md"
     ],
     "required_by": [],
@@ -5616,8 +5616,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "IPC-PROTOCOL.md",
       "DATA-FLOW.md",
+      "IPC-PROTOCOL.md",
       "STATE-MANAGEMENT.md"
     ],
     "version_history": [],
@@ -5639,9 +5639,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "EVENT-BUS.md",
+      "EVENT-CATALOG.md",
       "TRACEABILITY-MATRIX.md",
-      "ARCHITECTURE.md",
+      "EVENT-BUS.md",
       "CONFIGURATION-REFERENCE.md",
       "FAILURE-RECOVERY-MATRIX.md"
     ],
@@ -5659,12 +5659,12 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "EVENT-BUS.md",
+      "EVENT-CATALOG.md",
       "TRACEABILITY-MATRIX.md",
-      "ARCHITECTURE.md",
+      "EVENT-BUS.md",
       "CONFIGURATION-REFERENCE.md",
       "FAILURE-RECOVERY-MATRIX.md",
-      "EVENT-CATALOG.md"
+      "ARCHITECTURE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5690,11 +5690,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
-      "RISK-ENGINE.md",
+      "TRADING-ENGINE.md",
+      "TRANSACTION-LIFECYCLE.md",
       "GAS-OPTIMISATION.md",
-      "EXECUTION-STATE-MACHINE.md",
-      "TRACEABILITY-MATRIX.md"
+      "MEV-PROTECTION.md",
+      "WALLET-MANAGEMENT.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5710,18 +5710,18 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
-      "RISK-ENGINE.md",
-      "GAS-OPTIMISATION.md",
-      "EXECUTION-STATE-MACHINE.md",
-      "TRACEABILITY-MATRIX.md",
-      "MEV-PROTECTION.md",
-      "RPC-MANAGER.md",
-      "END-TO-END-WIRING-CONTRACT.md",
-      "CONFIGURATION-REFERENCE.md",
       "TRADING-ENGINE.md",
       "TRANSACTION-LIFECYCLE.md",
-      "RECOVERY-COORDINATION.md"
+      "GAS-OPTIMISATION.md",
+      "MEV-PROTECTION.md",
+      "WALLET-MANAGEMENT.md",
+      "RISK-ENGINE.md",
+      "RPC-MANAGER.md",
+      "EXECUTION-STATE-MACHINE.md",
+      "RECOVERY-COORDINATION.md",
+      "CONFIGURATION-REFERENCE.md",
+      "END-TO-END-WIRING-CONTRACT.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5747,8 +5747,8 @@
     "outputs": [],
     "depends_on": [
       "TRADING-LIFECYCLE.md",
-      "DOMAIN-MODEL.md",
-      "ORCHESTRATOR.md"
+      "ORCHESTRATOR.md",
+      "DOMAIN-MODEL.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5777,8 +5777,8 @@
     "testing": [],
     "cross_references": [
       "TRADING-LIFECYCLE.md",
-      "DOMAIN-MODEL.md",
-      "ORCHESTRATOR.md"
+      "ORCHESTRATOR.md",
+      "DOMAIN-MODEL.md"
     ],
     "version_history": [],
     "canonical_source": "docs/EXECUTION-LIFECYCLE.md",
@@ -5799,9 +5799,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRADING-LIFECYCLE.md",
       "RISK-ENGINE.md",
       "POLICY-ENGINE.md",
+      "TRADING-LIFECYCLE.md",
       "EXECUTION-LIFECYCLE.md"
     ],
     "required_by": [],
@@ -5831,9 +5831,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRADING-LIFECYCLE.md",
       "RISK-ENGINE.md",
       "POLICY-ENGINE.md",
+      "TRADING-LIFECYCLE.md",
       "EXECUTION-LIFECYCLE.md"
     ],
     "version_history": [],
@@ -5855,11 +5855,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
       "EXECUTION-ENGINE.md",
-      "CONFIGURATION-REFERENCE.md",
       "TRADING-ENGINE.md",
-      "TRANSACTION-LIFECYCLE.md"
+      "TRANSACTION-LIFECYCLE.md",
+      "TRACEABILITY-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5875,11 +5875,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
       "EXECUTION-ENGINE.md",
-      "CONFIGURATION-REFERENCE.md",
       "TRADING-ENGINE.md",
-      "TRANSACTION-LIFECYCLE.md"
+      "TRANSACTION-LIFECYCLE.md",
+      "TRACEABILITY-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -5905,11 +5905,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "METRICS.md",
       "AI-ORCHESTRATION.md",
+      "DECISION-ENGINE.md",
       "LEARNING-PIPELINE.md",
-      "GOVERNANCE-EXPLAINABILITY.md",
-      "DECISION-ENGINE.md"
+      "METRICS.md",
+      "GOVERNANCE-EXPLAINABILITY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -5935,11 +5935,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "METRICS.md",
       "AI-ORCHESTRATION.md",
+      "DECISION-ENGINE.md",
       "LEARNING-PIPELINE.md",
-      "GOVERNANCE-EXPLAINABILITY.md",
-      "DECISION-ENGINE.md"
+      "METRICS.md",
+      "GOVERNANCE-EXPLAINABILITY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/EXPLAINABILITY.md",
@@ -6030,8 +6030,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TROUBLESHOOTING.md",
-      "USER-GUIDE.md"
+      "USER-GUIDE.md",
+      "TROUBLESHOOTING.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6047,8 +6047,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TROUBLESHOOTING.md",
-      "USER-GUIDE.md"
+      "USER-GUIDE.md",
+      "TROUBLESHOOTING.md"
     ],
     "version_history": [],
     "canonical_source": "docs/FAQ.md",
@@ -6069,11 +6069,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
+      "FEATURE-FLAGS.md",
       "FEATURE-GATES.md",
       "CONFIGURATION-REFERENCE.md",
       "CONFIGURATION-PROFILES.md",
-      "FEATURE-FLAGS.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6089,11 +6089,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
+      "FEATURE-FLAGS.md",
       "FEATURE-GATES.md",
       "CONFIGURATION-REFERENCE.md",
       "CONFIGURATION-PROFILES.md",
-      "FEATURE-FLAGS.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -6204,8 +6204,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ENHANCEMENT-ROADMAP.md",
       "IMPLEMENTATION-ROADMAP.md",
+      "ENHANCEMENT-ROADMAP.md",
       "STRATEGIES.md"
     ],
     "required_by": [],
@@ -6222,8 +6222,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ENHANCEMENT-ROADMAP.md",
       "IMPLEMENTATION-ROADMAP.md",
+      "ENHANCEMENT-ROADMAP.md",
       "STRATEGIES.md"
     ],
     "version_history": [],
@@ -6245,9 +6245,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "SECURITY.md",
       "DATABASE-SCHEMA.md",
-      "RUNTIME-OPERATIONS.md"
+      "RUNTIME-OPERATIONS.md",
+      "SECURITY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6263,9 +6263,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "SECURITY.md",
       "DATABASE-SCHEMA.md",
-      "RUNTIME-OPERATIONS.md"
+      "RUNTIME-OPERATIONS.md",
+      "SECURITY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/FILE-STORAGE.md",
@@ -6333,9 +6333,9 @@
       "Batching decision."
     ],
     "depends_on": [
-      "MEV-PROTECTION.md",
       "EXECUTION-ENGINE.md",
-      "TRANSACTION-LIFECYCLE.md"
+      "TRANSACTION-LIFECYCLE.md",
+      "MEV-PROTECTION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6351,9 +6351,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "MEV-PROTECTION.md",
       "EXECUTION-ENGINE.md",
-      "TRANSACTION-LIFECYCLE.md"
+      "TRANSACTION-LIFECYCLE.md",
+      "MEV-PROTECTION.md"
     ],
     "version_history": [],
     "canonical_source": "docs/GAS-OPTIMISATION.md",
@@ -6375,8 +6375,8 @@
     "outputs": [],
     "depends_on": [
       "ARCHITECTURE.md",
-      "RISK-ENGINE.md",
-      "STRATEGIES.md"
+      "STRATEGIES.md",
+      "RISK-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6393,8 +6393,8 @@
     "testing": [],
     "cross_references": [
       "ARCHITECTURE.md",
-      "RISK-ENGINE.md",
-      "STRATEGIES.md"
+      "STRATEGIES.md",
+      "RISK-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/GLOSSARY.md",
@@ -6415,10 +6415,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "POLICY-ENGINE.md",
+      "EXPLAINABILITY.md",
       "DECISION-ENGINE.md",
-      "DECISION-LOG.md",
-      "EXPLAINABILITY.md"
+      "POLICY-ENGINE.md",
+      "DECISION-LOG.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6446,10 +6446,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "POLICY-ENGINE.md",
+      "EXPLAINABILITY.md",
       "DECISION-ENGINE.md",
-      "DECISION-LOG.md",
-      "EXPLAINABILITY.md"
+      "POLICY-ENGINE.md",
+      "DECISION-LOG.md"
     ],
     "version_history": [],
     "canonical_source": "docs/GOVERNANCE-EXPLAINABILITY.md",
@@ -6470,11 +6470,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ENGINE-STATE-MACHINE.md",
       "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
-      "RECOVERY-AND-FAILOVER.md"
+      "RECOVERY-AND-FAILOVER.md",
+      "RECOVERY-COORDINATION.md",
+      "MONITORING-OBSERVABILITY.md",
+      "ENGINE-STATE-MACHINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6490,13 +6490,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ENGINE-STATE-MACHINE.md",
       "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
       "RECOVERY-AND-FAILOVER.md",
+      "RECOVERY-COORDINATION.md",
       "MONITORING-OBSERVABILITY.md",
-      "RECOVERY-COORDINATION.md"
+      "ENGINE-STATE-MACHINE.md",
+      "TRACEABILITY-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -6685,9 +6685,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "AI-PROVIDER-MANAGER.md",
       "AI-GATEWAY.md",
-      "AI-PIPELINE.md",
-      "AI-PROVIDER-MANAGER.md"
+      "AI-PIPELINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6708,9 +6708,9 @@
     ],
     "testing": [],
     "cross_references": [
+      "AI-PROVIDER-MANAGER.md",
       "AI-GATEWAY.md",
-      "AI-PIPELINE.md",
-      "AI-PROVIDER-MANAGER.md"
+      "AI-PIPELINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/INTERFACE-PROVIDER-ADAPTER.md",
@@ -6731,8 +6731,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "AI-ORCHESTRATION.md",
-      "AI-AGENT-SPECIFICATION.md"
+      "AI-AGENT-SPECIFICATION.md",
+      "AI-ORCHESTRATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6753,8 +6753,8 @@
     ],
     "testing": [],
     "cross_references": [
-      "AI-ORCHESTRATION.md",
-      "AI-AGENT-SPECIFICATION.md"
+      "AI-AGENT-SPECIFICATION.md",
+      "AI-ORCHESTRATION.md"
     ],
     "version_history": [],
     "canonical_source": "docs/INTERFACE-TOOL-CALL.md",
@@ -6779,11 +6779,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "IPC-PROTOCOL.md",
       "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
+      "DASHBOARD-RUNTIME.md",
       "PLUGIN-SDK.md",
-      "ORCHESTRATOR.md",
-      "DASHBOARD-RUNTIME.md"
+      "ORCHESTRATOR.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6799,12 +6799,12 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "IPC-PROTOCOL.md",
       "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
+      "DASHBOARD-RUNTIME.md",
       "PLUGIN-SDK.md",
       "ORCHESTRATOR.md",
-      "DASHBOARD-RUNTIME.md",
-      "IPC-PROTOCOL.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -6829,11 +6829,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "IPC-MESSAGE-CATALOG.md",
       "EVENT-BUS.md",
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
-      "SECURITY.md",
-      "EVENT-OWNERSHIP-MATRIX.md"
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "DASHBOARD-RUNTIME.md",
+      "PLUGIN-SDK.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6849,17 +6849,17 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "EVENT-BUS.md",
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
-      "SECURITY.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
       "IPC-MESSAGE-CATALOG.md",
-      "CONFIGURATION-REFERENCE.md",
-      "WINDOWS-APP-ARCHITECTURE.md",
-      "PLUGIN-SDK.md",
+      "EVENT-BUS.md",
+      "EVENT-OWNERSHIP-MATRIX.md",
       "DASHBOARD-RUNTIME.md",
-      "PERMISSION-MODEL.md"
+      "PLUGIN-SDK.md",
+      "TRUST-BOUNDARIES.md",
+      "PERMISSION-MODEL.md",
+      "WINDOWS-APP-ARCHITECTURE.md",
+      "CONFIGURATION-REFERENCE.md",
+      "SECURITY.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -6884,11 +6884,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "DOMAIN-MODEL.md",
       "AI-MEMORY-SYSTEM.md",
+      "CHAIN-INTELLIGENCE.md",
       "MARKET-INTELLIGENCE.md",
-      "DATA-GOVERNANCE.md",
-      "CHAIN-INTELLIGENCE.md"
+      "DOMAIN-MODEL.md",
+      "DATA-GOVERNANCE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6916,11 +6916,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "DOMAIN-MODEL.md",
       "AI-MEMORY-SYSTEM.md",
+      "CHAIN-INTELLIGENCE.md",
       "MARKET-INTELLIGENCE.md",
-      "DATA-GOVERNANCE.md",
-      "CHAIN-INTELLIGENCE.md"
+      "DOMAIN-MODEL.md",
+      "DATA-GOVERNANCE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/KNOWLEDGE-GRAPH.md",
@@ -6941,9 +6941,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-DESKTOP.md",
+      "DEPLOYMENT.md",
       "SECURITY.md",
-      "DEPLOYMENT.md"
+      "WINDOWS-DESKTOP.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -6959,9 +6959,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
+      "DEPLOYMENT.md",
       "SECURITY.md",
-      "DEPLOYMENT.md"
+      "WINDOWS-DESKTOP.md"
     ],
     "version_history": [],
     "canonical_source": "docs/KNOWN-LIMITATIONS.md",
@@ -6983,9 +6983,9 @@
     "outputs": [],
     "depends_on": [
       "AI-ORCHESTRATION.md",
-      "SIMULATION-ENGINE.md",
       "AI-MEMORY-SYSTEM.md",
-      "METRICS.md"
+      "METRICS.md",
+      "SIMULATION-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7007,9 +7007,9 @@
     "testing": [],
     "cross_references": [
       "AI-ORCHESTRATION.md",
-      "SIMULATION-ENGINE.md",
       "AI-MEMORY-SYSTEM.md",
-      "METRICS.md"
+      "METRICS.md",
+      "SIMULATION-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/LEARNING-PIPELINE.md",
@@ -7053,9 +7053,9 @@
     ],
     "depends_on": [
       "ROUTING-ENGINE.md",
-      "EXECUTION-ENGINE.md",
       "MARKET-INTELLIGENCE.md",
-      "SLIPPAGE-MODEL.md"
+      "SLIPPAGE-MODEL.md",
+      "EXECUTION-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7076,9 +7076,9 @@
     "testing": [],
     "cross_references": [
       "ROUTING-ENGINE.md",
-      "EXECUTION-ENGINE.md",
       "MARKET-INTELLIGENCE.md",
-      "SLIPPAGE-MODEL.md"
+      "SLIPPAGE-MODEL.md",
+      "EXECUTION-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/LIQUIDITY-ANALYSIS.md",
@@ -7100,9 +7100,9 @@
     "outputs": [],
     "depends_on": [
       "APEX-KERNEL.md",
-      "UI-DASHBOARD-SPEC.md",
+      "DEPENDENCY-GRAPH.md",
       "HEALTHCHECKS.md",
-      "DEPENDENCY-GRAPH.md"
+      "UI-DASHBOARD-SPEC.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7131,9 +7131,9 @@
     "testing": [],
     "cross_references": [
       "APEX-KERNEL.md",
-      "UI-DASHBOARD-SPEC.md",
+      "DEPENDENCY-GRAPH.md",
       "HEALTHCHECKS.md",
-      "DEPENDENCY-GRAPH.md"
+      "UI-DASHBOARD-SPEC.md"
     ],
     "version_history": [],
     "canonical_source": "docs/LIVE-ARCHITECTURE-VIEWER.md",
@@ -7164,9 +7164,9 @@
     "depends_on": [
       "ROUTING-ENGINE.md",
       "LIQUIDITY-ANALYSIS.md",
-      "CHAIN-REGISTRY.md",
       "MARKET-INTELLIGENCE.md",
-      "TOKEN-REGISTRY.md"
+      "STRATEGIES.md",
+      "MONITORING-OBSERVABILITY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7184,13 +7184,13 @@
     "cross_references": [
       "ROUTING-ENGINE.md",
       "LIQUIDITY-ANALYSIS.md",
-      "CHAIN-REGISTRY.md",
       "MARKET-INTELLIGENCE.md",
-      "TOKEN-REGISTRY.md",
-      "MONITORING-OBSERVABILITY.md",
       "STRATEGIES.md",
-      "DEX-REGISTRY.md",
-      "ORACLE-REGISTRY.md"
+      "MONITORING-OBSERVABILITY.md",
+      "TOKEN-REGISTRY.md",
+      "ORACLE-REGISTRY.md",
+      "CHAIN-REGISTRY.md",
+      "DEX-REGISTRY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/MARKET-DATA.md",
@@ -7214,11 +7214,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "DATABASE-SCHEMA.md",
+      "MARKET-DATA.md",
       "OPPORTUNITY-DETECTION.md",
-      "MONITORING-OBSERVABILITY.md",
+      "OPPORTUNITY-RANKING.md",
       "STRATEGIES.md",
-      "OPPORTUNITY-RANKING.md"
+      "DATABASE-SCHEMA.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7234,12 +7234,12 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "DATABASE-SCHEMA.md",
+      "MARKET-DATA.md",
       "OPPORTUNITY-DETECTION.md",
-      "MONITORING-OBSERVABILITY.md",
-      "STRATEGIES.md",
       "OPPORTUNITY-RANKING.md",
-      "MARKET-DATA.md"
+      "STRATEGIES.md",
+      "DATABASE-SCHEMA.md",
+      "MONITORING-OBSERVABILITY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/MARKET-INTELLIGENCE.md",
@@ -7260,9 +7260,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ORCHESTRATOR.md",
       "MARKET-INTELLIGENCE.md",
-      "STRATEGY-ROTATION.md"
+      "STRATEGY-ROTATION.md",
+      "ORCHESTRATOR.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7289,9 +7289,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ORCHESTRATOR.md",
       "MARKET-INTELLIGENCE.md",
-      "STRATEGY-ROTATION.md"
+      "STRATEGY-ROTATION.md",
+      "ORCHESTRATOR.md"
     ],
     "version_history": [],
     "canonical_source": "docs/MARKET-REGIME-DETECTION.md",
@@ -7312,9 +7312,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "STRATEGY-ROTATION.md",
+      "MARKET-REGIME-DETECTION.md",
       "MARKET-INTELLIGENCE.md",
-      "MARKET-REGIME-DETECTION.md"
+      "STRATEGY-ROTATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7330,9 +7330,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "STRATEGY-ROTATION.md",
+      "MARKET-REGIME-DETECTION.md",
       "MARKET-INTELLIGENCE.md",
-      "MARKET-REGIME-DETECTION.md"
+      "STRATEGY-ROTATION.md"
     ],
     "version_history": [],
     "canonical_source": "docs/MARKET-SESSION.md",
@@ -7353,11 +7353,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "EVENT-BUS.md",
       "RESOURCE-BUDGET-SPECIFICATION.md",
-      "CACHE-MANAGER.md",
       "AI-MEMORY.md",
-      "DIAGNOSTICS.md"
+      "PROMPT-LIFECYCLE.md",
+      "CACHE-MANAGER.md",
+      "EVENT-BUS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7373,13 +7373,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "EVENT-BUS.md",
       "RESOURCE-BUDGET-SPECIFICATION.md",
-      "CACHE-MANAGER.md",
       "AI-MEMORY.md",
+      "PROMPT-LIFECYCLE.md",
+      "CACHE-MANAGER.md",
+      "EVENT-BUS.md",
       "DIAGNOSTICS.md",
-      "CONFIGURATION-REFERENCE.md",
-      "PROMPT-LIFECYCLE.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -7442,9 +7442,9 @@
     "outputs": [],
     "depends_on": [
       "MEV-PROTECTION.md",
-      "TRANSACTION-LIFECYCLE.md",
       "GAS-OPTIMISATION.md",
-      "EXECUTION-ENGINE.md"
+      "EXECUTION-ENGINE.md",
+      "TRANSACTION-LIFECYCLE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7461,9 +7461,9 @@
     "testing": [],
     "cross_references": [
       "MEV-PROTECTION.md",
-      "TRANSACTION-LIFECYCLE.md",
       "GAS-OPTIMISATION.md",
-      "EXECUTION-ENGINE.md"
+      "EXECUTION-ENGINE.md",
+      "TRANSACTION-LIFECYCLE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/MEV-PROTECTION-DETAIL.md",
@@ -7503,8 +7503,8 @@
       "Submission recommendation."
     ],
     "depends_on": [
-      "ROUTING-ENGINE.md",
       "EXECUTION-ENGINE.md",
+      "ROUTING-ENGINE.md",
       "TRANSACTION-LIFECYCLE.md"
     ],
     "required_by": [],
@@ -7524,8 +7524,8 @@
     ],
     "testing": [],
     "cross_references": [
-      "ROUTING-ENGINE.md",
       "EXECUTION-ENGINE.md",
+      "ROUTING-ENGINE.md",
       "TRANSACTION-LIFECYCLE.md"
     ],
     "version_history": [],
@@ -7547,8 +7547,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "AI-GATEWAY.md",
       "AI-PROVIDER-MANAGER.md",
+      "AI-GATEWAY.md",
       "INTERFACE-PROVIDER-ADAPTER.md"
     ],
     "required_by": [],
@@ -7576,8 +7576,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "AI-GATEWAY.md",
       "AI-PROVIDER-MANAGER.md",
+      "AI-GATEWAY.md",
       "INTERFACE-PROVIDER-ADAPTER.md"
     ],
     "version_history": [],
@@ -7601,8 +7601,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ARCHITECTURE.md",
-      "PROJECT-STRUCTURE.md"
+      "PROJECT-STRUCTURE.md",
+      "ARCHITECTURE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7618,8 +7618,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ARCHITECTURE.md",
-      "PROJECT-STRUCTURE.md"
+      "PROJECT-STRUCTURE.md",
+      "ARCHITECTURE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/MODULE-DEPENDENCY.md",
@@ -7674,10 +7674,10 @@
     "outputs": [],
     "depends_on": [
       "HEALTHCHECKS.md",
-      "RESOURCE-BUDGET-SPECIFICATION.md",
-      "DIAGNOSTICS.md",
       "METRICS.md",
-      "PERFORMANCE-TARGETS.md"
+      "DIAGNOSTICS.md",
+      "RECOVERY-COORDINATION.md",
+      "RESOURCE-BUDGET-SPECIFICATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7694,12 +7694,12 @@
     "testing": [],
     "cross_references": [
       "HEALTHCHECKS.md",
-      "RESOURCE-BUDGET-SPECIFICATION.md",
-      "DIAGNOSTICS.md",
       "METRICS.md",
+      "DIAGNOSTICS.md",
+      "RECOVERY-COORDINATION.md",
+      "RESOURCE-BUDGET-SPECIFICATION.md",
       "PERFORMANCE-TARGETS.md",
-      "CONFIGURATION-REFERENCE.md",
-      "RECOVERY-COORDINATION.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -7725,11 +7725,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RUNTIME-OPERATIONS.md",
-      "AI-PIPELINE.md",
-      "SECURITY.md",
       "PERFORMANCE-TARGETS.md",
-      "MONITORING-OBSERVABILITY.md"
+      "SECURITY.md",
+      "MONITORING-OBSERVABILITY.md",
+      "AI-PIPELINE.md",
+      "RUNTIME-OPERATIONS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7745,11 +7745,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RUNTIME-OPERATIONS.md",
-      "AI-PIPELINE.md",
-      "SECURITY.md",
       "PERFORMANCE-TARGETS.md",
-      "MONITORING-OBSERVABILITY.md"
+      "SECURITY.md",
+      "MONITORING-OBSERVABILITY.md",
+      "AI-PIPELINE.md",
+      "RUNTIME-OPERATIONS.md"
     ],
     "version_history": [],
     "canonical_source": "docs/NON-FUNCTIONAL-REQUIREMENTS.md",
@@ -7850,11 +7850,11 @@
       "Candidate list, reason codes, confidence, and timestamps."
     ],
     "depends_on": [
-      "RISK-ENGINE.md",
-      "OPPORTUNITY-LIFECYCLE.md",
       "MARKET-INTELLIGENCE.md",
+      "MARKET-DATA.md",
       "STRATEGIES.md",
-      "MARKET-DATA.md"
+      "RISK-ENGINE.md",
+      "OPPORTUNITY-LIFECYCLE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7872,11 +7872,11 @@
     ],
     "testing": [],
     "cross_references": [
-      "RISK-ENGINE.md",
-      "OPPORTUNITY-LIFECYCLE.md",
       "MARKET-INTELLIGENCE.md",
+      "MARKET-DATA.md",
       "STRATEGIES.md",
-      "MARKET-DATA.md"
+      "RISK-ENGINE.md",
+      "OPPORTUNITY-LIFECYCLE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/OPPORTUNITY-DETECTION.md",
@@ -7897,9 +7897,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRADING-LIFECYCLE.md",
+      "OPPORTUNITY-DETECTION.md",
       "OPPORTUNITY-RANKING.md",
-      "OPPORTUNITY-DETECTION.md"
+      "TRADING-LIFECYCLE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7925,9 +7925,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRADING-LIFECYCLE.md",
+      "OPPORTUNITY-DETECTION.md",
       "OPPORTUNITY-RANKING.md",
-      "OPPORTUNITY-DETECTION.md"
+      "TRADING-LIFECYCLE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/OPPORTUNITY-LIFECYCLE.md",
@@ -7955,10 +7955,10 @@
       "Ranked opportunities, score breakdowns, and reject reasons."
     ],
     "depends_on": [
+      "MARKET-INTELLIGENCE.md",
       "STRATEGIES.md",
       "RISK-ENGINE.md",
-      "EXECUTION-ENGINE.md",
-      "MARKET-INTELLIGENCE.md"
+      "EXECUTION-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -7976,10 +7976,10 @@
     ],
     "testing": [],
     "cross_references": [
+      "MARKET-INTELLIGENCE.md",
       "STRATEGIES.md",
       "RISK-ENGINE.md",
-      "EXECUTION-ENGINE.md",
-      "MARKET-INTELLIGENCE.md"
+      "EXECUTION-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/OPPORTUNITY-RANKING.md",
@@ -8000,11 +8000,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RISK-ENGINE.md",
-      "SLIPPAGE-MODEL.md",
+      "MARKET-DATA.md",
       "LIQUIDITY-ANALYSIS.md",
-      "DATABASE-SCHEMA.md",
-      "MARKET-DATA.md"
+      "SLIPPAGE-MODEL.md",
+      "RISK-ENGINE.md",
+      "DATABASE-SCHEMA.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8020,11 +8020,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RISK-ENGINE.md",
-      "SLIPPAGE-MODEL.md",
+      "MARKET-DATA.md",
       "LIQUIDITY-ANALYSIS.md",
-      "DATABASE-SCHEMA.md",
-      "MARKET-DATA.md"
+      "SLIPPAGE-MODEL.md",
+      "RISK-ENGINE.md",
+      "DATABASE-SCHEMA.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -8049,11 +8049,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "HEALTHCHECKS.md",
+      "AI-ORCHESTRATION.md",
       "RUNTIME-OPERATIONS.md",
-      "ENGINE-STATE-MACHINE.md",
-      "STATE-MACHINE-INDEX.md",
-      "TRACEABILITY-MATRIX.md"
+      "RUNTIME-FLOW-LIFECYCLE.md",
+      "RECOVERY-COORDINATION.md",
+      "STATE-MACHINE-INDEX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8069,21 +8069,21 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "HEALTHCHECKS.md",
-      "RUNTIME-OPERATIONS.md",
-      "ENGINE-STATE-MACHINE.md",
-      "STATE-MACHINE-INDEX.md",
-      "TRACEABILITY-MATRIX.md",
-      "WORKER-POOL.md",
-      "DASHBOARD-RUNTIME.md",
       "AI-ORCHESTRATION.md",
+      "RUNTIME-OPERATIONS.md",
       "RUNTIME-FLOW-LIFECYCLE.md",
-      "PLUGIN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "WINDOWS-APP-ARCHITECTURE.md",
+      "RECOVERY-COORDINATION.md",
+      "STATE-MACHINE-INDEX.md",
+      "HEALTHCHECKS.md",
+      "ENGINE-STATE-MACHINE.md",
       "SERVICE-STATE-MACHINE.md",
+      "CONFIGURATION-REFERENCE.md",
+      "WORKER-POOL.md",
+      "PLUGIN-LIFECYCLE.md",
+      "DASHBOARD-RUNTIME.md",
+      "WINDOWS-APP-ARCHITECTURE.md",
       "END-TO-END-WIRING-CONTRACT.md",
-      "RECOVERY-COORDINATION.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -8127,10 +8127,10 @@
       "Reconciliation events."
     ],
     "depends_on": [
-      "RISK-ENGINE.md",
       "EXECUTION-ENGINE.md",
       "TRANSACTION-LIFECYCLE.md",
-      "DATABASE-SCHEMA.md"
+      "DATABASE-SCHEMA.md",
+      "RISK-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8152,10 +8152,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RISK-ENGINE.md",
       "EXECUTION-ENGINE.md",
       "TRANSACTION-LIFECYCLE.md",
-      "DATABASE-SCHEMA.md"
+      "DATABASE-SCHEMA.md",
+      "RISK-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/ORDER-MANAGEMENT.md",
@@ -8176,9 +8176,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "STRATEGIES.md",
+      "MARKET-DATA.md",
       "MARKET-INTELLIGENCE.md",
-      "MARKET-DATA.md"
+      "STRATEGIES.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8194,9 +8194,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "STRATEGIES.md",
+      "MARKET-DATA.md",
       "MARKET-INTELLIGENCE.md",
-      "MARKET-DATA.md"
+      "STRATEGIES.md"
     ],
     "version_history": [],
     "canonical_source": "docs/PAIR-DISCOVERY.md",
@@ -8217,9 +8217,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "HEALTHCHECKS.md",
+      "AI-COST-MANAGEMENT.md",
       "METRICS.md",
-      "AI-COST-MANAGEMENT.md"
+      "HEALTHCHECKS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8235,9 +8235,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "HEALTHCHECKS.md",
+      "AI-COST-MANAGEMENT.md",
       "METRICS.md",
-      "AI-COST-MANAGEMENT.md"
+      "HEALTHCHECKS.md"
     ],
     "version_history": [],
     "canonical_source": "docs/PERFORMANCE-SLOS.md",
@@ -8258,10 +8258,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "CLOUD-AI-INTEGRATION.md",
-      "AI-PIPELINE.md",
+      "MONITORING-OBSERVABILITY.md",
       "RUNTIME-OPERATIONS.md",
-      "MONITORING-OBSERVABILITY.md"
+      "AI-PIPELINE.md",
+      "CLOUD-AI-INTEGRATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8277,10 +8277,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "CLOUD-AI-INTEGRATION.md",
-      "AI-PIPELINE.md",
+      "MONITORING-OBSERVABILITY.md",
       "RUNTIME-OPERATIONS.md",
-      "MONITORING-OBSERVABILITY.md"
+      "AI-PIPELINE.md",
+      "CLOUD-AI-INTEGRATION.md"
     ],
     "version_history": [],
     "canonical_source": "docs/PERFORMANCE-TARGETS.md",
@@ -8301,11 +8301,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
       "SECURITY.md",
+      "SECURITY-CONTRACTS.md",
+      "TRUST-BOUNDARIES.md",
       "PLUGIN-SANDBOX-CONTRACT.md",
-      "WINDOWS-SERVICE-INTEGRATION.md"
+      "AI-SAFETY-BOUNDARY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8321,15 +8321,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
       "SECURITY.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
-      "WINDOWS-SERVICE-INTEGRATION.md",
-      "CONFIGURATION-REFERENCE.md",
       "SECURITY-CONTRACTS.md",
+      "TRUST-BOUNDARIES.md",
+      "PLUGIN-SANDBOX-CONTRACT.md",
       "AI-SAFETY-BOUNDARY.md",
-      "IPC-PROTOCOL.md"
+      "IPC-PROTOCOL.md",
+      "WINDOWS-SERVICE-INTEGRATION.md",
+      "TRACEABILITY-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -8355,11 +8355,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "PLUGIN-STATE-MACHINE.md",
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "PLUGIN-SDK.md",
       "PLUGIN-MARKETPLACE.md",
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
-      "PLUGIN-SANDBOX-CONTRACT.md"
+      "PLUGIN-STATE-MACHINE.md",
+      "APP-BUILDER-PLUGIN-SYSTEM.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8375,16 +8375,16 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "PLUGIN-STATE-MACHINE.md",
-      "PLUGIN-MARKETPLACE.md",
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
       "PLUGIN-SANDBOX-CONTRACT.md",
-      "CONFIGURATION-REFERENCE.md",
       "PLUGIN-SDK.md",
+      "PLUGIN-MARKETPLACE.md",
+      "PLUGIN-STATE-MACHINE.md",
       "APP-BUILDER-PLUGIN-SYSTEM.md",
+      "TRUST-BOUNDARIES.md",
+      "PERMISSION-MODEL.md",
+      "CONFIGURATION-REFERENCE.md",
       "END-TO-END-WIRING-CONTRACT.md",
-      "PERMISSION-MODEL.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -8409,8 +8409,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "STRATEGIES.md",
-      "PLUGIN-SDK.md"
+      "PLUGIN-SDK.md",
+      "STRATEGIES.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8426,8 +8426,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "STRATEGIES.md",
-      "PLUGIN-SDK.md"
+      "PLUGIN-SDK.md",
+      "STRATEGIES.md"
     ],
     "version_history": [],
     "canonical_source": "docs/PLUGIN-MARKETPLACE.md",
@@ -8448,11 +8448,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "PLUGIN-MARKETPLACE.md",
+      "PLUGIN-LIFECYCLE.md",
       "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
-      "SECURITY.md",
-      "PLUGIN-LIFECYCLE.md"
+      "PLUGIN-SDK.md",
+      "PLUGIN-MARKETPLACE.md",
+      "TRUST-BOUNDARIES.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8468,13 +8468,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "PLUGIN-MARKETPLACE.md",
+      "PLUGIN-LIFECYCLE.md",
       "TRACEABILITY-MATRIX.md",
+      "PLUGIN-SDK.md",
+      "PLUGIN-MARKETPLACE.md",
       "TRUST-BOUNDARIES.md",
       "SECURITY.md",
-      "PLUGIN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "PLUGIN-SDK.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -8500,11 +8500,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRUST-BOUNDARIES.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
       "PLUGIN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "PLUGIN-MARKETPLACE.md"
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "PLUGIN-MARKETPLACE.md",
+      "TRUST-BOUNDARIES.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8520,11 +8520,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRUST-BOUNDARIES.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
       "PLUGIN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "PLUGIN-MARKETPLACE.md"
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "PLUGIN-MARKETPLACE.md",
+      "TRUST-BOUNDARIES.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -8549,11 +8549,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
       "PLUGIN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "PLUGIN-SDK.md"
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "APP-BUILDER-PLUGIN-SYSTEM.md",
+      "PLUGIN-SDK.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8569,12 +8569,12 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
       "PLUGIN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "APP-BUILDER-PLUGIN-SYSTEM.md",
       "PLUGIN-SDK.md",
-      "APP-BUILDER-PLUGIN-SYSTEM.md"
+      "TRACEABILITY-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -8600,9 +8600,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RISK-ENGINE.md",
       "CONFIGURATION.md",
       "SECURITY-CONTRACTS.md",
+      "RISK-ENGINE.md",
       "AI-COST-MANAGEMENT.md"
     ],
     "required_by": [],
@@ -8619,9 +8619,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RISK-ENGINE.md",
       "CONFIGURATION.md",
       "SECURITY-CONTRACTS.md",
+      "RISK-ENGINE.md",
       "AI-COST-MANAGEMENT.md"
     ],
     "version_history": [
@@ -8691,8 +8691,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
       "POSITION-MANAGEMENT.md",
+      "WALLET-MANAGEMENT.md",
       "MARKET-DATA.md"
     ],
     "required_by": [],
@@ -8709,8 +8709,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
       "POSITION-MANAGEMENT.md",
+      "WALLET-MANAGEMENT.md",
       "MARKET-DATA.md"
     ],
     "version_history": [],
@@ -8737,8 +8737,8 @@
     "outputs": [],
     "depends_on": [
       "ORDER-MANAGEMENT.md",
-      "RISK-ENGINE.md",
-      "PORTFOLIO-MANAGEMENT.md"
+      "PORTFOLIO-MANAGEMENT.md",
+      "RISK-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8755,8 +8755,8 @@
     "testing": [],
     "cross_references": [
       "ORDER-MANAGEMENT.md",
-      "RISK-ENGINE.md",
-      "PORTFOLIO-MANAGEMENT.md"
+      "PORTFOLIO-MANAGEMENT.md",
+      "RISK-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/POSITION-MANAGEMENT.md",
@@ -8777,9 +8777,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ROUTING-ENGINE.md",
+      "MARKET-DATA.md",
       "MARKET-INTELLIGENCE.md",
-      "MARKET-DATA.md"
+      "ROUTING-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8795,9 +8795,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ROUTING-ENGINE.md",
+      "MARKET-DATA.md",
       "MARKET-INTELLIGENCE.md",
-      "MARKET-DATA.md"
+      "ROUTING-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/PRICE-DISCOVERY.md",
@@ -8956,10 +8956,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "CLOUD-AI-INTEGRATION.md",
       "AI-PIPELINE.md",
-      "CONFIGURATION.md",
-      "AI-SETTINGS.md"
+      "AI-SETTINGS.md",
+      "CLOUD-AI-INTEGRATION.md",
+      "CONFIGURATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -8975,10 +8975,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "CLOUD-AI-INTEGRATION.md",
       "AI-PIPELINE.md",
-      "CONFIGURATION.md",
-      "AI-SETTINGS.md"
+      "AI-SETTINGS.md",
+      "CLOUD-AI-INTEGRATION.md",
+      "CONFIGURATION.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9004,11 +9004,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "AI-PIPELINE.md",
       "TRACEABILITY-MATRIX.md",
       "AI-MEMORY.md",
-      "AI-PIPELINE.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md"
+      "AI-CONTEXT-WINDOW-MANAGEMENT.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9024,14 +9024,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "AI-PIPELINE.md",
       "TRACEABILITY-MATRIX.md",
       "AI-MEMORY.md",
-      "AI-PIPELINE.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
+      "AI-CONTEXT-WINDOW-MANAGEMENT.md",
       "AI-TOOL-INVOCATION-CONTRACT.md",
       "AI-SAFETY-BOUNDARY.md",
-      "AI-CONTEXT-WINDOW-MANAGEMENT.md"
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9057,10 +9057,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "AI-PROVIDER-MANAGER.md",
       "AI-GATEWAY.md",
-      "PERFORMANCE-SLOS.md",
       "HEALTHCHECKS.md",
-      "AI-PROVIDER-MANAGER.md"
+      "PERFORMANCE-SLOS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9093,10 +9093,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "AI-PROVIDER-MANAGER.md",
       "AI-GATEWAY.md",
-      "PERFORMANCE-SLOS.md",
       "HEALTHCHECKS.md",
-      "AI-PROVIDER-MANAGER.md"
+      "PERFORMANCE-SLOS.md"
     ],
     "version_history": [],
     "canonical_source": "docs/PROVIDER-RESILIENCE.md",
@@ -9125,9 +9125,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "RUNTIME-OPERATIONS.md",
       "WORKER-ARCHITECTURE.md",
       "RECOVERY-AND-FAILOVER.md",
-      "RUNTIME-OPERATIONS.md",
       "MONITORING-OBSERVABILITY.md"
     ],
     "required_by": [],
@@ -9144,9 +9144,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "RUNTIME-OPERATIONS.md",
       "WORKER-ARCHITECTURE.md",
       "RECOVERY-AND-FAILOVER.md",
-      "RUNTIME-OPERATIONS.md",
       "MONITORING-OBSERVABILITY.md"
     ],
     "version_history": [],
@@ -9201,8 +9201,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ARCHITECTURE.md",
       "DOCUMENTATION-MAP.md",
+      "ARCHITECTURE.md",
       "APEX-ARCHITECTURE.md"
     ],
     "required_by": [],
@@ -9219,8 +9219,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ARCHITECTURE.md",
       "DOCUMENTATION-MAP.md",
+      "ARCHITECTURE.md",
       "APEX-ARCHITECTURE.md"
     ],
     "version_history": [],
@@ -9250,10 +9250,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "QUEUE-MANAGEMENT.md",
       "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
+      "QUEUE-MANAGEMENT.md",
       "WORKER-ARCHITECTURE.md",
+      "MONITORING-OBSERVABILITY.md",
       "ERROR-HANDLING-LOGGING.md"
     ],
     "required_by": [],
@@ -9270,12 +9270,12 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "QUEUE-MANAGEMENT.md",
       "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
+      "QUEUE-MANAGEMENT.md",
       "WORKER-ARCHITECTURE.md",
+      "MONITORING-OBSERVABILITY.md",
       "ERROR-HANDLING-LOGGING.md",
-      "MONITORING-OBSERVABILITY.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [],
     "canonical_source": "docs/RECOVERY-AND-FAILOVER.md",
@@ -9296,11 +9296,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "HEALTHCHECKS.md",
-      "ENGINE-STATE-MACHINE.md",
-      "RUNTIME-OPERATIONS.md",
-      "STATE-MACHINE-INDEX.md",
-      "TRACEABILITY-MATRIX.md"
+      "RECOVERY-AND-FAILOVER.md",
+      "RECOVERY-PLAYBOOK.md",
+      "FAILURE-MATRIX.md",
+      "FAILURE-RECOVERY-MATRIX.md",
+      "ENGINE-STATE-MACHINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9316,16 +9316,16 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "HEALTHCHECKS.md",
-      "ENGINE-STATE-MACHINE.md",
-      "RUNTIME-OPERATIONS.md",
-      "STATE-MACHINE-INDEX.md",
-      "TRACEABILITY-MATRIX.md",
-      "FAILURE-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
       "RECOVERY-AND-FAILOVER.md",
+      "RECOVERY-PLAYBOOK.md",
+      "FAILURE-MATRIX.md",
       "FAILURE-RECOVERY-MATRIX.md",
-      "RECOVERY-PLAYBOOK.md"
+      "ENGINE-STATE-MACHINE.md",
+      "STATE-MACHINE-INDEX.md",
+      "HEALTHCHECKS.md",
+      "RUNTIME-OPERATIONS.md",
+      "TRACEABILITY-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9350,10 +9350,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "HEALTHCHECKS.md",
       "RUNTIME-OPERATIONS.md",
-      "AI-PIPELINE.md",
+      "TRADING-ENGINE.md",
       "EXECUTION-ENGINE.md",
+      "AI-PIPELINE.md",
       "PLUGIN-LIFECYCLE.md"
     ],
     "required_by": [],
@@ -9370,13 +9370,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "HEALTHCHECKS.md",
       "RUNTIME-OPERATIONS.md",
-      "AI-PIPELINE.md",
+      "TRADING-ENGINE.md",
       "EXECUTION-ENGINE.md",
+      "AI-PIPELINE.md",
       "PLUGIN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "TRADING-ENGINE.md"
+      "HEALTHCHECKS.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9402,11 +9402,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "SERVICE-REGISTRY.md",
       "CHAIN-REGISTRY.md",
-      "CONTRACT-MANAGEMENT.md",
-      "SYSTEM-CAPABILITY-REGISTRY.md",
-      "CONFIGURATION-REFERENCE.md"
+      "DEX-REGISTRY.md",
+      "TOKEN-REGISTRY.md",
+      "ORACLE-REGISTRY.md",
+      "CONTRACT-REGISTRY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9422,15 +9422,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "SERVICE-REGISTRY.md",
       "CHAIN-REGISTRY.md",
-      "CONTRACT-MANAGEMENT.md",
-      "SYSTEM-CAPABILITY-REGISTRY.md",
-      "CONFIGURATION-REFERENCE.md",
-      "CONTRACT-REGISTRY.md",
-      "TOKEN-REGISTRY.md",
       "DEX-REGISTRY.md",
-      "ORACLE-REGISTRY.md"
+      "TOKEN-REGISTRY.md",
+      "ORACLE-REGISTRY.md",
+      "CONTRACT-REGISTRY.md",
+      "SERVICE-REGISTRY.md",
+      "SYSTEM-CAPABILITY-REGISTRY.md",
+      "CONTRACT-MANAGEMENT.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9456,11 +9456,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "CAPACITY-PLANNING.md",
       "TRACEABILITY-MATRIX.md",
       "MEMORY-LIFECYCLE.md",
-      "WORKER-POOL.md",
-      "CAPACITY-PLANNING.md",
-      "PERFORMANCE-TARGETS.md"
+      "CONFIGURATION-REFERENCE.md",
+      "MONITORING-OBSERVABILITY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9476,13 +9476,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "CAPACITY-PLANNING.md",
       "TRACEABILITY-MATRIX.md",
       "MEMORY-LIFECYCLE.md",
-      "WORKER-POOL.md",
-      "CAPACITY-PLANNING.md",
-      "PERFORMANCE-TARGETS.md",
       "CONFIGURATION-REFERENCE.md",
-      "MONITORING-OBSERVABILITY.md"
+      "MONITORING-OBSERVABILITY.md",
+      "PERFORMANCE-TARGETS.md",
+      "WORKER-POOL.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9567,11 +9567,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
-      "TRADING-LIFECYCLE.md",
+      "TRADING-ENGINE.md",
       "EXECUTION-ENGINE.md",
+      "TRADING-LIFECYCLE.md",
       "ARBITRAGE-WINDOW-MANAGER.md",
-      "CONFIGURATION-REFERENCE.md"
+      "OPPORTUNITY-RANKING.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9587,13 +9587,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
-      "TRADING-LIFECYCLE.md",
-      "EXECUTION-ENGINE.md",
-      "ARBITRAGE-WINDOW-MANAGER.md",
-      "CONFIGURATION-REFERENCE.md",
       "TRADING-ENGINE.md",
-      "OPPORTUNITY-RANKING.md"
+      "EXECUTION-ENGINE.md",
+      "TRADING-LIFECYCLE.md",
+      "ARBITRAGE-WINDOW-MANAGER.md",
+      "OPPORTUNITY-RANKING.md",
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9651,9 +9651,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRADING-LIFECYCLE.md",
+      "SIMULATION-ENGINE.md",
       "EXECUTION-LIFECYCLE.md",
-      "SIMULATION-ENGINE.md"
+      "TRADING-LIFECYCLE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9684,9 +9684,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRADING-LIFECYCLE.md",
+      "SIMULATION-ENGINE.md",
       "EXECUTION-LIFECYCLE.md",
-      "SIMULATION-ENGINE.md"
+      "TRADING-LIFECYCLE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/ROUTE-OPTIMIZATION.md",
@@ -9707,9 +9707,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RISK-ENGINE.md",
       "ROUTE-OPTIMIZATION.md",
-      "SIMULATION-ENGINE.md"
+      "SIMULATION-ENGINE.md",
+      "RISK-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9736,9 +9736,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RISK-ENGINE.md",
       "ROUTE-OPTIMIZATION.md",
-      "SIMULATION-ENGINE.md"
+      "SIMULATION-ENGINE.md",
+      "RISK-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/ROUTE-SCORING-MODEL.md",
@@ -9779,11 +9779,11 @@
       "Execution-ready route plans."
     ],
     "depends_on": [
-      "GAS-OPTIMISATION.md",
-      "SLIPPAGE-MODEL.md",
+      "MARKET-DATA.md",
       "LIQUIDITY-ANALYSIS.md",
-      "MEV-PROTECTION.md",
-      "EXECUTION-ENGINE.md"
+      "SLIPPAGE-MODEL.md",
+      "GAS-OPTIMISATION.md",
+      "MEV-PROTECTION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9799,12 +9799,12 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "GAS-OPTIMISATION.md",
-      "SLIPPAGE-MODEL.md",
+      "MARKET-DATA.md",
       "LIQUIDITY-ANALYSIS.md",
+      "SLIPPAGE-MODEL.md",
+      "GAS-OPTIMISATION.md",
       "MEV-PROTECTION.md",
-      "EXECUTION-ENGINE.md",
-      "MARKET-DATA.md"
+      "EXECUTION-ENGINE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9831,8 +9831,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ARCHITECTURE.md",
-      "APEX-OS.md"
+      "APEX-OS.md",
+      "ARCHITECTURE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9848,8 +9848,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ARCHITECTURE.md",
-      "APEX-OS.md"
+      "APEX-OS.md",
+      "ARCHITECTURE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9874,11 +9874,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "PLUGIN-STATE-MACHINE.md",
       "RUNTIME-OPERATIONS.md",
-      "WORKER-STATE-MACHINE.md",
+      "RECOVERY-COORDINATION.md",
+      "RECOVERY-PLAYBOOK.md",
       "STATE-MACHINE-INDEX.md",
-      "TRACEABILITY-MATRIX.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9894,16 +9894,16 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "PLUGIN-STATE-MACHINE.md",
       "RUNTIME-OPERATIONS.md",
-      "WORKER-STATE-MACHINE.md",
-      "STATE-MACHINE-INDEX.md",
-      "TRACEABILITY-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
-      "APP-BUILDER-WORKFLOW.md",
-      "SERVICE-STATE-MACHINE.md",
+      "RECOVERY-COORDINATION.md",
       "RECOVERY-PLAYBOOK.md",
-      "RECOVERY-COORDINATION.md"
+      "STATE-MACHINE-INDEX.md",
+      "CONFIGURATION-REFERENCE.md",
+      "PLUGIN-STATE-MACHINE.md",
+      "WORKER-STATE-MACHINE.md",
+      "SERVICE-STATE-MACHINE.md",
+      "APP-BUILDER-WORKFLOW.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -9930,8 +9930,8 @@
     "depends_on": [
       "APEX-KERNEL.md",
       "HEALTHCHECKS.md",
-      "DASHBOARD-WORKSPACES.md",
-      "MONITORING-OBSERVABILITY.md"
+      "MONITORING-OBSERVABILITY.md",
+      "DASHBOARD-WORKSPACES.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -9960,8 +9960,8 @@
     "cross_references": [
       "APEX-KERNEL.md",
       "HEALTHCHECKS.md",
-      "DASHBOARD-WORKSPACES.md",
-      "MONITORING-OBSERVABILITY.md"
+      "MONITORING-OBSERVABILITY.md",
+      "DASHBOARD-WORKSPACES.md"
     ],
     "version_history": [],
     "canonical_source": "docs/RUNTIME-KNOWLEDGE.md",
@@ -9982,11 +9982,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "HEALTHCHECKS.md",
-      "TRACEABILITY-MATRIX.md",
       "SERVICE-LIFECYCLE.md",
-      "BOOTSTRAP-SEQUENCE.md",
-      "SHUTDOWN-LIFECYCLE.md"
+      "SHUTDOWN-LIFECYCLE.md",
+      "HEALTHCHECKS.md",
+      "MONITORING-OBSERVABILITY.md",
+      "BOOTSTRAP-SEQUENCE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10002,14 +10002,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "HEALTHCHECKS.md",
-      "TRACEABILITY-MATRIX.md",
       "SERVICE-LIFECYCLE.md",
-      "BOOTSTRAP-SEQUENCE.md",
       "SHUTDOWN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
+      "HEALTHCHECKS.md",
+      "MONITORING-OBSERVABILITY.md",
+      "BOOTSTRAP-SEQUENCE.md",
       "TRADING-ENGINE.md",
-      "MONITORING-OBSERVABILITY.md"
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -10034,11 +10034,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
-      "ERROR-CODES.md",
+      "SECURITY.md",
       "TRACEABILITY-MATRIX.md",
       "TRUST-BOUNDARIES.md",
-      "SECURITY.md"
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10054,14 +10054,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
-      "ERROR-CODES.md",
+      "SECURITY.md",
       "TRACEABILITY-MATRIX.md",
       "TRUST-BOUNDARIES.md",
-      "SECURITY.md",
-      "AI-PROVIDER-MANAGER.md",
       "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md"
+      "CONFIGURATION-REFERENCE.md",
+      "WALLET-MANAGEMENT.md",
+      "AI-PROVIDER-MANAGER.md",
+      "ERROR-CODES.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -10087,11 +10087,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
       "SECURITY.md",
+      "PERMISSION-MODEL.md",
+      "TRUST-BOUNDARIES.md",
       "SECRET-LIFECYCLE.md",
-      "PERMISSION-MODEL.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10107,11 +10107,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
-      "TRUST-BOUNDARIES.md",
       "SECURITY.md",
+      "PERMISSION-MODEL.md",
+      "TRUST-BOUNDARIES.md",
       "SECRET-LIFECYCLE.md",
-      "PERMISSION-MODEL.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -10136,11 +10136,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
-      "TRACEABILITY-MATRIX.md",
       "TRUST-BOUNDARIES.md",
       "SECRET-LIFECYCLE.md",
-      "PLUGIN-SANDBOX-CONTRACT.md"
+      "PERMISSION-MODEL.md",
+      "SECURITY-CONTRACTS.md",
+      "EVENT-OWNERSHIP-MATRIX.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10156,15 +10156,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
-      "TRACEABILITY-MATRIX.md",
       "TRUST-BOUNDARIES.md",
       "SECRET-LIFECYCLE.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
+      "PERMISSION-MODEL.md",
       "SECURITY-CONTRACTS.md",
-      "PERMISSION-MODEL.md"
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "WALLET-MANAGEMENT.md",
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -10190,8 +10190,8 @@
     "outputs": [],
     "depends_on": [
       "HEALTHCHECKS.md",
-      "RECOVERY-AND-FAILOVER.md",
-      "PROVIDER-RESILIENCE.md"
+      "PROVIDER-RESILIENCE.md",
+      "RECOVERY-AND-FAILOVER.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10220,8 +10220,8 @@
     "testing": [],
     "cross_references": [
       "HEALTHCHECKS.md",
-      "RECOVERY-AND-FAILOVER.md",
-      "PROVIDER-RESILIENCE.md"
+      "PROVIDER-RESILIENCE.md",
+      "RECOVERY-AND-FAILOVER.md"
     ],
     "version_history": [],
     "canonical_source": "docs/SELF-HEALING.md",
@@ -10295,8 +10295,8 @@
     "outputs": [],
     "depends_on": [
       "APEX-KERNEL.md",
-      "ORCHESTRATOR.md",
-      "REGISTRY-SYSTEM.md"
+      "REGISTRY-SYSTEM.md",
+      "ORCHESTRATOR.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10327,8 +10327,8 @@
     "testing": [],
     "cross_references": [
       "APEX-KERNEL.md",
-      "ORCHESTRATOR.md",
-      "REGISTRY-SYSTEM.md"
+      "REGISTRY-SYSTEM.md",
+      "ORCHESTRATOR.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -10353,11 +10353,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "WINDOWS-SERVICE-INTEGRATION.md",
       "WINDOWS-DESKTOP.md",
       "RUNTIME-OPERATIONS.md",
       "ENGINE-STATE-MACHINE.md",
-      "TRACEABILITY-MATRIX.md",
-      "WINDOWS-SERVICE-INTEGRATION.md"
+      "RECOVERY-AND-FAILOVER.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10373,13 +10373,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "WINDOWS-SERVICE-INTEGRATION.md",
       "WINDOWS-DESKTOP.md",
       "RUNTIME-OPERATIONS.md",
       "ENGINE-STATE-MACHINE.md",
+      "RECOVERY-AND-FAILOVER.md",
       "TRACEABILITY-MATRIX.md",
-      "WINDOWS-SERVICE-INTEGRATION.md",
-      "CONFIGURATION-REFERENCE.md",
-      "RECOVERY-AND-FAILOVER.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -10405,8 +10405,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ORCHESTRATOR.md",
-      "RUNTIME-OPERATIONS.md"
+      "RUNTIME-OPERATIONS.md",
+      "ORCHESTRATOR.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10431,8 +10431,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ORCHESTRATOR.md",
-      "RUNTIME-OPERATIONS.md"
+      "RUNTIME-OPERATIONS.md",
+      "ORCHESTRATOR.md"
     ],
     "version_history": [],
     "canonical_source": "docs/SHUTDOWN-LIFECYCLE.md",
@@ -10456,11 +10456,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "DOMAIN-MODEL.md",
       "BACKTESTING.md",
-      "AI-PIPELINE.md",
+      "STRATEGIES.md",
       "EXECUTION-ENGINE.md",
-      "METRICS.md"
+      "AI-PIPELINE.md",
+      "TESTING-GUIDE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10476,13 +10476,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "DOMAIN-MODEL.md",
       "BACKTESTING.md",
-      "AI-PIPELINE.md",
+      "STRATEGIES.md",
       "EXECUTION-ENGINE.md",
-      "METRICS.md",
+      "AI-PIPELINE.md",
       "TESTING-GUIDE.md",
-      "STRATEGIES.md"
+      "DOMAIN-MODEL.md",
+      "METRICS.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -10561,9 +10561,9 @@
       "Route safety label."
     ],
     "depends_on": [
+      "EXECUTION-ENGINE.md",
       "STRATEGIES.md",
-      "ROUTING-ENGINE.md",
-      "EXECUTION-ENGINE.md"
+      "ROUTING-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10583,9 +10583,9 @@
     ],
     "testing": [],
     "cross_references": [
+      "EXECUTION-ENGINE.md",
       "STRATEGIES.md",
-      "ROUTING-ENGINE.md",
-      "EXECUTION-ENGINE.md"
+      "ROUTING-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/SLIPPAGE-MODEL.md",
@@ -10606,11 +10606,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "PLUGIN-STATE-MACHINE.md",
-      "EXECUTION-STATE-MACHINE.md",
       "ENGINE-STATE-MACHINE.md",
+      "EXECUTION-STATE-MACHINE.md",
       "WORKER-STATE-MACHINE.md",
-      "STATE-MANAGEMENT.md"
+      "PLUGIN-STATE-MACHINE.md",
+      "SERVICE-STATE-MACHINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10626,18 +10626,18 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "PLUGIN-STATE-MACHINE.md",
-      "EXECUTION-STATE-MACHINE.md",
       "ENGINE-STATE-MACHINE.md",
+      "EXECUTION-STATE-MACHINE.md",
       "WORKER-STATE-MACHINE.md",
+      "PLUGIN-STATE-MACHINE.md",
+      "SERVICE-STATE-MACHINE.md",
+      "AI-STATE-MACHINE.md",
+      "PROMPT-LIFECYCLE.md",
+      "TRADING-LIFECYCLE.md",
+      "SHUTDOWN-LIFECYCLE.md",
       "STATE-MANAGEMENT.md",
       "TRACEABILITY-MATRIX.md",
-      "TRADING-LIFECYCLE.md",
-      "DOCUMENTATION-MAP.md",
-      "AI-STATE-MACHINE.md",
-      "SHUTDOWN-LIFECYCLE.md",
-      "PROMPT-LIFECYCLE.md",
-      "SERVICE-STATE-MACHINE.md"
+      "DOCUMENTATION-MAP.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -10662,11 +10662,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "DATA-FLOW.md",
-      "MEMORY-LIFECYCLE.md",
       "STATE-MACHINE-INDEX.md",
-      "CACHE-MANAGER.md",
-      "TRACEABILITY-MATRIX.md"
+      "DATABASE-SCHEMA.md",
+      "IPC-PROTOCOL.md",
+      "DATA-FLOW.md",
+      "EVENT-FLOW.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10682,14 +10682,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "DATA-FLOW.md",
-      "MEMORY-LIFECYCLE.md",
       "STATE-MACHINE-INDEX.md",
-      "CACHE-MANAGER.md",
-      "TRACEABILITY-MATRIX.md",
       "DATABASE-SCHEMA.md",
+      "IPC-PROTOCOL.md",
+      "DATA-FLOW.md",
       "EVENT-FLOW.md",
-      "IPC-PROTOCOL.md"
+      "MEMORY-LIFECYCLE.md",
+      "CACHE-MANAGER.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -10719,10 +10719,10 @@
     "outputs": [],
     "depends_on": [
       "RISK-ENGINE.md",
-      "SIMULATION-ENGINE.md",
       "AI-PIPELINE.md",
       "EXECUTION-ENGINE.md",
-      "MARKET-INTELLIGENCE.md"
+      "MARKET-INTELLIGENCE.md",
+      "SIMULATION-ENGINE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10741,10 +10741,10 @@
     "testing": [],
     "cross_references": [
       "RISK-ENGINE.md",
-      "SIMULATION-ENGINE.md",
       "AI-PIPELINE.md",
       "EXECUTION-ENGINE.md",
-      "MARKET-INTELLIGENCE.md"
+      "MARKET-INTELLIGENCE.md",
+      "SIMULATION-ENGINE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/STRATEGIES.md",
@@ -10766,9 +10766,9 @@
     "outputs": [],
     "depends_on": [
       "ORCHESTRATOR.md",
+      "AI-CONSENSUS.md",
       "PERFORMANCE-SLOS.md",
-      "SECURITY-CONTRACTS.md",
-      "AI-CONSENSUS.md"
+      "SECURITY-CONTRACTS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10802,9 +10802,9 @@
     "testing": [],
     "cross_references": [
       "ORCHESTRATOR.md",
+      "AI-CONSENSUS.md",
       "PERFORMANCE-SLOS.md",
-      "SECURITY-CONTRACTS.md",
-      "AI-CONSENSUS.md"
+      "SECURITY-CONTRACTS.md"
     ],
     "version_history": [],
     "canonical_source": "docs/STRATEGY-ROTATION.md",
@@ -10825,10 +10825,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "AI-GATEWAY.md",
+      "REGISTRY-SYSTEM.md",
       "PLUGIN-SDK.md",
       "AI-PROVIDER-MANAGER.md",
-      "REGISTRY-SYSTEM.md"
+      "AI-GATEWAY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10856,10 +10856,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "AI-GATEWAY.md",
+      "REGISTRY-SYSTEM.md",
       "PLUGIN-SDK.md",
       "AI-PROVIDER-MANAGER.md",
-      "REGISTRY-SYSTEM.md"
+      "AI-GATEWAY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/SYSTEM-CAPABILITY-REGISTRY.md",
@@ -10880,11 +10880,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
+      "WORKER-POOL.md",
+      "THREADING-MODEL.md",
       "HEALTHCHECKS.md",
-      "GAS-OPTIMISATION.md",
-      "SECRET-LIFECYCLE.md",
-      "AI-PROVIDER-MANAGER.md"
+      "AI-PROVIDER-MANAGER.md",
+      "WALLET-MANAGEMENT.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10900,16 +10900,16 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
-      "HEALTHCHECKS.md",
-      "GAS-OPTIMISATION.md",
-      "SECRET-LIFECYCLE.md",
-      "AI-PROVIDER-MANAGER.md",
       "WORKER-POOL.md",
-      "DATABASE-SCHEMA.md",
-      "CONFIGURATION.md",
-      "CONFIGURATION-REFERENCE.md",
       "THREADING-MODEL.md",
+      "HEALTHCHECKS.md",
+      "AI-PROVIDER-MANAGER.md",
+      "WALLET-MANAGEMENT.md",
+      "GAS-OPTIMISATION.md",
+      "CONFIGURATION.md",
+      "SECRET-LIFECYCLE.md",
+      "DATABASE-SCHEMA.md",
+      "CONFIGURATION-REFERENCE.md",
       "END-TO-END-WIRING-CONTRACT.md"
     ],
     "version_history": [
@@ -10978,9 +10978,9 @@
     "depends_on": [
       "SIMULATION-ENGINE.md",
       "BACKTESTING.md",
-      "RUNTIME-OPERATIONS.md",
+      "STRATEGIES.md",
       "AI-PIPELINE.md",
-      "MONITORING-OBSERVABILITY.md"
+      "RUNTIME-OPERATIONS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -10998,10 +10998,10 @@
     "cross_references": [
       "SIMULATION-ENGINE.md",
       "BACKTESTING.md",
-      "RUNTIME-OPERATIONS.md",
+      "STRATEGIES.md",
       "AI-PIPELINE.md",
-      "MONITORING-OBSERVABILITY.md",
-      "STRATEGIES.md"
+      "RUNTIME-OPERATIONS.md",
+      "MONITORING-OBSERVABILITY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/TESTING-GUIDE.md",
@@ -11022,11 +11022,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "PERFORMANCE-SLOS.md",
+      "TESTING-GUIDE.md",
+      "TEST-CASE-REGISTRY.md",
       "SIMULATION-ENGINE.md",
       "BACKTESTING.md",
-      "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md"
+      "STRATEGIES.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11042,20 +11042,20 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "PERFORMANCE-SLOS.md",
+      "TESTING-GUIDE.md",
+      "TEST-CASE-REGISTRY.md",
       "SIMULATION-ENGINE.md",
       "BACKTESTING.md",
-      "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
-      "AI-PIPELINE.md",
-      "SECURITY.md",
-      "TESTING-GUIDE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "TEST-CASE-REGISTRY.md",
-      "MONITORING-OBSERVABILITY.md",
       "STRATEGIES.md",
+      "AI-PIPELINE.md",
+      "RUNTIME-OPERATIONS.md",
+      "MONITORING-OBSERVABILITY.md",
+      "PERFORMANCE-SLOS.md",
+      "SECURITY.md",
       "THREADING-MODEL.md",
-      "END-TO-END-WIRING-CONTRACT.md"
+      "CONFIGURATION-REFERENCE.md",
+      "END-TO-END-WIRING-CONTRACT.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -11081,11 +11081,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "EVENT-BUS.md",
-      "RESOURCE-BUDGET-SPECIFICATION.md",
-      "ARCHITECTURE.md",
-      "BOOTSTRAP-SEQUENCE.md",
-      "WORKER-POOL.md"
+      "CONCURRENCY-MODEL.md",
+      "WORKER-POOL.md",
+      "RESOURCE-MANAGER.md",
+      "TASK-SCHEDULER.md",
+      "EVENT-BUS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11101,17 +11101,17 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "CONCURRENCY-MODEL.md",
+      "WORKER-POOL.md",
+      "RESOURCE-MANAGER.md",
+      "TASK-SCHEDULER.md",
       "EVENT-BUS.md",
-      "RESOURCE-BUDGET-SPECIFICATION.md",
       "ARCHITECTURE.md",
       "BOOTSTRAP-SEQUENCE.md",
-      "WORKER-POOL.md",
-      "TASK-SCHEDULER.md",
-      "CAPACITY-PLANNING.md",
       "SHUTDOWN-LIFECYCLE.md",
+      "RESOURCE-BUDGET-SPECIFICATION.md",
+      "CAPACITY-PLANNING.md",
       "CONFIGURATION-REFERENCE.md",
-      "CONCURRENCY-MODEL.md",
-      "RESOURCE-MANAGER.md",
       "END-TO-END-WIRING-CONTRACT.md"
     ],
     "version_history": [
@@ -11139,11 +11139,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "EVENT-BUS.md",
-      "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
+      "EXECUTION-ENGINE.md",
       "AI-PIPELINE.md",
-      "EXECUTION-ENGINE.md"
+      "RUNTIME-OPERATIONS.md",
+      "WORKER-POOL.md",
+      "EVENT-BUS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11159,15 +11159,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "EVENT-BUS.md",
-      "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
-      "AI-PIPELINE.md",
       "EXECUTION-ENGINE.md",
+      "AI-PIPELINE.md",
+      "RUNTIME-OPERATIONS.md",
       "WORKER-POOL.md",
-      "CONFIGURATION-REFERENCE.md",
+      "EVENT-BUS.md",
       "DASHBOARD-RUNTIME.md",
-      "END-TO-END-WIRING-CONTRACT.md"
+      "CONFIGURATION-REFERENCE.md",
+      "END-TO-END-WIRING-CONTRACT.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -11193,8 +11193,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "MARKET-INTELLIGENCE.md",
-      "MARKET-DATA.md"
+      "MARKET-DATA.md",
+      "MARKET-INTELLIGENCE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11210,8 +11210,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "MARKET-INTELLIGENCE.md",
-      "MARKET-DATA.md"
+      "MARKET-DATA.md",
+      "MARKET-INTELLIGENCE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/TOKEN-DISCOVERY.md",
@@ -11232,9 +11232,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "DOMAIN-MODEL.md",
+      "MARKET-DATA.md",
       "CHAIN-INTELLIGENCE.md",
-      "MARKET-DATA.md"
+      "DOMAIN-MODEL.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11264,9 +11264,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "DOMAIN-MODEL.md",
+      "MARKET-DATA.md",
       "CHAIN-INTELLIGENCE.md",
-      "MARKET-DATA.md"
+      "DOMAIN-MODEL.md"
     ],
     "version_history": [],
     "canonical_source": "docs/TOKEN-INTELLIGENCE.md",
@@ -11287,11 +11287,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
-      "PORTFOLIO-MANAGEMENT.md",
-      "DATABASE-SCHEMA.md",
+      "MARKET-DATA.md",
       "ASSET-MANAGEMENT.md",
-      "MARKET-DATA.md"
+      "PORTFOLIO-MANAGEMENT.md",
+      "WALLET-MANAGEMENT.md",
+      "DATABASE-SCHEMA.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11307,11 +11307,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
-      "PORTFOLIO-MANAGEMENT.md",
-      "DATABASE-SCHEMA.md",
+      "MARKET-DATA.md",
       "ASSET-MANAGEMENT.md",
-      "MARKET-DATA.md"
+      "PORTFOLIO-MANAGEMENT.md",
+      "WALLET-MANAGEMENT.md",
+      "DATABASE-SCHEMA.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -11336,11 +11336,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RESOURCE-BUDGET-SPECIFICATION.md",
-      "TRUST-BOUNDARIES.md",
       "DOCUMENTATION-MAP.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md"
+      "MODULE-OWNERSHIP-MATRIX.md",
+      "FAILURE-RECOVERY-MATRIX.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md",
+      "PROMPT-LIFECYCLE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11356,15 +11356,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RESOURCE-BUDGET-SPECIFICATION.md",
-      "TRUST-BOUNDARIES.md",
       "DOCUMENTATION-MAP.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
-      "AI-TOOL-INVOCATION-CONTRACT.md",
       "MODULE-OWNERSHIP-MATRIX.md",
+      "FAILURE-RECOVERY-MATRIX.md",
+      "AI-TOOL-INVOCATION-CONTRACT.md",
       "PROMPT-LIFECYCLE.md",
-      "FAILURE-RECOVERY-MATRIX.md"
+      "CONFIGURATION-REFERENCE.md",
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "TRUST-BOUNDARIES.md",
+      "RESOURCE-BUDGET-SPECIFICATION.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -11391,9 +11391,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "EXPLAINABILITY.md",
       "GOVERNANCE-EXPLAINABILITY.md",
-      "DECISION-LEDGER.md",
-      "EXPLAINABILITY.md"
+      "DECISION-LEDGER.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11409,9 +11409,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "EXPLAINABILITY.md",
       "GOVERNANCE-EXPLAINABILITY.md",
-      "DECISION-LEDGER.md",
-      "EXPLAINABILITY.md"
+      "DECISION-LEDGER.md"
     ],
     "version_history": [],
     "canonical_source": "docs/TRADE-EXPLAINER.md",
@@ -11432,11 +11432,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WALLET-MANAGEMENT.md",
-      "GAS-OPTIMISATION.md",
-      "ROUTE-OPTIMIZATION.md",
-      "SLIPPAGE-MODEL.md",
-      "POSITION-MANAGEMENT.md"
+      "EXECUTION-ENGINE.md",
+      "RISK-ENGINE.md",
+      "OPPORTUNITY-DETECTION.md",
+      "OPPORTUNITY-RANKING.md",
+      "OPPORTUNITY-LIFECYCLE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11452,25 +11452,25 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WALLET-MANAGEMENT.md",
-      "GAS-OPTIMISATION.md",
-      "ROUTE-OPTIMIZATION.md",
-      "SLIPPAGE-MODEL.md",
-      "POSITION-MANAGEMENT.md",
-      "ORDER-MANAGEMENT.md",
-      "CONFIGURATION-REFERENCE.md",
-      "TRANSACTION-LIFECYCLE.md",
-      "RISK-ENGINE.md",
-      "MEV-PROTECTION.md",
       "EXECUTION-ENGINE.md",
-      "OPPORTUNITY-LIFECYCLE.md",
-      "ROUTE-SCORING-MODEL.md",
-      "ARBITRAGE-WINDOW-MANAGER.md",
-      "DECISION-ENGINE.md",
-      "TRADING-LIFECYCLE.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
+      "RISK-ENGINE.md",
       "OPPORTUNITY-DETECTION.md",
       "OPPORTUNITY-RANKING.md",
+      "OPPORTUNITY-LIFECYCLE.md",
+      "ARBITRAGE-WINDOW-MANAGER.md",
+      "ROUTE-OPTIMIZATION.md",
+      "ROUTE-SCORING-MODEL.md",
+      "GAS-OPTIMISATION.md",
+      "MEV-PROTECTION.md",
+      "WALLET-MANAGEMENT.md",
+      "SLIPPAGE-MODEL.md",
+      "DECISION-ENGINE.md",
+      "TRADING-LIFECYCLE.md",
+      "TRANSACTION-LIFECYCLE.md",
+      "ORDER-MANAGEMENT.md",
+      "POSITION-MANAGEMENT.md",
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "CONFIGURATION-REFERENCE.md",
       "END-TO-END-WIRING-CONTRACT.md",
       "TRACEABILITY-MATRIX.md"
     ],
@@ -11497,9 +11497,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RISK-ENGINE.md",
       "ORCHESTRATOR.md",
       "EXECUTION-LIFECYCLE.md",
+      "RISK-ENGINE.md",
       "SIMULATION-ENGINE.md"
     ],
     "required_by": [],
@@ -11530,9 +11530,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RISK-ENGINE.md",
       "ORCHESTRATOR.md",
       "EXECUTION-LIFECYCLE.md",
+      "RISK-ENGINE.md",
       "SIMULATION-ENGINE.md"
     ],
     "version_history": [],
@@ -11557,10 +11557,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "GAS-OPTIMISATION.md",
-      "WALLET-MANAGEMENT.md",
       "EXECUTION-ENGINE.md",
-      "DATABASE-SCHEMA.md"
+      "DATABASE-SCHEMA.md",
+      "GAS-OPTIMISATION.md",
+      "WALLET-MANAGEMENT.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11579,10 +11579,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "GAS-OPTIMISATION.md",
-      "WALLET-MANAGEMENT.md",
       "EXECUTION-ENGINE.md",
-      "DATABASE-SCHEMA.md"
+      "DATABASE-SCHEMA.md",
+      "GAS-OPTIMISATION.md",
+      "WALLET-MANAGEMENT.md"
     ],
     "version_history": [],
     "canonical_source": "docs/TRANSACTION-LIFECYCLE.md",
@@ -11603,8 +11603,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RUNTIME-OPERATIONS.md",
       "USER-GUIDE.md",
+      "RUNTIME-OPERATIONS.md",
       "MONITORING-OBSERVABILITY.md"
     ],
     "required_by": [],
@@ -11621,8 +11621,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "RUNTIME-OPERATIONS.md",
       "USER-GUIDE.md",
+      "RUNTIME-OPERATIONS.md",
       "MONITORING-OBSERVABILITY.md"
     ],
     "version_history": [],
@@ -11644,11 +11644,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
       "SECURITY.md",
+      "TRACEABILITY-MATRIX.md",
+      "SECURITY-CONTRACTS.md",
       "SECRET-LIFECYCLE.md",
-      "IPC-PROTOCOL.md",
-      "PLUGIN-SANDBOX-CONTRACT.md"
+      "PERMISSION-MODEL.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11664,15 +11664,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
       "SECURITY.md",
+      "TRACEABILITY-MATRIX.md",
+      "SECURITY-CONTRACTS.md",
       "SECRET-LIFECYCLE.md",
+      "PERMISSION-MODEL.md",
       "IPC-PROTOCOL.md",
       "PLUGIN-SANDBOX-CONTRACT.md",
       "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
-      "SECURITY-CONTRACTS.md",
-      "PERMISSION-MODEL.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -11701,10 +11701,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-DESKTOP.md",
       "UI-DASHBOARD-SPEC.md",
       "DASHBOARD-WIDGETS.md",
-      "UX-GUIDELINES.md"
+      "UX-GUIDELINES.md",
+      "WINDOWS-DESKTOP.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11720,10 +11720,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
       "UI-DASHBOARD-SPEC.md",
       "DASHBOARD-WIDGETS.md",
-      "UX-GUIDELINES.md"
+      "UX-GUIDELINES.md",
+      "WINDOWS-DESKTOP.md"
     ],
     "version_history": [],
     "canonical_source": "docs/UI-COMPONENT-SPEC.md",
@@ -11744,10 +11744,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "AI-ORCHESTRATION.md",
       "DOMAIN-MODEL.md",
       "METRICS.md",
-      "HEALTHCHECKS.md"
+      "HEALTHCHECKS.md",
+      "AI-ORCHESTRATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11763,10 +11763,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "AI-ORCHESTRATION.md",
       "DOMAIN-MODEL.md",
       "METRICS.md",
-      "HEALTHCHECKS.md"
+      "HEALTHCHECKS.md",
+      "AI-ORCHESTRATION.md"
     ],
     "version_history": [],
     "canonical_source": "docs/UI-DASHBOARD-SPEC.md",
@@ -11789,8 +11789,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "ARCHITECTURE.md",
-      "APEX-OS.md"
+      "APEX-OS.md",
+      "ARCHITECTURE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11806,8 +11806,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "ARCHITECTURE.md",
-      "APEX-OS.md"
+      "APEX-OS.md",
+      "ARCHITECTURE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -11832,11 +11832,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "DASHBOARD-WIDGETS.md",
+      "TRADING-ENGINE.md",
       "RUNTIME-OPERATIONS.md",
-      "SECURITY.md",
       "AI-PIPELINE.md",
-      "UX-GUIDELINES.md"
+      "SECURITY.md",
+      "CONFIGURATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11852,14 +11852,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "DASHBOARD-WIDGETS.md",
-      "RUNTIME-OPERATIONS.md",
-      "SECURITY.md",
-      "AI-PIPELINE.md",
-      "UX-GUIDELINES.md",
-      "CONFIGURATION.md",
       "TRADING-ENGINE.md",
-      "DASHBOARD-LAYOUT.md"
+      "RUNTIME-OPERATIONS.md",
+      "AI-PIPELINE.md",
+      "SECURITY.md",
+      "CONFIGURATION.md",
+      "DASHBOARD-LAYOUT.md",
+      "DASHBOARD-WIDGETS.md",
+      "UX-GUIDELINES.md"
     ],
     "version_history": [],
     "canonical_source": "docs/USER-FLOWS.md",
@@ -11922,9 +11922,9 @@
     "outputs": [],
     "depends_on": [
       "WINDOWS-DESKTOP.md",
-      "USER-FLOWS.md",
       "UI-COMPONENT-SPEC.md",
-      "DESIGNER-PROTOCOLS.md"
+      "DESIGNER-PROTOCOLS.md",
+      "USER-FLOWS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11941,9 +11941,9 @@
     "testing": [],
     "cross_references": [
       "WINDOWS-DESKTOP.md",
-      "USER-FLOWS.md",
       "UI-COMPONENT-SPEC.md",
-      "DESIGNER-PROTOCOLS.md"
+      "DESIGNER-PROTOCOLS.md",
+      "USER-FLOWS.md"
     ],
     "version_history": [],
     "canonical_source": "docs/UX-GUIDELINES.md",
@@ -11964,11 +11964,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "IMPLEMENTATION-ROADMAP.md",
-      "MODULE-DEPENDENCY.md",
-      "API-CONTRACTS.md",
       "DATABASE-SCHEMA.md",
-      "CONFIGURATION.md"
+      "API-CONTRACTS.md",
+      "CONFIGURATION.md",
+      "IMPLEMENTATION-ROADMAP.md",
+      "MODULE-DEPENDENCY.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -11984,11 +11984,11 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "IMPLEMENTATION-ROADMAP.md",
-      "MODULE-DEPENDENCY.md",
-      "API-CONTRACTS.md",
       "DATABASE-SCHEMA.md",
-      "CONFIGURATION.md"
+      "API-CONTRACTS.md",
+      "CONFIGURATION.md",
+      "IMPLEMENTATION-ROADMAP.md",
+      "MODULE-DEPENDENCY.md"
     ],
     "version_history": [],
     "canonical_source": "docs/VERSIONING.md",
@@ -12056,10 +12056,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "SECURITY.md",
-      "TRANSACTION-LIFECYCLE.md",
       "TOKEN-REGISTRY.md",
-      "PERMISSION-MODEL.md"
+      "SECURITY.md",
+      "PERMISSION-MODEL.md",
+      "TRANSACTION-LIFECYCLE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12075,10 +12075,10 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "SECURITY.md",
-      "TRANSACTION-LIFECYCLE.md",
       "TOKEN-REGISTRY.md",
-      "PERMISSION-MODEL.md"
+      "SECURITY.md",
+      "PERMISSION-MODEL.md",
+      "TRANSACTION-LIFECYCLE.md"
     ],
     "version_history": [],
     "canonical_source": "docs/WALLET-MANAGEMENT.md",
@@ -12099,11 +12099,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "ARCHITECTURE.md",
       "WINDOWS-DESKTOP.md",
-      "WINDOWS-NOTIFICATION-INTEGRATION.md",
-      "RECOVERY-COORDINATION.md",
-      "WINDOWS-SECURITY-INTEGRATION.md",
-      "TRACEABILITY-MATRIX.md"
+      "WINDOWS-SERVICE-INTEGRATION.md",
+      "WINDOWS-NETWORK-RESILIENCE.md",
+      "WINDOWS-NOTIFICATION-INTEGRATION.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12119,21 +12119,21 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
-      "WINDOWS-NOTIFICATION-INTEGRATION.md",
-      "RECOVERY-COORDINATION.md",
-      "WINDOWS-SECURITY-INTEGRATION.md",
-      "TRACEABILITY-MATRIX.md",
       "ARCHITECTURE.md",
-      "SECRET-LIFECYCLE.md",
+      "WINDOWS-DESKTOP.md",
       "WINDOWS-SERVICE-INTEGRATION.md",
       "WINDOWS-NETWORK-RESILIENCE.md",
-      "CONFIGURATION-REFERENCE.md",
+      "WINDOWS-NOTIFICATION-INTEGRATION.md",
+      "WINDOWS-SECURITY-INTEGRATION.md",
       "WINDOWS-DEPLOYMENT.md",
+      "IPC-PROTOCOL.md",
       "DASHBOARD-LAYOUT.md",
       "WORKSPACE-MANAGER.md",
+      "RECOVERY-COORDINATION.md",
+      "SECRET-LIFECYCLE.md",
+      "CONFIGURATION-REFERENCE.md",
       "END-TO-END-WIRING-CONTRACT.md",
-      "IPC-PROTOCOL.md"
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -12159,10 +12159,10 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-SECURITY-INTEGRATION.md",
-      "BUILD-RELEASE-CICD.md",
-      "CODE-SIGNING.md",
       "DEPLOYMENT.md",
+      "BUILD-RELEASE-CICD.md",
+      "UPDATE-MANAGER.md",
+      "WINDOWS-APP-ARCHITECTURE.md",
       "WINDOWS-SERVICE-INTEGRATION.md"
     ],
     "required_by": [],
@@ -12179,15 +12179,15 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-SECURITY-INTEGRATION.md",
-      "BUILD-RELEASE-CICD.md",
-      "CODE-SIGNING.md",
       "DEPLOYMENT.md",
-      "WINDOWS-SERVICE-INTEGRATION.md",
-      "CONFIGURATION-REFERENCE.md",
+      "BUILD-RELEASE-CICD.md",
+      "UPDATE-MANAGER.md",
       "WINDOWS-APP-ARCHITECTURE.md",
+      "WINDOWS-SERVICE-INTEGRATION.md",
+      "WINDOWS-SECURITY-INTEGRATION.md",
       "SECURITY-CONTRACTS.md",
-      "UPDATE-MANAGER.md"
+      "CODE-SIGNING.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -12213,11 +12213,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-NOTIFICATION-INTEGRATION.md",
-      "CONFIGURATION-REFERENCE.md",
       "WINDOWS-APP-ARCHITECTURE.md",
-      "PERMISSION-MODEL.md",
-      "DASHBOARD-LAYOUT.md"
+      "DASHBOARD-RUNTIME.md",
+      "DASHBOARD-LAYOUT.md",
+      "WINDOWS-NOTIFICATION-INTEGRATION.md",
+      "WORKSPACE-MANAGER.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12233,14 +12233,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-NOTIFICATION-INTEGRATION.md",
-      "CONFIGURATION-REFERENCE.md",
       "WINDOWS-APP-ARCHITECTURE.md",
-      "PERMISSION-MODEL.md",
-      "DASHBOARD-LAYOUT.md",
       "DASHBOARD-RUNTIME.md",
+      "DASHBOARD-LAYOUT.md",
+      "WINDOWS-NOTIFICATION-INTEGRATION.md",
+      "WORKSPACE-MANAGER.md",
       "RECOVERY-COORDINATION.md",
-      "WORKSPACE-MANAGER.md"
+      "PERMISSION-MODEL.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -12266,11 +12266,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "PROVIDER-RESILIENCE.md",
+      "RPC-MANAGER.md",
       "AI-GATEWAY.md",
       "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
-      "RPC-MANAGER.md",
-      "CONFIGURATION-REFERENCE.md"
+      "WINDOWS-APP-ARCHITECTURE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12286,14 +12286,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "PROVIDER-RESILIENCE.md",
+      "RPC-MANAGER.md",
       "AI-GATEWAY.md",
       "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
-      "RPC-MANAGER.md",
-      "CONFIGURATION-REFERENCE.md",
       "WINDOWS-APP-ARCHITECTURE.md",
       "TRADING-ENGINE.md",
-      "PROVIDER-RESILIENCE.md"
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -12320,10 +12320,10 @@
     "outputs": [],
     "depends_on": [
       "NOTIFICATION-CENTER.md",
-      "INTERFACE-NOTIFICATION-CHANNEL.md",
+      "MONITORING-OBSERVABILITY.md",
       "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
-      "WINDOWS-APP-ARCHITECTURE.md"
+      "INTERFACE-NOTIFICATION-CHANNEL.md",
+      "PERMISSION-MODEL.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12340,12 +12340,12 @@
     "testing": [],
     "cross_references": [
       "NOTIFICATION-CENTER.md",
-      "INTERFACE-NOTIFICATION-CHANNEL.md",
-      "EVENT-OWNERSHIP-MATRIX.md",
-      "CONFIGURATION-REFERENCE.md",
-      "WINDOWS-APP-ARCHITECTURE.md",
       "MONITORING-OBSERVABILITY.md",
-      "PERMISSION-MODEL.md"
+      "EVENT-OWNERSHIP-MATRIX.md",
+      "INTERFACE-NOTIFICATION-CHANNEL.md",
+      "PERMISSION-MODEL.md",
+      "WINDOWS-APP-ARCHITECTURE.md",
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -12371,11 +12371,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRUST-BOUNDARIES.md",
       "SECURITY.md",
+      "SECURITY-CONTRACTS.md",
       "SECRET-LIFECYCLE.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
-      "IPC-PROTOCOL.md"
+      "PERMISSION-MODEL.md",
+      "TRUST-BOUNDARIES.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12391,17 +12391,17 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRUST-BOUNDARIES.md",
       "SECURITY.md",
-      "SECRET-LIFECYCLE.md",
-      "PLUGIN-SANDBOX-CONTRACT.md",
-      "IPC-PROTOCOL.md",
-      "CODE-SIGNING.md",
-      "CONFIGURATION-REFERENCE.md",
       "SECURITY-CONTRACTS.md",
+      "SECRET-LIFECYCLE.md",
+      "PERMISSION-MODEL.md",
+      "TRUST-BOUNDARIES.md",
+      "PLUGIN-SANDBOX-CONTRACT.md",
+      "CODE-SIGNING.md",
+      "IPC-PROTOCOL.md",
       "WINDOWS-DEPLOYMENT.md",
       "WINDOWS-APP-ARCHITECTURE.md",
-      "PERMISSION-MODEL.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -12427,11 +12427,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "TRACEABILITY-MATRIX.md",
       "SERVICE-LIFECYCLE.md",
-      "IPC-PROTOCOL.md",
-      "SHUTDOWN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md"
+      "SERVICE-STATE-MACHINE.md",
+      "WINDOWS-APP-ARCHITECTURE.md",
+      "RECOVERY-COORDINATION.md",
+      "SHUTDOWN-LIFECYCLE.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12447,14 +12447,14 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "TRACEABILITY-MATRIX.md",
       "SERVICE-LIFECYCLE.md",
-      "IPC-PROTOCOL.md",
-      "SHUTDOWN-LIFECYCLE.md",
-      "CONFIGURATION-REFERENCE.md",
-      "WINDOWS-APP-ARCHITECTURE.md",
       "SERVICE-STATE-MACHINE.md",
-      "RECOVERY-COORDINATION.md"
+      "WINDOWS-APP-ARCHITECTURE.md",
+      "RECOVERY-COORDINATION.md",
+      "SHUTDOWN-LIFECYCLE.md",
+      "IPC-PROTOCOL.md",
+      "CONFIGURATION-REFERENCE.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -12488,9 +12488,9 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
+      "RUNTIME-OPERATIONS.md",
       "QUEUE-MANAGEMENT.md",
       "RECOVERY-AND-FAILOVER.md",
-      "RUNTIME-OPERATIONS.md",
       "MONITORING-OBSERVABILITY.md"
     ],
     "required_by": [],
@@ -12507,9 +12507,9 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "RUNTIME-OPERATIONS.md",
       "QUEUE-MANAGEMENT.md",
       "RECOVERY-AND-FAILOVER.md",
-      "RUNTIME-OPERATIONS.md",
       "MONITORING-OBSERVABILITY.md"
     ],
     "version_history": [],
@@ -12531,11 +12531,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "PERFORMANCE-SLOS.md",
-      "RESOURCE-BUDGET-SPECIFICATION.md",
-      "WORKER-STATE-MACHINE.md",
-      "TRACEABILITY-MATRIX.md",
-      "WORKER-ARCHITECTURE.md"
+      "THREADING-MODEL.md",
+      "CONCURRENCY-MODEL.md",
+      "TASK-SCHEDULER.md",
+      "ORCHESTRATOR.md",
+      "PERFORMANCE-SLOS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12551,17 +12551,17 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "PERFORMANCE-SLOS.md",
-      "RESOURCE-BUDGET-SPECIFICATION.md",
-      "WORKER-STATE-MACHINE.md",
-      "TRACEABILITY-MATRIX.md",
-      "WORKER-ARCHITECTURE.md",
-      "TASK-SCHEDULER.md",
-      "CONFIGURATION-REFERENCE.md",
-      "CONCURRENCY-MODEL.md",
       "THREADING-MODEL.md",
+      "CONCURRENCY-MODEL.md",
+      "TASK-SCHEDULER.md",
       "ORCHESTRATOR.md",
-      "END-TO-END-WIRING-CONTRACT.md"
+      "PERFORMANCE-SLOS.md",
+      "WORKER-STATE-MACHINE.md",
+      "WORKER-ARCHITECTURE.md",
+      "RESOURCE-BUDGET-SPECIFICATION.md",
+      "CONFIGURATION-REFERENCE.md",
+      "END-TO-END-WIRING-CONTRACT.md",
+      "TRACEABILITY-MATRIX.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -12586,11 +12586,11 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "RUNTIME-OPERATIONS.md",
-      "TRACEABILITY-MATRIX.md",
-      "WORKER-ARCHITECTURE.md",
       "WORKER-POOL.md",
-      "CONFIGURATION-REFERENCE.md"
+      "WORKER-ARCHITECTURE.md",
+      "THREADING-MODEL.md",
+      "CONCURRENCY-MODEL.md",
+      "RUNTIME-OPERATIONS.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12606,13 +12606,13 @@
     "validation": [],
     "testing": [],
     "cross_references": [
+      "WORKER-POOL.md",
+      "WORKER-ARCHITECTURE.md",
+      "THREADING-MODEL.md",
+      "CONCURRENCY-MODEL.md",
       "RUNTIME-OPERATIONS.md",
       "TRACEABILITY-MATRIX.md",
-      "WORKER-ARCHITECTURE.md",
-      "WORKER-POOL.md",
-      "CONFIGURATION-REFERENCE.md",
-      "CONCURRENCY-MODEL.md",
-      "THREADING-MODEL.md"
+      "CONFIGURATION-REFERENCE.md"
     ],
     "version_history": [
       "| Version | Date | Changes | Author |",
@@ -12640,8 +12640,8 @@
     "depends_on": [
       "EVENT-BUS.md",
       "POLICY-ENGINE.md",
-      "UI-DASHBOARD-SPEC.md",
-      "ORCHESTRATOR.md"
+      "ORCHESTRATOR.md",
+      "UI-DASHBOARD-SPEC.md"
     ],
     "required_by": [],
     "interfaces": [],
@@ -12671,8 +12671,8 @@
     "cross_references": [
       "EVENT-BUS.md",
       "POLICY-ENGINE.md",
-      "UI-DASHBOARD-SPEC.md",
-      "ORCHESTRATOR.md"
+      "ORCHESTRATOR.md",
+      "UI-DASHBOARD-SPEC.md"
     ],
     "version_history": [],
     "canonical_source": "docs/WORKFLOW-BUILDER.md",
@@ -12693,8 +12693,8 @@
     "inputs": [],
     "outputs": [],
     "depends_on": [
-      "WINDOWS-DESKTOP.md",
       "DASHBOARD-WORKSPACES.md",
+      "WINDOWS-DESKTOP.md",
       "CONFIGURATION-PROFILES.md"
     ],
     "required_by": [],
@@ -12719,8 +12719,8 @@
     "validation": [],
     "testing": [],
     "cross_references": [
-      "WINDOWS-DESKTOP.md",
       "DASHBOARD-WORKSPACES.md",
+      "WINDOWS-DESKTOP.md",
       "CONFIGURATION-PROFILES.md"
     ],
     "version_history": [],
