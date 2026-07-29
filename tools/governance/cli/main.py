@@ -270,7 +270,44 @@ def run(
         })
     store.upsert_graphs(graph_stats_for_db)
     avg_completeness_value = sum(scores.values()) / len(scores) if scores else 0.0
-    store.upsert_metrics({"avg_completeness": avg_completeness_value}, computed_at=_db_timestamp, commit_hash=_commit)
+
+    # WS8: the 10 metrics frozen in metrics_specification.json, computed
+    # from data already gathered above (docs, findings, roots, closures,
+    # dependency graph, validator registry, schemas_dir) -- no second,
+    # independent computation. Persisted alongside avg_completeness
+    # (CompletenessEngine's pre-existing, differently-scoped metric,
+    # kept for backward compatibility with existing consumers).
+    from ..metrics.metrics_specification_engine import compute_all_metrics
+    from ..validator.registry import list_validators as _list_validators_for_metrics
+    _catalogued_ids = [v.id for v in _list_validators_for_metrics()]
+    # `apex-gov run` itself only executes GovernanceValidator + the 14
+    # category validators (both wired into this command above); the 5
+    # architecture-test validators are executed separately (via
+    # `apex-gov evidence`/`apex-gov freeze`, which call
+    # run_all_validators()), not by `run` itself. Validator Coverage
+    # therefore reflects what THIS command executed, not the full
+    # registry -- an honest, narrower measurement rather than
+    # overclaiming architecture-test execution that did not happen in
+    # this invocation.
+    _executed_ids = {
+        v.id for v in _list_validators_for_metrics()
+        if v.layer in ("in-engine", "category")
+    }
+    ten_metrics = compute_all_metrics(
+        docs=docs,
+        graph=graph_builder.dependency_graph,
+        root_paths=root_paths,
+        closures_by_root=all_closures,
+        findings_by_path=findings_by_path,
+        catalogued_validator_ids=_catalogued_ids,
+        executed_validator_ids=_executed_ids,
+        schemas_dir=schemas_dir,
+    )
+    all_metrics_to_store = dict(ten_metrics)
+    all_metrics_to_store["avg_completeness"] = avg_completeness_value
+    store.upsert_metrics(all_metrics_to_store, computed_at=_db_timestamp, commit_hash=_commit)
+    metrics_report_path = export_dir / "metrics_specification_report.json"
+    metrics_report_path.write_text(json.dumps({"metrics": ten_metrics, "avg_completeness": avg_completeness_value}, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     store.insert_commit(_commit, _db_timestamp, len(docs), len(roots))
 
     progress.update_programme(

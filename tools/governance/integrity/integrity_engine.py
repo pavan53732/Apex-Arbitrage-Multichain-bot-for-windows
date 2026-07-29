@@ -577,7 +577,43 @@ class IntegrityEngine:
         if completeness is None or not isinstance(completeness, (int, float)) or not (0.0 <= completeness <= 1.0):
             self._record("metrics", "FAIL", f"avg_completeness is not a valid float in [0, 1]: {completeness!r}")
             return
-        self._record("metrics", "PASS", f"avg_completeness = {completeness:.4f} (valid range)", {"avg_completeness": completeness})
+
+        # WS8: verify all 10 Phase-0-frozen metrics are present in the
+        # live database, each a valid float in [0, 1] -- not just the
+        # pre-existing avg_completeness check above.
+        db_path = self.repo_root / self.CANONICAL_DB
+        expected_metric_names = {
+            "Repository Completeness", "Closure Completeness", "Validator Coverage",
+            "Reference Integrity", "Ownership Integrity", "Graph Integrity",
+            "Security Coverage", "Schema Coverage", "Interface Coverage", "Event Coverage",
+        }
+        try:
+            conn = sqlite3.connect(str(db_path))
+            cur = conn.cursor()
+            cur.execute("SELECT metric_name, value FROM metrics")
+            live_metrics = dict(cur.fetchall())
+            conn.close()
+        except Exception as exc:
+            self._record("metrics", "FAIL", f"could not query metrics table: {exc}")
+            return
+
+        missing = expected_metric_names - set(live_metrics.keys())
+        if missing:
+            self._record("metrics", "FAIL", f"missing frozen metric(s) in database: {sorted(missing)}")
+            return
+        invalid = {
+            name: val for name, val in live_metrics.items()
+            if name in expected_metric_names and not (isinstance(val, (int, float)) and 0.0 <= val <= 1.0)
+        }
+        if invalid:
+            self._record("metrics", "FAIL", f"metric(s) out of valid [0,1] range: {invalid}")
+            return
+
+        self._record(
+            "metrics", "PASS",
+            f"avg_completeness = {completeness:.4f}; all 10 Phase-0-frozen metrics present and valid",
+            {"avg_completeness": completeness, "metrics": {k: v for k, v in live_metrics.items() if k in expected_metric_names}},
+        )
 
     def check_repository(self) -> None:
         status = self._run(["git", "status", "--short"])

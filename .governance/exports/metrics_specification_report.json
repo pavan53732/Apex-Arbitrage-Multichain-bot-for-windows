@@ -1,0 +1,15 @@
+{
+  "avg_completeness": 0.2234985231375123,
+  "metrics": {
+    "Closure Completeness": 1.0,
+    "Event Coverage": 1.0,
+    "Graph Integrity": 0.995444,
+    "Interface Coverage": 1.0,
+    "Ownership Integrity": 1.0,
+    "Reference Integrity": 0.996111,
+    "Repository Completeness": 0.942238,
+    "Schema Coverage": 1.0,
+    "Security Coverage": 0.0,
+    "Validator Coverage": 0.782609
+  }
+}
