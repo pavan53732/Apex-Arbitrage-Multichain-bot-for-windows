@@ -16,6 +16,7 @@ from ..closure.closure_engine import BehaviouralRootDetector, ClosureEngine
 from ..closure.root_taxonomy import build_tier_report
 from ..closure.root_registry import build_registry, load_lifecycle_overrides, save_registry
 from ..closure.closure_artefacts import write_all_root_artefacts
+from ..validator.category_suite import run_category_validators, save_category_validator_report
 from ..validator.governance_validator import GovernanceValidator
 from ..metrics.metrics_engine import CompletenessEngine
 from ..storage.sqlite_store import SqliteStore
@@ -150,6 +151,37 @@ def run(
         )
         closure_artefact_summaries.append(summary)
 
+    # WS3: 14 category validators (validator/<category>/checks.py),
+    # orchestrated against the single canonical pipeline's already-
+    # computed inputs (docs, dependency graph, root paths, closures).
+    # Produces its own evidence file, distinct from GovernanceValidator's
+    # findings and architecture-tests' stdout-only output.
+    schemas_glob = cfg.get("schemas_glob")
+    schemas_dir = None
+    if schemas_glob:
+        schemas_dir = (repo_root / Path(schemas_glob).parent) if "*" in schemas_glob else (repo_root / schemas_glob)
+    freeze_dir = repo_root / ".governance" / "freeze"
+    freeze_records = []
+    if freeze_dir.exists():
+        for fpath in sorted(freeze_dir.glob("*.json")):
+            try:
+                record = json.loads(fpath.read_text(encoding="utf-8"))
+                record["_source_path"] = str(fpath.relative_to(repo_root))
+                freeze_records.append(record)
+            except (json.JSONDecodeError, OSError):
+                continue
+    category_report = run_category_validators(
+        docs=docs,
+        graph=graph_builder.dependency_graph,
+        root_paths=root_paths,
+        closures_by_root=all_closures,
+        schemas_dir=schemas_dir,
+        freeze_records=freeze_records,
+        repo_root=repo_root,
+    )
+    category_report_path = export_dir / "category_validator_findings.json"
+    save_category_validator_report(category_report, category_report_path)
+
     # Sanitize and export graphs
     graphs_dir.mkdir(parents=True, exist_ok=True)
     import networkx as nx
@@ -180,6 +212,8 @@ def run(
         "behavioural_root_tiers_assigned": len(tier_report["root_tiers"]),
         "closure_artefacts_written": len(closure_artefact_summaries) * 5,
         "roots_with_full_artefact_set": len(closure_artefact_summaries),
+        "category_validators_executed": category_report["total_categories"],
+        "category_validator_findings": category_report["total_findings"],
     }
     console.print(json.dumps(output, indent=2))
 

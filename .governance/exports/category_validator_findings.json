@@ -1,0 +1,577 @@
+{
+  "catalogue_id_to_category": {
+    "CONFIG-001": "configuration",
+    "DEPENDENCY-001": "dependency",
+    "DEPENDENCY-002": "dependency",
+    "EVENT-001": "event",
+    "EVENT-002": "event",
+    "FREEZE-001": "freeze",
+    "GRAPH-001": "graph",
+    "INTERFACE-001": "interface",
+    "OWNERSHIP-001": "ownership",
+    "RECOVERY-001": "recovery",
+    "SCHEMA-001": "schema",
+    "SCHEMA-002": "schema",
+    "SECURITY-001": "security",
+    "STATE-001": "state_machine"
+  },
+  "categories_executed": [
+    "ownership",
+    "dependency",
+    "event",
+    "schema",
+    "interface",
+    "state_machine",
+    "recovery",
+    "security",
+    "configuration",
+    "graph",
+    "freeze",
+    "algorithm",
+    "metadata",
+    "closure"
+  ],
+  "finding_counts_by_category": {
+    "algorithm": 10,
+    "closure": 0,
+    "configuration": 0,
+    "dependency": 4,
+    "event": 0,
+    "freeze": 0,
+    "graph": 0,
+    "interface": 0,
+    "metadata": 0,
+    "ownership": 0,
+    "recovery": 33,
+    "schema": 0,
+    "security": 13,
+    "state_machine": 12
+  },
+  "findings_by_category": {
+    "algorithm": [
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/AI-PIPELINE.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      },
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/AI-PROVIDER-MANAGER.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      },
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/CHAIN-INTELLIGENCE.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      },
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/MARKET-INTELLIGENCE.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      },
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/RISK-ENGINE.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      },
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/ROUTE-OPTIMIZATION.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      },
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/ROUTE-SCORING-MODEL.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      },
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/ROUTING-ENGINE.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      },
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/TOKEN-INTELLIGENCE.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      },
+      {
+        "message": "Purpose/scope claims algorithmic content (scoring/formula/routing logic) but declares no Validation section",
+        "path": "docs/TRADING-ENGINE.md",
+        "rule": "ALGORITHM_HAS_VALIDATION_CRITERIA",
+        "severity": "MEDIUM",
+        "validator_id": "ALGORITHM-001"
+      }
+    ],
+    "closure": [],
+    "configuration": [],
+    "dependency": [
+      {
+        "message": "depends_on references non-existent document: SIGNING-POLICY.md",
+        "path": "docs/APP-BUILDER-WORKFLOW.md",
+        "rule": "DEPENDENCY_TARGET_EXISTS",
+        "severity": "MEDIUM",
+        "validator_id": "DEPENDENCY-001"
+      },
+      {
+        "message": "depends_on references non-existent document: RELEASE-PROCESS.md",
+        "path": "docs/CODE-SIGNING.md",
+        "rule": "DEPENDENCY_TARGET_EXISTS",
+        "severity": "MEDIUM",
+        "validator_id": "DEPENDENCY-001"
+      },
+      {
+        "message": "depends_on references non-existent document: LOCK-ORDER.md",
+        "path": "docs/CONCURRENCY-MODEL.md",
+        "rule": "DEPENDENCY_TARGET_EXISTS",
+        "severity": "MEDIUM",
+        "validator_id": "DEPENDENCY-001"
+      },
+      {
+        "message": "depends_on references non-existent document: EVENT-SCHEMA-REGISTRY.md",
+        "path": "docs/EVENT-CATALOG.md",
+        "rule": "DEPENDENCY_TARGET_EXISTS",
+        "severity": "MEDIUM",
+        "validator_id": "DEPENDENCY-001"
+      }
+    ],
+    "event": [],
+    "freeze": [],
+    "graph": [],
+    "interface": [],
+    "metadata": [],
+    "ownership": [],
+    "recovery": [
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/AI-ORCHESTRATION.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/AI-PIPELINE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/AI-PROVIDER-MANAGER.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/BOOTSTRAP-SEQUENCE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/CACHE-MANAGER.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/CHAIN-INTEGRATION.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/CONFIGURATION.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/DASHBOARD-RUNTIME.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/DASHBOARD-WIDGETS.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/DASHBOARD-WORKSPACES.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/DECISION-ENGINE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/DEX-INTEGRATION.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/DIAGNOSTICS.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/ENGINE-STATE-MACHINE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/EVENT-BUS.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/EXECUTION-ENGINE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/IPC-PROTOCOL.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/ORCHESTRATOR.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/PLUGIN-LIFECYCLE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/PLUGIN-SDK.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/POLICY-ENGINE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/RISK-ENGINE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/ROUTING-ENGINE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/RPC-MANAGER.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/RUNTIME-OPERATIONS.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/SECURITY.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/SIMULATION-ENGINE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/TASK-SCHEDULER.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/TRADING-ENGINE.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/UPDATE-MANAGER.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/WINDOWS-SECURITY-INTEGRATION.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/WINDOWS-SERVICE-INTEGRATION.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      },
+      {
+        "message": "Behavioural root has no recovery or failure-behaviour content",
+        "path": "docs/WORKER-POOL.md",
+        "rule": "ROOT_HAS_RECOVERY_STORY",
+        "severity": "MEDIUM",
+        "validator_id": "RECOVERY-001"
+      }
+    ],
+    "schema": [],
+    "security": [
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/BOOTSTRAP-SEQUENCE.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/CACHE-MANAGER.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/CONFIGURATION.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/DASHBOARD-RUNTIME.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/DECISION-ENGINE.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/IPC-PROTOCOL.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/ORCHESTRATOR.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/PLUGIN-LIFECYCLE.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/PLUGIN-SDK.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/RPC-MANAGER.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/SECURITY.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/UPDATE-MANAGER.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      },
+      {
+        "message": "Purpose/scope mentions security-sensitive concerns but declares no explicit Security section",
+        "path": "docs/WINDOWS-SECURITY-INTEGRATION.md",
+        "rule": "SECURITY_SENSITIVE_ROOT_HAS_SECURITY_SECTION",
+        "severity": "MEDIUM",
+        "validator_id": "SECURITY-001"
+      }
+    ],
+    "state_machine": [
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/AI-KNOWLEDGE-INDEX.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/AI-PLANNER.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/AI-REFLECTION.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/APEX-OS.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/CONTRACT-MANAGEMENT.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/DECISION-ENGINE.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/OPPORTUNITY-LIFECYCLE.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/ORDER-MANAGEMENT.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/SERVICE-LIFECYCLE.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/STRATEGIES.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/WALLET-COMMAND-CENTER.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      },
+      {
+        "message": "Declares state machine content but no recovery or failure-behaviour section",
+        "path": "docs/WORKSPACE-MANAGER.md",
+        "rule": "STATE_MACHINE_HAS_RECOVERY_PATH",
+        "severity": "MEDIUM",
+        "validator_id": "STATE-001"
+      }
+    ]
+  },
+  "total_categories": 14,
+  "total_findings": 72
+}
