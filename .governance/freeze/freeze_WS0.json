@@ -1,23 +1,23 @@
 {
   "identity": {
-    "freeze_id": "c9442e8f1b97e3c9",
+    "freeze_id": "802bc168f5ef7efd",
     "workstream_id": "WS0",
     "workstream_version": "3.0.0",
-    "repository_version": "43dd03928d7240ebaf2314bffe4734d36ffb24ee",
+    "repository_version": "3a679c03a91c4e7a7f5e1c7cff8e658cc373d680",
     "governance_platform_version": "1.0.0",
     "schema_version": "3.0.0",
     "producer": "tools.governance.freeze.freeze_engine.FreezeEngine"
   },
   "repository": {
-    "repository_tree_hash": "e609c5671fc31791419452a19771b04bc57632a1",
+    "repository_tree_hash": "69832e4b01be046731e1abe669c327a7d7bd3f24",
     "git_branch": "main",
-    "commit_hash": "43dd03928d7240ebaf2314bffe4734d36ffb24ee",
+    "commit_hash": "3a679c03a91c4e7a7f5e1c7cff8e658cc373d680",
     "working_tree_status": "dirty"
   },
   "execution": {
-    "timestamp": "2026-07-29T20:38:01.904866+00:00",
+    "timestamp": "2026-07-29T21:07:36.148566+00:00",
     "runtime_command": "apex-gov run",
-    "execution_time_ms": 2255.758
+    "execution_time_ms": 2220.861
   },
   "canonical_output": {
     "documents_indexed": 277,
@@ -25,7 +25,7 @@
     "validation_findings": 22,
     "closures_computed": 35,
     "avg_completeness": 0.2234985231375123,
-    "graph_nodes": 277,
+    "graph_nodes": 281,
     "graph_edges": 878,
     "behavioural_root_registry_valid": true,
     "behavioural_root_tiers_assigned": 35,
@@ -57,13 +57,13 @@
     "all_pass": true
   },
   "evidence": {
-    "evidence_record_hash": "6eee12110cea2f20d5bd0c94a88169ea5086a5c47eae80b40f3c36b2a4bcbd3f",
+    "evidence_record_hash": "99f8b6e2730afde943cde8865adf28e3d1f825f6183c8e09ede054272bd60bbc",
     "artefact_hashes": {
       ".governance/exports/documents.json": "72ad23f462d8fa3c18e1c6dcba019a4364526f0562ab762240e61c75d56a3367",
-      ".governance/governance.db": "fd4765da8d0a56a58305295d7ff55fc865668def326b60b6a7fbdbc8de951164",
+      ".governance/governance.db": "dd7b221d9ca010d3f4debba07fee823aca3d9adf331df17841f9f28ddf224f4a",
       ".governance/graphs/config_graph.graphml": "da2abed38e9850390803e472e5e5a2db526e2951e4ad7022cbf5a09b0f92d5e1",
       ".governance/graphs/dependency_graph.graphml": "1a27fe5b26191585684336db8ad61a57594745af46a089f9bc398c1e302fcc79",
-      ".governance/graphs/document_graph.graphml": "15545162fd5883c5b7fbf925d3b5fa1e2224e33f5bff2fb4d468435babc91a50",
+      ".governance/graphs/document_graph.graphml": "b21ea80c1928fa79fcd21d2a154f237ef9ed921ad65a35967e00af988491840a",
       ".governance/graphs/event_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
       ".governance/graphs/interface_graph.graphml": "12d90214d80b4559b6ccb0a2075d9c24e7a8b2ab70dd53322f8c5e07bb3c4c65",
       ".governance/graphs/ownership_graph.graphml": "914366dd96fb6be4f810d2011017aa70ae03ec3de353f29124ca5dd1fbb79931",
@@ -83,7 +83,7 @@
       "algorithm_graph.graphml": "d09bb8a26d85465bf04db2fe8f66bbc6a61d5d6e352106edaa7a7f3b8cba3c28",
       "config_graph.graphml": "da2abed38e9850390803e472e5e5a2db526e2951e4ad7022cbf5a09b0f92d5e1",
       "dependency_graph.graphml": "1a27fe5b26191585684336db8ad61a57594745af46a089f9bc398c1e302fcc79",
-      "document_graph.graphml": "15545162fd5883c5b7fbf925d3b5fa1e2224e33f5bff2fb4d468435babc91a50",
+      "document_graph.graphml": "b21ea80c1928fa79fcd21d2a154f237ef9ed921ad65a35967e00af988491840a",
       "event_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
       "interface_graph.graphml": "12d90214d80b4559b6ccb0a2075d9c24e7a8b2ab70dd53322f8c5e07bb3c4c65",
       "ownership_graph.graphml": "914366dd96fb6be4f810d2011017aa70ae03ec3de353f29124ca5dd1fbb79931",
@@ -96,19 +96,19 @@
       "state_machine_graph.graphml": "9644eee6f22385efccabfb0b2eef0a1a324ae760de70af7bd2e1bcc4fb0d1dd2",
       "validation_graph.graphml": "9be7e0189c82c693ce18a687881138a3719d2b2f5e61d07feef6ae9d2af96b03"
     },
-    "combined_graph_hash": "5c1085e186b733acb2ef0346a92dfa944c20910b9f8e16fd375227c831f6c88a",
+    "combined_graph_hash": "f19e416dac561589bb2998f310c720d430a7a9c674fd8952bbde236bc1df4611",
     "graph_count": 15
   },
   "database": {
     "canonical_database_path": ".governance/governance.db",
-    "database_hash": "fd4765da8d0a56a58305295d7ff55fc865668def326b60b6a7fbdbc8de951164"
+    "database_hash": "dd7b221d9ca010d3f4debba07fee823aca3d9adf331df17841f9f28ddf224f4a"
   },
   "configuration": {
     "configuration_hash": "aba037ea5a4d7effe9c3f28fbfe927eb3f1d97c53d8a886bfba10b2da869c5dd",
     "path": "tools/governance/config/governance.yaml"
   },
   "integrity": {
-    "integrity_checksum": "4ce84fa7008cd90fbc301f3713b884d6cd6e08277dc822dce8943d8121ddd7fa",
+    "integrity_checksum": "cebf7e1e00f18028ec04bc1ae92f3a5601b6cbcc18984b35698e28adb6f6a717",
     "computed_from": [
       "combined_graph_hash",
       "database_hash",
@@ -117,10 +117,10 @@
     ]
   },
   "freeze": {
-    "freeze_timestamp": "2026-07-29T20:38:01.904954+00:00"
+    "freeze_timestamp": "2026-07-29T21:07:36.148659+00:00"
   },
   "tamper_evidence": {
-    "signature": "e368de55c42aa39492ac357450eee445add37955e9656dbf7671afbfba464144",
+    "signature": "70a2c62ecb9371f313a02251f8fce3e2c973863f56396e7e1ca4ea2a9b7c8d6d",
     "signing_key_path": ".governance/freeze/.signing_key",
     "algorithm": "HMAC-SHA256",
     "verify_with": "tools.governance.freeze.freeze_manifest.FreezeValidator.verify"
