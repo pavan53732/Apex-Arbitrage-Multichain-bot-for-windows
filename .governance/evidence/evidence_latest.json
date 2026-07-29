@@ -11,16 +11,23 @@
   },
   "outputs": {
     "documents_indexed": 277,
-    "behavioural_roots": 28,
+    "behavioural_roots": 35,
     "validation_findings": 22,
-    "closures_computed": 28,
+    "closures_computed": 35,
     "avg_completeness": 0.2234985231375123,
     "graph_nodes": 277,
-    "graph_edges": 878
+    "graph_edges": 878,
+    "behavioural_root_registry_valid": true,
+    "behavioural_root_tiers_assigned": 35,
+    "closure_artefacts_written": 175,
+    "roots_with_full_artefact_set": 35,
+    "category_validators_executed": 14,
+    "category_validator_findings": 72,
+    "database_schema_version": 1
   },
   "hashes": {
     ".governance/exports/documents.json": "72ad23f462d8fa3c18e1c6dcba019a4364526f0562ab762240e61c75d56a3367",
-    ".governance/governance.db": "2c2366ad2f90a497a039fb555fc03d9c0fdcefab19270a6d8442f959e1c71e3d",
+    ".governance/governance.db": "5a6ce3c5e7b5835cebd000ca739d8c726af71548a149fe2265f003e4d5a371db",
     ".governance/graphs/config_graph.graphml": "da2abed38e9850390803e472e5e5a2db526e2951e4ad7022cbf5a09b0f92d5e1",
     ".governance/graphs/dependency_graph.graphml": "1a27fe5b26191585684336db8ad61a57594745af46a089f9bc398c1e302fcc79",
     ".governance/graphs/document_graph.graphml": "15545162fd5883c5b7fbf925d3b5fa1e2224e33f5bff2fb4d468435babc91a50",
@@ -28,9 +35,16 @@
     ".governance/graphs/interface_graph.graphml": "12d90214d80b4559b6ccb0a2075d9c24e7a8b2ab70dd53322f8c5e07bb3c4c65",
     ".governance/graphs/ownership_graph.graphml": "914366dd96fb6be4f810d2011017aa70ae03ec3de353f29124ca5dd1fbb79931",
     ".governance/graphs/schema_graph.graphml": "724647f298b5441c9c141a7c78a3d380e3aedc83b8b350c8e0e738896dcbe0cf",
-    ".governance/graphs/state_machine_graph.graphml": "9644eee6f22385efccabfb0b2eef0a1a324ae760de70af7bd2e1bcc4fb0d1dd2"
+    ".governance/graphs/state_machine_graph.graphml": "9644eee6f22385efccabfb0b2eef0a1a324ae760de70af7bd2e1bcc4fb0d1dd2",
+    ".governance/graphs/security_graph.graphml": "8a2e363e2253037852fb62e8d3eec89bae6cb7020ee65b11e5e557994062875a",
+    ".governance/graphs/recovery_graph.graphml": "3a5f084dd798cd8f95022b7debf8490c8832f24c05c3837b030d9f6429e095ad",
+    ".governance/graphs/validation_graph.graphml": "9be7e0189c82c693ce18a687881138a3719d2b2f5e61d07feef6ae9d2af96b03",
+    ".governance/graphs/service_graph.graphml": "eaa6d71e989fd81028d6f71fa598fce37d9dd3d63a0460304478f5198a761cc9",
+    ".governance/graphs/plugin_graph.graphml": "040d6dedb8cf416a7eed7dc44fa1b65122a8eaeb793a2a3dd8bee7ee7ca6aab4",
+    ".governance/graphs/runtime_graph.graphml": "60484b0270c9cead8970939066d1f6fea68d39037ebca02f2c74b32ae0162588",
+    ".governance/graphs/algorithm_graph.graphml": "d09bb8a26d85465bf04db2fe8f66bbc6a61d5d6e352106edaa7a7f3b8cba3c28"
   },
-  "execution_time_ms": 1439.314,
+  "execution_time_ms": 2314.791,
   "validator_ids": [
     "governance_validator.missing_owners",
     "governance_validator.duplicate_owners",
@@ -40,7 +54,21 @@
     "architecture_test.validate_contracts",
     "architecture_test.validate_cross_references",
     "architecture_test.validate_ownership",
-    "architecture_test.validate_traceability"
+    "architecture_test.validate_traceability",
+    "OWNERSHIP-001",
+    "DEPENDENCY-001",
+    "DEPENDENCY-002",
+    "EVENT-001",
+    "EVENT-002",
+    "SCHEMA-001",
+    "SCHEMA-002",
+    "INTERFACE-001",
+    "STATE-001",
+    "RECOVERY-001",
+    "SECURITY-001",
+    "CONFIG-001",
+    "GRAPH-001",
+    "FREEZE-001"
   ],
   "validator_results": {
     "governance_validator.missing_owners": "PASS",
@@ -48,15 +76,16 @@
     "architecture_test.validate_contracts": "PASS",
     "architecture_test.validate_cross_references": "PASS",
     "architecture_test.validate_ownership": "PASS",
-    "architecture_test.validate_traceability": "PASS"
+    "architecture_test.validate_traceability": "PASS",
+    "OWNERSHIP-001": "PASS"
   },
-  "commit": "4e615eb96c0903a7bc5b2393a16d653c9ff51cb9",
-  "repository_hash": "319e8f47e23166d289c360ddc8f7fce0c2bdb661",
+  "commit": "b38f4975aef85ef47efec98e85374e804093cadd",
+  "repository_hash": "f6ba9367471ec49886fa7edba8e66106cb7b350b",
   "producer": "tools.governance.evidence.evidence_engine.EvidenceEngine",
   "consumer": [
     ".governance/programme_2.5/ws0/__init__.py (WS0VerificationLayer certification)",
     "tools.governance.integrity.integrity_engine.IntegrityEngine (check_evidence)",
     ".governance/freeze/freeze_WS0.json (Freeze Framework)"
   ],
-  "timestamp": "2026-07-29T10:33:57.631705+00:00"
+  "timestamp": "2026-07-29T20:43:26.655268+00:00"
 }

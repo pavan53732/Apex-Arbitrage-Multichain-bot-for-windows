@@ -425,13 +425,23 @@ def progress(config_path: str = typer.Option("tools/governance/config/governance
     console.print(progress.data)
 
 @app.command()
-def evidence(config_path: str = typer.Option("tools/governance/config/governance.yaml")):
+def evidence(
+    config_path: str = typer.Option("tools/governance/config/governance.yaml"),
+    programme: str = typer.Option("Programme1", help="Programme1, Programme2, or Programme3 -- which structured evidence bucket this record belongs to."),
+):
     """Collect a reproducible Evidence Record (Work Item 5: Evidence Framework).
 
     Writes .governance/evidence/evidence_latest.json (overwritten each run,
-    not accumulated as timestamped files) and prints the record to stdout."""
+    kept for backward compatibility with existing consumers), AND --
+    WS7 Evidence System -- persists the same record, timestamped and
+    hashed, across all 10 structured evidence subdirectories
+    (Programme1/2/3, validators/, metrics/, graphs/, closures/,
+    hashes/, commits/, reports/), which are NEVER overwritten, making
+    evidence queryable/auditable across every historical run rather
+    than only the latest one."""
     import json as _json
     from ..evidence.evidence_engine import EvidenceEngine
+    from ..evidence.evidence_store import EvidenceStore
     cfg = load_config(config_path)
     repo_root = Path(cfg["repo_root"]).resolve()
     if not repo_root.exists() or not (repo_root / "docs").exists():
@@ -443,6 +453,8 @@ def evidence(config_path: str = typer.Option("tools/governance/config/governance
                 break
     engine = EvidenceEngine(repo_root)
     record = engine.collect_and_save(repo_root / ".governance" / "evidence" / "evidence_latest.json")
+    store = EvidenceStore(repo_root / ".governance" / "evidence")
+    store.store(record.to_dict(), record_hash=record.record_hash(), programme=programme)
     print(_json.dumps(record.to_dict(), indent=2))
 
 @app.command()

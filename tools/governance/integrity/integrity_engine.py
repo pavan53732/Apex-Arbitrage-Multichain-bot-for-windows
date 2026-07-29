@@ -538,11 +538,31 @@ class IntegrityEngine:
         if hash_count == 0:
             self._record("evidence", "FAIL", "evidence collection returned zero artefact hashes")
             return
+
+        # WS7: verify the structured, queryable Evidence Store (10
+        # subdirectories) has at least one entry -- distinguishes
+        # "evidence CAN be collected" (the check above) from "evidence
+        # HAS BEEN persisted queryably", which is the actual WS7
+        # checklist requirement ("Evidence is queryable and auditable").
+        try:
+            from ..evidence.evidence_store import EvidenceStore, STRUCTURED_SUBDIRS
+        except ImportError:
+            from governance.evidence.evidence_store import EvidenceStore, STRUCTURED_SUBDIRS  # type: ignore
+        store = EvidenceStore(self.repo_root / ".governance" / "evidence")
+        missing_dirs = [d for d in STRUCTURED_SUBDIRS if not (store.evidence_dir / d).exists()]
+        if missing_dirs:
+            self._record("evidence", "FAIL", f"structured evidence subdirectories missing: {missing_dirs}")
+            return
+        if not store.has_any_evidence():
+            self._record("evidence", "FAIL", "structured evidence store exists but has zero entries in any Programme bucket")
+            return
+
         self._record(
             "evidence", "PASS",
             f"evidence collection succeeded: {hash_count} artefact hashes, "
-            f"{len(record.validator_ids)} validators recorded, commit={record.commit[:12]}",
-            {"artefact_hash_count": hash_count, "record_hash": record.record_hash()},
+            f"{len(record.validator_ids)} validators recorded, commit={record.commit[:12]}; "
+            f"structured evidence store has {sum(store.counts().values())} total entries across {len(STRUCTURED_SUBDIRS)} subdirectories",
+            {"artefact_hash_count": hash_count, "record_hash": record.record_hash(), "evidence_store_counts": store.counts()},
         )
 
     def check_metrics(self) -> None:
