@@ -1,23 +1,23 @@
 {
   "identity": {
-    "freeze_id": "b4371d31949d8253",
+    "freeze_id": "94be23e67cd03516",
     "workstream_id": "WS0",
     "workstream_version": "3.0.0",
-    "repository_version": "017cff2ba98ab4f9044c5287bf7d34ef293d5d13",
+    "repository_version": "8caaf41711ffde22cd480356dcfdc6015f900f99",
     "governance_platform_version": "1.0.0",
     "schema_version": "3.0.0",
     "producer": "tools.governance.freeze.freeze_engine.FreezeEngine"
   },
   "repository": {
-    "repository_tree_hash": "685e815e95f47b8fd1e6dcfa2d6a7e8e97f29198",
+    "repository_tree_hash": "548ccabc97eab522bedc9a12f89c40289b70979a",
     "git_branch": "main",
-    "commit_hash": "017cff2ba98ab4f9044c5287bf7d34ef293d5d13",
+    "commit_hash": "8caaf41711ffde22cd480356dcfdc6015f900f99",
     "working_tree_status": "dirty"
   },
   "execution": {
-    "timestamp": "2026-07-29T22:24:14.665385+00:00",
+    "timestamp": "2026-07-29T22:31:19.916961+00:00",
     "runtime_command": "apex-gov run",
-    "execution_time_ms": 2161.876
+    "execution_time_ms": 2177.278
   },
   "canonical_output": {
     "documents_indexed": 277,
@@ -57,10 +57,10 @@
     "all_pass": true
   },
   "evidence": {
-    "evidence_record_hash": "25ae02ef9fbfa1132db317e3d3be425d0d53e6b49cf07eefb6a3e1f81ab2b0b5",
+    "evidence_record_hash": "c0bb1a06ed99285ccc26e59762e3d2628eda9c59906f65911c287a12468aa4e2",
     "artefact_hashes": {
       ".governance/exports/documents.json": "72ad23f462d8fa3c18e1c6dcba019a4364526f0562ab762240e61c75d56a3367",
-      ".governance/governance.db": "780a42311154c81d68241686827fd36a4de16610a793548f904516485d6f92ca",
+      ".governance/governance.db": "0c09adc0b7820319f7f945786d3be536ed12e317705ae11c8624894a27632a7e",
       ".governance/graphs/config_graph.graphml": "da2abed38e9850390803e472e5e5a2db526e2951e4ad7022cbf5a09b0f92d5e1",
       ".governance/graphs/dependency_graph.graphml": "1a27fe5b26191585684336db8ad61a57594745af46a089f9bc398c1e302fcc79",
       ".governance/graphs/document_graph.graphml": "b21ea80c1928fa79fcd21d2a154f237ef9ed921ad65a35967e00af988491840a",
@@ -101,14 +101,14 @@
   },
   "database": {
     "canonical_database_path": ".governance/governance.db",
-    "database_hash": "780a42311154c81d68241686827fd36a4de16610a793548f904516485d6f92ca"
+    "database_hash": "0c09adc0b7820319f7f945786d3be536ed12e317705ae11c8624894a27632a7e"
   },
   "configuration": {
     "configuration_hash": "aba037ea5a4d7effe9c3f28fbfe927eb3f1d97c53d8a886bfba10b2da869c5dd",
     "path": "tools/governance/config/governance.yaml"
   },
   "integrity": {
-    "integrity_checksum": "e30c7cb5a953fafe218df7508138c2aadf4ec723bfaf8df212cd1531e6a1f163",
+    "integrity_checksum": "9e7c3dfd0bfedc08c165ddb2cc7fff71ad085c5f254a0d1a4308a18e82fd1574",
     "computed_from": [
       "combined_graph_hash",
       "database_hash",
@@ -117,10 +117,10 @@
     ]
   },
   "freeze": {
-    "freeze_timestamp": "2026-07-29T22:24:14.665512+00:00"
+    "freeze_timestamp": "2026-07-29T22:31:19.917057+00:00"
   },
   "tamper_evidence": {
-    "signature": "15ee1b1f9fe90693134b6a69461faa37fb7ab57e1e6fb8ea62f44bce0b0f98b792445f872166cf8726ecd4e47fcddc12fb0ae41c5b11deb99e9fd51c5711b504",
+    "signature": "42d94579cd5e52bcdacd0abc4fce887192762e71ad4f1834a68fad93de15987da717ca02200ce676b71ef5d7c4a059b8ffc4474ce450d4894b4aba168f498f0b",
     "signing_key_path": ".governance/freeze/.signing_key",
     "public_key_path": ".governance/freeze/signing_public_key.pem",
     "algorithm": "Ed25519",
