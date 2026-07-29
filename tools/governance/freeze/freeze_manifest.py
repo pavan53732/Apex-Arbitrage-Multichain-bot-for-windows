@@ -181,6 +181,41 @@ class FreezeValidator:
     def _load_or_create_private_key(self) -> Ed25519PrivateKey:
         if self.key_path.exists():
             return Ed25519PrivateKey.from_private_bytes(self.key_path.read_bytes())
+
+        # IMPORTANT: refuse to silently mint a brand-new keypair if a
+        # public key already exists at `public_key_path`. This is
+        # exactly the fresh-clone scenario -- the committed public key
+        # belongs to whichever machine originally signed existing
+        # freeze records, and this checkout does not have that
+        # machine's private key. Silently generating a NEW keypair here
+        # (as an earlier version of this method did) would overwrite
+        # the existing, committed public key with a mismatched one,
+        # permanently invalidating every previously-signed freeze
+        # record's signature -- confirmed as a real regression via this
+        # session's own fresh-clone re-verification: running the test
+        # suite / `apex-gov run` in a fresh clone (which exercises code
+        # paths that call `sign()`, e.g. via `apex-gov freeze` in tests)
+        # silently replaced the committed signing_public_key.pem,
+        # breaking verification of the ALREADY-COMMITTED freeze record
+        # that this exact clone was supposed to be able to verify.
+        #
+        # A fresh clone should never need to SIGN a new record anyway
+        # (it has no private key, by design) -- it only ever needs to
+        # VERIFY, which uses only the public key and never reaches this
+        # method. Raising here makes an accidental sign() attempt in a
+        # fresh clone fail loudly and safely instead of silently
+        # corrupting the trust chain.
+        if self.public_key_path.exists():
+            raise RuntimeError(
+                f"Cannot create a new signing keypair: a public key already exists at "
+                f"{self.public_key_path}, but the corresponding private key is not present at "
+                f"{self.key_path} in this checkout. This is expected in a fresh clone, which "
+                f"should only ever VERIFY existing freeze records (using the committed public "
+                f"key), never SIGN new ones. If this machine is meant to become a new authoritative "
+                f"signer, delete the stale public key file first (and understand that this "
+                f"invalidates every previously-signed freeze record's signature)."
+            )
+
         self.key_path.parent.mkdir(parents=True, exist_ok=True)
         private_key = Ed25519PrivateKey.generate()
         raw_private = private_key.private_bytes(Encoding.Raw, PrivateFormat.Raw, NoEncryption())

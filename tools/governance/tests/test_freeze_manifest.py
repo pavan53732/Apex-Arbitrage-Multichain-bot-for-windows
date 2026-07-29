@@ -147,6 +147,43 @@ def test_freeze_validator_verifies_using_only_public_key_without_private_key(tmp
     )
 
 
+def test_freeze_validator_refuses_to_overwrite_existing_public_key_without_private_key(tmp_path):
+    """Regression test for a real defect found via this session's
+    fresh-clone re-verification (round 5 of 5): in a fresh clone that
+    has a committed public key but (correctly) no private key,
+    attempting to sign() a NEW record used to silently generate a
+    brand-new, unrelated keypair and overwrite the existing committed
+    public key file -- permanently invalidating every previously-signed
+    freeze record's signature. Confirmed live: running the test suite
+    in a fresh clone (which exercises sign() via other tests/commands)
+    silently replaced signing_public_key.pem, breaking verification of
+    the freeze record that was ALREADY COMMITTED and should have been
+    verifiable. Fixed: _load_or_create_private_key() now raises
+    RuntimeError instead of silently minting a new keypair whenever a
+    public key already exists but the matching private key does not."""
+    fresh_clone_dir = tmp_path / "fresh_clone"
+    fresh_clone_dir.mkdir()
+    # Simulate: a public key is already committed (from some other,
+    # original signing machine), but the private key was never here.
+    original_signer = FreezeValidator(tmp_path / "original_signer" / ".signing_key")
+    original_signer.sign(_sample_record_data())  # creates keypair + public key
+    committed_public_key = fresh_clone_dir / "signing_public_key.pem"
+    committed_public_key.write_bytes(original_signer.public_key_path.read_bytes())
+
+    fresh_clone_validator = FreezeValidator(
+        key_path=fresh_clone_dir / ".signing_key",  # does not exist
+        public_key_path=committed_public_key,
+    )
+    import pytest
+    with pytest.raises(RuntimeError, match="Cannot create a new signing keypair"):
+        fresh_clone_validator.sign(_sample_record_data())
+
+    # The committed public key must be left untouched by the failed
+    # attempt -- this is the actual regression: it must NOT have been
+    # silently overwritten.
+    assert committed_public_key.read_bytes() == original_signer.public_key_path.read_bytes()
+
+
 def test_freeze_evidence_extracts_evidence_fields():
     data = _sample_record_data()
     evidence = FreezeEvidence.from_record_dict(data)
