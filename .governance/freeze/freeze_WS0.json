@@ -1,23 +1,23 @@
 {
   "identity": {
-    "freeze_id": "1d0b62ded56c5106",
+    "freeze_id": "51913b72d5187aa0",
     "workstream_id": "WS0",
     "workstream_version": "3.0.0",
-    "repository_version": "4e615eb96c0903a7bc5b2393a16d653c9ff51cb9",
+    "repository_version": "d5a6c3adff5721b5fcca5d216f1b576a73db39b0",
     "governance_platform_version": "1.0.0",
     "schema_version": "3.0.0",
     "producer": "tools.governance.freeze.freeze_engine.FreezeEngine"
   },
   "repository": {
-    "repository_tree_hash": "319e8f47e23166d289c360ddc8f7fce0c2bdb661",
+    "repository_tree_hash": "234ec8a03f3b0561699bdf03ecaa7832eb90d70a",
     "git_branch": "main",
-    "commit_hash": "4e615eb96c0903a7bc5b2393a16d653c9ff51cb9",
-    "working_tree_status": "dirty"
+    "commit_hash": "d5a6c3adff5721b5fcca5d216f1b576a73db39b0",
+    "working_tree_status": "clean"
   },
   "execution": {
-    "timestamp": "2026-07-29T10:33:53.013444+00:00",
+    "timestamp": "2026-07-29T10:37:05.630890+00:00",
     "runtime_command": "apex-gov run",
-    "execution_time_ms": 1422.926
+    "execution_time_ms": 1430.992
   },
   "canonical_output": {
     "documents_indexed": 277,
@@ -48,7 +48,7 @@
     "all_pass": true
   },
   "evidence": {
-    "evidence_record_hash": "a481cabc973d4b6bdcb498e583e383a97d93ec85d47a45f435c51be17f1929f5",
+    "evidence_record_hash": "a3069445f52fc05f0439bf41dc58380e790c29713566e1e439ca4155d5944388",
     "artefact_hashes": {
       ".governance/exports/documents.json": "72ad23f462d8fa3c18e1c6dcba019a4364526f0562ab762240e61c75d56a3367",
       ".governance/governance.db": "2c2366ad2f90a497a039fb555fc03d9c0fdcefab19270a6d8442f959e1c71e3d",
@@ -94,6 +94,6 @@
     ]
   },
   "freeze": {
-    "freeze_timestamp": "2026-07-29T10:33:53.013514+00:00"
+    "freeze_timestamp": "2026-07-29T10:37:05.630990+00:00"
   }
 }
