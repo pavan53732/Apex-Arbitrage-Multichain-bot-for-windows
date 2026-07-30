@@ -1,7 +1,7 @@
 {
   "programme": "PROGRAMME_2.5",
-  "generated_at": "2026-07-29T22:28:43.613404+00:00",
-  "generated_at_commit": "7aed373eae04cc0c32bbd23a4948c0944890af94",
+  "generated_at": "2026-07-30T05:01:24.804807+00:00",
+  "generated_at_commit": "366262ee28f71de0aa9646ddef6501d2bf610aaa",
   "workstreams": {
     "WS1": {
       "status": "IMPLEMENTED",
@@ -19,8 +19,8 @@
       "total": 17
     },
     "WS4": {
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": 13,
+      "status": "IMPLEMENTED",
+      "passing": 16,
       "total": 16
     },
     "WS5": {
@@ -49,5 +49,5 @@
       "total": 14
     }
   },
-  "overall_programme_status": "NOT_COMPLETE -- 8/9 workstreams fully IMPLEMENTED (WS1, WS2, WS3, WS5, WS6, WS7, WS8, WS9); remaining gaps in WS4 -- see each workstream's manifest.json checklist_evidence for the itemized, disclosed reasons"
+  "overall_programme_status": "ALL 9 WORKSTREAMS IMPLEMENTED -- every checkable readiness-checklist item passes as of this run"
 }

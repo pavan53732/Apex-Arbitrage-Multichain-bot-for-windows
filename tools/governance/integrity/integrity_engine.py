@@ -242,8 +242,80 @@ class IntegrityEngine:
 
         if problems:
             self._record("graphs", "FAIL", "; ".join(problems))
-        else:
-            self._record("graphs", "PASS", f"exactly {len(present)} canonical graphs present, no stray copies found", {"graphs": sorted(present)})
+            return
+
+        # WS4 ("Every graph is validated against source documents"):
+        # beyond structural presence (checked above), verify every
+        # graph's actual node/edge CONTENT is traceable back to real,
+        # currently-indexed source documents -- catching a stale graph
+        # left over from a prior repository state that a mere
+        # file-existence check would miss. Rebuilds the graphs
+        # in-process (not by re-reading the persisted .graphml files)
+        # from a fresh indexing pass, exactly as check_closures() and
+        # other checks already do, preserving the single-canonical-
+        # computation invariant.
+        try:
+            import yaml as _yaml
+            try:
+                from ..indexer.repo_indexer import RepoIndexer
+                from ..parser.markdown_parser import MarkdownParser
+                from ..metadata.metadata_parser import MetadataParser
+                from ..graphs.graph_builder import GraphBuilder
+                from ..graphs.graph_source_validator import validate_all_graphs
+                from ..references.event_matrix_parser import build_event_graph_edges, parse_event_ownership_matrix
+                from ..references.schema_reference_scanner import scan_corpus_for_schema_references
+            except ImportError:
+                from governance.indexer.repo_indexer import RepoIndexer  # type: ignore
+                from governance.parser.markdown_parser import MarkdownParser  # type: ignore
+                from governance.metadata.metadata_parser import MetadataParser  # type: ignore
+                from governance.graphs.graph_builder import GraphBuilder  # type: ignore
+                from governance.graphs.graph_source_validator import validate_all_graphs  # type: ignore
+                from governance.references.event_matrix_parser import build_event_graph_edges, parse_event_ownership_matrix  # type: ignore
+                from governance.references.schema_reference_scanner import scan_corpus_for_schema_references  # type: ignore
+
+            cfg = _yaml.safe_load((self.repo_root / "tools/governance/config/governance.yaml").read_text())
+            indexer = RepoIndexer(str(self.repo_root), cfg["docs_globs"])
+            inventory = indexer.build_inventory()
+            known_paths = [item["path"] for item in inventory]
+            md_parser = MarkdownParser(str(self.repo_root))
+            meta_parser = MetadataParser(known_paths=known_paths)
+            graph_builder = GraphBuilder()
+            docs = []
+            for item in inventory:
+                parsed = md_parser.parse_file(item["path"])
+                meta = meta_parser.parse_document(parsed["raw_text"], item["path"])
+                docs.append(meta)
+                graph_builder.add_document(meta)
+
+            matrix_path = self.repo_root / "docs" / "EVENT-OWNERSHIP-MATRIX.md"
+            if matrix_path.exists():
+                rows = parse_event_ownership_matrix(matrix_path.read_text(encoding="utf-8"))
+                event_result = build_event_graph_edges(rows, self.repo_root / "docs")
+                graph_builder.add_event_matrix_edges(event_result["edges"])
+            schema_results = scan_corpus_for_schema_references(docs, self.repo_root / "schemas")
+            graph_builder.add_schema_references(schema_results)
+
+            source_validation = validate_all_graphs(graph_builder, docs)
+        except Exception as exc:
+            self._record("graphs", "FAIL", f"graph-vs-source-document validation raised an exception: {exc}")
+            return
+
+        if not source_validation["overall_valid"]:
+            failing = [r for r in source_validation["results"] if not r["valid"]]
+            self._record(
+                "graphs", "FAIL",
+                f"exactly {len(present)} canonical graphs present, but {len(failing)} graph(s) failed "
+                f"source-document validation: {[r['graph_name'] for r in failing]}",
+                {"graphs": sorted(present), "source_validation_failures": failing},
+            )
+            return
+
+        self._record(
+            "graphs", "PASS",
+            f"exactly {len(present)} canonical graphs present, no stray copies found, "
+            f"and all {source_validation['graphs_validated']} content-validated graphs trace back to real source documents",
+            {"graphs": sorted(present), "graphs_source_validated": source_validation["graphs_validated"]},
+        )
 
     def check_runtime(self) -> None:
         result = self._run(["apex-gov", "run"])

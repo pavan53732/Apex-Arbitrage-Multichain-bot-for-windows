@@ -215,6 +215,48 @@ def run(
     plugin_graph = build_plugin_graph(graph_builder.dependency_graph, docs)
     algorithm_graph = build_algorithm_graph(graph_builder.dependency_graph, docs)
 
+    # WS4: close the event_graph / schema_graph data-completeness gap.
+    # Neither graph is populated from per-document metadata (no
+    # document uses the `## Events Produced`/`## Schemas` section
+    # patterns) -- instead, event_graph is built from the single
+    # canonical docs/EVENT-OWNERSHIP-MATRIX.md table (subsystem names
+    # resolved to document paths via deterministic filename transforms
+    # plus a small, human-reviewed override list -- ambiguous/unmatched
+    # names are deliberately excluded, never guessed, and surfaced in a
+    # committed review report instead), and schema_graph from an exact,
+    # conservative scan of every document's prose text for literal
+    # `<name>.schema.json` mentions that match a real file under
+    # schemas/ byte-for-byte (no fuzzy matching).
+    from ..references.event_matrix_parser import (
+        build_event_graph_edges, build_unresolved_names_report, parse_event_ownership_matrix,
+    )
+    from ..references.schema_reference_scanner import (
+        build_schema_reference_report, scan_corpus_for_schema_references,
+    )
+
+    event_matrix_path = repo_root / "docs" / "EVENT-OWNERSHIP-MATRIX.md"
+    event_graph_report = {"edges": [], "resolved_name_count": 0, "unresolved_name_count": 0, "unresolved_events": []}
+    unresolved_names_report = {"unresolved_names": [], "total_unresolved": 0}
+    if event_matrix_path.exists():
+        event_rows = parse_event_ownership_matrix(event_matrix_path.read_text(encoding="utf-8"))
+        event_graph_report = build_event_graph_edges(event_rows, repo_root / "docs")
+        unresolved_names_report = build_unresolved_names_report(event_rows, repo_root / "docs")
+        graph_builder.add_event_matrix_edges(event_graph_report["edges"])
+
+    schema_scan_results = scan_corpus_for_schema_references(docs, repo_root / "schemas")
+    schema_reference_report = build_schema_reference_report(schema_scan_results)
+    graph_builder.add_schema_references(schema_scan_results)
+
+    event_graph_report_path = export_dir / "event_graph_resolution_report.json"
+    event_graph_report_path.write_text(
+        json.dumps({**event_graph_report, "unresolved_names_detail": unresolved_names_report["unresolved_names"]}, indent=2, sort_keys=True, default=str) + "\n",
+        encoding="utf-8",
+    )
+    schema_reference_report_path = export_dir / "schema_reference_report.json"
+    schema_reference_report_path.write_text(
+        json.dumps(schema_reference_report, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+
     # Sanitize and export graphs (14 total: the Phase-0-frozen 7 core +
     # security/recovery/validation + service/plugin/runtime/algorithm =
     # 14, plus state_machine_graph as a 15th bonus graph beyond spec).
@@ -332,6 +374,9 @@ def run(
         "category_validators_executed": category_report["total_categories"],
         "category_validator_findings": category_report["total_findings"],
         "database_schema_version": store.schema_version(),
+        "event_graph_edges_resolved": len(event_graph_report["edges"]),
+        "event_graph_names_unresolved": event_graph_report["unresolved_name_count"],
+        "schema_graph_references_resolved": schema_reference_report["resolved_count"],
     }
     console.print(json.dumps(output, indent=2))
 

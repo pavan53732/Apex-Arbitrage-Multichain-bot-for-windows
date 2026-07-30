@@ -84,8 +84,8 @@
         "Every graph is reproducible from repository",
         "Every graph is validated against source documents"
       ],
-      "status": "PARTIALLY_IMPLEMENTED",
-      "passing": "13/16",
+      "status": "IMPLEMENTED",
+      "passing": "16/16",
       "evidence_reference": ".governance/programme_2.5/ws4/manifest.json"
     },
     {
@@ -186,7 +186,7 @@
       "evidence_reference": ".governance/programme_2.5/ws9/manifest.json"
     }
   ],
-  "last_reconciled_at_commit": "7aed373eae04cc0c32bbd23a4948c0944890af94",
+  "last_reconciled_at_commit": "366262ee28f71de0aa9646ddef6501d2bf610aaa",
   "reconciliation_method": ".governance/programme_2.5/_reconciliation/verify_workstreams.py",
-  "overall_status": "NOT_COMPLETE -- 8/9 workstreams fully IMPLEMENTED (WS1, WS2, WS3, WS5, WS6, WS7, WS8, WS9); remaining gaps in WS4 -- see each workstream's manifest.json checklist_evidence for the itemized, disclosed reasons"
+  "overall_status": "ALL 9 WORKSTREAMS IMPLEMENTED -- every checkable readiness-checklist item passes as of this run"
 }

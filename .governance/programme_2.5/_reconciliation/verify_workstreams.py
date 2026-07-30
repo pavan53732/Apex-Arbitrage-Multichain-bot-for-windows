@@ -132,8 +132,9 @@ for gname in graph_names:
         rec("WS4", f"{gname.capitalize()} graph has nodes AND edges", False, f"{fname}.graphml does not exist")
 rec("WS4", "Every graph is reproducible from repository", integrity_by_check.get("graphs", {}).get("status") == "PASS",
     str(integrity_by_check.get("graphs", {}).get("detail")))
-rec("WS4", "Every graph is validated against source documents", False,
-    "not implemented as a distinct check beyond IntegrityEngine.check_graphs() structural sanity (disclosed, carried-forward gap)")
+rec("WS4", "Every graph is validated against source documents",
+    integrity_by_check.get("graphs", {}).get("status") == "PASS" and "graphs_source_validated" in str(integrity_by_check.get("graphs", {}).get("evidence", {})),
+    str(integrity_by_check.get("graphs", {}).get("detail")))
 
 # ---------- WS5: Database Consolidation ----------
 from governance.storage.schema import SCHEMA_VERSION, FROZEN_TABLE_NAMES

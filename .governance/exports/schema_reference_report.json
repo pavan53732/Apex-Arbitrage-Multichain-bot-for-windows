@@ -1,0 +1,124 @@
+{
+  "resolved_count": 18,
+  "resolved_references": [
+    {
+      "document_path": "PROJECT-TREE-COMPLETE.md",
+      "line_number": 55,
+      "matched_text": "configuration.schema.json",
+      "schema_filename": "configuration.schema.json"
+    },
+    {
+      "document_path": "PROJECT-TREE-COMPLETE.md",
+      "line_number": 56,
+      "matched_text": "event.schema.json",
+      "schema_filename": "event.schema.json"
+    },
+    {
+      "document_path": "PROJECT-TREE-COMPLETE.md",
+      "line_number": 57,
+      "matched_text": "notification.schema.json",
+      "schema_filename": "notification.schema.json"
+    },
+    {
+      "document_path": "PROJECT-TREE-COMPLETE.md",
+      "line_number": 58,
+      "matched_text": "plugin.schema.json",
+      "schema_filename": "plugin.schema.json"
+    },
+    {
+      "document_path": "PROJECT-TREE-COMPLETE.md",
+      "line_number": 59,
+      "matched_text": "provider.schema.json",
+      "schema_filename": "provider.schema.json"
+    },
+    {
+      "document_path": "PROJECT-TREE-COMPLETE.md",
+      "line_number": 60,
+      "matched_text": "settings.schema.json",
+      "schema_filename": "settings.schema.json"
+    },
+    {
+      "document_path": "PROJECT-TREE-COMPLETE.md",
+      "line_number": 61,
+      "matched_text": "strategy.schema.json",
+      "schema_filename": "strategy.schema.json"
+    },
+    {
+      "document_path": "PROJECT-TREE-COMPLETE.md",
+      "line_number": 62,
+      "matched_text": "workspace.schema.json",
+      "schema_filename": "workspace.schema.json"
+    },
+    {
+      "document_path": "docs/CONFIGURATION-REFERENCE.md",
+      "line_number": 278,
+      "matched_text": "SCHEMAS/configuration.schema.json",
+      "schema_filename": "configuration.schema.json"
+    },
+    {
+      "document_path": "docs/DASHBOARD-RUNTIME.md",
+      "line_number": 128,
+      "matched_text": "schemas/event.schema.json",
+      "schema_filename": "event.schema.json"
+    },
+    {
+      "document_path": "docs/DASHBOARD-RUNTIME.md",
+      "line_number": 129,
+      "matched_text": "schemas/event.schema.json",
+      "schema_filename": "event.schema.json"
+    },
+    {
+      "document_path": "docs/DASHBOARD-RUNTIME.md",
+      "line_number": 130,
+      "matched_text": "schemas/event.schema.json",
+      "schema_filename": "event.schema.json"
+    },
+    {
+      "document_path": "docs/DASHBOARD-RUNTIME.md",
+      "line_number": 131,
+      "matched_text": "schemas/event.schema.json",
+      "schema_filename": "event.schema.json"
+    },
+    {
+      "document_path": "docs/DASHBOARD-RUNTIME.md",
+      "line_number": 132,
+      "matched_text": "schemas/settings.schema.json",
+      "schema_filename": "settings.schema.json"
+    },
+    {
+      "document_path": "docs/DASHBOARD-RUNTIME.md",
+      "line_number": 133,
+      "matched_text": "schemas/event.schema.json",
+      "schema_filename": "event.schema.json"
+    },
+    {
+      "document_path": "docs/DASHBOARD-RUNTIME.md",
+      "line_number": 134,
+      "matched_text": "schemas/plugin.schema.json",
+      "schema_filename": "plugin.schema.json"
+    },
+    {
+      "document_path": "docs/PLUGIN-LIFECYCLE.md",
+      "line_number": 114,
+      "matched_text": "schemas/plugin.schema.json",
+      "schema_filename": "plugin.schema.json"
+    },
+    {
+      "document_path": "docs/TESTING.md",
+      "line_number": 97,
+      "matched_text": "event.schema.json",
+      "schema_filename": "event.schema.json"
+    }
+  ],
+  "total_references_found": 19,
+  "unresolved_count": 1,
+  "unresolved_references": [
+    {
+      "document_path": "docs/TESTING.md",
+      "line_number": 100,
+      "matched_text": "config.schema.json",
+      "reason": "'config.schema.json' does not exactly match any real file under schemas/",
+      "schema_filename": "config.schema.json"
+    }
+  ]
+}

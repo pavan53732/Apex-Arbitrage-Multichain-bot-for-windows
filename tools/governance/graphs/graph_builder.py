@@ -58,3 +58,44 @@ class GraphBuilder:
             self.recovery_graph.add_edge(meta.path, rec, relation="declares_recovery_behaviour")
         for val in meta.validation:
             self.validation_graph.add_edge(meta.path, val, relation="declares_validation_rule")
+
+    def add_schema_references(self, scan_results: dict) -> None:
+        """Merge resolved schema references into schema_graph, from
+        governance.references.schema_reference_scanner.scan_corpus_for_schema_references().
+
+        Like add_event_matrix_edges(), this is not per-document
+        structured metadata (no document populates the `schemas` field
+        via a `## Schemas` section) -- it comes from scanning every
+        document's raw prose text for literal, exact schema filename
+        mentions. Only RESOLVED references (exact match against a real
+        file under schemas/) become edges; unresolved mentions (e.g.
+        docs/TESTING.md's 'config.schema.json', which does not exist)
+        are never added to the graph, only to the audit report.
+        """
+        for document_path, refs in scan_results.items():
+            for ref in refs:
+                if ref.resolved:
+                    self.schema_graph.add_edge(document_path, ref.schema_filename, relation="uses_schema")
+
+    def add_event_matrix_edges(self, edges: list[dict]) -> None:
+        """Merge externally-resolved event edges into event_graph, from
+        governance.references.event_matrix_parser.build_event_graph_edges().
+
+        This data does NOT come from any single document's own metadata
+        (unlike every other edge type in this class, added per-document
+        via add_document()) -- it comes from parsing the single,
+        canonical docs/EVENT-OWNERSHIP-MATRIX.md table and resolving
+        each row's publisher/consumer SUBSYSTEM NAME to a document path.
+        It is therefore added via a separate method, called once after
+        all documents have been indexed (see cli/main.py's `run`
+        command), rather than folded into add_document()'s per-document
+        loop.
+        """
+        for edge in edges:
+            doc_path = edge["source_document"]
+            event_name = edge["event_name"]
+            relation = edge["relation"]  # "produces" or "consumes"
+            if relation == "produces":
+                self.event_graph.add_edge(doc_path, event_name, relation="produces")
+            else:
+                self.event_graph.add_edge(event_name, doc_path, relation="consumes")

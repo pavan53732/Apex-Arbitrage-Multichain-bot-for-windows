@@ -24,3 +24,42 @@ def test_document_graph_populates_edges_from_cross_references():
     assert gb.doc_graph.number_of_edges() == 2
     assert ("docs/A.md", "docs/B.md") in gb.doc_graph.edges()
     assert ("docs/A.md", "docs/C.md") in gb.doc_graph.edges()
+
+
+def test_add_event_matrix_edges_populates_event_graph():
+    """WS4: closing the event_graph data-completeness gap via
+    governance.references.event_matrix_parser -- edges are added via a
+    separate method (not add_document()) since this data comes from a
+    single external table, not per-document metadata."""
+    gb = GraphBuilder()
+    edges = [
+        {"source_document": "docs/TRADING-ENGINE.md", "event_name": "trade.opened", "relation": "produces"},
+        {"source_document": "docs/RISK-ENGINE.md", "event_name": "trade.opened", "relation": "consumes"},
+    ]
+    gb.add_event_matrix_edges(edges)
+    assert gb.event_graph.number_of_nodes() == 3
+    assert gb.event_graph.number_of_edges() == 2
+    assert ("docs/TRADING-ENGINE.md", "trade.opened") in gb.event_graph.edges()
+    assert ("trade.opened", "docs/RISK-ENGINE.md") in gb.event_graph.edges()
+
+
+def test_add_schema_references_populates_schema_graph_with_resolved_only():
+    """WS4: closing the schema_graph data-completeness gap via
+    governance.references.schema_reference_scanner -- only RESOLVED
+    references become edges; unresolved mentions must never appear in
+    the graph."""
+    from governance.references.schema_reference_scanner import SchemaReference
+
+    gb = GraphBuilder()
+    scan_results = {
+        "docs/PLUGIN-LIFECYCLE.md": [
+            SchemaReference("docs/PLUGIN-LIFECYCLE.md", 114, "schemas/plugin.schema.json", "plugin.schema.json", True),
+        ],
+        "docs/TESTING.md": [
+            SchemaReference("docs/TESTING.md", 100, "config.schema.json", "config.schema.json", False),
+        ],
+    }
+    gb.add_schema_references(scan_results)
+    assert gb.schema_graph.number_of_edges() == 1
+    assert ("docs/PLUGIN-LIFECYCLE.md", "plugin.schema.json") in gb.schema_graph.edges()
+    assert "config.schema.json" not in gb.schema_graph.nodes()

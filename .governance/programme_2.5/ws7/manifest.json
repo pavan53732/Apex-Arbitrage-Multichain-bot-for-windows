@@ -62,17 +62,17 @@
     {
       "item": "All evidence is timestamped and hashed",
       "status": "PASS",
-      "detail": "evidence collection succeeded: 17 artefact hashes, 23 validators recorded, commit=7aed373eae04; structured evidence store has 16 total entries across 10 subdirectories"
+      "detail": "evidence collection succeeded: 17 artefact hashes, 23 validators recorded, commit=366262ee28f7; structured evidence store has 16 total entries across 10 subdirectories"
     },
     {
       "item": "Evidence is queryable and auditable",
       "status": "PASS",
-      "detail": "{'artefact_hash_count': 17, 'record_hash': '56162f89cd391b649d597b156e32d8adc262a8824cbea4360d82f2395fc48ecc', 'evidence_store_counts': {'Programme1': 2, 'Programme2': 0, 'Programme3': 0, 'validators': 2, 'metrics': 2, 'graphs': 2, 'closures': 2, 'hashes': 2, 'commits': 2, 'reports': 2}}"
+      "detail": "{'artefact_hash_count': 17, 'record_hash': 'bb3d444bf5dc7b29aa4674070e3704031759edc5e52988686b10122f5e1e6408', 'evidence_store_counts': {'Programme1': 2, 'Programme2': 0, 'Programme3': 0, 'validators': 2, 'metrics': 2, 'graphs': 2, 'closures': 2, 'hashes': 2, 'commits': 2, 'reports': 2}}"
     }
   ],
   "created_at": "2026-07-28T22:18:54.000000+00:00",
-  "last_verified_at": "2026-07-29T22:28:43.613404+00:00",
-  "last_verified_commit": "7aed373eae04cc0c32bbd23a4948c0944890af94",
+  "last_verified_at": "2026-07-30T05:01:24.804807+00:00",
+  "last_verified_commit": "366262ee28f71de0aa9646ddef6501d2bf610aaa",
   "verification_method": "governance/programme_2.5/_reconciliation/verify_workstreams.py (live execution against installed `governance` package + direct source inspection; no field is asserted without a corresponding executed check)",
   "notes": [
     "This manifest replaces a stale hand-authored manifest that reported status=PENDING unconditionally from programme inception through commit 3b1240164, regardless of actual implementation progress made in prior remediation rounds. That was a governance self-description defect (repository's own governance metadata did not reflect actual implementation state) -- flagged as CRITICAL in the Programme 2.5 Final Certification Audit.",

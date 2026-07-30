@@ -1,4 +1,302 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
-  <graph edgedefault="directed" />
+  <key id="d0" for="edge" attr.name="relation" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="docs/OPPORTUNITY-DETECTION.md" />
+    <node id="trade.opportunity.detected" />
+    <node id="docs/TRADING-ENGINE.md" />
+    <node id="docs/RISK-ENGINE.md" />
+    <node id="docs/AI-PIPELINE.md" />
+    <node id="docs/OPPORTUNITY-RANKING.md" />
+    <node id="trade.opportunity.ranked" />
+    <node id="docs/EXECUTION-ENGINE.md" />
+    <node id="trade.opened" />
+    <node id="trade.executing" />
+    <node id="trade.executed" />
+    <node id="trade.failed" />
+    <node id="trade.rollback" />
+    <node id="trade.settled" />
+    <node id="trade.cancelled" />
+    <node id="chain.block.new" />
+    <node id="docs/MARKET-DATA.md" />
+    <node id="docs/CHAIN-INTELLIGENCE.md" />
+    <node id="chain.rpc.failed" />
+    <node id="docs/RPC-MANAGER.md" />
+    <node id="chain.rpc.switched" />
+    <node id="price.updated" />
+    <node id="docs/ROUTING-ENGINE.md" />
+    <node id="docs/SLIPPAGE-MODEL.md" />
+    <node id="price.spike" />
+    <node id="liquidity.changed" />
+    <node id="docs/WALLET-MANAGEMENT.md" />
+    <node id="wallet.balance.changed" />
+    <node id="wallet.transaction.pending" />
+    <node id="wallet.transaction.confirmed" />
+    <node id="wallet.transaction.failed" />
+    <node id="risk.limit.exceeded" />
+    <node id="risk.circuit.breaker.tripped" />
+    <node id="risk.circuit.breaker.reset" />
+    <node id="docs/AI-GATEWAY.md" />
+    <node id="ai.provider.failed" />
+    <node id="docs/AI-ORCHESTRATION.md" />
+    <node id="ai.provider.switched" />
+    <node id="ai.tool.invoked" />
+    <node id="ai.tool.result" />
+    <node id="docs/CONTEXT-BUILDER.md" />
+    <node id="ai.prompt.built" />
+    <node id="ai.cost.exceeded" />
+    <node id="docs/PLUGIN-LIFECYCLE.md" />
+    <node id="plugin.installed" />
+    <node id="plugin.removed" />
+    <node id="plugin.error" />
+    <node id="docs/ORCHESTRATOR.md" />
+    <node id="runtime.starting" />
+    <node id="runtime.started" />
+    <node id="runtime.shutting_down" />
+    <node id="runtime.stopped" />
+    <node id="runtime.health.failed" />
+    <node id="runtime.health.restored" />
+    <node id="runtime.failover.started" />
+    <node id="runtime.failover.completed" />
+    <node id="docs/WORKSPACE-MANAGER.md" />
+    <node id="dashboard.workspace.saved" />
+    <node id="dashboard.workspace.restored" />
+    <node id="security.violation" />
+    <node id="docs/SECURITY.md" />
+    <node id="secret.rotated" />
+    <edge source="docs/OPPORTUNITY-DETECTION.md" target="trade.opportunity.detected">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="trade.opportunity.detected" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.opportunity.detected" target="docs/RISK-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.opportunity.detected" target="docs/AI-PIPELINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="trade.opened">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="trade.settled">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="trade.cancelled">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/RISK-ENGINE.md" target="risk.limit.exceeded">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/RISK-ENGINE.md" target="risk.circuit.breaker.tripped">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/RISK-ENGINE.md" target="risk.circuit.breaker.reset">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/AI-PIPELINE.md" target="ai.tool.invoked">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/AI-PIPELINE.md" target="ai.tool.result">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/OPPORTUNITY-RANKING.md" target="trade.opportunity.ranked">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="trade.opportunity.ranked" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.opportunity.ranked" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="trade.executing">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="trade.executed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="trade.failed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="trade.rollback">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="trade.opened" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.opened" target="docs/RISK-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.executing" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.executed" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.failed" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.failed" target="docs/RISK-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.rollback" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.cancelled" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="chain.block.new" target="docs/MARKET-DATA.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="chain.block.new" target="docs/OPPORTUNITY-DETECTION.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="chain.block.new" target="docs/CHAIN-INTELLIGENCE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/MARKET-DATA.md" target="price.updated">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/MARKET-DATA.md" target="price.spike">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="chain.rpc.failed" target="docs/RPC-MANAGER.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/RPC-MANAGER.md" target="chain.rpc.switched">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="price.updated" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="price.updated" target="docs/OPPORTUNITY-DETECTION.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="price.updated" target="docs/SLIPPAGE-MODEL.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="price.spike" target="docs/RISK-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="price.spike" target="docs/OPPORTUNITY-DETECTION.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="liquidity.changed" target="docs/ROUTING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="liquidity.changed" target="docs/SLIPPAGE-MODEL.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/WALLET-MANAGEMENT.md" target="wallet.balance.changed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/WALLET-MANAGEMENT.md" target="wallet.transaction.pending">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/WALLET-MANAGEMENT.md" target="wallet.transaction.confirmed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/WALLET-MANAGEMENT.md" target="wallet.transaction.failed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="wallet.balance.changed" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="wallet.transaction.pending" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="wallet.transaction.confirmed" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="wallet.transaction.confirmed" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="wallet.transaction.failed" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="wallet.transaction.failed" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="risk.limit.exceeded" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="risk.circuit.breaker.tripped" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="risk.circuit.breaker.reset" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/AI-GATEWAY.md" target="ai.provider.failed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="ai.provider.failed" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/AI-ORCHESTRATION.md" target="ai.provider.switched">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="ai.provider.switched" target="docs/AI-PIPELINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="ai.tool.invoked" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="ai.tool.result" target="docs/AI-ORCHESTRATION.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/CONTEXT-BUILDER.md" target="ai.prompt.built">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="ai.prompt.built" target="docs/AI-PIPELINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="ai.cost.exceeded" target="docs/AI-PIPELINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/PLUGIN-LIFECYCLE.md" target="plugin.installed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/PLUGIN-LIFECYCLE.md" target="plugin.removed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="plugin.error" target="docs/PLUGIN-LIFECYCLE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="runtime.starting">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="runtime.started">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="runtime.shutting_down">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="runtime.stopped">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="runtime.failover.started">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/ORCHESTRATOR.md" target="runtime.failover.completed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="runtime.health.failed" target="docs/ORCHESTRATOR.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="runtime.health.restored" target="docs/ORCHESTRATOR.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/WORKSPACE-MANAGER.md" target="dashboard.workspace.saved">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/WORKSPACE-MANAGER.md" target="dashboard.workspace.restored">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="security.violation" target="docs/SECURITY.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="secret.rotated" target="docs/SECURITY.md">
+      <data key="d0">consumes</data>
+    </edge>
+  </graph>
 </graphml>

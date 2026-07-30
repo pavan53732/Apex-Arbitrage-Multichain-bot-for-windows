@@ -17,7 +17,7 @@
     {
       "item": "Graph integrity checks pass",
       "status": "PASS",
-      "detail": "graphs check: PASS -- exactly 15 canonical graphs present, no stray copies found"
+      "detail": "graphs check: PASS -- exactly 15 canonical graphs present, no stray copies found, and all 11 content-validated graphs trace back to real source documents"
     },
     {
       "item": "Validator integrity checks pass",
@@ -37,12 +37,12 @@
     {
       "item": "Freeze record integrity checks pass",
       "status": "PASS",
-      "detail": "freeze check: PASS -- freeze record references parent commit 017cff2ba98a; HEAD (7aed373eae04) differs only by the freeze-regeneration commit itself (freeze record + canonical pipeline byproducts: closures/graphs/evidence/exports/database)"
+      "detail": "freeze check: PASS -- freeze record references parent commit 8caaf41711ff; HEAD (366262ee28f7) differs only by the freeze-regeneration commit itself (freeze record + canonical pipeline byproducts: closures/graphs/evidence/exports/database)"
     },
     {
       "item": "Evidence integrity checks pass",
       "status": "PASS",
-      "detail": "evidence check: PASS -- evidence collection succeeded: 17 artefact hashes, 23 validators recorded, commit=7aed373eae04; structured evidence store has 16 total entries across 10 subdirectories"
+      "detail": "evidence check: PASS -- evidence collection succeeded: 17 artefact hashes, 23 validators recorded, commit=366262ee28f7; structured evidence store has 16 total entries across 10 subdirectories"
     },
     {
       "item": "Metrics integrity checks pass",
@@ -76,8 +76,8 @@
     }
   ],
   "created_at": "2026-07-28T22:18:54.000000+00:00",
-  "last_verified_at": "2026-07-29T22:28:43.613404+00:00",
-  "last_verified_commit": "7aed373eae04cc0c32bbd23a4948c0944890af94",
+  "last_verified_at": "2026-07-30T05:01:24.804807+00:00",
+  "last_verified_commit": "366262ee28f71de0aa9646ddef6501d2bf610aaa",
   "verification_method": "governance/programme_2.5/_reconciliation/verify_workstreams.py (live execution against installed `governance` package + direct source inspection; no field is asserted without a corresponding executed check)",
   "notes": [
     "This manifest replaces a stale hand-authored manifest that reported status=PENDING unconditionally from programme inception through commit 3b1240164, regardless of actual implementation progress made in prior remediation rounds. That was a governance self-description defect (repository's own governance metadata did not reflect actual implementation state) -- flagged as CRITICAL in the Programme 2.5 Final Certification Audit.",
