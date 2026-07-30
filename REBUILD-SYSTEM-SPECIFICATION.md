@@ -2,11 +2,11 @@
 type: SPECIFICATION
 owner: Runtime Team
 status: Canonical
-version: 2.0.0
+version: 3.0.0
 last_updated: 2026-07-31
-purpose: Defines the complete docs-governed repository operating model that must be rebuilt for AI agents, including canonical specifications, repository hygiene, validation systems, governance boundaries, change workflows, and the reasons each layer exists.
-scope: Repository operating model, AI-agent execution rules, canonical documentation system, validator design, governance boundaries, repo hygiene, and future rebuild sequencing.
-audience: AI agents, maintainers, repository architects, automation engineers, and future contributors rebuilding the system.
+purpose: Defines the complete repository rebuild model for an AI-agent-ready, docs-governed engineering repository, explicitly separating the Repository Operating Model from the Product Specification plane and defining the taxonomy, governance, validators, workflows, and migration approach required to rebuild the system correctly.
+scope: Repository operating model, product-specification governance, AI-agent execution rules, documentation taxonomy, validator design, repo hygiene, migration planning, and future rebuild sequencing.
+audience: AI agents, maintainers, repository architects, automation engineers, and contributors responsible for rebuilding or governing the repository.
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 ---
 
@@ -14,179 +14,348 @@ canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 
 ## Purpose
 
-This document defines the full system that must be rebuilt so the repository becomes a docs-governed operating environment for AI agents.
+This document defines the full rebuild model required to turn the repository into an AI-agent-ready, docs-governed engineering system.
 
-The repository should not be treated as a random set of files that an AI edits opportunistically. It should behave as a controlled workspace where documentation is the canonical source of truth, repository structure is intentional, generated artefacts are excluded, validators catch structural drift, and governance boundaries stop agents from improvising outside approved rules.
+The repository is not just a place where documentation happens to exist. It should operate as a controlled engineering environment where documentation governs how work is performed, how truth is located, how structure is maintained, how changes are validated, and how AI agents are prevented from improvising against ambiguous or non-canonical material.
 
-The target outcome is a repository where an AI agent can reliably understand what the system is, where truth lives, what is safe to change, what must be validated, and what must never be committed.
+The rebuilt system must therefore define two different but connected planes of authority:
 
-## Core idea
+1. The Repository Operating Model.
+2. The Product Specification.
 
-The rebuild is not only about adding documents back.
+Those planes must be explicitly separated in the repository concept model, in documentation taxonomy, in validator behavior, and in AI-agent workflows.
 
-The rebuild is about constructing a docs-governed repository operating model for AI agents made of five tightly connected layers:
+## Central architectural distinction
 
-1. Canonical specifications.
-2. Repository hygiene.
-3. Validators and integrity checks.
-4. Governance boundaries and operating rules.
-5. Agent execution workflows.
+The most important rebuild principle is this:
 
-Those five layers work together so agents operate against source-of-truth instead of guessing, duplicating concepts, or silently drifting the repository into inconsistency.
+The documentation in this repository has two fundamentally different responsibilities, and those responsibilities must not be mixed.
 
-## Why this system is needed
+### Plane 1 — Repository Operating Model
 
-Without a docs-governed operating model, AI agents usually behave in unsafe and inconsistent ways.
+This plane defines how humans and AI agents work inside the repository.
 
-Typical failure modes without this system include:
+It governs things like:
 
-- creating duplicate documents for the same concept
-- editing a non-canonical file while the real source of truth remains unchanged
-- moving files without repairing inbound references
-- committing generated artefacts, temporary exports, caches, or reports
-- introducing structural drift between docs, rules, and implementation plans
-- making changes without understanding which architecture or policy document governs the change
-- treating every file as equally authoritative even when some are reference-only, historical, or obsolete
+- canonical documentation rules
+- documentation classes
+- repository hygiene
+- validation rules
+- traceability expectations
+- agent operating rules
+- review workflow
+- implementation workflow
+- completion workflow
+- deprecation handling
+- change classification
+- source-versus-generated boundaries
+- documentation lifecycle
 
-A docs-governed repository operating model exists to prevent those failure modes.
+This plane is repository infrastructure.
+
+It is not the application.
+
+It is the operating system of the repository.
+
+### Plane 2 — Product Specification
+
+This plane defines the software product being built.
+
+It governs things like:
+
+- runtime architecture
+- AI architecture inside the product
+- dashboard behavior
+- plugin architecture
+- deployment behavior
+- security behavior
+- interfaces and contracts
+- state machines
+- testing behavior
+- platform integration
+
+This plane is the software specification.
+
+It is not the contribution system.
+
+It describes what is being built, not how work in the repository is governed.
+
+## Why this distinction matters
+
+If these two planes are blurred together, AI agents and even human contributors will make predictable mistakes.
+
+Typical failure modes include:
+
+- treating repository-governance documents as if they were product design documents
+- treating product-AI architecture documents as if they were instructions for agent contribution behavior
+- editing the wrong class of document because authority boundaries are unclear
+- creating duplicate “AI” documentation where one file is about product intelligence and another is about repository agent behavior
+- applying validation rules meant for product specs to repository-operating documents or vice versa
+- losing the ability to reason about what is canonical in each context
+
+The rebuild must eliminate that ambiguity structurally and semantically.
+
+## The repository stack
+
+The rebuilt repository should be understood conceptually like this:
+
+Repository
+    ↓
+Repository Operating Model
+    ↓
+Governance, standards, validation, traceability, agent workflows
+    ↓
+AI agents and human contributors
+    ↓
+Product Specification
+    ↓
+Source code, tests, and implementation work
+
+This stack matters because everything above the product specification governs how the product specification is created and maintained.
 
 ## System objectives
 
-The rebuilt system must achieve the following objectives.
+The rebuilt repository must satisfy all of the following objectives.
 
-### 1. Canonical truth
+### 1. Explicit two-plane authority
 
-Every major concept must have a canonical home.
+The repository must clearly distinguish between:
 
-An AI agent must be able to answer questions like:
+- how the repository operates
+- what the product is
 
-- Where is the canonical architecture description?
-- Where is the canonical runtime behavior specification?
-- Where is the canonical AI behavior specification?
-- Where are deployment, testing, security, and operations truths defined?
-- Which file is the source of truth if multiple files mention the same concept?
+No major document should leave that ambiguous.
 
-If those answers are unclear, the repository is not agent-ready.
+### 2. Canonical truth per concept
 
-### 2. Deterministic placement
+Every important concept must have a canonical source.
 
-An AI agent must know where new files belong before it creates them.
+An AI agent must be able to determine:
 
-Placement must not depend on style preference or guesswork. The repository structure has to tell the agent where architecture docs, guides, reference docs, state machines, AI docs, deployment docs, testing docs, and future tooling docs belong.
+- the canonical file for a repository-operating concept
+- the canonical file for a product concept
+- whether a file is canonical, secondary, reference, historical, generated, or deprecated
 
-### 3. Validation before trust
+### 3. Deterministic placement
 
-Repository content should not be trusted merely because it exists.
+An AI agent must know where to place a document before creating it.
 
-Validators must prove that high-value structural assumptions are still true. Examples include link validity, canonical metadata presence, absence of duplicate canonical files, and generated-artifact exclusion.
+This includes knowing whether the new document belongs to the repository-operating plane or the product-specification plane.
 
-### 4. Clear operating boundaries
+### 4. Validation before trust
 
-An AI agent must know what it can change, what requires extra caution, and what is not allowed.
+Important repository assumptions must be testable.
 
-The repository must define safe and unsafe change zones, required review conditions, and categories of files that should never be treated casually.
+Documentation should not be trusted merely because it exists. Structural integrity, metadata completeness, canonical relationships, and source-versus-generated rules must be validated.
 
-### 5. Lightweight governance
+### 5. Lightweight but real governance
 
-The rebuilt system must be strong enough to guide agents, but lighter than the deleted governance stack.
+The new system must be strong enough to guide AI agents reliably but lighter than the deleted governance stack.
 
-The goal is not maximal bureaucracy. The goal is high clarity, low ambiguity, and proportional enforcement.
+The target is not bureaucracy. The target is clarity, authority, and enforceable structure with minimal unnecessary ceremony.
 
-## Target operating model
+## Documentation class system
 
-The rebuilt repository operating model should work like this.
+The rebuilt system should not govern “all markdown files” as a flat universe.
 
-### Step 1. Agent enters the repository
+It should govern explicit documentation classes.
 
-The agent first reads root-level entry points and canonical guidance.
+### Required documentation classes
 
-At minimum, that should include:
+#### 1. Repository Operating Model
+
+Purpose:
+
+Defines how the repository is governed and how humans and AI agents must work inside it.
+
+Examples:
 
 - AGENTS.md
 - REBUILD-SYSTEM-SPECIFICATION.md
-- docs/README.md or an equivalent docs index
-- the canonical domain document relevant to the requested task
+- repository governance rules
+- agent workflow specs
+- validation policy docs
+- traceability rules
+- documentation lifecycle rules
+- contribution workflow rules
 
-The agent does not start by editing. It starts by locating authority.
+Canonical status:
 
-### Step 2. Agent identifies canonical sources
+Yes, for repository-level operating behavior.
 
-Before touching any file, the agent must determine:
+#### 2. Product Specification
 
-- the primary canonical file for the concept being changed
-- any dependent docs that must remain consistent with that file
-- whether the target file is canonical, reference-only, guide-only, historical, or generated
+Purpose:
 
-If the agent cannot answer those questions, it should not proceed blindly.
+Defines what the software system is, how it should behave, and how its components fit together.
 
-### Step 3. Agent classifies the change
+Examples:
 
-Every change must be classified before execution.
+- architecture docs
+- runtime docs
+- product AI docs
+- deployment docs
+- security docs
+- plugin docs
+- interface contracts
+- state machine specifications
+- testing specifications
 
-Minimum change classes:
+Canonical status:
 
-- documentation-only
-- structure-only
-- canonical-specification change
-- agent-policy change
-- repository-hygiene change
-- validation-tooling change
-- architecture-affecting change
-- generated-artefact cleanup
+Yes, for software behavior and structure.
 
-The class determines how much validation and review is required.
+#### 3. ADR
 
-### Step 4. Agent performs the change
+Purpose:
 
-The agent edits only the files justified by the change plan.
+Captures architecture or governance decisions, rationale, trade-offs, and historical decision context.
 
-The agent must avoid:
+Canonical status:
 
-- creating duplicate concept docs
-- introducing new root clutter
-- adding generated files to git
-- changing canonical meaning in one file while leaving dependent docs stale
-- editing a reference document when a canonical document exists upstream
+Canonical for decision history, but not a replacement for active current-state specification.
 
-### Step 5. Agent validates the result
+#### 4. Reference
 
-After changing files, the agent runs applicable validation checks.
+Purpose:
 
-The change is not complete until structural integrity is re-verified.
+Provides support material such as catalogs, glossaries, FAQs, metrics definitions, lookup docs, and support indexes.
 
-### Step 6. Agent commits with traceable reasoning
+Canonical status:
 
-The commit should explain what changed, why it changed, which operating layer it affected, and whether it altered canonical behavior, structure, hygiene, or validation.
+Canonical for lookup/reference purposes if explicitly declared, but normally subordinate to primary specs.
 
-## Layer 1 — Canonical specifications
+#### 5. Guide
 
-Canonical specifications are the foundation of the whole model.
+Purpose:
 
-### What they are
+Provides workflows, tutorials, operator instructions, contributor guidance, and procedural explanations.
 
-Canonical specifications are the authoritative documents that define how the repository, the system architecture, the AI behavior model, and the operating rules are supposed to work.
+Canonical status:
 
-### What they must do
+Usually not the primary source of truth for architecture, but may be canonical for process guidance if stated.
 
-Canonical specifications must:
+#### 6. Historical
 
-- define the authoritative meaning of a concept
-- have a clear owner
-- state their purpose
-- show their status
-- identify their canonical source path
-- be discoverable from an index or registry
-- remain stable enough that agents can rely on them
+Purpose:
 
-### What they help with
+Preserves older, replaced, superseded, or archived materials that are kept for context rather than current authority.
 
-They help AI agents by removing semantic ambiguity.
+Canonical status:
 
-If a repository has three files talking about memory or deployment, but only one is canonical, the agent must know which one carries decision authority. Without that, the agent may update the wrong file and accidentally create drift.
+No, except as historical record.
 
-### Minimum canonical doc metadata
+#### 7. Certification
 
-Every important canonical document should contain at least:
+Purpose:
+
+Stores formal governance certification, decision packs, approval artefacts, or compliance evidence if ever reintroduced intentionally.
+
+Canonical status:
+
+Canonical for the certification event itself, but not a substitute for active specs.
+
+#### 8. Generated
+
+Purpose:
+
+Produced by tooling, analysis, exports, graphs, or automation.
+
+Canonical status:
+
+No by default.
+
+Generated artefacts should remain uncommitted unless there is an explicit, justified exception.
+
+## Repository AI versus Product AI
+
+One of the most important sources of ambiguity must be eliminated explicitly.
+
+The repository contains two different meanings of AI.
+
+### Repository AI
+
+Repository AI refers to AI systems that contribute to the repository itself.
+
+Examples include:
+
+- ChatGPT
+- Claude Code
+- Cursor
+- Copilot
+- Kilo Code
+- future coding agents or documentation agents
+
+Documents in this category belong to the Repository Operating Model plane.
+
+They define:
+
+- how AI agents behave in the repository
+- what they must read first
+- what they can and cannot change
+- what validations they must run
+- how they should classify changes
+- how they should commit work
+
+These are not product-AI docs.
+
+These are agent contribution system docs.
+
+### Product AI
+
+Product AI refers to the AI inside the software being built.
+
+Examples include:
+
+- AI pipeline
+- AI memory
+- AI planner
+- AI provider manager
+- AI gateway
+- AI tool invocation contract
+- AI safety boundary within the application
+- AI runtime context behavior
+
+Documents in this category belong to the Product Specification plane.
+
+They define product behavior, not repository contribution behavior.
+
+### Naming principle
+
+The rebuilt repository should avoid relying on the ambiguous word “AI” alone when the class is not obvious.
+
+Where needed, use labels such as:
+
+- Agent Operating System
+- Agent Contribution System
+- Product AI Architecture
+- Application AI Runtime
+
+That naming discipline reduces interpretation errors for both humans and agents.
+
+## Canonical truth model
+
+Canonical truth is the foundation of the repository.
+
+### What canonical means
+
+A canonical document is the authoritative source for a concept.
+
+Other files may summarize, reference, teach, or contextualize the concept, but they must not silently replace the canonical document.
+
+### Canonical requirements
+
+Every important canonical document should:
+
+- define one or more authoritative concepts clearly
+- have explicit metadata
+- be reachable from an index or registry
+- have a stable place in the taxonomy
+- not compete with another undeclared canonical peer for the same concept
+
+### Minimum canonical metadata
+
+Every important canonical document should include at least:
 
 - type
 - owner
@@ -198,107 +367,109 @@ Every important canonical document should contain at least:
 - audience
 - canonical_source
 
-Optional but useful:
+Recommended additional metadata:
 
+- class
+- plane
 - dependencies
 - consumers
+- related_documents
 - supersedes
 - superseded_by
-- related_documents
 
-### Canonical hierarchy
+### Canonical conflict rule
 
-The rebuilt system should define a hierarchy of authority.
+If two files appear to define the same concept authoritatively, the repository must either:
 
-A practical order is:
+- designate one as canonical and the other as derived, guide, reference, or historical
+- or split the concepts more clearly so they no longer compete
+
+An agent should never be left to guess.
+
+## Canonical hierarchy
+
+The repository should operate with a hierarchy of authority.
+
+Recommended order:
 
 1. Root repository operating specifications.
-2. Canonical architecture documents.
-3. Canonical domain documents.
-4. Domain reference documents.
-5. Guides and workflows.
-6. Historical or deprecated documents.
+2. Repository Operating Model canonical docs.
+3. Product Specification canonical docs.
+4. ADRs and formal decisions.
+5. Reference and guide material.
+6. Historical archives.
+7. Generated artefacts.
 
-That hierarchy tells the agent how to resolve conflicts when multiple files discuss similar subjects.
+This hierarchy does not mean higher layers describe the product in more detail. It means they govern authority and interpretation.
 
-## Layer 2 — Repository hygiene
+## Repository hygiene model
 
-Repository hygiene is the structural discipline that keeps the knowledge base clean and dependable.
+Repository hygiene is the discipline that keeps the knowledge base clear, intentional, and trustworthy.
 
-### What repository hygiene means
+### Root-level discipline
 
-Repository hygiene means the repository contains intentional, reviewable, source-of-truth material rather than mixed-quality runtime output, stale duplicates, and arbitrary placement.
+The repository root should remain small and highly intentional.
 
-### Hygiene rules that must be rebuilt
-
-The rebuilt repository hygiene model should define all of the following.
-
-#### A. Root-level discipline
-
-The root should remain small and intentional.
-
-Root files should be limited to top-level entry points and repository-level control documents such as:
+Root-level items should normally be limited to repository entry points and repository-level control files such as:
 
 - README.md
 - AGENTS.md
 - AGENTS_RULES.md if still needed
 - REBUILD-SYSTEM-SPECIFICATION.md
 - .gitignore
+- narrowly justified additional root control files
 
-Everything else should have a justified folder location.
+Everything else should have a clear folder home.
 
-#### B. Folder purpose clarity
+### Folder-purpose discipline
 
-Each major folder must have a clear purpose.
+Each major folder must have a defined purpose.
 
-Examples:
+No folder should exist merely because content needed “somewhere to go.”
 
-- docs/ for source-of-truth documentation and supporting reference material
-- future scripts/ only for intentionally maintained deterministic helper scripts
-- future tools/ only for intentionally maintained reusable tooling
-- future schemas/ only if structured schemas are reintroduced as canonical source material
+### Generated-artifact discipline
 
-#### C. Generated artefact exclusion
+Generated outputs must not be committed by default.
 
-Generated files must not be committed unless there is a deliberate exception.
+Examples that should generally remain outside git include:
 
-Examples of files that should normally stay out of git:
-
-- exports
-- graphs
+- analysis outputs
+- export snapshots
+- graph files
 - caches
-- database files
-- temporary reports
-- machine-generated dashboards
-- closure artefacts
-- analysis dumps
-- local run outputs
+- local databases
+- temporary dashboards
+- one-off reports
+- rebuildable summary artefacts
 
-#### D. Duplicate suppression
+### Duplicate suppression
 
-The system should actively prevent duplicate files representing the same concept without a clear canonical relationship.
+The rebuilt system should actively suppress duplicate concept documentation unless there is an explicit canonical relationship.
 
-#### E. Deprecation handling
+### Deprecation discipline
 
-If a document is replaced, the system should mark the relationship rather than silently leaving old files to drift.
+If a document is replaced, the relationship should be explicit.
 
-### What repository hygiene helps with
+The repository should say what replaced it, not leave both files to compete indefinitely.
 
-Repository hygiene helps AI agents by making the workspace predictable. Agents make fewer mistakes when the repo has strong placement rules, fewer duplicate concepts, and cleaner separation between canonical content and generated output.
+## Validator model
 
-## Layer 3 — Validators and integrity checks
+Validators are how the repository proves that important structural assumptions are still true.
 
-Validators are the enforcement layer that turns documentation intent into something testable.
+The rebuilt validator system should be much smaller than the deleted one, but it must still be meaningful.
 
-### Why validators matter
+### Validator design principles
 
-Without validators, the repository can slowly become inconsistent while still looking acceptable to humans at a glance.
+Validators should be:
 
-Validators give the repository a way to detect drift automatically.
+- deterministic
+- fast
+- understandable
+- easy for AI agents to run
+- focused on high-value failure modes
+- strong enough to stop drift, but not ceremonial
 
-### What validators should exist in the rebuilt system
-
-The rebuilt validator stack should be smaller than the deleted one, but it must still cover the highest-value checks.
+### Required validator families
 
 #### 1. Cross-reference validator
 
@@ -306,296 +477,345 @@ Checks:
 
 - markdown links resolve
 - referenced files exist
-- moved files do not leave stale paths behind
-- key index documents still resolve to real targets
+- renamed or moved files do not leave stale references
+- key entry documents still point to valid locations
 
-Benefit for AI agents:
+Why it matters:
 
-- catches mistakes immediately after file moves, renames, or doc rewrites
+Protects structural integrity after refactors, renames, and taxonomy changes.
 
 #### 2. Canonical metadata validator
 
 Checks:
 
-- important documents contain required metadata
-- canonical_source fields are present and accurate
-- status values are valid
-- owner and purpose are not missing
+- required metadata is present on important docs
+- class and plane values are valid
+- canonical_source values are accurate
+- owners, purposes, and statuses are not missing
 
-Benefit for AI agents:
+Why it matters:
 
-- ensures every important document can be interpreted programmatically and semantically
+Makes documents interpretable to both agents and maintainers.
 
 #### 3. Duplicate canonical-concept detector
 
 Checks:
 
-- two files do not present themselves as the same canonical concept without an explicit relationship
-- suspicious overlaps are flagged for human review
+- no two active docs silently claim the same canonical concept
+- suspicious overlaps are flagged
 
-Benefit for AI agents:
+Why it matters:
 
-- reduces the chance of agents reinforcing duplicate truth sources
+Protects source-of-truth discipline.
 
-#### 4. Orphan document detector
+#### 4. Orphan-document detector
 
 Checks:
 
-- important docs are reachable from at least one index, map, or canonical registry
-- obviously disconnected docs are flagged
+- important docs are reachable from an index, registry, or documented parent path
+- disconnected critical files are flagged
 
-Benefit for AI agents:
+Why it matters:
 
-- prevents important material from becoming invisible and therefore ignored
+Prevents important material from becoming invisible.
 
 #### 5. Generated-artifact guard
 
 Checks:
 
-- no ignored generated outputs are accidentally staged or committed
-- generated directories remain excluded
+- generated outputs are not accidentally staged or committed
+- ignored output locations remain excluded
 
-Benefit for AI agents:
+Why it matters:
 
-- prevents repo pollution from automated runs
+Prevents repository pollution from automated runs.
 
 #### 6. Root-layout validator
 
 Checks:
 
-- unauthorized root-level clutter is not introduced
-- repository-level files remain intentional
+- unauthorized root clutter is not introduced
+- root remains an intentional entry surface
 
-Benefit for AI agents:
+Why it matters:
 
-- preserves the navigational clarity of the repository
+Protects the repository’s navigational clarity.
 
-### Validator design principles
+#### 7. Documentation-class validator
 
-The rebuilt validators should be:
+Checks:
 
-- deterministic
-- fast
-- understandable
-- focused on high-value failure modes
-- easy for agents to run locally
-- strict enough to prevent drift but not so heavy that they create ceremonial overhead
+- documents are assigned to the correct class
+- repository-operating docs are not mixed with product-spec docs semantically or structurally
+- class-specific expectations are enforced
 
-## Layer 4 — Governance boundaries
+Why it matters:
 
-Governance boundaries define the safe operating envelope for AI agents.
+This is the validator that directly enforces the two-plane architecture.
 
-### What governance boundaries are
+## Governance boundaries
 
-Governance boundaries are the rules that tell an agent what kinds of actions are allowed, what requires stronger justification, and what is prohibited without explicit instruction.
+Governance boundaries define the safe operating envelope for humans and AI agents.
 
-### Boundary types that should be rebuilt
+### Boundary types
 
-#### A. Edit-scope boundaries
+#### A. Plane boundaries
 
-The repository should define which file classes can be edited directly and which require extra caution.
+Repository Operating Model documents and Product Specification documents must not be casually merged conceptually or structurally.
+
+#### B. Edit-scope boundaries
+
+Some docs are safe for routine editing. Others require greater caution.
 
 Examples:
 
-- guide docs can be updated freely if canonical meaning is unchanged
-- canonical architecture docs require careful consistency updates
-- root-level operating specs require the highest caution
-- deprecated documents should not be revived accidentally
+- reference and guide updates are lower risk if canonical meaning does not change
+- root repository operating docs are high risk
+- canonical product architecture docs are high impact
+- deprecated docs should not be revived by accident
 
-#### B. Generated-versus-source boundaries
+#### C. Source-versus-generated boundaries
 
-Agents must know the difference between source-of-truth files and generated artefacts.
+Generated output must never quietly become a source-of-truth document.
 
-Generated output should never quietly become canonical.
+#### D. Structural boundaries
 
-#### C. Structural boundaries
+Agents should not create new top-level documentation families or root clutter without justification.
 
-Agents should not introduce new top-level folders or new document families without a structural justification.
+#### E. Authority boundaries
 
-#### D. Authority boundaries
+A lower-authority guide should not override a canonical spec.
 
-Agents should not override a canonical document by editing a lower-authority summary or guide.
+#### F. Risk boundaries
 
-#### E. Risk boundaries
+Changes affecting canonical meaning, agent rules, or documentation taxonomy should trigger stronger caution and validation.
 
-Changes affecting agent policy, canonical architecture, or repository control rules should trigger stronger validation and more explicit explanation.
+## Agent execution model
 
-### What governance boundaries help with
+This section defines how AI agents should operate in the rebuilt repository.
 
-Governance boundaries stop AI agents from treating every file and every action as equivalent. That reduces unsafe improvisation and preserves system coherence.
+### Entry workflow
 
-## Layer 5 — Agent execution workflows
+When an agent enters the repo, it should first read:
 
-This layer defines how an AI agent should behave operationally inside the repository.
+- AGENTS.md
+- REBUILD-SYSTEM-SPECIFICATION.md
+- the central docs index
+- the canonical domain document relevant to the task
+
+The agent must begin by locating authority, not by editing.
 
 ### Pre-change workflow
 
-Before editing anything, an AI agent should do all of the following:
+Before making changes, the agent should:
 
-1. Read AGENTS.md and the relevant canonical domain document.
-2. Identify the exact concept being changed.
-3. Locate the canonical source for that concept.
-4. Identify dependent docs that may also require updates.
-5. Determine whether the target is canonical, reference, guide, or historical.
-6. Classify the change type.
-7. Confirm the change does not involve committing generated artefacts.
+1. Identify the concept being changed.
+2. Determine whether the concept belongs to the Repository Operating Model or Product Specification plane.
+3. Locate the canonical file.
+4. Identify dependent or related files.
+5. Determine document class.
+6. Classify the change.
+7. Confirm generated outputs are not involved improperly.
 
 ### Change workflow
 
-During the change, an AI agent should:
+During changes, the agent should:
 
 1. Edit the smallest justified set of files.
 2. Preserve canonical relationships.
-3. Update internal references if paths or names change.
-4. Avoid creating duplicate files when an existing canonical file should be updated instead.
-5. Keep repository placement rules intact.
+3. Keep class and plane boundaries intact.
+4. Update inbound and outbound references when structure changes.
+5. Avoid creating duplicate concepts when an existing canonical file should be edited instead.
 
 ### Post-change workflow
 
-After the change, an AI agent should:
+After changes, the agent should:
 
 1. Run relevant validators.
-2. Re-check changed references.
-3. Confirm no generated files were added.
-4. Confirm metadata still reflects reality.
-5. Write a commit message that explains architectural intent, not just file movement.
+2. Confirm references still resolve.
+3. Confirm metadata still reflects reality.
+4. Confirm no generated artefacts were added.
+5. Write a commit message that explains what changed and why in operating-model terms.
 
-### Human-review workflow
+### High-caution changes
 
-Some change classes should be marked as requiring explicit human review or at least extra caution.
+The following changes should be treated as high caution:
 
-Examples:
+- root-level operating spec changes
+- canonical architecture changes
+- taxonomy changes
+- class-model changes
+- deprecation or supersession changes
+- validator-rule changes
+- reintroduction of tooling, scripts, schemas, or certification systems as canonical layers
 
-- changes to root-level operating specs
-- changes to canonical architecture definitions
-- changes to governance boundaries
-- changes that deprecate or replace canonical docs
-- changes that reintroduce tooling or schemas as new source-of-truth layers
+## Target conceptual documentation taxonomy
 
-## Canonical documentation system to rebuild
+The ChatGPT review was correct that the repository should be conceptually split, even if migration happens in phases.
 
-The repository should include a coherent documentation control system.
+The rebuilt target taxonomy should be modeled like this.
 
-### Required parts
+### Repository Operating Model side
 
-#### 1. Docs index
+This side should conceptually contain areas such as:
 
-A central docs index should explain the documentation tree and point agents to domain entry points.
+- governance
+- operating-model
+- agent-system
+- contribution
+- traceability
+- validation
+- standards
+- documentation rules
+- workflows
 
-#### 2. Canonical registry
+### Product Specification side
 
-A simple registry should list major concepts and their canonical files.
+This side should conceptually contain areas such as:
 
-Possible registry fields:
+- architecture
+- runtime
+- ai
+- dashboard
+- plugins
+- deployment
+- interfaces
+- security
+- state-machines
+- testing
+- platform integration
 
-- concept_name
-- canonical_file
-- document_type
-- owner
-- status
-- related_docs
-- notes
+### Supporting classes
 
-#### 3. Domain entry points
+Additional supporting classes should include:
 
-Each major documentation domain should have a clear entry document so agents do not need to scan the whole tree blindly.
+- ADR
+- reference
+- guide
+- historical
+- certification if ever intentionally restored
+- generated by exception only
 
-#### 4. Deprecation mapping
+## Migration rule
 
-If any file is replaced, the repository should record what replaced it.
+Even though the target taxonomy is correct, the repository should not be reorganized blindly in one large move without preparation.
 
-### What this system helps with
+### Why blind reorganization is risky
 
-This system turns documentation from passive reading material into an active navigation model that agents can follow during work.
+A direct large-scale move can cause:
 
-## File and folder policy to rebuild
+- broken cross-references
+- lost canonical relationships
+- temporary agent confusion
+- duplicated documents during transition
+- validators failing without a proper migration map
 
-The repository should define explicit placement rules.
+### Required migration approach
+
+Before major structural movement, the repository should define:
+
+1. exact canonical mappings
+2. document classes
+3. plane assignments
+4. index entry points
+5. validator expectations
+6. deprecation and supersession rules
+7. move sequencing
+
+Only then should structural reorganization proceed.
+
+## File and folder policy
 
 ### Root
 
-Root should contain only repository-level control files.
+The root should contain only repository-level control files and top-level entry points.
 
 ### docs/
 
-docs/ should contain the canonical knowledge base and structured supporting docs.
+docs/ should remain the main documentation knowledge base unless and until a deliberate structural split is executed.
 
-### Future tools/
+### Future repository-operating folders
 
-If tools/ is reintroduced, it should contain only intentionally maintained reusable programs, not generated output and not one-off experiments.
+If separate folders are created later for repository-operating classes, they should happen only through planned migration.
 
-### Future scripts/
+### Future product-spec folders
 
-If scripts/ is reintroduced, it should contain deterministic helper scripts that are clearly scoped, documented, and safe for automation.
+If separate folders are created later for product-spec classes, they should also happen through planned migration rather than spontaneous placement.
 
-### Future schemas/
+### Future tools/, scripts/, schemas/
 
-If schemas/ is reintroduced, it should happen only when schemas are truly part of canonical source material rather than speculative structure.
+If these are reintroduced, their purpose must be explicit and constrained:
 
-### Generated outputs
+- tools/ for maintained reusable tools
+- scripts/ for deterministic helper scripts
+- schemas/ only if schemas become true canonical source material
 
-Generated outputs should go only to ignored locations and should be reconstructible.
+They should not reappear as dumping grounds.
 
-## Change classification model to rebuild
+## Change classification model
 
-The repository should implement a practical change taxonomy.
+The rebuilt repository should use a change taxonomy strong enough to guide validation and review.
 
-### Recommended classes
+### Recommended change classes
 
-- docs-readability
-- docs-structure
-- docs-canonical
-- docs-deprecation
+- repository-operating-readability
+- repository-operating-structure
+- repository-operating-canonical
+- product-spec-readability
+- product-spec-structure
+- product-spec-canonical
 - repo-hygiene
 - validator-change
-- agent-policy-change
-- architecture-definition-change
+- taxonomy-change
+- deprecation-change
 - generated-cleanup
 
-### Why classification matters
+### Why this matters
 
-Classification lets agents and maintainers decide:
+This tells both humans and AI agents:
 
-- which docs must be read before editing
+- what class of truth is affected
 - which validators must run
-- which changes require stronger scrutiny
-- which commit style to use
+- whether plane boundaries are involved
+- whether the change is low risk or high caution
 
-## Commit and review expectations
+## Commit and review model
 
-A rebuilt system should define commit expectations clearly.
-
-### Good commit messages should explain
+### Commit messages should explain
 
 - what changed
 - why it changed
-- what operating layer it affected
-- whether the change touched canonical truth, structure, validation, or governance rules
-- whether generated artefacts were removed or prevented
+- which plane it affected
+- which document class it affected
+- whether it changed canonical meaning, structure, hygiene, or validation behavior
 
 ### Review should verify
 
-- canonical source was edited instead of a duplicate
+- correct plane selection
+- correct document class
+- canonical source was updated when needed
+- no duplicate truth source was introduced
 - references remain valid
 - metadata remains correct
-- placement rules were followed
-- no generated artefacts were committed
-- the change class matches the actual impact
+- generated artefacts were not committed
+- plane boundaries remain intact
 
 ## What should not be rebuilt in the same form
 
-The previous system became too heavy in certain areas. The rebuild should deliberately avoid recreating those heavy patterns unless there is a proven need.
+The rebuild should deliberately avoid recreating heavy structures before the lightweight core is stable.
 
-Avoid rebuilding these by default:
+Do not rebuild by default:
 
-- large committed export trees
-- bulky graph output directories
+- bulky committed export trees
+- large graph output repositories
 - repository-committed local databases
-- heavy closure artefact frameworks
-- broad ceremonial audit paperwork with little operational value
-- complex multi-phase governance machinery before the lightweight core is stable
+- ceremonial multi-phase audit machinery with low operational value
+- heavy closure artefact stacks
+- broad certification systems before the core operating model is stable
 
-The next system should begin with the smallest operating layer that still gives AI agents clear rules and dependable truth.
+The default rule should be:
+
+build the minimum high-value control plane first, then add only what proves necessary.
 
 ## Recommended rebuild sequence
 
@@ -603,37 +823,39 @@ The next system should begin with the smallest operating layer that still gives 
 
 Rebuild first:
 
-1. AGENTS.md as the primary agent operating contract.
-2. REBUILD-SYSTEM-SPECIFICATION.md as the root architectural intent document.
-3. docs/README.md or equivalent central docs index.
-4. canonical registry for major concepts.
+1. AGENTS.md as the agent operating contract.
+2. REBUILD-SYSTEM-SPECIFICATION.md as the root architecture of repository governance.
+3. central docs index and entry surfaces.
+4. canonical metadata conventions.
 5. generated-artifact policy and .gitignore rules.
 
-This phase establishes authority, entry points, and safe repository boundaries.
+This establishes authority, entry, and boundaries.
 
-### Phase 2 — Canonical documentation control
+### Phase 2 — Class and plane control
 
 Rebuild second:
 
-1. canonical metadata conventions
-2. canonical-versus-reference distinctions
-3. deprecation and supersession rules
-4. indexability rules for important docs
+1. documentation classes
+2. plane assignments
+3. canonical registry
+4. deprecation and supersession model
+5. naming rules for Repository AI versus Product AI
 
-This phase establishes semantic order in the knowledge base.
+This establishes semantic order.
 
-### Phase 3 — Integrity validation
+### Phase 3 — Validator core
 
 Rebuild third:
 
 1. cross-reference validator
-2. metadata validator
-3. orphan-doc detector
-4. duplicate canonical-concept detector
+2. canonical metadata validator
+3. duplicate canonical-concept detector
+4. orphan-document detector
 5. generated-artifact guard
 6. root-layout validator
+7. documentation-class validator
 
-This phase establishes testable repository integrity.
+This establishes enforceable repository integrity.
 
 ### Phase 4 — Agent workflow enforcement
 
@@ -642,73 +864,55 @@ Rebuild fourth:
 1. pre-change checklist
 2. post-change checklist
 3. change classification model
-4. commit and review rules
-5. high-risk change boundaries
+4. commit/review rules
+5. high-caution boundary definitions
 
-This phase establishes deterministic agent execution behavior.
+This establishes deterministic agent behavior.
 
-### Phase 5 — Optional supporting automation
+### Phase 5 — Structural migration
+
+Rebuild fifth:
+
+1. define migration map
+2. move docs gradually by class and plane
+3. repair references incrementally
+4. validate after each migration wave
+
+This establishes safe reorganization rather than chaotic movement.
+
+### Phase 6 — Optional supporting automation
 
 Rebuild last and only if justified:
 
-1. small helper scripts
+1. helper scripts
 2. compact reusable tools
-3. optional CI integration
-4. optional local-only reporting utilities
+3. optional CI checks
+4. local-only reporting utilities
+5. certification systems only if there is real operational need
 
-This phase adds convenience without recreating bloat.
-
-## What this full operating model helps with
-
-### For AI agents
-
-- tells them where truth lives
-- prevents improvisation against the wrong files
-- makes file placement predictable
-- distinguishes canonical docs from secondary docs
-- catches broken references quickly
-- prevents accidental generated-file commits
-- gives procedural steps before and after changes
-- reduces conflicting interpretations of repository structure
-
-### For maintainers
-
-- makes agent work easier to audit
-- makes repository structure easier to understand
-- reduces duplicate documentation and semantic drift
-- preserves a cleaner source-of-truth layer
-- makes resets and rebuilds less chaotic
-- improves confidence that future automation is acting on the correct files
-
-### For future rebuilds
-
-- creates a stable knowledge substrate before code or tooling expansion
-- lets future validators and tools be built against a well-defined repository model
-- keeps automation modular instead of tangled
-- creates a durable operating framework that multiple AI agents can share consistently
+This prevents return to unnecessary governance weight.
 
 ## Success criteria
 
-The rebuilt repository operating model is successful only if an AI agent can answer all of these questions clearly before changing anything:
+The rebuilt repository operating model is successful only if an AI agent can answer all of the following before changing anything:
 
-- What file is the canonical source for the concept I am changing?
-- What other files depend on that canonical file?
-- Is the target file canonical, reference, guide, historical, or generated?
+- Am I working in the Repository Operating Model plane or the Product Specification plane?
+- What is the canonical file for the concept I am changing?
+- What class of document am I editing?
 - Where does a new file of this type belong?
-- What validations must run after I change this?
+- What other files depend on this one?
+- What validators must run after the change?
 - What files must never be committed?
-- Does this change affect only readability, or does it affect repository truth and operating rules?
+- Does this change affect structure, readability, canonical meaning, validation, or governance boundaries?
 
 If the repository can answer those questions clearly, it is agent-operable.
 
 ## Final design principle
 
-The rebuilt system must be stronger than ad hoc documentation, but lighter than the deleted governance stack.
+The rebuilt system must be more structured than ad hoc documentation and lighter than the deleted governance platform.
 
-It should give AI agents enough structure to act safely and consistently without forcing the repository back into heavyweight operational ceremony.
+Its goal is not maximum governance overhead.
 
-The correct design goal is:
+Its goal is explicit authority, source-of-truth discipline, deterministic placement, lightweight validation, clean repository hygiene, and safe AI-agent execution.
 
-high clarity, explicit authority, deterministic placement, lightweight validation, and strong source-of-truth discipline.
-
-That is the right foundation for rebuilding the rest of the repository with AI agents working against canonical specifications instead of improvising from scattered files.
+That is the correct foundation for rebuilding the repository end to end with multiple AI agents working consistently against canonical documentation instead of improvising across a flat collection of files.
