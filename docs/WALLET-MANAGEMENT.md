@@ -25,8 +25,8 @@ Owns wallet discovery, creation, import, unlock, lock, rotation, permissions, an
 - Enforce signer permission boundaries and secret handling rules.
 
 ## Cross-references
-- `docs/SECURITY.md`
-- `docs/PERMISSION-MODEL.md`
+- `docs/security/SECURITY.md`
+- `docs/security/PERMISSION-MODEL.md`
 - `docs/TRANSACTION-LIFECYCLE.md`
 - `TOKEN-REGISTRY.md`
 

@@ -6,7 +6,7 @@ version: 1.0.0
 purpose: Defines the complete lifecycle of secrets — creation, storage, rotation, expiration, destruction, backup, and audit — for API keys, wallet private keys, provider credentials, and other sensitive material.
 scope: None
 last_updated: 2026-07-29
-canonical_source: docs/SECRET-LIFECYCLE.md
+canonical_source: docs/security/SECRET-LIFECYCLE.md
 ---
 
 # Secret Lifecycle

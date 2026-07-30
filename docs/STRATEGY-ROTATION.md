@@ -48,7 +48,7 @@ If a strategy fails SLO, disable it and alert through `NOTIFICATION-CENTER.md`.
 - `ORCHESTRATOR.md`
 - `ai/reasoning/AI-CONSENSUS.md`
 - `PERFORMANCE-SLOS.md`
-- `SECURITY-CONTRACTS.md`
+- `security/SECURITY-CONTRACTS.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

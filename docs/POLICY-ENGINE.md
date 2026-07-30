@@ -37,8 +37,8 @@ Trading, AI, security, recovery, failover, and operational thresholds.
 Policies load from a central config file and can be hot-reloaded. Policy changes require approval and are versioned.
 
 ## Cross-references
-- `CONFIGURATION.md`
-- `SECURITY-CONTRACTS.md`
+- `configuration/CONFIGURATION.md`
+- `security/SECURITY-CONTRACTS.md`
 - `RISK-ENGINE.md`
 - `AI-COST-MANAGEMENT.md`
 

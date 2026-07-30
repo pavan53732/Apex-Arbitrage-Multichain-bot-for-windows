@@ -37,7 +37,7 @@ This matrix is descriptive and used by AI routing, provider selection, and confi
 - `ai/runtime/AI-PIPELINE.md`
 - `CLOUD-AI-INTEGRATION.md`
 - `ai/providers/AI-SETTINGS.md`
-- `CONFIGURATION.md`
+- `configuration/CONFIGURATION.md`
 
 ## Orchestration boundary
 This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `ai/runtime/AI-PIPELINE.md`.

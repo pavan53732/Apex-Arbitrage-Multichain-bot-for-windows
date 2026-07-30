@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ui Dashboard Spec documentation.
 scope: Reference documentation.
-canonical_source: docs/UI-DASHBOARD-SPEC.md
+canonical_source: docs/dashboard/UI-DASHBOARD-SPEC.md
 ---
 
 # Ui Dashboard Spec

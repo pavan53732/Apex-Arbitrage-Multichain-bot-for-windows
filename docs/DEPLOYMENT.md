@@ -21,7 +21,7 @@ Defines build pipeline, packaging, testing gates, release promotion, rollback ex
 
 ## Ownership
 - Owns packaging, installer flow, release channels, and upgrade/rollback procedures.
-- Consumes `RUNTIME-OPERATIONS.md`, `TESTING-GUIDE.md`, and `SECURITY.md`.
+- Consumes `RUNTIME-OPERATIONS.md`, `TESTING-GUIDE.md`, and `security/SECURITY.md`.
 
 ## Release stages
 - Build.
@@ -42,7 +42,7 @@ Defines build pipeline, packaging, testing gates, release promotion, rollback ex
 - `WINDOWS-DESKTOP.md`
 - `BUILD-RELEASE-CICD.md`
 - `RUNTIME-OPERATIONS.md`
-- `SECURITY.md`
+- `security/SECURITY.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

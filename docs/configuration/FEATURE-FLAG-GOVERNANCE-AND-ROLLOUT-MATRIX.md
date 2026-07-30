@@ -6,7 +6,7 @@ version: 1.0.0
 purpose: Defines the complete feature-flag governance and rollout matrix — flag lifecycle, rollout policies, gating rules, dependency tracking, rollback procedures, and observability for every feature flag in the platform.
 scope: None
 last_updated: 2026-07-29
-canonical_source: docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md
+canonical_source: docs/configuration/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md
 ---
 
 # Feature Flag Governance and Rollout Matrix

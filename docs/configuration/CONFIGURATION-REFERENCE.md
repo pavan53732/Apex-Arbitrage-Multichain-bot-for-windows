@@ -6,7 +6,7 @@ version: 1.0.0
 purpose: Enumerates every configuration key, owner, type, default, validation, reload, and restart requirement.
 scope: Configuration Reference scope and boundaries.
 last_updated: 2026-07-29
-canonical_source: docs/CONFIGURATION-REFERENCE.md
+canonical_source: docs/configuration/CONFIGURATION-REFERENCE.md
 ---
 
 # Configuration Reference
@@ -208,7 +208,7 @@ When multiple configuration sources define the same key, the following precedenc
 1. **Encrypted user overrides** (highest)
 2. **Session-only runtime overrides** (where allowed — see `Reload` column)
 3. **Environment variables** (prefixed with `APEX_` — e.g. `APEX_RISK_MAX_POSITION_USD`)
-4. **Profile-based overrides** (per `CONFIGURATION-PROFILES.md`)
+4. **Profile-based overrides** (per `configuration/CONFIGURATION-PROFILES.md`)
 5. **Installation profile defaults** (per-platform recommended defaults)
 6. **Bundled application defaults**
 7. **Secure hardcoded fallbacks** (lowest)

@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Defines dashboard widgets.
 scope: Widget specification.
-canonical_source: docs/DASHBOARD-WIDGETS.md
+canonical_source: docs/dashboard/DASHBOARD-WIDGETS.md
 ---
 
 # Dashboard Widgets

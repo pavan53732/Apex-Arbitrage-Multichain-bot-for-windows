@@ -20,7 +20,7 @@ Prime-Directive violation (short docs must declare their type
 consistently). The authoritative Workspace Manager service CONTRACT —
 state machine, schema, API, events, configuration ownership, and
 cross-subsystem wiring — is owned exclusively by
-**`docs/DASHBOARD-WORKSPACES.md`**. This file exists only as a stable,
+**`docs/dashboard/DASHBOARD-WORKSPACES.md`**. This file exists only as a stable,
 short-form entry point referenced elsewhere in the documentation set
 (see `docs/DOCUMENTATION-MAP.md`, `docs/README.md`).
 
@@ -39,9 +39,9 @@ stateDiagram-v2
 ```
 
 ## Cross-references
-- `DASHBOARD-WORKSPACES.md`
+- `dashboard/DASHBOARD-WORKSPACES.md`
 - `WINDOWS-DESKTOP.md`
-- `CONFIGURATION-PROFILES.md`
+- `configuration/CONFIGURATION-PROFILES.md`
 
 ## Operational Contract
 Defines workspace composition, layout, settings, dashboard bindings, provider selection, and recovery state.

@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ui Component Spec documentation.
 scope: Reference documentation.
-canonical_source: docs/UI-COMPONENT-SPEC.md
+canonical_source: docs/ui/UI-COMPONENT-SPEC.md
 ---
 
 # Ui Component Spec
@@ -31,9 +31,9 @@ Defines reusable UI components for the desktop trading app.
 - Notification area.
 
 ## Cross-references
-- `UI-DASHBOARD-SPEC.md`
-- `DASHBOARD-WIDGETS.md`
-- `UX-GUIDELINES.md`
+- `dashboard/UI-DASHBOARD-SPEC.md`
+- `dashboard/DASHBOARD-WIDGETS.md`
+- `ui/UX-GUIDELINES.md`
 - `WINDOWS-DESKTOP.md`
 
 ## Core components

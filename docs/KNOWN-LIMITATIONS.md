@@ -21,7 +21,7 @@ Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `DEPLOYMENT.md`
-- `SECURITY.md`
+- `security/SECURITY.md`
 - `WINDOWS-DESKTOP.md`
 
 ## Operational Contract

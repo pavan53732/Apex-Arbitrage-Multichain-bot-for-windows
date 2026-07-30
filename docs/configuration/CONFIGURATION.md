@@ -6,7 +6,7 @@ status: Canonical
 version: 1.1.0
 purpose: Defines configuration management, schema, and lifecycle.
 scope: Configuration schema, validation, hot-reload, and versioning.
-canonical_source: docs/CONFIGURATION.md
+canonical_source: docs/configuration/CONFIGURATION.md
 ---
 
 # Configuration
@@ -43,13 +43,13 @@ Defines runtime and operational configuration — precedence, validation, secret
 
 ## 2. Key Reference Authority
 
-`CONFIGURATION-REFERENCE.md` is the **canonical key-by-key configuration reference**. It defines:
+`configuration/CONFIGURATION-REFERENCE.md` is the **canonical key-by-key configuration reference**. It defines:
 - Every configuration key, type, default, owner, validation rule.
 - Reload vs Restart semantics per key.
 - Conflict resolution rules.
 - Environment variable mapping.
 
-This document (`CONFIGURATION.md`) owns **precedence, profiles, secrets, and governance**. `CONFIGURATION-REFERENCE.md` owns **key definitions**.
+This document (`configuration/CONFIGURATION.md`) owns **precedence, profiles, secrets, and governance**. `configuration/CONFIGURATION-REFERENCE.md` owns **key definitions**.
 
 ---
 
@@ -90,7 +90,7 @@ This document (`CONFIGURATION.md`) owns **precedence, profiles, secrets, and gov
 
 ## 5. Profile Management
 
-See `CONFIGURATION-PROFILES.md` for full profile governance. This document establishes:
+See `configuration/CONFIGURATION-PROFILES.md` for full profile governance. This document establishes:
 
 | Profile | Purpose | Override Level | Switch Method |
 |---------|---------|----------------|---------------|

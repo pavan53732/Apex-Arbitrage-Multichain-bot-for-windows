@@ -42,7 +42,7 @@ Refresh from kernel, registries, health probes, and event stream.
 - `APEX-KERNEL.md`
 - `HEALTHCHECKS.md`
 - `MONITORING-OBSERVABILITY.md`
-- `DASHBOARD-WORKSPACES.md`
+- `dashboard/DASHBOARD-WORKSPACES.md`
 
 ## Operational Contract
 Defines the live system view of active chains, plugins, workers, wallets, provider capabilities, health, and metrics.

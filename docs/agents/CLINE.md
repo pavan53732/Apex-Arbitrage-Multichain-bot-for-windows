@@ -36,7 +36,7 @@ Guidance for Cline-based coding agents contributing to this repository.
 - `docs/ai/providers/AI-PROVIDER-MANAGER.md`
 - `docs/MODEL-CAPABILITY-NEGOTIATION.md`
 - `docs/RUNTIME-OPERATIONS.md`
-- `docs/SECURITY-CONTRACTS.md`
+- `docs/security/SECURITY-CONTRACTS.md`
 
 ## Working rule
 Only implement what the authoritative docs already define.

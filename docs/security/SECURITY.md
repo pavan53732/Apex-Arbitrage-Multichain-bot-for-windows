@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Defines security model, threat boundaries, and security controls.
 scope: Security architecture, threat model, and security controls.
-canonical_source: docs/SECURITY.md
+canonical_source: docs/security/SECURITY.md
 ---
 
 # Security
@@ -74,7 +74,7 @@ All cross-domain communication must pass through the **IPC Security Gateway**, w
 
 ## 3. Secret Lifecycle Integration
 
-Secrets follow the full lifecycle defined in `SECRET-LIFECYCLE.md`. This document establishes binding:
+Secrets follow the full lifecycle defined in `security/SECRET-LIFECYCLE.md`. This document establishes binding:
 
 | Secret Type | Classification | Storage | Rotation | Used By |
 |-------------|----------------|---------|----------|---------|
@@ -94,7 +94,7 @@ Secrets follow the full lifecycle defined in `SECRET-LIFECYCLE.md`. This documen
 
 ## 4. Permission Model Integration
 
-The permission model (detailed in `PERMISSION-MODEL.md`) defines:
+The permission model (detailed in `security/PERMISSION-MODEL.md`) defines:
 
 | Role | Scope | Permissions |
 |------|-------|-------------|

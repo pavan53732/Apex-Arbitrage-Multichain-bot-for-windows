@@ -35,7 +35,7 @@ Before editing code, verify the canonical owner docs for the feature area. Do no
 - `docs/TRADING-LIFECYCLE.md`
 - `docs/EXECUTION-LIFECYCLE.md`
 - `docs/DATABASE-SCHEMA.md`
-- `docs/SECURITY-CONTRACTS.md`
+- `docs/security/SECURITY-CONTRACTS.md`
 
 ## Working rule
 If the behavior is not explicit in the owner docs, stop and ask for clarification rather than inventing implementation details.

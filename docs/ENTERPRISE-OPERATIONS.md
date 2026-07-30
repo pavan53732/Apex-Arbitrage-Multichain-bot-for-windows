@@ -20,11 +20,11 @@ This document is an overview, reference, or index as noted below.
 Defines workspace profiles, import/export, backup, restore, version history, and configuration snapshots.
 
 ## Cross-references
-- `CONFIGURATION.md`
+- `configuration/CONFIGURATION.md`
 - `RUNTIME-OPERATIONS.md`
 
 
-For workspace, see `DASHBOARD-WORKSPACES.md`.
+For workspace, see `dashboard/DASHBOARD-WORKSPACES.md`.
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

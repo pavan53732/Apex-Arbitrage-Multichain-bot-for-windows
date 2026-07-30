@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Feature Flags documentation.
 scope: Reference documentation.
-canonical_source: docs/FEATURE-FLAGS.md
+canonical_source: docs/configuration/FEATURE-FLAGS.md
 ---
 
 # Feature Flags
@@ -40,7 +40,7 @@ Unsafe rollout, invalid default, conflicting environment override.
 Rollback, disable, or pin to previous version.
 
 ## Cross-references
-- `CONFIGURATION.md`
+- `configuration/CONFIGURATION.md`
 - `POLICY-ENGINE.md`
 - `VERSIONING.md`
 

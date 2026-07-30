@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ux Guidelines documentation.
 scope: Reference documentation.
-canonical_source: docs/UX-GUIDELINES.md
+canonical_source: docs/ui/UX-GUIDELINES.md
 ---
 
 # Ux Guidelines
@@ -31,7 +31,7 @@ This document covers spacing, motion, loading states, empty states, errors, and 
 
 ## Cross-references
 - `WINDOWS-DESKTOP.md`
-- `UI-COMPONENT-SPEC.md`
+- `ui/UI-COMPONENT-SPEC.md`
 - `DESIGNER-PROTOCOLS.md`
 - `USER-FLOWS.md`
 

@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Defines dashboard runtime.
 scope: Dashboard runtime management.
-canonical_source: docs/DASHBOARD-RUNTIME.md
+canonical_source: docs/dashboard/DASHBOARD-RUNTIME.md
 ---
 
 # Dashboard Runtime

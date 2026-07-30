@@ -52,7 +52,7 @@ Defines global performance, reliability, security, maintainability, and operabil
 
 ## Cross-references
 - `docs/PERFORMANCE-TARGETS.md`
-- `docs/SECURITY.md`
+- `docs/security/SECURITY.md`
 - `docs/MONITORING-OBSERVABILITY.md`
 - `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/RUNTIME-OPERATIONS.md`

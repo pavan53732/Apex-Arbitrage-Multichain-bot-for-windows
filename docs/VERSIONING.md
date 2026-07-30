@@ -35,7 +35,7 @@ This document covers semantic versioning, compatibility, deprecation, and migrat
 ## Cross-references
 - `DATABASE-SCHEMA.md`
 - `API-CONTRACTS.md`
-- `CONFIGURATION.md`
+- `configuration/CONFIGURATION.md`
 - `IMPLEMENTATION-ROADMAP.md`
 - `MODULE-DEPENDENCY.md`
 

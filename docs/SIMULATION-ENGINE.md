@@ -288,7 +288,7 @@ For canonical entities and performance tracking, see `DOMAIN-MODEL.md` and `METR
 ## Enterprise Contract – Simulation Engine
 - Interfaces: `INTERFACE-TOOL-CALL.md`.
 - State machine: `TRADING-LIFECYCLE.md`, `EXECUTION-LIFECYCLE.md`.
-- Security boundaries: `SECURITY-CONTRACTS.md`.
+- Security boundaries: `security/SECURITY-CONTRACTS.md`.
 - Performance SLOs: `PERFORMANCE-SLOS.md`.
 - Failure modes: non-deterministic simulation, stale market data, invalid assumptions; recover via deterministic replay and abort.
 

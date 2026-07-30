@@ -6,7 +6,7 @@ version: 1.0.0
 purpose: Defines the layout model for the Windows desktop dashboard — layout architecture, docking system, layout serialization, workspace restore, DPI scaling, multi-monitor behavior, responsive regions, split views, tab sets, and layout integration contracts.
 scope: Dashboard Layout scope and boundaries.
 last_updated: 2026-07-29
-canonical_source: docs/DASHBOARD-LAYOUT.md
+canonical_source: docs/dashboard/DASHBOARD-LAYOUT.md
 ---
 
 # Dashboard Layout

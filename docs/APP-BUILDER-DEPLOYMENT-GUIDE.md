@@ -29,6 +29,6 @@ Defines how the Windows app is deployed to users and updated safely.
 
 ## Cross-references
 - `WINDOWS-DEPLOYMENT.md`
-- `CONFIGURATION.md`
-- `SECURITY-CONTRACTS.md`
+- `configuration/CONFIGURATION.md`
+- `security/SECURITY-CONTRACTS.md`
 - `CHANGELOG.md`

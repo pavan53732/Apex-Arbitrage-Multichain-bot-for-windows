@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Defines dashboard workspaces.
 scope: Workspace management.
-canonical_source: docs/DASHBOARD-WORKSPACES.md
+canonical_source: docs/dashboard/DASHBOARD-WORKSPACES.md
 ---
 
 # Dashboard Workspaces

@@ -38,7 +38,7 @@ Guidance for GITHUB COPILOT CLI coding agents contributing to this repository.
 - `docs/TRADING-LIFECYCLE.md`
 - `docs/EXECUTION-LIFECYCLE.md`
 - `docs/DATABASE-SCHEMA.md`
-- `docs/SECURITY-CONTRACTS.md`
+- `docs/security/SECURITY-CONTRACTS.md`
 
 ## Working rule
 If the repository does not define the behavior, do not guess.

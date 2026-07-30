@@ -46,7 +46,7 @@ New deployments are selected via configuration and governance approval, not auto
 Must be secured with multi-sig and emergency pause controls.
 
 ## Cross-references
-- `SECURITY-CONTRACTS.md`
+- `security/SECURITY-CONTRACTS.md`
 - `CHAIN-REGISTRY.md`
 - `ORCHESTRATOR.md`
 

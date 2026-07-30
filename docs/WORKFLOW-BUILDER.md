@@ -43,7 +43,7 @@ Pause workflow, require correction, or route to fallback manual operation.
 - `EVENT-BUS.md`
 - `POLICY-ENGINE.md`
 - `ORCHESTRATOR.md`
-- `UI-DASHBOARD-SPEC.md`
+- `dashboard/UI-DASHBOARD-SPEC.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

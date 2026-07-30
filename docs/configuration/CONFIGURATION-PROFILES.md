@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Configuration Profiles documentation.
 scope: Reference documentation.
-canonical_source: docs/CONFIGURATION-PROFILES.md
+canonical_source: docs/configuration/CONFIGURATION-PROFILES.md
 ---
 
 # Configuration Profiles
@@ -39,9 +39,9 @@ Conflicting override, missing parent, invalid profile selection.
 Fallback to safe defaults and validate merged config.
 
 ## Cross-references
-- `CONFIGURATION.md`
+- `configuration/CONFIGURATION.md`
 - `ai/providers/AI-SETTINGS.md`
-- `DASHBOARD-WORKSPACES.md`
+- `dashboard/DASHBOARD-WORKSPACES.md`
 - `TRACEABILITY-MATRIX.md`
 
 ## Governance Rules

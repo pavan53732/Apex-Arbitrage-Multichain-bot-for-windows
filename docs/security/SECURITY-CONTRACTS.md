@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Security Contracts documentation.
 scope: Reference documentation.
-canonical_source: docs/SECURITY-CONTRACTS.md if filename.startswith('docs/') else SECURITY-CONTRACTS.md
+canonical_source: docs/security/SECURITY-CONTRACTS.md if filename.startswith('docs/') else SECURITY-CONTRACTS.md
 ---
 
 # Security Contracts
@@ -21,9 +21,9 @@ Document type: [REFERENCE]
 Declares high-level security policy for the platform.
 
 ## Authority
-Detailed security architecture, trust boundaries, secret lifecycle, permission model, incident response, and monitoring are owned by `SECURITY.md`.
+Detailed security architecture, trust boundaries, secret lifecycle, permission model, incident response, and monitoring are owned by `security/SECURITY.md`.
 
-Policy mandates from this document are enforced by `SECURITY.md` and `SECURITY.md` §7 (Monitoring Events).
+Policy mandates from this document are enforced by `security/SECURITY.md` and `security/SECURITY.md` §7 (Monitoring Events).
 
 ## Mandated Controls
 - **Secret storage**: Secrets must use the OS keychain; never stored in `.env` files.
@@ -33,10 +33,10 @@ Policy mandates from this document are enforced by `SECURITY.md` and `SECURITY.m
 - **Audit log**: Every state transition logs user ID, timestamp, and immutable hash.
 
 ## Cross-References
-- `SECURITY.md` — Full security architecture.
-- `PERMISSION-MODEL.md` — Role/action permission matrix.
+- `security/SECURITY.md` — Full security architecture.
+- `security/PERMISSION-MODEL.md` — Role/action permission matrix.
 - `TRUST-BOUNDARIES.md` — Trust domain definitions.
-- `SECRET-LIFECYCLE.md` — Secret lifecycle details.
+- `security/SECRET-LIFECYCLE.md` — Secret lifecycle details.
 - `TRACEABILITY-MATRIX.md`
 
 ---

@@ -134,11 +134,11 @@ Completion criteria: settings confirmed.
 - `TRADING-ENGINE.md`
 - `RUNTIME-OPERATIONS.md`
 - `ai/runtime/AI-PIPELINE.md`
-- `SECURITY.md`
-- `CONFIGURATION.md`
-- `DASHBOARD-LAYOUT.md`
-- `DASHBOARD-WIDGETS.md`
-- `UX-GUIDELINES.md`
+- `security/SECURITY.md`
+- `configuration/CONFIGURATION.md`
+- `dashboard/DASHBOARD-LAYOUT.md`
+- `dashboard/DASHBOARD-WIDGETS.md`
+- `ui/UX-GUIDELINES.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

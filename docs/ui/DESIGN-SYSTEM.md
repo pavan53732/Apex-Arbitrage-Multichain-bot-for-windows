@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Design System documentation.
 scope: Reference documentation.
-canonical_source: docs/DESIGN-SYSTEM.md
+canonical_source: docs/ui/DESIGN-SYSTEM.md
 ---
 
 # Design System
@@ -21,7 +21,7 @@ Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `DESIGNER-PROTOCOLS.md`
-- `UI-COMPONENT-SPEC.md`
+- `ui/UI-COMPONENT-SPEC.md`
 - `WINDOWS-DESKTOP.md`
 
 ## Governance Rules

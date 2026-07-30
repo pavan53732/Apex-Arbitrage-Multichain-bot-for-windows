@@ -39,7 +39,7 @@ Navigation-only document pointing to the authoritative owner(s).
 
 - [TRADING-LIFECYCLE.md](./TRADING-LIFECYCLE.md) – Defines the complete state machine for trade discovery, risk, execution, and settlement.
 - [EXECUTION-LIFECYCLE.md](./EXECUTION-LIFECYCLE.md) – Specifies the order submission, signing, broadcasting, and confirmation state transitions.
-- [SECURITY-CONTRACTS.md](./SECURITY-CONTRACTS.md) – Codifies secret handling, wallet signing, plugin sandboxing, emergency stop, and audit logging.
+- [SECURITY-CONTRACTS.md](security/SECURITY-CONTRACTS.md) – Codifies secret handling, wallet signing, plugin sandboxing, emergency stop, and audit logging.
 - [PERFORMANCE-SLOS.md](./PERFORMANCE-SLOS.md) – Declares numeric latency, throughput, and budget SLOs for all major subsystems.
 - [STRATEGY-ROTATION.md](./STRATEGY-ROTATION.md) – Defines strategy scoring, rotation, fallback, and monitoring.
 - [CHAIN-ROTATION.md](./CHAIN-ROTATION.md) – Defines chain prioritization, allocation, and demotion rules.
@@ -51,7 +51,7 @@ Navigation-only document pointing to the authoritative owner(s).
 - [EVENT-BUS.md](./EVENT-BUS.md) – Defines the pub/sub backbone for agents, workers, and UI.
 - [WORKER-POOL.md](./WORKER-POOL.md) – Defines worker lifecycle, queue priority, and scaling policy.
 - [REGISTRY-SYSTEM.md](./REGISTRY-SYSTEM.md) – Defines the unified registry interface and governance rules.
-- [DASHBOARD-WORKSPACES.md](./DASHBOARD-WORKSPACES.md) – Defines workspace persistence, restore, and isolation.
+- [DASHBOARD-WORKSPACES.md](dashboard/DASHBOARD-WORKSPACES.md) – Defines workspace persistence, restore, and isolation.
 - [LEARNING-PIPELINE.md](./LEARNING-PIPELINE.md) – Defines the retraining, evaluation, and promotion pipeline.
 - [DECISION-ENGINE.md](./DECISION-ENGINE.md) – Defines the authoritative approval gate between recommendation and execution.
 - [POLICY-ENGINE.md](./POLICY-ENGINE.md) – Defines the central source of truth for configurable governance policies.
@@ -68,8 +68,8 @@ Navigation-only document pointing to the authoritative owner(s).
 - [CONTEXT-BUILDER.md](./CONTEXT-BUILDER.md) – Defines how structured context is assembled before AI requests.
 - [RUNTIME-KNOWLEDGE.md](./RUNTIME-KNOWLEDGE.md) – Defines the system’s live self-knowledge at runtime.
 - [SYSTEM-CAPABILITY-REGISTRY.md](./SYSTEM-CAPABILITY-REGISTRY.md) – Defines platform capability discovery independent of names.
-- [FEATURE-FLAGS.md](./FEATURE-FLAGS.md) – Defines controlled rollout states for features.
-- [CONFIGURATION-PROFILES.md](./CONFIGURATION-PROFILES.md) – Defines profile inheritance and overrides.
+- [FEATURE-FLAGS.md](configuration/FEATURE-FLAGS.md) – Defines controlled rollout states for features.
+- [CONFIGURATION-PROFILES.md](configuration/CONFIGURATION-PROFILES.md) – Defines profile inheritance and overrides.
 - [AI-REASONING-POLICY.md](ai/reasoning/AI-REASONING-POLICY.md) – Defines when AI may advise versus when determinism is required.
 - [AI-CONTEXT-WINDOW-MANAGEMENT.md](ai/runtime/AI-CONTEXT-WINDOW-MANAGEMENT.md) – Defines context compression and token budgeting.
 - [MODEL-CAPABILITY-NEGOTIATION.md](./MODEL-CAPABILITY-NEGOTIATION.md) – Defines automatic AI capability detection and negotiation.

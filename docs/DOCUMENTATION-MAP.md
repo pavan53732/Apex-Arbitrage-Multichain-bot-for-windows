@@ -44,8 +44,8 @@ Defines ownership, authority, and cross-reference rules for the documentation se
 - AI memory system: `docs/ai/memory/AI-MEMORY-SYSTEM.md`
   - Deprecated: `docs/ai/memory/AI-MEMORY.md` → redirects to `ai/memory/AI-MEMORY-SYSTEM.md`
 - Error handling and logging: `docs/ERROR-HANDLING-LOGGING.md`
-- Permission model: `docs/PERMISSION-MODEL.md`
-- Security contracts: `docs/SECURITY-CONTRACTS.md` (policy mandates enforced by `SECURITY.md`)
+- Permission model: `docs/security/PERMISSION-MODEL.md`
+- Security contracts: `docs/security/SECURITY-CONTRACTS.md` (policy mandates enforced by `security/SECURITY.md`)
 - Market data: `docs/MARKET-DATA.md`
 - Market intelligence: `docs/MARKET-INTELLIGENCE.md`
 - Opportunity detection detail: `docs/OPPORTUNITY-DETECTION.md` (owned under market intelligence authority)
@@ -72,9 +72,9 @@ Defines ownership, authority, and cross-reference rules for the documentation se
 - Recovery and failover: `docs/RECOVERY-AND-FAILOVER.md`
 - Monitoring and observability: `docs/MONITORING-OBSERVABILITY.md`
 - Error handling and logging: `docs/ERROR-HANDLING-LOGGING.md`
-- Security: `docs/SECURITY.md`
-- Permission model: `docs/PERMISSION-MODEL.md`
-- Configuration: `docs/CONFIGURATION.md`
+- Security: `docs/security/SECURITY.md`
+- Permission model: `docs/security/PERMISSION-MODEL.md`
+- Configuration: `docs/configuration/CONFIGURATION.md`
 - Database schema: `docs/DATABASE-SCHEMA.md`
 - State management: `docs/STATE-MANAGEMENT.md`
 - IPC protocol: `docs/IPC-PROTOCOL.md` (CONTRACT; v1.0.0)
@@ -89,7 +89,7 @@ Defines ownership, authority, and cross-reference rules for the documentation se
 - User guide: `docs/USER-GUIDE.md`
 - Deployment and operations: `docs/DEPLOYMENT.md`
 - Windows desktop shell: `docs/WINDOWS-DESKTOP.md`
-- UI component spec: `docs/UI-COMPONENT-SPEC.md`
+- UI component spec: `docs/ui/UI-COMPONENT-SPEC.md`
 - Designer protocols: `docs/DESIGNER-PROTOCOLS.md`
 - Testing guide: `docs/TESTING-GUIDE.md`
 - Skills and agents: `docs/SKILLS.md`, `docs/AGENTS.md`
@@ -104,7 +104,7 @@ These must not claim ownership and should only point to owners:
 - `docs/CODING-STANDARDS.md`
 - `docs/CONTRIBUTING.md`
 - `docs/DECISION-LOG.md`
-- `docs/DESIGN-SYSTEM.md`
+- `docs/ui/DESIGN-SYSTEM.md`
 - `docs/ENHANCEMENT-ROADMAP.md`
 - `docs/FAQ.md`
 - `docs/FEATURE-MATRIX.md`
@@ -138,9 +138,9 @@ These must not claim ownership and should only point to owners:
 - DEX registry: `docs/DEX-REGISTRY.md` (Registry; owned by market/data/routing authority; lists supported DEXs and DEX metadata.)
 - Token registry: `docs/TOKEN-REGISTRY.md` (Registry; owned by market/data/routing authority; lists token definitions and addresses.)
 - Oracle registry: `docs/ORACLE-REGISTRY.md` (Registry; owned by market/data/routing authority; lists oracle providers and feeds.)
-- Dashboard widgets: `docs/DASHBOARD-WIDGETS.md` (Authoritative; owned by desktop/UI authority; defines the available dashboard widgets.)
-- Dashboard layout: `docs/DASHBOARD-LAYOUT.md` (Authoritative; owned by desktop/UI authority; defines layout, grid, and responsive behavior.)
-- UX guidelines: `docs/UX-GUIDELINES.md` (Authoritative; owned by desktop/UI authority; defines interaction and presentation standards.)
+- Dashboard widgets: `docs/dashboard/DASHBOARD-WIDGETS.md` (Authoritative; owned by desktop/UI authority; defines the available dashboard widgets.)
+- Dashboard layout: `docs/dashboard/DASHBOARD-LAYOUT.md` (Authoritative; owned by desktop/UI authority; defines layout, grid, and responsive behavior.)
+- UX guidelines: `docs/ui/UX-GUIDELINES.md` (Authoritative; owned by desktop/UI authority; defines interaction and presentation standards.)
 - Versioning: `docs/VERSIONING.md` (Support; owned by governance/schema/config/API authorities; describes versioning strategy.)
 
 
@@ -160,7 +160,7 @@ These must not claim ownership and should only point to owners:
 - Runtime flow lifecycle: `docs/RUNTIME-FLOW-LIFECYCLE.md` (CONTRACT; v1.0.0; owns 10 runtime flows with step-by-step sequencing)
 - State machine index: `docs/STATE-MACHINE-INDEX.md` (INDEX; v1.1.0; owns inter-state-machine coupling, startup/shutdown state coupling, recovery coordination)
 - Recovery coordination: `docs/RECOVERY-COORDINATION.md` (CONTRACT; owns multi-failure recovery coordination, phased recovery ordering)
-- Feature flag governance: `docs/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md` (CONTRACT; owns feature flag definitions, rollout stages)
+- Feature flag governance: `docs/configuration/FEATURE-FLAG-GOVERNANCE-AND-ROLLOUT-MATRIX.md` (CONTRACT; owns feature flag definitions, rollout stages)
 - Documentation status review: `docs/DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md` (CONTRACT; owns documentation review and lifecycle governance)
 
 ## Windows Platform contracts (deepened Phase 5)
@@ -168,15 +168,15 @@ These must not claim ownership and should only point to owners:
 - Windows service integration: `docs/WINDOWS-SERVICE-INTEGRATION.md` (CONTRACT; v1.0.0; owns service lifecycle state machine, recovery actions, session 0)
 - Windows network resilience: `docs/WINDOWS-NETWORK-RESILIENCE.md` (CONTRACT; v1.0.0; owns network detection, reconnect backoff, proxy handling, DNS)
 - Windows notification integration: `docs/WINDOWS-NOTIFICATION-INTEGRATION.md` (CONTRACT; v1.0.0; owns notification channels, severity mapping, rate limiting)
-- Windows security integration: `docs/WINDOWS-SECURITY-INTEGRATION.md` (CONTRACT; v1.0.0; owns DPAPI, code signing, update chain, AppContainer)
+- Windows security integration: `docs/security/WINDOWS-SECURITY-INTEGRATION.md` (CONTRACT; v1.0.0; owns DPAPI, code signing, update chain, AppContainer)
 - Windows desktop: `docs/WINDOWS-DESKTOP.md` (CONTRACT; v1.0.0; owns window states, first-run wizard, offline/degraded UI)
 - Windows deployment: `docs/WINDOWS-DEPLOYMENT.md` (CONTRACT; v1.0.0; owns 3 package formats, installer lifecycle, update/rollback)
 
 ## Deepened subsystem contracts (Phase 5)
-- Dashboard widgets: `docs/DASHBOARD-WIDGETS.md` (CONTRACT; v1.0.0; deepened — lifecycle hooks, rendering pipeline, dependency graph)
-- Dashboard runtime: `docs/DASHBOARD-RUNTIME.md` (CONTRACT; v1.0.0; deepened — init sequence, IPC bridge contract)
-- Dashboard layout: `docs/DASHBOARD-LAYOUT.md` (CONTRACT; v1.0.0; deepened — dock contract schema, layout serialization + migration)
-- Dashboard workspaces: `docs/DASHBOARD-WORKSPACES.md` (CONTRACT; v1.0.0; deepened — cross-subsystem integration)
+- Dashboard widgets: `docs/dashboard/DASHBOARD-WIDGETS.md` (CONTRACT; v1.0.0; deepened — lifecycle hooks, rendering pipeline, dependency graph)
+- Dashboard runtime: `docs/dashboard/DASHBOARD-RUNTIME.md` (CONTRACT; v1.0.0; deepened — init sequence, IPC bridge contract)
+- Dashboard layout: `docs/dashboard/DASHBOARD-LAYOUT.md` (CONTRACT; v1.0.0; deepened — dock contract schema, layout serialization + migration)
+- Dashboard workspaces: `docs/dashboard/DASHBOARD-WORKSPACES.md` (CONTRACT; v1.0.0; deepened — cross-subsystem integration)
 - AI provider manager: `docs/ai/providers/AI-PROVIDER-MANAGER.md` (CONTRACT; v1.0.0; deepened — 7-provider inventory, scoring algorithm, failover matrix)
 - Trading engine: `docs/TRADING-ENGINE.md` (CONTRACT; v1.0.0; deepened — 11-step execution algorithm, risk scoring, MEV decision tree)
 - Execution engine: `docs/EXECUTION-ENGINE.md` (CONTRACT; v1.0.0; deepened — multi-chain execution, gas handling)
@@ -186,11 +186,11 @@ These must not claim ownership and should only point to owners:
 - Plugin lifecycle: `docs/PLUGIN-LIFECYCLE.md` (CONTRACT; v1.0.0; deepened — discovery, dependency resolution, capability negotiation)
 - Event bus: `docs/EVENT-BUS.md` (CONTRACT; v1.0.0; deepened — producer/consumer contracts, exactly-once protocol, DLQ)
 - Database schema: `docs/DATABASE-SCHEMA.md` (CONTRACT; v1.0.0; deepened — query patterns, backup/restore, partitioning)
-- Security: `docs/SECURITY.md` (CONTRACT; v1.0.0; deepened — STRIDE threat model, secure update chain)
+- Security: `docs/security/SECURITY.md` (CONTRACT; v1.0.0; deepened — STRIDE threat model, secure update chain)
 - Testing: `docs/TESTING.md` (CONTRACT; v1.0.0; deepened — 10-layer pyramid, contract/state-machine/chaos testing)
 - IPC protocol: `docs/IPC-PROTOCOL.md` (CONTRACT; v1.0.0; deepened — named pipe transport, envelope schema, typed channel catalog, delivery semantics, versioning, anonymization)
 - IPC message catalog: `docs/IPC-MESSAGE-CATALOG.md` (REFERENCE; v1.0.0; deepened — complete message type catalog with 7 categories, payload schemas, error behavior)## Product surface contracts
-- UI Dashboard: `docs/UI-DASHBOARD-SPEC.md`
+- UI Dashboard: `docs/dashboard/UI-DASHBOARD-SPEC.md`
 - AI Provider Manager: `docs/ai/providers/AI-PROVIDER-MANAGER.md`
 - AI Gateway: `docs/ai/runtime/AI-GATEWAY.md`
 - AI Memory System: `docs/ai/memory/AI-MEMORY-SYSTEM.md`
@@ -263,7 +263,7 @@ These must not claim ownership and should only point to owners:
 - Event Bus: `EVENT-BUS.md`
 - Worker Pool: `WORKER-POOL.md`
 - Registry System: `REGISTRY-SYSTEM.md`
-- Dashboard Workspaces: `DASHBOARD-WORKSPACES.md`
+- Dashboard Workspaces: `dashboard/DASHBOARD-WORKSPACES.md`
 - Learning Pipeline: `LEARNING-PIPELINE.md`
 
 - DECISION-ENGINE.md — Authoritative
@@ -344,8 +344,8 @@ These must not claim ownership and should only point to owners:
 - Context Builder: `CONTEXT-BUILDER.md`
 - Runtime Knowledge: `RUNTIME-KNOWLEDGE.md`
 - System Capability Registry: `SYSTEM-CAPABILITY-REGISTRY.md`
-- Feature Flags: `FEATURE-FLAGS.md`
-- Configuration Profiles: `CONFIGURATION-PROFILES.md`
+- Feature Flags: `configuration/FEATURE-FLAGS.md`
+- Configuration Profiles: `configuration/CONFIGURATION-PROFILES.md`
 - AI Reasoning Policy: `ai/reasoning/AI-REASONING-POLICY.md`
 - AI Context Window Management: `ai/runtime/AI-CONTEXT-WINDOW-MANAGEMENT.md`
 - Model Capability Negotiation: `MODEL-CAPABILITY-NEGOTIATION.md`
@@ -726,13 +726,13 @@ The documentation set is organised into layers. Each layer has a single authorit
 ### Layer 8 — Dashboard & UI
 | Priority | Document | Role | Authority |
 |----------|----------|------|-----------|
-| 0 | docs/UI-DASHBOARD-SPEC.md | Dashboard spec | Layer anchor |
-| 1 | docs/DASHBOARD-LAYOUT.md | Layout composition | Defers to UI-DASHBOARD-SPEC |
-| 2 | docs/DASHBOARD-WIDGETS.md | Widget catalog | Defers to UI-DASHBOARD-SPEC |
-| 3 | docs/DASHBOARD-WORKSPACES.md | Workspace persistence | Defers to UI-DASHBOARD-SPEC |
-| 4 | docs/UX-GUIDELINES.md | UX/interaction guide | Defers to UI-DASHBOARD-SPEC |
-| 5 | docs/UI-COMPONENT-SPEC.md | Component spec | Defers to UI-DASHBOARD-SPEC |
-| 6 | docs/DESIGN-SYSTEM.md | Design system | Defers to UX-GUIDELINES |
+| 0 | docs/dashboard/UI-DASHBOARD-SPEC.md | Dashboard spec | Layer anchor |
+| 1 | docs/dashboard/DASHBOARD-LAYOUT.md | Layout composition | Defers to UI-DASHBOARD-SPEC |
+| 2 | docs/dashboard/DASHBOARD-WIDGETS.md | Widget catalog | Defers to UI-DASHBOARD-SPEC |
+| 3 | docs/dashboard/DASHBOARD-WORKSPACES.md | Workspace persistence | Defers to UI-DASHBOARD-SPEC |
+| 4 | docs/ui/UX-GUIDELINES.md | UX/interaction guide | Defers to UI-DASHBOARD-SPEC |
+| 5 | docs/ui/UI-COMPONENT-SPEC.md | Component spec | Defers to UI-DASHBOARD-SPEC |
+| 6 | docs/ui/DESIGN-SYSTEM.md | Design system | Defers to UX-GUIDELINES |
 | 7 | docs/DESIGNER-PROTOCOLS.md | Designer protocols | Defers to UI-DASHBOARD-SPEC |
 
 ### Layer 9 — Windows Platform
@@ -753,11 +753,11 @@ The documentation set is organised into layers. Each layer has a single authorit
 ### Layer 11 — Security & Trust
 | Priority | Document | Role | Authority |
 |----------|----------|------|-----------|
-| 0 | docs/SECURITY.md | Security | Layer anchor |
-| 1 | docs/SECURITY-CONTRACTS.md | Security contracts | Defers to SECURITY |
-| 2 | docs/PERMISSION-MODEL.md | Permission model | Defers to SECURITY-CONTRACTS |
+| 0 | docs/security/SECURITY.md | Security | Layer anchor |
+| 1 | docs/security/SECURITY-CONTRACTS.md | Security contracts | Defers to SECURITY |
+| 2 | docs/security/PERMISSION-MODEL.md | Permission model | Defers to SECURITY-CONTRACTS |
 | 3 | docs/TRUST-BOUNDARIES.md | Trust boundaries | Defers to SECURITY-CONTRACTS |
-| 4 | docs/SECRET-LIFECYCLE.md | Secret lifecycle | Defers to SECURITY |
+| 4 | docs/security/SECRET-LIFECYCLE.md | Secret lifecycle | Defers to SECURITY |
 
 ### Layer 12 — Data & Persistence
 | Priority | Document | Role | Authority |
@@ -785,10 +785,10 @@ The documentation set is organised into layers. Each layer has a single authorit
 ### Layer 14 — Configuration & Governance
 | Priority | Document | Role | Authority |
 |----------|----------|------|-----------|
-| 0 | docs/CONFIGURATION.md | Configuration | Layer anchor |
-| 1 | docs/CONFIGURATION-REFERENCE.md | Key-by-key reference | Defers to CONFIGURATION |
-| 2 | docs/CONFIGURATION-PROFILES.md | Profile system | Defers to CONFIGURATION |
-| 3 | docs/FEATURE-FLAGS.md | Feature flags | Defers to CONFIGURATION |
+| 0 | docs/configuration/CONFIGURATION.md | Configuration | Layer anchor |
+| 1 | docs/configuration/CONFIGURATION-REFERENCE.md | Key-by-key reference | Defers to CONFIGURATION |
+| 2 | docs/configuration/CONFIGURATION-PROFILES.md | Profile system | Defers to CONFIGURATION |
+| 3 | docs/configuration/FEATURE-FLAGS.md | Feature flags | Defers to CONFIGURATION |
 | 4 | docs/FEATURE-GATES.md | Feature gates | Defers to FEATURE-FLAGS |
 | 5 | docs/CONTRACT-REGISTRY.md | Contract registry | Defers to CONFIGURATION |
 | 6 | docs/SYSTEM-CAPABILITY-REGISTRY.md | Capability registry | Defers to CONFIGURATION |
@@ -887,10 +887,10 @@ Each canonical document in the set should carry the following front-matter field
 | docs/EXECUTION-ENGINE.md | 1.0.0 | Review | 2025-01-15 | Execution |
 | docs/ai/runtime/AI-PIPELINE.md | 1.0.0 | Canonical | 2025-01-15 | AI |
 | docs/RISK-ENGINE.md | 1.0.0 | Review | 2025-01-15 | Risk |
-| docs/SECURITY.md | 1.0.0 | Review | 2025-01-15 | Security |
-| docs/CONFIGURATION.md | 1.0.0 | Canonical | 2025-01-15 | Config |
+| docs/security/SECURITY.md | 1.0.0 | Review | 2025-01-15 | Security |
+| docs/configuration/CONFIGURATION.md | 1.0.0 | Canonical | 2025-01-15 | Config |
 | docs/DATABASE-SCHEMA.md | 1.0.0 | Draft | 2025-01-15 | Data |
-| docs/SECURITY-CONTRACTS.md | 1.0.0 | Draft | 2025-01-15 | Security |
+| docs/security/SECURITY-CONTRACTS.md | 1.0.0 | Draft | 2025-01-15 | Security |
 | docs/STATE-MANAGEMENT.md | 1.0.0 | Draft | 2025-01-15 | Runtime |
 | docs/EVENT-BUS.md | 1.0.0 | Draft | 2025-01-15 | Runtime |
 | docs/MONITORING-OBSERVABILITY.md | 1.0.0 | Draft | 2025-01-15 | Ops |
@@ -901,7 +901,7 @@ Each canonical document in the set should carry the following front-matter field
 | docs/WALLET-MANAGEMENT.md | 1.0.0 | Draft | 2025-01-15 | Trading |
 | docs/API-CONTRACTS.md | 1.0.0 | Draft | 2025-01-15 | Architecture |
 | docs/MARKET-DATA.md | 1.0.0 | Draft | 2025-01-15 | Trading |
-| docs/UI-DASHBOARD-SPEC.md | 1.0.0 | Draft | 2025-01-15 | UI |
+| docs/dashboard/UI-DASHBOARD-SPEC.md | 1.0.0 | Draft | 2025-01-15 | UI |
 | docs/CONTRIBUTING.md | 1.0.0 | Draft | 2025-01-15 | DevRel |
 | docs/DOCUMENTATION-LIFECYCLE.md | 1.0.0 | Draft | 2025-01-15 | Architecture |
 | DOCUMENTATION-MAP.md | 1.2.0 | Canonical | 2026-07-27 | Architecture |
@@ -909,9 +909,9 @@ Each canonical document in the set should carry the following front-matter field
 | docs/MODULE-OWNERSHIP-MATRIX.md | 1.0.0 | Draft | 2025-01-15 | Architecture |
 | docs/CANONICAL-SOURCE-RULES.md | 1.0.0 | Draft | 2025-01-15 | Architecture |
 | docs/CROSS-REFERENCE-INDEX.md | 1.0.0 | Draft | 2025-01-15 | Architecture |
-| docs/FEATURE-FLAGS.md | 1.0.0 | Draft | 2025-01-15 | Config |
+| docs/configuration/FEATURE-FLAGS.md | 1.0.0 | Draft | 2025-01-15 | Config |
 | docs/FEATURE-GATES.md | 1.0.0 | Draft | 2025-01-15 | Config |
-| docs/CONFIGURATION-REFERENCE.md | 0.1.0 | Draft | 2026-07-27 | Config |
+| docs/configuration/CONFIGURATION-REFERENCE.md | 0.1.0 | Draft | 2026-07-27 | Config |
 | docs/EVENT-OWNERSHIP-MATRIX.md | 0.1.0 | Draft | 2026-07-27 | Runtime |
 | docs/ai/tools/AI-TOOL-INVOCATION-CONTRACT.md | 0.1.0 | Draft | 2026-07-27 | AI |
 | docs/PROMPT-LIFECYCLE.md | 0.1.0 | Draft | 2026-07-27 | AI |
@@ -934,7 +934,7 @@ Each canonical document in the set should carry the following front-matter field
 | docs/TIMING-SPECIFICATION.md | 1.0.0 | Draft | 2025-01-15 | Ops |
 | docs/DATA-OWNERSHIP.md | 1.0.0 | Draft | 2025-01-15 | Data |
 | docs/DEPENDENCY-AUTHORITY-RULES.md | 1.0.0 | Draft | 2025-01-15 | Architecture |
-| docs/SECRET-LIFECYCLE.md | 1.0.0 | Draft | 2025-01-15 | Security |
+| docs/security/SECRET-LIFECYCLE.md | 1.0.0 | Draft | 2025-01-15 | Security |
 | docs/TRUST-BOUNDARIES.md | 1.0.0 | Draft | 2025-01-15 | Security |
 | docs/ERROR-CATALOG.md | 1.0.0 | Draft | 2025-01-15 | Ops |
 | docs/ERROR-CODES.md | 1.0.0 | Draft | 2025-01-15 | Ops |
@@ -949,15 +949,15 @@ Each document in the repository should be listed once in each direction. The tab
 
 | Document | References |
 |----------|------------|
-| AGENTS.md | docs/ARCHITECTURE.md, docs/ai/runtime/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/TRADING-LIFECYCLE.md, docs/EXECUTION-LIFECYCLE.md, docs/DATABASE-SCHEMA.md, docs/SECURITY-CONTRACTS.md |
+| AGENTS.md | docs/ARCHITECTURE.md, docs/ai/runtime/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/TRADING-LIFECYCLE.md, docs/EXECUTION-LIFECYCLE.md, docs/DATABASE-SCHEMA.md, docs/security/SECURITY-CONTRACTS.md |
 | ../APEX-ARCHITECTURE.md | docs/DOCUMENTATION-MAP.md, docs/ARCHITECTURE.md, docs/PROJECT-STRUCTURE.md, docs/TRADING-ENGINE.md, docs/EXECUTION-ENGINE.md, docs/ORCHESTRATOR.md, docs/DOMAIN-MODEL.md |
-| docs/ARCHITECTURE.md | docs/ORCHESTRATOR.md, docs/TRADING-ENGINE.md, docs/EXECUTION-ENGINE.md, docs/ai/runtime/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/STATE-MANAGEMENT.md, docs/CHAIN-REGISTRY.md, docs/DEX-REGISTRY.md, docs/TOKEN-REGISTRY.md, docs/ORACLE-REGISTRY.md, docs/DASHBOARD-LAYOUT.md, docs/DASHBOARD-WIDGETS.md, docs/UX-GUIDELINES.md, docs/VERSIONING.md, docs/DOMAIN-MODEL.md |
-| docs/RUNTIME-OPERATIONS.md | docs/ORCHESTRATOR.md, docs/BOOTSTRAP-SEQUENCE.md, docs/SHUTDOWN-LIFECYCLE.md, docs/SERVICE-LIFECYCLE.md, docs/RECOVERY-AND-FAILOVER.md, docs/HEALTHCHECKS.md, docs/WORKER-POOL.md, docs/CONFIGURATION.md, docs/STATE-MANAGEMENT.md |
+| docs/ARCHITECTURE.md | docs/ORCHESTRATOR.md, docs/TRADING-ENGINE.md, docs/EXECUTION-ENGINE.md, docs/ai/runtime/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/STATE-MANAGEMENT.md, docs/CHAIN-REGISTRY.md, docs/DEX-REGISTRY.md, docs/TOKEN-REGISTRY.md, docs/ORACLE-REGISTRY.md, docs/dashboard/DASHBOARD-LAYOUT.md, docs/dashboard/DASHBOARD-WIDGETS.md, docs/ui/UX-GUIDELINES.md, docs/VERSIONING.md, docs/DOMAIN-MODEL.md |
+| docs/RUNTIME-OPERATIONS.md | docs/ORCHESTRATOR.md, docs/BOOTSTRAP-SEQUENCE.md, docs/SHUTDOWN-LIFECYCLE.md, docs/SERVICE-LIFECYCLE.md, docs/RECOVERY-AND-FAILOVER.md, docs/HEALTHCHECKS.md, docs/WORKER-POOL.md, docs/configuration/CONFIGURATION.md, docs/STATE-MANAGEMENT.md |
 | docs/TRADING-ENGINE.md | docs/TRADING-LIFECYCLE.md, docs/EXECUTION-ENGINE.md, docs/ORCHESTRATOR.md, docs/RISK-ENGINE.md |
 | docs/EXECUTION-ENGINE.md | docs/TRANSACTION-LIFECYCLE.md, docs/RISK-ENGINE.md, docs/GAS-OPTIMISATION.md, docs/MEV-PROTECTION.md |
 | docs/ai/runtime/AI-PIPELINE.md | docs/ai/orchestration/AI-ORCHESTRATION.md, docs/ai/providers/AI-PROVIDER-MANAGER.md, docs/ai/runtime/AI-GATEWAY.md, docs/ai/memory/AI-MEMORY.md, docs/AI-COST-MANAGEMENT.md, docs/ai/runtime/AI-CONTEXT-WINDOW-MANAGEMENT.md, docs/ai/reasoning/AI-REASONING-POLICY.md |
-| docs/CONFIGURATION.md | docs/ai/providers/AI-SETTINGS.md, docs/SECURITY.md, docs/RUNTIME-OPERATIONS.md, docs/DATABASE-SCHEMA.md, docs/AI-COST-MANAGEMENT.md, docs/VERSIONING.md, docs/PLUGIN-SDK.md, docs/HEALTHCHECKS.md |
-| docs/SECURITY.md | docs/SECURITY-CONTRACTS.md, docs/PERMISSION-MODEL.md, docs/TRUST-BOUNDARIES.md, docs/SECRET-LIFECYCLE.md |
+| docs/configuration/CONFIGURATION.md | docs/ai/providers/AI-SETTINGS.md, docs/security/SECURITY.md, docs/RUNTIME-OPERATIONS.md, docs/DATABASE-SCHEMA.md, docs/AI-COST-MANAGEMENT.md, docs/VERSIONING.md, docs/PLUGIN-SDK.md, docs/HEALTHCHECKS.md |
+| docs/security/SECURITY.md | docs/security/SECURITY-CONTRACTS.md, docs/security/PERMISSION-MODEL.md, docs/TRUST-BOUNDARIES.md, docs/security/SECRET-LIFECYCLE.md |
 | docs/EVENT-BUS.md | docs/EVENT-CATALOG.md, docs/EVENT-OWNERSHIP-MATRIX.md |
 | docs/STATE-MANAGEMENT.md | docs/ORCHESTRATOR.md, docs/TRADING-LIFECYCLE.md, docs/EXECUTION-LIFECYCLE.md, docs/SHUTDOWN-LIFECYCLE.md, docs/SERVICE-LIFECYCLE.md, docs/PLUGIN-LIFECYCLE.md |
 
@@ -968,16 +968,16 @@ Each document in the repository should be listed once in each direction. The tab
 | docs/ARCHITECTURE.md | AGENTS.md, ../APEX-ARCHITECTURE.md, README.md, CLAUDE.md, OPENCODE.md, docs/AGENTS.md |
 | docs/ORCHESTRATOR.md | ../APEX-ARCHITECTURE.md, docs/ARCHITECTURE.md, docs/RUNTIME-OPERATIONS.md, docs/TRADING-ENGINE.md, docs/STATE-MANAGEMENT.md |
 | docs/ai/runtime/AI-PIPELINE.md | AGENTS.md, docs/ARCHITECTURE.md, README.md, CLAUDE.md, OPENCODE.md, docs/AGENTS.md |
-| docs/RUNTIME-OPERATIONS.md | AGENTS.md, README.md, CLAUDE.md, OPENCODE.md, docs/CONFIGURATION.md |
+| docs/RUNTIME-OPERATIONS.md | AGENTS.md, README.md, CLAUDE.md, OPENCODE.md, docs/configuration/CONFIGURATION.md |
 | docs/TRADING-LIFECYCLE.md | AGENTS.md, README.md, CLAUDE.md, docs/ARCHITECTURE.md, docs/TRADING-ENGINE.md, docs/STATE-MANAGEMENT.md |
 | docs/EXECUTION-LIFECYCLE.md | AGENTS.md, README.md, CLAUDE.md, docs/ARCHITECTURE.md, docs/STATE-MANAGEMENT.md |
-| docs/DATABASE-SCHEMA.md | AGENTS.md, README.md, CLAUDE.md, OPENCODE.md, docs/CONFIGURATION.md |
-| docs/SECURITY-CONTRACTS.md | AGENTS.md, README.md, CLAUDE.md, docs/ARCHITECTURE.md, docs/SECURITY.md |
-| docs/CONFIGURATION.md | docs/RUNTIME-OPERATIONS.md |
+| docs/DATABASE-SCHEMA.md | AGENTS.md, README.md, CLAUDE.md, OPENCODE.md, docs/configuration/CONFIGURATION.md |
+| docs/security/SECURITY-CONTRACTS.md | AGENTS.md, README.md, CLAUDE.md, docs/ARCHITECTURE.md, docs/security/SECURITY.md |
+| docs/configuration/CONFIGURATION.md | docs/RUNTIME-OPERATIONS.md |
 | docs/EVENT-CATALOG.md | docs/EVENT-BUS.md |
-| docs/TRUST-BOUNDARIES.md | docs/SECURITY.md |
-| docs/SECRET-LIFECYCLE.md | docs/SECURITY.md |
-| docs/PERMISSION-MODEL.md | docs/SECURITY.md |
+| docs/TRUST-BOUNDARIES.md | docs/security/SECURITY.md |
+| docs/security/SECRET-LIFECYCLE.md | docs/security/SECURITY.md |
+| docs/security/PERMISSION-MODEL.md | docs/security/SECURITY.md |
 
 ---
 
@@ -1006,4 +1006,4 @@ An input is validated before any state-changing action.
 - Runtime contracts: `docs/THREADING-MODEL.md`, `docs/CONCURRENCY-MODEL.md`, `docs/ai/memory/MEMORY-LIFECYCLE.md`.
 - AI contracts: `docs/ai/tools/AI-TOOL-INVOCATION-CONTRACT.md`, `docs/PROMPT-LIFECYCLE.md`, `docs/CONTEXT-PRIORITY-MATRIX.md`, `docs/ai/safety/AI-SAFETY-BOUNDARY.md`.
 - Governance contracts: `docs/CANONICAL-SOURCE-RULES.md`, `docs/DOCUMENTATION-LIFECYCLE.md`, `docs/CROSS-REFERENCE-INDEX.md`, `docs/FEATURE-GATES.md`.
-- Operational contracts: `docs/CONFIGURATION-REFERENCE.md`, `docs/TIMING-SPECIFICATION.md`, `docs/RESOURCE-BUDGET-SPECIFICATION.md`, `docs/CAPACITY-PLANNING.md`, `docs/MODULE-OWNERSHIP-MATRIX.md`, `docs/EVENT-OWNERSHIP-MATRIX.md`, `docs/DEPENDENCY-AUTHORITY-RULES.md`, `docs/DATA-OWNERSHIP.md`, `docs/SECRET-LIFECYCLE.md`, `docs/TRUST-BOUNDARIES.md`.
+- Operational contracts: `docs/configuration/CONFIGURATION-REFERENCE.md`, `docs/TIMING-SPECIFICATION.md`, `docs/RESOURCE-BUDGET-SPECIFICATION.md`, `docs/CAPACITY-PLANNING.md`, `docs/MODULE-OWNERSHIP-MATRIX.md`, `docs/EVENT-OWNERSHIP-MATRIX.md`, `docs/DEPENDENCY-AUTHORITY-RULES.md`, `docs/DATA-OWNERSHIP.md`, `docs/security/SECRET-LIFECYCLE.md`, `docs/TRUST-BOUNDARIES.md`.

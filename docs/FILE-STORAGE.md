@@ -22,7 +22,7 @@ Navigation-only document pointing to the authoritative owner(s).
 ## Cross-references
 - `DATABASE-SCHEMA.md`
 - `RUNTIME-OPERATIONS.md`
-- `SECURITY.md`
+- `security/SECURITY.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

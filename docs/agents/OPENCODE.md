@@ -36,7 +36,7 @@ Guidance for OpenCode-based coding agents contributing to this repository.
 - `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/CACHE-MANAGER.md`
 - `docs/DATABASE-SCHEMA.md`
-- `docs/SECURITY-CONTRACTS.md`
+- `docs/security/SECURITY-CONTRACTS.md`
 
 ## Working rule
 If the repo does not explicitly define the behavior, do not guess.

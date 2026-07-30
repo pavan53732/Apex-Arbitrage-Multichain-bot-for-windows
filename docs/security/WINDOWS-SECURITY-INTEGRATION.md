@@ -6,7 +6,7 @@ version: 1.0.0
 purpose: Defines how Windows-specific security features protect credentials, signing, sandboxing, supply chain security, and IPC hardening — with DPAPI, Credential Manager, SmartScreen, AppContainer, Defender, code signing, and secure update chain contracts.
 scope: None
 last_updated: 2026-07-29
-canonical_source: docs/WINDOWS-SECURITY-INTEGRATION.md
+canonical_source: docs/security/WINDOWS-SECURITY-INTEGRATION.md
 ---
 
 # Windows Security Integration
