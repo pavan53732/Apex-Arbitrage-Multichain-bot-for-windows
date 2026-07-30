@@ -42,7 +42,7 @@ Refresh topology from kernel, requery registries, and fall back to cached graph.
 ## Cross-references
 - `APEX-KERNEL.md`
 - `DEPENDENCY-GRAPH.md`
-- `HEALTHCHECKS.md`
+- `operations/HEALTHCHECKS.md`
 - `dashboard/UI-DASHBOARD-SPEC.md`
 
 ## Operational Contract

@@ -54,7 +54,7 @@ New models go to a shadow pool for 24 hours. Roll back automatically if shadow p
 ## Cross-references
 - `ai/orchestration/AI-ORCHESTRATION.md`
 - `ai/memory/AI-MEMORY-SYSTEM.md`
-- `METRICS.md`
+- `reference/METRICS.md`
 - `SIMULATION-ENGINE.md`
 
 ## Operational Contract

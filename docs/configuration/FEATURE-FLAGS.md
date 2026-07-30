@@ -42,7 +42,7 @@ Rollback, disable, or pin to previous version.
 ## Cross-references
 - `configuration/CONFIGURATION.md`
 - `POLICY-ENGINE.md`
-- `VERSIONING.md`
+- `deployment/VERSIONING.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

@@ -43,7 +43,7 @@ Defines memory allocation, ownership, cleanup, and eviction policies for all sub
 | Rule | Enforcement |
 |------|-------------|
 | All allocations must have a defined owner | Owner field in allocation tracking |
-| Long-lived allocations must be bounded | Budget cap per subsystem (see `RESOURCE-BUDGET-SPECIFICATION.md`) |
+| Long-lived allocations must be bounded | Budget cap per subsystem (see `performance/RESOURCE-BUDGET-SPECIFICATION.md`) |
 | Ephemeral allocations (request-scoped) must use RAII | C++ `std::unique_ptr`, `std::vector` on stack |
 | Large allocations (>1 MB) must be logged | Log at `debug` level with caller stack trace |
 | Plugins must not allocate memory outside their sandbox | Enforced by sandbox process boundary |

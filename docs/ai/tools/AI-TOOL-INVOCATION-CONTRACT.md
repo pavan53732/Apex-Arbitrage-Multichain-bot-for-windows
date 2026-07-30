@@ -165,7 +165,7 @@ Every tool invocation produces:
 | `retry_count` | Number of retries (0 if first attempt succeeded) |
 | `result` | `success`, `failure`, `timeout`, `cancelled`, `safety_blocked` |
 | `fallback_used` | Name of fallback tool if primary failed |
-| `error_code` | Error code if failed (from `ERROR-CODES.md`) |
+| `error_code` | Error code if failed (from `reference/ERROR-CODES.md`) |
 | `tokens_consumed` | Estimated tokens used by tool IO |
 
 All invocation events are emitted as `ai.tool.invoked` / `ai.tool.result` events (see `EVENT-OWNERSHIP-MATRIX.md`) and stored in the audit log.

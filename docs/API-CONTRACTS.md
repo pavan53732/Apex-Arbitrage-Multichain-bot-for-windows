@@ -108,7 +108,7 @@ Trading-related contracts must include:
 - [`ERROR-HANDLING-LOGGING.md`](./ERROR-HANDLING-LOGGING.md)
 
 ## Cross-references
-- `VERSIONING.md`
+- `deployment/VERSIONING.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

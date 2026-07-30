@@ -21,7 +21,7 @@ Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `DATABASE-SCHEMA.md`
-- `RUNTIME-OPERATIONS.md`
+- `operations/RUNTIME-OPERATIONS.md`
 - `security/SECURITY.md`
 
 ## Operational Contract

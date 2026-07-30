@@ -47,7 +47,7 @@ If a strategy fails SLO, disable it and alert through `NOTIFICATION-CENTER.md`.
 ## Cross-references
 - `ORCHESTRATOR.md`
 - `ai/reasoning/AI-CONSENSUS.md`
-- `PERFORMANCE-SLOS.md`
+- `performance/PERFORMANCE-SLOS.md`
 - `security/SECURITY-CONTRACTS.md`
 
 ## Operational Contract

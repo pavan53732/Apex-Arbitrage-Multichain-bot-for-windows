@@ -25,9 +25,9 @@ If a file fails any directive, abort and fix it before proceeding.
 Provides navigation to the authoritative documentation set.
 
 ## Cross-references
-- `SKILLS.md`
+- `development/SKILLS.md`
 - `ai/runtime/AI-PIPELINE.md`
-- `USER-FLOWS.md`
+- `guides/USER-FLOWS.md`
 
 
 ## Operational Contract

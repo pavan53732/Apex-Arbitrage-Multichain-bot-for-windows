@@ -45,7 +45,7 @@ For authoritative runtime flow, see `ORCHESTRATOR.md`.
 - `docs/TRADING-ENGINE.md`
 - `docs/EXECUTION-ENGINE.md`
 - `docs/ai/runtime/AI-PIPELINE.md`
-- `docs/RUNTIME-OPERATIONS.md`
+- `docs/operations/RUNTIME-OPERATIONS.md`
 - `docs/STATE-MANAGEMENT.md`
 - `CHAIN-REGISTRY.md`
 - `DEX-REGISTRY.md`
@@ -54,7 +54,7 @@ For authoritative runtime flow, see `ORCHESTRATOR.md`.
 - `dashboard/DASHBOARD-LAYOUT.md`
 - `dashboard/DASHBOARD-WIDGETS.md`
 - `ui/UX-GUIDELINES.md`
-- `VERSIONING.md`
+- `deployment/VERSIONING.md`
 
 - `DOMAIN-MODEL.md`
 
@@ -66,7 +66,7 @@ For canonical data contracts, see `DOMAIN-MODEL.md`.
 - Interfaces: `INTERFACE-AGENT-MESSAGE.md`, `INTERFACE-TOOL-CALL.md`.
 - State machine: `ORCHESTRATOR.md`, `TRADING-LIFECYCLE.md`, `EXECUTION-LIFECYCLE.md`.
 - Security boundaries: `security/SECURITY-CONTRACTS.md`.
-- Performance SLOs: `PERFORMANCE-SLOS.md`.
+- Performance SLOs: `performance/PERFORMANCE-SLOS.md`.
 - Failure modes: sequencing failure, ambiguous ownership, runtime drift; recover via authoritative owner docs and orchestrator retry.
 
 For trading lifecycle, see `TRADING-LIFECYCLE.md`.

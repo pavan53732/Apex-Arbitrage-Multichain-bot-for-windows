@@ -35,7 +35,7 @@ Guidance for Cline-based coding agents contributing to this repository.
 - `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/ai/providers/AI-PROVIDER-MANAGER.md`
 - `docs/MODEL-CAPABILITY-NEGOTIATION.md`
-- `docs/RUNTIME-OPERATIONS.md`
+- `docs/operations/RUNTIME-OPERATIONS.md`
 - `docs/security/SECURITY-CONTRACTS.md`
 
 ## Working rule

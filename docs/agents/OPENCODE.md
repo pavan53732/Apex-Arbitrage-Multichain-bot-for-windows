@@ -32,7 +32,7 @@ Guidance for OpenCode-based coding agents contributing to this repository.
 ## Required reading
 - `AGENTS.md`
 - `docs/ARCHITECTURE.md`
-- `docs/RUNTIME-OPERATIONS.md`
+- `docs/operations/RUNTIME-OPERATIONS.md`
 - `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/CACHE-MANAGER.md`
 - `docs/DATABASE-SCHEMA.md`

@@ -52,7 +52,7 @@ Retry registration, isolate failed plugins, fall back to safe defaults, and aler
 - `ORCHESTRATOR.md`
 - `EVENT-BUS.md`
 - `SERVICE-REGISTRY.md`
-- `HEALTHCHECKS.md`
+- `operations/HEALTHCHECKS.md`
 - `PLUGIN-SDK.md`
 
 ## Operational Contract

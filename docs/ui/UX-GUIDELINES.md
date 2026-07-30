@@ -30,10 +30,10 @@ This document covers spacing, motion, loading states, empty states, errors, and 
 - Keep notifications concise and contextual.
 
 ## Cross-references
-- `WINDOWS-DESKTOP.md`
+- `windows/WINDOWS-DESKTOP.md`
 - `ui/UI-COMPONENT-SPEC.md`
 - `DESIGNER-PROTOCOLS.md`
-- `USER-FLOWS.md`
+- `guides/USER-FLOWS.md`
 
 ## Governance Rules
 Defines interaction principles, accessibility expectations, feedback timing, and consistency standards.

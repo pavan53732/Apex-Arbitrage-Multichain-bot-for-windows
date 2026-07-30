@@ -32,7 +32,7 @@ Renderer UI -> Preload API -> IPC Contracts -> Main Process Services -> Packages
 - `ARCHITECTURE.md`
 - `PROJECT-STRUCTURE.md`
 - `MODULE-DEPENDENCY.md`
-- `RUNTIME-OPERATIONS.md`
+- `operations/RUNTIME-OPERATIONS.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

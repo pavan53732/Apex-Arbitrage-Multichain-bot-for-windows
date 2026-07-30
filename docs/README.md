@@ -34,13 +34,13 @@ Navigation-only document pointing to the authoritative owner(s).
 - `ai/reasoning/AI-CONSENSUS.md` — authoritative system contract.
 - `PLUGIN-SDK.md` — authoritative system contract.
 - `DOMAIN-MODEL.md` — authoritative system contract.
-- `METRICS.md` — authoritative system contract.
-- `HEALTHCHECKS.md` — authoritative system contract.
+- `reference/METRICS.md` — authoritative system contract.
+- `operations/HEALTHCHECKS.md` — authoritative system contract.
 
 - [TRADING-LIFECYCLE.md](./TRADING-LIFECYCLE.md) – Defines the complete state machine for trade discovery, risk, execution, and settlement.
 - [EXECUTION-LIFECYCLE.md](./EXECUTION-LIFECYCLE.md) – Specifies the order submission, signing, broadcasting, and confirmation state transitions.
 - [SECURITY-CONTRACTS.md](security/SECURITY-CONTRACTS.md) – Codifies secret handling, wallet signing, plugin sandboxing, emergency stop, and audit logging.
-- [PERFORMANCE-SLOS.md](./PERFORMANCE-SLOS.md) – Declares numeric latency, throughput, and budget SLOs for all major subsystems.
+- [PERFORMANCE-SLOS.md](performance/PERFORMANCE-SLOS.md) – Declares numeric latency, throughput, and budget SLOs for all major subsystems.
 - [STRATEGY-ROTATION.md](./STRATEGY-ROTATION.md) – Defines strategy scoring, rotation, fallback, and monitoring.
 - [CHAIN-ROTATION.md](./CHAIN-ROTATION.md) – Defines chain prioritization, allocation, and demotion rules.
 - [TOKEN-INTELLIGENCE.md](./TOKEN-INTELLIGENCE.md) – Defines token metadata scoring, ranking, caching, and refresh.
@@ -78,7 +78,7 @@ Navigation-only document pointing to the authoritative owner(s).
 - [MARKET-REGIME-DETECTION.md](./MARKET-REGIME-DETECTION.md) – Defines market regime classification.
 - [RESOURCE-MANAGER.md](./RESOURCE-MANAGER.md) – Defines lifecycle management for runtime resources.
 - [TASK-SCHEDULER.md](./TASK-SCHEDULER.md) – Defines priority, fair, adaptive task scheduling.
-- [SELF-HEALING.md](./SELF-HEALING.md) – Defines recovery actions for unhealthy components.
+- [SELF-HEALING.md](operations/SELF-HEALING.md) – Defines recovery actions for unhealthy components.
 - [APEX-OS.md](./APEX-OS.md) – Defines the constitution, principles, roadmap, and evolution strategy of the platform.
 - [SERVICE-LIFECYCLE.md](./SERVICE-LIFECYCLE.md) – Defines the canonical lifecycle for all services.
 - [PLUGIN-LIFECYCLE.md](./PLUGIN-LIFECYCLE.md) – Defines the canonical lifecycle for all plugins.
@@ -94,9 +94,9 @@ Navigation-only document pointing to the authoritative owner(s).
 - [RPC-MANAGER.md](./RPC-MANAGER.md) – Defines provider pools, health, rotation, latency, failover, and load balancing.
 - [CACHE-MANAGER.md](./CACHE-MANAGER.md) – Defines cache ownership, invalidation, TTL, and compression policies.
 - [UPDATE-MANAGER.md](./UPDATE-MANAGER.md) – Defines application, plugin, prompt, and model update lifecycle.
-- [DIAGNOSTICS.md](./DIAGNOSTICS.md) – Defines support bundle generation and troubleshooting output.
+- [DIAGNOSTICS.md](operations/DIAGNOSTICS.md) – Defines support bundle generation and troubleshooting output.
 - [BOOTSTRAP-SEQUENCE.md](./BOOTSTRAP-SEQUENCE.md) – Defines deterministic platform startup order.
-- [EVENT-CATALOG.md](./EVENT-CATALOG.md) – Defines the canonical registry of platform events and payloads.
+- [EVENT-CATALOG.md](reference/EVENT-CATALOG.md) – Defines the canonical registry of platform events and payloads.
 - [AI-GATEWAY.md](ai/runtime/AI-GATEWAY.md) – Defines provider-agnostic AI routing and capability normalization.
 - [AI-CONSENSUS.md](ai/reasoning/AI-CONSENSUS.md) – Defines multi-agent consensus and voting policy.
 - [AI-MEMORY-SYSTEM.md](ai/memory/AI-MEMORY-SYSTEM.md) – Defines the layered AI memory model and retention rules.

@@ -25,7 +25,7 @@ Defines how data moves across market, trading, AI, risk, execution, persistence,
 ## Cross-references
 - `EVENT-FLOW.md`
 - `STATE-MANAGEMENT.md`
-- `RUNTIME-OPERATIONS.md`
+- `operations/RUNTIME-OPERATIONS.md`
 
 ## Operational Contract
 Defines the pipeline from raw RPC data through normalization, validation, caching, analytics, AI, and decision support.

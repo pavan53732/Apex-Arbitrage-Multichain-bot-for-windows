@@ -44,7 +44,7 @@ Chain scoring has its own lifecycle, health model, and consumer set that do not 
 - `MARKET-DATA.md`
 - `ROUTING-ENGINE.md`
 - `EXECUTION-ENGINE.md`
-- `MONITORING-OBSERVABILITY.md`
+- `operations/MONITORING-OBSERVABILITY.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

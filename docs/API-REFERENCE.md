@@ -369,7 +369,7 @@ Standard error code format: `E_<CATEGORY>_<SPECIFIC>`.
 - `IPC-PROTOCOL.md`
 - `PROJECT-STRUCTURE.md`
 - `ERROR-HANDLING-LOGGING.md`
-- `VERSIONING.md`
+- `deployment/VERSIONING.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

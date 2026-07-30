@@ -51,11 +51,11 @@ Defines global performance, reliability, security, maintainability, and operabil
 - Backups, restores, and upgrades must be auditable and reproducible.
 
 ## Cross-references
-- `docs/PERFORMANCE-TARGETS.md`
+- `docs/performance/PERFORMANCE-TARGETS.md`
 - `docs/security/SECURITY.md`
-- `docs/MONITORING-OBSERVABILITY.md`
+- `docs/operations/MONITORING-OBSERVABILITY.md`
 - `docs/ai/runtime/AI-PIPELINE.md`
-- `docs/RUNTIME-OPERATIONS.md`
+- `docs/operations/RUNTIME-OPERATIONS.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

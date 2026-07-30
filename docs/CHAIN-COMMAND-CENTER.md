@@ -21,8 +21,8 @@ Defines per-chain views for RPC, latency, gas, DEXs, flash loans, oracles, walle
 
 ## Cross-references
 - `DOMAIN-MODEL.md`
-- `METRICS.md`
-- `HEALTHCHECKS.md`
+- `reference/METRICS.md`
+- `operations/HEALTHCHECKS.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

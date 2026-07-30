@@ -25,7 +25,7 @@ Defines paper trading, replay, stress testing, and synthetic failure simulation.
 - Consumes strategy, execution, AI, market, and runtime snapshots.
 
 ## Shared simulation contract
-Simulation entities and accuracy metrics are defined by `DOMAIN-MODEL.md` and `METRICS.md`.
+Simulation entities and accuracy metrics are defined by `DOMAIN-MODEL.md` and `reference/METRICS.md`.
 Every simulation defines purpose, inputs, configuration, initial state, execution flow, expected outputs, validation criteria, success metrics, failure scenarios, and recovery behaviour.
 
 ## Determinism rules
@@ -271,30 +271,30 @@ Persist scenario ids, seeds, market snapshots, configuration hashes, code versio
 - Harness failure rate.
 
 ## Cross-references
-- `BACKTESTING.md`
+- `testing/BACKTESTING.md`
 - `STRATEGIES.md`
 - `EXECUTION-ENGINE.md`
 - `ai/runtime/AI-PIPELINE.md`
-- `TESTING-GUIDE.md`
+- `guides/TESTING-GUIDE.md`
 
 - `DOMAIN-MODEL.md`
 
-- `METRICS.md`
+- `reference/METRICS.md`
 
 
-For canonical entities and performance tracking, see `DOMAIN-MODEL.md` and `METRICS.md`.
+For canonical entities and performance tracking, see `DOMAIN-MODEL.md` and `reference/METRICS.md`.
 
 
 ## Enterprise Contract – Simulation Engine
 - Interfaces: `INTERFACE-TOOL-CALL.md`.
 - State machine: `TRADING-LIFECYCLE.md`, `EXECUTION-LIFECYCLE.md`.
 - Security boundaries: `security/SECURITY-CONTRACTS.md`.
-- Performance SLOs: `PERFORMANCE-SLOS.md`.
+- Performance SLOs: `performance/PERFORMANCE-SLOS.md`.
 - Failure modes: non-deterministic simulation, stale market data, invalid assumptions; recover via deterministic replay and abort.
 
 For trading lifecycle, see `TRADING-LIFECYCLE.md`.
 For execution lifecycle, see `EXECUTION-LIFECYCLE.md`.
-For performance targets, see `PERFORMANCE-SLOS.md`.
+For performance targets, see `performance/PERFORMANCE-SLOS.md`.
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.
 

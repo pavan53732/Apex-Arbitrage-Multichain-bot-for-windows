@@ -30,7 +30,7 @@ Defines outbound notification channel contracts.
 
 ## Cross-references
 - `NOTIFICATION-CENTER.md`
-- `RUNTIME-OPERATIONS.md`
+- `operations/RUNTIME-OPERATIONS.md`
 
 ## Interface Contract
 Defines channels, severities, delivery guarantees, retry policy, and escalation semantics for notifications.

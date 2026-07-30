@@ -21,7 +21,7 @@ Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `DECISION-LOG.md`
-- `IMPLEMENTATION-ROADMAP.md`
+- `development/IMPLEMENTATION-ROADMAP.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

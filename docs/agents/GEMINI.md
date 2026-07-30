@@ -37,7 +37,7 @@ Guidance for Gemini-based coding agents contributing to this repository.
 - `docs/MODEL-CAPABILITY-NEGOTIATION.md`
 - `docs/TRADING-LIFECYCLE.md`
 - `docs/EXECUTION-LIFECYCLE.md`
-- `docs/RUNTIME-OPERATIONS.md`
+- `docs/operations/RUNTIME-OPERATIONS.md`
 
 ## Working rule
 If a contract, payload, or lifecycle transition is not written down, do not infer it.

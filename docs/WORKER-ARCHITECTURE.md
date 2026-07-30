@@ -72,10 +72,10 @@ Failure path: Busy -> Failed -> Recovering -> Ready or Stopped.
 - Heartbeat freshness.
 
 ## Cross-references
-- `RUNTIME-OPERATIONS.md`
+- `operations/RUNTIME-OPERATIONS.md`
 - `QUEUE-MANAGEMENT.md`
-- `RECOVERY-AND-FAILOVER.md`
-- `MONITORING-OBSERVABILITY.md`
+- `operations/RECOVERY-AND-FAILOVER.md`
+- `operations/MONITORING-OBSERVABILITY.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

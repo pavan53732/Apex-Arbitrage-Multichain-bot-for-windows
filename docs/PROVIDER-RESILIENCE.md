@@ -47,8 +47,8 @@ If all providers fail, enter degraded mode and alert operations.
 ## Cross-references
 - `ai/providers/AI-PROVIDER-MANAGER.md`
 - `ai/runtime/AI-GATEWAY.md`
-- `HEALTHCHECKS.md`
-- `PERFORMANCE-SLOS.md`
+- `operations/HEALTHCHECKS.md`
+- `performance/PERFORMANCE-SLOS.md`
 
 ## Operational Contract
 Defines provider failover, redundancy, circuit breaking, and recovery behavior.

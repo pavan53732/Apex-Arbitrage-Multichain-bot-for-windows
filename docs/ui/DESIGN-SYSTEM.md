@@ -22,7 +22,7 @@ Navigation-only document pointing to the authoritative owner(s).
 ## Cross-references
 - `DESIGNER-PROTOCOLS.md`
 - `ui/UI-COMPONENT-SPEC.md`
-- `WINDOWS-DESKTOP.md`
+- `windows/WINDOWS-DESKTOP.md`
 
 ## Governance Rules
 Defines visual tokens, spacing, component consistency, and shared interaction patterns.

@@ -78,7 +78,7 @@ Raw -> Parsed -> Normalized -> Validated -> Published -> Expired.
 - `LIQUIDITY-ANALYSIS.md`
 - `MARKET-INTELLIGENCE.md`
 - `STRATEGIES.md`
-- `MONITORING-OBSERVABILITY.md`
+- `operations/MONITORING-OBSERVABILITY.md`
 - `TOKEN-REGISTRY.md`
 - `ORACLE-REGISTRY.md`
 - `CHAIN-REGISTRY.md`

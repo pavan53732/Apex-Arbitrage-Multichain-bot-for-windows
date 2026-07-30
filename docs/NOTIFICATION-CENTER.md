@@ -20,8 +20,8 @@ This document is an overview, reference, or index as noted below.
 Defines outbound notifications for desktop, Telegram, Discord, Slack, email, and webhooks.
 
 ## Cross-references
-- `HEALTHCHECKS.md`
-- `RUNTIME-OPERATIONS.md`
+- `operations/HEALTHCHECKS.md`
+- `operations/RUNTIME-OPERATIONS.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

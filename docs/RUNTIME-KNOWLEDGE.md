@@ -40,8 +40,8 @@ Refresh from kernel, registries, health probes, and event stream.
 
 ## Cross-references
 - `APEX-KERNEL.md`
-- `HEALTHCHECKS.md`
-- `MONITORING-OBSERVABILITY.md`
+- `operations/HEALTHCHECKS.md`
+- `operations/MONITORING-OBSERVABILITY.md`
 - `dashboard/DASHBOARD-WORKSPACES.md`
 
 ## Operational Contract

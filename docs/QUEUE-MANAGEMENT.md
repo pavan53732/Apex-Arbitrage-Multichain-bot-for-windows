@@ -59,10 +59,10 @@ Empty -> Active -> Backlogged -> Saturated -> Draining -> Empty.
 - Saturation events.
 
 ## Cross-references
-- `RUNTIME-OPERATIONS.md`
+- `operations/RUNTIME-OPERATIONS.md`
 - `WORKER-ARCHITECTURE.md`
-- `RECOVERY-AND-FAILOVER.md`
-- `MONITORING-OBSERVABILITY.md`
+- `operations/RECOVERY-AND-FAILOVER.md`
+- `operations/MONITORING-OBSERVABILITY.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

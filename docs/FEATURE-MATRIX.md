@@ -20,8 +20,8 @@ This document is an overview, reference, or index as noted below.
 Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
-- `IMPLEMENTATION-ROADMAP.md`
-- `ENHANCEMENT-ROADMAP.md`
+- `development/IMPLEMENTATION-ROADMAP.md`
+- `development/ENHANCEMENT-ROADMAP.md`
 - `STRATEGIES.md`
 
 ## Operational Contract

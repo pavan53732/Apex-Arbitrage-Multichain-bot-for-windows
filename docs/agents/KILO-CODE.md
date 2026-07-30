@@ -36,7 +36,7 @@ Guidance for Kilo Code-based coding agents contributing to this repository.
 - `docs/EXECUTION-LIFECYCLE.md`
 - `docs/TRANSACTION-LIFECYCLE.md`
 - `docs/ORDER-MANAGEMENT.md`
-- `docs/RUNTIME-OPERATIONS.md`
+- `docs/operations/RUNTIME-OPERATIONS.md`
 
 ## Working rule
 If two docs appear to disagree, stop and resolve the canonical owner before coding.

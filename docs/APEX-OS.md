@@ -33,8 +33,8 @@ stateDiagram-v2
 - `ORCHESTRATOR.md`
 - `POLICY-ENGINE.md`
 - `PLUGIN-SDK.md`
-- `WINDOWS-DESKTOP.md`
-- `ENTERPRISE-OPERATIONS.md`
+- `windows/WINDOWS-DESKTOP.md`
+- `operations/ENTERPRISE-OPERATIONS.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

@@ -33,7 +33,7 @@ Guidance for Antigravity-based coding agents contributing to this repository.
 - `AGENTS.md`
 - `docs/ARCHITECTURE.md`
 - `docs/ai/runtime/AI-PIPELINE.md`
-- `docs/RUNTIME-OPERATIONS.md`
+- `docs/operations/RUNTIME-OPERATIONS.md`
 - `docs/TRADING-LIFECYCLE.md`
 - `docs/EXECUTION-LIFECYCLE.md`
 - `docs/DATABASE-SCHEMA.md`

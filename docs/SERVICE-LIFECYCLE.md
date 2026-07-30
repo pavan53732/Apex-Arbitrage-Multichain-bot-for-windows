@@ -36,7 +36,7 @@ stateDiagram-v2
 ## Cross-references
 - `APEX-KERNEL.md`
 - `ORCHESTRATOR.md`
-- `HEALTHCHECKS.md`
+- `operations/HEALTHCHECKS.md`
 
 ## Operational Contract
 Defines service registration, initialization, start, healthy, paused, restarting, stopping, and disposed transitions.

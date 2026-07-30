@@ -438,9 +438,9 @@ Mobile and tablet are explicitly **not** goals.
 
 ## Cross-references
 - `ui/UI-COMPONENT-SPEC.md`
-- `WINDOWS-DESKTOP.md`
+- `windows/WINDOWS-DESKTOP.md`
 - `ai/providers/AI-SETTINGS.md`
-- `USER-FLOWS.md`
+- `guides/USER-FLOWS.md`
 - `CLOUD-AI-INTEGRATION.md`
 
 ## Governance Rules

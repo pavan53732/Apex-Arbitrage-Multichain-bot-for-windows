@@ -40,7 +40,7 @@ stateDiagram-v2
 
 ## Cross-references
 - `dashboard/DASHBOARD-WORKSPACES.md`
-- `WINDOWS-DESKTOP.md`
+- `windows/WINDOWS-DESKTOP.md`
 - `configuration/CONFIGURATION-PROFILES.md`
 
 ## Operational Contract

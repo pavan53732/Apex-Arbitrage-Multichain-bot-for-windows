@@ -387,7 +387,7 @@ When a chain is no longer viable (low liquidity, abandoned, exploited):
 - `ROUTING-ENGINE.md`
 - `WALLET-MANAGEMENT.md`
 - `GAS-OPTIMISATION.md`
-- `MONITORING-OBSERVABILITY.md`
+- `operations/MONITORING-OBSERVABILITY.md`
 - `DATABASE-SCHEMA.md`
 - `CHAIN-REGISTRY.md`
 

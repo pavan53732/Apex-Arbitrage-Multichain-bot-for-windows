@@ -21,7 +21,7 @@ Defines wallet balances, approvals, positions, PnL, gas spent, assets, transacti
 
 ## Cross-references
 - `DOMAIN-MODEL.md`
-- `HEALTHCHECKS.md`
+- `operations/HEALTHCHECKS.md`
 
 
 ## State Machine
