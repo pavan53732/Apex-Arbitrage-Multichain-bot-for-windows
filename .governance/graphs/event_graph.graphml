@@ -12,11 +12,14 @@
     <node id="docs/EXECUTION-ENGINE.md" />
     <node id="trade.opened" />
     <node id="trade.executing" />
+    <node id="docs/MONITORING-OBSERVABILITY.md" />
     <node id="trade.executed" />
     <node id="trade.failed" />
     <node id="trade.rollback" />
     <node id="trade.settled" />
+    <node id="docs/NOTIFICATION-CENTER.md" />
     <node id="trade.cancelled" />
+    <node id="docs/CHAIN-INTEGRATION.md" />
     <node id="chain.block.new" />
     <node id="docs/MARKET-DATA.md" />
     <node id="docs/CHAIN-INTELLIGENCE.md" />
@@ -27,6 +30,7 @@
     <node id="docs/ROUTING-ENGINE.md" />
     <node id="docs/SLIPPAGE-MODEL.md" />
     <node id="price.spike" />
+    <node id="docs/DEX-INTEGRATION.md" />
     <node id="liquidity.changed" />
     <node id="docs/WALLET-MANAGEMENT.md" />
     <node id="wallet.balance.changed" />
@@ -54,15 +58,23 @@
     <node id="runtime.started" />
     <node id="runtime.shutting_down" />
     <node id="runtime.stopped" />
+    <node id="docs/HEALTHCHECKS.md" />
     <node id="runtime.health.failed" />
     <node id="runtime.health.restored" />
     <node id="runtime.failover.started" />
     <node id="runtime.failover.completed" />
+    <node id="docs/CONFIGURATION.md" />
+    <node id="runtime.config.reload" />
     <node id="docs/WORKSPACE-MANAGER.md" />
     <node id="dashboard.workspace.saved" />
     <node id="dashboard.workspace.restored" />
+    <node id="docs/DASHBOARD-WIDGETS.md" />
+    <node id="dashboard.widget.updated" />
+    <node id="system.error" />
+    <node id="system.warning" />
     <node id="security.violation" />
     <node id="docs/SECURITY.md" />
+    <node id="docs/SECRET-LIFECYCLE.md" />
     <node id="secret.rotated" />
     <edge source="docs/OPPORTUNITY-DETECTION.md" target="trade.opportunity.detected">
       <data key="d0">produces</data>
@@ -130,6 +142,9 @@
     <edge source="trade.executing" target="docs/TRADING-ENGINE.md">
       <data key="d0">consumes</data>
     </edge>
+    <edge source="trade.executing" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">consumes</data>
+    </edge>
     <edge source="trade.executed" target="docs/TRADING-ENGINE.md">
       <data key="d0">consumes</data>
     </edge>
@@ -142,8 +157,20 @@
     <edge source="trade.rollback" target="docs/TRADING-ENGINE.md">
       <data key="d0">consumes</data>
     </edge>
+    <edge source="trade.settled" target="docs/NOTIFICATION-CENTER.md">
+      <data key="d0">consumes</data>
+    </edge>
     <edge source="trade.cancelled" target="docs/EXECUTION-ENGINE.md">
       <data key="d0">consumes</data>
+    </edge>
+    <edge source="trade.cancelled" target="docs/NOTIFICATION-CENTER.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/CHAIN-INTEGRATION.md" target="chain.block.new">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/CHAIN-INTEGRATION.md" target="chain.rpc.failed">
+      <data key="d0">produces</data>
     </edge>
     <edge source="chain.block.new" target="docs/MARKET-DATA.md">
       <data key="d0">consumes</data>
@@ -166,6 +193,12 @@
     <edge source="docs/RPC-MANAGER.md" target="chain.rpc.switched">
       <data key="d0">produces</data>
     </edge>
+    <edge source="chain.rpc.switched" target="docs/CHAIN-INTEGRATION.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="chain.rpc.switched" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">consumes</data>
+    </edge>
     <edge source="price.updated" target="docs/ROUTING-ENGINE.md">
       <data key="d0">consumes</data>
     </edge>
@@ -180,6 +213,12 @@
     </edge>
     <edge source="price.spike" target="docs/OPPORTUNITY-DETECTION.md">
       <data key="d0">consumes</data>
+    </edge>
+    <edge source="price.spike" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/DEX-INTEGRATION.md" target="liquidity.changed">
+      <data key="d0">produces</data>
     </edge>
     <edge source="liquidity.changed" target="docs/ROUTING-ENGINE.md">
       <data key="d0">consumes</data>
@@ -220,7 +259,13 @@
     <edge source="risk.limit.exceeded" target="docs/TRADING-ENGINE.md">
       <data key="d0">consumes</data>
     </edge>
+    <edge source="risk.limit.exceeded" target="docs/NOTIFICATION-CENTER.md">
+      <data key="d0">consumes</data>
+    </edge>
     <edge source="risk.circuit.breaker.tripped" target="docs/TRADING-ENGINE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="risk.circuit.breaker.tripped" target="docs/NOTIFICATION-CENTER.md">
       <data key="d0">consumes</data>
     </edge>
     <edge source="risk.circuit.breaker.reset" target="docs/TRADING-ENGINE.md">
@@ -238,6 +283,9 @@
     <edge source="ai.provider.switched" target="docs/AI-PIPELINE.md">
       <data key="d0">consumes</data>
     </edge>
+    <edge source="ai.provider.switched" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">consumes</data>
+    </edge>
     <edge source="ai.tool.invoked" target="docs/AI-ORCHESTRATION.md">
       <data key="d0">consumes</data>
     </edge>
@@ -253,6 +301,9 @@
     <edge source="ai.cost.exceeded" target="docs/AI-PIPELINE.md">
       <data key="d0">consumes</data>
     </edge>
+    <edge source="ai.cost.exceeded" target="docs/NOTIFICATION-CENTER.md">
+      <data key="d0">consumes</data>
+    </edge>
     <edge source="docs/PLUGIN-LIFECYCLE.md" target="plugin.installed">
       <data key="d0">produces</data>
     </edge>
@@ -260,6 +311,9 @@
       <data key="d0">produces</data>
     </edge>
     <edge source="plugin.error" target="docs/PLUGIN-LIFECYCLE.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="plugin.error" target="docs/MONITORING-OBSERVABILITY.md">
       <data key="d0">consumes</data>
     </edge>
     <edge source="docs/ORCHESTRATOR.md" target="runtime.starting">
@@ -280,11 +334,26 @@
     <edge source="docs/ORCHESTRATOR.md" target="runtime.failover.completed">
       <data key="d0">produces</data>
     </edge>
+    <edge source="runtime.stopped" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/HEALTHCHECKS.md" target="runtime.health.failed">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="docs/HEALTHCHECKS.md" target="runtime.health.restored">
+      <data key="d0">produces</data>
+    </edge>
     <edge source="runtime.health.failed" target="docs/ORCHESTRATOR.md">
       <data key="d0">consumes</data>
     </edge>
     <edge source="runtime.health.restored" target="docs/ORCHESTRATOR.md">
       <data key="d0">consumes</data>
+    </edge>
+    <edge source="runtime.failover.started" target="docs/NOTIFICATION-CENTER.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/CONFIGURATION.md" target="runtime.config.reload">
+      <data key="d0">produces</data>
     </edge>
     <edge source="docs/WORKSPACE-MANAGER.md" target="dashboard.workspace.saved">
       <data key="d0">produces</data>
@@ -292,8 +361,23 @@
     <edge source="docs/WORKSPACE-MANAGER.md" target="dashboard.workspace.restored">
       <data key="d0">produces</data>
     </edge>
+    <edge source="docs/DASHBOARD-WIDGETS.md" target="dashboard.widget.updated">
+      <data key="d0">produces</data>
+    </edge>
+    <edge source="system.error" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="system.warning" target="docs/MONITORING-OBSERVABILITY.md">
+      <data key="d0">consumes</data>
+    </edge>
     <edge source="security.violation" target="docs/SECURITY.md">
       <data key="d0">consumes</data>
+    </edge>
+    <edge source="security.violation" target="docs/NOTIFICATION-CENTER.md">
+      <data key="d0">consumes</data>
+    </edge>
+    <edge source="docs/SECRET-LIFECYCLE.md" target="secret.rotated">
+      <data key="d0">produces</data>
     </edge>
     <edge source="secret.rotated" target="docs/SECURITY.md">
       <data key="d0">consumes</data>

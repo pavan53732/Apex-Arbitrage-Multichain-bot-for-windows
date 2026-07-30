@@ -163,10 +163,14 @@ def test_real_repository_event_ownership_matrix_parses_all_47_rows():
 
 
 def test_real_repository_resolves_expected_count_of_names():
-    """Sanity check against the real corpus: exactly 19 of 39 distinct
-    subsystem names resolve (13 deterministic + 6 manual overrides),
-    yielding real event_graph edges; 21 remain genuinely unresolved and
-    must be reflected in the unresolved-names report, never guessed."""
+    """Sanity check against the real corpus: exactly 27 of 39 distinct
+    subsystem names resolve (13 deterministic + 14 manual overrides --
+    6 original + 8 approved 2026-07-30, see
+    EVENT-MATRIX-UNRESOLVED-NAMES-REVIEW.md's "Approval Decision"
+    section), yielding real event_graph edges; 13 remain genuinely
+    unresolved (no safe single-document candidate, or deliberately
+    generic/multi-way-ambiguous terms) and must be reflected in the
+    unresolved-names report, never guessed."""
     import pytest
     repo_root = Path(__file__).resolve().parents[3]
     matrix_path = repo_root / "docs" / "EVENT-OWNERSHIP-MATRIX.md"
@@ -176,6 +180,62 @@ def test_real_repository_resolves_expected_count_of_names():
 
     rows = parse_event_ownership_matrix(matrix_path.read_text(encoding="utf-8"))
     result = build_event_graph_edges(rows, docs_dir)
-    assert result["resolved_name_count"] == 19
-    assert result["unresolved_name_count"] == 21
-    assert len(result["edges"]) > 0
+    assert result["resolved_name_count"] == 27
+    assert result["unresolved_name_count"] == 13
+    assert len(result["edges"]) == 102
+
+
+def test_approved_2026_07_30_overrides_all_present_and_resolve():
+    """Regression test for the 2026-07-30 user-approved batch of 8
+    previously-"pending decision" subsystem name mappings (see
+    EVENT-MATRIX-UNRESOLVED-NAMES-REVIEW.md's "Approval Decision"
+    section for the full traceable reasoning per entry). Each must be
+    present in MANUAL_NAME_OVERRIDES and resolve to a real, existing
+    document in the actual repository -- this pins the approval so a
+    future accidental revert would be caught immediately."""
+    import pytest
+    repo_root = Path(__file__).resolve().parents[3]
+    docs_dir = repo_root / "docs"
+    if not docs_dir.exists():
+        pytest.skip("real docs/ directory not present in this checkout")
+
+    approved = {
+        "Chain Adapter": "docs/CHAIN-INTEGRATION.md",
+        "Config Manager": "docs/CONFIGURATION.md",
+        "DEX Adapter": "docs/DEX-INTEGRATION.md",
+        "Health Checker": "docs/HEALTHCHECKS.md",
+        "Monitoring": "docs/MONITORING-OBSERVABILITY.md",
+        "Notification": "docs/NOTIFICATION-CENTER.md",
+        "Secret Manager": "docs/SECRET-LIFECYCLE.md",
+        "Widget Manager": "docs/DASHBOARD-WIDGETS.md",
+    }
+    for name, expected_path in approved.items():
+        assert name in MANUAL_NAME_OVERRIDES, f"{name!r} missing from MANUAL_NAME_OVERRIDES"
+        assert MANUAL_NAME_OVERRIDES[name] == expected_path
+        assert (repo_root / expected_path).exists(), f"{expected_path} does not exist"
+        resolved = resolve_subsystem_name(name, docs_dir)
+        assert resolved == expected_path, f"{name!r} did not resolve to {expected_path!r} (got {resolved!r})"
+
+
+def test_remaining_13_names_stay_permanently_unresolved():
+    """The 13 names that were never recommended for approval (either
+    zero plausible candidates, or genuine multi-way ambiguity, or
+    deliberate broadcast/generic terms) must remain unresolved -- this
+    guards against a future change accidentally guessing a mapping for
+    one of them."""
+    import pytest
+    repo_root = Path(__file__).resolve().parents[3]
+    matrix_path = repo_root / "docs" / "EVENT-OWNERSHIP-MATRIX.md"
+    docs_dir = repo_root / "docs"
+    if not matrix_path.exists():
+        pytest.skip("real EVENT-OWNERSHIP-MATRIX.md not present in this checkout")
+
+    rows = parse_event_ownership_matrix(matrix_path.read_text(encoding="utf-8"))
+    result = build_event_graph_edges(rows, docs_dir)
+    still_unresolved = {name for name, doc in result["name_resolutions"].items() if doc is None}
+    expected_unresolved = {
+        "AI Cost Manager", "All Subsystems", "Any Subsystem", "Audit",
+        "Dashboard", "Error Handler", "Memory", "Plugin Executor",
+        "Portfolio", "Runtime", "Security Enforcer", "Self-Healer", "Wallet",
+    }
+    assert still_unresolved == expected_unresolved

@@ -62,6 +62,23 @@ MANUAL_NAME_OVERRIDES: dict[str, str] = {
     "Runtime Orchestrator": "docs/ORCHESTRATOR.md",
     "Wallet Manager": "docs/WALLET-MANAGEMENT.md",
     "Plugin Manager": "docs/PLUGIN-LIFECYCLE.md",
+    # --- Approved 2026-07-30 by explicit user sign-off on the 8 "pending
+    # decision" candidates documented in
+    # .governance/programme_2.5/_reconciliation/EVENT-MATRIX-UNRESOLVED-NAMES-REVIEW.md.
+    # Each candidate document was re-verified to exist and to have a
+    # `purpose:` front-matter statement plausibly describing the named
+    # subsystem's responsibility before being added here -- see the
+    # review document's "pending decision" table for the full reasoning
+    # per entry. This is a human decision recorded in code, not an
+    # automatic/fuzzy resolution.
+    "Chain Adapter": "docs/CHAIN-INTEGRATION.md",
+    "Config Manager": "docs/CONFIGURATION.md",
+    "DEX Adapter": "docs/DEX-INTEGRATION.md",
+    "Health Checker": "docs/HEALTHCHECKS.md",
+    "Monitoring": "docs/MONITORING-OBSERVABILITY.md",
+    "Notification": "docs/NOTIFICATION-CENTER.md",
+    "Secret Manager": "docs/SECRET-LIFECYCLE.md",
+    "Widget Manager": "docs/DASHBOARD-WIDGETS.md",
 }
 
 _ROW_PATTERN = re.compile(

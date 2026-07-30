@@ -73,6 +73,12 @@
       "source_document": "docs/TRADING-ENGINE.md"
     },
     {
+      "consumer_subsystem_name": "Monitoring",
+      "event_name": "trade.executing",
+      "relation": "consumes",
+      "source_document": "docs/MONITORING-OBSERVABILITY.md"
+    },
+    {
       "event_name": "trade.executed",
       "publisher_subsystem_name": "Execution Engine",
       "relation": "produces",
@@ -121,6 +127,12 @@
       "source_document": "docs/TRADING-ENGINE.md"
     },
     {
+      "consumer_subsystem_name": "Notification",
+      "event_name": "trade.settled",
+      "relation": "consumes",
+      "source_document": "docs/NOTIFICATION-CENTER.md"
+    },
+    {
       "event_name": "trade.cancelled",
       "publisher_subsystem_name": "Trading Engine",
       "relation": "produces",
@@ -131,6 +143,18 @@
       "event_name": "trade.cancelled",
       "relation": "consumes",
       "source_document": "docs/EXECUTION-ENGINE.md"
+    },
+    {
+      "consumer_subsystem_name": "Notification",
+      "event_name": "trade.cancelled",
+      "relation": "consumes",
+      "source_document": "docs/NOTIFICATION-CENTER.md"
+    },
+    {
+      "event_name": "chain.block.new",
+      "publisher_subsystem_name": "Chain Adapter",
+      "relation": "produces",
+      "source_document": "docs/CHAIN-INTEGRATION.md"
     },
     {
       "consumer_subsystem_name": "Market Data",
@@ -151,6 +175,12 @@
       "source_document": "docs/CHAIN-INTELLIGENCE.md"
     },
     {
+      "event_name": "chain.rpc.failed",
+      "publisher_subsystem_name": "Chain Adapter",
+      "relation": "produces",
+      "source_document": "docs/CHAIN-INTEGRATION.md"
+    },
+    {
       "consumer_subsystem_name": "RPC Manager",
       "event_name": "chain.rpc.failed",
       "relation": "consumes",
@@ -161,6 +191,18 @@
       "publisher_subsystem_name": "RPC Manager",
       "relation": "produces",
       "source_document": "docs/RPC-MANAGER.md"
+    },
+    {
+      "consumer_subsystem_name": "Chain Adapter",
+      "event_name": "chain.rpc.switched",
+      "relation": "consumes",
+      "source_document": "docs/CHAIN-INTEGRATION.md"
+    },
+    {
+      "consumer_subsystem_name": "Monitoring",
+      "event_name": "chain.rpc.switched",
+      "relation": "consumes",
+      "source_document": "docs/MONITORING-OBSERVABILITY.md"
     },
     {
       "event_name": "price.updated",
@@ -205,6 +247,18 @@
       "source_document": "docs/OPPORTUNITY-DETECTION.md"
     },
     {
+      "consumer_subsystem_name": "Monitoring",
+      "event_name": "price.spike",
+      "relation": "consumes",
+      "source_document": "docs/MONITORING-OBSERVABILITY.md"
+    },
+    {
+      "event_name": "liquidity.changed",
+      "publisher_subsystem_name": "DEX Adapter",
+      "relation": "produces",
+      "source_document": "docs/DEX-INTEGRATION.md"
+    },
+    {
       "consumer_subsystem_name": "Routing Engine",
       "event_name": "liquidity.changed",
       "relation": "consumes",
@@ -289,6 +343,12 @@
       "source_document": "docs/TRADING-ENGINE.md"
     },
     {
+      "consumer_subsystem_name": "Notification",
+      "event_name": "risk.limit.exceeded",
+      "relation": "consumes",
+      "source_document": "docs/NOTIFICATION-CENTER.md"
+    },
+    {
       "event_name": "risk.circuit.breaker.tripped",
       "publisher_subsystem_name": "Risk Engine",
       "relation": "produces",
@@ -299,6 +359,12 @@
       "event_name": "risk.circuit.breaker.tripped",
       "relation": "consumes",
       "source_document": "docs/TRADING-ENGINE.md"
+    },
+    {
+      "consumer_subsystem_name": "Notification",
+      "event_name": "risk.circuit.breaker.tripped",
+      "relation": "consumes",
+      "source_document": "docs/NOTIFICATION-CENTER.md"
     },
     {
       "event_name": "risk.circuit.breaker.reset",
@@ -335,6 +401,12 @@
       "event_name": "ai.provider.switched",
       "relation": "consumes",
       "source_document": "docs/AI-PIPELINE.md"
+    },
+    {
+      "consumer_subsystem_name": "Monitoring",
+      "event_name": "ai.provider.switched",
+      "relation": "consumes",
+      "source_document": "docs/MONITORING-OBSERVABILITY.md"
     },
     {
       "event_name": "ai.tool.invoked",
@@ -379,6 +451,12 @@
       "source_document": "docs/AI-PIPELINE.md"
     },
     {
+      "consumer_subsystem_name": "Notification",
+      "event_name": "ai.cost.exceeded",
+      "relation": "consumes",
+      "source_document": "docs/NOTIFICATION-CENTER.md"
+    },
+    {
       "event_name": "plugin.installed",
       "publisher_subsystem_name": "Plugin Manager",
       "relation": "produces",
@@ -395,6 +473,12 @@
       "event_name": "plugin.error",
       "relation": "consumes",
       "source_document": "docs/PLUGIN-LIFECYCLE.md"
+    },
+    {
+      "consumer_subsystem_name": "Monitoring",
+      "event_name": "plugin.error",
+      "relation": "consumes",
+      "source_document": "docs/MONITORING-OBSERVABILITY.md"
     },
     {
       "event_name": "runtime.starting",
@@ -421,10 +505,28 @@
       "source_document": "docs/ORCHESTRATOR.md"
     },
     {
+      "consumer_subsystem_name": "Monitoring",
+      "event_name": "runtime.stopped",
+      "relation": "consumes",
+      "source_document": "docs/MONITORING-OBSERVABILITY.md"
+    },
+    {
+      "event_name": "runtime.health.failed",
+      "publisher_subsystem_name": "Health Checker",
+      "relation": "produces",
+      "source_document": "docs/HEALTHCHECKS.md"
+    },
+    {
       "consumer_subsystem_name": "Runtime Orchestrator",
       "event_name": "runtime.health.failed",
       "relation": "consumes",
       "source_document": "docs/ORCHESTRATOR.md"
+    },
+    {
+      "event_name": "runtime.health.restored",
+      "publisher_subsystem_name": "Health Checker",
+      "relation": "produces",
+      "source_document": "docs/HEALTHCHECKS.md"
     },
     {
       "consumer_subsystem_name": "Runtime Orchestrator",
@@ -439,10 +541,22 @@
       "source_document": "docs/ORCHESTRATOR.md"
     },
     {
+      "consumer_subsystem_name": "Notification",
+      "event_name": "runtime.failover.started",
+      "relation": "consumes",
+      "source_document": "docs/NOTIFICATION-CENTER.md"
+    },
+    {
       "event_name": "runtime.failover.completed",
       "publisher_subsystem_name": "Runtime Orchestrator",
       "relation": "produces",
       "source_document": "docs/ORCHESTRATOR.md"
+    },
+    {
+      "event_name": "runtime.config.reload",
+      "publisher_subsystem_name": "Config Manager",
+      "relation": "produces",
+      "source_document": "docs/CONFIGURATION.md"
     },
     {
       "event_name": "dashboard.workspace.saved",
@@ -457,10 +571,40 @@
       "source_document": "docs/WORKSPACE-MANAGER.md"
     },
     {
+      "event_name": "dashboard.widget.updated",
+      "publisher_subsystem_name": "Widget Manager",
+      "relation": "produces",
+      "source_document": "docs/DASHBOARD-WIDGETS.md"
+    },
+    {
+      "consumer_subsystem_name": "Monitoring",
+      "event_name": "system.error",
+      "relation": "consumes",
+      "source_document": "docs/MONITORING-OBSERVABILITY.md"
+    },
+    {
+      "consumer_subsystem_name": "Monitoring",
+      "event_name": "system.warning",
+      "relation": "consumes",
+      "source_document": "docs/MONITORING-OBSERVABILITY.md"
+    },
+    {
       "consumer_subsystem_name": "Security",
       "event_name": "security.violation",
       "relation": "consumes",
       "source_document": "docs/SECURITY.md"
+    },
+    {
+      "consumer_subsystem_name": "Notification",
+      "event_name": "security.violation",
+      "relation": "consumes",
+      "source_document": "docs/NOTIFICATION-CENTER.md"
+    },
+    {
+      "event_name": "secret.rotated",
+      "publisher_subsystem_name": "Secret Manager",
+      "relation": "produces",
+      "source_document": "docs/SECRET-LIFECYCLE.md"
     },
     {
       "consumer_subsystem_name": "Security",
@@ -477,19 +621,19 @@
     "All Subsystems": null,
     "Any Subsystem": null,
     "Audit": null,
-    "Chain Adapter": null,
+    "Chain Adapter": "docs/CHAIN-INTEGRATION.md",
     "Chain Intelligence": "docs/CHAIN-INTELLIGENCE.md",
-    "Config Manager": null,
+    "Config Manager": "docs/CONFIGURATION.md",
     "Context Builder": "docs/CONTEXT-BUILDER.md",
-    "DEX Adapter": null,
+    "DEX Adapter": "docs/DEX-INTEGRATION.md",
     "Dashboard": null,
     "Error Handler": null,
     "Execution Engine": "docs/EXECUTION-ENGINE.md",
-    "Health Checker": null,
+    "Health Checker": "docs/HEALTHCHECKS.md",
     "Market Data": "docs/MARKET-DATA.md",
     "Memory": null,
-    "Monitoring": null,
-    "Notification": null,
+    "Monitoring": "docs/MONITORING-OBSERVABILITY.md",
+    "Notification": "docs/NOTIFICATION-CENTER.md",
     "Opportunity Detector": "docs/OPPORTUNITY-DETECTION.md",
     "Opportunity Ranker": "docs/OPPORTUNITY-RANKING.md",
     "Plugin Executor": null,
@@ -500,7 +644,7 @@
     "Routing Engine": "docs/ROUTING-ENGINE.md",
     "Runtime": null,
     "Runtime Orchestrator": "docs/ORCHESTRATOR.md",
-    "Secret Manager": null,
+    "Secret Manager": "docs/SECRET-LIFECYCLE.md",
     "Security": "docs/SECURITY.md",
     "Security Enforcer": null,
     "Self-Healer": null,
@@ -508,10 +652,10 @@
     "Trading Engine": "docs/TRADING-ENGINE.md",
     "Wallet": null,
     "Wallet Manager": "docs/WALLET-MANAGEMENT.md",
-    "Widget Manager": null,
+    "Widget Manager": "docs/DASHBOARD-WIDGETS.md",
     "Workspace Manager": "docs/WORKSPACE-MANAGER.md"
   },
-  "resolved_name_count": 19,
+  "resolved_name_count": 27,
   "source_document": "docs/EVENT-OWNERSHIP-MATRIX.md",
   "unresolved_events": [
     {
@@ -530,11 +674,6 @@
       "role": "consumer"
     },
     {
-      "event": "trade.executing",
-      "name": "Monitoring",
-      "role": "consumer"
-    },
-    {
       "event": "trade.executed",
       "name": "Portfolio",
       "role": "consumer"
@@ -590,54 +729,14 @@
       "role": "consumer"
     },
     {
-      "event": "trade.settled",
-      "name": "Notification",
-      "role": "consumer"
-    },
-    {
       "event": "trade.cancelled",
       "name": "Dashboard",
       "role": "consumer"
-    },
-    {
-      "event": "trade.cancelled",
-      "name": "Notification",
-      "role": "consumer"
-    },
-    {
-      "event": "chain.block.new",
-      "name": "Chain Adapter",
-      "role": "publisher"
-    },
-    {
-      "event": "chain.rpc.failed",
-      "name": "Chain Adapter",
-      "role": "publisher"
     },
     {
       "event": "chain.rpc.failed",
       "name": "Runtime",
       "role": "consumer"
-    },
-    {
-      "event": "chain.rpc.switched",
-      "name": "Chain Adapter",
-      "role": "consumer"
-    },
-    {
-      "event": "chain.rpc.switched",
-      "name": "Monitoring",
-      "role": "consumer"
-    },
-    {
-      "event": "price.spike",
-      "name": "Monitoring",
-      "role": "consumer"
-    },
-    {
-      "event": "liquidity.changed",
-      "name": "DEX Adapter",
-      "role": "publisher"
     },
     {
       "event": "wallet.balance.changed",
@@ -670,11 +769,6 @@
       "role": "consumer"
     },
     {
-      "event": "risk.limit.exceeded",
-      "name": "Notification",
-      "role": "consumer"
-    },
-    {
       "event": "risk.circuit.breaker.tripped",
       "name": "Runtime",
       "role": "consumer"
@@ -685,11 +779,6 @@
       "role": "consumer"
     },
     {
-      "event": "risk.circuit.breaker.tripped",
-      "name": "Notification",
-      "role": "consumer"
-    },
-    {
       "event": "risk.circuit.breaker.reset",
       "name": "Runtime",
       "role": "consumer"
@@ -697,11 +786,6 @@
     {
       "event": "ai.provider.failed",
       "name": "Runtime",
-      "role": "consumer"
-    },
-    {
-      "event": "ai.provider.switched",
-      "name": "Monitoring",
       "role": "consumer"
     },
     {
@@ -727,11 +811,6 @@
     {
       "event": "ai.cost.exceeded",
       "name": "Dashboard",
-      "role": "consumer"
-    },
-    {
-      "event": "ai.cost.exceeded",
-      "name": "Notification",
       "role": "consumer"
     },
     {
@@ -765,11 +844,6 @@
       "role": "consumer"
     },
     {
-      "event": "plugin.error",
-      "name": "Monitoring",
-      "role": "consumer"
-    },
-    {
       "event": "runtime.starting",
       "name": "All Subsystems",
       "role": "consumer"
@@ -805,24 +879,9 @@
       "role": "consumer"
     },
     {
-      "event": "runtime.stopped",
-      "name": "Monitoring",
-      "role": "consumer"
-    },
-    {
-      "event": "runtime.health.failed",
-      "name": "Health Checker",
-      "role": "publisher"
-    },
-    {
       "event": "runtime.health.failed",
       "name": "Self-Healer",
       "role": "consumer"
-    },
-    {
-      "event": "runtime.health.restored",
-      "name": "Health Checker",
-      "role": "publisher"
     },
     {
       "event": "runtime.health.restored",
@@ -840,11 +899,6 @@
       "role": "consumer"
     },
     {
-      "event": "runtime.failover.started",
-      "name": "Notification",
-      "role": "consumer"
-    },
-    {
       "event": "runtime.failover.completed",
       "name": "All Subsystems",
       "role": "consumer"
@@ -853,11 +907,6 @@
       "event": "runtime.failover.completed",
       "name": "Dashboard",
       "role": "consumer"
-    },
-    {
-      "event": "runtime.config.reload",
-      "name": "Config Manager",
-      "role": "publisher"
     },
     {
       "event": "runtime.config.reload",
@@ -876,11 +925,6 @@
     },
     {
       "event": "dashboard.widget.updated",
-      "name": "Widget Manager",
-      "role": "publisher"
-    },
-    {
-      "event": "dashboard.widget.updated",
       "name": "Dashboard",
       "role": "consumer"
     },
@@ -896,11 +940,6 @@
     },
     {
       "event": "system.error",
-      "name": "Monitoring",
-      "role": "consumer"
-    },
-    {
-      "event": "system.error",
       "name": "Audit",
       "role": "consumer"
     },
@@ -908,11 +947,6 @@
       "event": "system.warning",
       "name": "Any Subsystem",
       "role": "publisher"
-    },
-    {
-      "event": "system.warning",
-      "name": "Monitoring",
-      "role": "consumer"
     },
     {
       "event": "system.warning",
@@ -930,22 +964,12 @@
       "role": "consumer"
     },
     {
-      "event": "security.violation",
-      "name": "Notification",
-      "role": "consumer"
-    },
-    {
-      "event": "secret.rotated",
-      "name": "Secret Manager",
-      "role": "publisher"
-    },
-    {
       "event": "secret.rotated",
       "name": "Audit",
       "role": "consumer"
     }
   ],
-  "unresolved_name_count": 21,
+  "unresolved_name_count": 13,
   "unresolved_names_detail": [
     {
       "candidate_documents": [],
@@ -1006,38 +1030,6 @@
       "candidate_documents": [],
       "confidence": "zero_candidates",
       "events": [
-        "chain.block.new (publisher)",
-        "chain.rpc.failed (publisher)",
-        "chain.rpc.switched (consumer)"
-      ],
-      "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
-      "recommended_mapping": null,
-      "subsystem_name": "Chain Adapter"
-    },
-    {
-      "candidate_documents": [],
-      "confidence": "zero_candidates",
-      "events": [
-        "runtime.config.reload (publisher)"
-      ],
-      "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
-      "recommended_mapping": null,
-      "subsystem_name": "Config Manager"
-    },
-    {
-      "candidate_documents": [],
-      "confidence": "zero_candidates",
-      "events": [
-        "liquidity.changed (publisher)"
-      ],
-      "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
-      "recommended_mapping": null,
-      "subsystem_name": "DEX Adapter"
-    },
-    {
-      "candidate_documents": [],
-      "confidence": "zero_candidates",
-      "events": [
         "trade.opened (consumer)",
         "trade.executing (consumer)",
         "trade.executed (consumer)",
@@ -1082,55 +1074,11 @@
       "candidate_documents": [],
       "confidence": "zero_candidates",
       "events": [
-        "runtime.health.failed (publisher)",
-        "runtime.health.restored (publisher)"
-      ],
-      "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
-      "recommended_mapping": null,
-      "subsystem_name": "Health Checker"
-    },
-    {
-      "candidate_documents": [],
-      "confidence": "zero_candidates",
-      "events": [
         "ai.tool.result (consumer)"
       ],
       "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
       "recommended_mapping": null,
       "subsystem_name": "Memory"
-    },
-    {
-      "candidate_documents": [],
-      "confidence": "zero_candidates",
-      "events": [
-        "trade.executing (consumer)",
-        "chain.rpc.switched (consumer)",
-        "price.spike (consumer)",
-        "ai.provider.switched (consumer)",
-        "plugin.error (consumer)",
-        "runtime.stopped (consumer)",
-        "system.error (consumer)",
-        "system.warning (consumer)"
-      ],
-      "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
-      "recommended_mapping": null,
-      "subsystem_name": "Monitoring"
-    },
-    {
-      "candidate_documents": [],
-      "confidence": "zero_candidates",
-      "events": [
-        "trade.settled (consumer)",
-        "trade.cancelled (consumer)",
-        "risk.limit.exceeded (consumer)",
-        "risk.circuit.breaker.tripped (consumer)",
-        "ai.cost.exceeded (consumer)",
-        "runtime.failover.started (consumer)",
-        "security.violation (consumer)"
-      ],
-      "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
-      "recommended_mapping": null,
-      "subsystem_name": "Notification"
     },
     {
       "candidate_documents": [],
@@ -1174,16 +1122,6 @@
       "candidate_documents": [],
       "confidence": "zero_candidates",
       "events": [
-        "secret.rotated (publisher)"
-      ],
-      "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
-      "recommended_mapping": null,
-      "subsystem_name": "Secret Manager"
-    },
-    {
-      "candidate_documents": [],
-      "confidence": "zero_candidates",
-      "events": [
         "security.violation (publisher)"
       ],
       "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
@@ -1211,16 +1149,6 @@
       "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
       "recommended_mapping": null,
       "subsystem_name": "Wallet"
-    },
-    {
-      "candidate_documents": [],
-      "confidence": "zero_candidates",
-      "events": [
-        "dashboard.widget.updated (publisher)"
-      ],
-      "reason": "no document filename matches the deterministic slug transform (name.upper().replace(' ','-') + .md/.{-ENGINE,-MANAGER}.md)",
-      "recommended_mapping": null,
-      "subsystem_name": "Widget Manager"
     }
   ]
 }

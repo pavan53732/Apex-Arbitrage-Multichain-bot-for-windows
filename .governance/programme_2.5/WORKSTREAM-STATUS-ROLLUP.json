@@ -1,7 +1,7 @@
 {
   "programme": "PROGRAMME_2.5",
-  "generated_at": "2026-07-30T05:01:24.804807+00:00",
-  "generated_at_commit": "366262ee28f71de0aa9646ddef6501d2bf610aaa",
+  "generated_at": "2026-07-30T05:25:01.016991+00:00",
+  "generated_at_commit": "06eec3baf59c8ac3c21ba88b06d7fd67b5356111",
   "workstreams": {
     "WS1": {
       "status": "IMPLEMENTED",
