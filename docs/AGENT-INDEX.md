@@ -26,7 +26,7 @@ This document is an overview, reference, or index as noted below.
 
 # Agent Index
 
-Agent-specific configuration files have been consolidated into [AGENTS.md](../AGENTS.md) (canonical) and [docs/agents/](../agents/) for agent-specific overrides.
+Agent-specific configuration files have been consolidated into [AGENTS.md](../AGENTS.md) (canonical) and [agents/](agents/) for agent-specific overrides.
 
 ## Rule
 Use [AGENTS.md](../AGENTS.md) as the first stop for assistant-specific behavior. Use the canonical owner docs for actual implementation contracts.

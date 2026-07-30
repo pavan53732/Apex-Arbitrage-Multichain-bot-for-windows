@@ -19,6 +19,7 @@
     ],
     "Reference": [
       "AGENTS.md",
+      "AGENTS_RULES.md",
       "README.md",
       "docs/AGENT-INDEX.md",
       "docs/AGENTS.md",
@@ -276,7 +277,7 @@
   "counts": {
     "ADR": 8,
     "Guide": 5,
-    "Reference": 196,
+    "Reference": 197,
     "Registry": 8,
     "Tier A: Platform Root": 1,
     "Tier B: Kernel Root": 7,
@@ -334,7 +335,7 @@
     "Guide",
     "ADR"
   ],
-  "total_documents": 252,
+  "total_documents": 253,
   "total_roots": 35,
   "untiered_roots": []
 }

@@ -178,8 +178,8 @@
   ],
   "closure_hash": "30412100feb5433dec0d7ca33e4c466b8e50cd850ce2371bab7c5adff966e6cd",
   "closure_size": 175,
-  "generated_at": "2026-07-30T22:42:00.366725+00:00",
-  "generated_at_commit": "59c8ff1261cd5bef883e93dac1775d27f0de3a04",
+  "generated_at": "2026-07-30T22:47:20.120336+00:00",
+  "generated_at_commit": "a51fddd60adb99df31b632dd05d9ed7df53f80e0",
   "reverse_closure_documents": [
     "docs/AGENTS.md",
     "docs/AI-AGENT-SPECIFICATION.md",
