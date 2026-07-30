@@ -2,7 +2,7 @@
   "programme_id": "PROGRAMME_2.5",
   "title": "Governance Platform Hardening",
   "objective": "Make the governance platform itself deterministic, trustworthy, and self-consistent before allowing it to govern the repository.",
-  "status": "IMPLEMENTED_PENDING_FINAL_CERTIFICATION",
+  "status": "CERTIFIED",
   "workstreams": 9,
   "phase_0": {
     "phase_id": "PROGRAMME_2.5_PHASE_0",
@@ -87,5 +87,12 @@
     "purpose": "Prevent 'fixing the spec in code' and keep architecture as source of truth."
   },
   "status_last_reconciled_at": "2026-07-30",
-  "status_note": "ALL 9 workstreams (WS1-WS9) are now fully IMPLEMENTED against every readiness-checklist item (103/103 total checks passing), verified live. WS4's previously-disclosed data-completeness gaps (event_graph/schema_graph empty; no graph-vs-source validation) were closed by building two new, conservative, deterministic parsers: event_matrix_parser.py (parses the single canonical docs/EVENT-OWNERSHIP-MATRIX.md table, resolving subsystem names to document paths via exact filename transforms plus a small, hand-reviewed override list -- 19 of 39 names resolve to 78 real graph edges; 21 genuinely ambiguous/generic names, e.g. 'Dashboard', 'Runtime', 'Audit', are deliberately left unresolved and excluded from the graph rather than guessed, see event_graph_resolution_report.json) and schema_reference_scanner.py (exact literal schemas/*.json filename matches in document prose text only, no fuzzy matching -- 18 real references resolved, 1 correctly left unresolved as a genuine near-miss). A new graph_source_validator.py module also closes the final WS4 gap: every one of 11 content-derived graphs is now verified to trace back to real, currently-indexed source documents (wired into IntegrityEngine.check_graphs()). See .governance/programme_2.5/WORKSTREAM-STATUS-ROLLUP.json and each ws{N}/manifest.json for full itemized, live-executed evidence."
+  "status_note": "ALL 9 workstreams (WS1-WS9) are now fully IMPLEMENTED against every readiness-checklist item (103/103 total checks passing), verified live. WS4's previously-disclosed data-completeness gaps (event_graph/schema_graph empty; no graph-vs-source validation) were closed by building two new, conservative, deterministic parsers: event_matrix_parser.py (parses the single canonical docs/EVENT-OWNERSHIP-MATRIX.md table, resolving subsystem names to document paths via exact filename transforms plus a small, hand-reviewed override list -- 19 of 39 names resolve to 78 real graph edges; 21 genuinely ambiguous/generic names, e.g. 'Dashboard', 'Runtime', 'Audit', are deliberately left unresolved and excluded from the graph rather than guessed, see event_graph_resolution_report.json) and schema_reference_scanner.py (exact literal schemas/*.json filename matches in document prose text only, no fuzzy matching -- 18 real references resolved, 1 correctly left unresolved as a genuine near-miss). A new graph_source_validator.py module also closes the final WS4 gap: every one of 11 content-derived graphs is now verified to trace back to real, currently-indexed source documents (wired into IntegrityEngine.check_graphs()). See .governance/programme_2.5/WORKSTREAM-STATUS-ROLLUP.json and each ws{N}/manifest.json for full itemized, live-executed evidence.",
+  "certification": {
+    "certified": true,
+    "certified_at": "2026-07-30",
+    "certified_commit": "7571a145a61a769e6fcb2448303b8a9f3d588144",
+    "certification_document": ".governance/programme_2.5/PROGRAMME-2.5-CERTIFICATION-DECISION.md",
+    "method": "independent fresh git clone re-verification (14/14 apex-gov integrity PASS, 238/238 tests PASS, 103/103 readiness checklist items PASS)"
+  }
 }
