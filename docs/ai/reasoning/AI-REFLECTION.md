@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Reflection documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-REFLECTION.md
+canonical_source: docs/ai/reasoning/AI-REFLECTION.md
 ---
 
 # Ai Reflection
@@ -30,7 +30,7 @@ stateDiagram-v2
 ```
 
 ## Cross-references
-- `AI-ORCHESTRATION.md`
+- `ai/orchestration/AI-ORCHESTRATION.md`
 - `LEARNING-PIPELINE.md`
 - `EXPLAINABILITY.md`
 

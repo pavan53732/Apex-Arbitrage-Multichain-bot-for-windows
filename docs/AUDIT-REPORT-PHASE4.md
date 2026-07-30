@@ -73,7 +73,7 @@ The duplicate/conflict auditor (`audit_duplicates.py`) reports:
 |-------|---------------|
 | `README.md` ↔ `docs/README.md` ↔ `README-GOVERNANCE.md` ↔ `docs/README-GOVERNANCE.md` | Consolidate to one authoritative README per directory |
 | `AGENTS.md` ↔ `docs/AGENTS.md` | Consolidate into `docs/AGENTS.md` |
-| `AI-MEMORY.md` ↔ `AI-MEMORY-SYSTEM.md` | Consolidate into one |
+| `ai/memory/AI-MEMORY.md` ↔ `ai/memory/AI-MEMORY-SYSTEM.md` | Consolidate into one |
 | `API-CONTRACTS.md` ↔ `API-REFERENCE.md` | Consolidate into one |
 | `ARCHITECTURE.md` ↔ APEX-ARCHITECTURE.md | Keep `ARCHITECTURE.md` as canonical; redirect from APEX-ARCHITECTURE.md |
 | `WORKER-ARCHITECTURE.md` ↔ `WORKER-POOL.md` | Consolidate into one |

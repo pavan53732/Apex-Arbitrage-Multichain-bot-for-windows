@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Capability Matrix documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-CAPABILITY-MATRIX.md
+canonical_source: docs/ai/reference/AI-CAPABILITY-MATRIX.md
 ---
 
 # Ai Capability Matrix
@@ -34,13 +34,13 @@ This matrix is descriptive and used by AI routing, provider selection, and confi
 | Speech | Supported | Limited | Limited | Provider-dependent | Provider-dependent |
 
 ## Cross-references
-- `AI-PIPELINE.md`
+- `ai/runtime/AI-PIPELINE.md`
 - `CLOUD-AI-INTEGRATION.md`
-- `AI-SETTINGS.md`
+- `ai/providers/AI-SETTINGS.md`
 - `CONFIGURATION.md`
 
 ## Orchestration boundary
-This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `AI-PIPELINE.md`.
+This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `ai/runtime/AI-PIPELINE.md`.
 
 ## Governance Rules
 Defines detected AI capabilities, provider support mapping, and compatibility decisions.

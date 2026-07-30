@@ -58,7 +58,7 @@ These targets apply to UI, IPC, market data, AI requests, execution, reconciliat
 ## Cross-references
 - `docs/MONITORING-OBSERVABILITY.md`
 - `docs/RUNTIME-OPERATIONS.md`
-- `docs/AI-PIPELINE.md`
+- `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/CLOUD-AI-INTEGRATION.md`
 
 ## Operational Contract

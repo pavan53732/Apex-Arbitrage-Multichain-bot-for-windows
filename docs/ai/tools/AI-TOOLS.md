@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Tools documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-TOOLS.md
+canonical_source: docs/ai/tools/AI-TOOLS.md
 ---
 
 # Ai Tools
@@ -24,7 +24,7 @@ Market search, risk query, wallet query, simulation, logs, configuration, notifi
 
 ## Cross-references
 - `INTERFACE-TOOL-CALL.md`
-- `AI-AGENT-SPECIFICATION.md`
+- `ai/reference/AI-AGENT-SPECIFICATION.md`
 - `API-REFERENCE.md`
 
 ## Governance Rules

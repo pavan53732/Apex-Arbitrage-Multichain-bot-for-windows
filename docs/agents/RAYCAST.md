@@ -33,7 +33,7 @@ Guidance for RAYCAST-based coding agents contributing to this repository.
 ## Required reading
 - `AGENTS.md`
 - `docs/ARCHITECTURE.md`
-- `docs/AI-PIPELINE.md`
+- `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/RUNTIME-OPERATIONS.md`
 - `docs/TRADING-LIFECYCLE.md`
 - `docs/EXECUTION-LIFECYCLE.md`

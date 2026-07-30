@@ -43,8 +43,8 @@ Defines the canonical agent message envelope.
 - `payload` is required and must validate against the registered message type.
 
 ## Cross-references
-- `AI-ORCHESTRATION.md`
-- `AI-AGENT-SPECIFICATION.md`
+- `ai/orchestration/AI-ORCHESTRATION.md`
+- `ai/reference/AI-AGENT-SPECIFICATION.md`
 
 ## Interface Contract
 Defines message envelope, routing fields, correlation, priority, and validation rules for agent-to-agent messages.

@@ -306,7 +306,7 @@ Testing in APEX is not only about correctness in isolated functions. It is the m
 - `SIMULATION-ENGINE.md`
 - `BACKTESTING.md`
 - `STRATEGIES.md`
-- `AI-PIPELINE.md`
+- `ai/runtime/AI-PIPELINE.md`
 - `RUNTIME-OPERATIONS.md`
 - `MONITORING-OBSERVABILITY.md`
 

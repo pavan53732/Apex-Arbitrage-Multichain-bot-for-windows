@@ -38,7 +38,7 @@ Missing rationale, incomplete inputs, untraceable decision, expired replay data.
 Reject storage, request re-evaluation, or mark the decision as non-compliant.
 
 ## Cross-references
-- `AI-ORCHESTRATION.md`
+- `ai/orchestration/AI-ORCHESTRATION.md`
 - `DECISION-ENGINE.md`
 - `LEARNING-PIPELINE.md`
 - `METRICS.md`

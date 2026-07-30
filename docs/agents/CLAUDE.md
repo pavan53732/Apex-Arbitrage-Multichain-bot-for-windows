@@ -30,7 +30,7 @@ Before editing code, verify the canonical owner docs for the feature area. Do no
 ## Required reading
 - `AGENTS.md`
 - `docs/ARCHITECTURE.md`
-- `docs/AI-PIPELINE.md`
+- `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/RUNTIME-OPERATIONS.md`
 - `docs/TRADING-LIFECYCLE.md`
 - `docs/EXECUTION-LIFECYCLE.md`

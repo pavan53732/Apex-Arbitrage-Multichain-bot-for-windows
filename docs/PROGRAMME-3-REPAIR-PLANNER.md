@@ -52,9 +52,9 @@ A repair task is defined as:
 
 Task 000184
 
-- Root: `docs/AI-ORCHESTRATION.md`.
+- Root: `docs/ai/orchestration/AI-ORCHESTRATION.md`.
 - Dimension: `EVENT`.
-- Document: `docs/AI-GATEWAY.md`.
+- Document: `docs/ai/runtime/AI-GATEWAY.md`.
 - Section: `Events Produced`.
 - Acceptance:
   - Producer defined.

@@ -6,7 +6,7 @@ version: 1.0.0
 purpose: Defines when AI may call tools and under which priority, fallback, timeout, and retry policies. This contract is the single authoritative source for all tool invocation governance.
 scope: Ai Tool Invocation Contract scope and boundaries.
 last_updated: 2026-07-29
-canonical_source: docs/AI-TOOL-INVOCATION-CONTRACT.md
+canonical_source: docs/ai/tools/AI-TOOL-INVOCATION-CONTRACT.md
 ---
 
 # AI Tool Invocation Contract
@@ -26,7 +26,7 @@ Defines when AI may call tools and under which priority, fallback, timeout, and 
 
 The AI agent may invoke a tool if and only if **all** of the following conditions are met:
 
-1. The tool is registered in the tool registry (`AI-TOOLS.md`).
+1. The tool is registered in the tool registry (`ai/tools/AI-TOOLS.md`).
 2. The tool's required capabilities are available in the current context.
 3. The tool invocation does not violate the current trust boundary (`TRUST-BOUNDARIES.md`).
 4. The tool has not been rate-limited or circuit-broken.

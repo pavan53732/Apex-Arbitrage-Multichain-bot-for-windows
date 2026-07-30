@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Context Window Management documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-CONTEXT-WINDOW-MANAGEMENT.md
+canonical_source: docs/ai/runtime/AI-CONTEXT-WINDOW-MANAGEMENT.md
 ---
 
 # Ai Context Window Management
@@ -36,8 +36,8 @@ Context overflow, stale summary, missing retrieval, token budget breach.
 Compress, trim, retrieve alternate memory, or refuse request.
 
 ## Cross-references
-- `AI-PIPELINE.md`
-- `AI-MEMORY-SYSTEM.md`
+- `ai/runtime/AI-PIPELINE.md`
+- `ai/memory/AI-MEMORY-SYSTEM.md`
 - `CONTEXT-BUILDER.md`
 - `TRACEABILITY-MATRIX.md`
 

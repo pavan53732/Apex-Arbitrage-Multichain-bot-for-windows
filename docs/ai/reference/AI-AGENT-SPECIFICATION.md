@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Agent Specification documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-AGENT-SPECIFICATION.md
+canonical_source: docs/ai/reference/AI-AGENT-SPECIFICATION.md
 ---
 
 # Ai Agent Specification
@@ -30,11 +30,11 @@ This document is an overview, reference, or index as noted below.
 Defines message and tool schemas for AI agents.
 
 ## Support Doc
-This document provides schemas for agent messages and tool calls. Lifecycle rules are defined in `AI-ORCHESTRATION.md`.
+This document provides schemas for agent messages and tool calls. Lifecycle rules are defined in `ai/orchestration/AI-ORCHESTRATION.md`.
 
 ## Cross-references
-- `AI-ORCHESTRATION.md`
-- `AI-PIPELINE.md`
+- `ai/orchestration/AI-ORCHESTRATION.md`
+- `ai/runtime/AI-PIPELINE.md`
 
 ## Interface Contract
 Each agent defines purpose, inputs, outputs, tools, memory access, metrics, and lifecycle expectations.

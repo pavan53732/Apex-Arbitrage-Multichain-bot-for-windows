@@ -52,8 +52,8 @@ New models go to a shadow pool for 24 hours. Roll back automatically if shadow p
 - ROLLBACK_THRESHOLD.
 
 ## Cross-references
-- `AI-ORCHESTRATION.md`
-- `AI-MEMORY-SYSTEM.md`
+- `ai/orchestration/AI-ORCHESTRATION.md`
+- `ai/memory/AI-MEMORY-SYSTEM.md`
 - `METRICS.md`
 - `SIMULATION-ENGINE.md`
 

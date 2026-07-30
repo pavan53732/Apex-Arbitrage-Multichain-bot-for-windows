@@ -6,7 +6,7 @@ version: 1.0.0
 purpose: Defines the complete AI orchestration state machine — states, transitions, timeouts, recovery transitions, forbidden transitions, prompt/tool/memory lifecycle state coupling, and provider routing lifecycle.
 scope: Ai State Machine scope and boundaries.
 last_updated: 2026-07-29
-canonical_source: docs/AI-STATE-MACHINE.md
+canonical_source: docs/ai/reference/AI-STATE-MACHINE.md
 ---
 
 # AI State Machine
@@ -124,7 +124,7 @@ The AI state machine directly drives the prompt lifecycle (see `PROMPT-LIFECYCLE
 | FAILED | FAILED | Construction or execution error |
 
 ### Tool Invocation Coupling
-When AI is in TOOL_CALLING state, the tool invocation contract (see `AI-TOOL-INVOCATION-CONTRACT.md`) governs:
+When AI is in TOOL_CALLING state, the tool invocation contract (see `ai/tools/AI-TOOL-INVOCATION-CONTRACT.md`) governs:
 - Tool priority tiers determine selection order.
 - Tool timeout is `ai.tools.timeout_ms` (15s).
 - Tool fallback chain is tried before declaring failure.
@@ -132,7 +132,7 @@ When AI is in TOOL_CALLING state, the tool invocation contract (see `AI-TOOL-INV
 - Tool result is injected back into the RUNNING context.
 
 ### Memory Lifecycle Coupling
-When AI transitions COMPLETED → IDLE, memory lifecycle (see `AI-MEMORY.md`, `MEMORY-LIFECYCLE.md`) governs:
+When AI transitions COMPLETED → IDLE, memory lifecycle (see `ai/memory/AI-MEMORY.md`, `ai/memory/MEMORY-LIFECYCLE.md`) governs:
 - Response is evaluated for memory-worthy content.
 - Relevant insights are stored in memory with TTL and relevance scoring.
 - Memory capacity eviction applies (LRU + score-based).

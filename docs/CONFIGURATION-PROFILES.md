@@ -40,7 +40,7 @@ Fallback to safe defaults and validate merged config.
 
 ## Cross-references
 - `CONFIGURATION.md`
-- `AI-SETTINGS.md`
+- `ai/providers/AI-SETTINGS.md`
 - `DASHBOARD-WORKSPACES.md`
 - `TRACEABILITY-MATRIX.md`
 

@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Gateway documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-GATEWAY.md
+canonical_source: docs/ai/runtime/AI-GATEWAY.md
 ---
 
 # Ai Gateway
@@ -64,9 +64,9 @@ Low-latency dispatch, bounded retries, and predictable failover timing.
 New provider adapters, capability detectors, response normalizers, and telemetry sinks.
 
 ## Cross references
-- `AI-TOOLS.md`
+- `ai/tools/AI-TOOLS.md`
 - `MODEL-CAPABILITY-NEGOTIATION.md`
-- `AI-REASONING-POLICY.md`
+- `ai/reasoning/AI-REASONING-POLICY.md`
 - `PROVIDER-RESILIENCE.md`
 
 ## Implementation constraints

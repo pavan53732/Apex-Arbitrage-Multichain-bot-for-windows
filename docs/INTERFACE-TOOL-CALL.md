@@ -33,8 +33,8 @@ Defines canonical tool invocation and result contracts.
 - `result` and `error` are mutually exclusive.
 
 ## Cross-references
-- `AI-AGENT-SPECIFICATION.md`
-- `AI-ORCHESTRATION.md`
+- `ai/reference/AI-AGENT-SPECIFICATION.md`
+- `ai/orchestration/AI-ORCHESTRATION.md`
 
 ## Interface Contract
 Defines AI tool invocation shape, permissions, arguments, result handling, and error normalization.

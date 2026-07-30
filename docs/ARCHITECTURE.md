@@ -44,7 +44,7 @@ For authoritative runtime flow, see `ORCHESTRATOR.md`.
 ## Cross-references
 - `docs/TRADING-ENGINE.md`
 - `docs/EXECUTION-ENGINE.md`
-- `docs/AI-PIPELINE.md`
+- `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/RUNTIME-OPERATIONS.md`
 - `docs/STATE-MANAGEMENT.md`
 - `CHAIN-REGISTRY.md`

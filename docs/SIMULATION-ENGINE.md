@@ -274,7 +274,7 @@ Persist scenario ids, seeds, market snapshots, configuration hashes, code versio
 - `BACKTESTING.md`
 - `STRATEGIES.md`
 - `EXECUTION-ENGINE.md`
-- `AI-PIPELINE.md`
+- `ai/runtime/AI-PIPELINE.md`
 - `TESTING-GUIDE.md`
 
 - `DOMAIN-MODEL.md`

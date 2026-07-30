@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Reasoning Policy documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-REASONING-POLICY.md
+canonical_source: docs/ai/reasoning/AI-REASONING-POLICY.md
 ---
 
 # Ai Reasoning Policy
@@ -39,7 +39,7 @@ AI used in forbidden path, policy drift, ambiguous responsibility.
 Reject the action, route to deterministic logic, and log the violation.
 
 ## Cross-references
-- `AI-CONSENSUS.md`
+- `ai/reasoning/AI-CONSENSUS.md`
 - `DECISION-ENGINE.md`
 - `RISK-ENGINE.md`
 

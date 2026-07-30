@@ -38,20 +38,28 @@ def load_test_case_registry():
 def resolve_doc_path(doc_ref):
     """Resolve a document reference to an actual file path.
     Handles: 'DOC.md', 'docs/DOC.md', '../APEX-ARCHITECTURE.md', 'subdir/DOC.md'
+    Also resolves by basename anywhere under DOCS_DIR (recursive), since
+    traceability identifiers are independent of folder location.
     """
     doc_ref = doc_ref.strip().replace("`", "").replace("**", "")
-    
+
     # Direct path under docs/
     path = os.path.join(DOCS_DIR, doc_ref)
     if os.path.exists(path):
         return path
-    
+
     # Already has ../ prefix, resolve relative to DOCS_DIR
     if doc_ref.startswith("../"):
         root_path = doc_ref[3:]  # ../APEX-ARCHITECTURE.md → APEX-ARCHITECTURE.md
         if os.path.exists(root_path):
             return root_path
-    
+
+    # Recursive basename search under DOCS_DIR (handles moved/nested docs)
+    basename = os.path.basename(doc_ref)
+    for root, _dirs, files in os.walk(DOCS_DIR):
+        if basename in files:
+            return os.path.join(root, basename)
+
     return None
 
 def check_doc_exists(doc_ref):

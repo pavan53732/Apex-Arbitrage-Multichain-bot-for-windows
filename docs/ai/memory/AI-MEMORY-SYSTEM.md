@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Memory System documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-MEMORY-SYSTEM.md
+canonical_source: docs/ai/memory/AI-MEMORY-SYSTEM.md
 ---
 
 # Ai Memory System

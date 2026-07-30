@@ -31,7 +31,7 @@ stateDiagram-v2
 
 ## Cross-references
 - `KNOWLEDGE-GRAPH.md`
-- `AI-MEMORY-SYSTEM.md`
+- `ai/memory/AI-MEMORY-SYSTEM.md`
 - `CONTEXT-BUILDER.md`
 
 ## Interface Contract

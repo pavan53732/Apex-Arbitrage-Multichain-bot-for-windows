@@ -54,7 +54,7 @@ Defines global performance, reliability, security, maintainability, and operabil
 - `docs/PERFORMANCE-TARGETS.md`
 - `docs/SECURITY.md`
 - `docs/MONITORING-OBSERVABILITY.md`
-- `docs/AI-PIPELINE.md`
+- `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/RUNTIME-OPERATIONS.md`
 
 ## Operational Contract

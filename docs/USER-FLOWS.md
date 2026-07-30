@@ -133,7 +133,7 @@ Completion criteria: settings confirmed.
 ## Cross-references
 - `TRADING-ENGINE.md`
 - `RUNTIME-OPERATIONS.md`
-- `AI-PIPELINE.md`
+- `ai/runtime/AI-PIPELINE.md`
 - `SECURITY.md`
 - `CONFIGURATION.md`
 - `DASHBOARD-LAYOUT.md`

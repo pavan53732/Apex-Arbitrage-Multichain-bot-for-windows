@@ -39,8 +39,8 @@ Capability mismatch, false positive, provider regression.
 Downgrade features, switch providers, or reject unsupported capability use.
 
 ## Cross-references
-- `AI-PROVIDER-MANAGER.md`
-- `AI-GATEWAY.md`
+- `ai/providers/AI-PROVIDER-MANAGER.md`
+- `ai/runtime/AI-GATEWAY.md`
 - `INTERFACE-PROVIDER-ADAPTER.md`
 
 ## Governance Rules

@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Defines AI request routing, prompt assembly pipeline, context assembly, context compression, token budgeting, prompt construction, provider routing, confidence scoring, streaming lifecycle, cancellation, fallback policy, and recovery.
 scope: AI request processing from request to structured response.
-canonical_source: docs/AI-PIPELINE.md
+canonical_source: docs/ai/runtime/AI-PIPELINE.md
 ---
 
 # AI Pipeline

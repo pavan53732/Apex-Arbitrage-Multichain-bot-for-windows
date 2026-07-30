@@ -38,11 +38,11 @@ Defines ownership, authority, and cross-reference rules for the documentation se
 - Execution engine: `docs/EXECUTION-ENGINE.md`
 - Strategy engine and strategy catalog: `docs/STRATEGIES.md`
 - Risk engine: `docs/RISK-ENGINE.md`
-- AI decision pipeline: `docs/AI-PIPELINE.md`
+- AI decision pipeline: `docs/ai/runtime/AI-PIPELINE.md`
 - Cloud AI integration: `docs/CLOUD-AI-INTEGRATION.md`
-- AI settings: `docs/AI-SETTINGS.md`
-- AI memory system: `docs/AI-MEMORY-SYSTEM.md`
-  - Deprecated: `docs/AI-MEMORY.md` → redirects to `AI-MEMORY-SYSTEM.md`
+- AI settings: `docs/ai/providers/AI-SETTINGS.md`
+- AI memory system: `docs/ai/memory/AI-MEMORY-SYSTEM.md`
+  - Deprecated: `docs/ai/memory/AI-MEMORY.md` → redirects to `ai/memory/AI-MEMORY-SYSTEM.md`
 - Error handling and logging: `docs/ERROR-HANDLING-LOGGING.md`
 - Permission model: `docs/PERMISSION-MODEL.md`
 - Security contracts: `docs/SECURITY-CONTRACTS.md` (policy mandates enforced by `SECURITY.md`)
@@ -130,8 +130,8 @@ These must not claim ownership and should only point to owners:
 
 
 ## Additional governed documents
-- AI capability matrix: `docs/AI-CAPABILITY-MATRIX.md` (Authoritative; owned by AI capability governance; defines supported AI capabilities and measurement.)
-- AI memory: `docs/AI-MEMORY.md` (Authoritative; owned by AI memory governance; defines memory storage, retrieval, and context handling.)
+- AI capability matrix: `docs/ai/reference/AI-CAPABILITY-MATRIX.md` (Authoritative; owned by AI capability governance; defines supported AI capabilities and measurement.)
+- AI memory: `docs/ai/memory/AI-MEMORY.md` (Authoritative; owned by AI memory governance; defines memory storage, retrieval, and context handling.)
 - Prompt engineering: `docs/PROMPT-ENGINEERING.md` (Authoritative; owned by AI prompt governance; defines prompt design and construction guidance.)
 - AI cost management: `docs/AI-COST-MANAGEMENT.md` (Authoritative; owned by AI cost governance; defines cost tracking, limits, and optimisation.)
 - Chain registry: `docs/CHAIN-REGISTRY.md` (Registry; owned by market/data/routing authority; lists supported chains and chain metadata.)
@@ -146,9 +146,9 @@ These must not claim ownership and should only point to owners:
 
 ## New autonomous OS contracts
 - Runtime orchestrator: `docs/ORCHESTRATOR.md` (CONTRACT; v1.0.0; owns startup/shutdown sequencing, platform mode transitions, subsystem gating, recovery delegation)
-- AI orchestration: `docs/AI-ORCHESTRATION.md` (CONTRACT; v1.0.0; owns multi-agent coordination, orchestration modes, consensus protocol)
-- AI agent specification: `docs/AI-AGENT-SPECIFICATION.md` (stub; owned by AI-ORCHESTRATION.md)
-- AI consensus: `docs/AI-CONSENSUS.md` (stub; owned by AI-ORCHESTRATION.md)
+- AI orchestration: `docs/ai/orchestration/AI-ORCHESTRATION.md` (CONTRACT; v1.0.0; owns multi-agent coordination, orchestration modes, consensus protocol)
+- AI agent specification: `docs/ai/reference/AI-AGENT-SPECIFICATION.md` (stub; owned by AI-ORCHESTRATION.md)
+- AI consensus: `docs/ai/reasoning/AI-CONSENSUS.md` (stub; owned by AI-ORCHESTRATION.md)
 - Plugin SDK: `docs/PLUGIN-SDK.md`
 - Plugin marketplace: `docs/PLUGIN-MARKETPLACE.md`
 - Domain model: `docs/DOMAIN-MODEL.md` (CONTRACT; v1.1.0; owns entity definitions, PKs, relationships, invariants)
@@ -177,7 +177,7 @@ These must not claim ownership and should only point to owners:
 - Dashboard runtime: `docs/DASHBOARD-RUNTIME.md` (CONTRACT; v1.0.0; deepened — init sequence, IPC bridge contract)
 - Dashboard layout: `docs/DASHBOARD-LAYOUT.md` (CONTRACT; v1.0.0; deepened — dock contract schema, layout serialization + migration)
 - Dashboard workspaces: `docs/DASHBOARD-WORKSPACES.md` (CONTRACT; v1.0.0; deepened — cross-subsystem integration)
-- AI provider manager: `docs/AI-PROVIDER-MANAGER.md` (CONTRACT; v1.0.0; deepened — 7-provider inventory, scoring algorithm, failover matrix)
+- AI provider manager: `docs/ai/providers/AI-PROVIDER-MANAGER.md` (CONTRACT; v1.0.0; deepened — 7-provider inventory, scoring algorithm, failover matrix)
 - Trading engine: `docs/TRADING-ENGINE.md` (CONTRACT; v1.0.0; deepened — 11-step execution algorithm, risk scoring, MEV decision tree)
 - Execution engine: `docs/EXECUTION-ENGINE.md` (CONTRACT; v1.0.0; deepened — multi-chain execution, gas handling)
 - Threading model: `docs/THREADING-MODEL.md` (CONTRACT; v1.0.0; deepened — thread ownership matrix, deadlock prevention)
@@ -191,9 +191,9 @@ These must not claim ownership and should only point to owners:
 - IPC protocol: `docs/IPC-PROTOCOL.md` (CONTRACT; v1.0.0; deepened — named pipe transport, envelope schema, typed channel catalog, delivery semantics, versioning, anonymization)
 - IPC message catalog: `docs/IPC-MESSAGE-CATALOG.md` (REFERENCE; v1.0.0; deepened — complete message type catalog with 7 categories, payload schemas, error behavior)## Product surface contracts
 - UI Dashboard: `docs/UI-DASHBOARD-SPEC.md`
-- AI Provider Manager: `docs/AI-PROVIDER-MANAGER.md`
-- AI Gateway: `docs/AI-GATEWAY.md`
-- AI Memory System: `docs/AI-MEMORY-SYSTEM.md`
+- AI Provider Manager: `docs/ai/providers/AI-PROVIDER-MANAGER.md`
+- AI Gateway: `docs/ai/runtime/AI-GATEWAY.md`
+- AI Memory System: `docs/ai/memory/AI-MEMORY-SYSTEM.md`
 - Risk Engine: `docs/RISK-ENGINE.md`
 - Notification Center: `docs/NOTIFICATION-CENTER.md`
 - Chain Command Center: `docs/CHAIN-COMMAND-CENTER.md`
@@ -346,8 +346,8 @@ These must not claim ownership and should only point to owners:
 - System Capability Registry: `SYSTEM-CAPABILITY-REGISTRY.md`
 - Feature Flags: `FEATURE-FLAGS.md`
 - Configuration Profiles: `CONFIGURATION-PROFILES.md`
-- AI Reasoning Policy: `AI-REASONING-POLICY.md`
-- AI Context Window Management: `AI-CONTEXT-WINDOW-MANAGEMENT.md`
+- AI Reasoning Policy: `ai/reasoning/AI-REASONING-POLICY.md`
+- AI Context Window Management: `ai/runtime/AI-CONTEXT-WINDOW-MANAGEMENT.md`
 - Model Capability Negotiation: `MODEL-CAPABILITY-NEGOTIATION.md`
 - Execution Policies: `EXECUTION-POLICIES.md`
 - Route Scoring Model: `ROUTE-SCORING-MODEL.md`
@@ -384,9 +384,9 @@ These must not claim ownership and should only point to owners:
 - Service Lifecycle: `SERVICE-LIFECYCLE.md`
 - Plugin Lifecycle: `PLUGIN-LIFECYCLE.md`
 - Workspace Manager: `WORKSPACE-MANAGER.md`
-- AI Tools: `AI-TOOLS.md`
-- AI Planner: `AI-PLANNER.md`
-- AI Reflection: `AI-REFLECTION.md`
+- AI Tools: `ai/tools/AI-TOOLS.md`
+- AI Planner: `ai/planning/AI-PLANNER.md`
+- AI Reflection: `ai/reasoning/AI-REFLECTION.md`
 - AI Knowledge Index: `AI-KNOWLEDGE-INDEX.md`
 - Trade Explainer: `TRADE-EXPLAINER.md`
 - Market Session: `MARKET-SESSION.md`
@@ -429,9 +429,9 @@ These must not claim ownership and should only point to owners:
 
 
 ## Deepened owner docs
-- `AI-GATEWAY.md`
-- `AI-CONSENSUS.md`
-- `AI-MEMORY-SYSTEM.md`
+- `ai/runtime/AI-GATEWAY.md`
+- `ai/reasoning/AI-CONSENSUS.md`
+- `ai/memory/AI-MEMORY-SYSTEM.md`
 - `DECISION-LOG.md`
 
 
@@ -692,24 +692,24 @@ The documentation set is organised into layers. Each layer has a single authorit
 ### Layer 6 — AI & Decision Pipeline
 | Priority | Document | Role | Authority |
 |----------|----------|------|-----------|
-| 0 | docs/AI-PIPELINE.md | AI decision pipeline | Layer anchor |
-| 1 | docs/AI-ORCHESTRATION.md | AI orchestration | Defers to AI-PIPELINE |
-| 2 | docs/AI-AGENT-SPECIFICATION.md | Agent specification | Defers to AI-ORCHESTRATION |
-| 3 | docs/AI-CONSENSUS.md | Multi-agent consensus | Defers to AI-ORCHESTRATION |
-| 4 | docs/AI-PROVIDER-MANAGER.md | Provider management | Defers to AI-PIPELINE |
-| 5 | docs/AI-GATEWAY.md | AI gateway | Defers to AI-PROVIDER-MANAGER |
-| 6 | docs/AI-SETTINGS.md | AI settings | Defers to AI-PIPELINE |
-| 7 | docs/AI-TOOLS.md | AI tool registry | Defers to AI-PIPELINE |
-| 8 | docs/AI-PLANNER.md | AI planning | Defers to AI-ORCHESTRATION |
-| 9 | docs/AI-REFLECTION.md | AI reflection | Defers to AI-ORCHESTRATION |
-| 10 | docs/AI-MEMORY.md | AI memory | Defers to AI-PIPELINE |
-| 11 | docs/AI-MEMORY-SYSTEM.md | Memory system contract | Defers to AI-MEMORY |
+| 0 | docs/ai/runtime/AI-PIPELINE.md | AI decision pipeline | Layer anchor |
+| 1 | docs/ai/orchestration/AI-ORCHESTRATION.md | AI orchestration | Defers to AI-PIPELINE |
+| 2 | docs/ai/reference/AI-AGENT-SPECIFICATION.md | Agent specification | Defers to AI-ORCHESTRATION |
+| 3 | docs/ai/reasoning/AI-CONSENSUS.md | Multi-agent consensus | Defers to AI-ORCHESTRATION |
+| 4 | docs/ai/providers/AI-PROVIDER-MANAGER.md | Provider management | Defers to AI-PIPELINE |
+| 5 | docs/ai/runtime/AI-GATEWAY.md | AI gateway | Defers to AI-PROVIDER-MANAGER |
+| 6 | docs/ai/providers/AI-SETTINGS.md | AI settings | Defers to AI-PIPELINE |
+| 7 | docs/ai/tools/AI-TOOLS.md | AI tool registry | Defers to AI-PIPELINE |
+| 8 | docs/ai/planning/AI-PLANNER.md | AI planning | Defers to AI-ORCHESTRATION |
+| 9 | docs/ai/reasoning/AI-REFLECTION.md | AI reflection | Defers to AI-ORCHESTRATION |
+| 10 | docs/ai/memory/AI-MEMORY.md | AI memory | Defers to AI-PIPELINE |
+| 11 | docs/ai/memory/AI-MEMORY-SYSTEM.md | Memory system contract | Defers to AI-MEMORY |
 | 12 | docs/AI-KNOWLEDGE-INDEX.md | Knowledge index | Defers to AI-MEMORY |
 | 13 | docs/AI-COST-MANAGEMENT.md | Cost management | Defers to AI-PIPELINE |
-| 14 | docs/AI-CAPABILITY-MATRIX.md | Capability matrix | Defers to AI-PROVIDER-MANAGER |
-| 15 | docs/AI-CONTEXT-WINDOW-MANAGEMENT.md | Context window mgmt | Defers to AI-PIPELINE |
-| 16 | docs/AI-REASONING-POLICY.md | Reasoning policy | Defers to AI-ORCHESTRATION |
-| 17 | docs/AI-SAFETY-BOUNDARY.md | Safety boundary | Defers to AI-ORCHESTRATION |
+| 14 | docs/ai/reference/AI-CAPABILITY-MATRIX.md | Capability matrix | Defers to AI-PROVIDER-MANAGER |
+| 15 | docs/ai/runtime/AI-CONTEXT-WINDOW-MANAGEMENT.md | Context window mgmt | Defers to AI-PIPELINE |
+| 16 | docs/ai/reasoning/AI-REASONING-POLICY.md | Reasoning policy | Defers to AI-ORCHESTRATION |
+| 17 | docs/ai/safety/AI-SAFETY-BOUNDARY.md | Safety boundary | Defers to AI-ORCHESTRATION |
 | 18 | docs/MODEL-CAPABILITY-NEGOTIATION.md | Model negotiation | Defers to AI-PROVIDER-MANAGER |
 | 19 | docs/CLOUD-AI-INTEGRATION.md | Cloud AI integration | Defers to AI-PIPELINE |
 
@@ -885,7 +885,7 @@ Each canonical document in the set should carry the following front-matter field
 | docs/RUNTIME-OPERATIONS.md | 1.0.0 | Canonical | 2025-01-15 | Runtime |
 | docs/TRADING-ENGINE.md | 1.0.0 | Review | 2025-01-15 | Trading |
 | docs/EXECUTION-ENGINE.md | 1.0.0 | Review | 2025-01-15 | Execution |
-| docs/AI-PIPELINE.md | 1.0.0 | Canonical | 2025-01-15 | AI |
+| docs/ai/runtime/AI-PIPELINE.md | 1.0.0 | Canonical | 2025-01-15 | AI |
 | docs/RISK-ENGINE.md | 1.0.0 | Review | 2025-01-15 | Risk |
 | docs/SECURITY.md | 1.0.0 | Review | 2025-01-15 | Security |
 | docs/CONFIGURATION.md | 1.0.0 | Canonical | 2025-01-15 | Config |
@@ -913,11 +913,11 @@ Each canonical document in the set should carry the following front-matter field
 | docs/FEATURE-GATES.md | 1.0.0 | Draft | 2025-01-15 | Config |
 | docs/CONFIGURATION-REFERENCE.md | 0.1.0 | Draft | 2026-07-27 | Config |
 | docs/EVENT-OWNERSHIP-MATRIX.md | 0.1.0 | Draft | 2026-07-27 | Runtime |
-| docs/AI-TOOL-INVOCATION-CONTRACT.md | 0.1.0 | Draft | 2026-07-27 | AI |
+| docs/ai/tools/AI-TOOL-INVOCATION-CONTRACT.md | 0.1.0 | Draft | 2026-07-27 | AI |
 | docs/PROMPT-LIFECYCLE.md | 0.1.0 | Draft | 2026-07-27 | AI |
 | docs/CONTEXT-PRIORITY-MATRIX.md | 1.0.0 | Draft | 2025-01-15 | AI |
-| docs/AI-SAFETY-BOUNDARY.md | 1.0.0 | Draft | 2025-01-15 | AI |
-| docs/AI-STATE-MACHINE.md | 1.0.0 | Draft | 2025-01-15 | AI |
+| docs/ai/safety/AI-SAFETY-BOUNDARY.md | 1.0.0 | Draft | 2025-01-15 | AI |
+| docs/ai/reference/AI-STATE-MACHINE.md | 1.0.0 | Draft | 2025-01-15 | AI |
 | docs/ENGINE-STATE-MACHINE.md | 1.0.0 | Draft | 2025-01-15 | Runtime |
 | docs/EXECUTION-STATE-MACHINE.md | 1.0.0 | Draft | 2025-01-15 | Execution |
 | docs/WORKER-STATE-MACHINE.md | 1.0.0 | Draft | 2025-01-15 | Runtime |
@@ -928,7 +928,7 @@ Each canonical document in the set should carry the following front-matter field
 | docs/RECOVERY-PLAYBOOK.md | 1.0.0 | Draft | 2025-01-15 | Runtime |
 | docs/THREADING-MODEL.md | 1.0.0 | Draft | 2025-01-15 | Runtime |
 | docs/CONCURRENCY-MODEL.md | 1.0.0 | Draft | 2025-01-15 | Runtime |
-| docs/MEMORY-LIFECYCLE.md | 1.0.0 | Draft | 2025-01-15 | Runtime |
+| docs/ai/memory/MEMORY-LIFECYCLE.md | 1.0.0 | Draft | 2025-01-15 | Runtime |
 | docs/RESOURCE-BUDGET-SPECIFICATION.md | 1.0.0 | Draft | 2025-01-15 | Ops |
 | docs/CAPACITY-PLANNING.md | 1.0.0 | Draft | 2025-01-15 | Ops |
 | docs/TIMING-SPECIFICATION.md | 1.0.0 | Draft | 2025-01-15 | Ops |
@@ -949,14 +949,14 @@ Each document in the repository should be listed once in each direction. The tab
 
 | Document | References |
 |----------|------------|
-| AGENTS.md | docs/ARCHITECTURE.md, docs/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/TRADING-LIFECYCLE.md, docs/EXECUTION-LIFECYCLE.md, docs/DATABASE-SCHEMA.md, docs/SECURITY-CONTRACTS.md |
+| AGENTS.md | docs/ARCHITECTURE.md, docs/ai/runtime/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/TRADING-LIFECYCLE.md, docs/EXECUTION-LIFECYCLE.md, docs/DATABASE-SCHEMA.md, docs/SECURITY-CONTRACTS.md |
 | ../APEX-ARCHITECTURE.md | docs/DOCUMENTATION-MAP.md, docs/ARCHITECTURE.md, docs/PROJECT-STRUCTURE.md, docs/TRADING-ENGINE.md, docs/EXECUTION-ENGINE.md, docs/ORCHESTRATOR.md, docs/DOMAIN-MODEL.md |
-| docs/ARCHITECTURE.md | docs/ORCHESTRATOR.md, docs/TRADING-ENGINE.md, docs/EXECUTION-ENGINE.md, docs/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/STATE-MANAGEMENT.md, docs/CHAIN-REGISTRY.md, docs/DEX-REGISTRY.md, docs/TOKEN-REGISTRY.md, docs/ORACLE-REGISTRY.md, docs/DASHBOARD-LAYOUT.md, docs/DASHBOARD-WIDGETS.md, docs/UX-GUIDELINES.md, docs/VERSIONING.md, docs/DOMAIN-MODEL.md |
+| docs/ARCHITECTURE.md | docs/ORCHESTRATOR.md, docs/TRADING-ENGINE.md, docs/EXECUTION-ENGINE.md, docs/ai/runtime/AI-PIPELINE.md, docs/RUNTIME-OPERATIONS.md, docs/STATE-MANAGEMENT.md, docs/CHAIN-REGISTRY.md, docs/DEX-REGISTRY.md, docs/TOKEN-REGISTRY.md, docs/ORACLE-REGISTRY.md, docs/DASHBOARD-LAYOUT.md, docs/DASHBOARD-WIDGETS.md, docs/UX-GUIDELINES.md, docs/VERSIONING.md, docs/DOMAIN-MODEL.md |
 | docs/RUNTIME-OPERATIONS.md | docs/ORCHESTRATOR.md, docs/BOOTSTRAP-SEQUENCE.md, docs/SHUTDOWN-LIFECYCLE.md, docs/SERVICE-LIFECYCLE.md, docs/RECOVERY-AND-FAILOVER.md, docs/HEALTHCHECKS.md, docs/WORKER-POOL.md, docs/CONFIGURATION.md, docs/STATE-MANAGEMENT.md |
 | docs/TRADING-ENGINE.md | docs/TRADING-LIFECYCLE.md, docs/EXECUTION-ENGINE.md, docs/ORCHESTRATOR.md, docs/RISK-ENGINE.md |
 | docs/EXECUTION-ENGINE.md | docs/TRANSACTION-LIFECYCLE.md, docs/RISK-ENGINE.md, docs/GAS-OPTIMISATION.md, docs/MEV-PROTECTION.md |
-| docs/AI-PIPELINE.md | docs/AI-ORCHESTRATION.md, docs/AI-PROVIDER-MANAGER.md, docs/AI-GATEWAY.md, docs/AI-MEMORY.md, docs/AI-COST-MANAGEMENT.md, docs/AI-CONTEXT-WINDOW-MANAGEMENT.md, docs/AI-REASONING-POLICY.md |
-| docs/CONFIGURATION.md | docs/AI-SETTINGS.md, docs/SECURITY.md, docs/RUNTIME-OPERATIONS.md, docs/DATABASE-SCHEMA.md, docs/AI-COST-MANAGEMENT.md, docs/VERSIONING.md, docs/PLUGIN-SDK.md, docs/HEALTHCHECKS.md |
+| docs/ai/runtime/AI-PIPELINE.md | docs/ai/orchestration/AI-ORCHESTRATION.md, docs/ai/providers/AI-PROVIDER-MANAGER.md, docs/ai/runtime/AI-GATEWAY.md, docs/ai/memory/AI-MEMORY.md, docs/AI-COST-MANAGEMENT.md, docs/ai/runtime/AI-CONTEXT-WINDOW-MANAGEMENT.md, docs/ai/reasoning/AI-REASONING-POLICY.md |
+| docs/CONFIGURATION.md | docs/ai/providers/AI-SETTINGS.md, docs/SECURITY.md, docs/RUNTIME-OPERATIONS.md, docs/DATABASE-SCHEMA.md, docs/AI-COST-MANAGEMENT.md, docs/VERSIONING.md, docs/PLUGIN-SDK.md, docs/HEALTHCHECKS.md |
 | docs/SECURITY.md | docs/SECURITY-CONTRACTS.md, docs/PERMISSION-MODEL.md, docs/TRUST-BOUNDARIES.md, docs/SECRET-LIFECYCLE.md |
 | docs/EVENT-BUS.md | docs/EVENT-CATALOG.md, docs/EVENT-OWNERSHIP-MATRIX.md |
 | docs/STATE-MANAGEMENT.md | docs/ORCHESTRATOR.md, docs/TRADING-LIFECYCLE.md, docs/EXECUTION-LIFECYCLE.md, docs/SHUTDOWN-LIFECYCLE.md, docs/SERVICE-LIFECYCLE.md, docs/PLUGIN-LIFECYCLE.md |
@@ -967,7 +967,7 @@ Each document in the repository should be listed once in each direction. The tab
 |----------|---------------|
 | docs/ARCHITECTURE.md | AGENTS.md, ../APEX-ARCHITECTURE.md, README.md, CLAUDE.md, OPENCODE.md, docs/AGENTS.md |
 | docs/ORCHESTRATOR.md | ../APEX-ARCHITECTURE.md, docs/ARCHITECTURE.md, docs/RUNTIME-OPERATIONS.md, docs/TRADING-ENGINE.md, docs/STATE-MANAGEMENT.md |
-| docs/AI-PIPELINE.md | AGENTS.md, docs/ARCHITECTURE.md, README.md, CLAUDE.md, OPENCODE.md, docs/AGENTS.md |
+| docs/ai/runtime/AI-PIPELINE.md | AGENTS.md, docs/ARCHITECTURE.md, README.md, CLAUDE.md, OPENCODE.md, docs/AGENTS.md |
 | docs/RUNTIME-OPERATIONS.md | AGENTS.md, README.md, CLAUDE.md, OPENCODE.md, docs/CONFIGURATION.md |
 | docs/TRADING-LIFECYCLE.md | AGENTS.md, README.md, CLAUDE.md, docs/ARCHITECTURE.md, docs/TRADING-ENGINE.md, docs/STATE-MANAGEMENT.md |
 | docs/EXECUTION-LIFECYCLE.md | AGENTS.md, README.md, CLAUDE.md, docs/ARCHITECTURE.md, docs/STATE-MANAGEMENT.md |
@@ -1001,9 +1001,9 @@ An input is validated before any state-changing action.
 - If a document conflicts with its owner, the owner document wins.
 
 ## Additional canonical owners
-- State machine contracts: `docs/AI-STATE-MACHINE.md`, `docs/ENGINE-STATE-MACHINE.md`, `docs/EXECUTION-STATE-MACHINE.md`, `docs/WORKER-STATE-MACHINE.md`, `docs/PLUGIN-STATE-MACHINE.md`, `docs/SERVICE-STATE-MACHINE.md`.
+- State machine contracts: `docs/ai/reference/AI-STATE-MACHINE.md`, `docs/ENGINE-STATE-MACHINE.md`, `docs/EXECUTION-STATE-MACHINE.md`, `docs/WORKER-STATE-MACHINE.md`, `docs/PLUGIN-STATE-MACHINE.md`, `docs/SERVICE-STATE-MACHINE.md`.
 - Reliability contracts: `docs/ERROR-CATALOG.md`, `docs/ERROR-CODES.md`, `docs/FAILURE-MATRIX.md`, `docs/RECOVERY-PLAYBOOK.md`, `docs/FAILURE-RECOVERY-MATRIX.md`.
-- Runtime contracts: `docs/THREADING-MODEL.md`, `docs/CONCURRENCY-MODEL.md`, `docs/MEMORY-LIFECYCLE.md`.
-- AI contracts: `docs/AI-TOOL-INVOCATION-CONTRACT.md`, `docs/PROMPT-LIFECYCLE.md`, `docs/CONTEXT-PRIORITY-MATRIX.md`, `docs/AI-SAFETY-BOUNDARY.md`.
+- Runtime contracts: `docs/THREADING-MODEL.md`, `docs/CONCURRENCY-MODEL.md`, `docs/ai/memory/MEMORY-LIFECYCLE.md`.
+- AI contracts: `docs/ai/tools/AI-TOOL-INVOCATION-CONTRACT.md`, `docs/PROMPT-LIFECYCLE.md`, `docs/CONTEXT-PRIORITY-MATRIX.md`, `docs/ai/safety/AI-SAFETY-BOUNDARY.md`.
 - Governance contracts: `docs/CANONICAL-SOURCE-RULES.md`, `docs/DOCUMENTATION-LIFECYCLE.md`, `docs/CROSS-REFERENCE-INDEX.md`, `docs/FEATURE-GATES.md`.
 - Operational contracts: `docs/CONFIGURATION-REFERENCE.md`, `docs/TIMING-SPECIFICATION.md`, `docs/RESOURCE-BUDGET-SPECIFICATION.md`, `docs/CAPACITY-PLANNING.md`, `docs/MODULE-OWNERSHIP-MATRIX.md`, `docs/EVENT-OWNERSHIP-MATRIX.md`, `docs/DEPENDENCY-AUTHORITY-RULES.md`, `docs/DATA-OWNERSHIP.md`, `docs/SECRET-LIFECYCLE.md`, `docs/TRUST-BOUNDARIES.md`.

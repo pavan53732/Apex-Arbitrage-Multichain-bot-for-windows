@@ -32,9 +32,9 @@ Defines provider adapter request and response contracts.
 - `capabilities` must include streaming, tool_calling, embeddings, and vision flags.
 
 ## Cross-references
-- `AI-PROVIDER-MANAGER.md`
-- `AI-GATEWAY.md`
-- `AI-PIPELINE.md`
+- `ai/providers/AI-PROVIDER-MANAGER.md`
+- `ai/runtime/AI-GATEWAY.md`
+- `ai/runtime/AI-PIPELINE.md`
 
 ## Interface Contract
 Defines provider adapter inputs, outputs, capability declarations, errors, and compatibility rules.

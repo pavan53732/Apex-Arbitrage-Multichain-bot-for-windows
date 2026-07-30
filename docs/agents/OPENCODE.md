@@ -33,7 +33,7 @@ Guidance for OpenCode-based coding agents contributing to this repository.
 - `AGENTS.md`
 - `docs/ARCHITECTURE.md`
 - `docs/RUNTIME-OPERATIONS.md`
-- `docs/AI-PIPELINE.md`
+- `docs/ai/runtime/AI-PIPELINE.md`
 - `docs/CACHE-MANAGER.md`
 - `docs/DATABASE-SCHEMA.md`
 - `docs/SECURITY-CONTRACTS.md`

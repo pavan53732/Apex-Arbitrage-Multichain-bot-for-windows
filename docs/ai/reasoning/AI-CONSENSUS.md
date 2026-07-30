@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Consensus documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-CONSENSUS.md
+canonical_source: docs/ai/reasoning/AI-CONSENSUS.md
 ---
 
 # Ai Consensus
@@ -63,7 +63,7 @@ Consensus must complete within configured decision windows.
 Alternative voting models, weighted quorum logic, and additional agent roles.
 
 ## Cross references
-- `AI-ORCHESTRATION.md`
+- `ai/orchestration/AI-ORCHESTRATION.md`
 - `DECISION-ENGINE.md`
 - `RISK-ENGINE.md`
 - `EXPLAINABILITY.md`

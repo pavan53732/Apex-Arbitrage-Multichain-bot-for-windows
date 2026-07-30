@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Ai Planner documentation.
 scope: Reference documentation.
-canonical_source: docs/AI-PLANNER.md
+canonical_source: docs/ai/planning/AI-PLANNER.md
 ---
 
 # Ai Planner
@@ -31,9 +31,9 @@ stateDiagram-v2
 ```
 
 ## Cross-references
-- `AI-ORCHESTRATION.md`
+- `ai/orchestration/AI-ORCHESTRATION.md`
 - `DECISION-ENGINE.md`
-- `AI-CONSENSUS.md`
+- `ai/reasoning/AI-CONSENSUS.md`
 
 ## Operational Contract
 Defines goal decomposition, dependency ordering, sequencing, recovery, and plan emission.

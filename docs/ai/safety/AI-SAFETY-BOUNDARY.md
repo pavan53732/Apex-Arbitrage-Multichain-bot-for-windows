@@ -6,7 +6,7 @@ version: 1.0.0
 purpose: Defines the complete set of safety boundaries governing AI behavior — what AI may and may not do, when human approval is required, enforcement mechanisms, violation response, and integration with trust boundaries, permission model, and security contracts.
 scope: Ai Safety Boundary scope and boundaries.
 last_updated: 2026-07-29
-canonical_source: docs/AI-SAFETY-BOUNDARY.md
+canonical_source: docs/ai/safety/AI-SAFETY-BOUNDARY.md
 ---
 
 # AI Safety Boundary
@@ -51,7 +51,7 @@ Defines the complete set of safety boundaries governing AI behavior — what AI 
 | Boundary ID | Description | Limits | Enforcement |
 |-------------|-------------|--------|-------------|
 | **SB-013** | AI may propose trades within approved strategy parameters | Trade size ≤ `risk.max_per_trade_usd`; spread ≥ `risk.min_arb_spread_pct` | Risk engine validates before execution |
-| **SB-014** | AI may invoke registered tools within capability grants | Only tools in Tier 1–4 of `AI-TOOL-INVOCATION-CONTRACT.md` | Tool registry enforces; IPC gateway validates |
+| **SB-014** | AI may invoke registered tools within capability grants | Only tools in Tier 1–4 of `ai/tools/AI-TOOL-INVOCATION-CONTRACT.md` | Tool registry enforces; IPC gateway validates |
 | **SB-015** | AI may read system state (positions, balances, risk status) | Read-only access via IPC typed channels (anonymized for T3) | IPC bridge enforces read-only for AI domain |
 | **SB-016** | AI may update its own memory and reflection store | Capacity ≤ `ai.memory.max_entries`; TTL ≤ `ai.memory.ttl_days` | Memory system enforces capacity and TTL |
 | **SB-017** | AI may provide risk assessments and scoring | Advisory only — no direct risk engine mutation | Risk engine is authoritative; AI output is advisory |
@@ -157,7 +157,7 @@ When a conditional boundary (SB-008 through SB-012) is triggered:
 | SB-004 | T2 → T*/T4 blocked | IPC gateway | `TRUST-BOUNDARIES.md` §3 |
 | SB-005 | T2 → T5 (provider only) | Network filter | `TRUST-BOUNDARIES.md` §3 |
 | SB-006 | T2 → T3/T5 (filtered output) | Content filter gateway | `TRUST-BOUNDARIES.md` §3 |
-| SB-007 | T2 → T2 (safety gate) | Agent delegation safety check | `AI-TOOL-INVOCATION-CONTRACT.md` §6 |
+| SB-007 | T2 → T2 (safety gate) | Agent delegation safety check | `ai/tools/AI-TOOL-INVOCATION-CONTRACT.md` §6 |
 
 ### Permission Model Mapping
 

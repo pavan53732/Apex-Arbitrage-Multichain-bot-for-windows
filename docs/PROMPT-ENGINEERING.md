@@ -34,13 +34,13 @@ This document covers system prompts, few-shot prompts, safety prompts, agent pro
 - Context injection rules.
 
 ## Cross-references
-- `AI-PIPELINE.md`
-- `AI-SETTINGS.md`
+- `ai/runtime/AI-PIPELINE.md`
+- `ai/providers/AI-SETTINGS.md`
 - `CLOUD-AI-INTEGRATION.md`
 - `CONFIGURATION.md`
 
 ## Orchestration boundary
-This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `AI-PIPELINE.md`.
+This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `ai/runtime/AI-PIPELINE.md`.
 
 ## Governance Rules
 Defines prompt templates, system prompts, context shaping, guardrails, and prompt versioning.

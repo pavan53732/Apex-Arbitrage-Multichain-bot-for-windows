@@ -6,7 +6,7 @@ status: Canonical
 version: 1.0.0
 purpose: Defines multi-agent orchestration and coordination.
 scope: AI agent sequencing within AI subsystem.
-canonical_source: docs/AI-ORCHESTRATION.md
+canonical_source: docs/ai/orchestration/AI-ORCHESTRATION.md
 ---
 
 # AI Orchestration

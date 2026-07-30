@@ -376,13 +376,13 @@ A strong provider abstraction is essential because APEX depends on AI for orches
 - Experimental local or self-hosted adapters, if ever added, must remain outside the production routing set.
 
 ## Cross-references
-- `AI-PIPELINE.md`
-- `AI-SETTINGS.md`
+- `ai/runtime/AI-PIPELINE.md`
+- `ai/providers/AI-SETTINGS.md`
 - `CONFIGURATION.md`
 - `SECURITY.md`
 - `MONITORING-OBSERVABILITY.md`
 - `PERFORMANCE-TARGETS.md`
-- `AI-CAPABILITY-MATRIX.md`
+- `ai/reference/AI-CAPABILITY-MATRIX.md`
 - `AI-COST-MANAGEMENT.md`
 
 ## Operational Contract

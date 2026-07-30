@@ -30,8 +30,8 @@ Navigation-only document pointing to the authoritative owner(s).
 
 
 ## System Contracts
-- `AI-ORCHESTRATION.md` — authoritative system contract.
-- `AI-CONSENSUS.md` — authoritative system contract.
+- `ai/orchestration/AI-ORCHESTRATION.md` — authoritative system contract.
+- `ai/reasoning/AI-CONSENSUS.md` — authoritative system contract.
 - `PLUGIN-SDK.md` — authoritative system contract.
 - `DOMAIN-MODEL.md` — authoritative system contract.
 - `METRICS.md` — authoritative system contract.
@@ -70,8 +70,8 @@ Navigation-only document pointing to the authoritative owner(s).
 - [SYSTEM-CAPABILITY-REGISTRY.md](./SYSTEM-CAPABILITY-REGISTRY.md) – Defines platform capability discovery independent of names.
 - [FEATURE-FLAGS.md](./FEATURE-FLAGS.md) – Defines controlled rollout states for features.
 - [CONFIGURATION-PROFILES.md](./CONFIGURATION-PROFILES.md) – Defines profile inheritance and overrides.
-- [AI-REASONING-POLICY.md](./AI-REASONING-POLICY.md) – Defines when AI may advise versus when determinism is required.
-- [AI-CONTEXT-WINDOW-MANAGEMENT.md](./AI-CONTEXT-WINDOW-MANAGEMENT.md) – Defines context compression and token budgeting.
+- [AI-REASONING-POLICY.md](ai/reasoning/AI-REASONING-POLICY.md) – Defines when AI may advise versus when determinism is required.
+- [AI-CONTEXT-WINDOW-MANAGEMENT.md](ai/runtime/AI-CONTEXT-WINDOW-MANAGEMENT.md) – Defines context compression and token budgeting.
 - [MODEL-CAPABILITY-NEGOTIATION.md](./MODEL-CAPABILITY-NEGOTIATION.md) – Defines automatic AI capability detection and negotiation.
 - [EXECUTION-POLICIES.md](./EXECUTION-POLICIES.md) – Defines execution guardrails and stop conditions.
 - [ROUTE-SCORING-MODEL.md](./ROUTE-SCORING-MODEL.md) – Defines the mathematical route scoring model.
@@ -83,9 +83,9 @@ Navigation-only document pointing to the authoritative owner(s).
 - [SERVICE-LIFECYCLE.md](./SERVICE-LIFECYCLE.md) – Defines the canonical lifecycle for all services.
 - [PLUGIN-LIFECYCLE.md](./PLUGIN-LIFECYCLE.md) – Defines the canonical lifecycle for all plugins.
 - [WORKSPACE-MANAGER.md](./WORKSPACE-MANAGER.md) – Defines workspace ownership, layout, settings, and isolation.
-- [AI-TOOLS.md](./AI-TOOLS.md) – Defines the tool surface available to AI agents.
-- [AI-PLANNER.md](./AI-PLANNER.md) – Defines the planning agent for decomposition and sequencing.
-- [AI-REFLECTION.md](./AI-REFLECTION.md) – Defines AI self-evaluation and refinement.
+- [AI-TOOLS.md](ai/tools/AI-TOOLS.md) – Defines the tool surface available to AI agents.
+- [AI-PLANNER.md](ai/planning/AI-PLANNER.md) – Defines the planning agent for decomposition and sequencing.
+- [AI-REFLECTION.md](ai/reasoning/AI-REFLECTION.md) – Defines AI self-evaluation and refinement.
 - [AI-KNOWLEDGE-INDEX.md](./AI-KNOWLEDGE-INDEX.md) – Defines retrieval and ranking over the knowledge graph.
 - [TRADE-EXPLAINER.md](./TRADE-EXPLAINER.md) – Defines human-readable trade explanations.
 - [MARKET-SESSION.md](./MARKET-SESSION.md) – Defines market condition labels for strategy selection.
@@ -97,9 +97,9 @@ Navigation-only document pointing to the authoritative owner(s).
 - [DIAGNOSTICS.md](./DIAGNOSTICS.md) – Defines support bundle generation and troubleshooting output.
 - [BOOTSTRAP-SEQUENCE.md](./BOOTSTRAP-SEQUENCE.md) – Defines deterministic platform startup order.
 - [EVENT-CATALOG.md](./EVENT-CATALOG.md) – Defines the canonical registry of platform events and payloads.
-- [AI-GATEWAY.md](./AI-GATEWAY.md) – Defines provider-agnostic AI routing and capability normalization.
-- [AI-CONSENSUS.md](./AI-CONSENSUS.md) – Defines multi-agent consensus and voting policy.
-- [AI-MEMORY-SYSTEM.md](./AI-MEMORY-SYSTEM.md) – Defines the layered AI memory model and retention rules.
+- [AI-GATEWAY.md](ai/runtime/AI-GATEWAY.md) – Defines provider-agnostic AI routing and capability normalization.
+- [AI-CONSENSUS.md](ai/reasoning/AI-CONSENSUS.md) – Defines multi-agent consensus and voting policy.
+- [AI-MEMORY-SYSTEM.md](ai/memory/AI-MEMORY-SYSTEM.md) – Defines the layered AI memory model and retention rules.
 - [DECISION-LOG.md](./DECISION-LOG.md) – Defines the operational decision log and replay-friendly narratives.
 ## Overview rules
 - Describe purpose, prerequisites, and quick start for Windows users.

@@ -26,7 +26,7 @@ Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `SKILLS.md`
-- `AI-PIPELINE.md`
+- `ai/runtime/AI-PIPELINE.md`
 - `USER-FLOWS.md`
 
 
@@ -38,4 +38,4 @@ An input is validated before any state-changing action.
 
 ## Ownership boundary
 - This document is navigation only. It does not own AI execution, orchestration, or lifecycle behavior.
-- Authority belongs to `AI-PIPELINE.md`, `ORCHESTRATOR.md`, and `AI-AGENT-SPECIFICATION.md`.
+- Authority belongs to `ai/runtime/AI-PIPELINE.md`, `ORCHESTRATOR.md`, and `ai/reference/AI-AGENT-SPECIFICATION.md`.
