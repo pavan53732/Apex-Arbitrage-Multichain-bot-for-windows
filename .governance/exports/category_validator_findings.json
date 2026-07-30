@@ -40,8 +40,8 @@
     "freeze": 0,
     "graph": 0,
     "interface": 0,
-    "metadata": 0,
-    "ownership": 0,
+    "metadata": 4,
+    "ownership": 1,
     "recovery": 33,
     "schema": 0,
     "security": 13,
@@ -156,8 +156,45 @@
     "freeze": [],
     "graph": [],
     "interface": [],
-    "metadata": [],
-    "ownership": [],
+    "metadata": [
+      {
+        "message": "Missing required metadata field: type",
+        "path": "AGENTS_RULES.md",
+        "rule": "REQUIRED_METADATA_FIELD_PRESENT",
+        "severity": "HIGH",
+        "validator_id": "METADATA-001"
+      },
+      {
+        "message": "Missing required metadata field: owner",
+        "path": "AGENTS_RULES.md",
+        "rule": "REQUIRED_METADATA_FIELD_PRESENT",
+        "severity": "HIGH",
+        "validator_id": "METADATA-001"
+      },
+      {
+        "message": "Missing required metadata field: status",
+        "path": "AGENTS_RULES.md",
+        "rule": "REQUIRED_METADATA_FIELD_PRESENT",
+        "severity": "HIGH",
+        "validator_id": "METADATA-001"
+      },
+      {
+        "message": "Missing required metadata field: version",
+        "path": "AGENTS_RULES.md",
+        "rule": "REQUIRED_METADATA_FIELD_PRESENT",
+        "severity": "HIGH",
+        "validator_id": "METADATA-001"
+      }
+    ],
+    "ownership": [
+      {
+        "message": "Document has no owner assigned",
+        "path": "AGENTS_RULES.md",
+        "rule": "OWNERSHIP_REQUIRED",
+        "severity": "HIGH",
+        "validator_id": "OWNERSHIP-001"
+      }
+    ],
     "recovery": [
       {
         "message": "Behavioural root has no recovery or failure-behaviour content",
@@ -573,5 +610,5 @@
     ]
   },
   "total_categories": 14,
-  "total_findings": 72
+  "total_findings": 77
 }

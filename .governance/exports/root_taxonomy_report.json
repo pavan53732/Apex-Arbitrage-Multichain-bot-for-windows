@@ -19,6 +19,7 @@
     ],
     "Reference": [
       "AGENTS.md",
+      "AGENTS_RULES.md",
       "AIDER.md",
       "ANTIGRAVITY.md",
       "APEX-ARCHITECTURE.md",
@@ -301,7 +302,7 @@
   "counts": {
     "ADR": 8,
     "Guide": 5,
-    "Reference": 221,
+    "Reference": 222,
     "Registry": 8,
     "Tier A: Platform Root": 1,
     "Tier B: Kernel Root": 7,
@@ -359,7 +360,7 @@
     "Guide",
     "ADR"
   ],
-  "total_documents": 277,
+  "total_documents": 278,
   "total_roots": 35,
   "untiered_roots": []
 }
