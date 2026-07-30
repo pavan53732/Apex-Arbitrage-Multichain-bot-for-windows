@@ -1,6 +1,0 @@
-{
-  "mutations": 10000,
-  "crashes": 0,
-  "deterministic_failures": 10000,
-  "status": "PASS"
-}
