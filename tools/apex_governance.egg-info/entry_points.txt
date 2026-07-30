@@ -1,2 +1,0 @@
-[console_scripts]
-apex-gov = governance.cli.main:app

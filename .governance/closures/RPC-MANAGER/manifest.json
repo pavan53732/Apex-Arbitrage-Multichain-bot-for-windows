@@ -176,12 +176,11 @@
     "docs/WORKER-STATE-MACHINE.md",
     "docs/WORKSPACE-MANAGER.md"
   ],
-  "closure_hash": "08fedf3fb5f1e0992a3a7ef350eef1f12ba26e495697c0919fc751ccece76fe2",
+  "closure_hash": "30412100feb5433dec0d7ca33e4c466b8e50cd850ce2371bab7c5adff966e6cd",
   "closure_size": 175,
-  "generated_at": "2026-07-30T22:27:56.952963+00:00",
-  "generated_at_commit": "84ea7945f390da3b9ed9a23e2e9fabf9fa1f1c07",
+  "generated_at": "2026-07-30T22:42:00.366725+00:00",
+  "generated_at_commit": "59c8ff1261cd5bef883e93dac1775d27f0de3a04",
   "reverse_closure_documents": [
-    "APEX-ARCHITECTURE.md",
     "docs/AGENTS.md",
     "docs/AI-AGENT-SPECIFICATION.md",
     "docs/AI-CAPABILITY-MATRIX.md",
@@ -402,7 +401,7 @@
     "docs/WORKFLOW-BUILDER.md",
     "docs/WORKSPACE-MANAGER.md"
   ],
-  "reverse_closure_size": 220,
+  "reverse_closure_size": 219,
   "root_path": "docs/RPC-MANAGER.md",
   "version": 1
 }

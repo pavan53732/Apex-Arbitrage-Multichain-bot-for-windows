@@ -5,6 +5,12 @@
       "completeness": 0.0,
       "gap": 0.85,
       "owner": null,
+      "path": "APEX-ARCHITECTURE.md"
+    },
+    {
+      "completeness": 0.0,
+      "gap": 0.85,
+      "owner": null,
       "path": "EVENT-SCHEMA-REGISTRY.md"
     },
     {
@@ -180,12 +186,6 @@
       "gap": 0.6682,
       "owner": "Runtime Team",
       "path": "docs/VERSIONING.md"
-    },
-    {
-      "completeness": 0.22727272727272727,
-      "gap": 0.6227,
-      "owner": "Runtime Team",
-      "path": "APEX-ARCHITECTURE.md"
     },
     {
       "completeness": 0.22727272727272727,

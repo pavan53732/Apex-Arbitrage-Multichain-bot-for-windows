@@ -35,7 +35,7 @@
     "algorithm": 10,
     "closure": 0,
     "configuration": 0,
-    "dependency": 4,
+    "dependency": 7,
     "event": 0,
     "freeze": 0,
     "graph": 0,
@@ -145,8 +145,29 @@
         "validator_id": "DEPENDENCY-001"
       },
       {
+        "message": "depends_on references non-existent document: APEX-ARCHITECTURE.md",
+        "path": "docs/DEPENDENCY-GRAPH.md",
+        "rule": "DEPENDENCY_TARGET_EXISTS",
+        "severity": "MEDIUM",
+        "validator_id": "DEPENDENCY-001"
+      },
+      {
+        "message": "depends_on references non-existent document: APEX-ARCHITECTURE.md",
+        "path": "docs/DOCUMENTATION-MAP.md",
+        "rule": "DEPENDENCY_TARGET_EXISTS",
+        "severity": "MEDIUM",
+        "validator_id": "DEPENDENCY-001"
+      },
+      {
         "message": "depends_on references non-existent document: EVENT-SCHEMA-REGISTRY.md",
         "path": "docs/EVENT-CATALOG.md",
+        "rule": "DEPENDENCY_TARGET_EXISTS",
+        "severity": "MEDIUM",
+        "validator_id": "DEPENDENCY-001"
+      },
+      {
+        "message": "depends_on references non-existent document: APEX-ARCHITECTURE.md",
+        "path": "docs/README.md",
         "rule": "DEPENDENCY_TARGET_EXISTS",
         "severity": "MEDIUM",
         "validator_id": "DEPENDENCY-001"
@@ -159,28 +180,28 @@
     "metadata": [
       {
         "message": "Missing required metadata field: type",
-        "path": "AGENTS_RULES.md",
+        "path": "docs/AGENTS_RULES.md",
         "rule": "REQUIRED_METADATA_FIELD_PRESENT",
         "severity": "HIGH",
         "validator_id": "METADATA-001"
       },
       {
         "message": "Missing required metadata field: owner",
-        "path": "AGENTS_RULES.md",
+        "path": "docs/AGENTS_RULES.md",
         "rule": "REQUIRED_METADATA_FIELD_PRESENT",
         "severity": "HIGH",
         "validator_id": "METADATA-001"
       },
       {
         "message": "Missing required metadata field: status",
-        "path": "AGENTS_RULES.md",
+        "path": "docs/AGENTS_RULES.md",
         "rule": "REQUIRED_METADATA_FIELD_PRESENT",
         "severity": "HIGH",
         "validator_id": "METADATA-001"
       },
       {
         "message": "Missing required metadata field: version",
-        "path": "AGENTS_RULES.md",
+        "path": "docs/AGENTS_RULES.md",
         "rule": "REQUIRED_METADATA_FIELD_PRESENT",
         "severity": "HIGH",
         "validator_id": "METADATA-001"
@@ -189,7 +210,7 @@
     "ownership": [
       {
         "message": "Document has no owner assigned",
-        "path": "AGENTS_RULES.md",
+        "path": "docs/AGENTS_RULES.md",
         "rule": "OWNERSHIP_REQUIRED",
         "severity": "HIGH",
         "validator_id": "OWNERSHIP-001"
@@ -610,5 +631,5 @@
     ]
   },
   "total_categories": 14,
-  "total_findings": 77
+  "total_findings": 80
 }

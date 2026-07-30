@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-07-29
+last_updated: 2026-07-30
 type: INDEX
 owner: Trading Team
 status: Canonical
@@ -26,33 +26,7 @@ This document is an overview, reference, or index as noted below.
 
 # Agent Index
 
-| File | Purpose |
-|---|---|
-| [AGENTS.md](../AGENTS.md) | General navigation and safety gate for all coding agents. |
-| [CLAUDE.md](../CLAUDE.md) | Claude-specific coding gate. |
-| [GEMINI.md](../GEMINI.md) | Gemini-specific coding gate. |
-| [OPENCODE.md](../OPENCODE.md) | OpenCode-specific coding gate. |
-| [KILO-CODE.md](../KILO-CODE.md) | Kilo Code-specific coding gate. |
-| [CLINE.md](../CLINE.md) | Cline-specific coding gate. |
-| [ANTIGRAVITY.md](../ANTIGRAVITY.md) | Antigravity-specific coding gate. |
-| [AIDER.md](../AIDER.md) | Aider-specific coding gate. |
-| [CODEBUFF.md](../CODEBUFF.md) | Codebuff-specific coding gate. |
-| [COPILOT.md](../COPILOT.md) | Copilot-specific coding gate. |
-| [CURSOR.md](../CURSOR.md) | Cursor-specific coding gate. |
-| [QODO.md](../QODO.md) | Qodo-specific coding gate. |
-| [RAYCAST.md](../RAYCAST.md) | Raycast-specific coding gate. |
-| [ROO-CODE.md](../ROO-CODE.md) | Roo Code-specific coding gate. |
-| [TABNINE.md](../TABNINE.md) | Tabnine-specific coding gate. |
-| [WARP.md](../WARP.md) | Warp-specific coding gate. |
-| [WINDSURF.md](../WINDSURF.md) | Windsurf-specific coding gate. |
-| [ZED.md](../ZED.md) | Zed-specific coding gate. |
-| [QWEN.md](../QWEN.md) | Qwen-specific coding gate. |
-| [OLLAMA.md](../OLLAMA.md) | Ollama-specific coding gate. |
-| [LLAMA-CPP.md](../LLAMA-CPP.md) | llama.cpp-specific coding gate. |
-| [GITHUB-COPILOT-CLI.md](../GITHUB-COPILOT-CLI.md) | GitHub Copilot CLI-specific coding gate. |
-| [GOOGLE-CODE-ASSISTANT.md](../GOOGLE-CODE-ASSISTANT.md) | Google Code Assist-specific coding gate. |
-| [PERPLEXITY.md](../PERPLEXITY.md) | Perplexity-specific coding gate. |
-| [CHATGPT.md](../CHATGPT.md) | ChatGPT-specific coding gate. |
+Agent-specific configuration files have been consolidated into [AGENTS.md](../AGENTS.md) (canonical) and [docs/agents/](../agents/) for agent-specific overrides.
 
 ## Rule
-Use these files as the first stop for assistant-specific behavior. Use the canonical owner docs for actual implementation contracts.
+Use [AGENTS.md](../AGENTS.md) as the first stop for assistant-specific behavior. Use the canonical owner docs for actual implementation contracts.

@@ -5,9 +5,9 @@
     "completed": true,
     "last_commit": null,
     "notes": [
-      "Indexed 278 documents",
+      "Indexed 252 documents",
       "Detected 35 behavioural roots",
-      "Generated 23 validation findings",
+      "Generated 29 validation findings",
       "Computed 35 closures",
       "Exported 8 graphs"
     ]

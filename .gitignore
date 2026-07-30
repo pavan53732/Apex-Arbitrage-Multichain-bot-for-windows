@@ -30,6 +30,19 @@ __pycache__/
 *.pyo
 .pytest_cache/
 *.egg-info/
+dist/
+build/
+
+# Governance generated artefacts (reproducible via apex-gov run/freeze)
+.governance/closures/
+.governance/evidence/
+.governance/exports/
+.governance/graphs/
+.governance/work_queue/
+.governance/governance.db
+.governance/GOVERNANCE-PROGRESS.json
+.governance/freeze/freeze_WS0.json
+.governance/freeze/history/
 
 # Governance Freeze Framework (WS6) Ed25519 PRIVATE signing key --
 # NEVER COMMIT. If this key is ever committed to version control,

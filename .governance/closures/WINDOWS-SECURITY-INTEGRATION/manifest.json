@@ -177,10 +177,10 @@
     "docs/WORKER-STATE-MACHINE.md",
     "docs/WORKSPACE-MANAGER.md"
   ],
-  "closure_hash": "27986c2c2feeac7b876f3849f05b1cdf7acf86ff2bd6c8a39019b093d2c396f0",
+  "closure_hash": "7e6b35d11720f5c3ce78c1c25434d4e8c6c6f5206edc620af041daaf351dd4c6",
   "closure_size": 176,
-  "generated_at": "2026-07-30T22:27:56.952963+00:00",
-  "generated_at_commit": "84ea7945f390da3b9ed9a23e2e9fabf9fa1f1c07",
+  "generated_at": "2026-07-30T22:42:00.366725+00:00",
+  "generated_at_commit": "59c8ff1261cd5bef883e93dac1775d27f0de3a04",
   "reverse_closure_documents": [
     "docs/WINDOWS-SECURITY-INTEGRATION.md"
   ],

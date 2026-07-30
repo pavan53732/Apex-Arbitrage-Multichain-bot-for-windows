@@ -2,12 +2,6 @@
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key id="d0" for="edge" attr.name="relation" attr.type="string" />
   <graph edgedefault="directed">
-    <node id="APEX-ARCHITECTURE.md" />
-    <node id="docs/DOCUMENTATION-MAP.md" />
-    <node id="docs/ARCHITECTURE.md" />
-    <node id="docs/PROJECT-STRUCTURE.md" />
-    <node id="docs/TRADING-ENGINE.md" />
-    <node id="docs/EXECUTION-ENGINE.md" />
     <node id="docs/AGENTS.md" />
     <node id="docs/SKILLS.md" />
     <node id="docs/AI-PIPELINE.md" />
@@ -65,6 +59,7 @@
     <node id="docs/MODULE-DEPENDENCY.md" />
     <node id="docs/STATE-MANAGEMENT.md" />
     <node id="docs/ERROR-HANDLING-LOGGING.md" />
+    <node id="docs/PROJECT-STRUCTURE.md" />
     <node id="docs/VERSIONING.md" />
     <node id="docs/APP-BUILDER-DEPLOYMENT-GUIDE.md" />
     <node id="docs/WINDOWS-DEPLOYMENT.md" />
@@ -86,6 +81,7 @@
     <node id="docs/DECISION-LOG.md" />
     <node id="docs/ARBITRAGE-WINDOW-MANAGER.md" />
     <node id="docs/TRADING-LIFECYCLE.md" />
+    <node id="docs/ARCHITECTURE.md" />
     <node id="docs/CHAIN-REGISTRY.md" />
     <node id="docs/DEX-REGISTRY.md" />
     <node id="docs/TOKEN-REGISTRY.md" />
@@ -98,6 +94,7 @@
     <node id="docs/STRATEGIES.md" />
     <node id="docs/BACKTESTING.md" />
     <node id="docs/SIMULATION-ENGINE.md" />
+    <node id="docs/EXECUTION-ENGINE.md" />
     <node id="docs/BOOTSTRAP-SEQUENCE.md" />
     <node id="docs/CODE-SIGNING.md" />
     <node id="docs/CACHE-MANAGER.md" />
@@ -147,6 +144,7 @@
     <node id="docs/DECISION-LEDGER.md" />
     <node id="docs/GOVERNANCE-EXPLAINABILITY.md" />
     <node id="docs/DEPENDENCY-GRAPH.md" />
+    <node id="APEX-ARCHITECTURE.md" />
     <node id="docs/DESIGN-SYSTEM.md" />
     <node id="docs/DESIGNER-PROTOCOLS.md" />
     <node id="docs/LIQUIDITY-ANALYSIS.md" />
@@ -155,11 +153,13 @@
     <node id="docs/RECOVERY-COORDINATION.md" />
     <node id="docs/RECOVERY-PLAYBOOK.md" />
     <node id="docs/ERROR-CATALOG.md" />
+    <node id="docs/DOCUMENTATION-MAP.md" />
     <node id="docs/DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md" />
     <node id="docs/CANONICAL-SOURCE-RULES.md" />
     <node id="docs/DOCUMENTATION-LIFECYCLE.md" />
     <node id="docs/CROSS-REFERENCE-INDEX.md" />
     <node id="docs/END-TO-END-WIRING-CONTRACT.md" />
+    <node id="docs/TRADING-ENGINE.md" />
     <node id="docs/ENGINE-STATE-MACHINE.md" />
     <node id="docs/RECOVERY-AND-FAILOVER.md" />
     <node id="docs/ENHANCEMENT-ROADMAP.md" />
@@ -236,87 +236,6 @@
     <node id="docs/WINDOWS-NOTIFICATION-INTEGRATION.md" />
     <node id="docs/WINDOWS-SECURITY-INTEGRATION.md" />
     <node id="docs/WORKFLOW-BUILDER.md" />
-    <edge source="APEX-ARCHITECTURE.md" target="docs/DOCUMENTATION-MAP.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="APEX-ARCHITECTURE.md" target="docs/ARCHITECTURE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="APEX-ARCHITECTURE.md" target="docs/PROJECT-STRUCTURE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="APEX-ARCHITECTURE.md" target="docs/TRADING-ENGINE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="APEX-ARCHITECTURE.md" target="docs/EXECUTION-ENGINE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/DOCUMENTATION-MAP.md" target="APEX-ARCHITECTURE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/DOCUMENTATION-MAP.md" target="docs/ARCHITECTURE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/DOCUMENTATION-MAP.md" target="docs/PROJECT-STRUCTURE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/ARCHITECTURE.md" target="docs/CHAIN-REGISTRY.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/ARCHITECTURE.md" target="docs/DEX-REGISTRY.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/ARCHITECTURE.md" target="docs/TOKEN-REGISTRY.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/ARCHITECTURE.md" target="docs/ORACLE-REGISTRY.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/ARCHITECTURE.md" target="docs/DASHBOARD-LAYOUT.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/ARCHITECTURE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/MODULE-DEPENDENCY.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/BUILD-RELEASE-CICD.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/VERSIONING.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/TRADING-ENGINE.md" target="docs/EXECUTION-ENGINE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/TRADING-ENGINE.md" target="docs/RISK-ENGINE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/TRADING-ENGINE.md" target="docs/OPPORTUNITY-DETECTION.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/TRADING-ENGINE.md" target="docs/OPPORTUNITY-RANKING.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/TRADING-ENGINE.md" target="docs/OPPORTUNITY-LIFECYCLE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/EXECUTION-ENGINE.md" target="docs/TRADING-ENGINE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/EXECUTION-ENGINE.md" target="docs/TRANSACTION-LIFECYCLE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/EXECUTION-ENGINE.md" target="docs/GAS-OPTIMISATION.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/EXECUTION-ENGINE.md" target="docs/MEV-PROTECTION.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="docs/EXECUTION-ENGINE.md" target="docs/WALLET-MANAGEMENT.md">
-      <data key="d0">depends_on</data>
-    </edge>
     <edge source="docs/AGENTS.md" target="docs/SKILLS.md">
       <data key="d0">depends_on</data>
     </edge>
@@ -1037,6 +956,18 @@
     <edge source="docs/ERROR-HANDLING-LOGGING.md" target="docs/RECOVERY-PLAYBOOK.md">
       <data key="d0">depends_on</data>
     </edge>
+    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/MODULE-DEPENDENCY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/BUILD-RELEASE-CICD.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/PROJECT-STRUCTURE.md" target="docs/VERSIONING.md">
+      <data key="d0">depends_on</data>
+    </edge>
     <edge source="docs/VERSIONING.md" target="docs/DATABASE-SCHEMA.md">
       <data key="d0">depends_on</data>
     </edge>
@@ -1271,6 +1202,21 @@
     <edge source="docs/TRADING-LIFECYCLE.md" target="docs/SIMULATION-ENGINE.md">
       <data key="d0">depends_on</data>
     </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/CHAIN-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/DEX-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/TOKEN-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/ORACLE-REGISTRY.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/ARCHITECTURE.md" target="docs/DASHBOARD-LAYOUT.md">
+      <data key="d0">depends_on</data>
+    </edge>
     <edge source="docs/CHAIN-REGISTRY.md" target="docs/CHAIN-INTEGRATION.md">
       <data key="d0">depends_on</data>
     </edge>
@@ -1440,6 +1386,21 @@
       <data key="d0">depends_on</data>
     </edge>
     <edge source="docs/SIMULATION-ENGINE.md" target="docs/TESTING-GUIDE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/TRADING-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/TRANSACTION-LIFECYCLE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/GAS-OPTIMISATION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/MEV-PROTECTION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/EXECUTION-ENGINE.md" target="docs/WALLET-MANAGEMENT.md">
       <data key="d0">depends_on</data>
     </edge>
     <edge source="docs/BOOTSTRAP-SEQUENCE.md" target="docs/APEX-OS.md">
@@ -2093,6 +2054,15 @@
     <edge source="docs/RECOVERY-PLAYBOOK.md" target="docs/PLUGIN-LIFECYCLE.md">
       <data key="d0">depends_on</data>
     </edge>
+    <edge source="docs/DOCUMENTATION-MAP.md" target="APEX-ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOCUMENTATION-MAP.md" target="docs/ARCHITECTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/DOCUMENTATION-MAP.md" target="docs/PROJECT-STRUCTURE.md">
+      <data key="d0">depends_on</data>
+    </edge>
     <edge source="docs/DOCUMENTATION-STATUS-REVIEW-WORKFLOW.md" target="docs/DOCUMENTATION-MAP.md">
       <data key="d0">depends_on</data>
     </edge>
@@ -2121,6 +2091,21 @@
       <data key="d0">depends_on</data>
     </edge>
     <edge source="docs/END-TO-END-WIRING-CONTRACT.md" target="docs/DECISION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/EXECUTION-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/RISK-ENGINE.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/OPPORTUNITY-DETECTION.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/OPPORTUNITY-RANKING.md">
+      <data key="d0">depends_on</data>
+    </edge>
+    <edge source="docs/TRADING-ENGINE.md" target="docs/OPPORTUNITY-LIFECYCLE.md">
       <data key="d0">depends_on</data>
     </edge>
     <edge source="docs/ENGINE-STATE-MACHINE.md" target="docs/RUNTIME-OPERATIONS.md">

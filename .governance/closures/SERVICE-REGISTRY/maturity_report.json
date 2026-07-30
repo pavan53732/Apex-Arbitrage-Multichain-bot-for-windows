@@ -1,8 +1,8 @@
 {
-  "avg_completeness": 0.2403,
+  "avg_completeness": 0.239,
   "closure_size": 175,
-  "documents_with_findings": 10,
-  "maturity_score": 0.2357,
+  "documents_with_findings": 11,
+  "maturity_score": 0.2341,
   "root_path": "docs/SERVICE-REGISTRY.md",
-  "total_findings": 16
+  "total_findings": 17
 }

@@ -2,7 +2,6 @@
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
   <key id="d0" for="edge" attr.name="relation" attr.type="string" />
   <graph edgedefault="directed">
-    <node id="APEX-ARCHITECTURE.md" />
     <node id="docs/AGENTS.md" />
     <node id="docs/AI-AGENT-SPECIFICATION.md" />
     <node id="docs/AI-CAPABILITY-MATRIX.md" />
@@ -81,12 +80,6 @@
     <node id="docs/TRADING-ENGINE.md" />
     <node id="docs/TRADING-LIFECYCLE.md" />
     <node id="docs/USER-FLOWS.md" />
-    <edge source="APEX-ARCHITECTURE.md" target="docs/EXECUTION-ENGINE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="APEX-ARCHITECTURE.md" target="docs/TRADING-ENGINE.md">
-      <data key="d0">depends_on</data>
-    </edge>
     <edge source="docs/AGENTS.md" target="docs/AI-PIPELINE.md">
       <data key="d0">depends_on</data>
     </edge>

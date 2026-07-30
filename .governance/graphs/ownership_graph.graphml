@@ -4,35 +4,8 @@
   <graph edgedefault="directed">
     <node id="AI Team" />
     <node id="AGENTS.md" />
-    <node id="AIDER.md" />
-    <node id="ANTIGRAVITY.md" />
     <node id="Runtime Team" />
-    <node id="APEX-ARCHITECTURE.md" />
-    <node id="CHATGPT.md" />
-    <node id="CLAUDE.md" />
-    <node id="CLINE.md" />
-    <node id="CODEBUFF.md" />
-    <node id="COPILOT.md" />
-    <node id="CURSOR.md" />
-    <node id="GEMINI.md" />
-    <node id="GITHUB-COPILOT-CLI.md" />
-    <node id="GOOGLE-CODE-ASSISTANT.md" />
-    <node id="KILO-CODE.md" />
-    <node id="LLAMA-CPP.md" />
-    <node id="OLLAMA.md" />
-    <node id="OPENCODE.md" />
-    <node id="PERPLEXITY.md" />
-    <node id="PROJECT-TREE-COMPLETE.md" />
-    <node id="QODO.md" />
-    <node id="QWEN.md" />
-    <node id="RAYCAST.md" />
-    <node id="README-GOVERNANCE.md" />
     <node id="README.md" />
-    <node id="ROO-CODE.md" />
-    <node id="TABNINE.md" />
-    <node id="WARP.md" />
-    <node id="WINDSURF.md" />
-    <node id="ZED.md" />
     <node id="UI Team" />
     <node id="docs/AGENT-GUIDE.md" />
     <node id="Trading Team" />
@@ -210,6 +183,7 @@
     <node id="docs/PROGRAMME-3-CLOSURE-ORCHESTRATOR.md" />
     <node id="docs/PROGRAMME-3-REPAIR-PLANNER.md" />
     <node id="docs/PROJECT-STRUCTURE.md" />
+    <node id="docs/PROJECT-TREE-COMPLETE.md" />
     <node id="docs/PROMPT-ENGINEERING.md" />
     <node id="docs/PROMPT-LIFECYCLE.md" />
     <node id="docs/PROVIDER-RESILIENCE.md" />
@@ -295,75 +269,6 @@
     <node id="docs/adr/0007-workspace-model.md" />
     <node id="docs/adr/0008-orchestrator-state-machine.md" />
     <edge source="AI Team" target="AGENTS.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="AIDER.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="ANTIGRAVITY.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="CHATGPT.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="CLAUDE.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="CLINE.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="CODEBUFF.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="COPILOT.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="CURSOR.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="GEMINI.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="GITHUB-COPILOT-CLI.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="KILO-CODE.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="LLAMA-CPP.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="OLLAMA.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="OPENCODE.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="PERPLEXITY.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="QODO.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="QWEN.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="RAYCAST.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="ROO-CODE.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="TABNINE.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="WARP.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="WINDSURF.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="AI Team" target="ZED.md">
       <data key="d0">owns</data>
     </edge>
     <edge source="AI Team" target="docs/AGENTS.md">
@@ -463,18 +368,6 @@
       <data key="d0">owns</data>
     </edge>
     <edge source="AI Team" target="docs/TRADE-EXPLAINER.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="Runtime Team" target="APEX-ARCHITECTURE.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="Runtime Team" target="GOOGLE-CODE-ASSISTANT.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="Runtime Team" target="PROJECT-TREE-COMPLETE.md">
-      <data key="d0">owns</data>
-    </edge>
-    <edge source="Runtime Team" target="README-GOVERNANCE.md">
       <data key="d0">owns</data>
     </edge>
     <edge source="Runtime Team" target="README.md">
@@ -763,6 +656,9 @@
       <data key="d0">owns</data>
     </edge>
     <edge source="Runtime Team" target="docs/PROJECT-STRUCTURE.md">
+      <data key="d0">owns</data>
+    </edge>
+    <edge source="Runtime Team" target="docs/PROJECT-TREE-COMPLETE.md">
       <data key="d0">owns</data>
     </edge>
     <edge source="Runtime Team" target="docs/PROMPT-ENGINEERING.md">

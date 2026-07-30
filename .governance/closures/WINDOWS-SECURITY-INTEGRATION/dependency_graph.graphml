@@ -178,21 +178,6 @@
     <node id="docs/WORKER-POOL.md" />
     <node id="docs/WORKER-STATE-MACHINE.md" />
     <node id="docs/WORKSPACE-MANAGER.md" />
-    <edge source="APEX-ARCHITECTURE.md" target="docs/ARCHITECTURE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="APEX-ARCHITECTURE.md" target="docs/DOCUMENTATION-MAP.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="APEX-ARCHITECTURE.md" target="docs/EXECUTION-ENGINE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="APEX-ARCHITECTURE.md" target="docs/PROJECT-STRUCTURE.md">
-      <data key="d0">depends_on</data>
-    </edge>
-    <edge source="APEX-ARCHITECTURE.md" target="docs/TRADING-ENGINE.md">
-      <data key="d0">depends_on</data>
-    </edge>
     <edge source="docs/AI-AGENT-SPECIFICATION.md" target="docs/AI-ORCHESTRATION.md">
       <data key="d0">depends_on</data>
     </edge>

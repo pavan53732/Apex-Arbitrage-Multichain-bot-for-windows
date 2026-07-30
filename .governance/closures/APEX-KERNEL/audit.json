@@ -1,24 +1,13 @@
 {
-  "avg_completeness_in_closure": 0.24025974025973998,
+  "avg_completeness_in_closure": 0.23896103896103868,
   "closure_size": 175,
   "documents": [
     {
-      "completeness": 0.22727272727272727,
-      "findings": [
-        {
-          "message": "Team 'Runtime Team' is assigned as owner of 151 documents (informational; not a subsystem-authority conflict -- see architecture-tests/validate_ownership.py for genuine authority-conflict detection): ['APEX-ARCHITECTURE.md', 'GOOGLE-CODE-ASSISTANT.md', 'PROJECT-TREE-COMPLETE.md', 'README-GOVERNANCE.md', 'README.md', 'docs/APEX-KERNEL.md', 'docs/APEX-OS.md', 'docs/API-CONTRACTS.md', 'docs/API-REFERENCE.md', 'docs/ARBITRAGE-MONITORING.md', 'docs/ARBITRAGE-WINDOW-MANAGER.md', 'docs/ASSET-MANAGEMENT.md', 'docs/AUDIT-REPORT-PHASE4.md', 'docs/BACKTESTING.md', 'docs/BOOTSTRAP-SEQUENCE.md', 'docs/CACHE-MANAGER.md', 'docs/CANONICAL-SOURCE-RULES.md', 'docs/CHANGELOG.md', 'docs/CODING-STANDARDS.md', 'docs/COMPONENT-DIAGRAMS.md', 'docs/CONCURRENCY-MODEL.md', 'docs/CONTRACT-MANAGEMENT.md', 'docs/CONTRACT-REGISTRY.md', 'docs/CONTRIBUTING.md', 'docs/CROSS-EXCHANGE-ARBITRAGE.md', 'docs/CROSS-REFERENCE-INDEX.md', 'docs/DATA-FLOW.md', 'docs/DATA-GOVERNANCE.md', 'docs/DECISION-LEDGER.md', 'docs/DECISION-LOG.md', 'docs/DEPENDENCY-AUTHORITY-RULES.md', 'docs/DEPENDENCY-GRAPH.md', 'docs/DEPLOYMENT.md', 'docs/DESIGN-SYSTEM.md', 'docs/DESIGNER-PROTOCOLS.md', 'docs/DOCUMENTATION-LIFECYCLE.md', 'docs/DOCUMENTATION-MAP.md', 'docs/ENGINE-STATE-MACHINE.md', 'docs/ENHANCEMENT-ROADMAP.md', 'docs/ENTERPRISE-OPERATIONS.md', 'docs/ERROR-CATALOG.md', 'docs/ERROR-CODES.md', 'docs/EVENT-BUS.md', 'docs/EVENT-CATALOG.md', 'docs/EVENT-FLOW.md', 'docs/EVENT-OWNERSHIP-MATRIX.md', 'docs/EXECUTION-LIFECYCLE.md', 'docs/EXECUTION-POLICIES.md', 'docs/FAILURE-MATRIX.md', 'docs/FAILURE-RECOVERY-MATRIX.md', 'docs/FAQ.md', 'docs/FEATURE-FLAGS.md', 'docs/FEATURE-GATES.md', 'docs/FEATURE-MATRIX.md', 'docs/FILE-STORAGE.md', 'docs/FINAL-READINESS-AUDIT.md', 'docs/GAS-OPTIMISATION.md', 'docs/GLOSSARY.md', 'docs/HEALTHCHECKS.md', 'docs/IMPLEMENTATION-ROADMAP.md', 'docs/INTERFACE-AGENT-MESSAGE.md', 'docs/INTERFACE-CATALOG.md', 'docs/INTERFACE-NOTIFICATION-CHANNEL.md', 'docs/INTERFACE-PROVIDER-ADAPTER.md', 'docs/INTERFACE-TOOL-CALL.md', 'docs/IPC-MESSAGE-CATALOG.md', 'docs/IPC-PROTOCOL.md', 'docs/KNOWLEDGE-GRAPH.md', 'docs/KNOWN-LIMITATIONS.md', 'docs/LEARNING-PIPELINE.md', 'docs/LIVE-ARCHITECTURE-VIEWER.md', 'docs/MARKET-DATA.md', 'docs/MARKET-INTELLIGENCE.md', 'docs/MARKET-REGIME-DETECTION.md', 'docs/MARKET-SESSION.md', 'docs/MEMORY-LIFECYCLE.md', 'docs/METRICS.md', 'docs/MEV-PROTECTION.md', 'docs/MODEL-CAPABILITY-NEGOTIATION.md', 'docs/MODULE-DEPENDENCY.md', 'docs/MODULE-OWNERSHIP-MATRIX.md', 'docs/NOTIFICATION-CENTER.md', 'docs/OPERATIONS.md', 'docs/OPPORTUNITY-DETECTION.md', 'docs/OPPORTUNITY-LIFECYCLE.md', 'docs/OPPORTUNITY-RANKING.md', 'docs/ORCHESTRATOR.md', 'docs/ORDER-MANAGEMENT.md', 'docs/PERFORMANCE-SLOS.md', 'docs/PERFORMANCE-TARGETS.md', 'docs/PLUGIN-LIFECYCLE.md', 'docs/PLUGIN-MARKETPLACE.md', 'docs/PLUGIN-SDK.md', 'docs/PORTFOLIO-ANALYTICS.md', 'docs/PORTFOLIO-MANAGEMENT.md', 'docs/POSITION-MANAGEMENT.md', 'docs/PRICE-DISCOVERY.md', 'docs/PROGRAMME-3-CLOSURE-ORCHESTRATOR.md', 'docs/PROGRAMME-3-REPAIR-PLANNER.md', 'docs/PROJECT-STRUCTURE.md', 'docs/PROMPT-ENGINEERING.md', 'docs/PROVIDER-RESILIENCE.md', 'docs/QUEUE-MANAGEMENT.md', 'docs/README-GOVERNANCE.md', 'docs/README.md', 'docs/RECOVERY-COORDINATION.md', 'docs/RECOVERY-PLAYBOOK.md', 'docs/REGISTRY-SYSTEM.md', 'docs/RESOURCE-MANAGER.md', 'docs/ROADMAP.md', 'docs/ROUTE-OPTIMIZATION.md', 'docs/ROUTE-SCORING-MODEL.md', 'docs/RPC-MANAGER.md', 'docs/RUNTIME-FLOW-LIFECYCLE.md', 'docs/RUNTIME-KNOWLEDGE.md', 'docs/RUNTIME-OPERATIONS.md', 'docs/SELF-HEALING.md', 'docs/SERVICE-LIFECYCLE.md', 'docs/SERVICE-REGISTRY.md', 'docs/SERVICE-STATE-MACHINE.md', 'docs/SHUTDOWN-LIFECYCLE.md', 'docs/SKILLS.md', 'docs/SLIPPAGE-MODEL.md', 'docs/STATE-MANAGEMENT.md', 'docs/STRATEGIES.md', 'docs/STRATEGY-ROTATION.md', 'docs/SYSTEM-CAPABILITY-REGISTRY.md', 'docs/TASK-SCHEDULER.md', 'docs/TEST-CASE-REGISTRY.md', 'docs/THREADING-MODEL.md', 'docs/TOKEN-DISCOVERY.md', 'docs/TOKEN-INTELLIGENCE.md', 'docs/TRANSACTION-LIFECYCLE.md', 'docs/TROUBLESHOOTING.md', 'docs/UPDATE-MANAGER.md', 'docs/USER-FLOWS.md', 'docs/VERSIONING.md', 'docs/WALLET-COMMAND-CENTER.md', 'docs/WALLET-MANAGEMENT.md', 'docs/WORKER-ARCHITECTURE.md', 'docs/WORKER-POOL.md', 'docs/WORKER-STATE-MACHINE.md', 'docs/WORKSPACE-MANAGER.md', 'docs/adr/0001-provider-abstraction.md', 'docs/adr/0002-event-driven-kernel.md', 'docs/adr/0003-plugin-first-architecture.md', 'docs/adr/0004-polygon-first.md', 'docs/adr/0005-ai-memory.md', 'docs/adr/0006-runtime-governance.md', 'docs/adr/0007-workspace-model.md', 'docs/adr/0008-orchestrator-state-machine.md']",
-          "rule": "TEAM_OWNERSHIP_CONCENTRATION",
-          "severity": "INFO"
-        },
-        {
-          "message": "Cross-reference cycle detected involving 165 documents (informational -- see _check_cycles() docstring: this repository has no documents with an explicit '## Depends On' section, so this graph currently reflects documentation cross-referencing, not verified structural dependencies): ['APEX-ARCHITECTURE.md', 'docs/AI-AGENT-SPECIFICATION.md', 'docs/AI-CAPABILITY-MATRIX.md', 'docs/AI-CONSENSUS.md', 'docs/AI-CONTEXT-WINDOW-MANAGEMENT.md', 'docs/AI-COST-MANAGEMENT.md', 'docs/AI-GATEWAY.md', 'docs/AI-KNOWLEDGE-INDEX.md', 'docs/AI-MEMORY-SYSTEM.md', 'docs/AI-MEMORY.md']...",
-          "rule": "NO_CYCLES",
-          "severity": "INFO"
-        }
-      ],
-      "owner": "Runtime Team",
+      "completeness": 0.0,
+      "findings": [],
+      "owner": null,
       "path": "APEX-ARCHITECTURE.md",
-      "type": "OVERVIEW"
+      "type": null
     },
     {
       "completeness": 0.0,
@@ -50,7 +39,13 @@
     },
     {
       "completeness": 0.18181818181818182,
-      "findings": [],
+      "findings": [
+        {
+          "message": "Cross-reference cycle detected involving 164 documents (informational -- see _check_cycles() docstring: this repository has no documents with an explicit '## Depends On' section, so this graph currently reflects documentation cross-referencing, not verified structural dependencies): ['docs/AI-AGENT-SPECIFICATION.md', 'docs/AI-CAPABILITY-MATRIX.md', 'docs/AI-CONSENSUS.md', 'docs/AI-CONTEXT-WINDOW-MANAGEMENT.md', 'docs/AI-COST-MANAGEMENT.md', 'docs/AI-GATEWAY.md', 'docs/AI-KNOWLEDGE-INDEX.md', 'docs/AI-MEMORY-SYSTEM.md', 'docs/AI-MEMORY.md', 'docs/AI-ORCHESTRATION.md']...",
+          "rule": "NO_CYCLES",
+          "severity": "INFO"
+        }
+      ],
       "owner": "AI Team",
       "path": "docs/AI-AGENT-SPECIFICATION.md",
       "type": "SPECIFICATION"
@@ -518,7 +513,18 @@
     },
     {
       "completeness": 0.18181818181818182,
-      "findings": [],
+      "findings": [
+        {
+          "message": "Reference to non-existent doc: APEX-ARCHITECTURE.md",
+          "rule": "BROKEN_REFERENCE",
+          "severity": "MEDIUM"
+        },
+        {
+          "message": "Reference to non-existent doc: APEX-ARCHITECTURE.md",
+          "rule": "BROKEN_REFERENCE",
+          "severity": "MEDIUM"
+        }
+      ],
       "owner": "Runtime Team",
       "path": "docs/DOCUMENTATION-MAP.md",
       "type": "INDEX"
@@ -1319,5 +1325,5 @@
     }
   ],
   "root_path": "docs/APEX-KERNEL.md",
-  "total_findings_in_closure": 16
+  "total_findings_in_closure": 17
 }

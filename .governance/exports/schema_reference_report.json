@@ -2,54 +2,6 @@
   "resolved_count": 18,
   "resolved_references": [
     {
-      "document_path": "PROJECT-TREE-COMPLETE.md",
-      "line_number": 55,
-      "matched_text": "configuration.schema.json",
-      "schema_filename": "configuration.schema.json"
-    },
-    {
-      "document_path": "PROJECT-TREE-COMPLETE.md",
-      "line_number": 56,
-      "matched_text": "event.schema.json",
-      "schema_filename": "event.schema.json"
-    },
-    {
-      "document_path": "PROJECT-TREE-COMPLETE.md",
-      "line_number": 57,
-      "matched_text": "notification.schema.json",
-      "schema_filename": "notification.schema.json"
-    },
-    {
-      "document_path": "PROJECT-TREE-COMPLETE.md",
-      "line_number": 58,
-      "matched_text": "plugin.schema.json",
-      "schema_filename": "plugin.schema.json"
-    },
-    {
-      "document_path": "PROJECT-TREE-COMPLETE.md",
-      "line_number": 59,
-      "matched_text": "provider.schema.json",
-      "schema_filename": "provider.schema.json"
-    },
-    {
-      "document_path": "PROJECT-TREE-COMPLETE.md",
-      "line_number": 60,
-      "matched_text": "settings.schema.json",
-      "schema_filename": "settings.schema.json"
-    },
-    {
-      "document_path": "PROJECT-TREE-COMPLETE.md",
-      "line_number": 61,
-      "matched_text": "strategy.schema.json",
-      "schema_filename": "strategy.schema.json"
-    },
-    {
-      "document_path": "PROJECT-TREE-COMPLETE.md",
-      "line_number": 62,
-      "matched_text": "workspace.schema.json",
-      "schema_filename": "workspace.schema.json"
-    },
-    {
       "document_path": "docs/CONFIGURATION-REFERENCE.md",
       "line_number": 278,
       "matched_text": "SCHEMAS/configuration.schema.json",
@@ -102,6 +54,54 @@
       "line_number": 114,
       "matched_text": "schemas/plugin.schema.json",
       "schema_filename": "plugin.schema.json"
+    },
+    {
+      "document_path": "docs/PROJECT-TREE-COMPLETE.md",
+      "line_number": 55,
+      "matched_text": "configuration.schema.json",
+      "schema_filename": "configuration.schema.json"
+    },
+    {
+      "document_path": "docs/PROJECT-TREE-COMPLETE.md",
+      "line_number": 56,
+      "matched_text": "event.schema.json",
+      "schema_filename": "event.schema.json"
+    },
+    {
+      "document_path": "docs/PROJECT-TREE-COMPLETE.md",
+      "line_number": 57,
+      "matched_text": "notification.schema.json",
+      "schema_filename": "notification.schema.json"
+    },
+    {
+      "document_path": "docs/PROJECT-TREE-COMPLETE.md",
+      "line_number": 58,
+      "matched_text": "plugin.schema.json",
+      "schema_filename": "plugin.schema.json"
+    },
+    {
+      "document_path": "docs/PROJECT-TREE-COMPLETE.md",
+      "line_number": 59,
+      "matched_text": "provider.schema.json",
+      "schema_filename": "provider.schema.json"
+    },
+    {
+      "document_path": "docs/PROJECT-TREE-COMPLETE.md",
+      "line_number": 60,
+      "matched_text": "settings.schema.json",
+      "schema_filename": "settings.schema.json"
+    },
+    {
+      "document_path": "docs/PROJECT-TREE-COMPLETE.md",
+      "line_number": 61,
+      "matched_text": "strategy.schema.json",
+      "schema_filename": "strategy.schema.json"
+    },
+    {
+      "document_path": "docs/PROJECT-TREE-COMPLETE.md",
+      "line_number": 62,
+      "matched_text": "workspace.schema.json",
+      "schema_filename": "workspace.schema.json"
     },
     {
       "document_path": "docs/TESTING.md",
