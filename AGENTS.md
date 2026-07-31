@@ -220,6 +220,34 @@ This prohibition includes, but is not limited to:
 - LOG.md
 - RESULT.md
 
+## File Creation Decision Policy
+
+Before creating any file, the agent must answer:
+
+1. Is this permanent repository knowledge?
+2. Does this concept already exist?
+3. Can an existing canonical file be updated?
+4. Is a new file architecturally required?
+
+## Canonical Edit-First Rule
+
+If a canonical document already owns the concept:
+
+- update the canonical document
+- do not create another document
+- do not split authority
+- do not duplicate specifications
+
+This preserves source-of-truth discipline.
+
+
+
+If the answer to any of these is no, do not create the file.
+
+This prevents repository growth from unnecessary documents.
+
+
+
 or equivalent markdown, text, JSON, HTML, CSV, XML or PDF artifacts.
 
 Temporary execution output belongs in the conversation.
@@ -264,6 +292,23 @@ Good commits should explain:
 - which plane it affected
 - which document class it affected
 - whether canonical meaning, structure, validation behavior, or repository hygiene changed
+
+## Post-Change Verification Checklist
+
+After every implementation, verify:
+
+- [ ] metadata valid
+- [ ] registries updated
+- [ ] links repaired
+- [ ] references repaired
+- [ ] duplicate concepts not introduced
+- [ ] workspace clean
+- [ ] git status clean
+- [ ] commit created
+- [ ] pushed to `main`
+- [ ] synchronization verified
+
+
 
 ## Default operating principle
 

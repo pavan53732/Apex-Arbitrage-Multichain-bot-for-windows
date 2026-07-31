@@ -6,7 +6,7 @@
 |------|-------------|
 | **Output Format** | All reports, analysis, and summaries must be presented in table format. No plain text narratives for structured data. |
 | **No CI/CD Workflows** | The repository must not contain any GitHub Actions workflows, CI/CD pipelines, or automation workflows. No `.github/workflows/` directory or `*.yml`/`.yaml` pipeline files. |
-| **Branch Strategy** | Work is done on session branches. Merge to `main` via explicit merge commits with detailed messages. |
+| **Branch Strategy** | Work directly on `main`. Commit after successful validation. Push immediately after commit. Verify remote synchronization. No unfinished local commits. No abandoned branches unless explicitly requested. |
 | **Governance Platform** | The Apex Governance Platform (`tools/governance/`) is the single canonical runtime. All governance computation originates here. WS0 is a verification layer only. |
 
 ## Execution Model
@@ -32,6 +32,20 @@ See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
 | **No Temporary CSV** | Do not create CSV reports. |
 | **No Workspace Artifacts** | Do not generate temporary execution artifacts anywhere in the workspace. |
 | **Repository Contains Durable Knowledge Only** | The repository stores long-lived engineering knowledge only. |
+
+## Git Rules
+
+| Rule | Description |
+|------|-------------|
+| **Work on Main** | Work directly on `main` unless explicitly instructed otherwise. |
+| **Commit After Validation** | Commit only after validators pass and quality checks complete. |
+| **Push Immediately** | Push to `main` immediately after commit. |
+| **Verify Synchronization** | Confirm remote is synchronized before declaring completion. |
+| **No Unfinished Commits** | No unfinished local commits. |
+| **No Abandoned Branches** | No abandoned branches unless explicitly requested. |
+| **Detailed Messages** | Use detailed commit messages explaining what changed and why. |
+
+
 
 See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
 

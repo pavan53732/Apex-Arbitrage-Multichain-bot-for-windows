@@ -147,6 +147,21 @@ Exceptions to this policy require:
 
 No exception should be introduced casually.
 
+## Repository Invariants
+
+The following invariants must never be violated:
+
+- One canonical owner per concept.
+- One stable document ID per document.
+- No temporary execution artifacts.
+- No repository automation.
+- No CI/CD.
+- Repository always synchronizes to `main` after successful implementation.
+- Root remains minimal.
+- Knowledge registry always reflects repository state.
+- All validation and quality gates executed locally.
+- No GitHub Actions or remote pipelines.
+
 ## Relationship to other documents
 
 ## Conversation is the Default Output Channel
@@ -181,6 +196,74 @@ This includes:
 - TXT files
 - PDF files
 - XML files
+
+## Repository Synchronization Policy
+
+Unless the user explicitly instructs otherwise:
+
+- complete all requested work
+- execute all required local validators
+- stage all required changes
+- commit all completed work
+- push all committed changes directly to the `main` branch
+- synchronize the local repository with the remote repository
+- leave the repository in a clean synchronized state
+
+A completed task is not considered complete until repository synchronization succeeds.
+
+## Complete Execution Lifecycle
+
+All AI agents must follow this exact sequence:
+
+1. **Read** — read relevant canonical documents
+2. **Understand** — confirm understanding of the task
+3. **Classify** — determine plane, domain, class, authority
+4. **Plan** — identify canonical files and required changes
+5. **Implement** — make changes carefully
+6. **Validate** — run relevant local validators
+7. **Repair** — fix links, references, metadata
+8. **Review** — self-review for quality and consistency
+9. **Commit** — commit all completed work
+10. **Push to main** — push directly to `main`
+11. **Verify synchronization** — confirm remote is synchronized
+12. **Return results in chat** — communicate execution results
+13. **Leave workspace clean** — ensure no temporary artifacts remain
+
+## Definition of Done
+
+A task is complete only when:
+
+- requested work is implemented
+- validators passed
+- metadata is valid
+- links are repaired
+- registries are updated
+- git working tree is clean
+- changes are committed
+- changes are pushed to `main`
+- remote is synchronized
+- results are returned in chat
+- no temporary artifacts remain
+
+## Repository Completion Checklist
+
+Before declaring a task complete, verify:
+
+- [ ] all requested work implemented
+- [ ] validators executed and passed
+- [ ] metadata valid on all changed docs
+- [ ] links repaired
+- [ ] registries updated
+- [ ] no duplicate concepts introduced
+- [ ] workspace clean
+- [ ] git status clean
+- [ ] commit created with detailed message
+- [ ] pushed to `main`
+- [ ] remote synchronized
+- [ ] results returned in chat
+- [ ] no temporary artifacts remain
+
+
 
 unless explicitly requested by the user.
 
