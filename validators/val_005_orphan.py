@@ -117,7 +117,8 @@ class Validator(BaseValidator):
         for md_file in context.all_markdown_files:
             rel = md_file.relative_to(context.repository_root)
             parts = rel.parts
-            if len(parts) >= 2 and parts[0] == "docs":
+            if len(parts) >= 3 and parts[0] == "docs":
+                # Only directories beneath docs/ define domains; root-level markdown is not a domain.
                 domain = parts[1]
                 domain_folders.add(domain)
 
