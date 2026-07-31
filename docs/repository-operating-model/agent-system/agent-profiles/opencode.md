@@ -49,7 +49,7 @@ Guidance for OpenCode-based coding agents contributing to this repository.
 ## Required reading
 - `../../../../AGENTS.md`
 - `../../../product-specification/architecture/architecture.md`
-- `../../../product-specification/operations/runtime-operations.md`
+- `../../../product-specification/operations/reliability/runtime-operations.md`
 - `../../../product-specification/ai/runtime/ai-pipeline.md`
 - `../../../product-specification/data/cache-manager.md`
 - `../../../product-specification/data/database-schema.md`

@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/notification-center.md
+canonical_source: docs/product-specification/operations/notifications/notification-center.md
 related_concepts:
   - CONCEPT-0345
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0422
 validator_coverage: []
 supersedes: []
 superseded_by: []
@@ -37,8 +38,8 @@ This document is an overview, reference, or index as noted below.
 Defines outbound notifications for desktop, Telegram, Discord, Slack, email, and webhooks.
 
 ## Cross-references
-- `./health-checks.md`
-- `./runtime-operations.md`
+- `../monitoring/health-checks.md`
+- `../reliability/runtime-operations.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

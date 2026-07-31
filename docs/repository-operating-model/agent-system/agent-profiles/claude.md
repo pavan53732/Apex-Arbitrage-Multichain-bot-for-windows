@@ -48,7 +48,7 @@ Before editing code, verify the canonical owner docs for the feature area. Do no
 - `../../../../AGENTS.md`
 - `../../../product-specification/architecture/architecture.md`
 - `../../../product-specification/ai/runtime/ai-pipeline.md`
-- `../../../product-specification/operations/runtime-operations.md`
+- `../../../product-specification/operations/reliability/runtime-operations.md`
 - `../../../product-specification/execution/trading/trading-lifecycle.md`
 - `../../../product-specification/execution/transactions/execution-lifecycle.md`
 - `../../../product-specification/data/database-schema.md`

@@ -1,7 +1,7 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0339
-title: Error Catalog
+document_id: DOC-0340
+title: Failure Matrix
 plane: Product Specification
 domain: Operations
 class: Index
@@ -9,9 +9,9 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/error-catalog.md
+canonical_source: docs/product-specification/operations/recovery/failure-matrix.md
 related_concepts:
-  - CONCEPT-0339
+  - CONCEPT-0340
 dependencies: []
 consumers: []
 validator_coverage: []
@@ -22,19 +22,17 @@ concept_role: Owner
 owned_domains:
   - Operations
 type: INDEX
-purpose: Error Catalog documentation.
+purpose: Failure Matrix documentation.
 scope: Reference documentation.
 ---
 
-# Error Catalog
+# Failure Matrix
 
 ## Document type
 Document type: [REFERENCE]
 
 ## Purpose
-Catalogues canonical error families and codes.
+Maps failures to actions.
 
-## Codes
-- AI-1001: Provider request failed.
-- RPC-3002: RPC timeout.
-- PLUGIN-9001: Sandbox violation.
+## Examples
+- RPC timeout -> retry -> provider switch -> cooldown -> operator intervention.

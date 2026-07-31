@@ -1,7 +1,7 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0398
-title: Diagnostics README
+document_id: DOC-0422
+title: Operations Notifications README
 plane: Product Specification
 domain: Operations
 class: Index
@@ -9,11 +9,11 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/diagnostics/diagnostics.md
+canonical_source: docs/product-specification/operations/notifications/notification-center.md
 related_concepts:
-  - CONCEPT-0333
+  - CONCEPT-0345
 dependencies:
-  - DOC-0333
+  - DOC-0345
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -23,19 +23,19 @@ concept_role: Index
 owned_domains: []
 ---
 
-# Diagnostics
+# Operations Notifications
 
 ## Purpose and scope
 
-Operational diagnostics, troubleshooting, error handling, error catalog, and error-code references.
+Notification center and operational notification behavior.
 
 ## What belongs here
 
-Diagnostics specifications, error handling/logging, error catalogs, troubleshooting, and error-code references.
+Notification center behavior, severity routing, delivery, and notification operations references.
 
 ## What does not belong here
 
-Monitoring, recovery orchestration, notifications, or runtime reliability unless diagnostics owns the concern.
+Windows notification integration, interface channel contracts, or dashboard UI display behavior unless operations owns it.
 
 ## Expected document classes
 
@@ -52,11 +52,7 @@ This folder indexes operations documents in this subdomain and defers behavior t
 
 | Document | Class |
 | --- | --- |
-| [Diagnostics](./diagnostics.md) | Specification |
-| [Error Catalog](./error-catalog.md) | Index |
-| [Error Codes](error-codes.md) | Reference |
-| [Error Handling and Logging](./error-handling-and-logging.md) | Specification |
-| [Troubleshooting](troubleshooting.md) | Reference |
+| [Notification Center](./notification-center.md) | Reference |
 
 ## Adjacent domains
 

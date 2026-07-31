@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/enterprise-operations.md
+canonical_source: docs/product-specification/operations/reliability/enterprise-operations.md
 related_concepts:
   - CONCEPT-0344
 dependencies: []
@@ -37,11 +37,11 @@ This document is an overview, reference, or index as noted below.
 Defines workspace profiles, import/export, backup, restore, version history, and configuration snapshots.
 
 ## Cross-references
-- `../configuration/configuration.md`
+- `../../configuration/configuration.md`
 - `./runtime-operations.md`
 
 
-For workspace, see `../dashboard/dashboard-workspaces.md`.
+For workspace, see `../../dashboard/dashboard-workspaces.md`.
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

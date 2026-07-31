@@ -51,7 +51,7 @@ This document covers token budgets, rate limits, retries, caching, fallback poli
 - `../runtime/ai-pipeline.md`
 - `./cloud-ai-integration.md`
 - `./ai-settings.md`
-- `../../operations/monitoring-observability.md`
+- `../../operations/monitoring/monitoring-observability.md`
 
 ## Orchestration boundary
 This document governs capability, memory, prompt, or cost definitions. For runtime orchestration and pipeline sequencing, see `../runtime/ai-pipeline.md`.

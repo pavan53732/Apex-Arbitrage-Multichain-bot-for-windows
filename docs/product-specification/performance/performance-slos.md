@@ -50,7 +50,7 @@ Defines numeric performance targets for core platform paths.
 ## Cross-references
 - `../ai/providers/ai-cost-management.md`
 - `../operations/monitoring/metrics.md`
-- `../operations/health-checks.md`
+- `../operations/monitoring/health-checks.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

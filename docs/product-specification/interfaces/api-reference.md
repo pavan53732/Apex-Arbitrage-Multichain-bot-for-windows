@@ -385,7 +385,7 @@ Standard error code format: `E_<CATEGORY>_<SPECIFIC>`.
 - `./api-contracts.md`
 - `./ipc-protocol.md`
 - `../architecture/project-structure.md`
-- `../operations/error-handling-and-logging.md`
+- `../operations/diagnostics/error-handling-and-logging.md`
 - `../deployment/versioning.md`
 
 ## Operational Contract

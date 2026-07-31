@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Ops Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/monitoring-observability.md
+canonical_source: docs/product-specification/operations/monitoring/monitoring-observability.md
 related_concepts:
   - CONCEPT-0336
 dependencies: []

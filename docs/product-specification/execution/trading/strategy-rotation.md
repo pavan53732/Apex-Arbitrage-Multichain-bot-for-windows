@@ -59,7 +59,7 @@ Score = configurable weighted combination of win rate, Sharpe ratio, recent perf
 - ROTATION_COOLDOWN_MINUTES.
 
 ## Failure modes
-If a strategy fails SLO, disable it and alert through `../../operations/notification-center.md`.
+If a strategy fails SLO, disable it and alert through `../../operations/notifications/notification-center.md`.
 
 ## Cross-references
 - `../../runtime/orchestrator.md`

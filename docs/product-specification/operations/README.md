@@ -9,7 +9,7 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/runtime-operations.md
+canonical_source: docs/product-specification/operations/reliability/runtime-operations.md
 related_concepts:
   - CONCEPT-0338
 dependencies:
@@ -27,45 +27,26 @@ owned_domains: []
 
 ## Purpose and scope
 
-Runtime operations, monitoring, diagnostics, recovery, failures, health, and troubleshooting.
+Runtime operations, monitoring, diagnostics, recovery, reliability, notifications, and operational support documentation.
 
-## Document classes expected
+## What belongs here
 
-- Index
-- Guide
-- Reference
-- Specification where this folder owns a canonical boundary
-- Registry only in registry folders
-- Historical only in historical folders
-- Generated only in generated folders
-
-## Canonical boundaries
-
-Operations specifications and references.
+Product operations specifications and references. Repository execution policy belongs under Repository Operating Model.
 
 ## What does not belong here
 
-Repository task execution.
+Product implementation APIs, market behavior, trading execution, or UI behavior unless operational ownership is explicit.
 
-## Documents
+## Subdomains
 
-| Document ID | Title | Class | Authority | Status |
-| --- | --- | --- | --- | --- |
-| DOC-0333 | [Diagnostics](./diagnostics.md) | Specification | Canonical | Active |
-| DOC-0334 | [Error Handling and Logging](./error-handling-and-logging.md) | Specification | Canonical | Active |
-| DOC-0335 | [Health Checks](./health-checks.md) | Specification | Canonical | Active |
-| DOC-0336 | [Monitoring Observability](./monitoring-observability.md) | Specification | Canonical | Active |
-| DOC-0337 | [Recovery Coordination](./recovery-coordination.md) | Specification | Canonical | Active |
-| DOC-0338 | [Runtime Operations](./runtime-operations.md) | Specification | Canonical | Active |
-| DOC-0339 | [Error Catalog](./error-catalog.md) | Index | Canonical | Active |
-| DOC-0340 | [Failure Matrix](./failure-matrix.md) | Index | Canonical | Active |
-| DOC-0341 | [Failure Recovery Matrix](./failure-recovery-matrix.md) | Index | Canonical | Active |
-| DOC-0343 | [Arbitrage Monitoring](./arbitrage-monitoring.md) | Reference | Canonical | Active |
-| DOC-0344 | [Enterprise Operations](./enterprise-operations.md) | Reference | Canonical | Active |
-| DOC-0345 | [Notification Center](./notification-center.md) | Reference | Canonical | Active |
-| DOC-0346 | [Operations](./operations.md) | Reference | Canonical | Active |
-| DOC-0347 | [Provider Resilience](./provider-resilience.md) | Specification | Canonical | Active |
-| DOC-0348 | [Queue Management](./queue-management.md) | Reference | Canonical | Active |
-| DOC-0349 | [Recovery And Failover](./recovery-and-failover.md) | Reference | Canonical | Active |
-| DOC-0350 | [Recovery Playbook](./recovery-playbook.md) | Reference | Canonical | Active |
-| DOC-0351 | [Self Healing](./self-healing.md) | Reference | Canonical | Active |
+| Subdomain | README | Canonical owner |
+| --- | --- | --- |
+| diagnostics | [Diagnostics README](diagnostics/README.md) | [Diagnostics](./diagnostics/diagnostics.md) |
+| monitoring | [Monitoring README](monitoring/README.md) | [Monitoring Observability](./monitoring/monitoring-observability.md) |
+| notifications | [Operations Notifications README](notifications/README.md) | [Notification Center](./notifications/notification-center.md) |
+| recovery | [Operations Recovery README](recovery/README.md) | [Recovery Coordination](./recovery/recovery-coordination.md) |
+| reliability | [Operations Reliability README](reliability/README.md) | [Runtime Operations](./reliability/runtime-operations.md) |
+
+## Document creation rule
+
+Before adding an operations document, identify the active operations concept owner and place the document in the matching subdomain. Do not create duplicate operations ownership documents.

@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Ops Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/error-handling-and-logging.md
+canonical_source: docs/product-specification/operations/diagnostics/error-handling-and-logging.md
 related_concepts:
   - CONCEPT-0334
 dependencies: []

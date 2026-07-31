@@ -39,7 +39,7 @@ Defines build pipeline, packaging, testing gates, release promotion, rollback ex
 
 ## Ownership
 - Owns packaging, installer flow, release channels, and upgrade/rollback procedures.
-- Consumes `../operations/runtime-operations.md`, `../testing/testing-guide.md`, and `../security/security.md`.
+- Consumes `../operations/reliability/runtime-operations.md`, `../testing/testing-guide.md`, and `../security/security.md`.
 
 ## Release stages
 - Build.
@@ -59,7 +59,7 @@ Defines build pipeline, packaging, testing gates, release promotion, rollback ex
 ## Cross-references
 - `../windows/windows-desktop.md`
 - `./build-release.md`
-- `../operations/runtime-operations.md`
+- `../operations/reliability/runtime-operations.md`
 - `../security/security.md`
 
 ## Operational Contract

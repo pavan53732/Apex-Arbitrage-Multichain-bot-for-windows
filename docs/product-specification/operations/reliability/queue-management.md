@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/queue-management.md
+canonical_source: docs/product-specification/operations/reliability/queue-management.md
 related_concepts:
   - CONCEPT-0348
 dependencies: []
@@ -77,9 +77,9 @@ Empty -> Active -> Backlogged -> Saturated -> Draining -> Empty.
 
 ## Cross-references
 - `./runtime-operations.md`
-- `../runtime/worker-architecture.md`
-- `./recovery-and-failover.md`
-- `./monitoring-observability.md`
+- `../../runtime/worker-architecture.md`
+- `../recovery/recovery-and-failover.md`
+- `../monitoring/monitoring-observability.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

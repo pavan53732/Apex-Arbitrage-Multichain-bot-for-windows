@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/recovery-playbook.md
+canonical_source: docs/product-specification/operations/recovery/recovery-playbook.md
 related_concepts:
   - CONCEPT-0350
 dependencies: []
@@ -75,7 +75,7 @@ All recoveries follow this sequence:
 | **Severity** | High |
 | **Detection** | Provider returns 5xx / timeout / quota exceeded |
 | **Halt scope** | AI-dependent operations (opportunity scoring may degrade) |
-| **Retry** | Follow fallback chain: Primary → Secondary → Tertiary (see `../ai/runtime/ai-pipeline.md` §5.3). |
+| **Retry** | Follow fallback chain: Primary → Secondary → Tertiary (see `../../ai/runtime/ai-pipeline.md` §5.3). |
 | **Reconcile** | No state reconciliation (AI is stateless per request). |
 | **Escalation** | All providers fail → emit `ai.critical.all_providers_failed`. |
 | **Recovery** | Auto-resume on primary when retry interval elapses. |
@@ -87,10 +87,10 @@ All recoveries follow this sequence:
 | **Severity** | Critical (if money at risk) |
 | **Detection** | Execution Engine reports `execution.reverted` or `execution.stuck` |
 | **Halt scope** | This trade only. Chain circuit breaker may trip. |
-| **Retry** | Follow retry strategy in `../execution/transactions/execution-engine.md` §4. |
+| **Retry** | Follow retry strategy in `../../execution/transactions/execution-engine.md` §4. |
 | **Reconcile** | Query on-chain state to determine actual outcome. |
 | **Escalation** | If uncleared after 5 min → operator notification (`system.warning`). |
-| **Recovery** | Partial recovery or full unwind per `../execution/trading/trading-engine.md` §4. |
+| **Recovery** | Partial recovery or full unwind per `../../execution/trading/trading-engine.md` §4. |
 
 ### 2.4 Plugin Crash
 

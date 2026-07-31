@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/recovery-and-failover.md
+canonical_source: docs/product-specification/operations/recovery/recovery-and-failover.md
 related_concepts:
   - CONCEPT-0349
 dependencies: []
@@ -77,12 +77,12 @@ Detected -> Classified -> Contained -> Restored -> Reconciled -> Released.
 - Unresolved fault count.
 
 ## Cross-references
-- `./runtime-operations.md`
-- `./queue-management.md`
-- `../runtime/worker-architecture.md`
-- `./monitoring-observability.md`
-- `./error-handling-and-logging.md`
-- `../../historical/traceability-matrix.md`
+- `../reliability/runtime-operations.md`
+- `../reliability/queue-management.md`
+- `../../runtime/worker-architecture.md`
+- `../monitoring/monitoring-observability.md`
+- `../diagnostics/error-handling-and-logging.md`
+- `../../../historical/traceability-matrix.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

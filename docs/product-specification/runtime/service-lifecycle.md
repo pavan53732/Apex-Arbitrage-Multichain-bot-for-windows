@@ -53,7 +53,7 @@ stateDiagram-v2
 ## Cross-references
 - `../architecture/apex-kernel.md`
 - `./orchestrator.md`
-- `../operations/health-checks.md`
+- `../operations/monitoring/health-checks.md`
 
 ## Operational Contract
 Defines service registration, initialization, start, healthy, paused, restarting, stopping, and disposed transitions.

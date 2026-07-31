@@ -41,8 +41,8 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | Registry schema version | 1.1 |
 | Registry model | Semantic relationships only |
 | Last regenerated | 2026-07-31 |
-| Relationship count | 644 |
-| Relationship distribution | Defines: 220, Depends On: 119, Indexes: 59, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
+| Relationship count | 650 |
+| Relationship distribution | Defines: 220, Depends On: 122, Indexes: 62, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
 
 ## Relationship Policy
 
@@ -697,3 +697,9 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0806 | DOC-0420 | Depends On | DOC-0280 | Active | Execution Transactions README depends on DOC-0280. |
 | TRACE-0807 | DOC-0421 | Indexes | CONCEPT-0301 | Active | Execution Wallet Portfolio README indexes CONCEPT-0301. |
 | TRACE-0808 | DOC-0421 | Depends On | DOC-0301 | Active | Execution Wallet Portfolio README depends on DOC-0301. |
+| TRACE-0809 | DOC-0422 | Indexes | CONCEPT-0345 | Active | Operations Notifications README indexes CONCEPT-0345. |
+| TRACE-0810 | DOC-0422 | Depends On | DOC-0345 | Active | Operations Notifications README depends on DOC-0345. |
+| TRACE-0811 | DOC-0423 | Indexes | CONCEPT-0337 | Active | Operations Recovery README indexes CONCEPT-0337. |
+| TRACE-0812 | DOC-0423 | Depends On | DOC-0337 | Active | Operations Recovery README depends on DOC-0337. |
+| TRACE-0813 | DOC-0424 | Indexes | CONCEPT-0338 | Active | Operations Reliability README indexes CONCEPT-0338. |
+| TRACE-0814 | DOC-0424 | Depends On | DOC-0338 | Active | Operations Reliability README depends on DOC-0338. |

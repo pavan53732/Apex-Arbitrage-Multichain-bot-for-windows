@@ -38,7 +38,7 @@ Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `./database-schema.md`
-- `../operations/runtime-operations.md`
+- `../operations/reliability/runtime-operations.md`
 - `../security/security.md`
 
 ## Operational Contract

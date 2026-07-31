@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/recovery-coordination.md
+canonical_source: docs/product-specification/operations/recovery/recovery-coordination.md
 related_concepts:
   - CONCEPT-0337
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0423
 validator_coverage: []
 supersedes: []
 superseded_by: []

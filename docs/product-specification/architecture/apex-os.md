@@ -51,7 +51,7 @@ stateDiagram-v2
 - `../execution/risk-policy/policy-engine.md`
 - `../plugins/plugin-sdk.md`
 - `../windows/windows-desktop.md`
-- `../operations/enterprise-operations.md`
+- `../operations/reliability/enterprise-operations.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

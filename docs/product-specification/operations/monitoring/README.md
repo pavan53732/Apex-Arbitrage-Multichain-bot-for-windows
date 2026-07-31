@@ -9,7 +9,7 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/monitoring-observability.md
+canonical_source: docs/product-specification/operations/monitoring/monitoring-observability.md
 related_concepts:
   - CONCEPT-0336
 dependencies:
@@ -27,34 +27,36 @@ owned_domains: []
 
 ## Purpose and scope
 
-Monitoring, observability, operational metrics, and runtime visibility references.
+Monitoring, observability, health checks, metrics, and arbitrage monitoring documentation.
 
 ## What belongs here
 
-Monitoring and observability specifications, metrics references, and operational visibility documents.
+Monitoring and observability specifications, metrics references, health checks, and operational monitoring documents.
 
 ## What does not belong here
 
-Recovery playbooks, diagnostics troubleshooting, or performance SLO ownership unless explicitly referenced.
+Recovery playbooks, diagnostics troubleshooting, or performance SLO ownership unless explicitly monitoring-related.
 
 ## Expected document classes
 
 - Index
+- Specification
 - Reference
-- Specification when this folder owns a product behavior boundary
-- Guide when the document explains operational usage
+- Guide for operational procedures
 
 ## Canonical boundaries
 
-This folder indexes documents in its subdomain and defers behavioral authority to the canonical owner documents listed below.
+This folder indexes operations documents in this subdomain and defers behavior to canonical owner documents identified by metadata and registry entries.
 
 ## Documents
 
-| Document | Purpose |
+| Document | Class |
 | --- | --- |
-| [Monitoring Observability](../monitoring-observability.md) | Canonical monitoring and observability behavior. |
-| [Metrics](./metrics.md) | Metrics reference under monitoring. |
+| [Arbitrage Monitoring](./arbitrage-monitoring.md) | Reference |
+| [Health Checks](./health-checks.md) | Specification |
+| [Metrics](metrics.md) | Reference |
+| [Monitoring Observability](./monitoring-observability.md) | Specification |
 
 ## Adjacent domains
 
-Adjacent domains may reference this folder, but they must not redefine the canonical behavior owned here.
+Adjacent domains may reference these documents, but they must not redefine this folder's canonical ownership boundaries.

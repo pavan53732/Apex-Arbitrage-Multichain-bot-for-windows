@@ -65,7 +65,7 @@ For authoritative runtime flow, see `../runtime/orchestrator.md`.
 - `../execution/trading/trading-engine.md`
 - `../execution/transactions/execution-engine.md`
 - `../ai/runtime/ai-pipeline.md`
-- `../operations/runtime-operations.md`
+- `../operations/reliability/runtime-operations.md`
 - `../data/state-management.md`
 - `../market/chains/chain-registry.md`
 - `../market/dex/dex-registry.md`

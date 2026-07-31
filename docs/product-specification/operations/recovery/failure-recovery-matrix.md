@@ -1,7 +1,7 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0340
-title: Failure Matrix
+document_id: DOC-0341
+title: Failure Recovery Matrix
 plane: Product Specification
 domain: Operations
 class: Index
@@ -9,9 +9,9 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/failure-matrix.md
+canonical_source: docs/product-specification/operations/recovery/failure-recovery-matrix.md
 related_concepts:
-  - CONCEPT-0340
+  - CONCEPT-0341
 dependencies: []
 consumers: []
 validator_coverage: []
@@ -22,17 +22,21 @@ concept_role: Owner
 owned_domains:
   - Operations
 type: INDEX
-purpose: Failure Matrix documentation.
+purpose: Failure Recovery Matrix documentation.
 scope: Reference documentation.
 ---
 
-# Failure Matrix
+# Failure Recovery Matrix
 
 ## Document type
 Document type: [REFERENCE]
 
 ## Purpose
-Maps failures to actions.
+Maps failure types to recovery behaviours.
 
-## Examples
-- RPC timeout -> retry -> provider switch -> cooldown -> operator intervention.
+## Matrix
+- Timeout -> bounded retry.
+- Invariant breach -> fail closed.
+
+## Cross-References
+- `../../../historical/traceability-matrix.md`

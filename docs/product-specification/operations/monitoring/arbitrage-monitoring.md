@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/arbitrage-monitoring.md
+canonical_source: docs/product-specification/operations/monitoring/arbitrage-monitoring.md
 related_concepts:
   - CONCEPT-0343
 dependencies: []
@@ -45,10 +45,10 @@ Defines monitoring for spread windows, execution latency, fill status, and profi
 - Must define success, partial success, failed opportunity, and expired window states.
 
 ## Cross-references
-- `./monitoring/metrics.md`
-- `../market/opportunities/opportunity-ranking.md`
-- `../performance/performance-slos.md`
-- `../execution/decision-log.md`
+- `./metrics.md`
+- `../../market/opportunities/opportunity-ranking.md`
+- `../../performance/performance-slos.md`
+- `../../execution/decision-log.md`
 
 ## Canonical ownership
 This document defers to the canonical owners for implementation, policy, and schema details.

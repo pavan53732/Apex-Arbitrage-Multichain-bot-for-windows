@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Ops Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/diagnostics.md
+canonical_source: docs/product-specification/operations/diagnostics/diagnostics.md
 related_concepts:
   - CONCEPT-0333
 dependencies: []

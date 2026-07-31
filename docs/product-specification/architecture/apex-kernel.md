@@ -69,7 +69,7 @@ Retry registration, isolate failed plugins, fall back to safe defaults, and aler
 - `../runtime/orchestrator.md`
 - `../interfaces/event-bus.md`
 - `../runtime/service-registry.md`
-- `../operations/health-checks.md`
+- `../operations/monitoring/health-checks.md`
 - `../plugins/plugin-sdk.md`
 
 ## Operational Contract

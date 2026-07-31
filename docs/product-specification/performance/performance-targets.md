@@ -73,8 +73,8 @@ These targets apply to UI, IPC, market data, AI requests, execution, reconciliat
 - Regression against target baselines must be visible in dashboards and logs.
 
 ## Cross-references
-- `../operations/monitoring-observability.md`
-- `../operations/runtime-operations.md`
+- `../operations/monitoring/monitoring-observability.md`
+- `../operations/reliability/runtime-operations.md`
 - `../ai/runtime/ai-pipeline.md`
 - `../ai/providers/cloud-ai-integration.md`
 

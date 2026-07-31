@@ -324,8 +324,8 @@ Testing in APEX is not only about correctness in isolated functions. It is the m
 - `./backtesting.md`
 - `../execution/trading/strategies.md`
 - `../ai/runtime/ai-pipeline.md`
-- `../operations/runtime-operations.md`
-- `../operations/monitoring-observability.md`
+- `../operations/reliability/runtime-operations.md`
+- `../operations/monitoring/monitoring-observability.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

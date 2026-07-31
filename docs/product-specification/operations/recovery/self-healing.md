@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/self-healing.md
+canonical_source: docs/product-specification/operations/recovery/self-healing.md
 related_concepts:
   - CONCEPT-0351
 dependencies: []
@@ -54,8 +54,8 @@ Transient failure, repeated failure, unrecoverable failure.
 Restart worker, reconnect RPC, switch provider, reload cache, recover queue, notify operators.
 
 ## Cross-references
-- `./health-checks.md`
-- `./provider-resilience.md`
+- `../monitoring/health-checks.md`
+- `../reliability/provider-resilience.md`
 - `./recovery-and-failover.md`
 
 ## Operational Contract

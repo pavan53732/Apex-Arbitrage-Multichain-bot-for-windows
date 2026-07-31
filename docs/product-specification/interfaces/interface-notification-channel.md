@@ -46,8 +46,8 @@ Defines outbound notification channel contracts.
 - `metadata` must include channel, source, and timestamp.
 
 ## Cross-references
-- `../operations/notification-center.md`
-- `../operations/runtime-operations.md`
+- `../operations/notifications/notification-center.md`
+- `../operations/reliability/runtime-operations.md`
 
 ## Interface Contract
 Defines channels, severities, delivery guarantees, retry policy, and escalation semantics for notifications.

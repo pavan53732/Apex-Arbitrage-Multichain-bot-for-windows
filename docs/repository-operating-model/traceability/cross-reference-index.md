@@ -282,25 +282,25 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0330 | [Slippage Model](../../product-specification/market/routing/slippage-model.md) | Reference | CONCEPT-0316 | DOC-0316 |  |
 | DOC-0331 | [Token Discovery](../../product-specification/market/tokens/token-discovery.md) | Owner | CONCEPT-0331 |  |  |
 | DOC-0332 | [Token Intelligence](../../product-specification/market/tokens/token-intelligence.md) | Owner | CONCEPT-0332 |  |  |
-| DOC-0333 | [Diagnostics](../../product-specification/operations/diagnostics.md) | Owner | CONCEPT-0333 |  | DOC-0398 |
-| DOC-0334 | [Error Handling and Logging](../../product-specification/operations/error-handling-and-logging.md) | Owner | CONCEPT-0334 |  | DOC-0362 |
-| DOC-0335 | [Health Checks](../../product-specification/operations/health-checks.md) | Owner | CONCEPT-0335 |  |  |
-| DOC-0336 | [Monitoring Observability](../../product-specification/operations/monitoring-observability.md) | Owner | CONCEPT-0336 |  | DOC-0399 |
-| DOC-0337 | [Recovery Coordination](../../product-specification/operations/recovery-coordination.md) | Owner | CONCEPT-0337 |  |  |
-| DOC-0338 | [Runtime Operations](../../product-specification/operations/runtime-operations.md) | Owner | CONCEPT-0338 |  | DOC-0342 |
-| DOC-0339 | [Error Catalog](../../product-specification/operations/error-catalog.md) | Owner | CONCEPT-0339 |  |  |
-| DOC-0340 | [Failure Matrix](../../product-specification/operations/failure-matrix.md) | Owner | CONCEPT-0340 |  |  |
-| DOC-0341 | [Failure Recovery Matrix](../../product-specification/operations/failure-recovery-matrix.md) | Owner | CONCEPT-0341 |  |  |
+| DOC-0333 | [Diagnostics](../../product-specification/operations/diagnostics/diagnostics.md) | Owner | CONCEPT-0333 |  | DOC-0398 |
+| DOC-0334 | [Error Handling and Logging](../../product-specification/operations/diagnostics/error-handling-and-logging.md) | Owner | CONCEPT-0334 |  | DOC-0362 |
+| DOC-0335 | [Health Checks](../../product-specification/operations/monitoring/health-checks.md) | Owner | CONCEPT-0335 |  |  |
+| DOC-0336 | [Monitoring Observability](../../product-specification/operations/monitoring/monitoring-observability.md) | Owner | CONCEPT-0336 |  | DOC-0399 |
+| DOC-0337 | [Recovery Coordination](../../product-specification/operations/recovery/recovery-coordination.md) | Owner | CONCEPT-0337 |  | DOC-0423 |
+| DOC-0338 | [Runtime Operations](../../product-specification/operations/reliability/runtime-operations.md) | Owner | CONCEPT-0338 |  | DOC-0342, DOC-0424 |
+| DOC-0339 | [Error Catalog](../../product-specification/operations/diagnostics/error-catalog.md) | Owner | CONCEPT-0339 |  |  |
+| DOC-0340 | [Failure Matrix](../../product-specification/operations/recovery/failure-matrix.md) | Owner | CONCEPT-0340 |  |  |
+| DOC-0341 | [Failure Recovery Matrix](../../product-specification/operations/recovery/failure-recovery-matrix.md) | Owner | CONCEPT-0341 |  |  |
 | DOC-0342 | [Operations README](../../product-specification/operations/README.md) | Index | CONCEPT-0338 | DOC-0338 |  |
-| DOC-0343 | [Arbitrage Monitoring](../../product-specification/operations/arbitrage-monitoring.md) | Owner | CONCEPT-0343 |  |  |
-| DOC-0344 | [Enterprise Operations](../../product-specification/operations/enterprise-operations.md) | Owner | CONCEPT-0344 |  |  |
-| DOC-0345 | [Notification Center](../../product-specification/operations/notification-center.md) | Owner | CONCEPT-0345 |  |  |
-| DOC-0346 | [Operations](../../product-specification/operations/operations.md) | Owner | CONCEPT-0346 |  |  |
-| DOC-0347 | [Provider Resilience](../../product-specification/operations/provider-resilience.md) | Owner | CONCEPT-0347 |  |  |
-| DOC-0348 | [Queue Management](../../product-specification/operations/queue-management.md) | Owner | CONCEPT-0348 |  |  |
-| DOC-0349 | [Recovery And Failover](../../product-specification/operations/recovery-and-failover.md) | Owner | CONCEPT-0349 |  |  |
-| DOC-0350 | [Recovery Playbook](../../product-specification/operations/recovery-playbook.md) | Owner | CONCEPT-0350 |  |  |
-| DOC-0351 | [Self Healing](../../product-specification/operations/self-healing.md) | Owner | CONCEPT-0351 |  |  |
+| DOC-0343 | [Arbitrage Monitoring](../../product-specification/operations/monitoring/arbitrage-monitoring.md) | Owner | CONCEPT-0343 |  |  |
+| DOC-0344 | [Enterprise Operations](../../product-specification/operations/reliability/enterprise-operations.md) | Owner | CONCEPT-0344 |  |  |
+| DOC-0345 | [Notification Center](../../product-specification/operations/notifications/notification-center.md) | Owner | CONCEPT-0345 |  | DOC-0422 |
+| DOC-0346 | [Operations](../../product-specification/operations/reliability/operations.md) | Owner | CONCEPT-0346 |  |  |
+| DOC-0347 | [Provider Resilience](../../product-specification/operations/reliability/provider-resilience.md) | Owner | CONCEPT-0347 |  |  |
+| DOC-0348 | [Queue Management](../../product-specification/operations/reliability/queue-management.md) | Owner | CONCEPT-0348 |  |  |
+| DOC-0349 | [Recovery And Failover](../../product-specification/operations/recovery/recovery-and-failover.md) | Owner | CONCEPT-0349 |  |  |
+| DOC-0350 | [Recovery Playbook](../../product-specification/operations/recovery/recovery-playbook.md) | Owner | CONCEPT-0350 |  |  |
+| DOC-0351 | [Self Healing](../../product-specification/operations/recovery/self-healing.md) | Owner | CONCEPT-0351 |  |  |
 | DOC-0352 | [Threading Model](../../product-specification/performance/threading-model.md) | Owner | CONCEPT-0352 |  |  |
 | DOC-0353 | [Timing Specification](../../product-specification/performance/timing-specification.md) | Owner | CONCEPT-0353 |  |  |
 | DOC-0354 | [Performance README](../../product-specification/performance/README.md) | Index | CONCEPT-0356 | DOC-0356 |  |
@@ -371,3 +371,6 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0419 | [Execution Trading README](../../product-specification/execution/trading/README.md) | Index | CONCEPT-0284 | DOC-0284 |  |
 | DOC-0420 | [Execution Transactions README](../../product-specification/execution/transactions/README.md) | Index | CONCEPT-0280 | DOC-0280 |  |
 | DOC-0421 | [Execution Wallet Portfolio README](../../product-specification/execution/wallet-portfolio/README.md) | Index | CONCEPT-0301 | DOC-0301 |  |
+| DOC-0422 | [Operations Notifications README](../../product-specification/operations/notifications/README.md) | Index | CONCEPT-0345 | DOC-0345 |  |
+| DOC-0423 | [Operations Recovery README](../../product-specification/operations/recovery/README.md) | Index | CONCEPT-0337 | DOC-0337 |  |
+| DOC-0424 | [Operations Reliability README](../../product-specification/operations/reliability/README.md) | Index | CONCEPT-0338 | DOC-0338 |  |

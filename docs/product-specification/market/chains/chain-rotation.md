@@ -61,7 +61,7 @@ If a chain is unreachable, demote it and fallback to the next best chain.
 ## Cross-references
 - `./chain-registry.md`
 - `../../runtime/orchestrator.md`
-- `../../operations/health-checks.md`
+- `../../operations/monitoring/health-checks.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

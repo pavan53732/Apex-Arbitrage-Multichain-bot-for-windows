@@ -405,7 +405,7 @@ When a chain is no longer viable (low liquidity, abandoned, exploited):
 - `../routing/routing-engine.md`
 - `../../execution/wallet-portfolio/wallet-management.md`
 - `../routing/gas-optimisation.md`
-- `../../operations/monitoring-observability.md`
+- `../../operations/monitoring/monitoring-observability.md`
 - `../../data/database-schema.md`
 - `./chain-registry.md`
 

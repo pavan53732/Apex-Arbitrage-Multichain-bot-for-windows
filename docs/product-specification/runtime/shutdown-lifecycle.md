@@ -61,7 +61,7 @@ stateDiagram-v2
 - If checkpoint fails, the process remains in GRACEFUL_DRAIN and retries checkpointing.
 
 ## Cross-references
-- `../operations/runtime-operations.md`
+- `../operations/reliability/runtime-operations.md`
 - `./orchestrator.md`
 
 ## Operational Contract

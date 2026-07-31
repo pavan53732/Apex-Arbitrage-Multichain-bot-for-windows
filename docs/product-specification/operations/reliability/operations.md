@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/operations.md
+canonical_source: docs/product-specification/operations/reliability/operations.md
 related_concepts:
   - CONCEPT-0346
 dependencies: []

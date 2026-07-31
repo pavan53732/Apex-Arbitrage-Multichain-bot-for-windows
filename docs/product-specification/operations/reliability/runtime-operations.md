@@ -9,12 +9,13 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/runtime-operations.md
+canonical_source: docs/product-specification/operations/reliability/runtime-operations.md
 related_concepts:
   - CONCEPT-0338
 dependencies: []
 consumers:
   - DOC-0342
+  - DOC-0424
 validator_coverage: []
 supersedes: []
 superseded_by: []

@@ -53,7 +53,7 @@ Guidance for Kilo Code-based coding agents contributing to this repository.
 - `../../../product-specification/execution/transactions/execution-lifecycle.md`
 - `../../../product-specification/execution/transactions/transaction-lifecycle.md`
 - `../../../product-specification/execution/transactions/order-management.md`
-- `../../../product-specification/operations/runtime-operations.md`
+- `../../../product-specification/operations/reliability/runtime-operations.md`
 
 ## Working rule
 If two docs appear to disagree, stop and resolve the canonical owner before coding.

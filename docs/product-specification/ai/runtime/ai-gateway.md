@@ -84,7 +84,7 @@ New provider adapters, capability detectors, response normalizers, and telemetry
 - `../tools/ai-tools.md`
 - `../providers/model-capability-negotiation.md`
 - `../safety/ai-reasoning-policy.md`
-- `../../operations/provider-resilience.md`
+- `../../operations/reliability/provider-resilience.md`
 
 ## Implementation constraints
 Must not hardcode provider vendors or bypass policy checks.

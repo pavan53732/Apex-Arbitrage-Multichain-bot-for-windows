@@ -70,9 +70,9 @@ Defines global performance, reliability, security, maintainability, and operabil
 ## Cross-references
 - `../performance/performance-targets.md`
 - `../security/security.md`
-- `../operations/monitoring-observability.md`
+- `../operations/monitoring/monitoring-observability.md`
 - `../ai/runtime/ai-pipeline.md`
-- `../operations/runtime-operations.md`
+- `../operations/reliability/runtime-operations.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

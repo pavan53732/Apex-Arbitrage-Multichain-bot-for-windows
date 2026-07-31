@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/health-checks.md
+canonical_source: docs/product-specification/operations/monitoring/health-checks.md
 related_concepts:
   - CONCEPT-0335
 dependencies: []

@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/provider-resilience.md
+canonical_source: docs/product-specification/operations/reliability/provider-resilience.md
 related_concepts:
   - CONCEPT-0347
 dependencies: []
@@ -62,10 +62,10 @@ Primary and secondary provider lists are explicitly configured. Health probes ru
 If all providers fail, enter degraded mode and alert operations.
 
 ## Cross-references
-- `../ai/providers/ai-provider-manager.md`
-- `../ai/runtime/ai-gateway.md`
-- `./health-checks.md`
-- `../performance/performance-slos.md`
+- `../../ai/providers/ai-provider-manager.md`
+- `../../ai/runtime/ai-gateway.md`
+- `../monitoring/health-checks.md`
+- `../../performance/performance-slos.md`
 
 ## Operational Contract
 Defines provider failover, redundancy, circuit breaking, and recovery behavior.

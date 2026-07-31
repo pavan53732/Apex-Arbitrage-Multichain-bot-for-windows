@@ -169,7 +169,7 @@ Validation: risk output must align with risk-engine thresholds.
 - `../opportunities/opportunity-ranking.md`
 - `../../execution/trading/strategies.md`
 - `../../data/database-schema.md`
-- `../../operations/monitoring-observability.md`
+- `../../operations/monitoring/monitoring-observability.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

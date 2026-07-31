@@ -1,7 +1,7 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0398
-title: Diagnostics README
+document_id: DOC-0424
+title: Operations Reliability README
 plane: Product Specification
 domain: Operations
 class: Index
@@ -9,11 +9,11 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/diagnostics/diagnostics.md
+canonical_source: docs/product-specification/operations/reliability/runtime-operations.md
 related_concepts:
-  - CONCEPT-0333
+  - CONCEPT-0338
 dependencies:
-  - DOC-0333
+  - DOC-0338
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -23,19 +23,19 @@ concept_role: Index
 owned_domains: []
 ---
 
-# Diagnostics
+# Operations Reliability
 
 ## Purpose and scope
 
-Operational diagnostics, troubleshooting, error handling, error catalog, and error-code references.
+Runtime operations, provider resilience, queues, enterprise operations, and operational reliability references.
 
 ## What belongs here
 
-Diagnostics specifications, error handling/logging, error catalogs, troubleshooting, and error-code references.
+Runtime operations, provider resilience, queue management, enterprise operations, and reliability operations.
 
 ## What does not belong here
 
-Monitoring, recovery orchestration, notifications, or runtime reliability unless diagnostics owns the concern.
+Market provider selection, AI provider management, or recovery playbooks unless reliability owns it.
 
 ## Expected document classes
 
@@ -52,11 +52,11 @@ This folder indexes operations documents in this subdomain and defers behavior t
 
 | Document | Class |
 | --- | --- |
-| [Diagnostics](./diagnostics.md) | Specification |
-| [Error Catalog](./error-catalog.md) | Index |
-| [Error Codes](error-codes.md) | Reference |
-| [Error Handling and Logging](./error-handling-and-logging.md) | Specification |
-| [Troubleshooting](troubleshooting.md) | Reference |
+| [Enterprise Operations](./enterprise-operations.md) | Reference |
+| [Operations](./operations.md) | Reference |
+| [Provider Resilience](./provider-resilience.md) | Specification |
+| [Queue Management](./queue-management.md) | Reference |
+| [Runtime Operations](./runtime-operations.md) | Specification |
 
 ## Adjacent domains
 

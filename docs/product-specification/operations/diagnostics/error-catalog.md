@@ -1,7 +1,7 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0341
-title: Failure Recovery Matrix
+document_id: DOC-0339
+title: Error Catalog
 plane: Product Specification
 domain: Operations
 class: Index
@@ -9,9 +9,9 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/failure-recovery-matrix.md
+canonical_source: docs/product-specification/operations/diagnostics/error-catalog.md
 related_concepts:
-  - CONCEPT-0341
+  - CONCEPT-0339
 dependencies: []
 consumers: []
 validator_coverage: []
@@ -22,21 +22,19 @@ concept_role: Owner
 owned_domains:
   - Operations
 type: INDEX
-purpose: Failure Recovery Matrix documentation.
+purpose: Error Catalog documentation.
 scope: Reference documentation.
 ---
 
-# Failure Recovery Matrix
+# Error Catalog
 
 ## Document type
 Document type: [REFERENCE]
 
 ## Purpose
-Maps failure types to recovery behaviours.
+Catalogues canonical error families and codes.
 
-## Matrix
-- Timeout -> bounded retry.
-- Invariant breach -> fail closed.
-
-## Cross-References
-- `../../historical/traceability-matrix.md`
+## Codes
+- AI-1001: Provider request failed.
+- RPC-3002: RPC timeout.
+- PLUGIN-9001: Sandbox violation.
