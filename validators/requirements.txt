@@ -1,0 +1,4 @@
+# Validator SDK Dependencies
+pyyaml>=6.0
+jsonschema>=4.17
+pathspec>=0.11

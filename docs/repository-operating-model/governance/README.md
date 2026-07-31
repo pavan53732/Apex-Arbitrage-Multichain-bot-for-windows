@@ -12,8 +12,10 @@ version: 1.0.0
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 related_concepts:
   - CONCEPT-0003
+  - CONCEPT-0012
 dependencies:
   - DOC-0003
+  - DOC-0012
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -29,26 +31,50 @@ owned_domains: []
 
 Repository-level governance and source-of-truth conventions.
 
+## What belongs here
+
+Governance guides, repository policy references, and governance overview documentation.
+
+## What does not belong here
+
+Product feature governance, temporary audit notes, or product-specification governance.
+
+## Canonical owner map
+
+| Subdomain | Concept ID | Canonical Owner | README |
+| --- | --- | --- | --- |
+| governance | CONCEPT-0012 | [Governance Overview](./governance-overview.md) | (self) |
+
 ## Document classes expected
 
 - Index
 - Guide
 - Reference
-- Specification where this folder owns a canonical boundary
-- Registry only in registry folders
-- Historical only in historical folders
-- Generated only in generated folders
+- Specification
+- Policy
+- Historical
 
-## Canonical boundaries
+## Relationship to adjacent domains
 
-Governance guides and repository policy references.
+Governance defines repository-operating rules. It is consumed by all Repository Operating Model domains. Product Specification domains must not redefine governance concepts.
 
-## What does not belong here
+## Subdomain navigation
 
-Product feature governance or temporary audit notes.
+### governance
 
-## Documents
+- Concept: `CONCEPT-0012`
+- Canonical Owner: [Governance Overview](./governance-overview.md)
+- Folder README: (self)
 
-| Document ID | Title | Class | Authority | Status |
-| --- | --- | --- | --- | --- |
-| DOC-0012 | [Governance](./governance-overview.md) | Guide | Derived | Active |
+Documents:
+- [Governance Overview](./governance-overview.md) — Guide
+
+## Before adding a document here
+
+- Identify the active Concept ID in the Concept Registry before creating a new document.
+- Update an existing canonical owner instead of creating a duplicate specification when the concept already exists.
+- Place the document in the narrowest matching subdomain folder.
+- Assign a stable Document ID only if the document is new permanent repository knowledge.
+- Add or update metadata, registries, README navigation, and cross-references in the same change.
+- Run local metadata, registry, traceability, link, stale-path, empty-folder, and repository hygiene validation before committing.
+- Do not add generated documentation, CI/CD files, GitHub Actions, temporary reports, or repository automation.
