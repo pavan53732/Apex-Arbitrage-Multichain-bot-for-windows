@@ -33,8 +33,6 @@ This index is the stable navigation surface for the repository knowledge system.
 | Folder | Purpose |
 | --- | --- |
 | [docs/adr](./adr/README.md) | Durable architecture decisions with stable ADR numbering. |
-| [docs/generated](./generated/README.md) | Generated documents intentionally retained as non-canonical references. |
-| [docs/generated/ai-orchestration](./generated/ai-orchestration/README.md) | Generated AI orchestration schema shards retained as non-canonical references. |
 | [docs/historical](./historical/README.md) | Archived or superseded documents preserved for lineage and conflict resolution. |
 | [docs/product-specification](./product-specification/README.md) | Software-system specification for the Apex Windows arbitrage application. |
 | [docs/product-specification/ai](./product-specification/ai/README.md) | Product AI runtime, memory, planning, providers, tools, reasoning, safety, and cost behavior. |

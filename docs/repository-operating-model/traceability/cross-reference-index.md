@@ -133,7 +133,7 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0099 | [Workflow Builder](../../product-specification/runtime/workflow-builder.md) | Owner | CONCEPT-0099 |  |  |
 | DOC-0100 | [Workspace Manager](../../product-specification/runtime/workspace-manager.md) | Owner | CONCEPT-0100 |  |  |
 | DOC-0101 | [AI Agent Specification](../../product-specification/ai/ai-agent-specification.md) | Owner | CONCEPT-0101 |  |  |
-| DOC-0102 | [AI Orchestration](../../product-specification/ai/ai-orchestration.md) | Owner | CONCEPT-0102 |  | DOC-0112, DOC-0113, DOC-0116, DOC-0121, DOC-0122, DOC-0133, DOC-0134, DOC-0135, DOC-0136, DOC-0137, DOC-0138, DOC-0139, DOC-0140, DOC-0141, DOC-0142, DOC-0143, DOC-0144, DOC-0145, DOC-0146, DOC-0147, DOC-0148, DOC-0149, DOC-0150, DOC-0151, DOC-0152, DOC-0153, DOC-0154, DOC-0155, DOC-0156, DOC-0157, DOC-0158, DOC-0159, DOC-0160, DOC-0161, DOC-0162, DOC-0163, DOC-0164, DOC-0165, DOC-0166, DOC-0167, DOC-0168, DOC-0169, DOC-0170, DOC-0171, DOC-0172, DOC-0173, DOC-0174, DOC-0175, DOC-0176, DOC-0177, DOC-0178, DOC-0179, DOC-0180, DOC-0181, DOC-0182, DOC-0183, DOC-0184, DOC-0185, DOC-0186, DOC-0187, DOC-0188, DOC-0189, DOC-0190, DOC-0191, DOC-0192, DOC-0193, DOC-0194, DOC-0195, DOC-0196, DOC-0197, DOC-0198, DOC-0199, DOC-0200, DOC-0201, DOC-0202, DOC-0203, DOC-0204, DOC-0205, DOC-0206, DOC-0207, DOC-0208, DOC-0209, DOC-0210, DOC-0211, DOC-0212 |
+| DOC-0102 | [AI Orchestration](../../product-specification/ai/ai-orchestration.md) | Owner | CONCEPT-0102 |  | DOC-0116, DOC-0121, DOC-0122 |
 | DOC-0103 | [AI Pipeline](../../product-specification/ai/ai-pipeline.md) | Owner | CONCEPT-0103 |  | DOC-0114, DOC-0117, DOC-0118 |
 | DOC-0104 | [AI Provider Manager](../../product-specification/ai/ai-provider-manager.md) | Owner | CONCEPT-0104 |  | DOC-0115, DOC-0119, DOC-0123, DOC-0130 |
 | DOC-0105 | [AI Safety Boundary](../../product-specification/ai/ai-safety-boundary.md) | Owner | CONCEPT-0105 |  |  |
@@ -143,8 +143,6 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0109 | [Prompt Engineering](../../product-specification/ai/prompt-engineering.md) | Owner | CONCEPT-0109 |  |  |
 | DOC-0110 | [AI Reasoning Policy](../../product-specification/ai/ai-reasoning-policy.md) | Owner | CONCEPT-0110 |  |  |
 | DOC-0111 | [AI Knowledge Index](../../product-specification/ai/ai-knowledge-index.md) | Owner | CONCEPT-0111 |  |  |
-| DOC-0112 | [Generated README](../../generated/README.md) | Index | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0113 | [Generated AI Orchestration README](../../generated/ai-orchestration/README.md) | Index | CONCEPT-0102 | DOC-0102 |  |
 | DOC-0114 | [AI README](../../product-specification/ai/README.md) | Index | CONCEPT-0103 | DOC-0103 |  |
 | DOC-0115 | [AI Capability Matrix](../../product-specification/ai/ai-capability-matrix.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
 | DOC-0116 | [AI Consensus](../../product-specification/ai/ai-consensus.md) | Reference | CONCEPT-0102 | DOC-0102 |  |
@@ -164,86 +162,6 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0130 | [Model Capability Negotiation](../../product-specification/ai/model-capability-negotiation.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
 | DOC-0131 | [Prompt Lifecycle](../../product-specification/ai/prompt-lifecycle.md) | Owner | CONCEPT-0131 |  |  |
 | DOC-0132 | [AI Memory Legacy Redirect](../../historical/ai-memory.md) | Historical Reference | CONCEPT-0120 | DOC-0120 |  |
-| DOC-0133 | [AI Orchestration Contract 001](../../generated/ai-orchestration/contract-001.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0134 | [AI Orchestration Contract 002](../../generated/ai-orchestration/contract-002.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0135 | [AI Orchestration Contract 003](../../generated/ai-orchestration/contract-003.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0136 | [AI Orchestration Contract 004](../../generated/ai-orchestration/contract-004.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0137 | [AI Orchestration Contract 005](../../generated/ai-orchestration/contract-005.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0138 | [AI Orchestration Contract 006](../../generated/ai-orchestration/contract-006.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0139 | [AI Orchestration Contract 007](../../generated/ai-orchestration/contract-007.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0140 | [AI Orchestration Contract 008](../../generated/ai-orchestration/contract-008.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0141 | [AI Orchestration Contract 009](../../generated/ai-orchestration/contract-009.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0142 | [AI Orchestration Contract 010](../../generated/ai-orchestration/contract-010.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0143 | [AI Orchestration Contract 011](../../generated/ai-orchestration/contract-011.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0144 | [AI Orchestration Contract 012](../../generated/ai-orchestration/contract-012.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0145 | [AI Orchestration Contract 013](../../generated/ai-orchestration/contract-013.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0146 | [AI Orchestration Contract 014](../../generated/ai-orchestration/contract-014.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0147 | [AI Orchestration Contract 015](../../generated/ai-orchestration/contract-015.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0148 | [AI Orchestration Contract 016](../../generated/ai-orchestration/contract-016.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0149 | [AI Orchestration Contract 017](../../generated/ai-orchestration/contract-017.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0150 | [AI Orchestration Contract 018](../../generated/ai-orchestration/contract-018.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0151 | [AI Orchestration Contract 019](../../generated/ai-orchestration/contract-019.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0152 | [AI Orchestration Contract 020](../../generated/ai-orchestration/contract-020.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0153 | [AI Orchestration Contract 021](../../generated/ai-orchestration/contract-021.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0154 | [AI Orchestration Contract 022](../../generated/ai-orchestration/contract-022.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0155 | [AI Orchestration Contract 023](../../generated/ai-orchestration/contract-023.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0156 | [AI Orchestration Contract 024](../../generated/ai-orchestration/contract-024.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0157 | [AI Orchestration Contract 025](../../generated/ai-orchestration/contract-025.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0158 | [AI Orchestration Contract 026](../../generated/ai-orchestration/contract-026.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0159 | [AI Orchestration Contract 027](../../generated/ai-orchestration/contract-027.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0160 | [AI Orchestration Contract 028](../../generated/ai-orchestration/contract-028.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0161 | [AI Orchestration Contract 029](../../generated/ai-orchestration/contract-029.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0162 | [AI Orchestration Contract 030](../../generated/ai-orchestration/contract-030.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0163 | [AI Orchestration Contract 031](../../generated/ai-orchestration/contract-031.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0164 | [AI Orchestration Contract 032](../../generated/ai-orchestration/contract-032.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0165 | [AI Orchestration Contract 033](../../generated/ai-orchestration/contract-033.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0166 | [AI Orchestration Contract 034](../../generated/ai-orchestration/contract-034.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0167 | [AI Orchestration Contract 035](../../generated/ai-orchestration/contract-035.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0168 | [AI Orchestration Contract 036](../../generated/ai-orchestration/contract-036.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0169 | [AI Orchestration Contract 037](../../generated/ai-orchestration/contract-037.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0170 | [AI Orchestration Contract 038](../../generated/ai-orchestration/contract-038.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0171 | [AI Orchestration Contract 039](../../generated/ai-orchestration/contract-039.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0172 | [AI Orchestration Contract 040](../../generated/ai-orchestration/contract-040.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0173 | [AI Orchestration Contract 041](../../generated/ai-orchestration/contract-041.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0174 | [AI Orchestration Contract 042](../../generated/ai-orchestration/contract-042.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0175 | [AI Orchestration Contract 043](../../generated/ai-orchestration/contract-043.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0176 | [AI Orchestration Contract 044](../../generated/ai-orchestration/contract-044.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0177 | [AI Orchestration Contract 045](../../generated/ai-orchestration/contract-045.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0178 | [AI Orchestration Contract 046](../../generated/ai-orchestration/contract-046.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0179 | [AI Orchestration Contract 047](../../generated/ai-orchestration/contract-047.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0180 | [AI Orchestration Contract 048](../../generated/ai-orchestration/contract-048.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0181 | [AI Orchestration Contract 049](../../generated/ai-orchestration/contract-049.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0182 | [AI Orchestration Contract 050](../../generated/ai-orchestration/contract-050.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0183 | [AI Orchestration Contract 051](../../generated/ai-orchestration/contract-051.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0184 | [AI Orchestration Contract 052](../../generated/ai-orchestration/contract-052.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0185 | [AI Orchestration Contract 053](../../generated/ai-orchestration/contract-053.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0186 | [AI Orchestration Contract 054](../../generated/ai-orchestration/contract-054.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0187 | [AI Orchestration Contract 055](../../generated/ai-orchestration/contract-055.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0188 | [AI Orchestration Contract 056](../../generated/ai-orchestration/contract-056.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0189 | [AI Orchestration Contract 057](../../generated/ai-orchestration/contract-057.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0190 | [AI Orchestration Contract 058](../../generated/ai-orchestration/contract-058.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0191 | [AI Orchestration Contract 059](../../generated/ai-orchestration/contract-059.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0192 | [AI Orchestration Contract 060](../../generated/ai-orchestration/contract-060.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0193 | [AI Orchestration Contract 061](../../generated/ai-orchestration/contract-061.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0194 | [AI Orchestration Contract 062](../../generated/ai-orchestration/contract-062.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0195 | [AI Orchestration Contract 063](../../generated/ai-orchestration/contract-063.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0196 | [AI Orchestration Contract 064](../../generated/ai-orchestration/contract-064.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0197 | [AI Orchestration Contract 065](../../generated/ai-orchestration/contract-065.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0198 | [AI Orchestration Contract 066](../../generated/ai-orchestration/contract-066.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0199 | [AI Orchestration Contract 067](../../generated/ai-orchestration/contract-067.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0200 | [AI Orchestration Contract 068](../../generated/ai-orchestration/contract-068.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0201 | [AI Orchestration Contract 069](../../generated/ai-orchestration/contract-069.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0202 | [AI Orchestration Contract 070](../../generated/ai-orchestration/contract-070.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0203 | [AI Orchestration Contract 071](../../generated/ai-orchestration/contract-071.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0204 | [AI Orchestration Contract 072](../../generated/ai-orchestration/contract-072.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0205 | [AI Orchestration Contract 073](../../generated/ai-orchestration/contract-073.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0206 | [AI Orchestration Contract 074](../../generated/ai-orchestration/contract-074.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0207 | [AI Orchestration Contract 075](../../generated/ai-orchestration/contract-075.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0208 | [AI Orchestration Contract 076](../../generated/ai-orchestration/contract-076.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0209 | [AI Orchestration Contract 077](../../generated/ai-orchestration/contract-077.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0210 | [AI Orchestration Specification 001](../../generated/ai-orchestration/specification-001.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0211 | [AI Orchestration Specification 002](../../generated/ai-orchestration/specification-002.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0212 | [AI Orchestration Specification 003](../../generated/ai-orchestration/specification-003.md) | Generated Reference | CONCEPT-0102 | DOC-0102 |  |
 | DOC-0213 | [Dashboard Layout](../../product-specification/dashboard/dashboard-layout.md) | Owner | CONCEPT-0213 |  |  |
 | DOC-0214 | [Dashboard Runtime](../../product-specification/dashboard/dashboard-runtime.md) | Owner | CONCEPT-0214 |  |  |
 | DOC-0215 | [Dashboard Widgets](../../product-specification/dashboard/dashboard-widgets.md) | Owner | CONCEPT-0215 |  |  |

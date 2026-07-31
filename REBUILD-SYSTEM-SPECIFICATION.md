@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 4.0.0
+version: 4.1.0
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 related_concepts:
   - CONCEPT-0003
@@ -489,6 +489,18 @@ Why it matters:
 
 This makes traceability first-class instead of a vague promise.
 
+## Generated Documentation Rule
+
+Generated documentation must never become a permanent canonical repository artifact solely because it was generated. Before any generated document is committed, the contributor or agent must determine whether:
+
+1. The information already exists in a canonical document.
+2. The information should instead be merged into an existing canonical document.
+3. The generated document has independent long-term value.
+
+If none of those conditions justify keeping it as durable repository knowledge, the generated document must not be committed. Generated documents are non-canonical by default and must not become Canonical without explicit promotion through the repository knowledge model.
+
+When generated material contains useful unique knowledge, merge that knowledge into the existing canonical owner document and delete the generated artifact unless the generated artifact itself has independent lineage or reference value.
+
 ## Concept-centric registry refinement
 
 The Concept Registry is concept-centric, not file-centric.
@@ -526,7 +538,7 @@ A document may carry relationships such as:
 - Consumes: ADR-0005
 - Produces: API-009
 - Related: DOC-0089
-- Related: DOC-0112
+- Related: DOC-0120
 - Validated by: VAL-013
 - Validated by: VAL-028
 - Tested by: TEST-114

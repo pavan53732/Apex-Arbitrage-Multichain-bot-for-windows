@@ -8,101 +8,19 @@ class: Specification
 authority: Canonical
 status: Active
 owner: AI Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/product-specification/ai/ai-orchestration.md
 related_concepts:
   - CONCEPT-0102
 dependencies: []
 consumers:
-  - DOC-0112
-  - DOC-0113
   - DOC-0116
   - DOC-0121
   - DOC-0122
-  - DOC-0133
-  - DOC-0134
-  - DOC-0135
-  - DOC-0136
-  - DOC-0137
-  - DOC-0138
-  - DOC-0139
-  - DOC-0140
-  - DOC-0141
-  - DOC-0142
-  - DOC-0143
-  - DOC-0144
-  - DOC-0145
-  - DOC-0146
-  - DOC-0147
-  - DOC-0148
-  - DOC-0149
-  - DOC-0150
-  - DOC-0151
-  - DOC-0152
-  - DOC-0153
-  - DOC-0154
-  - DOC-0155
-  - DOC-0156
-  - DOC-0157
-  - DOC-0158
-  - DOC-0159
-  - DOC-0160
-  - DOC-0161
-  - DOC-0162
-  - DOC-0163
-  - DOC-0164
-  - DOC-0165
-  - DOC-0166
-  - DOC-0167
-  - DOC-0168
-  - DOC-0169
-  - DOC-0170
-  - DOC-0171
-  - DOC-0172
-  - DOC-0173
-  - DOC-0174
-  - DOC-0175
-  - DOC-0176
-  - DOC-0177
-  - DOC-0178
-  - DOC-0179
-  - DOC-0180
-  - DOC-0181
-  - DOC-0182
-  - DOC-0183
-  - DOC-0184
-  - DOC-0185
-  - DOC-0186
-  - DOC-0187
-  - DOC-0188
-  - DOC-0189
-  - DOC-0190
-  - DOC-0191
-  - DOC-0192
-  - DOC-0193
-  - DOC-0194
-  - DOC-0195
-  - DOC-0196
-  - DOC-0197
-  - DOC-0198
-  - DOC-0199
-  - DOC-0200
-  - DOC-0201
-  - DOC-0202
-  - DOC-0203
-  - DOC-0204
-  - DOC-0205
-  - DOC-0206
-  - DOC-0207
-  - DOC-0208
-  - DOC-0209
-  - DOC-0210
-  - DOC-0211
-  - DOC-0212
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-07-31
 concept_role: Owner
 owned_domains:
   - AI
@@ -117,10 +35,65 @@ scope: AI agent sequencing within AI subsystem.
 Document type: [CONTRACT]
 
 ## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** AI Team
+**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-07-31 | **Owner:** AI Team
 
 ## Purpose
 Defines lifecycle, coordination rules, multi-model orchestration, agent routing, sequencing, fallback, tool selection, memory coordination, consensus, decision handoff, and degradation behavior for the AI agent set.
+
+---
+
+## Architecture
+
+AI Orchestration coordinates product AI agents inside the application runtime. It is not a repository-agent governance layer. It owns the sequencing, coordination, fallback, consensus, and handoff behavior for AI agents that participate in market analysis, risk assessment, planning, execution advice, learning, documentation search, and operations assistance.
+
+The architecture has these control surfaces:
+
+- agent registry and capability routing
+- execution mode selection
+- tool selection and fallback
+- memory snapshot sharing
+- consensus aggregation
+- provider and cost coordination
+- event emission and consumption
+- degradation and recovery behavior
+
+## Runtime Lifecycle
+
+The orchestration lifecycle for a request is:
+
+1. Receive an orchestration request from a product subsystem or operator command.
+2. Classify intent, complexity, required agents, safety level, and expected output.
+3. Select execution mode: single-model, sequential, parallel, hierarchical, or fallback-only.
+4. Resolve required agent contexts and memory snapshots.
+5. Select providers and tools under configured budget and capability constraints.
+6. Execute the selected orchestration path.
+7. Validate response quality, safety, consensus, and confidence.
+8. Emit completion, rejection, degradation, or recovery events.
+9. Persist trace, cost, and reflection inputs for downstream learning and explainability.
+
+## State Machine
+
+```mermaid
+stateDiagram-v2
+  [*] --> RECEIVED
+  RECEIVED --> CLASSIFIED
+  CLASSIFIED --> CONTEXT_PREPARED
+  CONTEXT_PREPARED --> MODE_SELECTED
+  MODE_SELECTED --> PROVIDER_SELECTED
+  PROVIDER_SELECTED --> AGENTS_RUNNING
+  AGENTS_RUNNING --> CONSENSUS_EVALUATING
+  CONSENSUS_EVALUATING --> COMPLETED
+  CONSENSUS_EVALUATING --> REJECTED
+  AGENTS_RUNNING --> DEGRADED
+  DEGRADED --> PROVIDER_SELECTED
+  DEGRADED --> REJECTED
+  COMPLETED --> [*]
+  REJECTED --> [*]
+```
+
+## Event Model
+
+The event model is the authoritative integration boundary for AI orchestration. Requesting subsystems produce intent events, AI Orchestration consumes them, and AI Orchestration emits status, consensus, degradation, and result events. Event payloads must remain provider-neutral and must not expose secrets, wallet material, or unapproved trade execution commands.
 
 ---
 
@@ -138,7 +111,7 @@ Defines lifecycle, coordination rules, multi-model orchestration, agent routing,
 
 ---
 
-## 2. Multi-Model Orchestration
+## 2. Execution Modes and Multi-Model Orchestration
 
 ### 2.1 Orchestration Modes
 
@@ -287,7 +260,7 @@ Level 5: AI completely disabled → manual operator decision required
 
 ---
 
-## 5. Memory Coordination
+## 5. Memory Integration
 
 ### 5.1 Memory Sharing Between Agents
 
@@ -352,7 +325,7 @@ min_consensus_confidence: 0.8 (configurable: ai.orchestration.min_consensus_conf
 
 ---
 
-## 8. Provider Scoring & Cost Optimisation
+## 8. Provider Integration and Cost Optimisation
 
 ### 8.1 Provider Scoring Formula
 
@@ -476,6 +449,77 @@ Reflection produces structured output:
 
 ---
 
+## Configuration
+
+AI Orchestration configuration keys define mode selection, token budgets, confidence thresholds, degradation behavior, reflection enablement, streaming, model tiering, batching, and cost controls. Configuration ownership remains with this document for orchestration-specific keys and with the Configuration domain for cross-system storage, validation, profile inheritance, and rollout behavior.
+
+The canonical configuration keys are listed in section 10.5 and must be validated through the product configuration model before runtime use.
+
+---
+
+## Error Recovery
+
+AI Orchestration applies safety-first recovery. If market analysis fails, cached market context may be used within freshness limits. If risk assessment fails or times out, the orchestration rejects execution. If planning fails, default strategy parameters may be used only for non-executing recommendations. If execution handoff fails, the orchestration aborts and notifies the operator. Repeated failures trigger degradation levels and may disable non-critical agents before critical safety paths.
+
+---
+
+## JSON Schema
+
+The canonical request-state schema for an orchestration instance is:
+
+| Field | Type | Required | Constraints | Description |
+| --- | --- | --- | --- | --- |
+| `orchestration_id` | string | Yes | UUID format | Unique orchestration instance identifier. |
+| `plan` | object | Yes | Must contain a non-empty `steps` array. | Orchestration plan selected for the request. |
+| `status` | string | Yes | `pending`, `running`, `completed`, or `failed`. | Current orchestration state. |
+| `created_at` | string | Yes | ISO-8601 timestamp. | Creation timestamp. |
+| `updated_at` | string | Yes | ISO-8601 timestamp. | Last update timestamp. |
+
+Schema validation uses JSON Schema Draft 7. Runtime validation is strict for required fields and enum values. Additional additive fields are allowed for forward compatibility when they do not alter required semantics. The persisted schema format is event-sourced JSON with schema version included in each record.
+
+```json
+{
+  "type": "object",
+  "required": ["orchestration_id", "plan", "status", "created_at", "updated_at"],
+  "properties": {
+    "orchestration_id": {"type": "string", "format": "uuid"},
+    "plan": {
+      "type": "object",
+      "required": ["steps"],
+      "properties": {
+        "steps": {"type": "array", "minItems": 1}
+      },
+      "additionalProperties": true
+    },
+    "status": {"type": "string", "enum": ["pending", "running", "completed", "failed"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": true
+}
+```
+
+---
+
+## Examples
+
+### Sequential trade-analysis orchestration
+
+1. `trade.opportunity.detected` is consumed from the Trading Engine.
+2. Market Agent analyzes route and liquidity context.
+3. Risk Agent validates exposure and may veto.
+4. Planner Agent proposes a route only after risk approval.
+5. AI Orchestration emits consensus and completion events to Trading, Risk, Dashboard, and Audit consumers.
+
+### Provider degradation
+
+1. Primary provider exceeds timeout or quality threshold.
+2. AI Provider Manager selects the next provider by capability and budget score.
+3. AI Orchestration retries only within configured retry and token budgets.
+4. If retry still fails, non-critical agents are disabled first and the request is either degraded or rejected.
+
+---
+
 ## Cross-References
 
 - **ORCHESTRATOR.md** — Platform-level orchestrator (AI is a subsystem within it).
@@ -500,4 +544,5 @@ Reflection produces structured output:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.1.0 | 2026-07-31 | Merged the useful generated schema shard content into the canonical AI Orchestration document, added explicit architecture, lifecycle, state machine, event model, error recovery, JSON schema, and examples sections, and removed reliance on duplicate generated shard files. | AI Team |
 | 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | AI Team |
