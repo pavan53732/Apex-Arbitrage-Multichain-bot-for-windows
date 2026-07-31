@@ -1,3 +1,28 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0438
+title: Windows Arbitrage Gaps Audit
+plane: Product Specification
+domain: Windows
+class: Reference
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: docs/AUDIT-WINDOWS-ARBITRAGE-GAPS.md
+related_concepts:
+  - CONCEPT-0399
+dependencies: []
+consumers: []
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-08-01
+concept_role: Owner
+owned_domains:
+  - Windows
+---
+
 # Audit: Windows Arbitrage Trading Bot & App Builder — Documentation Gaps
 
 **Date:** 2026-07-26

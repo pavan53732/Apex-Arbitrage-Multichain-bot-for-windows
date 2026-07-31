@@ -437,3 +437,6 @@ All registered document identities are reachable through this canonical document
 - `DOC-0433`
 - `DOC-0434`
 - `DOC-0435`
+- `DOC-0436`
+- `DOC-0437`
+- `DOC-0438`

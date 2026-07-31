@@ -1,3 +1,28 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0437
+title: Windows Desktop Enhanced
+plane: Product Specification
+domain: Windows
+class: Guide
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: WINDOWS-DESKTOP-ENHANCED.md
+related_concepts:
+  - CONCEPT-0398
+dependencies: []
+consumers: []
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-08-01
+concept_role: Owner
+owned_domains:
+  - Windows
+---
+
 # APEX Windows Desktop Application - Configuration and Packaging Specification
 
 ## 1. Windows Desktop Application Packaging (.exe only)
