@@ -13,9 +13,25 @@ canonical_source: AGENTS.md
 related_concepts:
   - CONCEPT-0001
   - CONCEPT-0018
+  - CONCEPT-0070
+  - CONCEPT-0071
+  - CONCEPT-0072
+  - CONCEPT-0073
+  - CONCEPT-0074
+  - CONCEPT-0075
+  - CONCEPT-0076
+  - CONCEPT-0077
 dependencies:
   - DOC-0001
   - DOC-0018
+  - DOC-0070
+  - DOC-0071
+  - DOC-0072
+  - DOC-0073
+  - DOC-0074
+  - DOC-0075
+  - DOC-0076
+  - DOC-0077
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -34,7 +50,7 @@ Rules and guidance for repository-facing coding and documentation agents.
 
 ## What belongs here
 
-Agent operating guides, agent profiles, agent navigation, skills, and repository AI rules.
+Agent operating guides, agent profiles, agent navigation, skills, AI governance policies, and repository AI rules.
 
 ## What does not belong here
 
@@ -52,6 +68,7 @@ Product AI runtime/model behavior, product AI orchestration, product AI memory, 
 - Guide
 - Reference
 - Specification
+- Policy
 - Registry (only in registry folders)
 - Historical (only in historical folders)
 - Generated (only in generated folders)
@@ -94,7 +111,7 @@ Documents:
 - [Windsurf Agent Profile](./agent-profiles/windsurf.md) — Reference
 - [Zed Agent Profile](./agent-profiles/zed.md) — Reference
 
-## Documents
+## AI Governance Documents
 
 | Document ID | Title | Class | Authority | Status |
 | --- | --- | --- | --- | --- |
@@ -102,6 +119,14 @@ Documents:
 | DOC-0019 | [Agent Guide](./agent-guide.md) | Guide | Derived | Active |
 | DOC-0045 | [Skills](./skills.md) | Reference | Derived | Active |
 | DOC-0046 | [Agent Navigation](./agent-navigation.md) | Reference | Derived | Active |
+| DOC-0070 | [AI Capability Matrix](./ai-capability-matrix.md) | Policy | Canonical | Active |
+| DOC-0071 | [AI Decision Tree](./ai-decision-tree.md) | Policy | Canonical | Active |
+| DOC-0072 | [AI Execution Contract](./ai-execution-contract.md) | Policy | Canonical | Active |
+| DOC-0073 | [AI Failure Policy](./ai-failure-policy.md) | Policy | Canonical | Active |
+| DOC-0074 | [AI Change Classification Matrix](./ai-change-classification-matrix.md) | Policy | Canonical | Active |
+| DOC-0075 | [AI Commit Policy](./ai-commit-policy.md) | Policy | Canonical | Active |
+| DOC-0076 | [AI Push Policy](./ai-push-policy.md) | Policy | Canonical | Active |
+| DOC-0077 | [AI Workspace Policy](./ai-workspace-policy.md) | Policy | Canonical | Active |
 
 ## Before adding a document here
 

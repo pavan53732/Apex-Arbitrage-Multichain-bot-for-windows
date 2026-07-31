@@ -19,6 +19,14 @@ related_concepts:
   - CONCEPT-0067
   - CONCEPT-0068
   - CONCEPT-0069
+  - CONCEPT-0070
+  - CONCEPT-0071
+  - CONCEPT-0072
+  - CONCEPT-0073
+  - CONCEPT-0074
+  - CONCEPT-0075
+  - CONCEPT-0076
+  - CONCEPT-0077
 dependencies:
   - DOC-0052
   - DOC-0053
@@ -28,6 +36,14 @@ dependencies:
   - DOC-0067
   - DOC-0068
   - DOC-0069
+  - DOC-0070
+  - DOC-0071
+  - DOC-0072
+  - DOC-0073
+  - DOC-0074
+  - DOC-0075
+  - DOC-0076
+  - DOC-0077
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -41,11 +57,11 @@ owned_domains: []
 
 ## Purpose and scope
 
-Repository standards for canonical sources, dependencies, coding, contributions, README governance, validation, registry governance, document lifecycle, and concept lifecycle.
+Repository standards for canonical sources, dependencies, coding, contributions, README governance, validation, registry governance, document lifecycle, concept lifecycle, and AI agent governance.
 
 ## What belongs here
 
-Policy documents constraining documentation, repository changes, coding practices, README structure, validation, registry operations, document lifecycle, and concept lifecycle.
+Policy documents constraining documentation, repository changes, coding practices, README structure, validation, registry operations, document lifecycle, concept lifecycle, and AI agent behavior.
 
 ## What does not belong here
 
@@ -85,6 +101,14 @@ Documents:
 - [Registry Governance Standard](../registries/registry-governance-standard.md) — Policy
 - [Document Lifecycle Policy](../documentation-lifecycle/document-lifecycle-policy.md) — Policy
 - [Concept Lifecycle Policy](../registries/concept-lifecycle-policy.md) — Policy
+- [AI Capability Matrix](../agent-system/ai-capability-matrix.md) — Policy
+- [AI Decision Tree](../agent-system/ai-decision-tree.md) — Policy
+- [AI Execution Contract](../agent-system/ai-execution-contract.md) — Policy
+- [AI Failure Policy](../agent-system/ai-failure-policy.md) — Policy
+- [AI Change Classification Matrix](../agent-system/ai-change-classification-matrix.md) — Policy
+- [AI Commit Policy](../agent-system/ai-commit-policy.md) — Policy
+- [AI Push Policy](../agent-system/ai-push-policy.md) — Policy
+- [AI Workspace Policy](../agent-system/ai-workspace-policy.md) — Policy
 
 ## Before adding a document here
 
