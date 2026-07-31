@@ -31,22 +31,100 @@ APIs, IPC, events, adapters, message catalogs, and interface contracts for produ
 
 ## What belongs here
 
-Product interface specifications and references. Runtime behavior, UI behavior, and market/execution logic belong in their owning product domains.
+Product interface specifications, protocols, adapters, events, and typed message contracts.
 
 ## What does not belong here
 
-Implementation internals that do not define an interface boundary.
+Runtime internals, UI behavior, market logic, or execution policy unless the document defines an interface boundary.
 
-## Subdomains
+## Canonical owner map
 
-| Subdomain | README | Canonical owner |
-| --- | --- | --- |
-| adapters | [Interface Adapters README](adapters/README.md) | [Interface Provider Adapter](./adapters/interface-provider-adapter.md) |
-| api | [Interface API README](api/README.md) | [Api Contracts](./api/api-contracts.md) |
-| events | [Events README](events/README.md) | [Event Bus](./events/event-bus.md) |
-| ipc | [Interface IPC README](ipc/README.md) | [Ipc Protocol](./ipc/ipc-protocol.md) |
-| messages | [Interface Messages README](messages/README.md) | [Interface Catalog](./messages/interface-catalog.md) |
+| Subdomain | Concept ID | Canonical owner | README |
+| --- | --- | --- | --- |
+| adapters | CONCEPT-0262 | [Interface Provider Adapter](./adapters/interface-provider-adapter.md) | [Interface Adapters README](./adapters/README.md) |
+| api | CONCEPT-0251 | [API Contracts](./api/api-contracts.md) | [Interface API README](./api/README.md) |
+| events | CONCEPT-0253 | [Event Bus](./events/event-bus.md) | [Events README](./events/README.md) |
+| ipc | CONCEPT-0254 | [IPC Protocol](./ipc/ipc-protocol.md) | [Interface IPC README](./ipc/README.md) |
+| messages | CONCEPT-0255 | [Interface Catalog](./messages/interface-catalog.md) | [Interface Messages README](./messages/README.md) |
 
-## Document creation rule
+## Document classes expected
 
-Before adding an interface document, identify the active interface concept owner and place the document in the matching subdomain. Do not create duplicate interface ownership documents.
+- Index
+- Specification
+- Reference
+- Registry where an interface catalog is owned
+
+## Relationship to adjacent domains
+
+Interfaces documents define contracts consumed by Runtime, AI, Dashboard, Operations, Execution, and Plugins without owning those domains’ internal behavior.
+
+## Subdomain navigation
+
+### adapters
+
+- Concept: `CONCEPT-0262`
+- Canonical owner: [Interface Provider Adapter](./adapters/interface-provider-adapter.md)
+- Folder README: [Interface Adapters README](./adapters/README.md)
+
+Documents:
+
+- [Interface Provider Adapter](./adapters/interface-provider-adapter.md) — Reference
+
+### api
+
+- Concept: `CONCEPT-0251`
+- Canonical owner: [API Contracts](./api/api-contracts.md)
+- Folder README: [Interface API README](./api/README.md)
+
+Documents:
+
+- [API Contracts](./api/api-contracts.md) — Specification
+- [API Reference](./api/api-reference.md) — Reference
+- [Domain Model](./api/domain-model.md) — Specification
+
+### events
+
+- Concept: `CONCEPT-0253`
+- Canonical owner: [Event Bus](./events/event-bus.md)
+- Folder README: [Events README](./events/README.md)
+
+Documents:
+
+- [Event Bus](./events/event-bus.md) — Specification
+- [Event Catalog](./events/event-catalog.md) — Reference
+- [Event Flow](./events/event-flow.md) — Reference
+- [Event Ownership Matrix](./events/event-ownership-matrix.md) — Reference
+
+### ipc
+
+- Concept: `CONCEPT-0254`
+- Canonical owner: [IPC Protocol](./ipc/ipc-protocol.md)
+- Folder README: [Interface IPC README](./ipc/README.md)
+
+Documents:
+
+- [IPC Message Catalog](./ipc/ipc-message-catalog.md) — Reference
+- [IPC Protocol](./ipc/ipc-protocol.md) — Specification
+
+### messages
+
+- Concept: `CONCEPT-0255`
+- Canonical owner: [Interface Catalog](./messages/interface-catalog.md)
+- Folder README: [Interface Messages README](./messages/README.md)
+
+Documents:
+
+- [Interface Agent Message](./messages/interface-agent-message.md) — Reference
+- [Interface Catalog](./messages/interface-catalog.md) — Index
+- [Interface Notification Channel](./messages/interface-notification-channel.md) — Reference
+- [Interface Tool Call](./messages/interface-tool-call.md) — Reference
+
+## Before adding a document here
+
+- Identify the active Concept ID in the Concept Registry before creating a new document.
+- Update an existing canonical owner instead of creating a duplicate specification when the concept already exists.
+- Place the document in the narrowest matching subdomain folder.
+- Assign a stable Document ID only if the document is new permanent repository knowledge.
+- Add or update metadata, registries, README navigation, and cross-references in the same change.
+- Run local metadata, registry, traceability, link, stale-path, empty-folder, and repository hygiene validation before committing.
+- Do not add generated documentation, CI/CD files, GitHub Actions, temporary reports, or repository automation.

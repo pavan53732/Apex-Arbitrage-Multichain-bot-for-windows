@@ -31,26 +31,108 @@ Trading, transaction execution, risk and policy gates, wallet/portfolio behavior
 
 ## What belongs here
 
-Product execution specifications and references for trading, transaction execution, risk policy, wallet portfolio state, and simulation.
+Product execution specifications and references for acting on market opportunities and managing execution state.
 
 ## What does not belong here
 
-Market discovery, product AI orchestration, generic operations monitoring, or security secret lifecycle behavior unless explicitly execution-owned.
+Market discovery, product AI reasoning, operations monitoring, and security secret lifecycle behavior unless explicitly execution-owned.
 
-## Subdomains
+## Canonical owner map
 
-| Subdomain | README | Canonical owner |
-| --- | --- | --- |
-| risk-policy | [Execution Risk Policy README](risk-policy/README.md) | [Risk Engine](./risk-policy/risk-engine.md) |
-| simulation | [Execution Simulation README](simulation/README.md) | [Simulation Engine](./simulation/simulation-engine.md) |
-| trading | [Execution Trading README](trading/README.md) | [Trading Engine](./trading/trading-engine.md) |
-| transactions | [Execution Transactions README](transactions/README.md) | [Execution Engine](./transactions/execution-engine.md) |
-| wallet-portfolio | [Execution Wallet Portfolio README](wallet-portfolio/README.md) | [Wallet Management](./wallet-portfolio/wallet-management.md) |
+| Subdomain | Concept ID | Canonical owner | README |
+| --- | --- | --- | --- |
+| risk-policy | CONCEPT-0282 | [Risk Engine](./risk-policy/risk-engine.md) | [Execution Risk Policy README](./risk-policy/README.md) |
+| simulation | CONCEPT-0283 | [Simulation Engine](./simulation/simulation-engine.md) | [Execution Simulation README](./simulation/README.md) |
+| trading | CONCEPT-0284 | [Trading Engine](./trading/trading-engine.md) | [Execution Trading README](./trading/README.md) |
+| transactions | CONCEPT-0280 | [Execution Engine](./transactions/execution-engine.md) | [Execution Transactions README](./transactions/README.md) |
+| wallet-portfolio | CONCEPT-0301 | [Wallet Management](./wallet-portfolio/wallet-management.md) | [Execution Wallet Portfolio README](./wallet-portfolio/README.md) |
 
-## Additional execution references
+## Document classes expected
 
-- [Decision Log](./decision-log.md) remains at the execution domain root until a later ownership decision moves it.
+- Index
+- Specification
+- Reference
+- Policy where execution constraints are owned
 
-## Document creation rule
+## Relationship to adjacent domains
 
-Before adding an execution document, identify the active execution concept owner and place the document in the matching subdomain. Do not create duplicate execution ownership documents.
+Execution depends on Market for opportunity data, Security for trust boundaries, Operations for recovery visibility, and Interfaces for message/API contracts.
+
+## Subdomain navigation
+
+### risk-policy
+
+- Concept: `CONCEPT-0282`
+- Canonical owner: [Risk Engine](./risk-policy/risk-engine.md)
+- Folder README: [Execution Risk Policy README](./risk-policy/README.md)
+
+Documents:
+
+- [Decision Engine](./risk-policy/decision-engine.md) — Specification
+- [Policy Engine](./risk-policy/policy-engine.md) — Specification
+- [Risk Engine](./risk-policy/risk-engine.md) — Specification
+
+### simulation
+
+- Concept: `CONCEPT-0283`
+- Canonical owner: [Simulation Engine](./simulation/simulation-engine.md)
+- Folder README: [Execution Simulation README](./simulation/README.md)
+
+Documents:
+
+- [Simulation Engine](./simulation/simulation-engine.md) — Specification
+
+### trading
+
+- Concept: `CONCEPT-0284`
+- Canonical owner: [Trading Engine](./trading/trading-engine.md)
+- Folder README: [Execution Trading README](./trading/README.md)
+
+Documents:
+
+- [Arbitrage Window Manager](./trading/arbitrage-window-manager.md) — Specification
+- [Cross Exchange Arbitrage](./trading/cross-exchange-arbitrage.md) — Reference
+- [Strategies](./trading/strategies.md) — Reference
+- [Strategy Rotation](./trading/strategy-rotation.md) — Reference
+- [Trade Explainer](./trading/trade-explainer.md) — Reference
+- [Trading Engine](./trading/trading-engine.md) — Specification
+- [Trading Lifecycle](./trading/trading-lifecycle.md) — Reference
+
+### transactions
+
+- Concept: `CONCEPT-0280`
+- Canonical owner: [Execution Engine](./transactions/execution-engine.md)
+- Folder README: [Execution Transactions README](./transactions/README.md)
+
+Documents:
+
+- [Execution Engine](./transactions/execution-engine.md) — Specification
+- [Execution Lifecycle](./transactions/execution-lifecycle.md) — Reference
+- [Execution Policies](./transactions/execution-policies.md) — Reference
+- [Order Management](./transactions/order-management.md) — Reference
+- [Transaction Lifecycle](./transactions/transaction-lifecycle.md) — Reference
+
+### wallet-portfolio
+
+- Concept: `CONCEPT-0301`
+- Canonical owner: [Wallet Management](./wallet-portfolio/wallet-management.md)
+- Folder README: [Execution Wallet Portfolio README](./wallet-portfolio/README.md)
+
+Documents:
+
+- [Asset Management](./wallet-portfolio/asset-management.md) — Reference
+- [Portfolio Analytics](./wallet-portfolio/portfolio-analytics.md) — Reference
+- [Portfolio Management](./wallet-portfolio/portfolio-management.md) — Reference
+- [Position Management](./wallet-portfolio/position-management.md) — Reference
+- [Wallet Command Center](./wallet-portfolio/wallet-command-center.md) — Reference
+- [Wallet Management](./wallet-portfolio/wallet-management.md) — Reference
+
+## Before adding a document here
+
+- Identify the active Concept ID in the Concept Registry before creating a new document.
+- Update an existing canonical owner instead of creating a duplicate specification when the concept already exists.
+- Place the document in the narrowest matching subdomain folder.
+- Assign a stable Document ID only if the document is new permanent repository knowledge.
+- Add or update metadata, registries, README navigation, and cross-references in the same change.
+- Run local metadata, registry, traceability, link, stale-path, empty-folder, and repository hygiene validation before committing.
+- Do not add generated documentation, CI/CD files, GitHub Actions, temporary reports, or repository automation.
