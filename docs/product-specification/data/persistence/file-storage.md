@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/file-storage.md
+canonical_source: docs/product-specification/data/persistence/file-storage.md
 related_concepts:
   - CONCEPT-0274
 dependencies: []
@@ -38,8 +38,8 @@ Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `./database-schema.md`
-- `../operations/reliability/runtime-operations.md`
-- `../security/security.md`
+- `../../operations/reliability/runtime-operations.md`
+- `../../security/security.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

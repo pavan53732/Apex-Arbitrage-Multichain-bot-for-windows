@@ -50,9 +50,9 @@ This document covers semantic versioning, compatibility, deprecation, and migrat
 - Migrations.
 
 ## Cross-references
-- `../data/database-schema.md`
+- `../data/persistence/database-schema.md`
 - `../interfaces/api/api-contracts.md`
-- `../configuration/configuration.md`
+- `../configuration/core/configuration.md`
 - `../reference/implementation-roadmap.md`
 - `../architecture/module-dependency.md`
 

@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: UI Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/context-builder.md
+canonical_source: docs/product-specification/data/knowledge/context-builder.md
 related_concepts:
   - CONCEPT-0270
 dependencies: []
@@ -57,10 +57,10 @@ Missing memory, oversize context, invalid source, stale runtime state.
 Compress context, fall back to curated memory, or refuse dispatch if policy fails.
 
 ## Cross-references
-- `../ai/runtime/ai-pipeline.md`
-- `../ai/memory/ai-memory-system.md`
+- `../../ai/runtime/ai-pipeline.md`
+- `../../ai/memory/ai-memory-system.md`
 - `./knowledge-graph.md`
-- `../ai/runtime/ai-gateway.md`
+- `../../ai/runtime/ai-gateway.md`
 
 ## Operational Contract
 Defines how user, market, wallet, and runtime context are assembled for downstream reasoning.

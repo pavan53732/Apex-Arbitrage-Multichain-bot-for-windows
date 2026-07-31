@@ -44,7 +44,7 @@ Defines user-facing AI configuration, provider selection, fallback ordering, and
 ## Cross-references
 - `../runtime/ai-pipeline.md`
 - `./cloud-ai-integration.md`
-- `../../configuration/configuration.md`
+- `../../configuration/core/configuration.md`
 - `./ai-capability-matrix.md`
 - `../prompts/prompt-engineering.md`
 - `./ai-cost-management.md`

@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Security Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/data-ownership.md
+canonical_source: docs/product-specification/data/knowledge/data-ownership.md
 related_concepts:
   - CONCEPT-0268
 dependencies: []

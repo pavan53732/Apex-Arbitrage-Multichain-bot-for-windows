@@ -59,7 +59,7 @@ Rebind resource, replace endpoint, restart service, or retire resource.
 ## Cross-references
 - `../architecture/apex-kernel.md`
 - `./service-registry.md`
-- `../data/registry-system.md`
+- `../data/registries/registry-system.md`
 - `./worker-pool.md`
 
 ## Operational Contract

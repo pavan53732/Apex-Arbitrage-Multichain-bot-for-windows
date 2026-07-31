@@ -39,7 +39,7 @@ Provides human-readable explanations for why a trade was executed.
 ## Cross-references
 - `../../ai/explainability/explainability.md`
 - `../../ai/explainability/governance-explainability.md`
-- `../../data/decision-ledger.md`
+- `../../data/state/decision-ledger.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

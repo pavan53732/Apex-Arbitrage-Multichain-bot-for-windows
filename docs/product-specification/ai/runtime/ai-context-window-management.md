@@ -55,7 +55,7 @@ Compress, trim, retrieve alternate memory, or refuse request.
 ## Cross-references
 - `./ai-pipeline.md`
 - `../memory/ai-memory-system.md`
-- `../../data/context-builder.md`
+- `../../data/knowledge/context-builder.md`
 - `../../../historical/traceability-matrix.md`
 
 ## Governance Rules

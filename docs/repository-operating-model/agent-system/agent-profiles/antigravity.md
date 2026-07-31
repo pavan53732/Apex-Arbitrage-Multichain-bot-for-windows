@@ -53,7 +53,7 @@ Guidance for Antigravity-based coding agents contributing to this repository.
 - `../../../product-specification/operations/reliability/runtime-operations.md`
 - `../../../product-specification/execution/trading/trading-lifecycle.md`
 - `../../../product-specification/execution/transactions/execution-lifecycle.md`
-- `../../../product-specification/data/database-schema.md`
+- `../../../product-specification/data/persistence/database-schema.md`
 
 ## Working rule
 If the owner doc is missing, the change is blocked until the contract exists.

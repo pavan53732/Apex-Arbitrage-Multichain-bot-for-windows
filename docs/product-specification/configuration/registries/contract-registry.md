@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/contract-registry.md
+canonical_source: docs/product-specification/configuration/registries/contract-registry.md
 related_concepts:
   - CONCEPT-0383
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0431
 validator_coverage: []
 supersedes: []
 superseded_by: []
@@ -46,8 +47,8 @@ Cross-cutting platform governance.
 Define ownership, contracts, lifecycle, validation, and cross-references.
 
 ## Cross-references
-- `../architecture/apex-os.md`
-- `../architecture/architecture.md`
+- `../../architecture/apex-os.md`
+- `../../architecture/architecture.md`
 
 ## Operational Contract
 Defines the authoritative registry for deployed contracts, versions, ABIs, chain mappings, and status.

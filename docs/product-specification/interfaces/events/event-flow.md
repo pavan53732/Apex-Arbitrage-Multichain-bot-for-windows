@@ -41,9 +41,9 @@ Defines event emission, propagation, ordering, and consumption semantics.
 - Does not define IPC payload contracts.
 
 ## Cross-references
-- `../../data/data-flow.md`
+- `../../data/knowledge/data-flow.md`
 - `../ipc/ipc-protocol.md`
-- `../../data/state-management.md`
+- `../../data/state/state-management.md`
 
 ## Operational Contract
 Defines event production, routing, consumption, correlation, and lifecycle across the platform.

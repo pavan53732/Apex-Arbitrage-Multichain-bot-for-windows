@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/decision-ledger.md
+canonical_source: docs/product-specification/data/state/decision-ledger.md
 related_concepts:
   - CONCEPT-0273
 dependencies: []
@@ -57,10 +57,10 @@ Missing record, tampered record, incomplete lineage, replay mismatch.
 Rebuild from source logs, reject incomplete traces, escalate to audit.
 
 ## Cross-references
-- `../execution/risk-policy/decision-engine.md`
-- `../ai/explainability/governance-explainability.md`
-- `../ai/explainability/explainability.md`
-- `../execution/decision-log.md`
+- `../../execution/risk-policy/decision-engine.md`
+- `../../ai/explainability/governance-explainability.md`
+- `../../ai/explainability/explainability.md`
+- `../../execution/decision-log.md`
 
 ## Ledger Semantics
 Defines the immutable trace of autonomous decisions, simulation outputs, execution results, and outcomes.

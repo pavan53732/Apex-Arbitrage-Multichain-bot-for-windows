@@ -46,6 +46,6 @@ Defines how the Windows app is deployed to users and updated safely.
 
 ## Cross-references
 - `./windows-deployment.md`
-- `../configuration/configuration.md`
+- `../configuration/core/configuration.md`
 - `../security/security-contracts.md`
 - `../reference/changelog.md`

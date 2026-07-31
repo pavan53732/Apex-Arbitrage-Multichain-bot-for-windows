@@ -66,7 +66,7 @@ For authoritative runtime flow, see `../runtime/orchestrator.md`.
 - `../execution/transactions/execution-engine.md`
 - `../ai/runtime/ai-pipeline.md`
 - `../operations/reliability/runtime-operations.md`
-- `../data/state-management.md`
+- `../data/state/state-management.md`
 - `../market/chains/chain-registry.md`
 - `../market/dex/dex-registry.md`
 - `../market/tokens/token-registry.md`
@@ -96,7 +96,7 @@ For worker scheduling, see `../runtime/worker-pool.md`.
 For workspace persistence, see `../dashboard/dashboard-workspaces.md`.
 For dependency graph details, see `./dependency-graph.md`.
 For live architecture visualization, see `./live-architecture-viewer.md`.
-For data governance, see `../data/data-governance.md`.
+For data governance, see `../data/knowledge/data-governance.md`.
 For constitution and philosophy, see `./apex-os.md`.
 For opportunity lifecycle, see `../market/opportunities/opportunity-lifecycle.md`.
 ## Operational Contract

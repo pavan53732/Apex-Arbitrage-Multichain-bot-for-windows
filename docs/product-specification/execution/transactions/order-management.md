@@ -101,7 +101,7 @@ Placed | PartiallyFilled -> CancelRequested -> Cancelled | Filled.
 ## Cross-references
 - `./execution-engine.md`
 - `./transaction-lifecycle.md`
-- `../../data/database-schema.md`
+- `../../data/persistence/database-schema.md`
 - `../risk-policy/risk-engine.md`
 
 ## Operational Contract

@@ -48,9 +48,9 @@ stateDiagram-v2
 ```
 
 ## Cross-references
-- `../../data/knowledge-graph.md`
+- `../../data/knowledge/knowledge-graph.md`
 - `../memory/ai-memory-system.md`
-- `../../data/context-builder.md`
+- `../../data/knowledge/context-builder.md`
 
 ## Interface Contract
 Defines indexing, ranking, retrieval, embedding strategy hooks, and document search semantics.

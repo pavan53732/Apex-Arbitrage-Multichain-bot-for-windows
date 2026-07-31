@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/registry-system.md
+canonical_source: docs/product-specification/data/registries/registry-system.md
 related_concepts:
   - CONCEPT-0276
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0434
 validator_coverage: []
 supersedes: []
 superseded_by: []

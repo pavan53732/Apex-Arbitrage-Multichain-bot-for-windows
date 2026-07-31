@@ -55,7 +55,7 @@ This registry is descriptive and feeds market data, routing, slippage, and risk 
 - `../routing/liquidity-analysis.md`
 - `../routing/slippage-model.md`
 - `../../execution/risk-policy/risk-engine.md`
-- `../../data/database-schema.md`
+- `../../data/persistence/database-schema.md`
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.

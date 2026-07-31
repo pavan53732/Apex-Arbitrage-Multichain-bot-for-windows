@@ -37,7 +37,7 @@ This document is an overview, reference, or index as noted below.
 Defines workspace profiles, import/export, backup, restore, version history, and configuration snapshots.
 
 ## Cross-references
-- `../../configuration/configuration.md`
+- `../../configuration/core/configuration.md`
 - `./runtime-operations.md`
 
 

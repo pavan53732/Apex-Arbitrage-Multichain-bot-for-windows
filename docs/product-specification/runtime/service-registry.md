@@ -62,7 +62,7 @@ Unregister stale services, rebind dependencies, and rehydrate from kernel state.
 
 ## Cross-references
 - `../architecture/apex-kernel.md`
-- `../data/registry-system.md`
+- `../data/registries/registry-system.md`
 - `./orchestrator.md`
 
 ## Governance Rules

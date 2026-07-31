@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/data-flow.md
+canonical_source: docs/product-specification/data/knowledge/data-flow.md
 related_concepts:
   - CONCEPT-0271
 dependencies: []
@@ -37,12 +37,12 @@ This document is an overview, reference, or index as noted below.
 Defines how data moves across market, trading, AI, risk, execution, persistence, and UI layers.
 
 ## Ownership
-- Describes end-to-end flow only; message contracts stay in `../interfaces/ipc/ipc-protocol.md` and `../interfaces/api/api-reference.md`.
+- Describes end-to-end flow only; message contracts stay in `../../interfaces/ipc/ipc-protocol.md` and `../../interfaces/api/api-reference.md`.
 
 ## Cross-references
-- `../interfaces/events/event-flow.md`
-- `./state-management.md`
-- `../operations/reliability/runtime-operations.md`
+- `../../interfaces/events/event-flow.md`
+- `../state/state-management.md`
+- `../../operations/reliability/runtime-operations.md`
 
 ## Operational Contract
 Defines the pipeline from raw RPC data through normalization, validation, caching, analytics, AI, and decision support.

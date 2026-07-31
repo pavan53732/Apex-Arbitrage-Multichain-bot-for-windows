@@ -51,7 +51,7 @@ This repository uses a two-plane documentation knowledge model. The root is inte
 - [Runtime Operations](./docs/product-specification/operations/reliability/runtime-operations.md)
 - [Trading Lifecycle](./docs/product-specification/execution/trading/trading-lifecycle.md)
 - [Execution Lifecycle](./docs/product-specification/execution/transactions/execution-lifecycle.md)
-- [Database Schema](./docs/product-specification/data/database-schema.md)
+- [Database Schema](./docs/product-specification/data/persistence/database-schema.md)
 - [Security Contracts](./docs/product-specification/security/security-contracts.md)
 
 ## Rule

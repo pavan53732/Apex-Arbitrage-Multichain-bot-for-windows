@@ -41,8 +41,8 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | Registry schema version | 1.1 |
 | Registry model | Semantic relationships only |
 | Last regenerated | 2026-07-31 |
-| Relationship count | 658 |
-| Relationship distribution | Defines: 220, Depends On: 126, Indexes: 66, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
+| Relationship count | 672 |
+| Relationship distribution | Defines: 220, Depends On: 133, Indexes: 73, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
 
 ## Relationship Policy
 
@@ -711,3 +711,17 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0820 | DOC-0427 | Depends On | DOC-0254 | Active | Interface IPC README depends on DOC-0254. |
 | TRACE-0821 | DOC-0428 | Indexes | CONCEPT-0255 | Active | Interface Messages README indexes CONCEPT-0255. |
 | TRACE-0822 | DOC-0428 | Depends On | DOC-0255 | Active | Interface Messages README depends on DOC-0255. |
+| TRACE-0823 | DOC-0429 | Indexes | CONCEPT-0381 | Active | Configuration Core README indexes CONCEPT-0381. |
+| TRACE-0824 | DOC-0429 | Depends On | DOC-0381 | Active | Configuration Core README depends on DOC-0381. |
+| TRACE-0825 | DOC-0430 | Indexes | CONCEPT-0388 | Active | Configuration Features README indexes CONCEPT-0388. |
+| TRACE-0826 | DOC-0430 | Depends On | DOC-0388 | Active | Configuration Features README depends on DOC-0388. |
+| TRACE-0827 | DOC-0431 | Indexes | CONCEPT-0383 | Active | Configuration Registries README indexes CONCEPT-0383. |
+| TRACE-0828 | DOC-0431 | Depends On | DOC-0383 | Active | Configuration Registries README depends on DOC-0383. |
+| TRACE-0829 | DOC-0432 | Indexes | CONCEPT-0275 | Active | Data Knowledge README indexes CONCEPT-0275. |
+| TRACE-0830 | DOC-0432 | Depends On | DOC-0275 | Active | Data Knowledge README depends on DOC-0275. |
+| TRACE-0831 | DOC-0433 | Indexes | CONCEPT-0266 | Active | Data Persistence README indexes CONCEPT-0266. |
+| TRACE-0832 | DOC-0433 | Depends On | DOC-0266 | Active | Data Persistence README depends on DOC-0266. |
+| TRACE-0833 | DOC-0434 | Indexes | CONCEPT-0276 | Active | Data Registries README indexes CONCEPT-0276. |
+| TRACE-0834 | DOC-0434 | Depends On | DOC-0276 | Active | Data Registries README depends on DOC-0276. |
+| TRACE-0835 | DOC-0435 | Indexes | CONCEPT-0267 | Active | Data State README indexes CONCEPT-0267. |
+| TRACE-0836 | DOC-0435 | Depends On | DOC-0267 | Active | Data State README depends on DOC-0267. |

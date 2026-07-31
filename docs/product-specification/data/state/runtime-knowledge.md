@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/runtime-knowledge.md
+canonical_source: docs/product-specification/data/state/runtime-knowledge.md
 related_concepts:
   - CONCEPT-0277
 dependencies: []
@@ -56,10 +56,10 @@ Stale knowledge, missing runtime state, inconsistent service view.
 Refresh from kernel, registries, health probes, and event stream.
 
 ## Cross-references
-- `../architecture/apex-kernel.md`
-- `../operations/monitoring/health-checks.md`
-- `../operations/monitoring/monitoring-observability.md`
-- `../dashboard/dashboard-workspaces.md`
+- `../../architecture/apex-kernel.md`
+- `../../operations/monitoring/health-checks.md`
+- `../../operations/monitoring/monitoring-observability.md`
+- `../../dashboard/dashboard-workspaces.md`
 
 ## Operational Contract
 Defines the live system view of active chains, plugins, workers, wallets, provider capabilities, health, and metrics.

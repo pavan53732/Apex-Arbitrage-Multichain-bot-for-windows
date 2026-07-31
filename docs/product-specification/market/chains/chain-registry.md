@@ -57,7 +57,7 @@ This registry is descriptive and feeds chain integration, routing, wallet, gas, 
 - `../routing/routing-engine.md`
 - `../../execution/wallet-portfolio/wallet-management.md`
 - `../routing/gas-optimisation.md`
-- `../../data/database-schema.md`
+- `../../data/persistence/database-schema.md`
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.

@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/state-management.md
+canonical_source: docs/product-specification/data/state/state-management.md
 related_concepts:
   - CONCEPT-0267
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0435
 validator_coverage: []
 supersedes: []
 superseded_by: []

@@ -395,7 +395,7 @@ A strong provider abstraction is essential because APEX depends on AI for orches
 ## Cross-references
 - `../runtime/ai-pipeline.md`
 - `./ai-settings.md`
-- `../../configuration/configuration.md`
+- `../../configuration/core/configuration.md`
 - `../../security/security.md`
 - `../../operations/monitoring/monitoring-observability.md`
 - `../../performance/performance-targets.md`

@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Config Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/feature-flag-governance-and-rollout-matrix.md
+canonical_source: docs/product-specification/configuration/features/feature-flag-governance-and-rollout-matrix.md
 related_concepts:
   - CONCEPT-0382
 dependencies: []

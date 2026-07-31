@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/data-governance.md
+canonical_source: docs/product-specification/data/knowledge/data-governance.md
 related_concepts:
   - CONCEPT-0272
 dependencies: []
@@ -59,10 +59,10 @@ Invalid source, stale cache, broken provenance, incompatible schema.
 Reject invalid records, refresh from source, and replay lineage from durable storage.
 
 ## Cross-references
-- `../market/core/market-data.md`
+- `../../market/core/market-data.md`
 - `./knowledge-graph.md`
-- `../ai/memory/ai-memory-system.md`
-- `./registry-system.md`
+- `../../ai/memory/ai-memory-system.md`
+- `../registries/registry-system.md`
 
 ## Governance Rules
 Defines data quality, lineage, retention, access control, and stewardship expectations.

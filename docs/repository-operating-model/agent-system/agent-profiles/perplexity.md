@@ -54,7 +54,7 @@ Guidance for PERPLEXITY coding agents contributing to this repository.
 - `../../../product-specification/operations/reliability/runtime-operations.md`
 - `../../../product-specification/execution/trading/trading-lifecycle.md`
 - `../../../product-specification/execution/transactions/execution-lifecycle.md`
-- `../../../product-specification/data/database-schema.md`
+- `../../../product-specification/data/persistence/database-schema.md`
 - `../../../product-specification/security/security-contracts.md`
 
 ## Working rule

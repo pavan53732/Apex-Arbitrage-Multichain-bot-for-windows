@@ -9,7 +9,7 @@ authority: Reference
 status: Active
 owner: Config Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/configuration.md
+canonical_source: docs/product-specification/configuration/core/configuration.md
 related_concepts:
   - CONCEPT-0381
 dependencies:
@@ -57,9 +57,9 @@ Fallback to safe defaults and validate merged config.
 
 ## Cross-references
 - `./configuration.md`
-- `../ai/providers/ai-settings.md`
-- `../dashboard/dashboard-workspaces.md`
-- `../../historical/traceability-matrix.md`
+- `../../ai/providers/ai-settings.md`
+- `../../dashboard/dashboard-workspaces.md`
+- `../../../historical/traceability-matrix.md`
 
 ## Governance Rules
 Defines named configuration bundles, defaults, overrides, environment targeting, and validation.

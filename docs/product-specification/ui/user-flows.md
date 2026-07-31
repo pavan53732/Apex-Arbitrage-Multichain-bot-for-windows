@@ -152,7 +152,7 @@ Completion criteria: settings confirmed.
 - `../operations/reliability/runtime-operations.md`
 - `../ai/runtime/ai-pipeline.md`
 - `../security/security.md`
-- `../configuration/configuration.md`
+- `../configuration/core/configuration.md`
 - `../dashboard/dashboard-layout.md`
 - `../dashboard/dashboard-widgets.md`
 - `./ux-guidelines.md`

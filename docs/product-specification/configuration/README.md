@@ -9,7 +9,7 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/configuration.md
+canonical_source: docs/product-specification/configuration/core/configuration.md
 related_concepts:
   - CONCEPT-0381
 dependencies:
@@ -27,36 +27,24 @@ owned_domains: []
 
 ## Purpose and scope
 
-Configuration profiles, feature flags, capability registries, and config reference behavior.
+Configuration documentation grouped into semantic subdomains for scalable navigation.
 
-## Document classes expected
+## What belongs here
 
-- Index
-- Guide
-- Reference
-- Specification where this folder owns a canonical boundary
-- Registry only in registry folders
-- Historical only in historical folders
-- Generated only in generated folders
-
-## Canonical boundaries
-
-Configuration specifications and registries.
+Product configuration specifications, references, indexes, and registry-owned material.
 
 ## What does not belong here
 
-Repository agent settings.
+Repository operating model documents or unrelated product domain behavior.
 
-## Documents
+## Subdomains
 
-| Document ID | Title | Class | Authority | Status |
-| --- | --- | --- | --- | --- |
-| DOC-0359 | [Contract Management](./contract-management.md) | Specification | Canonical | Active |
-| DOC-0381 | [Configuration](./configuration.md) | Specification | Canonical | Active |
-| DOC-0382 | [Feature Flag Governance And Rollout Matrix](./feature-flag-governance-and-rollout-matrix.md) | Specification | Canonical | Active |
-| DOC-0383 | [Contract Registry](./contract-registry.md) | Registry | Canonical | Active |
-| DOC-0384 | [System Capability Registry](./system-capability-registry.md) | Registry | Canonical | Active |
-| DOC-0386 | [Configuration Profiles](./configuration-profiles.md) | Reference | Canonical | Active |
-| DOC-0387 | [Configuration Reference](./configuration-reference.md) | Reference | Canonical | Active |
-| DOC-0388 | [Feature Flags](./feature-flags.md) | Reference | Canonical | Active |
-| DOC-0389 | [Feature Gates](./feature-gates.md) | Reference | Canonical | Active |
+| Subdomain | README |
+| --- | --- |
+| core | [Core README](core/README.md) |
+| features | [Features README](features/README.md) |
+| registries | [Registries README](registries/README.md) |
+
+## Document creation rule
+
+Before adding a document here, identify the active concept owner and place the document in the matching subdomain.

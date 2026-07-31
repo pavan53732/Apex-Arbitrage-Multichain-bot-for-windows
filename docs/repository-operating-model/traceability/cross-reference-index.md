@@ -214,19 +214,19 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0262 | [Interface Provider Adapter](../../product-specification/interfaces/adapters/interface-provider-adapter.md) | Owner | CONCEPT-0262 |  | DOC-0425 |
 | DOC-0263 | [Interface Tool Call](../../product-specification/interfaces/messages/interface-tool-call.md) | Owner | CONCEPT-0263 |  |  |
 | DOC-0264 | [IPC Message Catalog](../../product-specification/interfaces/ipc/ipc-message-catalog.md) | Reference | CONCEPT-0254 | DOC-0254 |  |
-| DOC-0265 | [Cache Manager](../../product-specification/data/cache-manager.md) | Owner | CONCEPT-0265 |  |  |
-| DOC-0266 | [Database Schema](../../product-specification/data/database-schema.md) | Owner | CONCEPT-0266 |  | DOC-0269 |
-| DOC-0267 | [State Management](../../product-specification/data/state-management.md) | Owner | CONCEPT-0267 |  |  |
-| DOC-0268 | [Data Ownership](../../product-specification/data/data-ownership.md) | Owner | CONCEPT-0268 |  |  |
+| DOC-0265 | [Cache Manager](../../product-specification/data/state/cache-manager.md) | Owner | CONCEPT-0265 |  |  |
+| DOC-0266 | [Database Schema](../../product-specification/data/persistence/database-schema.md) | Owner | CONCEPT-0266 |  | DOC-0269, DOC-0433 |
+| DOC-0267 | [State Management](../../product-specification/data/state/state-management.md) | Owner | CONCEPT-0267 |  | DOC-0435 |
+| DOC-0268 | [Data Ownership](../../product-specification/data/knowledge/data-ownership.md) | Owner | CONCEPT-0268 |  |  |
 | DOC-0269 | [Data README](../../product-specification/data/README.md) | Index | CONCEPT-0266 | DOC-0266 |  |
-| DOC-0270 | [Context Builder](../../product-specification/data/context-builder.md) | Owner | CONCEPT-0270 |  |  |
-| DOC-0271 | [Data Flow](../../product-specification/data/data-flow.md) | Owner | CONCEPT-0271 |  |  |
-| DOC-0272 | [Data Governance](../../product-specification/data/data-governance.md) | Owner | CONCEPT-0272 |  |  |
-| DOC-0273 | [Decision Ledger](../../product-specification/data/decision-ledger.md) | Owner | CONCEPT-0273 |  |  |
-| DOC-0274 | [File Storage](../../product-specification/data/file-storage.md) | Owner | CONCEPT-0274 |  |  |
-| DOC-0275 | [Knowledge Graph](../../product-specification/data/knowledge-graph.md) | Owner | CONCEPT-0275 |  |  |
-| DOC-0276 | [Registry System](../../product-specification/data/registry-system.md) | Owner | CONCEPT-0276 |  |  |
-| DOC-0277 | [Runtime Knowledge](../../product-specification/data/runtime-knowledge.md) | Owner | CONCEPT-0277 |  |  |
+| DOC-0270 | [Context Builder](../../product-specification/data/knowledge/context-builder.md) | Owner | CONCEPT-0270 |  |  |
+| DOC-0271 | [Data Flow](../../product-specification/data/knowledge/data-flow.md) | Owner | CONCEPT-0271 |  |  |
+| DOC-0272 | [Data Governance](../../product-specification/data/knowledge/data-governance.md) | Owner | CONCEPT-0272 |  |  |
+| DOC-0273 | [Decision Ledger](../../product-specification/data/state/decision-ledger.md) | Owner | CONCEPT-0273 |  |  |
+| DOC-0274 | [File Storage](../../product-specification/data/persistence/file-storage.md) | Owner | CONCEPT-0274 |  |  |
+| DOC-0275 | [Knowledge Graph](../../product-specification/data/knowledge/knowledge-graph.md) | Owner | CONCEPT-0275 |  | DOC-0432 |
+| DOC-0276 | [Registry System](../../product-specification/data/registries/registry-system.md) | Owner | CONCEPT-0276 |  | DOC-0434 |
+| DOC-0277 | [Runtime Knowledge](../../product-specification/data/state/runtime-knowledge.md) | Owner | CONCEPT-0277 |  |  |
 | DOC-0278 | [Arbitrage Window Manager](../../product-specification/execution/trading/arbitrage-window-manager.md) | Owner | CONCEPT-0278 |  |  |
 | DOC-0279 | [Decision Engine](../../product-specification/execution/risk-policy/decision-engine.md) | Owner | CONCEPT-0279 |  |  |
 | DOC-0280 | [Execution Engine](../../product-specification/execution/transactions/execution-engine.md) | Owner | CONCEPT-0280 |  | DOC-0420 |
@@ -308,7 +308,7 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0356 | [Performance SLOs](../../product-specification/performance/performance-slos.md) | Owner | CONCEPT-0356 |  | DOC-0354, DOC-0357 |
 | DOC-0357 | [Performance Targets](../../product-specification/performance/performance-targets.md) | Reference | CONCEPT-0356 | DOC-0356 |  |
 | DOC-0358 | [Resource Budget Specification](../../product-specification/performance/resource-budget-specification.md) | Owner | CONCEPT-0358 |  |  |
-| DOC-0359 | [Contract Management](../../product-specification/configuration/contract-management.md) | Owner | CONCEPT-0359 |  |  |
+| DOC-0359 | [Contract Management](../../product-specification/configuration/registries/contract-management.md) | Owner | CONCEPT-0359 |  |  |
 | DOC-0360 | [Product Specification README](../../product-specification/README.md) | Index | CONCEPT-0079 | DOC-0079 |  |
 | DOC-0361 | [Reference README](../../product-specification/reference/README.md) | Index | CONCEPT-0368 | DOC-0368 |  |
 | DOC-0362 | [Error Codes](../../product-specification/operations/diagnostics/error-codes.md) | Reference | CONCEPT-0334 | DOC-0334 |  |
@@ -330,15 +330,15 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0378 | [Worker State Machine](../../product-specification/state-machines/worker-state-machine.md) | Owner | CONCEPT-0378 |  |  |
 | DOC-0379 | [System Wide State Machine Index](../../product-specification/state-machines/state-machine-index.md) | Owner | CONCEPT-0379 |  | DOC-0380 |
 | DOC-0380 | [State Machines README](../../product-specification/state-machines/README.md) | Index | CONCEPT-0379 | DOC-0379 |  |
-| DOC-0381 | [Configuration](../../product-specification/configuration/configuration.md) | Owner | CONCEPT-0381 |  | DOC-0385, DOC-0386, DOC-0387 |
-| DOC-0382 | [Feature Flag Governance And Rollout Matrix](../../product-specification/configuration/feature-flag-governance-and-rollout-matrix.md) | Owner | CONCEPT-0382 |  |  |
-| DOC-0383 | [Contract Registry](../../product-specification/configuration/contract-registry.md) | Owner | CONCEPT-0383 |  |  |
-| DOC-0384 | [System Capability Registry](../../product-specification/configuration/system-capability-registry.md) | Owner | CONCEPT-0384 |  |  |
+| DOC-0381 | [Configuration](../../product-specification/configuration/core/configuration.md) | Owner | CONCEPT-0381 |  | DOC-0385, DOC-0386, DOC-0387, DOC-0429 |
+| DOC-0382 | [Feature Flag Governance And Rollout Matrix](../../product-specification/configuration/features/feature-flag-governance-and-rollout-matrix.md) | Owner | CONCEPT-0382 |  |  |
+| DOC-0383 | [Contract Registry](../../product-specification/configuration/registries/contract-registry.md) | Owner | CONCEPT-0383 |  | DOC-0431 |
+| DOC-0384 | [System Capability Registry](../../product-specification/configuration/registries/system-capability-registry.md) | Owner | CONCEPT-0384 |  |  |
 | DOC-0385 | [Configuration README](../../product-specification/configuration/README.md) | Index | CONCEPT-0381 | DOC-0381 |  |
-| DOC-0386 | [Configuration Profiles](../../product-specification/configuration/configuration-profiles.md) | Reference | CONCEPT-0381 | DOC-0381 |  |
-| DOC-0387 | [Configuration Reference](../../product-specification/configuration/configuration-reference.md) | Reference | CONCEPT-0381 | DOC-0381 |  |
-| DOC-0388 | [Feature Flags](../../product-specification/configuration/feature-flags.md) | Owner | CONCEPT-0388 |  | DOC-0389 |
-| DOC-0389 | [Feature Gates](../../product-specification/configuration/feature-gates.md) | Reference | CONCEPT-0388 | DOC-0388 |  |
+| DOC-0386 | [Configuration Profiles](../../product-specification/configuration/core/configuration-profiles.md) | Reference | CONCEPT-0381 | DOC-0381 |  |
+| DOC-0387 | [Configuration Reference](../../product-specification/configuration/core/configuration-reference.md) | Reference | CONCEPT-0381 | DOC-0381 |  |
+| DOC-0388 | [Feature Flags](../../product-specification/configuration/features/feature-flags.md) | Owner | CONCEPT-0388 |  | DOC-0389, DOC-0430 |
+| DOC-0389 | [Feature Gates](../../product-specification/configuration/features/feature-gates.md) | Reference | CONCEPT-0388 | DOC-0388 |  |
 | DOC-0390 | [UI Component Spec](../../product-specification/ui/ui-component-spec.md) | Owner | CONCEPT-0390 |  | DOC-0391 |
 | DOC-0391 | [UI README](../../product-specification/ui/README.md) | Index | CONCEPT-0390 | DOC-0390 |  |
 | DOC-0392 | [User Guide](../../product-specification/ui/user-guide.md) | Owner | CONCEPT-0392 |  |  |
@@ -378,3 +378,10 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0426 | [Interface API README](../../product-specification/interfaces/api/README.md) | Index | CONCEPT-0251 | DOC-0251 |  |
 | DOC-0427 | [Interface IPC README](../../product-specification/interfaces/ipc/README.md) | Index | CONCEPT-0254 | DOC-0254 |  |
 | DOC-0428 | [Interface Messages README](../../product-specification/interfaces/messages/README.md) | Index | CONCEPT-0255 | DOC-0255 |  |
+| DOC-0429 | [Configuration Core README](../../product-specification/configuration/core/README.md) | Index | CONCEPT-0381 | DOC-0381 |  |
+| DOC-0430 | [Configuration Features README](../../product-specification/configuration/features/README.md) | Index | CONCEPT-0388 | DOC-0388 |  |
+| DOC-0431 | [Configuration Registries README](../../product-specification/configuration/registries/README.md) | Index | CONCEPT-0383 | DOC-0383 |  |
+| DOC-0432 | [Data Knowledge README](../../product-specification/data/knowledge/README.md) | Index | CONCEPT-0275 | DOC-0275 |  |
+| DOC-0433 | [Data Persistence README](../../product-specification/data/persistence/README.md) | Index | CONCEPT-0266 | DOC-0266 |  |
+| DOC-0434 | [Data Registries README](../../product-specification/data/registries/README.md) | Index | CONCEPT-0276 | DOC-0276 |  |
+| DOC-0435 | [Data State README](../../product-specification/data/state/README.md) | Index | CONCEPT-0267 | DOC-0267 |  |

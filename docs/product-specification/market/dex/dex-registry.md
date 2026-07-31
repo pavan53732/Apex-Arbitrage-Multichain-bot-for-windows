@@ -55,7 +55,7 @@ This registry is descriptive and feeds routing, liquidity, execution, and market
 - `../routing/routing-engine.md`
 - `../routing/liquidity-analysis.md`
 - `../core/market-data.md`
-- `../../data/database-schema.md`
+- `../../data/persistence/database-schema.md`
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.

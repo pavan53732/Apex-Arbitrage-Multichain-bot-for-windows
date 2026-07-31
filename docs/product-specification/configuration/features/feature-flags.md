@@ -9,12 +9,13 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/feature-flags.md
+canonical_source: docs/product-specification/configuration/features/feature-flags.md
 related_concepts:
   - CONCEPT-0388
 dependencies: []
 consumers:
   - DOC-0389
+  - DOC-0430
 validator_coverage: []
 supersedes: []
 superseded_by: []
@@ -58,9 +59,9 @@ Unsafe rollout, invalid default, conflicting environment override.
 Rollback, disable, or pin to previous version.
 
 ## Cross-references
-- `./configuration.md`
-- `../execution/risk-policy/policy-engine.md`
-- `../deployment/versioning.md`
+- `../core/configuration.md`
+- `../../execution/risk-policy/policy-engine.md`
+- `../../deployment/versioning.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

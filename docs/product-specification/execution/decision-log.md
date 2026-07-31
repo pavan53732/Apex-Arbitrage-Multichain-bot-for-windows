@@ -79,7 +79,7 @@ Append operations must remain low-latency and queryable at scale.
 Alternative indexes, export formats, and enriched summaries.
 
 ## Cross references
-- `../data/decision-ledger.md`
+- `../data/state/decision-ledger.md`
 - `../ai/explainability/governance-explainability.md`
 - `../ai/explainability/explainability.md`
 - `AUDIT-TRAIL` (future owner if introduced)

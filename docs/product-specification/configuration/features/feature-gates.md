@@ -9,7 +9,7 @@ authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/feature-flags.md
+canonical_source: docs/product-specification/configuration/features/feature-flags.md
 related_concepts:
   - CONCEPT-0388
 dependencies:

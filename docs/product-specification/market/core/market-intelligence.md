@@ -168,7 +168,7 @@ Validation: risk output must align with risk-engine thresholds.
 - `../opportunities/opportunity-detection.md`
 - `../opportunities/opportunity-ranking.md`
 - `../../execution/trading/strategies.md`
-- `../../data/database-schema.md`
+- `../../data/persistence/database-schema.md`
 - `../../operations/monitoring/monitoring-observability.md`
 
 ## Operational Contract

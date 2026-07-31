@@ -58,7 +58,7 @@ stateDiagram-v2
 ## Cross-references
 - `../dashboard/dashboard-workspaces.md`
 - `../windows/windows-desktop.md`
-- `../configuration/configuration-profiles.md`
+- `../configuration/core/configuration-profiles.md`
 
 ## Operational Contract
 Defines workspace composition, layout, settings, dashboard bindings, provider selection, and recovery state.

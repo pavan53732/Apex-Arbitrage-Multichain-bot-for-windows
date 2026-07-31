@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.1
-canonical_source: docs/product-specification/configuration/contract-management.md
+canonical_source: docs/product-specification/configuration/registries/contract-management.md
 related_concepts:
   - CONCEPT-0359
 dependencies: []
@@ -63,9 +63,9 @@ New deployments are selected via configuration and governance approval, not auto
 Must be secured with multi-sig and emergency pause controls.
 
 ## Cross-references
-- `../security/security-contracts.md`
-- `../market/chains/chain-registry.md`
-- `../runtime/orchestrator.md`
+- `../../security/security-contracts.md`
+- `../../market/chains/chain-registry.md`
+- `../../runtime/orchestrator.md`
 
 ## Governance Rules
 Defines contract lifecycle handling, deployment references, upgrades, deprecation, and address safety.

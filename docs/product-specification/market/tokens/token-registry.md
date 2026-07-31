@@ -56,7 +56,7 @@ This registry is descriptive and feeds market data, routing, wallet, portfolio, 
 - `../../execution/wallet-portfolio/asset-management.md`
 - `../../execution/wallet-portfolio/portfolio-management.md`
 - `../../execution/wallet-portfolio/wallet-management.md`
-- `../../data/database-schema.md`
+- `../../data/persistence/database-schema.md`
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.

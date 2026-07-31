@@ -51,8 +51,8 @@ Guidance for OpenCode-based coding agents contributing to this repository.
 - `../../../product-specification/architecture/architecture.md`
 - `../../../product-specification/operations/reliability/runtime-operations.md`
 - `../../../product-specification/ai/runtime/ai-pipeline.md`
-- `../../../product-specification/data/cache-manager.md`
-- `../../../product-specification/data/database-schema.md`
+- `../../../product-specification/data/state/cache-manager.md`
+- `../../../product-specification/data/persistence/database-schema.md`
 - `../../../product-specification/security/security-contracts.md`
 
 ## Working rule

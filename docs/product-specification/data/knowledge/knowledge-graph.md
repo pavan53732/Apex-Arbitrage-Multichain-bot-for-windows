@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/knowledge-graph.md
+canonical_source: docs/product-specification/data/knowledge/knowledge-graph.md
 related_concepts:
   - CONCEPT-0275
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0432
 validator_coverage: []
 supersedes: []
 superseded_by: []
@@ -54,10 +55,10 @@ Stale node, broken edge, duplicate entity, invalid relation, version drift.
 Refresh source nodes, revalidate relations, and isolate stale subgraphs.
 
 ## Cross-references
-- `../ai/memory/ai-memory-system.md`
-- `../market/chains/chain-intelligence.md`
-- `../market/core/market-intelligence.md`
-- `../interfaces/api/domain-model.md`
+- `../../ai/memory/ai-memory-system.md`
+- `../../market/chains/chain-intelligence.md`
+- `../../market/core/market-intelligence.md`
+- `../../interfaces/api/domain-model.md`
 
 For data governance, see `./data-governance.md`.
 ## Governance Rules

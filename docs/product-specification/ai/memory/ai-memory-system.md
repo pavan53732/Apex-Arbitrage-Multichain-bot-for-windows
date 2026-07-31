@@ -83,10 +83,10 @@ Fast retrieval for active layers and bounded summarization latency.
 New memory layers, summarizers, indexing strategies, and privacy policies.
 
 ## Cross references
-- `../../data/context-builder.md`
+- `../../data/knowledge/context-builder.md`
 - `../knowledge/ai-knowledge-index.md`
 - `../learning/learning-pipeline.md`
-- `../../data/knowledge-graph.md`
+- `../../data/knowledge/knowledge-graph.md`
 
 ## Implementation constraints
 Memory semantics must remain independent of any AI provider.

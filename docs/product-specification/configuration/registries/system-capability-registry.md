@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/system-capability-registry.md
+canonical_source: docs/product-specification/configuration/registries/system-capability-registry.md
 related_concepts:
   - CONCEPT-0384
 dependencies: []
@@ -57,10 +57,10 @@ Wrong capability label, stale capability, incompatible version.
 Re-scan adapters, revalidate manifests, and suspend stale capabilities.
 
 ## Cross-references
-- `../data/registry-system.md`
-- `../plugins/plugin-sdk.md`
-- `../ai/providers/ai-provider-manager.md`
-- `../ai/runtime/ai-gateway.md`
+- `../../data/registries/registry-system.md`
+- `../../plugins/plugin-sdk.md`
+- `../../ai/providers/ai-provider-manager.md`
+- `../../ai/runtime/ai-gateway.md`
 
 ## Required details
 - Define platform capabilities and runtime features.

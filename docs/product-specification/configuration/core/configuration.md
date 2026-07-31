@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Config Team
 version: 1.1.0
-canonical_source: docs/product-specification/configuration/configuration.md
+canonical_source: docs/product-specification/configuration/core/configuration.md
 related_concepts:
   - CONCEPT-0381
 dependencies: []
@@ -17,6 +17,7 @@ consumers:
   - DOC-0385
   - DOC-0386
   - DOC-0387
+  - DOC-0429
 validator_coverage: []
 supersedes: []
 superseded_by: []

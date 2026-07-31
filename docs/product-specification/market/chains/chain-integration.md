@@ -406,7 +406,7 @@ When a chain is no longer viable (low liquidity, abandoned, exploited):
 - `../../execution/wallet-portfolio/wallet-management.md`
 - `../routing/gas-optimisation.md`
 - `../../operations/monitoring/monitoring-observability.md`
-- `../../data/database-schema.md`
+- `../../data/persistence/database-schema.md`
 - `./chain-registry.md`
 
 ## Operational Contract

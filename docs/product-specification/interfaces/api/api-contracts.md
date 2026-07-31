@@ -123,7 +123,7 @@ Trading-related contracts must include:
 ## Cross-References
 - [`../ipc/ipc-protocol.md`](../ipc/ipc-protocol.md)
 - [`../../architecture/module-dependency.md`](../../architecture/module-dependency.md)
-- [`../../data/state-management.md`](../../data/state-management.md)
+- [`../../data/state/state-management.md`](../../data/state/state-management.md)
 - [`../../operations/diagnostics/error-handling-and-logging.md`](../../operations/diagnostics/error-handling-and-logging.md)
 
 ## Cross-references

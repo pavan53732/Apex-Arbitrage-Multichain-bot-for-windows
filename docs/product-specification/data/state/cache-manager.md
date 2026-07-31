@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/cache-manager.md
+canonical_source: docs/product-specification/data/state/cache-manager.md
 related_concepts:
   - CONCEPT-0265
 dependencies: []
@@ -44,8 +44,8 @@ Cross-cutting platform governance.
 Define ownership, contracts, lifecycle, validation, and cross-references.
 
 ## Cross-references
-- `../architecture/apex-os.md`
-- `../architecture/architecture.md`
+- `../../architecture/apex-os.md`
+- `../../architecture/architecture.md`
 
 ## Operational Contract
 Defines cache ownership, TTL, invalidation, compression, and recovery for price, pool, ABI, token, AI, and RPC caches.

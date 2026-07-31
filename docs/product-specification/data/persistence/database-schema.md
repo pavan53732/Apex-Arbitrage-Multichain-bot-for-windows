@@ -9,12 +9,13 @@ authority: Canonical
 status: Active
 owner: Data Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/database-schema.md
+canonical_source: docs/product-specification/data/persistence/database-schema.md
 related_concepts:
   - CONCEPT-0266
 dependencies: []
 consumers:
   - DOC-0269
+  - DOC-0433
 validator_coverage: []
 supersedes: []
 superseded_by: []
