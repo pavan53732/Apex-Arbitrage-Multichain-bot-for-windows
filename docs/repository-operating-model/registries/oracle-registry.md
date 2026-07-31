@@ -2,7 +2,7 @@
 metadata_schema_version: 1.0
 document_id: DOC-0308
 title: Oracle Registry
-plane: Repository Operating Model
+plane: Product Specification
 domain: Market
 class: Registry
 authority: Canonical

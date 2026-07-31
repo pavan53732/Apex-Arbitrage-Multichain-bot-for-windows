@@ -75,7 +75,16 @@ class ValidatorRunner:
     """Orchestrates validator execution in fixed order."""
 
     # Fixed execution order per Validation Specification
-    VALIDATOR_SEQUENCE = ["VAL-007"]
+    VALIDATOR_SEQUENCE = [
+        "VAL-006",  # Generated Artifact Guard (FAIL-FAST)
+        "VAL-002",  # Metadata Validator
+        "VAL-001",  # Cross-Reference Validator
+        "VAL-004",  # Registry Consistency Validator
+        "VAL-003",  # Concept Uniqueness Validator
+        "VAL-008",  # Traceability Validator
+        "VAL-005",  # Orphan Detector
+        "VAL-007",  # Document-Class Validator
+    ]
     FAIL_FAST_VALIDATORS = {"VAL-006"}
 
     # Module mapping

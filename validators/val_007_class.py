@@ -61,6 +61,10 @@ class Validator(BaseValidator):
             if not metadata:
                 continue  # Already caught by VAL-002
 
+            # Metadata is optional at this layer because VAL-002 owns metadata
+            # validity. Use a stable fallback so class checks can report malformed
+            # but parseable documents without raising formatting errors.
+            doc_id = metadata.get("document_id", "unknown")
             plane = metadata.get("plane", "")
             domain = metadata.get("domain", "")
             doc_class = metadata.get("class", "")
@@ -73,7 +77,7 @@ class Validator(BaseValidator):
                     code=ErrorCode.PLANE_BOUNDARY_VIOLATION,
                     file=rel_str,
                     line=1,
-                    message=format_error(ErrorCode.PLANE_BOUNDARY_VIOLATION, plane=plane, domain=domain),
+                    message=format_error(ErrorCode.PLANE_BOUNDARY_VIOLATION, doc_id=doc_id, plane=plane, domain=domain),
                     severity="ERROR",
                     rule="Repository Operating Model documents cannot have Product Specification domains",
                     suggestion=f"Change plane to 'Product Specification' or domain to ROM domain"
@@ -84,7 +88,7 @@ class Validator(BaseValidator):
                     code=ErrorCode.PLANE_BOUNDARY_VIOLATION,
                     file=rel_str,
                     line=1,
-                    message=format_error(ErrorCode.PLANE_BOUNDARY_VIOLATION, plane=plane, domain=domain),
+                    message=format_error(ErrorCode.PLANE_BOUNDARY_VIOLATION, doc_id=doc_id, plane=plane, domain=domain),
                     severity="ERROR",
                     rule="Product Specification documents cannot have Repository Operating Model domains",
                     suggestion=f"Change plane to 'Repository Operating Model' or domain to PS domain"

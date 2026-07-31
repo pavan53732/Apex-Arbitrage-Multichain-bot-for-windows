@@ -2,7 +2,7 @@
 metadata_schema_version: 1.0
 document_id: DOC-0309
 title: Token Registry
-plane: Repository Operating Model
+plane: Product Specification
 domain: Market
 class: Registry
 authority: Canonical
