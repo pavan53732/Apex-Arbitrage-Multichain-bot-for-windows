@@ -37,7 +37,7 @@ This document is an overview, reference, or index as noted below.
 Defines DEX-level liquidity, TVL, fees, latency, pools, performance, and supported-token views.
 
 ## Cross-references
-- `../../interfaces/domain-model.md`
+- `../../interfaces/api/domain-model.md`
 - `../../operations/monitoring/metrics.md`
 
 ## Operational Contract

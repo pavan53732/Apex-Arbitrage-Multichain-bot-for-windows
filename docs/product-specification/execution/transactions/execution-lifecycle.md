@@ -68,7 +68,7 @@ stateDiagram-v2
 ## Cross-references
 - `../trading/trading-lifecycle.md`
 - `../../runtime/orchestrator.md`
-- `../../interfaces/domain-model.md`
+- `../../interfaces/api/domain-model.md`
 
 ## Operational Contract
 Defines the lifecycle from pre-checks through simulation, approval, submission, confirmation, and post-trade reconciliation.

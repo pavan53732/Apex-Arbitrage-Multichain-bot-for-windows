@@ -9,12 +9,13 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/api-contracts.md
+canonical_source: docs/product-specification/interfaces/api/api-contracts.md
 related_concepts:
   - CONCEPT-0251
 dependencies: []
 consumers:
   - DOC-0257
+  - DOC-0426
 validator_coverage: []
 supersedes: []
 superseded_by: []
@@ -38,7 +39,7 @@ This document is an overview, reference, or index as noted below.
 # API-CONTRACTS.md
 
 ## Purpose
-Defines internal service API contracts and external adapter contracts for APEX. This file is the contract-level counterpart to [`./ipc-protocol.md`](./ipc-protocol.md) and [`../architecture/project-structure.md`](../architecture/project-structure.md).
+Defines internal service API contracts and external adapter contracts for APEX. This file is the contract-level counterpart to [`../ipc/ipc-protocol.md`](../ipc/ipc-protocol.md) and [`../../architecture/project-structure.md`](../../architecture/project-structure.md).
 
 ## Scope
 Service interfaces, repository contracts, provider contracts, return-shape conventions, error semantics, and lifecycle expectations.
@@ -120,13 +121,13 @@ Trading-related contracts must include:
 - Deprecated contracts must be documented with replacement and removal timeline.
 
 ## Cross-References
-- [`./ipc-protocol.md`](./ipc-protocol.md)
-- [`../architecture/module-dependency.md`](../architecture/module-dependency.md)
-- [`../data/state-management.md`](../data/state-management.md)
-- [`../operations/diagnostics/error-handling-and-logging.md`](../operations/diagnostics/error-handling-and-logging.md)
+- [`../ipc/ipc-protocol.md`](../ipc/ipc-protocol.md)
+- [`../../architecture/module-dependency.md`](../../architecture/module-dependency.md)
+- [`../../data/state-management.md`](../../data/state-management.md)
+- [`../../operations/diagnostics/error-handling-and-logging.md`](../../operations/diagnostics/error-handling-and-logging.md)
 
 ## Cross-references
-- `../deployment/versioning.md`
+- `../../deployment/versioning.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/interface-agent-message.md
+canonical_source: docs/product-specification/interfaces/messages/interface-agent-message.md
 related_concepts:
   - CONCEPT-0260
 dependencies: []
@@ -60,8 +60,8 @@ Defines the canonical agent message envelope.
 - `payload` is required and must validate against the registered message type.
 
 ## Cross-references
-- `../ai/orchestration/ai-orchestration.md`
-- `../ai/orchestration/ai-agent-specification.md`
+- `../../ai/orchestration/ai-orchestration.md`
+- `../../ai/orchestration/ai-agent-specification.md`
 
 ## Interface Contract
 Defines message envelope, routing fields, correlation, priority, and validation rules for agent-to-agent messages.

@@ -1,7 +1,7 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0397
-title: Events README
+document_id: DOC-0428
+title: Interface Messages README
 plane: Product Specification
 domain: Interfaces
 class: Index
@@ -9,11 +9,11 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/events/event-bus.md
+canonical_source: docs/product-specification/interfaces/messages/interface-catalog.md
 related_concepts:
-  - CONCEPT-0253
+  - CONCEPT-0255
 dependencies:
-  - DOC-0253
+  - DOC-0255
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -23,19 +23,19 @@ concept_role: Index
 owned_domains: []
 ---
 
-# Interface Events
+# Interface Messages
 
 ## Purpose and scope
 
-Event bus, event flow, event ownership, and event catalog documentation.
+Interface message, tool-call, notification-channel, and interface catalog documentation.
 
 ## What belongs here
 
-Event interface references, event catalogs, event flow descriptions, and event ownership material.
+Message/interface catalogs and typed message boundary documents.
 
 ## What does not belong here
 
-Generic API, IPC, provider adapter, or product behavior documents that are not event-interface references.
+API transport, IPC runtime, or event bus behavior unless message contract ownership is explicit.
 
 ## Expected document classes
 
@@ -52,10 +52,10 @@ This folder indexes interface documents in this subdomain and defers behavior to
 
 | Document | Class |
 | --- | --- |
-| [Event Bus](./event-bus.md) | Specification |
-| [Event Catalog](event-catalog.md) | Reference |
-| [Event Flow](./event-flow.md) | Reference |
-| [Event Ownership Matrix](./event-ownership-matrix.md) | Reference |
+| [Interface Agent Message](./interface-agent-message.md) | Reference |
+| [Interface Catalog](./interface-catalog.md) | Index |
+| [Interface Notification Channel](./interface-notification-channel.md) | Reference |
+| [Interface Tool Call](./interface-tool-call.md) | Reference |
 
 ## Adjacent domains
 

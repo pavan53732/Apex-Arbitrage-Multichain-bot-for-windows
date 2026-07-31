@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/interface-provider-adapter.md
+canonical_source: docs/product-specification/interfaces/adapters/interface-provider-adapter.md
 related_concepts:
   - CONCEPT-0262
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0425
 validator_coverage: []
 supersedes: []
 superseded_by: []
@@ -49,9 +50,9 @@ Defines provider adapter request and response contracts.
 - `capabilities` must include streaming, tool_calling, embeddings, and vision flags.
 
 ## Cross-references
-- `../ai/providers/ai-provider-manager.md`
-- `../ai/runtime/ai-gateway.md`
-- `../ai/runtime/ai-pipeline.md`
+- `../../ai/providers/ai-provider-manager.md`
+- `../../ai/runtime/ai-gateway.md`
+- `../../ai/runtime/ai-pipeline.md`
 
 ## Interface Contract
 Defines provider adapter inputs, outputs, capability declarations, errors, and compatibility rules.

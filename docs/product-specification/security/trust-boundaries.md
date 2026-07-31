@@ -163,7 +163,7 @@ graph TD
 | **Medium** (suspicious pattern) | Log, warn operator, rate-limit the offending domain |
 | **Low** (schema validation failure) | Log, reject data, no further action |
 
-All violations emit a `security.violation` event (Exactly-once delivery, Critical priority — see `../interfaces/event-ownership-matrix.md`).
+All violations emit a `security.violation` event (Exactly-once delivery, Critical priority — see `../interfaces/events/event-ownership-matrix.md`).
 
 ---
 

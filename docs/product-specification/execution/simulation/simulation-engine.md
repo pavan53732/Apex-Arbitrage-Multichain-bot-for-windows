@@ -44,7 +44,7 @@ Defines paper trading, replay, stress testing, and synthetic failure simulation.
 - Consumes strategy, execution, AI, market, and runtime snapshots.
 
 ## Shared simulation contract
-Simulation entities and accuracy metrics are defined by `../../interfaces/domain-model.md` and `../../operations/monitoring/metrics.md`.
+Simulation entities and accuracy metrics are defined by `../../interfaces/api/domain-model.md` and `../../operations/monitoring/metrics.md`.
 Every simulation defines purpose, inputs, configuration, initial state, execution flow, expected outputs, validation criteria, success metrics, failure scenarios, and recovery behaviour.
 
 ## Determinism rules
@@ -296,16 +296,16 @@ Persist scenario ids, seeds, market snapshots, configuration hashes, code versio
 - `../../ai/runtime/ai-pipeline.md`
 - `../../testing/testing-guide.md`
 
-- `../../interfaces/domain-model.md`
+- `../../interfaces/api/domain-model.md`
 
 - `../../operations/monitoring/metrics.md`
 
 
-For canonical entities and performance tracking, see `../../interfaces/domain-model.md` and `../../operations/monitoring/metrics.md`.
+For canonical entities and performance tracking, see `../../interfaces/api/domain-model.md` and `../../operations/monitoring/metrics.md`.
 
 
 ## Enterprise Contract – Simulation Engine
-- Interfaces: `../../interfaces/interface-tool-call.md`.
+- Interfaces: `../../interfaces/messages/interface-tool-call.md`.
 - State machine: `../trading/trading-lifecycle.md`, `../transactions/execution-lifecycle.md`.
 - Security boundaries: `../../security/security-contracts.md`.
 - Performance SLOs: `../../performance/performance-slos.md`.

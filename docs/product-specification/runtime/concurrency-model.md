@@ -62,7 +62,7 @@ Defines concurrency primitives — locks, queues, cancellation, deadlock avoidan
 Producer → [SPSC Channel per Key Partition] → Consumer(s)
 ```
 
-- One SPSC channel per ordering key (see `../interfaces/event-ownership-matrix.md`).
+- One SPSC channel per ordering key (see `../interfaces/events/event-ownership-matrix.md`).
 - Events are enqueued lock-free on the producer side.
 - Consumer reads are blocking (condition variable wait) or timed.
 

@@ -37,7 +37,7 @@ This document is an overview, reference, or index as noted below.
 Defines wallet balances, approvals, positions, PnL, gas spent, assets, transaction history, allowance checking, and security alerts.
 
 ## Cross-references
-- `../../interfaces/domain-model.md`
+- `../../interfaces/api/domain-model.md`
 - `../../operations/monitoring/health-checks.md`
 
 

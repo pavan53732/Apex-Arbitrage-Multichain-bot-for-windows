@@ -61,7 +61,7 @@ If metadata source fails, use cached values and log a warning.
 ## Cross-references
 - `../core/market-data.md`
 - `../chains/chain-intelligence.md`
-- `../../interfaces/domain-model.md`
+- `../../interfaces/api/domain-model.md`
 
 ## Operational Contract
 Defines token enrichment, scoring inputs, validation, metadata aggregation, and downstream usage.

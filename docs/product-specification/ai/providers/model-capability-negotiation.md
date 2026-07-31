@@ -58,7 +58,7 @@ Downgrade features, switch providers, or reject unsupported capability use.
 ## Cross-references
 - `./ai-provider-manager.md`
 - `../runtime/ai-gateway.md`
-- `../../interfaces/interface-provider-adapter.md`
+- `../../interfaces/adapters/interface-provider-adapter.md`
 
 ## Governance Rules
 Defines how model requirements, tool support, limits, and fallback choices are negotiated.

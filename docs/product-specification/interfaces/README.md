@@ -9,7 +9,7 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/interface-catalog.md
+canonical_source: docs/product-specification/interfaces/messages/interface-catalog.md
 related_concepts:
   - CONCEPT-0255
 dependencies:
@@ -27,40 +27,26 @@ owned_domains: []
 
 ## Purpose and scope
 
-APIs, IPC, events, provider adapters, message catalogs, and contracts.
+APIs, IPC, events, adapters, message catalogs, and interface contracts for product boundaries.
 
-## Document classes expected
+## What belongs here
 
-- Index
-- Guide
-- Reference
-- Specification where this folder owns a canonical boundary
-- Registry only in registry folders
-- Historical only in historical folders
-- Generated only in generated folders
-
-## Canonical boundaries
-
-Interface specifications, catalogs, protocols, and message references.
+Product interface specifications and references. Runtime behavior, UI behavior, and market/execution logic belong in their owning product domains.
 
 ## What does not belong here
 
-Internal notes without contract boundaries.
+Implementation internals that do not define an interface boundary.
 
-## Documents
+## Subdomains
 
-| Document ID | Title | Class | Authority | Status |
-| --- | --- | --- | --- | --- |
-| DOC-0251 | [API Contracts](./api-contracts.md) | Specification | Canonical | Active |
-| DOC-0252 | [Domain Model](./domain-model.md) | Specification | Canonical | Active |
-| DOC-0253 | [Event Bus](./event-bus.md) | Specification | Canonical | Active |
-| DOC-0254 | [IPC Protocol](./ipc-protocol.md) | Specification | Canonical | Active |
-| DOC-0255 | [Interface Catalog](./interface-catalog.md) | Index | Canonical | Active |
-| DOC-0257 | [API Reference](./api-reference.md) | Reference | Canonical | Active |
-| DOC-0258 | [Event Flow](./event-flow.md) | Reference | Canonical | Active |
-| DOC-0259 | [Event Ownership Matrix](./event-ownership-matrix.md) | Reference | Canonical | Active |
-| DOC-0260 | [Interface Agent Message](./interface-agent-message.md) | Reference | Canonical | Active |
-| DOC-0261 | [Interface Notification Channel](./interface-notification-channel.md) | Reference | Canonical | Active |
-| DOC-0262 | [Interface Provider Adapter](./interface-provider-adapter.md) | Reference | Canonical | Active |
-| DOC-0263 | [Interface Tool Call](./interface-tool-call.md) | Reference | Canonical | Active |
-| DOC-0264 | [IPC Message Catalog](./ipc-message-catalog.md) | Reference | Canonical | Active |
+| Subdomain | README | Canonical owner |
+| --- | --- | --- |
+| adapters | [Interface Adapters README](adapters/README.md) | [Interface Provider Adapter](./adapters/interface-provider-adapter.md) |
+| api | [Interface API README](api/README.md) | [Api Contracts](./api/api-contracts.md) |
+| events | [Events README](events/README.md) | [Event Bus](./events/event-bus.md) |
+| ipc | [Interface IPC README](ipc/README.md) | [Ipc Protocol](./ipc/ipc-protocol.md) |
+| messages | [Interface Messages README](messages/README.md) | [Interface Catalog](./messages/interface-catalog.md) |
+
+## Document creation rule
+
+Before adding an interface document, identify the active interface concept owner and place the document in the matching subdomain. Do not create duplicate interface ownership documents.

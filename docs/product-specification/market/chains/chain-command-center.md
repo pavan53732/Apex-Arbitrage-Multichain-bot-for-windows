@@ -37,7 +37,7 @@ This document is an overview, reference, or index as noted below.
 Defines per-chain views for RPC, latency, gas, DEXs, flash loans, oracles, wallet balances, block height, and health.
 
 ## Cross-references
-- `../../interfaces/domain-model.md`
+- `../../interfaces/api/domain-model.md`
 - `../../operations/monitoring/metrics.md`
 - `../../operations/monitoring/health-checks.md`
 

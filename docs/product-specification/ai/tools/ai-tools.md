@@ -40,9 +40,9 @@ Defines every tool available to AI agents.
 Market search, risk query, wallet query, simulation, logs, configuration, notifications, charts, reports.
 
 ## Cross-references
-- `../../interfaces/interface-tool-call.md`
+- `../../interfaces/messages/interface-tool-call.md`
 - `../orchestration/ai-agent-specification.md`
-- `../../interfaces/api-reference.md`
+- `../../interfaces/api/api-reference.md`
 
 ## Governance Rules
 Defines the complete tool surface available to AI agents, including permissions, argument shapes, and result expectations.

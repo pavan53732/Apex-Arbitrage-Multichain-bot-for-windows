@@ -9,7 +9,7 @@ authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/event-bus.md
+canonical_source: docs/product-specification/interfaces/events/event-bus.md
 related_concepts:
   - CONCEPT-0253
 dependencies:

@@ -200,20 +200,20 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0248 | [Plugins README](../../product-specification/plugins/README.md) | Index | CONCEPT-0247 | DOC-0247 |  |
 | DOC-0249 | [App Builder Workflow](../../product-specification/plugins/app-builder-workflow.md) | Owner | CONCEPT-0249 |  |  |
 | DOC-0250 | [Plugin Marketplace](../../product-specification/plugins/plugin-marketplace.md) | Owner | CONCEPT-0250 |  |  |
-| DOC-0251 | [API Contracts](../../product-specification/interfaces/api-contracts.md) | Owner | CONCEPT-0251 |  | DOC-0257 |
-| DOC-0252 | [Domain Model](../../product-specification/interfaces/domain-model.md) | Owner | CONCEPT-0252 |  |  |
-| DOC-0253 | [Event Bus](../../product-specification/interfaces/event-bus.md) | Owner | CONCEPT-0253 |  | DOC-0258, DOC-0259, DOC-0363, DOC-0397 |
-| DOC-0254 | [IPC Protocol](../../product-specification/interfaces/ipc-protocol.md) | Owner | CONCEPT-0254 |  | DOC-0264 |
-| DOC-0255 | [Interface Catalog](../../product-specification/interfaces/interface-catalog.md) | Owner | CONCEPT-0255 |  | DOC-0256 |
+| DOC-0251 | [API Contracts](../../product-specification/interfaces/api/api-contracts.md) | Owner | CONCEPT-0251 |  | DOC-0257, DOC-0426 |
+| DOC-0252 | [Domain Model](../../product-specification/interfaces/api/domain-model.md) | Owner | CONCEPT-0252 |  |  |
+| DOC-0253 | [Event Bus](../../product-specification/interfaces/events/event-bus.md) | Owner | CONCEPT-0253 |  | DOC-0258, DOC-0259, DOC-0363, DOC-0397 |
+| DOC-0254 | [IPC Protocol](../../product-specification/interfaces/ipc/ipc-protocol.md) | Owner | CONCEPT-0254 |  | DOC-0264, DOC-0427 |
+| DOC-0255 | [Interface Catalog](../../product-specification/interfaces/messages/interface-catalog.md) | Owner | CONCEPT-0255 |  | DOC-0256, DOC-0428 |
 | DOC-0256 | [Interfaces README](../../product-specification/interfaces/README.md) | Index | CONCEPT-0255 | DOC-0255 |  |
-| DOC-0257 | [API Reference](../../product-specification/interfaces/api-reference.md) | Reference | CONCEPT-0251 | DOC-0251 |  |
-| DOC-0258 | [Event Flow](../../product-specification/interfaces/event-flow.md) | Reference | CONCEPT-0253 | DOC-0253 |  |
-| DOC-0259 | [Event Ownership Matrix](../../product-specification/interfaces/event-ownership-matrix.md) | Reference | CONCEPT-0253 | DOC-0253 |  |
-| DOC-0260 | [Interface Agent Message](../../product-specification/interfaces/interface-agent-message.md) | Owner | CONCEPT-0260 |  |  |
-| DOC-0261 | [Interface Notification Channel](../../product-specification/interfaces/interface-notification-channel.md) | Owner | CONCEPT-0261 |  |  |
-| DOC-0262 | [Interface Provider Adapter](../../product-specification/interfaces/interface-provider-adapter.md) | Owner | CONCEPT-0262 |  |  |
-| DOC-0263 | [Interface Tool Call](../../product-specification/interfaces/interface-tool-call.md) | Owner | CONCEPT-0263 |  |  |
-| DOC-0264 | [IPC Message Catalog](../../product-specification/interfaces/ipc-message-catalog.md) | Reference | CONCEPT-0254 | DOC-0254 |  |
+| DOC-0257 | [API Reference](../../product-specification/interfaces/api/api-reference.md) | Reference | CONCEPT-0251 | DOC-0251 |  |
+| DOC-0258 | [Event Flow](../../product-specification/interfaces/events/event-flow.md) | Reference | CONCEPT-0253 | DOC-0253 |  |
+| DOC-0259 | [Event Ownership Matrix](../../product-specification/interfaces/events/event-ownership-matrix.md) | Reference | CONCEPT-0253 | DOC-0253 |  |
+| DOC-0260 | [Interface Agent Message](../../product-specification/interfaces/messages/interface-agent-message.md) | Owner | CONCEPT-0260 |  |  |
+| DOC-0261 | [Interface Notification Channel](../../product-specification/interfaces/messages/interface-notification-channel.md) | Owner | CONCEPT-0261 |  |  |
+| DOC-0262 | [Interface Provider Adapter](../../product-specification/interfaces/adapters/interface-provider-adapter.md) | Owner | CONCEPT-0262 |  | DOC-0425 |
+| DOC-0263 | [Interface Tool Call](../../product-specification/interfaces/messages/interface-tool-call.md) | Owner | CONCEPT-0263 |  |  |
+| DOC-0264 | [IPC Message Catalog](../../product-specification/interfaces/ipc/ipc-message-catalog.md) | Reference | CONCEPT-0254 | DOC-0254 |  |
 | DOC-0265 | [Cache Manager](../../product-specification/data/cache-manager.md) | Owner | CONCEPT-0265 |  |  |
 | DOC-0266 | [Database Schema](../../product-specification/data/database-schema.md) | Owner | CONCEPT-0266 |  | DOC-0269 |
 | DOC-0267 | [State Management](../../product-specification/data/state-management.md) | Owner | CONCEPT-0267 |  |  |
@@ -374,3 +374,7 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0422 | [Operations Notifications README](../../product-specification/operations/notifications/README.md) | Index | CONCEPT-0345 | DOC-0345 |  |
 | DOC-0423 | [Operations Recovery README](../../product-specification/operations/recovery/README.md) | Index | CONCEPT-0337 | DOC-0337 |  |
 | DOC-0424 | [Operations Reliability README](../../product-specification/operations/reliability/README.md) | Index | CONCEPT-0338 | DOC-0338 |  |
+| DOC-0425 | [Interface Adapters README](../../product-specification/interfaces/adapters/README.md) | Index | CONCEPT-0262 | DOC-0262 |  |
+| DOC-0426 | [Interface API README](../../product-specification/interfaces/api/README.md) | Index | CONCEPT-0251 | DOC-0251 |  |
+| DOC-0427 | [Interface IPC README](../../product-specification/interfaces/ipc/README.md) | Index | CONCEPT-0254 | DOC-0254 |  |
+| DOC-0428 | [Interface Messages README](../../product-specification/interfaces/messages/README.md) | Index | CONCEPT-0255 | DOC-0255 |  |

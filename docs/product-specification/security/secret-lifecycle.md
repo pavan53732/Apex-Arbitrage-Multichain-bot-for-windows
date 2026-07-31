@@ -181,7 +181,7 @@ Every secret lifecycle transition produces an event:
 | `secret.compromised` | Breach detected | `{secret_id, classification, severity}` |
 | `secret.backup` | Backup created | `{backup_id, size_bytes, classification_count}` |
 
-All events use `Exactly-once` delivery (see `../interfaces/event-ownership-matrix.md`).
+All events use `Exactly-once` delivery (see `../interfaces/events/event-ownership-matrix.md`).
 
 ---
 

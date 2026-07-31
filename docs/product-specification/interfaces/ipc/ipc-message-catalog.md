@@ -9,7 +9,7 @@ authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/ipc-protocol.md
+canonical_source: docs/product-specification/interfaces/ipc/ipc-protocol.md
 related_concepts:
   - CONCEPT-0254
 dependencies:

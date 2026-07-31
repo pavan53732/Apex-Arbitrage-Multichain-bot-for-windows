@@ -37,10 +37,10 @@ This document is an overview, reference, or index as noted below.
 Defines how data moves across market, trading, AI, risk, execution, persistence, and UI layers.
 
 ## Ownership
-- Describes end-to-end flow only; message contracts stay in `../interfaces/ipc-protocol.md` and `../interfaces/api-reference.md`.
+- Describes end-to-end flow only; message contracts stay in `../interfaces/ipc/ipc-protocol.md` and `../interfaces/api/api-reference.md`.
 
 ## Cross-references
-- `../interfaces/event-flow.md`
+- `../interfaces/events/event-flow.md`
 - `./state-management.md`
 - `../operations/reliability/runtime-operations.md`
 

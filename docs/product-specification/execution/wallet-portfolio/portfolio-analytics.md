@@ -37,7 +37,7 @@ This document is an overview, reference, or index as noted below.
 Defines ROI, win rate, profit distribution, drawdown, Sharpe ratio, and comparison analytics.
 
 ## Cross-references
-- `../../interfaces/domain-model.md`
+- `../../interfaces/api/domain-model.md`
 - `../../operations/monitoring/metrics.md`
 
 ## Operational Contract

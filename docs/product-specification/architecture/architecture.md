@@ -76,14 +76,14 @@ For authoritative runtime flow, see `../runtime/orchestrator.md`.
 - `../ui/ux-guidelines.md`
 - `../deployment/versioning.md`
 
-- `../interfaces/domain-model.md`
+- `../interfaces/api/domain-model.md`
 
 
-For canonical data contracts, see `../interfaces/domain-model.md`.
+For canonical data contracts, see `../interfaces/api/domain-model.md`.
 
 
 ## Enterprise Contract – Architecture
-- Interfaces: `../interfaces/interface-agent-message.md`, `../interfaces/interface-tool-call.md`.
+- Interfaces: `../interfaces/messages/interface-agent-message.md`, `../interfaces/messages/interface-tool-call.md`.
 - State machine: `../runtime/orchestrator.md`, `../execution/trading/trading-lifecycle.md`, `../execution/transactions/execution-lifecycle.md`.
 - Security boundaries: `../security/security-contracts.md`.
 - Performance SLOs: `../performance/performance-slos.md`.
@@ -91,7 +91,7 @@ For canonical data contracts, see `../interfaces/domain-model.md`.
 
 For trading lifecycle, see `../execution/trading/trading-lifecycle.md`.
 For execution lifecycle, see `../execution/transactions/execution-lifecycle.md`.
-For event handling, see `../interfaces/event-bus.md`.
+For event handling, see `../interfaces/events/event-bus.md`.
 For worker scheduling, see `../runtime/worker-pool.md`.
 For workspace persistence, see `../dashboard/dashboard-workspaces.md`.
 For dependency graph details, see `./dependency-graph.md`.

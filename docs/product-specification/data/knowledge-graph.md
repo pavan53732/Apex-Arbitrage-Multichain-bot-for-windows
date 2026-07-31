@@ -57,7 +57,7 @@ Refresh source nodes, revalidate relations, and isolate stale subgraphs.
 - `../ai/memory/ai-memory-system.md`
 - `../market/chains/chain-intelligence.md`
 - `../market/core/market-intelligence.md`
-- `../interfaces/domain-model.md`
+- `../interfaces/api/domain-model.md`
 
 For data governance, see `./data-governance.md`.
 ## Governance Rules

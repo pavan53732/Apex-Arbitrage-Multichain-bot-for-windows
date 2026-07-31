@@ -222,7 +222,7 @@ Every prompt lifecycle state transition emits an event:
 | Any → FAILED | `system.error` | `{error_code, prompt_state_snapshot}` |
 | COMPLETED → ARCHIVING | `ai.prompt.archived` | `{archive_id, tokens_before, tokens_after}` |
 
-All events have `At-least-once` delivery guarantee (see `../../interfaces/event-ownership-matrix.md`).
+All events have `At-least-once` delivery guarantee (see `../../interfaces/events/event-ownership-matrix.md`).
 
 ---
 

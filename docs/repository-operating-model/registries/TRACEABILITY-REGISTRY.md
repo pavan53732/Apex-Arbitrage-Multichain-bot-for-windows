@@ -41,8 +41,8 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | Registry schema version | 1.1 |
 | Registry model | Semantic relationships only |
 | Last regenerated | 2026-07-31 |
-| Relationship count | 650 |
-| Relationship distribution | Defines: 220, Depends On: 122, Indexes: 62, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
+| Relationship count | 658 |
+| Relationship distribution | Defines: 220, Depends On: 126, Indexes: 66, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
 
 ## Relationship Policy
 
@@ -703,3 +703,11 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0812 | DOC-0423 | Depends On | DOC-0337 | Active | Operations Recovery README depends on DOC-0337. |
 | TRACE-0813 | DOC-0424 | Indexes | CONCEPT-0338 | Active | Operations Reliability README indexes CONCEPT-0338. |
 | TRACE-0814 | DOC-0424 | Depends On | DOC-0338 | Active | Operations Reliability README depends on DOC-0338. |
+| TRACE-0815 | DOC-0425 | Indexes | CONCEPT-0262 | Active | Interface Adapters README indexes CONCEPT-0262. |
+| TRACE-0816 | DOC-0425 | Depends On | DOC-0262 | Active | Interface Adapters README depends on DOC-0262. |
+| TRACE-0817 | DOC-0426 | Indexes | CONCEPT-0251 | Active | Interface API README indexes CONCEPT-0251. |
+| TRACE-0818 | DOC-0426 | Depends On | DOC-0251 | Active | Interface API README depends on DOC-0251. |
+| TRACE-0819 | DOC-0427 | Indexes | CONCEPT-0254 | Active | Interface IPC README indexes CONCEPT-0254. |
+| TRACE-0820 | DOC-0427 | Depends On | DOC-0254 | Active | Interface IPC README depends on DOC-0254. |
+| TRACE-0821 | DOC-0428 | Indexes | CONCEPT-0255 | Active | Interface Messages README indexes CONCEPT-0255. |
+| TRACE-0822 | DOC-0428 | Depends On | DOC-0255 | Active | Interface Messages README depends on DOC-0255. |

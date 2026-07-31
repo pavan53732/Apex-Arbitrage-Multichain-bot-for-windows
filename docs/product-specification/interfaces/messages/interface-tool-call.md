@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/interface-tool-call.md
+canonical_source: docs/product-specification/interfaces/messages/interface-tool-call.md
 related_concepts:
   - CONCEPT-0263
 dependencies: []
@@ -50,8 +50,8 @@ Defines canonical tool invocation and result contracts.
 - `result` and `error` are mutually exclusive.
 
 ## Cross-references
-- `../ai/orchestration/ai-agent-specification.md`
-- `../ai/orchestration/ai-orchestration.md`
+- `../../ai/orchestration/ai-agent-specification.md`
+- `../../ai/orchestration/ai-orchestration.md`
 
 ## Interface Contract
 Defines AI tool invocation shape, permissions, arguments, result handling, and error normalization.

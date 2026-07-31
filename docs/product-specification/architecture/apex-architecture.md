@@ -59,4 +59,4 @@ Top-level index for the implementation specification set.
 
 
 ## System Contracts
-- `../interfaces/domain-model.md` — authoritative system contract.
+- `../interfaces/api/domain-model.md` — authoritative system contract.

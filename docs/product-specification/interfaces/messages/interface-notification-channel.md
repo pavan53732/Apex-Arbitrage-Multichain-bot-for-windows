@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/interface-notification-channel.md
+canonical_source: docs/product-specification/interfaces/messages/interface-notification-channel.md
 related_concepts:
   - CONCEPT-0261
 dependencies: []
@@ -46,8 +46,8 @@ Defines outbound notification channel contracts.
 - `metadata` must include channel, source, and timestamp.
 
 ## Cross-references
-- `../operations/notifications/notification-center.md`
-- `../operations/reliability/runtime-operations.md`
+- `../../operations/notifications/notification-center.md`
+- `../../operations/reliability/runtime-operations.md`
 
 ## Interface Contract
 Defines channels, severities, delivery guarantees, retry policy, and escalation semantics for notifications.

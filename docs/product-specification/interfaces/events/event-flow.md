@@ -9,7 +9,7 @@ authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/event-bus.md
+canonical_source: docs/product-specification/interfaces/events/event-bus.md
 related_concepts:
   - CONCEPT-0253
 dependencies:
@@ -41,9 +41,9 @@ Defines event emission, propagation, ordering, and consumption semantics.
 - Does not define IPC payload contracts.
 
 ## Cross-references
-- `../data/data-flow.md`
-- `./ipc-protocol.md`
-- `../data/state-management.md`
+- `../../data/data-flow.md`
+- `../ipc/ipc-protocol.md`
+- `../../data/state-management.md`
 
 ## Operational Contract
 Defines event production, routing, consumption, correlation, and lifecycle across the platform.

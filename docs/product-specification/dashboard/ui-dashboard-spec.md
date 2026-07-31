@@ -41,7 +41,7 @@ Defines the dashboard surface, panels, navigation, and data contracts for the pr
 Executive overview, live market intelligence, AI intelligence center, strategy control, execution monitor, portfolio analytics, chain command center, DEX intelligence, wallet command center, and notification center.
 
 ## Cross-references
-- `../interfaces/domain-model.md`
+- `../interfaces/api/domain-model.md`
 - `../operations/monitoring/metrics.md`
 - `../operations/monitoring/health-checks.md`
 - `../ai/orchestration/ai-orchestration.md`

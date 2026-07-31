@@ -9,7 +9,7 @@ authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/api-contracts.md
+canonical_source: docs/product-specification/interfaces/api/api-contracts.md
 related_concepts:
   - CONCEPT-0251
 dependencies:
@@ -383,10 +383,10 @@ Standard error code format: `E_<CATEGORY>_<SPECIFIC>`.
 
 ## Cross-references
 - `./api-contracts.md`
-- `./ipc-protocol.md`
-- `../architecture/project-structure.md`
-- `../operations/diagnostics/error-handling-and-logging.md`
-- `../deployment/versioning.md`
+- `../ipc/ipc-protocol.md`
+- `../../architecture/project-structure.md`
+- `../../operations/diagnostics/error-handling-and-logging.md`
+- `../../deployment/versioning.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

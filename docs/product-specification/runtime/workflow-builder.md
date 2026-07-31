@@ -57,7 +57,7 @@ Invalid graph, policy violation, missing action handler, loop detection.
 Pause workflow, require correction, or route to fallback manual operation.
 
 ## Cross-references
-- `../interfaces/event-bus.md`
+- `../interfaces/events/event-bus.md`
 - `../execution/risk-policy/policy-engine.md`
 - `./orchestrator.md`
 - `../dashboard/ui-dashboard-spec.md`

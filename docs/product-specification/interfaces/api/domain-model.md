@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Architecture Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/domain-model.md
+canonical_source: docs/product-specification/interfaces/api/domain-model.md
 related_concepts:
   - CONCEPT-0252
 dependencies: []

@@ -165,7 +165,7 @@ If a tool fails (all retries exhausted) more than:
 
 1. First violation: log warning, retry with safer parameters (max `ai.safety.max_retries_on_safety_violation`: 2).
 2. Repeated violation: abort entire AI call, log security event, notify security subsystem.
-3. Violation triggers `security.violation` event (see `../../interfaces/event-ownership-matrix.md`).
+3. Violation triggers `security.violation` event (see `../../interfaces/events/event-ownership-matrix.md`).
 
 ---
 
@@ -186,7 +186,7 @@ Every tool invocation produces:
 | `error_code` | Error code if failed (from `../../operations/diagnostics/error-codes.md`) |
 | `tokens_consumed` | Estimated tokens used by tool IO |
 
-All invocation events are emitted as `ai.tool.invoked` / `ai.tool.result` events (see `../../interfaces/event-ownership-matrix.md`) and stored in the audit log.
+All invocation events are emitted as `ai.tool.invoked` / `ai.tool.result` events (see `../../interfaces/events/event-ownership-matrix.md`) and stored in the audit log.
 
 ---
 
