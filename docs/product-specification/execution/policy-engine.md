@@ -57,7 +57,7 @@ Policies load from a central config file and can be hot-reloaded. Policy changes
 - `../configuration/configuration.md`
 - `../security/security-contracts.md`
 - `./risk-engine.md`
-- `../ai/ai-cost-management.md`
+- `../ai/providers/ai-cost-management.md`
 
 ## Governance Rules
 Defines policy evaluation, priority ordering, overrides, and final decision selection.

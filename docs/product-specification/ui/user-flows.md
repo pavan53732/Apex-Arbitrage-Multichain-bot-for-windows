@@ -150,7 +150,7 @@ Completion criteria: settings confirmed.
 ## Cross-references
 - `../execution/trading-engine.md`
 - `../operations/runtime-operations.md`
-- `../ai/ai-pipeline.md`
+- `../ai/runtime/ai-pipeline.md`
 - `../security/security.md`
 - `../configuration/configuration.md`
 - `../dashboard/dashboard-layout.md`

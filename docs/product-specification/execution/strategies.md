@@ -1547,7 +1547,7 @@ Add route scorers, signal filters, and AI ranking hooks only through documented 
 
 ## Cross-references
 - `./risk-engine.md`
-- `../ai/ai-pipeline.md`
+- `../ai/runtime/ai-pipeline.md`
 - `./execution-engine.md`
 - `../market/market-intelligence.md`
 - `./simulation-engine.md`

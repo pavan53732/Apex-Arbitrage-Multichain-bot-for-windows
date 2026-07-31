@@ -60,7 +60,7 @@ stateDiagram-v2
 Decisions expire after `DECISION_TTL_SECONDS` unless executed.
 
 ## Cross-references
-- `../ai/ai-consensus.md`
+- `../ai/orchestration/ai-consensus.md`
 - `./risk-engine.md`
 - `../runtime/orchestrator.md`
 - `./trading-lifecycle.md`

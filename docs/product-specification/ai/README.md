@@ -9,7 +9,7 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/ai-pipeline.md
+canonical_source: docs/product-specification/ai/runtime/ai-pipeline.md
 related_concepts:
   - CONCEPT-0103
 dependencies:
@@ -27,55 +27,32 @@ owned_domains: []
 
 ## Purpose and scope
 
-Product AI runtime, memory, planning, providers, tools, reasoning, safety, and cost behavior.
+Product AI runtime, orchestration, providers, memory, tools, safety, prompts, knowledge, learning, and explainability documentation.
 
-## Document classes expected
+## What belongs here
 
-- Index
-- Guide
-- Reference
-- Specification where this folder owns a canonical boundary
-- Registry only in registry folders
-- Historical only in historical folders
-- Generated only in generated folders
-
-## Canonical boundaries
-
-Product AI specifications and references.
+AI product specifications and references. Repository AI and coding-agent instructions belong under Repository Operating Model / Agent System.
 
 ## What does not belong here
 
-Repository AI/coding-agent instructions.
+Repository agent governance, product execution engines, market data, dashboard behavior, or plugin SDK behavior unless the document is explicitly about AI integration.
 
-## Documents
+## Subdomains
 
-| Document ID | Title | Class | Authority | Status |
-| --- | --- | --- | --- | --- |
-| DOC-0101 | [AI Agent Specification](./ai-agent-specification.md) | Specification | Canonical | Active |
-| DOC-0102 | [AI Orchestration](./ai-orchestration.md) | Specification | Canonical | Active |
-| DOC-0103 | [AI Pipeline](./ai-pipeline.md) | Specification | Canonical | Active |
-| DOC-0104 | [AI Provider Manager](./ai-provider-manager.md) | Specification | Canonical | Active |
-| DOC-0105 | [AI Safety Boundary](./ai-safety-boundary.md) | Specification | Canonical | Active |
-| DOC-0106 | [AI State Machine](./ai-state-machine.md) | Specification | Canonical | Active |
-| DOC-0107 | [AI Tool Invocation Contract](./ai-tool-invocation-contract.md) | Specification | Canonical | Active |
-| DOC-0108 | [Context Priority Matrix](./context-priority-matrix.md) | Specification | Canonical | Active |
-| DOC-0109 | [Prompt Engineering](./prompt-engineering.md) | Specification | Canonical | Active |
-| DOC-0110 | [AI Reasoning Policy](./ai-reasoning-policy.md) | Policy | Canonical | Active |
-| DOC-0111 | [AI Knowledge Index](./ai-knowledge-index.md) | Index | Canonical | Active |
-| DOC-0115 | [AI Capability Matrix](./ai-capability-matrix.md) | Reference | Canonical | Active |
-| DOC-0116 | [AI Consensus](./ai-consensus.md) | Reference | Canonical | Active |
-| DOC-0117 | [AI Context Window Management](./ai-context-window-management.md) | Reference | Canonical | Active |
-| DOC-0118 | [AI Cost Management](./ai-cost-management.md) | Reference | Canonical | Active |
-| DOC-0119 | [AI Gateway](./ai-gateway.md) | Reference | Canonical | Active |
-| DOC-0120 | [AI Memory System](./ai-memory-system.md) | Reference | Canonical | Active |
-| DOC-0121 | [AI Planner](./ai-planner.md) | Reference | Canonical | Active |
-| DOC-0122 | [AI Reflection](./ai-reflection.md) | Reference | Canonical | Active |
-| DOC-0123 | [AI Settings](./ai-settings.md) | Reference | Canonical | Active |
-| DOC-0124 | [AI Tools](./ai-tools.md) | Reference | Canonical | Active |
-| DOC-0125 | [Cloud AI Integration](./cloud-ai-integration.md) | Reference | Canonical | Active |
-| DOC-0126 | [Explainability](./explainability.md) | Reference | Canonical | Active |
-| DOC-0127 | [Governance Explainability](./governance-explainability.md) | Specification | Canonical | Active |
-| DOC-0128 | [Learning Pipeline](./learning-pipeline.md) | Reference | Canonical | Active |
-| DOC-0129 | [Memory Lifecycle](./memory-lifecycle.md) | Reference | Canonical | Active |
-| DOC-0130 | [Model Capability Negotiation](./model-capability-negotiation.md) | Reference | Canonical | Active |
-| DOC-0131 | [Prompt Lifecycle](./prompt-lifecycle.md) | Reference | Canonical | Active |
+| Subdomain | README | Canonical owner |
+| --- | --- | --- |
+| explainability | [AI Explainability README](explainability/README.md) | [Explainability](./explainability/explainability.md) |
+| knowledge | [AI Knowledge README](knowledge/README.md) | [Ai Knowledge Index](./knowledge/ai-knowledge-index.md) |
+| learning | [AI Learning README](learning/README.md) | [Learning Pipeline](./learning/learning-pipeline.md) |
+| memory | [AI Memory README](memory/README.md) | [Ai Memory System](./memory/ai-memory-system.md) |
+| orchestration | [AI Orchestration README](orchestration/README.md) | [Ai Orchestration](./orchestration/ai-orchestration.md) |
+| prompts | [AI Prompts README](prompts/README.md) | [Prompt Engineering](./prompts/prompt-engineering.md) |
+| providers | [AI Providers README](providers/README.md) | [Ai Provider Manager](./providers/ai-provider-manager.md) |
+| runtime | [AI Runtime README](runtime/README.md) | [Ai Pipeline](./runtime/ai-pipeline.md) |
+| safety | [AI Safety README](safety/README.md) | [Ai Safety Boundary](./safety/ai-safety-boundary.md) |
+| tools | [AI Tools README](tools/README.md) | [Ai Tool Invocation Contract](./tools/ai-tool-invocation-contract.md) |
+| state-machine | [AI State Machine](./ai-state-machine.md) | AI State Machine |
+
+## Document creation rule
+
+Before adding an AI document, identify the active concept owner in the Concept Registry and place the document in the matching subdomain. Do not create duplicate AI ownership documents.

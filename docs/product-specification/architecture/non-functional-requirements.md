@@ -71,7 +71,7 @@ Defines global performance, reliability, security, maintainability, and operabil
 - `../performance/performance-targets.md`
 - `../security/security.md`
 - `../operations/monitoring-observability.md`
-- `../ai/ai-pipeline.md`
+- `../ai/runtime/ai-pipeline.md`
 - `../operations/runtime-operations.md`
 
 ## Operational Contract

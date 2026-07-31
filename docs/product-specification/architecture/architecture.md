@@ -64,7 +64,7 @@ For authoritative runtime flow, see `../runtime/orchestrator.md`.
 ## Cross-references
 - `../execution/trading-engine.md`
 - `../execution/execution-engine.md`
-- `../ai/ai-pipeline.md`
+- `../ai/runtime/ai-pipeline.md`
 - `../operations/runtime-operations.md`
 - `../data/state-management.md`
 - `../market/chain-registry.md`

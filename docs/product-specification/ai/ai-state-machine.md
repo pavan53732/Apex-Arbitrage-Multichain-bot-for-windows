@@ -127,7 +127,7 @@ stateDiagram-v2
 ## 4. AI Prompt / Tool / Memory Lifecycle State Coupling
 
 ### Prompt Lifecycle Coupling
-The AI state machine directly drives the prompt lifecycle (see `./prompt-lifecycle.md`):
+The AI state machine directly drives the prompt lifecycle (see `./prompts/prompt-lifecycle.md`):
 
 | AI State | Prompt Lifecycle State | Description |
 |----------|------------------------|-------------|
@@ -141,7 +141,7 @@ The AI state machine directly drives the prompt lifecycle (see `./prompt-lifecyc
 | FAILED | FAILED | Construction or execution error |
 
 ### Tool Invocation Coupling
-When AI is in TOOL_CALLING state, the tool invocation contract (see `./ai-tool-invocation-contract.md`) governs:
+When AI is in TOOL_CALLING state, the tool invocation contract (see `./tools/ai-tool-invocation-contract.md`) governs:
 - Tool priority tiers determine selection order.
 - Tool timeout is `ai.tools.timeout_ms` (15s).
 - Tool fallback chain is tried before declaring failure.
@@ -149,7 +149,7 @@ When AI is in TOOL_CALLING state, the tool invocation contract (see `./ai-tool-i
 - Tool result is injected back into the RUNNING context.
 
 ### Memory Lifecycle Coupling
-When AI transitions COMPLETED → IDLE, memory lifecycle (see `../../historical/ai-memory.md`, `./memory-lifecycle.md`) governs:
+When AI transitions COMPLETED → IDLE, memory lifecycle (see `../../historical/ai-memory.md`, `./memory/memory-lifecycle.md`) governs:
 - Response is evaluated for memory-worthy content.
 - Relevant insights are stored in memory with TTL and relevance scoring.
 - Memory capacity eviction applies (LRU + score-based).

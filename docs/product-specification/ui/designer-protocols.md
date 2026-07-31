@@ -377,7 +377,7 @@ Pattern: clicking Delete/Reset opens a Modal with:
 - Status header: aggregate health across providers (green/yellow/red dot + label)
 - Provider cards (vertical, expandable):
   - Header: name, type chip, status dot, enable toggle, kebab menu (Edit, Duplicate, Reset, Delete)
-  - Body (when expanded): all fields from `../ai/ai-settings.md` §3
+  - Body (when expanded): all fields from `../ai/providers/ai-settings.md` §3
   - Footer: Test, Save, Reset buttons (Save disabled until dirty + valid)
   - "Add Provider" button below all cards
 - Per-provider "Advanced" disclosure: proxy, custom headers, request timeout, retry policy
@@ -456,9 +456,9 @@ Mobile and tablet are explicitly **not** goals.
 ## Cross-references
 - `./ui-component-spec.md`
 - `../windows/windows-desktop.md`
-- `../ai/ai-settings.md`
+- `../ai/providers/ai-settings.md`
 - `./user-flows.md`
-- `../ai/cloud-ai-integration.md`
+- `../ai/providers/cloud-ai-integration.md`
 
 ## Governance Rules
 Defines design review flow, component conventions, naming, and artifact handoff requirements.

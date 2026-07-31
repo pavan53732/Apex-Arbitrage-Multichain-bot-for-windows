@@ -54,7 +54,7 @@ Stale node, broken edge, duplicate entity, invalid relation, version drift.
 Refresh source nodes, revalidate relations, and isolate stale subgraphs.
 
 ## Cross-references
-- `../ai/ai-memory-system.md`
+- `../ai/memory/ai-memory-system.md`
 - `../market/chain-intelligence.md`
 - `../market/market-intelligence.md`
 - `../interfaces/domain-model.md`

@@ -57,7 +57,7 @@ Fallback to safe defaults and validate merged config.
 
 ## Cross-references
 - `./configuration.md`
-- `../ai/ai-settings.md`
+- `../ai/providers/ai-settings.md`
 - `../dashboard/dashboard-workspaces.md`
 - `../../historical/traceability-matrix.md`
 

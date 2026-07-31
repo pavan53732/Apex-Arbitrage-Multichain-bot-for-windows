@@ -57,10 +57,10 @@ Missing memory, oversize context, invalid source, stale runtime state.
 Compress context, fall back to curated memory, or refuse dispatch if policy fails.
 
 ## Cross-references
-- `../ai/ai-pipeline.md`
-- `../ai/ai-memory-system.md`
+- `../ai/runtime/ai-pipeline.md`
+- `../ai/memory/ai-memory-system.md`
 - `./knowledge-graph.md`
-- `../ai/ai-gateway.md`
+- `../ai/runtime/ai-gateway.md`
 
 ## Operational Contract
 Defines how user, market, wallet, and runtime context are assembled for downstream reasoning.

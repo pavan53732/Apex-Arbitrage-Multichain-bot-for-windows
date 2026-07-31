@@ -44,7 +44,7 @@ Executive overview, live market intelligence, AI intelligence center, strategy c
 - `../interfaces/domain-model.md`
 - `../operations/monitoring/metrics.md`
 - `../operations/health-checks.md`
-- `../ai/ai-orchestration.md`
+- `../ai/orchestration/ai-orchestration.md`
 
 ## Operational Contract
 Defines the dashboard UI contract, data binding, refresh behavior, and interaction expectations.

@@ -41,8 +41,8 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | Registry schema version | 1.1 |
 | Registry model | Semantic relationships only |
 | Last regenerated | 2026-07-31 |
-| Relationship count | 600 |
-| Relationship distribution | Defines: 220, Depends On: 97, Indexes: 37, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
+| Relationship count | 620 |
+| Relationship distribution | Defines: 220, Depends On: 107, Indexes: 47, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
 
 ## Relationship Policy
 
@@ -653,3 +653,23 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0762 | DOC-0398 | Depends On | DOC-0333 | Active | Diagnostics README depends on Diagnostics owner. |
 | TRACE-0763 | DOC-0399 | Indexes | CONCEPT-0336 | Active | Monitoring README indexes Monitoring Observability concept. |
 | TRACE-0764 | DOC-0399 | Depends On | DOC-0336 | Active | Monitoring README depends on Monitoring Observability owner. |
+| TRACE-0765 | DOC-0400 | Indexes | CONCEPT-0126 | Active | AI Explainability README indexes CONCEPT-0126. |
+| TRACE-0766 | DOC-0400 | Depends On | DOC-0126 | Active | AI Explainability README depends on DOC-0126. |
+| TRACE-0767 | DOC-0401 | Indexes | CONCEPT-0111 | Active | AI Knowledge README indexes CONCEPT-0111. |
+| TRACE-0768 | DOC-0401 | Depends On | DOC-0111 | Active | AI Knowledge README depends on DOC-0111. |
+| TRACE-0769 | DOC-0402 | Indexes | CONCEPT-0128 | Active | AI Learning README indexes CONCEPT-0128. |
+| TRACE-0770 | DOC-0402 | Depends On | DOC-0128 | Active | AI Learning README depends on DOC-0128. |
+| TRACE-0771 | DOC-0403 | Indexes | CONCEPT-0120 | Active | AI Memory README indexes CONCEPT-0120. |
+| TRACE-0772 | DOC-0403 | Depends On | DOC-0120 | Active | AI Memory README depends on DOC-0120. |
+| TRACE-0773 | DOC-0404 | Indexes | CONCEPT-0102 | Active | AI Orchestration README indexes CONCEPT-0102. |
+| TRACE-0774 | DOC-0404 | Depends On | DOC-0102 | Active | AI Orchestration README depends on DOC-0102. |
+| TRACE-0775 | DOC-0405 | Indexes | CONCEPT-0109 | Active | AI Prompts README indexes CONCEPT-0109. |
+| TRACE-0776 | DOC-0405 | Depends On | DOC-0109 | Active | AI Prompts README depends on DOC-0109. |
+| TRACE-0777 | DOC-0406 | Indexes | CONCEPT-0104 | Active | AI Providers README indexes CONCEPT-0104. |
+| TRACE-0778 | DOC-0406 | Depends On | DOC-0104 | Active | AI Providers README depends on DOC-0104. |
+| TRACE-0779 | DOC-0407 | Indexes | CONCEPT-0103 | Active | AI Runtime README indexes CONCEPT-0103. |
+| TRACE-0780 | DOC-0407 | Depends On | DOC-0103 | Active | AI Runtime README depends on DOC-0103. |
+| TRACE-0781 | DOC-0408 | Indexes | CONCEPT-0105 | Active | AI Safety README indexes CONCEPT-0105. |
+| TRACE-0782 | DOC-0408 | Depends On | DOC-0105 | Active | AI Safety README depends on DOC-0105. |
+| TRACE-0783 | DOC-0409 | Indexes | CONCEPT-0107 | Active | AI Tools README indexes CONCEPT-0107. |
+| TRACE-0784 | DOC-0409 | Depends On | DOC-0107 | Active | AI Tools README depends on DOC-0107. |

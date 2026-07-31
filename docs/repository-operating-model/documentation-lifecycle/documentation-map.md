@@ -35,16 +35,16 @@ This map is regenerated from current document metadata and concept-centric regis
 
 | Field | Value |
 | --- | --- |
-| Documents | 317 |
+| Documents | 327 |
 | Active semantic concepts | 220 |
 | Superseded concept aliases retained | 176 |
-| Traceability relationships | 600 |
+| Traceability relationships | 620 |
 
 ## Domain Map
 
 | Plane | Domain | Documents | Active Concept Owners |
 | --- | --- | --- | --- |
-| Product Specification | AI | 30 | [AI Agent Specification](../../product-specification/ai/ai-agent-specification.md), [AI Knowledge Index](../../product-specification/ai/ai-knowledge-index.md), [AI Memory System](../../product-specification/ai/ai-memory-system.md), [AI Orchestration](../../product-specification/ai/ai-orchestration.md), [AI Pipeline](../../product-specification/ai/ai-pipeline.md), [AI Provider Manager](../../product-specification/ai/ai-provider-manager.md) |
+| Product Specification | AI | 40 | [AI State Machine](../../product-specification/ai/ai-state-machine.md), [Explainability](../../product-specification/ai/explainability/explainability.md), [Governance Explainability](../../product-specification/ai/explainability/governance-explainability.md), [AI Knowledge Index](../../product-specification/ai/knowledge/ai-knowledge-index.md), [Learning Pipeline](../../product-specification/ai/learning/learning-pipeline.md), [AI Memory System](../../product-specification/ai/memory/ai-memory-system.md) |
 | Product Specification | Architecture | 21 | [ADR 0001 Provider Abstraction](../../adr/0001-provider-abstraction.md), [ADR 0002 Event Driven Kernel](../../adr/0002-event-driven-kernel.md), [ADR 0003 Plugin First Architecture](../../adr/0003-plugin-first-architecture.md), [ADR 0004 Polygon First](../../adr/0004-polygon-first.md), [ADR 0005 AI Memory](../../adr/0005-ai-memory.md), [ADR 0006 Runtime Governance](../../adr/0006-runtime-governance.md) |
 | Product Specification | Configuration | 10 | [Configuration](../../product-specification/configuration/configuration.md), [Contract Management](../../product-specification/configuration/contract-management.md), [Contract Registry](../../product-specification/configuration/contract-registry.md), [Feature Flag Governance And Rollout Matrix](../../product-specification/configuration/feature-flag-governance-and-rollout-matrix.md), [Feature Flags](../../product-specification/configuration/feature-flags.md), [System Capability Registry](../../product-specification/configuration/system-capability-registry.md) |
 | Product Specification | Dashboard | 6 | [Dashboard Layout](../../product-specification/dashboard/dashboard-layout.md), [Dashboard Runtime](../../product-specification/dashboard/dashboard-runtime.md), [Dashboard Widgets](../../product-specification/dashboard/dashboard-widgets.md), [Dashboard Workspaces](../../product-specification/dashboard/dashboard-workspaces.md), [UI Dashboard Spec](../../product-specification/dashboard/ui-dashboard-spec.md) |

@@ -50,7 +50,7 @@ Guidance for QODO-based coding agents contributing to this repository.
 ## Required reading
 - `../../../../AGENTS.md`
 - `../../../product-specification/architecture/architecture.md`
-- `../../../product-specification/ai/ai-pipeline.md`
+- `../../../product-specification/ai/runtime/ai-pipeline.md`
 - `../../../product-specification/operations/runtime-operations.md`
 - `../../../product-specification/execution/trading-lifecycle.md`
 - `../../../product-specification/execution/execution-lifecycle.md`

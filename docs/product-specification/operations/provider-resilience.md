@@ -62,8 +62,8 @@ Primary and secondary provider lists are explicitly configured. Health probes ru
 If all providers fail, enter degraded mode and alert operations.
 
 ## Cross-references
-- `../ai/ai-provider-manager.md`
-- `../ai/ai-gateway.md`
+- `../ai/providers/ai-provider-manager.md`
+- `../ai/runtime/ai-gateway.md`
 - `./health-checks.md`
 - `../performance/performance-slos.md`
 

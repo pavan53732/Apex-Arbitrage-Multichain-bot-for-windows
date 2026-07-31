@@ -48,7 +48,7 @@ Defines numeric performance targets for core platform paths.
 - Budget enforcement must check cost cap before every AI call.
 
 ## Cross-references
-- `../ai/ai-cost-management.md`
+- `../ai/providers/ai-cost-management.md`
 - `../operations/monitoring/metrics.md`
 - `../operations/health-checks.md`
 

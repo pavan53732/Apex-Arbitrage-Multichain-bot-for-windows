@@ -58,8 +58,8 @@ Rebuild from source logs, reject incomplete traces, escalate to audit.
 
 ## Cross-references
 - `../execution/decision-engine.md`
-- `../ai/governance-explainability.md`
-- `../ai/explainability.md`
+- `../ai/explainability/governance-explainability.md`
+- `../ai/explainability/explainability.md`
 - `../execution/decision-log.md`
 
 ## Ledger Semantics

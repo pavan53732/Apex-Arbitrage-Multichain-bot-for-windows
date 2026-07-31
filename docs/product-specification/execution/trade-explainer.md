@@ -37,8 +37,8 @@ This document is an overview, reference, or index as noted below.
 Provides human-readable explanations for why a trade was executed.
 
 ## Cross-references
-- `../ai/explainability.md`
-- `../ai/governance-explainability.md`
+- `../ai/explainability/explainability.md`
+- `../ai/explainability/governance-explainability.md`
 - `../data/decision-ledger.md`
 
 ## Operational Contract

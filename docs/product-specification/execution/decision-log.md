@@ -80,8 +80,8 @@ Alternative indexes, export formats, and enriched summaries.
 
 ## Cross references
 - `../data/decision-ledger.md`
-- `../ai/governance-explainability.md`
-- `../ai/explainability.md`
+- `../ai/explainability/governance-explainability.md`
+- `../ai/explainability/explainability.md`
 - `AUDIT-TRAIL` (future owner if introduced)
 
 ## Implementation constraints

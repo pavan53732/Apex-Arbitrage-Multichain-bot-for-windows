@@ -59,8 +59,8 @@ Re-scan adapters, revalidate manifests, and suspend stale capabilities.
 ## Cross-references
 - `../data/registry-system.md`
 - `../plugins/plugin-sdk.md`
-- `../ai/ai-provider-manager.md`
-- `../ai/ai-gateway.md`
+- `../ai/providers/ai-provider-manager.md`
+- `../ai/runtime/ai-gateway.md`
 
 ## Required details
 - Define platform capabilities and runtime features.

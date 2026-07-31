@@ -132,35 +132,35 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0098 | [Worker Architecture](../../product-specification/runtime/worker-architecture.md) | Owner | CONCEPT-0098 |  |  |
 | DOC-0099 | [Workflow Builder](../../product-specification/runtime/workflow-builder.md) | Owner | CONCEPT-0099 |  |  |
 | DOC-0100 | [Workspace Manager](../../product-specification/runtime/workspace-manager.md) | Owner | CONCEPT-0100 |  |  |
-| DOC-0101 | [AI Agent Specification](../../product-specification/ai/ai-agent-specification.md) | Owner | CONCEPT-0101 |  |  |
-| DOC-0102 | [AI Orchestration](../../product-specification/ai/ai-orchestration.md) | Owner | CONCEPT-0102 |  | DOC-0116, DOC-0121, DOC-0122 |
-| DOC-0103 | [AI Pipeline](../../product-specification/ai/ai-pipeline.md) | Owner | CONCEPT-0103 |  | DOC-0114, DOC-0117, DOC-0118 |
-| DOC-0104 | [AI Provider Manager](../../product-specification/ai/ai-provider-manager.md) | Owner | CONCEPT-0104 |  | DOC-0115, DOC-0119, DOC-0123, DOC-0130 |
-| DOC-0105 | [AI Safety Boundary](../../product-specification/ai/ai-safety-boundary.md) | Owner | CONCEPT-0105 |  |  |
+| DOC-0101 | [AI Agent Specification](../../product-specification/ai/orchestration/ai-agent-specification.md) | Owner | CONCEPT-0101 |  |  |
+| DOC-0102 | [AI Orchestration](../../product-specification/ai/orchestration/ai-orchestration.md) | Owner | CONCEPT-0102 |  | DOC-0116, DOC-0121, DOC-0122, DOC-0404 |
+| DOC-0103 | [AI Pipeline](../../product-specification/ai/runtime/ai-pipeline.md) | Owner | CONCEPT-0103 |  | DOC-0114, DOC-0117, DOC-0118, DOC-0407 |
+| DOC-0104 | [AI Provider Manager](../../product-specification/ai/providers/ai-provider-manager.md) | Owner | CONCEPT-0104 |  | DOC-0115, DOC-0119, DOC-0123, DOC-0130, DOC-0406 |
+| DOC-0105 | [AI Safety Boundary](../../product-specification/ai/safety/ai-safety-boundary.md) | Owner | CONCEPT-0105 |  | DOC-0408 |
 | DOC-0106 | [AI State Machine](../../product-specification/ai/ai-state-machine.md) | Owner | CONCEPT-0106 |  |  |
-| DOC-0107 | [AI Tool Invocation Contract](../../product-specification/ai/ai-tool-invocation-contract.md) | Owner | CONCEPT-0107 |  |  |
-| DOC-0108 | [Context Priority Matrix](../../product-specification/ai/context-priority-matrix.md) | Owner | CONCEPT-0108 |  |  |
-| DOC-0109 | [Prompt Engineering](../../product-specification/ai/prompt-engineering.md) | Owner | CONCEPT-0109 |  |  |
-| DOC-0110 | [AI Reasoning Policy](../../product-specification/ai/ai-reasoning-policy.md) | Owner | CONCEPT-0110 |  |  |
-| DOC-0111 | [AI Knowledge Index](../../product-specification/ai/ai-knowledge-index.md) | Owner | CONCEPT-0111 |  |  |
+| DOC-0107 | [AI Tool Invocation Contract](../../product-specification/ai/tools/ai-tool-invocation-contract.md) | Owner | CONCEPT-0107 |  | DOC-0409 |
+| DOC-0108 | [Context Priority Matrix](../../product-specification/ai/memory/context-priority-matrix.md) | Owner | CONCEPT-0108 |  |  |
+| DOC-0109 | [Prompt Engineering](../../product-specification/ai/prompts/prompt-engineering.md) | Owner | CONCEPT-0109 |  | DOC-0405 |
+| DOC-0110 | [AI Reasoning Policy](../../product-specification/ai/safety/ai-reasoning-policy.md) | Owner | CONCEPT-0110 |  |  |
+| DOC-0111 | [AI Knowledge Index](../../product-specification/ai/knowledge/ai-knowledge-index.md) | Owner | CONCEPT-0111 |  | DOC-0401 |
 | DOC-0114 | [AI README](../../product-specification/ai/README.md) | Index | CONCEPT-0103 | DOC-0103 |  |
-| DOC-0115 | [AI Capability Matrix](../../product-specification/ai/ai-capability-matrix.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
-| DOC-0116 | [AI Consensus](../../product-specification/ai/ai-consensus.md) | Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0117 | [AI Context Window Management](../../product-specification/ai/ai-context-window-management.md) | Reference | CONCEPT-0103 | DOC-0103 |  |
-| DOC-0118 | [AI Cost Management](../../product-specification/ai/ai-cost-management.md) | Reference | CONCEPT-0103 | DOC-0103 |  |
-| DOC-0119 | [AI Gateway](../../product-specification/ai/ai-gateway.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
-| DOC-0120 | [AI Memory System](../../product-specification/ai/ai-memory-system.md) | Owner | CONCEPT-0120 |  | DOC-0129, DOC-0132 |
-| DOC-0121 | [AI Planner](../../product-specification/ai/ai-planner.md) | Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0122 | [AI Reflection](../../product-specification/ai/ai-reflection.md) | Reference | CONCEPT-0102 | DOC-0102 |  |
-| DOC-0123 | [AI Settings](../../product-specification/ai/ai-settings.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
-| DOC-0124 | [AI Tools](../../product-specification/ai/ai-tools.md) | Owner | CONCEPT-0124 |  |  |
-| DOC-0125 | [Cloud AI Integration](../../product-specification/ai/cloud-ai-integration.md) | Owner | CONCEPT-0125 |  |  |
-| DOC-0126 | [Explainability](../../product-specification/ai/explainability.md) | Owner | CONCEPT-0126 |  |  |
-| DOC-0127 | [Governance Explainability](../../product-specification/ai/governance-explainability.md) | Owner | CONCEPT-0127 |  |  |
-| DOC-0128 | [Learning Pipeline](../../product-specification/ai/learning-pipeline.md) | Owner | CONCEPT-0128 |  |  |
-| DOC-0129 | [Memory Lifecycle](../../product-specification/ai/memory-lifecycle.md) | Reference | CONCEPT-0120 | DOC-0120 |  |
-| DOC-0130 | [Model Capability Negotiation](../../product-specification/ai/model-capability-negotiation.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
-| DOC-0131 | [Prompt Lifecycle](../../product-specification/ai/prompt-lifecycle.md) | Owner | CONCEPT-0131 |  |  |
+| DOC-0115 | [AI Capability Matrix](../../product-specification/ai/providers/ai-capability-matrix.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
+| DOC-0116 | [AI Consensus](../../product-specification/ai/orchestration/ai-consensus.md) | Reference | CONCEPT-0102 | DOC-0102 |  |
+| DOC-0117 | [AI Context Window Management](../../product-specification/ai/runtime/ai-context-window-management.md) | Reference | CONCEPT-0103 | DOC-0103 |  |
+| DOC-0118 | [AI Cost Management](../../product-specification/ai/providers/ai-cost-management.md) | Reference | CONCEPT-0103 | DOC-0103 |  |
+| DOC-0119 | [AI Gateway](../../product-specification/ai/runtime/ai-gateway.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
+| DOC-0120 | [AI Memory System](../../product-specification/ai/memory/ai-memory-system.md) | Owner | CONCEPT-0120 |  | DOC-0129, DOC-0132, DOC-0403 |
+| DOC-0121 | [AI Planner](../../product-specification/ai/orchestration/ai-planner.md) | Reference | CONCEPT-0102 | DOC-0102 |  |
+| DOC-0122 | [AI Reflection](../../product-specification/ai/orchestration/ai-reflection.md) | Reference | CONCEPT-0102 | DOC-0102 |  |
+| DOC-0123 | [AI Settings](../../product-specification/ai/providers/ai-settings.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
+| DOC-0124 | [AI Tools](../../product-specification/ai/tools/ai-tools.md) | Owner | CONCEPT-0124 |  |  |
+| DOC-0125 | [Cloud AI Integration](../../product-specification/ai/providers/cloud-ai-integration.md) | Owner | CONCEPT-0125 |  |  |
+| DOC-0126 | [Explainability](../../product-specification/ai/explainability/explainability.md) | Owner | CONCEPT-0126 |  | DOC-0400 |
+| DOC-0127 | [Governance Explainability](../../product-specification/ai/explainability/governance-explainability.md) | Owner | CONCEPT-0127 |  |  |
+| DOC-0128 | [Learning Pipeline](../../product-specification/ai/learning/learning-pipeline.md) | Owner | CONCEPT-0128 |  | DOC-0402 |
+| DOC-0129 | [Memory Lifecycle](../../product-specification/ai/memory/memory-lifecycle.md) | Reference | CONCEPT-0120 | DOC-0120 |  |
+| DOC-0130 | [Model Capability Negotiation](../../product-specification/ai/providers/model-capability-negotiation.md) | Reference | CONCEPT-0104 | DOC-0104 |  |
+| DOC-0131 | [Prompt Lifecycle](../../product-specification/ai/prompts/prompt-lifecycle.md) | Owner | CONCEPT-0131 |  |  |
 | DOC-0132 | [AI Memory Legacy Redirect](../../historical/ai-memory.md) | Historical Reference | CONCEPT-0120 | DOC-0120 |  |
 | DOC-0213 | [Dashboard Layout](../../product-specification/dashboard/dashboard-layout.md) | Owner | CONCEPT-0213 |  |  |
 | DOC-0214 | [Dashboard Runtime](../../product-specification/dashboard/dashboard-runtime.md) | Owner | CONCEPT-0214 |  |  |
@@ -349,3 +349,13 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0397 | [Events README](../../product-specification/interfaces/events/README.md) | Index | CONCEPT-0253 | DOC-0253 |  |
 | DOC-0398 | [Diagnostics README](../../product-specification/operations/diagnostics/README.md) | Index | CONCEPT-0333 | DOC-0333 |  |
 | DOC-0399 | [Monitoring README](../../product-specification/operations/monitoring/README.md) | Index | CONCEPT-0336 | DOC-0336 |  |
+| DOC-0400 | [AI Explainability README](../../product-specification/ai/explainability/README.md) | Index | CONCEPT-0126 | DOC-0126 |  |
+| DOC-0401 | [AI Knowledge README](../../product-specification/ai/knowledge/README.md) | Index | CONCEPT-0111 | DOC-0111 |  |
+| DOC-0402 | [AI Learning README](../../product-specification/ai/learning/README.md) | Index | CONCEPT-0128 | DOC-0128 |  |
+| DOC-0403 | [AI Memory README](../../product-specification/ai/memory/README.md) | Index | CONCEPT-0120 | DOC-0120 |  |
+| DOC-0404 | [AI Orchestration README](../../product-specification/ai/orchestration/README.md) | Index | CONCEPT-0102 | DOC-0102 |  |
+| DOC-0405 | [AI Prompts README](../../product-specification/ai/prompts/README.md) | Index | CONCEPT-0109 | DOC-0109 |  |
+| DOC-0406 | [AI Providers README](../../product-specification/ai/providers/README.md) | Index | CONCEPT-0104 | DOC-0104 |  |
+| DOC-0407 | [AI Runtime README](../../product-specification/ai/runtime/README.md) | Index | CONCEPT-0103 | DOC-0103 |  |
+| DOC-0408 | [AI Safety README](../../product-specification/ai/safety/README.md) | Index | CONCEPT-0105 | DOC-0105 |  |
+| DOC-0409 | [AI Tools README](../../product-specification/ai/tools/README.md) | Index | CONCEPT-0107 | DOC-0107 |  |

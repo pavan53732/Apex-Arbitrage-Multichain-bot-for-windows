@@ -63,7 +63,7 @@ If a strategy fails SLO, disable it and alert through `../operations/notificatio
 
 ## Cross-references
 - `../runtime/orchestrator.md`
-- `../ai/ai-consensus.md`
+- `../ai/orchestration/ai-consensus.md`
 - `../performance/performance-slos.md`
 - `../security/security-contracts.md`
 

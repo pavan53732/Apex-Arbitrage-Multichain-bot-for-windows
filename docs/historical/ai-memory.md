@@ -9,7 +9,7 @@ authority: Historical
 status: Superseded
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/ai-memory-system.md
+canonical_source: docs/product-specification/ai/memory/ai-memory-system.md
 related_concepts:
   - CONCEPT-0120
 dependencies:
@@ -29,9 +29,9 @@ scope: Reference documentation.
 
 # AI Memory
 
-This document was consolidated into `../product-specification/ai/ai-memory-system.md`.
+This document was consolidated into `../product-specification/ai/memory/ai-memory-system.md`.
 
-**Canonical owner:** `../product-specification/ai/ai-memory-system.md`
+**Canonical owner:** `../product-specification/ai/memory/ai-memory-system.md`
 
 ## Cross-References
-- `../product-specification/ai/ai-memory-system.md`
+- `../product-specification/ai/memory/ai-memory-system.md`

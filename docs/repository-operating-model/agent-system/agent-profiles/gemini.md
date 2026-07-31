@@ -49,9 +49,9 @@ Guidance for Gemini-based coding agents contributing to this repository.
 ## Required reading
 - `../../../../AGENTS.md`
 - `../../../product-specification/architecture/architecture.md`
-- `../../../product-specification/ai/ai-pipeline.md`
-- `../../../product-specification/ai/ai-provider-manager.md`
-- `../../../product-specification/ai/model-capability-negotiation.md`
+- `../../../product-specification/ai/runtime/ai-pipeline.md`
+- `../../../product-specification/ai/providers/ai-provider-manager.md`
+- `../../../product-specification/ai/providers/model-capability-negotiation.md`
 - `../../../product-specification/execution/trading-lifecycle.md`
 - `../../../product-specification/execution/execution-lifecycle.md`
 - `../../../product-specification/operations/runtime-operations.md`

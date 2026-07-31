@@ -75,8 +75,8 @@ These targets apply to UI, IPC, market data, AI requests, execution, reconciliat
 ## Cross-references
 - `../operations/monitoring-observability.md`
 - `../operations/runtime-operations.md`
-- `../ai/ai-pipeline.md`
-- `../ai/cloud-ai-integration.md`
+- `../ai/runtime/ai-pipeline.md`
+- `../ai/providers/cloud-ai-integration.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

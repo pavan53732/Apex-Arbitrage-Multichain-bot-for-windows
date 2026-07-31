@@ -43,7 +43,7 @@ Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `./skills.md`
-- `../../product-specification/ai/ai-pipeline.md`
+- `../../product-specification/ai/runtime/ai-pipeline.md`
 - `../../product-specification/ui/user-flows.md`
 
 
@@ -55,4 +55,4 @@ An input is validated before any state-changing action.
 
 ## Ownership boundary
 - This document is navigation only. It does not own AI execution, orchestration, or lifecycle behavior.
-- Authority belongs to `../../product-specification/ai/ai-pipeline.md`, `../../product-specification/runtime/orchestrator.md`, and `../../product-specification/ai/ai-agent-specification.md`.
+- Authority belongs to `../../product-specification/ai/runtime/ai-pipeline.md`, `../../product-specification/runtime/orchestrator.md`, and `../../product-specification/ai/orchestration/ai-agent-specification.md`.

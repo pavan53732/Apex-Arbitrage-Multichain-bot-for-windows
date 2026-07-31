@@ -75,7 +75,7 @@ All recoveries follow this sequence:
 | **Severity** | High |
 | **Detection** | Provider returns 5xx / timeout / quota exceeded |
 | **Halt scope** | AI-dependent operations (opportunity scoring may degrade) |
-| **Retry** | Follow fallback chain: Primary → Secondary → Tertiary (see `../ai/ai-pipeline.md` §5.3). |
+| **Retry** | Follow fallback chain: Primary → Secondary → Tertiary (see `../ai/runtime/ai-pipeline.md` §5.3). |
 | **Reconcile** | No state reconciliation (AI is stateless per request). |
 | **Escalation** | All providers fail → emit `ai.critical.all_providers_failed`. |
 | **Recovery** | Auto-resume on primary when retry interval elapses. |

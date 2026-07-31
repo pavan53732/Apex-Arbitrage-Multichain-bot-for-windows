@@ -82,7 +82,7 @@ ScenarioDefined -> SnapshotCaptured -> Replayed -> Evaluated -> Persisted -> Pub
 - `../execution/simulation-engine.md`
 - `../execution/strategies.md`
 - `../execution/execution-engine.md`
-- `../ai/ai-pipeline.md`
+- `../ai/runtime/ai-pipeline.md`
 - `./testing-guide.md`
 - `../deployment/versioning.md`
 

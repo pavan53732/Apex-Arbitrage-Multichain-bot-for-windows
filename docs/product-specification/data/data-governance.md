@@ -61,7 +61,7 @@ Reject invalid records, refresh from source, and replay lineage from durable sto
 ## Cross-references
 - `../market/market-data.md`
 - `./knowledge-graph.md`
-- `../ai/ai-memory-system.md`
+- `../ai/memory/ai-memory-system.md`
 - `./registry-system.md`
 
 ## Governance Rules
