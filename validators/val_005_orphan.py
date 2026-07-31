@@ -82,7 +82,7 @@ class Validator(BaseValidator):
                     # Allow some concepts to not be in READMEs (e.g., internal registry concepts)
                     if concept.domain not in ("Registries", "Standards", "Validation", "Traceability", "Workflows"):
                         warnings.append(ValidationWarning(
-                            code=ErrorCode.ORPHANED_ACTIVE_CONCEPT,
+                            code=ErrorCode.ORPHANED_ACTIVE_CONCEPT_WARN,
                             file="",
                             line=1,
                             message=f"Active concept {concept_id} not listed in any domain README Canonical Owner Map",

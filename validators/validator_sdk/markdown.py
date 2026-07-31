@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 from dataclasses import dataclass
 
-from .config import ValidatorConfig
+from .base import ValidatorConfig
 
 
 @dataclass

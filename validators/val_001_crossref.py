@@ -86,7 +86,7 @@ class Validator(BaseValidator):
                             code=ErrorCode.UNRESOLVED_MARKDOWN_LINK,
                             file=rel_str,
                             line=self._find_link_line(content, link_target),
-                            message=format_error(ErrorCode.UNRESOLVED_MARKDOWN_LINK, target=link_target),
+                            message=format_error(ErrorCode.UNRESOLVED_MARKDOWN_LINK, target=link_target, file=rel_str),
                             severity="ERROR",
                             rule="All markdown links must resolve to existing files",
                             suggestion=f"Fix link target or create missing file: {link_target}"
