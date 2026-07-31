@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/repository-operating-model/standards/coding-standards.md
 related_concepts:
   - CONCEPT-0053
-dependencies:
-  - DOC-0085
-  - DOC-0235
-consumers:
-  - DOC-0049
-  - DOC-0055
-  - DOC-0059
-  - DOC-0062
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Standards
 type: SPECIFICATION
 purpose: Coding Standards documentation.
 scope: Reference documentation.

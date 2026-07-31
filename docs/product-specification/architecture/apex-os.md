@@ -12,34 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/architecture/apex-os.md
 related_concepts:
   - CONCEPT-0078
-dependencies:
-  - DOC-0065
-  - DOC-0087
-  - DOC-0238
-  - DOC-0247
-  - DOC-0281
-  - DOC-0344
-consumers:
-  - DOC-0049
-  - DOC-0068
-  - DOC-0070
-  - DOC-0071
-  - DOC-0072
-  - DOC-0073
-  - DOC-0074
-  - DOC-0075
-  - DOC-0076
-  - DOC-0077
-  - DOC-0079
-  - DOC-0086
-  - DOC-0091
-  - DOC-0265
-  - DOC-0305
-  - DOC-0383
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Apex Os documentation.
 scope: Reference documentation.

@@ -13,13 +13,14 @@ canonical_source: docs/product-specification/runtime/task-scheduler.md
 related_concepts:
   - CONCEPT-0090
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0094
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Runtime
 type: CONTRACT
 purpose: "Defines task scheduling, priority queues, and task lifecycle."
 scope: Task scheduling for runtime components.

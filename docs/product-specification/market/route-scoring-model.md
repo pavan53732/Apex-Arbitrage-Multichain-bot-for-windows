@@ -5,24 +5,22 @@ title: Route Scoring Model
 plane: Product Specification
 domain: Market
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/market/route-scoring-model.md
+canonical_source: docs/product-specification/market/route-optimization.md
 related_concepts:
-  - CONCEPT-0329
+  - CONCEPT-0328
 dependencies:
-  - DOC-0282
-  - DOC-0283
   - DOC-0328
-consumers:
-  - DOC-0049
-  - DOC-0310
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Route Scoring Model documentation.
 scope: Reference documentation.

@@ -5,24 +5,22 @@ title: Memory Lifecycle
 plane: Product Specification
 domain: AI
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/memory-lifecycle.md
+canonical_source: docs/product-specification/ai/ai-memory-system.md
 related_concepts:
-  - CONCEPT-0129
+  - CONCEPT-0120
 dependencies:
-  - DOC-0131
-  - DOC-0358
-consumers:
-  - DOC-0049
-  - DOC-0106
-  - DOC-0114
+  - DOC-0120
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: "Defines memory allocation, ownership, cleanup, and eviction policies for all subsystems — process memory, caches, AI memory stores, and workspace state."
 scope: None

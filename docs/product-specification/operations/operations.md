@@ -13,13 +13,14 @@ canonical_source: docs/product-specification/operations/operations.md
 related_concepts:
   - CONCEPT-0346
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0342
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: REFERENCE
 purpose: Operations documentation.
 scope: Reference documentation.

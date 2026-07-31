@@ -13,15 +13,14 @@ canonical_source: docs/product-specification/performance/resource-budget-specifi
 related_concepts:
   - CONCEPT-0358
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0129
-  - DOC-0354
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Performance
 type: REFERENCE
 purpose: "Defines RAM, CPU, GPU, thread, queue, cache, network, and storage budgets per subsystem — with enforcement thresholds, backpressure behavior, and observability."
 scope: None

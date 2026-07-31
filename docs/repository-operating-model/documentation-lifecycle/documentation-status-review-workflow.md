@@ -13,14 +13,14 @@ canonical_source: docs/repository-operating-model/documentation-lifecycle/docume
 related_concepts:
   - CONCEPT-0057
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0060
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Documentation Lifecycle
 type: CONTRACT
 purpose: "Defines the documentation review workflow — status metadata per document, review SLAs, approval gates, version tracking, and lifecycle transitions for every document in the repository."
 scope: None

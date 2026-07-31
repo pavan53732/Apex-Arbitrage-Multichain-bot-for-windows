@@ -9,40 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/README.md
+canonical_source: docs/product-specification/execution/trading-engine.md
 related_concepts:
-  - CONCEPT-0285
+  - CONCEPT-0284
 dependencies:
-  - DOC-0278
-  - DOC-0279
-  - DOC-0280
-  - DOC-0281
-  - DOC-0282
-  - DOC-0283
   - DOC-0284
-  - DOC-0286
-  - DOC-0287
-  - DOC-0288
-  - DOC-0289
-  - DOC-0290
-  - DOC-0291
-  - DOC-0292
-  - DOC-0293
-  - DOC-0294
-  - DOC-0295
-  - DOC-0296
-  - DOC-0297
-  - DOC-0298
-  - DOC-0299
-  - DOC-0300
-  - DOC-0301
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Execution

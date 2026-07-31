@@ -12,17 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/execution/trade-explainer.md
 related_concepts:
   - CONCEPT-0297
-dependencies:
-  - DOC-0126
-  - DOC-0127
-  - DOC-0273
-consumers:
-  - DOC-0049
-  - DOC-0285
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: REFERENCE
 purpose: Trade Explainer documentation.
 scope: Reference documentation.

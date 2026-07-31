@@ -12,16 +12,16 @@ version: 1.0.0
 canonical_source: docs/adr/0001-provider-abstraction.md
 related_concepts:
   - CONCEPT-0070
-dependencies:
-  - DOC-0078
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
   - DOC-0067
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Adr/0001 Provider Abstraction documentation.
 scope: Reference documentation.

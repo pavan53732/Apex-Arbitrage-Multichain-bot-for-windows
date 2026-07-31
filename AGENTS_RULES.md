@@ -12,17 +12,17 @@ version: 1.0.0
 canonical_source: AGENTS_RULES.md
 related_concepts:
   - CONCEPT-0002
-dependencies:
-  - DOC-0004
+dependencies: []
 consumers:
-  - DOC-0005
-  - DOC-0049
-  - DOC-0059
+  - DOC-0044
 validator_coverage: []
 supersedes:
   - DOC-0044
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Owner
+owned_domains:
+  - Agent System
 ---
 
 # Agent Rules

@@ -13,13 +13,14 @@ canonical_source: docs/product-specification/configuration/feature-flag-governan
 related_concepts:
   - CONCEPT-0382
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0385
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Configuration
 type: CONTRACT
 purpose: "Defines the complete feature-flag governance and rollout matrix — flag lifecycle, rollout policies, gating rules, dependency tracking, rollback procedures, and observability for every feature flag in the platform."
 scope: None

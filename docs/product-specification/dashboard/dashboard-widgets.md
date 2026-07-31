@@ -13,17 +13,14 @@ canonical_source: docs/product-specification/dashboard/dashboard-widgets.md
 related_concepts:
   - CONCEPT-0215
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0079
-  - DOC-0218
-  - DOC-0390
-  - DOC-0396
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Dashboard
 type: CONTRACT
 purpose: Defines dashboard widgets.
 scope: Widget specification.

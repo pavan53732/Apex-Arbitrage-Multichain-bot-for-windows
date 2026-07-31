@@ -12,20 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/execution/order-management.md
 related_concepts:
   - CONCEPT-0291
-dependencies:
-  - DOC-0266
-  - DOC-0280
-  - DOC-0282
-  - DOC-0299
-consumers:
-  - DOC-0031
-  - DOC-0049
-  - DOC-0285
-  - DOC-0294
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: REFERENCE
 purpose: Order Management documentation.
 scope: Reference documentation.

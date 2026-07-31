@@ -14,16 +14,16 @@ related_concepts:
   - CONCEPT-0253
 dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0065
-  - DOC-0079
-  - DOC-0099
-  - DOC-0256
+  - DOC-0258
+  - DOC-0259
+  - DOC-0363
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Interfaces
 type: CONTRACT
 purpose: Defines the central pub/sub backbone for asynchronous communication.
 scope: "Producer/consumer contract, message schema, delivery guarantees, ordering, priority, retry, deduplication, timeout, persistence, replay, dead-letter handling, consumer groups, partitioning, and cross-subsystem integration."

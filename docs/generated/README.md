@@ -9,17 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/generated/README.md
+canonical_source: docs/product-specification/ai/ai-orchestration.md
 related_concepts:
-  - CONCEPT-0112
-dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0058
+  - CONCEPT-0102
+dependencies:
+  - DOC-0102
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Generated

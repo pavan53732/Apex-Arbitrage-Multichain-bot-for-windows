@@ -12,30 +12,15 @@ version: 1.0.0
 canonical_source: README.md
 related_concepts:
   - CONCEPT-0005
-dependencies:
-  - DOC-0001
-  - DOC-0002
-  - DOC-0003
-  - DOC-0004
-  - DOC-0006
-  - DOC-0007
-  - DOC-0008
-  - DOC-0058
-  - DOC-0079
-  - DOC-0103
-  - DOC-0227
-  - DOC-0266
-  - DOC-0289
-  - DOC-0298
-  - DOC-0338
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0100
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Governance
 type: OVERVIEW
 purpose: Readme documentation.
 scope: Reference documentation.

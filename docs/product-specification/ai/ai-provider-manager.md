@@ -14,19 +14,17 @@ related_concepts:
   - CONCEPT-0104
 dependencies: []
 consumers:
-  - DOC-0024
-  - DOC-0028
-  - DOC-0049
-  - DOC-0114
+  - DOC-0115
+  - DOC-0119
   - DOC-0123
   - DOC-0130
-  - DOC-0262
-  - DOC-0347
-  - DOC-0384
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: CONTRACT
 purpose: "Defines provider abstraction, capability detection, provider scoring, health monitoring, failover, cost-aware selection, provider configuration, and test-connection behavior."
 scope: Ai Provider Manager scope and boundaries.

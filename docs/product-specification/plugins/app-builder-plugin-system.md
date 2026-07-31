@@ -12,16 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/plugins/app-builder-plugin-system.md
 related_concepts:
   - CONCEPT-0244
-dependencies:
-  - DOC-0247
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0248
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Plugins
 type: CONTRACT
 purpose: "Defines how the desktop app discovers, registers, sandboxes, versions, loads, unloads, and updates plugins — with plugin manifest contract, signature requirements, version compatibility, hot reload behavior, failure isolation, uninstall behavior, and API stability policy."
 scope: App Builder Plugin System scope and boundaries.

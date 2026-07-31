@@ -5,29 +5,22 @@ title: Implementation Roadmap
 plane: Product Specification
 domain: Reference
 class: Reference
-authority: Reference
+authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
 canonical_source: docs/product-specification/reference/implementation-roadmap.md
 related_concepts:
   - CONCEPT-0371
-dependencies:
-  - DOC-0079
-  - DOC-0085
-  - DOC-0284
-consumers:
-  - DOC-0049
-  - DOC-0062
-  - DOC-0225
-  - DOC-0361
-  - DOC-0366
-  - DOC-0367
-  - DOC-0369
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Reference
 type: REFERENCE
 purpose: Implementation Roadmap documentation.
 scope: Reference documentation.

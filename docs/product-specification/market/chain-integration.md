@@ -12,24 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/chain-integration.md
 related_concepts:
   - CONCEPT-0302
-dependencies:
-  - DOC-0266
-  - DOC-0299
-  - DOC-0301
-  - DOC-0304
-  - DOC-0306
-  - DOC-0315
-  - DOC-0336
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0303
-  - DOC-0306
-  - DOC-0310
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: CONTRACT
 purpose: Defines chain integration.
 scope: Blockchain connectivity.

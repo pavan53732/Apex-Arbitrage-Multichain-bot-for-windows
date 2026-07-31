@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-state-machine.md
 related_concepts:
   - CONCEPT-0106
-dependencies:
-  - DOC-0107
-  - DOC-0129
-  - DOC-0131
-  - DOC-0132
-consumers:
-  - DOC-0049
-  - DOC-0114
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: CONTRACT
 purpose: "Defines the complete AI orchestration state machine — states, transitions, timeouts, recovery transitions, forbidden transitions, prompt/tool/memory lifecycle state coupling, and provider routing lifecycle."
 scope: Ai State Machine scope and boundaries.

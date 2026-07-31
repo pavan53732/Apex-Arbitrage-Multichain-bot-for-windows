@@ -9,22 +9,18 @@ authority: Derived
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/agent-system/agent-navigation.md
+canonical_source: AGENTS.md
 related_concepts:
-  - CONCEPT-0046
+  - CONCEPT-0001
 dependencies:
-  - DOC-0045
-  - DOC-0087
-  - DOC-0101
-  - DOC-0103
-  - DOC-0396
-consumers:
-  - DOC-0016
-  - DOC-0049
+  - DOC-0001
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: AI agent navigation overview.
 scope: Agent reference.

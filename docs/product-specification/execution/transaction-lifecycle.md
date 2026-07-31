@@ -12,25 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/execution/transaction-lifecycle.md
 related_concepts:
   - CONCEPT-0299
-dependencies:
-  - DOC-0266
-  - DOC-0280
-  - DOC-0301
-  - DOC-0315
-consumers:
-  - DOC-0031
-  - DOC-0049
-  - DOC-0285
-  - DOC-0291
-  - DOC-0301
-  - DOC-0302
-  - DOC-0315
-  - DOC-0321
-  - DOC-0322
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: REFERENCE
 purpose: Transaction Lifecycle documentation.
 scope: Reference documentation.

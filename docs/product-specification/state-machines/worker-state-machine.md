@@ -13,13 +13,14 @@ canonical_source: docs/product-specification/state-machines/worker-state-machine
 related_concepts:
   - CONCEPT-0378
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0380
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - State Machines
 type: CONTRACT
 purpose: "Defines the complete worker lifecycle state machine — states, transitions, timeouts, recovery transitions, forbidden transitions, and creation/shutdown flow."
 scope: None

@@ -9,22 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/security/README.md
+canonical_source: docs/product-specification/security/security.md
 related_concepts:
-  - CONCEPT-0229
+  - CONCEPT-0228
 dependencies:
-  - DOC-0226
-  - DOC-0227
   - DOC-0228
-  - DOC-0230
-  - DOC-0231
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Security

@@ -5,26 +5,22 @@ title: Event Flow
 plane: Product Specification
 domain: Interfaces
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/event-flow.md
+canonical_source: docs/product-specification/interfaces/event-bus.md
 related_concepts:
-  - CONCEPT-0258
+  - CONCEPT-0253
 dependencies:
-  - DOC-0254
-  - DOC-0267
-  - DOC-0271
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0256
-  - DOC-0271
+  - DOC-0253
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Event Flow documentation.
 scope: Reference documentation.

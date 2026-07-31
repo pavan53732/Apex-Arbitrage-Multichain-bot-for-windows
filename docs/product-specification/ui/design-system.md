@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ui/design-system.md
 related_concepts:
   - CONCEPT-0394
-dependencies:
-  - DOC-0238
-  - DOC-0390
-  - DOC-0395
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0391
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - UI
 type: REFERENCE
 purpose: Design System documentation.
 scope: Reference documentation.

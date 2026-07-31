@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/windows/windows-notification-integr
 related_concepts:
   - CONCEPT-0240
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0243
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Windows
 type: CONTRACT
 purpose: "Defines how the app uses Windows toasts, tray notifications, and Action Center behavior — severity mapping, click actions, delivery on restart, offline recovery, notification preferences, and cross-subsystem integration."
 scope: None

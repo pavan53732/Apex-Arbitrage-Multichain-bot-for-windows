@@ -12,22 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/governance-explainability.md
 related_concepts:
   - CONCEPT-0127
-dependencies:
-  - DOC-0126
-  - DOC-0279
-  - DOC-0281
-  - DOC-0288
-consumers:
-  - DOC-0049
-  - DOC-0114
-  - DOC-0126
-  - DOC-0273
-  - DOC-0288
-  - DOC-0297
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: REFERENCE
 purpose: Governance Explainability documentation.
 scope: Reference documentation.

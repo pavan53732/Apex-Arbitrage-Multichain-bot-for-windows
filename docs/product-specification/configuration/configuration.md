@@ -12,28 +12,18 @@ version: 1.1.0
 canonical_source: docs/product-specification/configuration/configuration.md
 related_concepts:
   - CONCEPT-0381
-dependencies:
-  - DOC-0386
-  - DOC-0387
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0109
-  - DOC-0115
-  - DOC-0123
-  - DOC-0125
-  - DOC-0221
-  - DOC-0225
-  - DOC-0281
-  - DOC-0344
   - DOC-0385
   - DOC-0386
-  - DOC-0388
-  - DOC-0396
+  - DOC-0387
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Configuration
 type: CONTRACT
 purpose: "Defines configuration management, schema, and lifecycle."
 scope: "Configuration schema, validation, hot-reload, and versioning."

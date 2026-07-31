@@ -14,56 +14,16 @@ related_concepts:
   - CONCEPT-0103
 dependencies: []
 consumers:
-  - DOC-0005
-  - DOC-0020
-  - DOC-0021
-  - DOC-0022
-  - DOC-0023
-  - DOC-0024
-  - DOC-0025
-  - DOC-0026
-  - DOC-0027
-  - DOC-0028
-  - DOC-0029
-  - DOC-0030
-  - DOC-0032
-  - DOC-0033
-  - DOC-0034
-  - DOC-0035
-  - DOC-0036
-  - DOC-0037
-  - DOC-0038
-  - DOC-0039
-  - DOC-0040
-  - DOC-0041
-  - DOC-0042
-  - DOC-0043
-  - DOC-0045
-  - DOC-0046
-  - DOC-0049
-  - DOC-0079
-  - DOC-0084
-  - DOC-0101
-  - DOC-0109
   - DOC-0114
-  - DOC-0115
   - DOC-0117
   - DOC-0118
-  - DOC-0123
-  - DOC-0125
-  - DOC-0235
-  - DOC-0236
-  - DOC-0262
-  - DOC-0270
-  - DOC-0283
-  - DOC-0295
-  - DOC-0350
-  - DOC-0357
-  - DOC-0396
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: CONTRACT
 purpose: "Defines AI request routing, prompt assembly pipeline, context assembly, context compression, token budgeting, prompt construction, provider routing, confidence scoring, streaming lifecycle, cancellation, fallback policy, and recovery."
 scope: AI request processing from request to structured response.

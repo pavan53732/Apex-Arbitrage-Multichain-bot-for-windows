@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/data/cache-manager.md
 related_concepts:
   - CONCEPT-0265
-dependencies:
-  - DOC-0078
-  - DOC-0079
-consumers:
-  - DOC-0034
-  - DOC-0049
-  - DOC-0059
-  - DOC-0269
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Data
 type: CONTRACT
 purpose: "Defines cache management, eviction policies, and cache lifecycle."
 scope: Caching for runtime components.

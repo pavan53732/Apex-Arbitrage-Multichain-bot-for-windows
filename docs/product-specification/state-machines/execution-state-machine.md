@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/state-machines/execution-state-mach
 related_concepts:
   - CONCEPT-0375
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0380
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - State Machines
 type: CONTRACT
 purpose: "Defines the complete execution lifecycle state machine — states, transitions, timeouts, recovery transitions, forbidden transitions, failure transitions, and crash resume behavior for chain transaction execution."
 scope: None

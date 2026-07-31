@@ -9,18 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/traceability/README.md
+canonical_source: docs/repository-operating-model/registries/TRACEABILITY-REGISTRY.md
 related_concepts:
-  - CONCEPT-0048
+  - CONCEPT-0008
 dependencies:
-  - DOC-0049
-  - DOC-0050
-consumers:
-  - DOC-0058
+  - DOC-0008
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Traceability

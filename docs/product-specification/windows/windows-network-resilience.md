@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/windows/windows-network-resilience.
 related_concepts:
   - CONCEPT-0239
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0243
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Windows
 type: CONTRACT
 purpose: "Defines how the desktop app and backend survive Windows network changes — proxy handling, Wi-Fi/Ethernet changes, VPN reconnects, DNS refresh, captive portals, reconnect backoff, offline recovery, and cross-subsystem integration."
 scope: None

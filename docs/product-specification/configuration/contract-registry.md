@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/configuration/contract-registry.md
 related_concepts:
   - CONCEPT-0383
-dependencies:
-  - DOC-0078
-  - DOC-0079
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0359
-  - DOC-0385
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Configuration
 type: CONTRACT
 purpose: Contract Registry documentation.
 scope: Reference documentation.

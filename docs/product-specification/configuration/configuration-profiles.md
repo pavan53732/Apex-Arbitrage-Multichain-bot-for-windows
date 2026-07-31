@@ -5,29 +5,22 @@ title: Configuration Profiles
 plane: Product Specification
 domain: Configuration
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Config Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/configuration-profiles.md
+canonical_source: docs/product-specification/configuration/configuration.md
 related_concepts:
-  - CONCEPT-0386
+  - CONCEPT-0381
 dependencies:
-  - DOC-0051
-  - DOC-0123
-  - DOC-0216
   - DOC-0381
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0100
-  - DOC-0381
-  - DOC-0385
-  - DOC-0387
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Configuration Profiles documentation.
 scope: Reference documentation.

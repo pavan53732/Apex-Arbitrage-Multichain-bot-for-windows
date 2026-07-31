@@ -11,15 +11,16 @@ owner: AI Team
 version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-orchestration.md
 related_concepts:
-  - CONCEPT-0191
-dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0113
+  - CONCEPT-0102
+dependencies:
+  - DOC-0102
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-28
+concept_role: Generated Reference
+owned_domains: []
 type: CONTRACT
 purpose: AI orchestration schema contract for Contract 59
 scope: Defines data schemas for AI orchestration subsystem.

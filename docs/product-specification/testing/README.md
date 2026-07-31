@@ -9,21 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/testing/README.md
+canonical_source: docs/product-specification/testing/testing.md
 related_concepts:
-  - CONCEPT-0234
+  - CONCEPT-0232
 dependencies:
   - DOC-0232
-  - DOC-0233
-  - DOC-0235
-  - DOC-0236
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Testing

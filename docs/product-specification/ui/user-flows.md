@@ -12,27 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ui/user-flows.md
 related_concepts:
   - CONCEPT-0396
-dependencies:
-  - DOC-0103
-  - DOC-0213
-  - DOC-0215
-  - DOC-0228
-  - DOC-0284
-  - DOC-0338
-  - DOC-0381
-  - DOC-0393
-consumers:
-  - DOC-0046
-  - DOC-0049
-  - DOC-0059
-  - DOC-0391
-  - DOC-0392
-  - DOC-0393
-  - DOC-0395
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - UI
 type: REFERENCE
 purpose: User Flows documentation.
 scope: Reference documentation.

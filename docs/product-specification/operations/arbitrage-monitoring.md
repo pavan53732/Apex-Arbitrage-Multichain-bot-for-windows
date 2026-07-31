@@ -12,19 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/operations/arbitrage-monitoring.md
 related_concepts:
   - CONCEPT-0343
-dependencies:
-  - DOC-0288
-  - DOC-0325
-  - DOC-0356
-  - DOC-0364
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0342
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: REFERENCE
 purpose: Arbitrage Monitoring documentation.
 scope: Reference documentation.

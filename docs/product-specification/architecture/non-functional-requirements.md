@@ -12,19 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/architecture/non-functional-requirements.md
 related_concepts:
   - CONCEPT-0084
-dependencies:
-  - DOC-0103
-  - DOC-0228
-  - DOC-0336
-  - DOC-0338
-  - DOC-0357
-consumers:
-  - DOC-0049
-  - DOC-0068
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Non Functional Requirements documentation.
 scope: Reference documentation.

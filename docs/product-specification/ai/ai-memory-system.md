@@ -12,25 +12,17 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-memory-system.md
 related_concepts:
   - CONCEPT-0120
-dependencies:
-  - DOC-0111
-  - DOC-0128
-  - DOC-0270
-  - DOC-0275
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0111
-  - DOC-0114
-  - DOC-0117
-  - DOC-0128
+  - DOC-0129
   - DOC-0132
-  - DOC-0270
-  - DOC-0272
-  - DOC-0275
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: REFERENCE
 purpose: Ai Memory System documentation.
 scope: Reference documentation.

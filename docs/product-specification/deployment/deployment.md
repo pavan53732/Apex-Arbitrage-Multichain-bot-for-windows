@@ -12,22 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/deployment/deployment.md
 related_concepts:
   - CONCEPT-0224
-dependencies:
-  - DOC-0222
-  - DOC-0228
-  - DOC-0235
-  - DOC-0238
-  - DOC-0338
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
   - DOC-0220
-  - DOC-0222
-  - DOC-0372
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Deployment
 type: REFERENCE
 purpose: Deployment documentation.
 scope: Reference documentation.

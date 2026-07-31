@@ -5,30 +5,22 @@ title: AI Cost Management
 plane: Product Specification
 domain: AI
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/ai-cost-management.md
+canonical_source: docs/product-specification/ai/ai-pipeline.md
 related_concepts:
-  - CONCEPT-0118
+  - CONCEPT-0103
 dependencies:
   - DOC-0103
-  - DOC-0123
-  - DOC-0125
-  - DOC-0336
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0114
-  - DOC-0123
-  - DOC-0125
-  - DOC-0281
-  - DOC-0356
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Ai Cost Management documentation.
 scope: Reference documentation.

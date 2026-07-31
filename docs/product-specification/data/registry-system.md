@@ -13,17 +13,14 @@ canonical_source: docs/product-specification/data/registry-system.md
 related_concepts:
   - CONCEPT-0276
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0088
-  - DOC-0093
-  - DOC-0269
-  - DOC-0272
-  - DOC-0384
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Data
 type: REFERENCE
 purpose: "Unified registry contract for chain, DEX, token, oracle, service, plugin, contract, and system capability registries — with common interface, versioning, validation, mutation, ownership, and reconciliation rules."
 scope: None

@@ -13,15 +13,14 @@ canonical_source: docs/product-specification/runtime/worker-pool.md
 related_concepts:
   - CONCEPT-0092
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0079
-  - DOC-0088
-  - DOC-0094
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Runtime
 type: CONTRACT
 purpose: "Defines worker pool management, scaling, and worker lifecycle."
 scope: Worker pool for runtime components.

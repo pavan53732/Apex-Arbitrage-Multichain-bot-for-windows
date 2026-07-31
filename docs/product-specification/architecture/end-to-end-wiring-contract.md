@@ -13,13 +13,14 @@ canonical_source: docs/product-specification/architecture/end-to-end-wiring-cont
 related_concepts:
   - CONCEPT-0066
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0068
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: CONTRACT
 purpose: "Defines the single authoritative end-to-end wiring contract connecting all subsystems — from AI signal through orchestration, decision, execution, wallet, trading, notification, to dashboard — with explicit data flow, event sequencing, failure branching, and recovery coordination."
 scope: None

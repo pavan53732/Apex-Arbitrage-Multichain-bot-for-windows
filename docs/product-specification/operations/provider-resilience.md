@@ -12,20 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/operations/provider-resilience.md
 related_concepts:
   - CONCEPT-0347
-dependencies:
-  - DOC-0104
-  - DOC-0119
-  - DOC-0335
-  - DOC-0356
-consumers:
-  - DOC-0049
-  - DOC-0119
-  - DOC-0342
-  - DOC-0351
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: REFERENCE
 purpose: Provider Resilience documentation.
 scope: Reference documentation.

@@ -12,32 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/execution/strategies.md
 related_concepts:
   - CONCEPT-0295
-dependencies:
-  - DOC-0103
-  - DOC-0280
-  - DOC-0282
-  - DOC-0283
-  - DOC-0318
-consumers:
-  - DOC-0049
-  - DOC-0235
-  - DOC-0236
-  - DOC-0250
-  - DOC-0283
-  - DOC-0285
-  - DOC-0286
-  - DOC-0317
-  - DOC-0318
-  - DOC-0323
-  - DOC-0325
-  - DOC-0326
-  - DOC-0330
-  - DOC-0369
-  - DOC-0370
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: REFERENCE
 purpose: Strategies documentation.
 scope: Reference documentation.

@@ -9,23 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/performance/README.md
+canonical_source: docs/product-specification/performance/performance-slos.md
 related_concepts:
-  - CONCEPT-0354
+  - CONCEPT-0356
 dependencies:
-  - DOC-0352
-  - DOC-0353
-  - DOC-0355
   - DOC-0356
-  - DOC-0357
-  - DOC-0358
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Performance

@@ -9,97 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/generated/ai-orchestration/README.md
+canonical_source: docs/product-specification/ai/ai-orchestration.md
 related_concepts:
-  - CONCEPT-0113
+  - CONCEPT-0102
 dependencies:
-  - DOC-0133
-  - DOC-0134
-  - DOC-0135
-  - DOC-0136
-  - DOC-0137
-  - DOC-0138
-  - DOC-0139
-  - DOC-0140
-  - DOC-0141
-  - DOC-0142
-  - DOC-0143
-  - DOC-0144
-  - DOC-0145
-  - DOC-0146
-  - DOC-0147
-  - DOC-0148
-  - DOC-0149
-  - DOC-0150
-  - DOC-0151
-  - DOC-0152
-  - DOC-0153
-  - DOC-0154
-  - DOC-0155
-  - DOC-0156
-  - DOC-0157
-  - DOC-0158
-  - DOC-0159
-  - DOC-0160
-  - DOC-0161
-  - DOC-0162
-  - DOC-0163
-  - DOC-0164
-  - DOC-0165
-  - DOC-0166
-  - DOC-0167
-  - DOC-0168
-  - DOC-0169
-  - DOC-0170
-  - DOC-0171
-  - DOC-0172
-  - DOC-0173
-  - DOC-0174
-  - DOC-0175
-  - DOC-0176
-  - DOC-0177
-  - DOC-0178
-  - DOC-0179
-  - DOC-0180
-  - DOC-0181
-  - DOC-0182
-  - DOC-0183
-  - DOC-0184
-  - DOC-0185
-  - DOC-0186
-  - DOC-0187
-  - DOC-0188
-  - DOC-0189
-  - DOC-0190
-  - DOC-0191
-  - DOC-0192
-  - DOC-0193
-  - DOC-0194
-  - DOC-0195
-  - DOC-0196
-  - DOC-0197
-  - DOC-0198
-  - DOC-0199
-  - DOC-0200
-  - DOC-0201
-  - DOC-0202
-  - DOC-0203
-  - DOC-0204
-  - DOC-0205
-  - DOC-0206
-  - DOC-0207
-  - DOC-0208
-  - DOC-0209
-  - DOC-0210
-  - DOC-0211
-  - DOC-0212
-consumers:
-  - DOC-0049
-  - DOC-0058
+  - DOC-0102
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Generated AI Orchestration

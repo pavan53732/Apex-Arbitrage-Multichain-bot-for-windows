@@ -12,20 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/runtime/worker-architecture.md
 related_concepts:
   - CONCEPT-0098
-dependencies:
-  - DOC-0336
-  - DOC-0338
-  - DOC-0348
-  - DOC-0349
-consumers:
-  - DOC-0049
-  - DOC-0094
-  - DOC-0348
-  - DOC-0349
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Runtime
 type: REFERENCE
 purpose: Worker Architecture documentation.
 scope: Reference documentation.

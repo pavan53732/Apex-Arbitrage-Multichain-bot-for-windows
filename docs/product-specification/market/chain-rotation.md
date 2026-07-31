@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/chain-rotation.md
 related_concepts:
   - CONCEPT-0313
-dependencies:
-  - DOC-0087
-  - DOC-0306
-  - DOC-0335
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0310
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Chain Rotation documentation.
 scope: Reference documentation.

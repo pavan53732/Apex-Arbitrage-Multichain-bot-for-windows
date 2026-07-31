@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/configuration/system-capability-registry.md
 related_concepts:
   - CONCEPT-0384
-dependencies:
-  - DOC-0104
-  - DOC-0119
-  - DOC-0247
-  - DOC-0276
-consumers:
-  - DOC-0049
-  - DOC-0385
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Configuration
 type: REFERENCE
 purpose: System Capability Registry documentation.
 scope: Reference documentation.

@@ -12,17 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/plugins/plugin-marketplace.md
 related_concepts:
   - CONCEPT-0250
-dependencies:
-  - DOC-0247
-  - DOC-0295
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0248
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Plugins
 type: REFERENCE
 purpose: Plugin Marketplace documentation.
 scope: Reference documentation.

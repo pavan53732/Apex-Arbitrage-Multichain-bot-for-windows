@@ -9,20 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/agent-system/skills.md
+canonical_source: AGENTS.md
 related_concepts:
-  - CONCEPT-0045
+  - CONCEPT-0001
 dependencies:
   - DOC-0001
-  - DOC-0103
-consumers:
-  - DOC-0016
-  - DOC-0046
-  - DOC-0049
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Skills documentation.
 scope: Reference documentation.

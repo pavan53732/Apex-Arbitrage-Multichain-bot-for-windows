@@ -12,21 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/learning-pipeline.md
 related_concepts:
   - CONCEPT-0128
-dependencies:
-  - DOC-0102
-  - DOC-0120
-  - DOC-0283
-  - DOC-0364
-consumers:
-  - DOC-0049
-  - DOC-0114
-  - DOC-0120
-  - DOC-0122
-  - DOC-0126
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: REFERENCE
 purpose: Learning Pipeline documentation.
 scope: Reference documentation.

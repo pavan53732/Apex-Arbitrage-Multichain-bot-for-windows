@@ -12,22 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/ui/ui-component-spec.md
 related_concepts:
   - CONCEPT-0390
-dependencies:
-  - DOC-0215
-  - DOC-0217
-  - DOC-0238
-  - DOC-0393
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
   - DOC-0391
-  - DOC-0393
-  - DOC-0394
-  - DOC-0395
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - UI
 type: SPECIFICATION
 purpose: Ui Component Spec documentation.
 scope: Reference documentation.

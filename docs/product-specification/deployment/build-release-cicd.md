@@ -12,21 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/deployment/build-release-cicd.md
 related_concepts:
   - CONCEPT-0222
-dependencies:
-  - DOC-0219
-  - DOC-0223
-  - DOC-0224
-  - DOC-0235
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0085
-  - DOC-0220
-  - DOC-0224
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Deployment
 type: REFERENCE
 purpose: Build Release Cicd documentation.
 scope: Reference documentation.

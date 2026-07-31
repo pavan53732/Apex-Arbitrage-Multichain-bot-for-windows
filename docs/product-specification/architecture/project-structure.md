@@ -12,25 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/architecture/project-structure.md
 related_concepts:
   - CONCEPT-0085
-dependencies:
-  - DOC-0079
-  - DOC-0083
-  - DOC-0222
-  - DOC-0225
-consumers:
-  - DOC-0049
-  - DOC-0053
-  - DOC-0068
-  - DOC-0069
-  - DOC-0080
-  - DOC-0083
-  - DOC-0251
-  - DOC-0257
-  - DOC-0371
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Project Structure documentation.
 scope: Reference documentation.

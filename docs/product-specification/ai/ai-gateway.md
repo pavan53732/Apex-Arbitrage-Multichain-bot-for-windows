@@ -5,31 +5,22 @@ title: AI Gateway
 plane: Product Specification
 domain: AI
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/ai-gateway.md
+canonical_source: docs/product-specification/ai/ai-provider-manager.md
 related_concepts:
-  - CONCEPT-0119
+  - CONCEPT-0104
 dependencies:
-  - DOC-0110
-  - DOC-0124
-  - DOC-0130
-  - DOC-0347
-consumers:
-  - DOC-0014
-  - DOC-0049
-  - DOC-0114
-  - DOC-0130
-  - DOC-0262
-  - DOC-0270
-  - DOC-0347
-  - DOC-0384
+  - DOC-0104
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Ai Gateway documentation.
 scope: Reference documentation.

@@ -12,25 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/chain-registry.md
 related_concepts:
   - CONCEPT-0306
-dependencies:
-  - DOC-0266
-  - DOC-0301
-  - DOC-0302
-  - DOC-0304
-  - DOC-0315
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0079
-  - DOC-0302
-  - DOC-0310
-  - DOC-0313
-  - DOC-0317
-  - DOC-0359
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: CONTRACT
 purpose: Defines chain registry.
 scope: Chain listing and metadata.

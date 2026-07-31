@@ -5,7 +5,7 @@ title: Roadmap
 plane: Product Specification
 domain: Reference
 class: Reference
-authority: Reference
+authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
@@ -13,13 +13,14 @@ canonical_source: docs/product-specification/reference/roadmap.md
 related_concepts:
   - CONCEPT-0373
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0361
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Reference
 type: REFERENCE
 purpose: Roadmap documentation.
 scope: Reference documentation.

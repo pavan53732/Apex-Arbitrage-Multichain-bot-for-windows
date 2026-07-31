@@ -12,23 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/token-registry.md
 related_concepts:
   - CONCEPT-0309
-dependencies:
-  - DOC-0266
-  - DOC-0286
-  - DOC-0293
-  - DOC-0301
-  - DOC-0317
-consumers:
-  - DOC-0049
-  - DOC-0079
-  - DOC-0286
-  - DOC-0301
-  - DOC-0310
-  - DOC-0317
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: CONTRACT
 purpose: Defines token registry.
 scope: Token listing and metadata.

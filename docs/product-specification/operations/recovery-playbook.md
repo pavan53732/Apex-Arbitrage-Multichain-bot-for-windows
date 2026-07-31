@@ -12,17 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/operations/recovery-playbook.md
 related_concepts:
   - CONCEPT-0350
-dependencies:
-  - DOC-0103
-  - DOC-0280
-  - DOC-0284
-consumers:
-  - DOC-0049
-  - DOC-0342
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: REFERENCE
 purpose: "Defines recovery procedures by failure class — detection, classification, halt, retry, reconciliation, notification — with explicit playbooks for every subsystem."
 scope: None

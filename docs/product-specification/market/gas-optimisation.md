@@ -12,22 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/gas-optimisation.md
 related_concepts:
   - CONCEPT-0315
-dependencies:
-  - DOC-0280
-  - DOC-0299
-  - DOC-0322
-consumers:
-  - DOC-0049
-  - DOC-0299
-  - DOC-0302
-  - DOC-0304
-  - DOC-0306
-  - DOC-0310
-  - DOC-0321
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Gas Optimisation documentation.
 scope: Reference documentation.

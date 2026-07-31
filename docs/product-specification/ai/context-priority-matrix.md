@@ -12,15 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/context-priority-matrix.md
 related_concepts:
   - CONCEPT-0108
-dependencies:
-  - DOC-0131
-consumers:
-  - DOC-0049
-  - DOC-0114
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: CONTRACT
 purpose: "Defines the complete precedence hierarchy for all context segments injected into AI prompts — pinned, critical, session, knowledge, reflection, history, and external — with enforcement rules, capacity allocation, and pruning strategy."
 scope: Context Priority Matrix scope and boundaries.

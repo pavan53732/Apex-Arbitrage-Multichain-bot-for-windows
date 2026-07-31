@@ -12,19 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/opportunity-lifecycle.md
 related_concepts:
   - CONCEPT-0324
-dependencies:
-  - DOC-0298
-  - DOC-0323
-  - DOC-0325
-consumers:
-  - DOC-0049
-  - DOC-0079
-  - DOC-0310
-  - DOC-0323
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Opportunity Lifecycle documentation.
 scope: Reference documentation.

@@ -9,19 +9,18 @@ authority: Derived
 status: Active
 owner: Trading Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/agent-system/agent-index.md
+canonical_source: AGENTS.md
 related_concepts:
-  - CONCEPT-0017
+  - CONCEPT-0001
 dependencies:
   - DOC-0001
-  - DOC-0018
-consumers:
-  - DOC-0016
-  - DOC-0049
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-30
+concept_role: Index
+owned_domains: []
 type: INDEX
 purpose: Agent Index documentation.
 scope: Reference documentation.

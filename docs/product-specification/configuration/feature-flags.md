@@ -12,17 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/configuration/feature-flags.md
 related_concepts:
   - CONCEPT-0388
-dependencies:
-  - DOC-0225
-  - DOC-0281
-  - DOC-0381
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0385
+  - DOC-0389
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Configuration
 type: REFERENCE
 purpose: Feature Flags documentation.
 scope: Reference documentation.

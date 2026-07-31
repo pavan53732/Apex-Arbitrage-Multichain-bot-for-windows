@@ -9,47 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/market/README.md
+canonical_source: docs/product-specification/market/market-data.md
 related_concepts:
-  - CONCEPT-0310
+  - CONCEPT-0317
 dependencies:
-  - DOC-0302
-  - DOC-0303
-  - DOC-0304
-  - DOC-0305
-  - DOC-0306
-  - DOC-0307
-  - DOC-0308
-  - DOC-0309
-  - DOC-0311
-  - DOC-0312
-  - DOC-0313
-  - DOC-0314
-  - DOC-0315
-  - DOC-0316
   - DOC-0317
-  - DOC-0318
-  - DOC-0319
-  - DOC-0320
-  - DOC-0321
-  - DOC-0322
-  - DOC-0323
-  - DOC-0324
-  - DOC-0325
-  - DOC-0326
-  - DOC-0327
-  - DOC-0328
-  - DOC-0329
-  - DOC-0330
-  - DOC-0331
-  - DOC-0332
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Market

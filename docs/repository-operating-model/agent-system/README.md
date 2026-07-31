@@ -9,21 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/agent-system/README.md
+canonical_source: AGENTS.md
 related_concepts:
-  - CONCEPT-0016
+  - CONCEPT-0001
 dependencies:
-  - DOC-0017
-  - DOC-0019
-  - DOC-0045
-  - DOC-0046
-consumers:
-  - DOC-0049
-  - DOC-0058
+  - DOC-0001
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Agent System

@@ -9,25 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/adr/README.md
+canonical_source: docs/adr/0001-provider-abstraction.md
 related_concepts:
-  - CONCEPT-0067
+  - CONCEPT-0070
 dependencies:
   - DOC-0070
-  - DOC-0071
-  - DOC-0072
-  - DOC-0073
-  - DOC-0074
-  - DOC-0075
-  - DOC-0076
-  - DOC-0077
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Architecture Decision Records

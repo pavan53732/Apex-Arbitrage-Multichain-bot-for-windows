@@ -5,14 +5,15 @@ title: Agent Profiles README
 plane: Repository Operating Model
 domain: Agent System
 class: Index
-authority: Derived
+authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
 canonical_source: docs/repository-operating-model/agent-system/agent-profiles/README.md
 related_concepts:
   - CONCEPT-0018
-dependencies:
+dependencies: []
+consumers:
   - DOC-0020
   - DOC-0021
   - DOC-0022
@@ -37,14 +38,13 @@ dependencies:
   - DOC-0041
   - DOC-0042
   - DOC-0043
-consumers:
-  - DOC-0017
-  - DOC-0049
-  - DOC-0058
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Owner
+owned_domains:
+  - Agent System
 ---
 
 # Agent Profiles

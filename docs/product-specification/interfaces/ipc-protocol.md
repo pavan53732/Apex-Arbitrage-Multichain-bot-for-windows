@@ -14,16 +14,14 @@ related_concepts:
   - CONCEPT-0254
 dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0251
-  - DOC-0256
-  - DOC-0257
-  - DOC-0258
-  - DOC-0271
+  - DOC-0264
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Interfaces
 type: CONTRACT
 purpose: Defines inter-process communication protocol.
 scope: IPC for all runtime components.

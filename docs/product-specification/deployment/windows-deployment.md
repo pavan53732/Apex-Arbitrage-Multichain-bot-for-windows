@@ -13,15 +13,14 @@ canonical_source: docs/product-specification/deployment/windows-deployment.md
 related_concepts:
   - CONCEPT-0219
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0220
-  - DOC-0221
-  - DOC-0222
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Deployment
 type: CONTRACT
 purpose: "Defines how the Windows desktop trading app is packaged, signed, installed, updated, and rolled back — installer lifecycle, update lifecycle, code signing, rollback rules, and cross-subsystem integration."
 scope: None

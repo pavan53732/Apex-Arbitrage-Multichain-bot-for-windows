@@ -9,23 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/ui/README.md
+canonical_source: docs/product-specification/ui/ui-component-spec.md
 related_concepts:
-  - CONCEPT-0391
+  - CONCEPT-0390
 dependencies:
   - DOC-0390
-  - DOC-0392
-  - DOC-0393
-  - DOC-0394
-  - DOC-0395
-  - DOC-0396
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # UI

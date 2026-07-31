@@ -14,17 +14,14 @@ related_concepts:
   - CONCEPT-0284
 dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0069
-  - DOC-0079
   - DOC-0285
-  - DOC-0350
-  - DOC-0371
-  - DOC-0396
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: CONTRACT
 purpose: Defines the end-to-end trading decision and execution coordination layer.
 scope: "Complete execution algorithm, order routing algorithm, risk scoring formulas, liquidity scoring, arbitrage scoring, opportunity expiry, partial fills, multi-chain execution, gas optimisation, MEV decision tree, wallet selection, retry matrices, rollback rules, position reconciliation."

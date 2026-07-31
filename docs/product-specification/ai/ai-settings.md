@@ -5,35 +5,22 @@ title: AI Settings
 plane: Product Specification
 domain: AI
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/ai-settings.md
+canonical_source: docs/product-specification/ai/ai-provider-manager.md
 related_concepts:
-  - CONCEPT-0123
+  - CONCEPT-0104
 dependencies:
-  - DOC-0103
   - DOC-0104
-  - DOC-0109
-  - DOC-0115
-  - DOC-0118
-  - DOC-0125
-  - DOC-0130
-  - DOC-0381
-consumers:
-  - DOC-0049
-  - DOC-0109
-  - DOC-0114
-  - DOC-0115
-  - DOC-0118
-  - DOC-0125
-  - DOC-0386
-  - DOC-0395
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Ai Settings documentation.
 scope: Reference documentation.

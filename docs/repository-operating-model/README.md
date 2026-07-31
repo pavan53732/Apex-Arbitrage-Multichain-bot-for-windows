@@ -9,16 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/README.md
+canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 related_concepts:
-  - CONCEPT-0010
-dependencies: []
-consumers:
-  - DOC-0058
+  - CONCEPT-0003
+dependencies:
+  - DOC-0003
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Repository Operating Model

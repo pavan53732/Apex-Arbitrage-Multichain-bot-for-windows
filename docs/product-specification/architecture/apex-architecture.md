@@ -11,23 +11,16 @@ owner: Runtime Team
 version: 1.0.0
 canonical_source: docs/product-specification/architecture/architecture.md
 related_concepts:
-  - CONCEPT-0069
+  - CONCEPT-0079
 dependencies:
-  - DOC-0059
   - DOC-0079
-  - DOC-0085
-  - DOC-0087
-  - DOC-0252
-  - DOC-0280
-  - DOC-0284
-consumers:
-  - DOC-0049
-  - DOC-0068
-  - DOC-0081
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: OVERVIEW
 purpose: Apex architecture overview.
 scope: Architecture reference.

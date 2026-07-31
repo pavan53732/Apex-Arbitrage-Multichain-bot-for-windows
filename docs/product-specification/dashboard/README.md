@@ -9,22 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/dashboard/README.md
+canonical_source: docs/product-specification/dashboard/ui-dashboard-spec.md
 related_concepts:
-  - CONCEPT-0218
+  - CONCEPT-0217
 dependencies:
-  - DOC-0213
-  - DOC-0214
-  - DOC-0215
-  - DOC-0216
   - DOC-0217
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Dashboard

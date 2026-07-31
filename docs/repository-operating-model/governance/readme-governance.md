@@ -5,7 +5,7 @@ title: Governance
 plane: Repository Operating Model
 domain: Governance
 class: Guide
-authority: Derived
+authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
@@ -13,13 +13,14 @@ canonical_source: docs/repository-operating-model/governance/readme-governance.m
 related_concepts:
   - CONCEPT-0012
 dependencies: []
-consumers:
-  - DOC-0011
-  - DOC-0049
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Governance
 type: OVERVIEW
 purpose: Readme Governance documentation.
 scope: Reference documentation.

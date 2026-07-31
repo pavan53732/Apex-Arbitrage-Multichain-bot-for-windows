@@ -13,17 +13,14 @@ canonical_source: docs/product-specification/security/permission-model.md
 related_concepts:
   - CONCEPT-0226
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0227
-  - DOC-0228
-  - DOC-0229
-  - DOC-0301
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Security
 type: CONTRACT
 purpose: "Defines the complete role/action permission matrix — roles, actions, scopes, enforcement points, Windows-specific permissions (UAC, service accounts, scheduled tasks), and integration with trust boundaries and security contracts."
 scope: None

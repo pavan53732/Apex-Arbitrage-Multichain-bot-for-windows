@@ -12,15 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/operations/recovery-coordination.md
 related_concepts:
   - CONCEPT-0337
-dependencies:
-  - DOC-0349
-consumers:
-  - DOC-0049
-  - DOC-0342
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: CONTRACT
 purpose: "Defines the unified repository-wide recovery coordination contract — how subsystems coordinate during multi-failure scenarios, recovery ordering, escalation thresholds, reconciliation tasks, operator intervention rules, and failover orchestration across the entire platform."
 scope: None

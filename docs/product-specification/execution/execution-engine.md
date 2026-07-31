@@ -13,30 +13,14 @@ canonical_source: docs/product-specification/execution/execution-engine.md
 related_concepts:
   - CONCEPT-0280
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0069
-  - DOC-0079
-  - DOC-0236
-  - DOC-0283
-  - DOC-0285
-  - DOC-0291
-  - DOC-0295
-  - DOC-0299
-  - DOC-0303
-  - DOC-0304
-  - DOC-0312
-  - DOC-0315
-  - DOC-0316
-  - DOC-0321
-  - DOC-0322
-  - DOC-0325
-  - DOC-0330
-  - DOC-0350
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: CONTRACT
 purpose: "Defines chain transaction execution, confirmation, cancellation, and recovery."
 scope: "Explicit execution sequencing, timeout handling, and retry/resume behavior."

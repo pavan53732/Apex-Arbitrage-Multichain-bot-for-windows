@@ -12,21 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ui/ux-guidelines.md
 related_concepts:
   - CONCEPT-0393
-dependencies:
-  - DOC-0238
-  - DOC-0390
-  - DOC-0395
-  - DOC-0396
-consumers:
-  - DOC-0049
-  - DOC-0079
-  - DOC-0390
-  - DOC-0391
-  - DOC-0396
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - UI
 type: GUIDE
 purpose: Ux Guidelines documentation.
 scope: Reference documentation.

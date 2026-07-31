@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/runtime/workflow-builder.md
 related_concepts:
   - CONCEPT-0099
-dependencies:
-  - DOC-0087
-  - DOC-0217
-  - DOC-0253
-  - DOC-0281
-consumers:
-  - DOC-0049
-  - DOC-0094
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Runtime
 type: REFERENCE
 purpose: Workflow Builder documentation.
 scope: Reference documentation.

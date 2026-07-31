@@ -9,23 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/plugins/README.md
+canonical_source: docs/product-specification/plugins/plugin-sdk.md
 related_concepts:
-  - CONCEPT-0248
+  - CONCEPT-0247
 dependencies:
-  - DOC-0244
-  - DOC-0245
-  - DOC-0246
   - DOC-0247
-  - DOC-0249
-  - DOC-0250
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Plugins

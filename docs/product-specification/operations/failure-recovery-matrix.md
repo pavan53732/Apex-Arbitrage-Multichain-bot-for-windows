@@ -12,15 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/operations/failure-recovery-matrix.md
 related_concepts:
   - CONCEPT-0341
-dependencies:
-  - DOC-0051
-consumers:
-  - DOC-0049
-  - DOC-0342
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: INDEX
 purpose: Failure Recovery Matrix documentation.
 scope: Reference documentation.

@@ -5,28 +5,22 @@ title: AI Capability Matrix
 plane: Product Specification
 domain: AI
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/ai-capability-matrix.md
+canonical_source: docs/product-specification/ai/ai-provider-manager.md
 related_concepts:
-  - CONCEPT-0115
+  - CONCEPT-0104
 dependencies:
-  - DOC-0103
-  - DOC-0123
-  - DOC-0125
-  - DOC-0381
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0114
-  - DOC-0123
-  - DOC-0125
+  - DOC-0104
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Ai Capability Matrix documentation.
 scope: Reference documentation.

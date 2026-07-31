@@ -12,25 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/architecture/apex-kernel.md
 related_concepts:
   - CONCEPT-0065
-dependencies:
-  - DOC-0087
-  - DOC-0093
-  - DOC-0247
-  - DOC-0253
-  - DOC-0335
-consumers:
-  - DOC-0049
-  - DOC-0068
-  - DOC-0078
-  - DOC-0082
-  - DOC-0088
-  - DOC-0093
-  - DOC-0096
-  - DOC-0277
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: CONTRACT
 purpose: "Defines the runtime kernel that owns service registration, lifecycle, events, health, dependency injection, configuration, and plugin loading."
 scope: "Kernel is the root coordination layer beneath the UI, orchestrator, workers, strategies, AI, and blockchain adapters."

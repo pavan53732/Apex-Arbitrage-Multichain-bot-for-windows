@@ -11,22 +11,17 @@ owner: Runtime Team
 version: 1.0.0
 canonical_source: docs/repository-operating-model/registries/TRACEABILITY-REGISTRY.md
 related_concepts:
-  - CONCEPT-0051
-dependencies: []
-consumers:
-  - DOC-0009
-  - DOC-0049
-  - DOC-0086
-  - DOC-0117
-  - DOC-0227
-  - DOC-0341
-  - DOC-0349
-  - DOC-0386
+  - CONCEPT-0008
+dependencies:
+  - DOC-0008
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by:
   - DOC-0008
 last_updated: 2026-07-29
+concept_role: Historical Reference
+owned_domains: []
 type: REFERENCE
 purpose: Traceability Matrix documentation.
 scope: Reference documentation.

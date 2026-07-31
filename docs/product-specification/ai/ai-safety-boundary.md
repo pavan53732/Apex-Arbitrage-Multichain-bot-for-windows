@@ -12,16 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-safety-boundary.md
 related_concepts:
   - CONCEPT-0105
-dependencies:
-  - DOC-0107
-  - DOC-0231
-consumers:
-  - DOC-0049
-  - DOC-0114
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: CONTRACT
 purpose: "Defines the complete set of safety boundaries governing AI behavior — what AI may and may not do, when human approval is required, enforcement mechanisms, violation response, and integration with trust boundaries, permission model, and security contracts."
 scope: Ai Safety Boundary scope and boundaries.

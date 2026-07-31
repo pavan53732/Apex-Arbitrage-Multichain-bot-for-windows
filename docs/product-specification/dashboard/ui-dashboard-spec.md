@@ -12,22 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/dashboard/ui-dashboard-spec.md
 related_concepts:
   - CONCEPT-0217
-dependencies:
-  - DOC-0102
-  - DOC-0252
-  - DOC-0335
-  - DOC-0364
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0082
-  - DOC-0099
   - DOC-0218
-  - DOC-0390
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Dashboard
 type: SPECIFICATION
 purpose: Ui Dashboard Spec documentation.
 scope: Reference documentation.

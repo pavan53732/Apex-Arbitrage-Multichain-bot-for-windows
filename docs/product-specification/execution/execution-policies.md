@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/execution/execution-policies.md
 related_concepts:
   - CONCEPT-0290
-dependencies:
-  - DOC-0281
-  - DOC-0282
-  - DOC-0289
-  - DOC-0298
-consumers:
-  - DOC-0049
-  - DOC-0285
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: REFERENCE
 purpose: Execution Policies documentation.
 scope: Reference documentation.

@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/runtime/runtime-flow-lifecycle.md
 related_concepts:
   - CONCEPT-0089
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0094
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Runtime
 type: CONTRACT
 purpose: "Defines the complete set of runtime flows — worker creation/shutdown, plugin discovery/load/unload/update, provider initialization/failure, configuration reload, dashboard initialization/workspace restore, AI initialization/fallback, recovery/failover, hot-reload/restart boundary, Windows sleep/resume/power events, and update installation/rollback."
 scope: None

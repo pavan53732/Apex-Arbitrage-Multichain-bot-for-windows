@@ -12,21 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-agent-specification.md
 related_concepts:
   - CONCEPT-0101
-dependencies:
-  - DOC-0102
-  - DOC-0103
-consumers:
-  - DOC-0046
-  - DOC-0049
-  - DOC-0059
-  - DOC-0114
-  - DOC-0124
-  - DOC-0260
-  - DOC-0263
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: SPECIFICATION
 purpose: Ai Agent Specification documentation.
 scope: Reference documentation.

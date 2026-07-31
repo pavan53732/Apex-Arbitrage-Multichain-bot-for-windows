@@ -9,45 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/README.md
+canonical_source: docs/product-specification/ai/ai-pipeline.md
 related_concepts:
-  - CONCEPT-0114
+  - CONCEPT-0103
 dependencies:
-  - DOC-0101
-  - DOC-0102
   - DOC-0103
-  - DOC-0104
-  - DOC-0105
-  - DOC-0106
-  - DOC-0107
-  - DOC-0108
-  - DOC-0109
-  - DOC-0110
-  - DOC-0111
-  - DOC-0115
-  - DOC-0116
-  - DOC-0117
-  - DOC-0118
-  - DOC-0119
-  - DOC-0120
-  - DOC-0121
-  - DOC-0122
-  - DOC-0123
-  - DOC-0124
-  - DOC-0125
-  - DOC-0126
-  - DOC-0127
-  - DOC-0128
-  - DOC-0129
-  - DOC-0130
-  - DOC-0131
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # AI

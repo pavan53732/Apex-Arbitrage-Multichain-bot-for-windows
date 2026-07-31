@@ -12,23 +12,17 @@ version: 1.0.0
 canonical_source: docs/product-specification/performance/performance-slos.md
 related_concepts:
   - CONCEPT-0356
-dependencies:
-  - DOC-0118
-  - DOC-0335
-  - DOC-0364
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0079
-  - DOC-0283
-  - DOC-0296
-  - DOC-0343
-  - DOC-0347
   - DOC-0354
+  - DOC-0357
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Performance
 type: REFERENCE
 purpose: Performance Slos documentation.
 scope: Reference documentation.

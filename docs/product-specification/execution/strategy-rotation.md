@@ -12,21 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/execution/strategy-rotation.md
 related_concepts:
   - CONCEPT-0296
-dependencies:
-  - DOC-0087
-  - DOC-0116
-  - DOC-0227
-  - DOC-0345
-  - DOC-0356
-consumers:
-  - DOC-0049
-  - DOC-0285
-  - DOC-0319
-  - DOC-0320
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: REFERENCE
 purpose: Strategy Rotation documentation.
 scope: Reference documentation.

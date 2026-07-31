@@ -9,17 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/workflows/README.md
+canonical_source: REPOSITORY-EXECUTION-MODEL.md
 related_concepts:
-  - CONCEPT-0064
-dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0058
+  - CONCEPT-0004
+dependencies:
+  - DOC-0004
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Workflows

@@ -12,20 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/reference/troubleshooting.md
 related_concepts:
   - CONCEPT-0365
-dependencies:
-  - DOC-0336
-  - DOC-0338
-  - DOC-0392
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0361
-  - DOC-0368
-  - DOC-0392
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Reference
 type: REFERENCE
 purpose: Troubleshooting documentation.
 scope: Reference documentation.

@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/prompt-lifecycle.md
 related_concepts:
   - CONCEPT-0131
-dependencies:
-  - DOC-0259
-consumers:
-  - DOC-0049
-  - DOC-0106
-  - DOC-0108
-  - DOC-0114
-  - DOC-0129
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: REFERENCE
 purpose: "Defines the complete lifecycle of an AI prompt — construction, compression, memory injection, archival, and cleanup. This contract ensures deterministic, observable, and auditable prompt management."
 scope: None

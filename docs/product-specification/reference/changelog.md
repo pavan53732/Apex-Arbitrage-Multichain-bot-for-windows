@@ -5,25 +5,22 @@ title: Changelog
 plane: Product Specification
 domain: Reference
 class: Reference
-authority: Reference
+authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
 canonical_source: docs/product-specification/reference/changelog.md
 related_concepts:
   - CONCEPT-0366
-dependencies:
-  - DOC-0288
-  - DOC-0371
-consumers:
-  - DOC-0049
-  - DOC-0221
-  - DOC-0361
-  - DOC-0395
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Reference
 type: REFERENCE
 purpose: Changelog documentation.
 scope: Reference documentation.

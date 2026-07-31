@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-knowledge-index.md
 related_concepts:
   - CONCEPT-0111
-dependencies:
-  - DOC-0120
-  - DOC-0270
-  - DOC-0275
-consumers:
-  - DOC-0049
-  - DOC-0114
-  - DOC-0120
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: INDEX
 purpose: Ai Knowledge Index documentation.
 scope: Reference documentation.

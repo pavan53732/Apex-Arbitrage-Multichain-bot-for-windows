@@ -5,7 +5,7 @@ title: Module Ownership Matrix
 plane: Repository Operating Model
 domain: Traceability
 class: Index
-authority: Derived
+authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
@@ -13,13 +13,14 @@ canonical_source: docs/repository-operating-model/traceability/module-ownership-
 related_concepts:
   - CONCEPT-0050
 dependencies: []
-consumers:
-  - DOC-0048
-  - DOC-0049
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Traceability
 type: INDEX
 purpose: Module Ownership Matrix documentation.
 scope: Reference documentation.

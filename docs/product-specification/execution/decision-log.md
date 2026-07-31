@@ -12,22 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/execution/decision-log.md
 related_concepts:
   - CONCEPT-0288
-dependencies:
-  - DOC-0126
-  - DOC-0127
-  - DOC-0273
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0127
-  - DOC-0273
-  - DOC-0285
-  - DOC-0343
-  - DOC-0366
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: REFERENCE
 purpose: Decision Log documentation.
 scope: Reference documentation.

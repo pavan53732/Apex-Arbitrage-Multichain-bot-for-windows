@@ -12,26 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/deployment/versioning.md
 related_concepts:
   - CONCEPT-0225
-dependencies:
-  - DOC-0083
-  - DOC-0251
-  - DOC-0266
-  - DOC-0371
-  - DOC-0381
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0079
-  - DOC-0085
-  - DOC-0220
-  - DOC-0236
-  - DOC-0251
-  - DOC-0257
-  - DOC-0388
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Deployment
 type: REFERENCE
 purpose: Versioning documentation.
 scope: Reference documentation.

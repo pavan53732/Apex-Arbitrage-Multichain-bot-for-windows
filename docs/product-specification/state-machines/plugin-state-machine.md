@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/state-machines/plugin-state-machine
 related_concepts:
   - CONCEPT-0376
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0380
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - State Machines
 type: CONTRACT
 purpose: "Defines the complete plugin lifecycle state machine — discovery, validation, installation, loading, activation, suspension, updating, failure, unloading — with transitions, timeouts, recovery paths, and forbidden transitions."
 scope: None

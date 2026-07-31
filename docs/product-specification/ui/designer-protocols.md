@@ -12,23 +12,15 @@ version: 1.0.1
 canonical_source: docs/product-specification/ui/designer-protocols.md
 related_concepts:
   - CONCEPT-0395
-dependencies:
-  - DOC-0123
-  - DOC-0125
-  - DOC-0238
-  - DOC-0366
-  - DOC-0390
-  - DOC-0396
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0391
-  - DOC-0393
-  - DOC-0394
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - UI
 type: REFERENCE
 purpose: Designer Protocols documentation.
 scope: Reference documentation.

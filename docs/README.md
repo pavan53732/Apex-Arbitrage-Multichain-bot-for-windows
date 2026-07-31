@@ -5,55 +5,22 @@ title: Documentation Index
 plane: Repository Operating Model
 domain: Documentation Lifecycle
 class: Index
-authority: Canonical
+authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/README.md
+canonical_source: docs/repository-operating-model/documentation-lifecycle/documentation-map.md
 related_concepts:
-  - CONCEPT-0058
+  - CONCEPT-0059
 dependencies:
-  - DOC-0009
-  - DOC-0010
-  - DOC-0011
-  - DOC-0016
-  - DOC-0018
-  - DOC-0047
-  - DOC-0048
-  - DOC-0055
-  - DOC-0060
-  - DOC-0061
-  - DOC-0063
-  - DOC-0064
-  - DOC-0067
-  - DOC-0068
-  - DOC-0094
-  - DOC-0112
-  - DOC-0113
-  - DOC-0114
-  - DOC-0218
-  - DOC-0220
-  - DOC-0229
-  - DOC-0234
-  - DOC-0243
-  - DOC-0248
-  - DOC-0256
-  - DOC-0269
-  - DOC-0285
-  - DOC-0310
-  - DOC-0342
-  - DOC-0354
-  - DOC-0360
-  - DOC-0361
-  - DOC-0380
-  - DOC-0385
-  - DOC-0391
-consumers:
-  - DOC-0005
+  - DOC-0059
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Index
+owned_domains: []
 type: OVERVIEW
 purpose: Readme documentation.
 scope: Reference documentation.

@@ -12,48 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/security/security-contracts.md
 related_concepts:
   - CONCEPT-0227
-dependencies:
-  - DOC-0051
-  - DOC-0226
-  - DOC-0228
-  - DOC-0230
-  - DOC-0231
-consumers:
-  - DOC-0005
-  - DOC-0020
-  - DOC-0022
-  - DOC-0023
-  - DOC-0024
-  - DOC-0025
-  - DOC-0026
-  - DOC-0027
-  - DOC-0029
-  - DOC-0030
-  - DOC-0032
-  - DOC-0033
-  - DOC-0034
-  - DOC-0035
-  - DOC-0036
-  - DOC-0037
-  - DOC-0038
-  - DOC-0039
-  - DOC-0040
-  - DOC-0041
-  - DOC-0042
-  - DOC-0043
-  - DOC-0049
-  - DOC-0059
-  - DOC-0079
-  - DOC-0221
-  - DOC-0229
-  - DOC-0281
-  - DOC-0283
-  - DOC-0296
-  - DOC-0359
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Security
 type: CONTRACT
 purpose: Security Contracts documentation.
 scope: Reference documentation.

@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/performance/threading-model.md
 related_concepts:
   - CONCEPT-0352
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0354
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Performance
 type: CONTRACT
 purpose: "Defines the threading architecture — main thread, worker threads, background task rules, thread safety guarantees, and thread lifecycle."
 scope: None

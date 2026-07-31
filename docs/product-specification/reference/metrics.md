@@ -13,23 +13,14 @@ canonical_source: docs/product-specification/reference/metrics.md
 related_concepts:
   - CONCEPT-0364
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0126
-  - DOC-0128
-  - DOC-0217
-  - DOC-0283
-  - DOC-0292
-  - DOC-0311
-  - DOC-0314
-  - DOC-0343
-  - DOC-0356
-  - DOC-0361
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Reference
 type: REFERENCE
 purpose: Metrics documentation.
 scope: Reference documentation.

@@ -12,18 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/route-optimization.md
 related_concepts:
   - CONCEPT-0328
-dependencies:
-  - DOC-0283
-  - DOC-0289
-  - DOC-0298
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0310
   - DOC-0329
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Route Optimization documentation.
 scope: Reference documentation.

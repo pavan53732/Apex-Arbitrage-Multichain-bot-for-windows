@@ -5,28 +5,22 @@ title: Performance Targets
 plane: Product Specification
 domain: Performance
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/performance/performance-targets.md
+canonical_source: docs/product-specification/performance/performance-slos.md
 related_concepts:
-  - CONCEPT-0357
+  - CONCEPT-0356
 dependencies:
-  - DOC-0103
-  - DOC-0125
-  - DOC-0336
-  - DOC-0338
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0084
-  - DOC-0125
-  - DOC-0354
+  - DOC-0356
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Performance Targets documentation.
 scope: Reference documentation.

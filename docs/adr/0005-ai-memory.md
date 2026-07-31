@@ -12,16 +12,15 @@ version: 1.0.0
 canonical_source: docs/adr/0005-ai-memory.md
 related_concepts:
   - CONCEPT-0074
-dependencies:
-  - DOC-0078
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0067
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Adr/0005 Ai Memory documentation.
 scope: Reference documentation.

@@ -12,38 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/market-data.md
 related_concepts:
   - CONCEPT-0317
-dependencies:
-  - DOC-0295
-  - DOC-0304
-  - DOC-0306
-  - DOC-0307
-  - DOC-0308
-  - DOC-0309
-  - DOC-0316
-  - DOC-0318
-  - DOC-0336
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0272
-  - DOC-0286
-  - DOC-0293
-  - DOC-0303
-  - DOC-0304
-  - DOC-0307
-  - DOC-0308
-  - DOC-0309
   - DOC-0310
-  - DOC-0312
-  - DOC-0318
-  - DOC-0323
-  - DOC-0326
-  - DOC-0327
-  - DOC-0331
-  - DOC-0332
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Market Data documentation.
 scope: Reference documentation.

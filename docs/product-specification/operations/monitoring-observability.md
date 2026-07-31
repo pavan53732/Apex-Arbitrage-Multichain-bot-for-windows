@@ -13,27 +13,14 @@ canonical_source: docs/product-specification/operations/monitoring-observability
 related_concepts:
   - CONCEPT-0336
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0084
-  - DOC-0098
-  - DOC-0118
-  - DOC-0125
-  - DOC-0235
-  - DOC-0277
-  - DOC-0302
-  - DOC-0312
-  - DOC-0317
-  - DOC-0318
-  - DOC-0342
-  - DOC-0348
-  - DOC-0349
-  - DOC-0357
-  - DOC-0365
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: CONTRACT
 purpose: "Defines metrics catalog, alert thresholds, health states, telemetry rules, dashboards, diagnostic exports, and Windows-specific observability integration for all subsystems."
 scope: None

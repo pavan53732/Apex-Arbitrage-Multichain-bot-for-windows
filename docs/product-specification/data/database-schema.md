@@ -14,44 +14,14 @@ related_concepts:
   - CONCEPT-0266
 dependencies: []
 consumers:
-  - DOC-0005
-  - DOC-0020
-  - DOC-0021
-  - DOC-0022
-  - DOC-0023
-  - DOC-0025
-  - DOC-0026
-  - DOC-0027
-  - DOC-0029
-  - DOC-0030
-  - DOC-0032
-  - DOC-0033
-  - DOC-0034
-  - DOC-0035
-  - DOC-0036
-  - DOC-0037
-  - DOC-0038
-  - DOC-0039
-  - DOC-0040
-  - DOC-0041
-  - DOC-0042
-  - DOC-0043
-  - DOC-0049
-  - DOC-0225
   - DOC-0269
-  - DOC-0274
-  - DOC-0291
-  - DOC-0299
-  - DOC-0302
-  - DOC-0306
-  - DOC-0307
-  - DOC-0308
-  - DOC-0309
-  - DOC-0318
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Data
 type: CONTRACT
 purpose: "Defines table-level DDL detail, indexes, access patterns, retention policies, migration strategy, and Windows-specific storage behavior for all persistent entities in the Apex platform."
 scope: Database Schema scope and boundaries.

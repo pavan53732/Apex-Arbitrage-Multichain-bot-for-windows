@@ -12,22 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/dex-integration.md
 related_concepts:
   - CONCEPT-0303
-dependencies:
-  - DOC-0280
-  - DOC-0302
-  - DOC-0304
-  - DOC-0307
-  - DOC-0316
-  - DOC-0317
-consumers:
-  - DOC-0049
-  - DOC-0287
-  - DOC-0307
-  - DOC-0310
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: CONTRACT
 purpose: Defines DEX integration.
 scope: DEX connectivity.

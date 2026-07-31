@@ -12,20 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/security/trust-boundaries.md
 related_concepts:
   - CONCEPT-0231
-dependencies:
-  - DOC-0259
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0105
-  - DOC-0107
-  - DOC-0227
-  - DOC-0228
-  - DOC-0229
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Security
 type: REFERENCE
 purpose: "Defines trusted, semi-trusted, untrusted, plugin, AI, network, and filesystem trust boundaries — including trust-domain enforcement matrix."
 scope: None

@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/plugins/app-builder-workflow.md
 related_concepts:
   - CONCEPT-0249
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0248
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Plugins
 type: REFERENCE
 purpose: "Defines the workflow for building, testing, packaging, signing, and releasing the Windows desktop application — with explicit pipeline stages, gate checks, failure handling, and rollback procedures."
 scope: App Builder Workflow scope and boundaries.

@@ -12,80 +12,18 @@ version: 1.0.0
 canonical_source: docs/product-specification/architecture/architecture.md
 related_concepts:
   - CONCEPT-0079
-dependencies:
-  - DOC-0078
-  - DOC-0081
-  - DOC-0082
-  - DOC-0087
-  - DOC-0092
-  - DOC-0103
-  - DOC-0213
-  - DOC-0215
-  - DOC-0216
-  - DOC-0225
-  - DOC-0227
-  - DOC-0252
-  - DOC-0253
-  - DOC-0260
-  - DOC-0263
-  - DOC-0267
-  - DOC-0272
-  - DOC-0280
-  - DOC-0284
-  - DOC-0289
-  - DOC-0298
-  - DOC-0306
-  - DOC-0307
-  - DOC-0308
-  - DOC-0309
-  - DOC-0324
-  - DOC-0338
-  - DOC-0356
-  - DOC-0393
+dependencies: []
 consumers:
-  - DOC-0005
-  - DOC-0020
-  - DOC-0021
-  - DOC-0022
-  - DOC-0023
-  - DOC-0024
-  - DOC-0025
-  - DOC-0026
-  - DOC-0027
-  - DOC-0028
-  - DOC-0029
-  - DOC-0030
-  - DOC-0031
-  - DOC-0032
-  - DOC-0033
-  - DOC-0034
-  - DOC-0035
-  - DOC-0036
-  - DOC-0037
-  - DOC-0038
-  - DOC-0039
-  - DOC-0040
-  - DOC-0041
-  - DOC-0042
-  - DOC-0043
-  - DOC-0049
   - DOC-0068
   - DOC-0069
-  - DOC-0080
-  - DOC-0081
-  - DOC-0083
-  - DOC-0085
-  - DOC-0086
-  - DOC-0091
-  - DOC-0265
-  - DOC-0305
-  - DOC-0370
-  - DOC-0371
-  - DOC-0383
+  - DOC-0360
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Architecture documentation.
 scope: Reference documentation.

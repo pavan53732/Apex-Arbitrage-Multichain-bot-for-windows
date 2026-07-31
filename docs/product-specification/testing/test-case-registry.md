@@ -5,22 +5,22 @@ title: Test Case Registry
 plane: Product Specification
 domain: Testing
 class: Registry
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/testing/test-case-registry.md
+canonical_source: docs/product-specification/testing/testing.md
 related_concepts:
-  - CONCEPT-0233
-dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0234
+  - CONCEPT-0232
+dependencies:
+  - DOC-0232
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: "Canonical registry of all architecture-level test case IDs referenced by the traceability matrix. Each ID maps to a subsystem, a test category, and the validating document."
 scope: None

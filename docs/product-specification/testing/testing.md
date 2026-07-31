@@ -14,13 +14,16 @@ related_concepts:
   - CONCEPT-0232
 dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
+  - DOC-0233
   - DOC-0234
+  - DOC-0235
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Testing
 type: CONTRACT
 purpose: "Defines the complete testing strategy — unit testing, integration testing, contract testing, state-machine testing, chaos testing, load testing, performance testing, recovery testing, security testing, end-to-end testing, Windows-specific testing, and cross-subsystem integration. See TESTING-GUIDE.md for detailed implementation guidance."
 scope: None

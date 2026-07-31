@@ -12,33 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/execution/simulation-engine.md
 related_concepts:
   - CONCEPT-0283
-dependencies:
-  - DOC-0103
-  - DOC-0227
-  - DOC-0235
-  - DOC-0236
-  - DOC-0252
-  - DOC-0263
-  - DOC-0280
-  - DOC-0289
-  - DOC-0295
-  - DOC-0298
-  - DOC-0356
-  - DOC-0364
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0128
-  - DOC-0235
   - DOC-0236
-  - DOC-0285
-  - DOC-0295
-  - DOC-0298
-  - DOC-0328
-  - DOC-0329
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: CONTRACT
 purpose: Defines simulation engine.
 scope: Backtesting and simulation.

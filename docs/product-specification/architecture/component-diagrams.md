@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/architecture/component-diagrams.md
 related_concepts:
   - CONCEPT-0080
-dependencies:
-  - DOC-0079
-  - DOC-0083
-  - DOC-0085
-  - DOC-0338
-consumers:
-  - DOC-0049
-  - DOC-0068
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Component Diagrams documentation.
 scope: Reference documentation.

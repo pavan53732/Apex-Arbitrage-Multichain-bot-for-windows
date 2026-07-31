@@ -12,16 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/rpc-manager.md
 related_concepts:
   - CONCEPT-0305
-dependencies:
-  - DOC-0078
-  - DOC-0079
-consumers:
-  - DOC-0049
-  - DOC-0310
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: CONTRACT
 purpose: "Defines RPC management, rate limiting, and RPC lifecycle."
 scope: RPC management for runtime components.

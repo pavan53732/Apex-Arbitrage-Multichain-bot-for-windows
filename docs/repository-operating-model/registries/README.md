@@ -9,45 +9,47 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/registries/README.md
+canonical_source: docs/repository-operating-model/registries/DOCUMENT-REGISTRY.md
 related_concepts:
-  - CONCEPT-0063
+  - CONCEPT-0007
 dependencies:
-  - DOC-0006
   - DOC-0007
-  - DOC-0008
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Registries
 
 ## Purpose and scope
 
-Canonical repository knowledge registries.
+Canonical repository knowledge registries for concepts, documents, and semantic traceability.
 
 ## Document classes expected
 
+- Registry
 - Index
-- Guide
-- Reference
-- Specification where this folder owns a canonical boundary
-- Registry only in registry folders
-- Historical only in historical folders
-- Generated only in generated folders
+- Reference only when it explains registry usage
 
 ## Canonical boundaries
 
-Concept, document, and traceability registries with stable IDs.
+The registries define identity and relationships. They do not redefine product behavior or replace canonical product specifications.
 
 ## What does not belong here
 
-Generated reports, caches, or product registries.
+Generated reports, temporary audit files, caches, or product-domain data registries.
+
+## Registry versioning
+
+| Registry | Version | Schema | Model |
+| --- | --- | --- | --- |
+| [Concept Registry](./CONCEPT-REGISTRY.md) | 1.1.0 | 1.1 | Concept-centric with stable aliases |
+| [Document Registry](./DOCUMENT-REGISTRY.md) | 1.1.0 | 1.1 | Document identity with concept roles |
+| [Traceability Registry](./TRACEABILITY-REGISTRY.md) | 1.1.0 | 1.1 | Semantic relationships only |
 
 ## Documents
 

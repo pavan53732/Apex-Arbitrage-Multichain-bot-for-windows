@@ -5,23 +5,22 @@ title: Error Codes
 plane: Product Specification
 domain: Reference
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/reference/error-codes.md
+canonical_source: docs/product-specification/operations/error-handling-logging.md
 related_concepts:
-  - CONCEPT-0362
-dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0107
-  - DOC-0361
+  - CONCEPT-0334
+dependencies:
+  - DOC-0334
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Error Codes documentation.
 scope: Reference documentation.

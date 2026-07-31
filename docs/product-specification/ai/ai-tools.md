@@ -12,19 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-tools.md
 related_concepts:
   - CONCEPT-0124
-dependencies:
-  - DOC-0101
-  - DOC-0257
-  - DOC-0263
-consumers:
-  - DOC-0049
-  - DOC-0107
-  - DOC-0114
-  - DOC-0119
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: REFERENCE
 purpose: Ai Tools documentation.
 scope: Reference documentation.

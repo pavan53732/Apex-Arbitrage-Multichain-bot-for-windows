@@ -12,23 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/data/knowledge-graph.md
 related_concepts:
   - CONCEPT-0275
-dependencies:
-  - DOC-0120
-  - DOC-0252
-  - DOC-0272
-  - DOC-0312
-  - DOC-0318
-consumers:
-  - DOC-0049
-  - DOC-0111
-  - DOC-0120
-  - DOC-0269
-  - DOC-0270
-  - DOC-0272
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Data
 type: REFERENCE
 purpose: Knowledge Graph documentation.
 scope: Reference documentation.

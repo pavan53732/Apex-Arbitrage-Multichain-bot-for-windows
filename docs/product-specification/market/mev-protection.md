@@ -12,20 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/mev-protection.md
 related_concepts:
   - CONCEPT-0322
-dependencies:
-  - DOC-0280
-  - DOC-0299
-  - DOC-0304
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0304
-  - DOC-0310
-  - DOC-0315
   - DOC-0321
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Mev Protection documentation.
 scope: Reference documentation.

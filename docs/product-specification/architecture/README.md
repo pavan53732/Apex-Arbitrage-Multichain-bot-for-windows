@@ -9,28 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/architecture/README.md
+canonical_source: docs/product-specification/architecture/architecture.md
 related_concepts:
-  - CONCEPT-0068
+  - CONCEPT-0079
 dependencies:
-  - DOC-0065
-  - DOC-0066
-  - DOC-0069
-  - DOC-0078
   - DOC-0079
-  - DOC-0080
-  - DOC-0081
-  - DOC-0082
-  - DOC-0083
-  - DOC-0084
-  - DOC-0085
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Architecture

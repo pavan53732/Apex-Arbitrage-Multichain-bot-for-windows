@@ -13,13 +13,14 @@ canonical_source: docs/product-specification/windows/windows-service-integration
 related_concepts:
   - CONCEPT-0242
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0243
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Windows
 type: CONTRACT
 purpose: "Defines how the trading backend can run under the Windows Service Control Manager — service lifecycle, auto-start, delayed start, recovery actions, session isolation, stop timeout, and installer lifecycle integration."
 scope: None

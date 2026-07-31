@@ -5,21 +5,22 @@ title: IPC Message Catalog
 plane: Product Specification
 domain: Interfaces
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/ipc-message-catalog.md
+canonical_source: docs/product-specification/interfaces/ipc-protocol.md
 related_concepts:
-  - CONCEPT-0264
-dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0256
+  - CONCEPT-0254
+dependencies:
+  - DOC-0254
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: "Catalogs every IPC message type used across the Apex platform — defining the type, producer, consumer, payload shape, delivery semantics, error behavior, and version for each message. This is the reference companion to IPC-PROTOCOL.md which defines the transport, envelope format, and channel structure. An autonomous engineer should use this catalog to implement exact message handlers for each typed channel."
 scope: None

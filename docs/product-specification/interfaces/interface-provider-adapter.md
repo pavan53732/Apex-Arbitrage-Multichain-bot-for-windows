@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/interfaces/interface-provider-adapter.md
 related_concepts:
   - CONCEPT-0262
-dependencies:
-  - DOC-0103
-  - DOC-0104
-  - DOC-0119
-consumers:
-  - DOC-0049
-  - DOC-0130
-  - DOC-0256
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Interfaces
 type: REFERENCE
 purpose: Interface Provider Adapter documentation.
 scope: Reference documentation.

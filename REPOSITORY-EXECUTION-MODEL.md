@@ -14,16 +14,15 @@ related_concepts:
   - CONCEPT-0004
 dependencies: []
 consumers:
-  - DOC-0001
-  - DOC-0002
-  - DOC-0003
-  - DOC-0005
-  - DOC-0049
-  - DOC-0059
+  - DOC-0047
+  - DOC-0064
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Owner
+owned_domains:
+  - Governance
 type: POLICY
 purpose: "Defines the Repository Execution Model for this repository, explicitly stating the local-first philosophy, prohibition of CI/CD and GitHub Actions, and the human + AI interactive execution workflow."
 scope: "Repository execution, validation execution, commit workflow, local-first tooling, and prohibition of remote automation pipelines."

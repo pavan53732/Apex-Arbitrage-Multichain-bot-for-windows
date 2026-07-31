@@ -12,16 +12,15 @@ version: 1.0.0
 canonical_source: docs/adr/0002-event-driven-kernel.md
 related_concepts:
   - CONCEPT-0071
-dependencies:
-  - DOC-0078
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0067
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Adr/0002 Event Driven Kernel documentation.
 scope: Reference documentation.

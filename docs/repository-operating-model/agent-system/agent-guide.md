@@ -9,17 +9,18 @@ authority: Derived
 status: Active
 owner: UI Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/agent-system/agent-guide.md
+canonical_source: AGENTS.md
 related_concepts:
-  - CONCEPT-0019
-dependencies: []
-consumers:
-  - DOC-0016
-  - DOC-0049
+  - CONCEPT-0001
+dependencies:
+  - DOC-0001
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: GUIDE
 purpose: Agent Guide documentation.
 scope: Reference documentation.

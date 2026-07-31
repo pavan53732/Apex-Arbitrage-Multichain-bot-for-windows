@@ -9,29 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/data/README.md
+canonical_source: docs/product-specification/data/database-schema.md
 related_concepts:
-  - CONCEPT-0269
+  - CONCEPT-0266
 dependencies:
-  - DOC-0265
   - DOC-0266
-  - DOC-0267
-  - DOC-0268
-  - DOC-0270
-  - DOC-0271
-  - DOC-0272
-  - DOC-0273
-  - DOC-0274
-  - DOC-0275
-  - DOC-0276
-  - DOC-0277
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Data

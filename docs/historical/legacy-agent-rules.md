@@ -11,16 +11,17 @@ owner: Runtime Team
 version: 1.0.0
 canonical_source: AGENTS_RULES.md
 related_concepts:
-  - CONCEPT-0044
-dependencies: []
-consumers:
-  - DOC-0009
-  - DOC-0049
+  - CONCEPT-0002
+dependencies:
+  - DOC-0002
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by:
   - DOC-0002
 last_updated: 2026-07-31
+concept_role: Historical Reference
+owned_domains: []
 ---
 
 # Agent Rules

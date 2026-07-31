@@ -9,20 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/documentation-lifecycle/README.md
+canonical_source: docs/repository-operating-model/documentation-lifecycle/documentation-lifecycle.md
 related_concepts:
-  - CONCEPT-0060
+  - CONCEPT-0056
 dependencies:
   - DOC-0056
-  - DOC-0057
-  - DOC-0059
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Documentation Lifecycle

@@ -12,23 +12,15 @@ version: 1.0.1
 canonical_source: docs/product-specification/execution/policy-engine.md
 related_concepts:
   - CONCEPT-0281
-dependencies:
-  - DOC-0118
-  - DOC-0227
-  - DOC-0282
-  - DOC-0381
-consumers:
-  - DOC-0049
-  - DOC-0078
-  - DOC-0099
-  - DOC-0127
-  - DOC-0285
-  - DOC-0290
-  - DOC-0388
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: CONTRACT
 purpose: Defines policy engine.
 scope: Policy enforcement.

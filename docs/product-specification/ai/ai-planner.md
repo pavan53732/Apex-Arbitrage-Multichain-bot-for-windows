@@ -5,24 +5,22 @@ title: AI Planner
 plane: Product Specification
 domain: AI
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/ai-planner.md
+canonical_source: docs/product-specification/ai/ai-orchestration.md
 related_concepts:
-  - CONCEPT-0121
+  - CONCEPT-0102
 dependencies:
   - DOC-0102
-  - DOC-0116
-  - DOC-0279
-consumers:
-  - DOC-0049
-  - DOC-0114
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Ai Planner documentation.
 scope: Reference documentation.

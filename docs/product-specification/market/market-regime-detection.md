@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/market-regime-detection.md
 related_concepts:
   - CONCEPT-0319
-dependencies:
-  - DOC-0087
-  - DOC-0296
-  - DOC-0318
-consumers:
-  - DOC-0049
-  - DOC-0310
-  - DOC-0320
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Market Regime Detection documentation.
 scope: Reference documentation.

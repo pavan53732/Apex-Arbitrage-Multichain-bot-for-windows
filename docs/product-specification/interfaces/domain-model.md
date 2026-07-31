@@ -13,25 +13,14 @@ canonical_source: docs/product-specification/interfaces/domain-model.md
 related_concepts:
   - CONCEPT-0252
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0069
-  - DOC-0079
-  - DOC-0217
-  - DOC-0256
-  - DOC-0275
-  - DOC-0283
-  - DOC-0289
-  - DOC-0292
-  - DOC-0300
-  - DOC-0311
-  - DOC-0314
-  - DOC-0332
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Interfaces
 type: CONTRACT
 purpose: "Defines the canonical platform entities, their identifiers, relationships, invariants, and vocabulary for the entire system domain — including trading, wallet, service, AI, plugin, and Windows desktop entities."
 scope: None

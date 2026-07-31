@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/operations/diagnostics.md
 related_concepts:
   - CONCEPT-0333
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0342
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: CONTRACT
 purpose: "Defines the diagnostics subsystem — diagnosis workflow, artifact schema, export format, analysis pipeline, and integration with health checks, monitoring, and recovery coordination."
 scope: None

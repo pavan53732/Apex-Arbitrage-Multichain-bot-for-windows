@@ -5,33 +5,22 @@ title: Testing Guide
 plane: Product Specification
 domain: Testing
 class: Guide
-authority: Canonical
+authority: Reference
 status: Active
 owner: UI Team
 version: 1.0.0
-canonical_source: docs/product-specification/testing/testing-guide.md
+canonical_source: docs/product-specification/testing/testing.md
 related_concepts:
-  - CONCEPT-0235
+  - CONCEPT-0232
 dependencies:
-  - DOC-0103
-  - DOC-0236
-  - DOC-0283
-  - DOC-0295
-  - DOC-0336
-  - DOC-0338
-consumers:
-  - DOC-0049
-  - DOC-0053
-  - DOC-0059
-  - DOC-0222
-  - DOC-0224
-  - DOC-0234
-  - DOC-0236
-  - DOC-0283
+  - DOC-0232
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: GUIDE
 purpose: Testing Guide documentation.
 scope: Reference documentation.

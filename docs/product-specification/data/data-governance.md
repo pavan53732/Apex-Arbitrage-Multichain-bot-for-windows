@@ -12,21 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/data/data-governance.md
 related_concepts:
   - CONCEPT-0272
-dependencies:
-  - DOC-0120
-  - DOC-0275
-  - DOC-0276
-  - DOC-0317
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0079
-  - DOC-0269
-  - DOC-0275
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Data
 type: REFERENCE
 purpose: Data Governance documentation.
 scope: Reference documentation.

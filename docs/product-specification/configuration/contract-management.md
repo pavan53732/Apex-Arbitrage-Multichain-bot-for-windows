@@ -12,19 +12,15 @@ version: 1.0.1
 canonical_source: docs/product-specification/configuration/contract-management.md
 related_concepts:
   - CONCEPT-0359
-dependencies:
-  - DOC-0087
-  - DOC-0227
-  - DOC-0306
-  - DOC-0383
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0385
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Configuration
 type: CONTRACT
 purpose: Contract Management documentation.
 scope: Reference documentation.

@@ -5,26 +5,22 @@ title: AI Context Window Management
 plane: Product Specification
 domain: AI
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/ai-context-window-management.md
+canonical_source: docs/product-specification/ai/ai-pipeline.md
 related_concepts:
-  - CONCEPT-0117
+  - CONCEPT-0103
 dependencies:
-  - DOC-0051
   - DOC-0103
-  - DOC-0120
-  - DOC-0270
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0114
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Ai Context Window Management documentation.
 scope: Reference documentation.

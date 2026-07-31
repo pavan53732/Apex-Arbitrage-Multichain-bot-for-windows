@@ -13,25 +13,14 @@ canonical_source: docs/product-specification/operations/healthchecks.md
 related_concepts:
   - CONCEPT-0335
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0065
-  - DOC-0082
-  - DOC-0096
-  - DOC-0217
-  - DOC-0277
-  - DOC-0300
-  - DOC-0311
-  - DOC-0313
-  - DOC-0342
-  - DOC-0345
-  - DOC-0347
-  - DOC-0351
-  - DOC-0356
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: CONTRACT
 purpose: "Defines concrete health probe definitions — check name, target, method, cadence, threshold, timeout, failure timing, and fail-closed behavior for every subsystem."
 scope: None

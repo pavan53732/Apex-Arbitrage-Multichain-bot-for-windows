@@ -9,31 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/runtime/README.md
+canonical_source: docs/product-specification/runtime/orchestrator.md
 related_concepts:
-  - CONCEPT-0094
+  - CONCEPT-0087
 dependencies:
-  - DOC-0086
   - DOC-0087
-  - DOC-0088
-  - DOC-0089
-  - DOC-0090
-  - DOC-0091
-  - DOC-0092
-  - DOC-0093
-  - DOC-0095
-  - DOC-0096
-  - DOC-0097
-  - DOC-0098
-  - DOC-0099
-  - DOC-0100
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Runtime

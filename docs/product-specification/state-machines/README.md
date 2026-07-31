@@ -9,23 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/state-machines/README.md
+canonical_source: docs/product-specification/state-machines/state-machine-index.md
 related_concepts:
-  - CONCEPT-0380
+  - CONCEPT-0379
 dependencies:
-  - DOC-0374
-  - DOC-0375
-  - DOC-0376
-  - DOC-0377
-  - DOC-0378
   - DOC-0379
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # State Machines

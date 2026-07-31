@@ -11,16 +11,17 @@ owner: Runtime Team
 version: 1.0.0
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 related_concepts:
-  - CONCEPT-0015
-dependencies: []
-consumers:
-  - DOC-0009
-  - DOC-0049
+  - CONCEPT-0003
+dependencies:
+  - DOC-0003
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by:
   - DOC-0003
 last_updated: 2026-07-29
+concept_role: Historical Reference
+owned_domains: []
 type: INDEX
 purpose: Project documentation index.
 scope: Documentation tree.

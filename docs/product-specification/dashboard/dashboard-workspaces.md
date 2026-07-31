@@ -13,19 +13,14 @@ canonical_source: docs/product-specification/dashboard/dashboard-workspaces.md
 related_concepts:
   - CONCEPT-0216
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0079
-  - DOC-0100
-  - DOC-0218
-  - DOC-0277
-  - DOC-0344
-  - DOC-0386
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Dashboard
 type: CONTRACT
 purpose: Defines dashboard workspaces.
 scope: Workspace management.

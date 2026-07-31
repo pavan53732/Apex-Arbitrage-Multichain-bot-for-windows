@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/data/runtime-knowledge.md
 related_concepts:
   - CONCEPT-0277
-dependencies:
-  - DOC-0065
-  - DOC-0216
-  - DOC-0335
-  - DOC-0336
-consumers:
-  - DOC-0049
-  - DOC-0269
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Data
 type: REFERENCE
 purpose: Runtime Knowledge documentation.
 scope: Reference documentation.

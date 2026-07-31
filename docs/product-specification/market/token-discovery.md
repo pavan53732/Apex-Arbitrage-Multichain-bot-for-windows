@@ -12,16 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/token-discovery.md
 related_concepts:
   - CONCEPT-0331
-dependencies:
-  - DOC-0317
-  - DOC-0318
-consumers:
-  - DOC-0049
-  - DOC-0310
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Token Discovery documentation.
 scope: Reference documentation.

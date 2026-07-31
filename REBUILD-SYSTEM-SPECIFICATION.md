@@ -12,12 +12,14 @@ version: 4.0.0
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 related_concepts:
   - CONCEPT-0003
-dependencies:
-  - DOC-0004
+dependencies: []
 consumers:
-  - DOC-0005
-  - DOC-0049
-  - DOC-0059
+  - DOC-0009
+  - DOC-0010
+  - DOC-0011
+  - DOC-0013
+  - DOC-0014
+  - DOC-0015
 validator_coverage: []
 supersedes:
   - DOC-0013
@@ -25,6 +27,9 @@ supersedes:
   - DOC-0015
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Owner
+owned_domains:
+  - Governance
 type: SPECIFICATION
 purpose: "Defines the repository knowledge architecture for an AI-agent-ready, docs-governed engineering repository, extending the two-plane model with stable document identity, domain classification, authority separation, canonical registries, and first-class traceability so every document can be identified, related, validated, and safely reorganized."
 scope: "Repository knowledge model, repository operating model, product specification plane, document identity, concept registry, document registry, traceability, validator design, repo hygiene, migration planning, and future rebuild sequencing."
@@ -483,6 +488,18 @@ A traceability entry should include at least:
 Why it matters:
 
 This makes traceability first-class instead of a vague promise.
+
+## Concept-centric registry refinement
+
+The Concept Registry is concept-centric, not file-centric.
+
+A single active concept may be related to many documents. Guides, references, indexes, generated shards, and historical redirects must point to the active semantic concept rather than creating competing active concepts.
+
+Concept IDs remain stable even when earlier document-level concepts are consolidated. When a previously assigned Concept ID is no longer an active semantic concept, it is retained as a superseded alias with a `Canonical Concept ID` pointing to the active concept. This preserves ID history while restoring one active canonical owner per concept.
+
+Typed concept codes such as `AI-0102` are navigational aliases only. They do not replace stable `CONCEPT-0000` identifiers.
+
+Registry files carry registry version metadata so future schema evolution can be audited without changing stable document or concept identity.
 
 ## Traceability as a first-class system
 

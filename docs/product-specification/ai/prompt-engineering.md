@@ -12,19 +12,15 @@ version: 1.0.1
 canonical_source: docs/product-specification/ai/prompt-engineering.md
 related_concepts:
   - CONCEPT-0109
-dependencies:
-  - DOC-0103
-  - DOC-0123
-  - DOC-0125
-  - DOC-0381
-consumers:
-  - DOC-0049
-  - DOC-0114
-  - DOC-0123
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: CONTRACT
 purpose: Prompt Engineering documentation.
 scope: Reference documentation.

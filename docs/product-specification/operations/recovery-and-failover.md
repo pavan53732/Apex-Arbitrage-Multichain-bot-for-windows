@@ -12,24 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/operations/recovery-and-failover.md
 related_concepts:
   - CONCEPT-0349
-dependencies:
-  - DOC-0051
-  - DOC-0098
-  - DOC-0334
-  - DOC-0336
-  - DOC-0338
-  - DOC-0348
-consumers:
-  - DOC-0049
-  - DOC-0098
-  - DOC-0337
-  - DOC-0342
-  - DOC-0348
-  - DOC-0351
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: REFERENCE
 purpose: Recovery And Failover documentation.
 scope: Reference documentation.

@@ -5,24 +5,22 @@ title: AI Reflection
 plane: Product Specification
 domain: AI
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/ai/ai-reflection.md
+canonical_source: docs/product-specification/ai/ai-orchestration.md
 related_concepts:
-  - CONCEPT-0122
+  - CONCEPT-0102
 dependencies:
   - DOC-0102
-  - DOC-0126
-  - DOC-0128
-consumers:
-  - DOC-0049
-  - DOC-0114
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Ai Reflection documentation.
 scope: Reference documentation.

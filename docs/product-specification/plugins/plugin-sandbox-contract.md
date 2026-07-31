@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/plugins/plugin-sandbox-contract.md
 related_concepts:
   - CONCEPT-0246
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0248
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Plugins
 type: CONTRACT
 purpose: "Defines the plugin sandbox contract — filesystem, memory, IPC, permissions, resource, network, and AI access boundaries for plugins."
 scope: None

@@ -5,25 +5,22 @@ title: MEV Protection Detail
 plane: Product Specification
 domain: Market
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/market/mev-protection-detail.md
+canonical_source: docs/product-specification/market/mev-protection.md
 related_concepts:
-  - CONCEPT-0321
+  - CONCEPT-0322
 dependencies:
-  - DOC-0280
-  - DOC-0299
-  - DOC-0315
   - DOC-0322
-consumers:
-  - DOC-0049
-  - DOC-0310
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Mev Protection Detail documentation.
 scope: Reference documentation.

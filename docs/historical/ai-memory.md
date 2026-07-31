@@ -11,18 +11,17 @@ owner: AI Team
 version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-memory-system.md
 related_concepts:
-  - CONCEPT-0132
+  - CONCEPT-0120
 dependencies:
   - DOC-0120
-consumers:
-  - DOC-0009
-  - DOC-0049
-  - DOC-0106
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by:
   - DOC-0120
 last_updated: 2026-07-29
+concept_role: Historical Reference
+owned_domains: []
 type: REFERENCE
 purpose: Ai Memory documentation.
 scope: Reference documentation.

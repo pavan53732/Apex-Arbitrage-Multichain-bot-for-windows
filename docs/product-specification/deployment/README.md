@@ -9,23 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/deployment/README.md
+canonical_source: docs/product-specification/deployment/deployment.md
 related_concepts:
-  - CONCEPT-0220
+  - CONCEPT-0224
 dependencies:
-  - DOC-0219
-  - DOC-0221
-  - DOC-0222
-  - DOC-0223
   - DOC-0224
-  - DOC-0225
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Deployment

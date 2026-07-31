@@ -5,30 +5,22 @@ title: Backtesting
 plane: Product Specification
 domain: Testing
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/testing/backtesting.md
+canonical_source: docs/product-specification/execution/simulation-engine.md
 related_concepts:
-  - CONCEPT-0236
+  - CONCEPT-0283
 dependencies:
-  - DOC-0103
-  - DOC-0225
-  - DOC-0235
-  - DOC-0280
   - DOC-0283
-  - DOC-0295
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0234
-  - DOC-0235
-  - DOC-0283
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: TEST
 purpose: Backtesting documentation.
 scope: Reference documentation.

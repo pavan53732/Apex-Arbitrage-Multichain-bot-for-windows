@@ -12,16 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/runtime/shutdown-lifecycle.md
 related_concepts:
   - CONCEPT-0097
-dependencies:
-  - DOC-0087
-  - DOC-0338
-consumers:
-  - DOC-0049
-  - DOC-0094
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Runtime
 type: REFERENCE
 purpose: Shutdown Lifecycle documentation.
 scope: Reference documentation.

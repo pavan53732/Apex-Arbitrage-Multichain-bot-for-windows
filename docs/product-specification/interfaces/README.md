@@ -9,30 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/README.md
+canonical_source: docs/product-specification/interfaces/interface-catalog.md
 related_concepts:
-  - CONCEPT-0256
+  - CONCEPT-0255
 dependencies:
-  - DOC-0251
-  - DOC-0252
-  - DOC-0253
-  - DOC-0254
   - DOC-0255
-  - DOC-0257
-  - DOC-0258
-  - DOC-0259
-  - DOC-0260
-  - DOC-0261
-  - DOC-0262
-  - DOC-0263
-  - DOC-0264
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Interfaces

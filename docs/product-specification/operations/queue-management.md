@@ -12,20 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/operations/queue-management.md
 related_concepts:
   - CONCEPT-0348
-dependencies:
-  - DOC-0098
-  - DOC-0336
-  - DOC-0338
-  - DOC-0349
-consumers:
-  - DOC-0049
-  - DOC-0098
-  - DOC-0342
-  - DOC-0349
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: REFERENCE
 purpose: Queue Management documentation.
 scope: Reference documentation.

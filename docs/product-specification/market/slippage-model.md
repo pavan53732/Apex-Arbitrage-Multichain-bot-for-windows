@@ -5,27 +5,22 @@ title: Slippage Model
 plane: Product Specification
 domain: Market
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/market/slippage-model.md
+canonical_source: docs/product-specification/market/liquidity-analysis.md
 related_concepts:
-  - CONCEPT-0330
+  - CONCEPT-0316
 dependencies:
-  - DOC-0280
-  - DOC-0295
-  - DOC-0304
-consumers:
-  - DOC-0049
-  - DOC-0304
-  - DOC-0308
-  - DOC-0310
   - DOC-0316
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Slippage Model documentation.
 scope: Reference documentation.

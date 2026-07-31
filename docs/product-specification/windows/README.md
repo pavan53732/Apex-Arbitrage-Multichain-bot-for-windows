@@ -9,23 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/windows/README.md
+canonical_source: docs/product-specification/windows/windows-app-architecture.md
 related_concepts:
-  - CONCEPT-0243
+  - CONCEPT-0237
 dependencies:
   - DOC-0237
-  - DOC-0238
-  - DOC-0239
-  - DOC-0240
-  - DOC-0241
-  - DOC-0242
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Windows

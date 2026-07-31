@@ -12,23 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/interfaces/api-contracts.md
 related_concepts:
   - CONCEPT-0251
-dependencies:
-  - DOC-0083
-  - DOC-0085
-  - DOC-0225
-  - DOC-0254
-  - DOC-0267
-  - DOC-0334
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0225
-  - DOC-0256
   - DOC-0257
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Interfaces
 type: CONTRACT
 purpose: Api Contracts documentation.
 scope: Reference documentation.

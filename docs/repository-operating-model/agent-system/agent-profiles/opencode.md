@@ -9,24 +9,18 @@ authority: Derived
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/agent-system/agent-profiles/opencode.md
+canonical_source: docs/repository-operating-model/agent-system/agent-profiles/README.md
 related_concepts:
-  - CONCEPT-0034
+  - CONCEPT-0018
 dependencies:
-  - DOC-0001
-  - DOC-0079
-  - DOC-0103
-  - DOC-0227
-  - DOC-0265
-  - DOC-0266
-  - DOC-0338
-consumers:
   - DOC-0018
-  - DOC-0049
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: OPENCODE AI tool documentation.
 scope: OPENCODE reference.

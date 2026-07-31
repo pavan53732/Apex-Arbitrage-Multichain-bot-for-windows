@@ -12,30 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/routing-engine.md
 related_concepts:
   - CONCEPT-0304
-dependencies:
-  - DOC-0280
-  - DOC-0315
-  - DOC-0316
-  - DOC-0317
-  - DOC-0322
-  - DOC-0330
-consumers:
-  - DOC-0049
-  - DOC-0302
-  - DOC-0303
-  - DOC-0306
-  - DOC-0307
-  - DOC-0310
-  - DOC-0312
-  - DOC-0316
-  - DOC-0317
-  - DOC-0322
-  - DOC-0327
-  - DOC-0330
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: CONTRACT
 purpose: Defines routing engine.
 scope: Order routing logic.

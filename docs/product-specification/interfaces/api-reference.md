@@ -5,29 +5,22 @@ title: API Reference
 plane: Product Specification
 domain: Interfaces
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/api-reference.md
+canonical_source: docs/product-specification/interfaces/api-contracts.md
 related_concepts:
-  - CONCEPT-0257
+  - CONCEPT-0251
 dependencies:
-  - DOC-0085
-  - DOC-0225
   - DOC-0251
-  - DOC-0254
-  - DOC-0334
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0124
-  - DOC-0256
-  - DOC-0271
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Api Reference documentation.
 scope: Reference documentation.

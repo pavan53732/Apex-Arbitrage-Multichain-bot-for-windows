@@ -12,19 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/architecture/live-architecture-viewer.md
 related_concepts:
   - CONCEPT-0082
-dependencies:
-  - DOC-0065
-  - DOC-0081
-  - DOC-0217
-  - DOC-0335
-consumers:
-  - DOC-0049
-  - DOC-0068
-  - DOC-0079
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Live Architecture Viewer documentation.
 scope: Reference documentation.

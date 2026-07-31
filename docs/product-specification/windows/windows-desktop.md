@@ -13,22 +13,14 @@ canonical_source: docs/product-specification/windows/windows-desktop.md
 related_concepts:
   - CONCEPT-0238
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0078
-  - DOC-0100
-  - DOC-0224
-  - DOC-0243
-  - DOC-0372
-  - DOC-0390
-  - DOC-0393
-  - DOC-0394
-  - DOC-0395
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Windows
 type: CONTRACT
 purpose: "Defines the Windows desktop shell behavior — tray lifecycle, window lifecycle, minimize-to-tray, restore-from-tray, first-run behavior, login recovery, offline UI, degraded states, multi-window, and cross-subsystem integration."
 scope: None

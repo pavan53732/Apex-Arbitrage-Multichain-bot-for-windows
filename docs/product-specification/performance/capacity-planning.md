@@ -13,14 +13,14 @@ canonical_source: docs/product-specification/performance/capacity-planning.md
 related_concepts:
   - CONCEPT-0355
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0354
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Performance
 type: REFERENCE
 purpose: "Defines maximum supported throughput, concurrent operations, and sizing limits for all subsystems — workers, tasks, plugins, models, wallets, strategies, chains, and events per second."
 scope: Capacity Planning scope and boundaries.

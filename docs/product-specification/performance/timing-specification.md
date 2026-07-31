@@ -13,13 +13,14 @@ canonical_source: docs/product-specification/performance/timing-specification.md
 related_concepts:
   - CONCEPT-0353
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0354
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Performance
 type: CONTRACT
 purpose: "Defines timeout budgets, retry intervals, worker heartbeats, shutdown timing, startup timing, inter-leg timing, and event delivery timing for every subsystem — with exact values, ranges, and config key references."
 scope: None

@@ -5,26 +5,22 @@ title: Event Ownership Matrix
 plane: Product Specification
 domain: Interfaces
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/interfaces/event-ownership-matrix.md
+canonical_source: docs/product-specification/interfaces/event-bus.md
 related_concepts:
-  - CONCEPT-0259
-dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0095
-  - DOC-0107
-  - DOC-0131
-  - DOC-0230
-  - DOC-0231
-  - DOC-0256
+  - CONCEPT-0253
+dependencies:
+  - DOC-0253
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: "Maps publishers, consumers, delivery guarantees, ordering, priority, and retention for every event in the system."
 scope: None

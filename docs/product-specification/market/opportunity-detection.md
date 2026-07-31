@@ -12,21 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/opportunity-detection.md
 related_concepts:
   - CONCEPT-0323
-dependencies:
-  - DOC-0282
-  - DOC-0295
-  - DOC-0317
-  - DOC-0318
-  - DOC-0324
-consumers:
-  - DOC-0049
-  - DOC-0310
-  - DOC-0318
-  - DOC-0324
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Opportunity Detection documentation.
 scope: Reference documentation.

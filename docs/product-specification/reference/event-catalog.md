@@ -5,22 +5,22 @@ title: Event Catalog
 plane: Product Specification
 domain: Reference
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/reference/event-catalog.md
+canonical_source: docs/product-specification/interfaces/event-bus.md
 related_concepts:
-  - CONCEPT-0363
-dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0361
+  - CONCEPT-0253
+dependencies:
+  - DOC-0253
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: "Canonical registry of all platform events — including payload fields, producers, consumers, versioning rules, delivery guarantees, ordering constraints, retention, and ownership linkage."
 scope: None

@@ -12,16 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/runtime/concurrency-model.md
 related_concepts:
   - CONCEPT-0095
-dependencies:
-  - DOC-0259
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0094
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Runtime
 type: REFERENCE
 purpose: "Defines concurrency primitives — locks, queues, cancellation, deadlock avoidance, atomic operations, and synchronization barriers."
 scope: Concurrency Model scope and boundaries.

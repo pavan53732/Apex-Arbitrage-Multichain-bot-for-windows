@@ -12,21 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/data/data-flow.md
 related_concepts:
   - CONCEPT-0271
-dependencies:
-  - DOC-0254
-  - DOC-0257
-  - DOC-0258
-  - DOC-0267
-  - DOC-0338
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0258
-  - DOC-0269
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Data
 type: REFERENCE
 purpose: Data Flow documentation.
 scope: Reference documentation.

@@ -14,31 +14,14 @@ related_concepts:
   - CONCEPT-0087
 dependencies: []
 consumers:
-  - DOC-0046
-  - DOC-0049
-  - DOC-0059
-  - DOC-0065
-  - DOC-0069
-  - DOC-0078
-  - DOC-0079
-  - DOC-0081
-  - DOC-0093
   - DOC-0094
-  - DOC-0096
-  - DOC-0097
-  - DOC-0099
-  - DOC-0278
-  - DOC-0279
-  - DOC-0289
-  - DOC-0296
-  - DOC-0298
-  - DOC-0313
-  - DOC-0319
-  - DOC-0359
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Runtime
 type: CONTRACT
 purpose: Defines the single authoritative runtime orchestrator that coordinates all subsystem sequencing.
 scope: "Master lifecycle coordinator for startup ordering, subsystem priority, cross-system dependency resolution, health-driven state transitions, sleep/resume coordination, recovery delegation, and graceful shutdown ordering."

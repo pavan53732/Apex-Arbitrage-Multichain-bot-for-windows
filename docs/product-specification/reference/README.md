@@ -9,29 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/reference/README.md
+canonical_source: docs/product-specification/reference/faq.md
 related_concepts:
-  - CONCEPT-0361
+  - CONCEPT-0368
 dependencies:
-  - DOC-0362
-  - DOC-0363
-  - DOC-0364
-  - DOC-0365
-  - DOC-0366
-  - DOC-0367
   - DOC-0368
-  - DOC-0369
-  - DOC-0370
-  - DOC-0371
-  - DOC-0372
-  - DOC-0373
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Reference

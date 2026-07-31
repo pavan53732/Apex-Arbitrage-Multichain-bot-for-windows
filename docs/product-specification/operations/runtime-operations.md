@@ -14,54 +14,14 @@ related_concepts:
   - CONCEPT-0338
 dependencies: []
 consumers:
-  - DOC-0005
-  - DOC-0020
-  - DOC-0021
-  - DOC-0022
-  - DOC-0023
-  - DOC-0024
-  - DOC-0025
-  - DOC-0026
-  - DOC-0027
-  - DOC-0028
-  - DOC-0029
-  - DOC-0030
-  - DOC-0031
-  - DOC-0032
-  - DOC-0033
-  - DOC-0034
-  - DOC-0035
-  - DOC-0036
-  - DOC-0037
-  - DOC-0038
-  - DOC-0039
-  - DOC-0040
-  - DOC-0041
-  - DOC-0042
-  - DOC-0043
-  - DOC-0049
-  - DOC-0079
-  - DOC-0080
-  - DOC-0084
-  - DOC-0097
-  - DOC-0098
-  - DOC-0224
-  - DOC-0235
-  - DOC-0261
-  - DOC-0271
-  - DOC-0274
   - DOC-0342
-  - DOC-0344
-  - DOC-0345
-  - DOC-0348
-  - DOC-0349
-  - DOC-0357
-  - DOC-0365
-  - DOC-0396
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: CONTRACT
 purpose: Defines runtime operational procedures and lifecycle management.
 scope: Operational runbook for runtime components.

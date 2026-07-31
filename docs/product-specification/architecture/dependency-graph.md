@@ -12,20 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/architecture/dependency-graph.md
 related_concepts:
   - CONCEPT-0081
-dependencies:
-  - DOC-0069
-  - DOC-0079
-  - DOC-0087
-  - DOC-0093
-consumers:
-  - DOC-0049
-  - DOC-0068
-  - DOC-0079
-  - DOC-0082
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Architecture
 type: REFERENCE
 purpose: Dependency Graph documentation.
 scope: Reference documentation.

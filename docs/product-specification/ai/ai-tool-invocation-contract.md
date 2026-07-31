@@ -12,20 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-tool-invocation-contract.md
 related_concepts:
   - CONCEPT-0107
-dependencies:
-  - DOC-0124
-  - DOC-0231
-  - DOC-0259
-  - DOC-0362
-consumers:
-  - DOC-0049
-  - DOC-0105
-  - DOC-0106
-  - DOC-0114
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: CONTRACT
 purpose: "Defines when AI may call tools and under which priority, fallback, timeout, and retry policies. This contract is the single authoritative source for all tool invocation governance."
 scope: Ai Tool Invocation Contract scope and boundaries.

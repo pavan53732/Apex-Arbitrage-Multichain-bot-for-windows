@@ -13,29 +13,14 @@ canonical_source: docs/product-specification/execution/risk-engine.md
 related_concepts:
   - CONCEPT-0282
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0110
-  - DOC-0116
-  - DOC-0278
-  - DOC-0279
-  - DOC-0281
-  - DOC-0285
-  - DOC-0287
-  - DOC-0290
-  - DOC-0291
-  - DOC-0294
-  - DOC-0295
-  - DOC-0298
-  - DOC-0308
-  - DOC-0323
-  - DOC-0325
-  - DOC-0329
-  - DOC-0370
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Execution
 type: CONTRACT
 purpose: Defines risk engine.
 scope: Risk scoring and management.

@@ -5,24 +5,22 @@ title: Configuration Reference
 plane: Product Specification
 domain: Configuration
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Config Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/configuration-reference.md
+canonical_source: docs/product-specification/configuration/configuration.md
 related_concepts:
-  - CONCEPT-0387
+  - CONCEPT-0381
 dependencies:
-  - DOC-0386
-consumers:
-  - DOC-0049
-  - DOC-0059
   - DOC-0381
-  - DOC-0385
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: "Enumerates every configuration key, owner, type, default, validation, reload, and restart requirement."
 scope: Configuration Reference scope and boundaries.

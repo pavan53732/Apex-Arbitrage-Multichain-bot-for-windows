@@ -5,24 +5,22 @@ title: Glossary
 plane: Product Specification
 domain: Reference
 class: Reference
-authority: Reference
+authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
 canonical_source: docs/product-specification/reference/glossary.md
 related_concepts:
   - CONCEPT-0370
-dependencies:
-  - DOC-0079
-  - DOC-0282
-  - DOC-0295
-consumers:
-  - DOC-0049
-  - DOC-0361
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Reference
 type: REFERENCE
 purpose: Glossary documentation.
 scope: Reference documentation.

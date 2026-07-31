@@ -14,12 +14,14 @@ related_concepts:
   - CONCEPT-0255
 dependencies: []
 consumers:
-  - DOC-0049
   - DOC-0256
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Interfaces
 type: INDEX
 purpose: Interface Catalog documentation.
 scope: Reference documentation.

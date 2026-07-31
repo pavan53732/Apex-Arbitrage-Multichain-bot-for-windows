@@ -12,23 +12,16 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/liquidity-analysis.md
 related_concepts:
   - CONCEPT-0316
-dependencies:
-  - DOC-0280
-  - DOC-0304
-  - DOC-0318
-  - DOC-0330
+dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0303
-  - DOC-0304
-  - DOC-0307
-  - DOC-0308
-  - DOC-0310
-  - DOC-0317
+  - DOC-0330
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Liquidity Analysis documentation.
 scope: Reference documentation.

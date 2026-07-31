@@ -13,17 +13,14 @@ canonical_source: docs/product-specification/data/state-management.md
 related_concepts:
   - CONCEPT-0267
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0079
-  - DOC-0251
-  - DOC-0258
-  - DOC-0269
-  - DOC-0271
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Data
 type: CONTRACT
 purpose: "Defines how APEX manages runtime state — state domains, ownership, synchronization rules, full subsystem state machine index, timeout semantics, Windows sleep/resume recovery, and persistence expectations."
 scope: None

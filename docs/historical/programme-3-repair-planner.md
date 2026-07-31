@@ -11,18 +11,17 @@ owner: Runtime Team
 version: 1.0.0
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 related_concepts:
-  - CONCEPT-0014
+  - CONCEPT-0003
 dependencies:
-  - DOC-0102
-  - DOC-0119
-consumers:
-  - DOC-0009
-  - DOC-0049
+  - DOC-0003
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by:
   - DOC-0003
 last_updated: 2026-07-29
+concept_role: Historical Reference
+owned_domains: []
 type: SPECIFICATION
 purpose: "Defines the Repair Planner engine for Programme 3, responsible for transforming validator findings into deterministic repair tasks."
 scope: "Maps validator findings to canonical owners, sections, and repair steps for closure dimensions."

@@ -12,19 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/interfaces/interface-tool-call.md
 related_concepts:
   - CONCEPT-0263
-dependencies:
-  - DOC-0101
-  - DOC-0102
-consumers:
-  - DOC-0049
-  - DOC-0079
-  - DOC-0124
-  - DOC-0256
-  - DOC-0283
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Interfaces
 type: REFERENCE
 purpose: Interface Tool Call documentation.
 scope: Reference documentation.

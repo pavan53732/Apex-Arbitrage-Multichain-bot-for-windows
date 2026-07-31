@@ -5,21 +5,22 @@ title: Feature Gates
 plane: Product Specification
 domain: Configuration
 class: Reference
-authority: Canonical
+authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/configuration/feature-gates.md
+canonical_source: docs/product-specification/configuration/feature-flags.md
 related_concepts:
-  - CONCEPT-0389
-dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0385
+  - CONCEPT-0388
+dependencies:
+  - DOC-0388
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Reference
+owned_domains: []
 type: REFERENCE
 purpose: Feature Gates documentation.
 scope: Reference documentation.

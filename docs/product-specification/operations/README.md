@@ -9,35 +9,18 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/README.md
+canonical_source: docs/product-specification/operations/runtime-operations.md
 related_concepts:
-  - CONCEPT-0342
+  - CONCEPT-0338
 dependencies:
-  - DOC-0333
-  - DOC-0334
-  - DOC-0335
-  - DOC-0336
-  - DOC-0337
   - DOC-0338
-  - DOC-0339
-  - DOC-0340
-  - DOC-0341
-  - DOC-0343
-  - DOC-0344
-  - DOC-0345
-  - DOC-0346
-  - DOC-0347
-  - DOC-0348
-  - DOC-0349
-  - DOC-0350
-  - DOC-0351
-consumers:
-  - DOC-0049
-  - DOC-0058
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-31
+concept_role: Index
+owned_domains: []
 ---
 
 # Operations

@@ -14,16 +14,14 @@ related_concepts:
   - CONCEPT-0334
 dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0251
-  - DOC-0257
-  - DOC-0342
-  - DOC-0349
+  - DOC-0362
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
 type: CONTRACT
 purpose: "Defines the canonical error namespace map, error taxonomy, retry classifications, severity mappings tied to error codes, logging policy, redaction rules, and escalation behavior. This document is the single authoritative source for all error handling governance."
 scope: None

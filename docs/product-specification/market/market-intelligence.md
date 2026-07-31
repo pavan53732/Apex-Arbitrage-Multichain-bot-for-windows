@@ -12,31 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/market/market-intelligence.md
 related_concepts:
   - CONCEPT-0318
-dependencies:
-  - DOC-0266
-  - DOC-0295
-  - DOC-0317
-  - DOC-0323
-  - DOC-0325
-  - DOC-0336
-consumers:
-  - DOC-0049
-  - DOC-0275
-  - DOC-0295
-  - DOC-0310
-  - DOC-0316
-  - DOC-0317
-  - DOC-0319
-  - DOC-0320
-  - DOC-0323
-  - DOC-0325
-  - DOC-0326
-  - DOC-0327
-  - DOC-0331
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Market
 type: REFERENCE
 purpose: Market Intelligence documentation.
 scope: Reference documentation.

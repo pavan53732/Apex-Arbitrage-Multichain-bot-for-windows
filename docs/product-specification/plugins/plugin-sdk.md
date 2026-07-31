@@ -14,17 +14,14 @@ related_concepts:
   - CONCEPT-0247
 dependencies: []
 consumers:
-  - DOC-0049
-  - DOC-0065
-  - DOC-0078
-  - DOC-0244
   - DOC-0248
-  - DOC-0250
-  - DOC-0384
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Plugins
 type: CONTRACT
 purpose: Defines plugin SDK.
 scope: Plugin development.

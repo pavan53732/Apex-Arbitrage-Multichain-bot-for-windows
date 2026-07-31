@@ -12,18 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/ai/ai-reasoning-policy.md
 related_concepts:
   - CONCEPT-0110
-dependencies:
-  - DOC-0116
-  - DOC-0279
-  - DOC-0282
-consumers:
-  - DOC-0049
-  - DOC-0114
-  - DOC-0119
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - AI
 type: POLICY
 purpose: Ai Reasoning Policy documentation.
 scope: Reference documentation.

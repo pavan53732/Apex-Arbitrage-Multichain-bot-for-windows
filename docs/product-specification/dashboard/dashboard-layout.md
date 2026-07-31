@@ -13,16 +13,14 @@ canonical_source: docs/product-specification/dashboard/dashboard-layout.md
 related_concepts:
   - CONCEPT-0213
 dependencies: []
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0079
-  - DOC-0218
-  - DOC-0396
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Dashboard
 type: CONTRACT
 purpose: "Defines the layout model for the Windows desktop dashboard — layout architecture, docking system, layout serialization, workspace restore, DPI scaling, multi-monitor behavior, responsive regions, split views, tab sets, and layout integration contracts."
 scope: Dashboard Layout scope and boundaries.

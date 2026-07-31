@@ -12,22 +12,15 @@ version: 1.0.0
 canonical_source: docs/product-specification/data/context-builder.md
 related_concepts:
   - CONCEPT-0270
-dependencies:
-  - DOC-0103
-  - DOC-0119
-  - DOC-0120
-  - DOC-0275
-consumers:
-  - DOC-0049
-  - DOC-0059
-  - DOC-0111
-  - DOC-0117
-  - DOC-0120
-  - DOC-0269
+dependencies: []
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
 last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Data
 type: REFERENCE
 purpose: Context Builder documentation.
 scope: Reference documentation.
