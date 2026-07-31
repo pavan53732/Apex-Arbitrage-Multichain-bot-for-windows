@@ -23,7 +23,7 @@ consumers:
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Agent System
@@ -204,6 +204,10 @@ The following changes require extra caution:
 - deprecation or supersession changes
 - validator-rule changes
 - reintroduction of tools/, scripts/, schemas/, or governance artefact systems as canonical layers
+
+## Repository Governance Freeze
+
+The repository governance architecture is stable. AI agents must not redesign, replace, or expand the governance framework unless the user explicitly requests a governance revision. Normal repository work must focus on product implementation, product documentation, validator compliance, and repository maintenance.
 
 ## Repository execution model
 
