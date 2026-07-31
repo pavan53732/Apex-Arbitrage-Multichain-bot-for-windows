@@ -1,0 +1,66 @@
+# Validator Configuration
+# Location: Repository root
+
+metadata_schema_version: "1.0"
+
+# Paths
+repository_root: "."
+registries_dir: "docs/repository-operating-model/registries"
+
+# Discovery
+ignored_paths:
+  - ".git"
+  - "generated"
+  - "node_modules"
+  - "__pycache__"
+  - ".venv"
+  - "venv"
+
+ignored_files:
+  - "README.md"
+  - "*.tmp"
+  - "*.bak"
+  - "*.old"
+
+ignored_patterns: []
+
+# Validation thresholds
+max_file_size_mb: 10
+validator_timeout_seconds: 30
+
+# Registry locations (relative to repo root)
+concept_registry: "docs/repository-operating-model/registries/CONCEPT-REGISTRY.md"
+document_registry: "docs/repository-operating-model/registries/DOCUMENT-REGISTRY.md"
+traceability_registry: "docs/repository-operating-model/registries/TRACEABILITY-REGISTRY.md"
+
+# Per-validator config (optional overrides)
+validators:
+  VAL-001:
+    check_anchors: true
+    check_external_urls: false
+  VAL-002:
+    strict_enum_validation: true
+  VAL-006:
+    prohibited_patterns:
+      - "AUDIT.md"
+      - "REVIEW.md"
+      - "REPORT.md"
+      - "SUMMARY.md"
+      - "ANALYSIS.md"
+      - "FINDINGS.md"
+      - "NOTES.md"
+      - "PLAN.md"
+      - "TODO.md"
+      - "MIGRATION.md"
+      - "IMPLEMENTATION-REPORT.md"
+      - "COMPLETION-REPORT.md"
+      - "STATUS.md"
+      - "LOG.md"
+      - "RESULT.md"
+    prohibited_extensions:
+      - ".tmp"
+      - ".bak"
+      - ".old"
+    prohibited_dirs:
+      - ".github/workflows"
+      - ".gitlab-ci.yml"
