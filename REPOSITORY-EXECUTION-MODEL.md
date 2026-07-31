@@ -1,13 +1,33 @@
 ---
-type: POLICY
+metadata_schema_version: 1.0
+document_id: DOC-0004
+title: REPOSITORY-EXECUTION-MODEL
+plane: Repository Operating Model
+domain: Governance
+class: Policy
+authority: Canonical
+status: Active
 owner: Runtime Team
-status: Canonical
 version: 1.0.0
-last_updated: 2026-07-31
-purpose: Defines the Repository Execution Model for this repository, explicitly stating the local-first philosophy, prohibition of CI/CD and GitHub Actions, and the human + AI interactive execution workflow.
-scope: Repository execution, validation execution, commit workflow, local-first tooling, and prohibition of remote automation pipelines.
-audience: AI agents, maintainers, contributors, and repository architects.
 canonical_source: REPOSITORY-EXECUTION-MODEL.md
+related_concepts:
+  - CONCEPT-0004
+dependencies: []
+consumers:
+  - DOC-0001
+  - DOC-0002
+  - DOC-0003
+  - DOC-0005
+  - DOC-0049
+  - DOC-0059
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-31
+type: POLICY
+purpose: "Defines the Repository Execution Model for this repository, explicitly stating the local-first philosophy, prohibition of CI/CD and GitHub Actions, and the human + AI interactive execution workflow."
+scope: "Repository execution, validation execution, commit workflow, local-first tooling, and prohibition of remote automation pipelines."
+audience: "AI agents, maintainers, contributors, and repository architects."
 ---
 
 # REPOSITORY-EXECUTION-MODEL

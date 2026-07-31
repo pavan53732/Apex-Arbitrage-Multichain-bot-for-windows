@@ -1,0 +1,67 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0044
+title: Legacy Agent Rules
+plane: Repository Operating Model
+domain: Agent System
+class: Historical
+authority: Historical
+status: Superseded
+owner: Runtime Team
+version: 1.0.0
+canonical_source: AGENTS_RULES.md
+related_concepts:
+  - CONCEPT-0044
+dependencies: []
+consumers:
+  - DOC-0009
+  - DOC-0049
+validator_coverage: []
+supersedes: []
+superseded_by:
+  - DOC-0002
+last_updated: 2026-07-31
+---
+
+# Agent Rules
+
+## Repository Rules
+
+| Rule | Description |
+|------|-------------|
+| **Output Format** | All reports, analysis, and summaries must be presented in table format. No plain text narratives for structured data. |
+| **No CI/CD Workflows** | The repository must not contain any GitHub Actions workflows, CI/CD pipelines, or automation workflows. No `.github/workflows/` directory or `*.yml`/`.yaml` pipeline files. |
+| **Branch Strategy** | Work is done on session branches. Merge to `main` via explicit merge commits with detailed messages. |
+| **Governance Platform** | The Apex Governance Platform (`tools/governance/`) is the single canonical runtime. All governance computation originates here. WS0 is a verification layer only. |
+
+## Development Rules
+
+| Rule | Description |
+|------|-------------|
+| **Determinism** | All governance operations must be deterministic and reproducible on fresh clones. |
+| **Evidence-Based** | Every claim must be backed by repository evidence (files, commits, command output). |
+| **No Fabrication** | Never assume, infer, or fabricate state. Verify directly from repository contents. |
+| **Read-Only Investigation** | Initial audits/reconstructions are read-only. No modifications until explicitly approved. |
+
+## Implementation Rules
+
+| Rule | Description |
+|------|-------------|
+| **Specification Drift** | If implementation diverges from frozen Phase-0 spec, propose ADR (Option B) rather than silently certifying against outdated spec. |
+| **Fresh-Clone Verification** | Certification requires independent `git clone` + clean environment re-verification. |
+| **Zero Phantom Data** | Dependency graphs must have zero phantom nodes. Path normalization must be consistent. |
+| **Validator Exit Codes** | `apex-gov validate` must return non-zero exit code when findings exceed threshold. |
+
+## Quality Gates
+
+| Gate | Requirement |
+|------|-------------|
+| **Integrity** | `apex-gov integrity` → 14/14 PASS |
+| **Tests** | Governance test suite → 238/238 PASS |
+| **Architecture** | All 5 architecture test scripts → PASS |
+| **Certification** | Programme 2.5 certified before Programme 3 begins |
+
+---
+
+*Last updated: 2026-07-30*
+*Source: Session agreements between user and agent*

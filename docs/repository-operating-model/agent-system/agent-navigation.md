@@ -1,0 +1,62 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0046
+title: Agent Navigation
+plane: Repository Operating Model
+domain: Agent System
+class: Reference
+authority: Derived
+status: Active
+owner: AI Team
+version: 1.0.0
+canonical_source: docs/repository-operating-model/agent-system/agent-navigation.md
+related_concepts:
+  - CONCEPT-0046
+dependencies:
+  - DOC-0045
+  - DOC-0087
+  - DOC-0101
+  - DOC-0103
+  - DOC-0396
+consumers:
+  - DOC-0016
+  - DOC-0049
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-29
+type: REFERENCE
+purpose: AI agent navigation overview.
+scope: Agent reference.
+---
+
+# Agent Navigation
+
+
+## AI Guard
+Before creating or modifying ANY markdown file, verify it complies with the 5 Prime Directives.
+- Lifecycle docs must explicitly define initial state, terminal state, allowed transitions, forbidden transitions, recovery transitions, and failure transitions.
+- Interface docs must explicitly define producer, consumer, payload, schema, validation, versioning, and failure behavior.
+- Owner docs must explicitly state what they own and do not own.
+- Cross-cutting docs must defer to canonical owners.
+- Short docs must explicitly declare whether they are an [INDEX], [OVERVIEW], or [REFERENCE].
+If a file fails any directive, abort and fix it before proceeding.
+
+## Purpose
+Provides navigation to the authoritative documentation set.
+
+## Cross-references
+- `./skills.md`
+- `../../product-specification/ai/ai-pipeline.md`
+- `../../product-specification/ui/user-flows.md`
+
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.
+
+## Ownership boundary
+- This document is navigation only. It does not own AI execution, orchestration, or lifecycle behavior.
+- Authority belongs to `../../product-specification/ai/ai-pipeline.md`, `../../product-specification/runtime/orchestrator.md`, and `../../product-specification/ai/ai-agent-specification.md`.

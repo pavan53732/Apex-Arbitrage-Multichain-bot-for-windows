@@ -1,0 +1,75 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0275
+title: Knowledge Graph
+plane: Product Specification
+domain: Data
+class: Reference
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: docs/product-specification/data/knowledge-graph.md
+related_concepts:
+  - CONCEPT-0275
+dependencies:
+  - DOC-0120
+  - DOC-0252
+  - DOC-0272
+  - DOC-0312
+  - DOC-0318
+consumers:
+  - DOC-0049
+  - DOC-0111
+  - DOC-0120
+  - DOC-0269
+  - DOC-0270
+  - DOC-0272
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-29
+type: REFERENCE
+purpose: Knowledge Graph documentation.
+scope: Reference documentation.
+---
+
+# Knowledge Graph
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Knowledge Graph
+
+## Purpose
+Defines the structured graph linking protocols, tokens, strategies, chains, DEXs, risks, and AI agents.
+
+## State machine
+```mermaid
+stateDiagram-v2
+  [*] --> INGESTING
+  INGESTING --> LINKING
+  LINKING --> VALIDATING
+  VALIDATING --> SERVING
+  SERVING --> REFRESHING
+  REFRESHING --> INGESTING
+```
+
+## Failure modes
+Stale node, broken edge, duplicate entity, invalid relation, version drift.
+
+## Recovery
+Refresh source nodes, revalidate relations, and isolate stale subgraphs.
+
+## Cross-references
+- `../ai/ai-memory-system.md`
+- `../market/chain-intelligence.md`
+- `../market/market-intelligence.md`
+- `../interfaces/domain-model.md`
+
+For data governance, see `./data-governance.md`.
+## Governance Rules
+Defines node types, edges, indexing, update propagation, and retrieval semantics for the knowledge graph.
+
+## Example
+A strategy node links to market regime, risk policy, and execution history.

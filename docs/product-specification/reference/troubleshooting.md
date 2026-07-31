@@ -1,0 +1,56 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0365
+title: Troubleshooting
+plane: Product Specification
+domain: Reference
+class: Reference
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: docs/product-specification/reference/troubleshooting.md
+related_concepts:
+  - CONCEPT-0365
+dependencies:
+  - DOC-0336
+  - DOC-0338
+  - DOC-0392
+consumers:
+  - DOC-0049
+  - DOC-0059
+  - DOC-0361
+  - DOC-0368
+  - DOC-0392
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-29
+type: REFERENCE
+purpose: Troubleshooting documentation.
+scope: Reference documentation.
+---
+
+# Troubleshooting
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# TROUBLESHOOTING
+
+## Purpose
+Navigation-only document pointing to the authoritative owner(s).
+
+## Cross-references
+- `../ui/user-guide.md`
+- `../operations/runtime-operations.md`
+- `../operations/monitoring-observability.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.
+
+## Required details
+- Add Windows connectivity, permissions, and recovery troubleshooting steps.

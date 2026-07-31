@@ -1,0 +1,74 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0273
+title: Decision Ledger
+plane: Product Specification
+domain: Data
+class: Reference
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: docs/product-specification/data/decision-ledger.md
+related_concepts:
+  - CONCEPT-0273
+dependencies:
+  - DOC-0126
+  - DOC-0127
+  - DOC-0279
+  - DOC-0288
+consumers:
+  - DOC-0049
+  - DOC-0269
+  - DOC-0288
+  - DOC-0297
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-29
+type: REFERENCE
+purpose: Decision Ledger documentation.
+scope: Reference documentation.
+---
+
+# Decision Ledger
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Decision Ledger
+
+## Purpose
+Defines the immutable record of every autonomous decision and outcome.
+
+## State machine
+```mermaid
+stateDiagram-v2
+  [*] --> CAPTURED
+  CAPTURED --> VALIDATED
+  VALIDATED --> HASHED
+  HASHED --> STORED
+  STORED --> REPLAYABLE
+  REPLAYABLE --> ARCHIVED
+```
+
+## Required fields
+Unique Decision ID, timestamp, trigger event, market snapshot, AI recommendation, deterministic calculations, policy evaluation, risk score, simulation result, final decision, execution result, post-execution outcome.
+
+## Failure modes
+Missing record, tampered record, incomplete lineage, replay mismatch.
+
+## Recovery
+Rebuild from source logs, reject incomplete traces, escalate to audit.
+
+## Cross-references
+- `../execution/decision-engine.md`
+- `../ai/governance-explainability.md`
+- `../ai/explainability.md`
+- `../execution/decision-log.md`
+
+## Ledger Semantics
+Defines the immutable trace of autonomous decisions, simulation outputs, execution results, and outcomes.
+
+## Example
+A trade decision records market snapshot, risk score, and post-execution outcome.

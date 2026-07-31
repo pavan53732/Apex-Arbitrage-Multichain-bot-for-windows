@@ -1,113 +1,102 @@
 ---
+metadata_schema_version: 1.0
+document_id: DOC-0058
+title: Documentation Index
+plane: Repository Operating Model
+domain: Documentation Lifecycle
+class: Index
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: docs/README.md
+related_concepts:
+  - CONCEPT-0058
+dependencies:
+  - DOC-0009
+  - DOC-0010
+  - DOC-0011
+  - DOC-0016
+  - DOC-0018
+  - DOC-0047
+  - DOC-0048
+  - DOC-0055
+  - DOC-0060
+  - DOC-0061
+  - DOC-0063
+  - DOC-0064
+  - DOC-0067
+  - DOC-0068
+  - DOC-0094
+  - DOC-0112
+  - DOC-0113
+  - DOC-0114
+  - DOC-0218
+  - DOC-0220
+  - DOC-0229
+  - DOC-0234
+  - DOC-0243
+  - DOC-0248
+  - DOC-0256
+  - DOC-0269
+  - DOC-0285
+  - DOC-0310
+  - DOC-0342
+  - DOC-0354
+  - DOC-0360
+  - DOC-0361
+  - DOC-0380
+  - DOC-0385
+  - DOC-0391
+consumers:
+  - DOC-0005
+validator_coverage: []
+supersedes: []
+superseded_by: []
 last_updated: 2026-07-29
 type: OVERVIEW
-owner: Runtime Team
-status: Canonical
-version: 1.0.0
 purpose: Readme documentation.
 scope: Reference documentation.
-canonical_source: docs/README.md
 ---
 
-# Readme
+# Documentation Index
 
-## Document type
-This document is an overview, reference, or index as noted below.
+This index is the stable navigation surface for the repository knowledge system. Identity is controlled by the registries, not by folder paths.
 
-# README
-
-## Purpose
-Navigation-only document pointing to the authoritative owner(s).
-
-## Cross-references
-- `DOCUMENTATION-MAP.md`
-- `../APEX-ARCHITECTURE.md`
-- `ARCHITECTURE.md`
-
-
-## Cross-references
-- `docs/ORCHESTRATOR.md`
-
-
-## System Contracts
-- `ai/orchestration/AI-ORCHESTRATION.md` — authoritative system contract.
-- `ai/reasoning/AI-CONSENSUS.md` — authoritative system contract.
-- `PLUGIN-SDK.md` — authoritative system contract.
-- `DOMAIN-MODEL.md` — authoritative system contract.
-- `reference/METRICS.md` — authoritative system contract.
-- `operations/HEALTHCHECKS.md` — authoritative system contract.
-
-- [TRADING-LIFECYCLE.md](./TRADING-LIFECYCLE.md) – Defines the complete state machine for trade discovery, risk, execution, and settlement.
-- [EXECUTION-LIFECYCLE.md](./EXECUTION-LIFECYCLE.md) – Specifies the order submission, signing, broadcasting, and confirmation state transitions.
-- [SECURITY-CONTRACTS.md](security/SECURITY-CONTRACTS.md) – Codifies secret handling, wallet signing, plugin sandboxing, emergency stop, and audit logging.
-- [PERFORMANCE-SLOS.md](performance/PERFORMANCE-SLOS.md) – Declares numeric latency, throughput, and budget SLOs for all major subsystems.
-- [STRATEGY-ROTATION.md](./STRATEGY-ROTATION.md) – Defines strategy scoring, rotation, fallback, and monitoring.
-- [CHAIN-ROTATION.md](./CHAIN-ROTATION.md) – Defines chain prioritization, allocation, and demotion rules.
-- [TOKEN-INTELLIGENCE.md](./TOKEN-INTELLIGENCE.md) – Defines token metadata scoring, ranking, caching, and refresh.
-- [ROUTE-OPTIMIZATION.md](./ROUTE-OPTIMIZATION.md) – Defines route simulation, scoring, and fallback selection.
-- [CONTRACT-MANAGEMENT.md](./CONTRACT-MANAGEMENT.md) – Defines contract registry, ABI versioning, and governance approval.
-- [PROVIDER-RESILIENCE.md](./PROVIDER-RESILIENCE.md) – Defines provider health checks, failover, and reinstatement.
-
-- [EVENT-BUS.md](./EVENT-BUS.md) – Defines the pub/sub backbone for agents, workers, and UI.
-- [WORKER-POOL.md](./WORKER-POOL.md) – Defines worker lifecycle, queue priority, and scaling policy.
-- [REGISTRY-SYSTEM.md](./REGISTRY-SYSTEM.md) – Defines the unified registry interface and governance rules.
-- [DASHBOARD-WORKSPACES.md](dashboard/DASHBOARD-WORKSPACES.md) – Defines workspace persistence, restore, and isolation.
-- [LEARNING-PIPELINE.md](./LEARNING-PIPELINE.md) – Defines the retraining, evaluation, and promotion pipeline.
-- [DECISION-ENGINE.md](./DECISION-ENGINE.md) – Defines the authoritative approval gate between recommendation and execution.
-- [POLICY-ENGINE.md](./POLICY-ENGINE.md) – Defines the central source of truth for configurable governance policies.
-- [APEX-KERNEL.md](./APEX-KERNEL.md) – Defines the runtime kernel for service registration, lifecycle, health, and plugin loading.
-- [SERVICE-REGISTRY.md](./SERVICE-REGISTRY.md) – Defines the canonical service registration and lookup mechanism.
-- [DEPENDENCY-GRAPH.md](./DEPENDENCY-GRAPH.md) – Defines the system-wide dependency graph for startup, upgrades, and debugging.
-- [EXPLAINABILITY.md](./EXPLAINABILITY.md) – Defines the mandatory trace format for decisions and actions.
-- [WORKFLOW-BUILDER.md](./WORKFLOW-BUILDER.md) – Defines event-driven user workflows and policy-checked automation.
-- [KNOWLEDGE-GRAPH.md](./KNOWLEDGE-GRAPH.md) – Defines the structured graph of protocols, tokens, strategies, chains, DEXs, risks, and agents.
-- [GOVERNANCE-EXPLAINABILITY.md](./GOVERNANCE-EXPLAINABILITY.md) – Centralizes audit lineage, rationale retention, and trace governance.
-- [LIVE-ARCHITECTURE-VIEWER.md](./LIVE-ARCHITECTURE-VIEWER.md) – Centralizes live topology visualization and runtime graph rendering.
-- [DATA-GOVERNANCE.md](./DATA-GOVERNANCE.md) – Centralizes normalization, validation, provenance, caching, and graph linking.
-- [DECISION-LEDGER.md](./DECISION-LEDGER.md) – Defines the immutable record of autonomous decisions and outcomes.
-- [CONTEXT-BUILDER.md](./CONTEXT-BUILDER.md) – Defines how structured context is assembled before AI requests.
-- [RUNTIME-KNOWLEDGE.md](./RUNTIME-KNOWLEDGE.md) – Defines the system’s live self-knowledge at runtime.
-- [SYSTEM-CAPABILITY-REGISTRY.md](./SYSTEM-CAPABILITY-REGISTRY.md) – Defines platform capability discovery independent of names.
-- [FEATURE-FLAGS.md](configuration/FEATURE-FLAGS.md) – Defines controlled rollout states for features.
-- [CONFIGURATION-PROFILES.md](configuration/CONFIGURATION-PROFILES.md) – Defines profile inheritance and overrides.
-- [AI-REASONING-POLICY.md](ai/reasoning/AI-REASONING-POLICY.md) – Defines when AI may advise versus when determinism is required.
-- [AI-CONTEXT-WINDOW-MANAGEMENT.md](ai/runtime/AI-CONTEXT-WINDOW-MANAGEMENT.md) – Defines context compression and token budgeting.
-- [MODEL-CAPABILITY-NEGOTIATION.md](./MODEL-CAPABILITY-NEGOTIATION.md) – Defines automatic AI capability detection and negotiation.
-- [EXECUTION-POLICIES.md](./EXECUTION-POLICIES.md) – Defines execution guardrails and stop conditions.
-- [ROUTE-SCORING-MODEL.md](./ROUTE-SCORING-MODEL.md) – Defines the mathematical route scoring model.
-- [MARKET-REGIME-DETECTION.md](./MARKET-REGIME-DETECTION.md) – Defines market regime classification.
-- [RESOURCE-MANAGER.md](./RESOURCE-MANAGER.md) – Defines lifecycle management for runtime resources.
-- [TASK-SCHEDULER.md](./TASK-SCHEDULER.md) – Defines priority, fair, adaptive task scheduling.
-- [SELF-HEALING.md](operations/SELF-HEALING.md) – Defines recovery actions for unhealthy components.
-- [APEX-OS.md](./APEX-OS.md) – Defines the constitution, principles, roadmap, and evolution strategy of the platform.
-- [SERVICE-LIFECYCLE.md](./SERVICE-LIFECYCLE.md) – Defines the canonical lifecycle for all services.
-- [PLUGIN-LIFECYCLE.md](./PLUGIN-LIFECYCLE.md) – Defines the canonical lifecycle for all plugins.
-- [WORKSPACE-MANAGER.md](./WORKSPACE-MANAGER.md) – Defines workspace ownership, layout, settings, and isolation.
-- [AI-TOOLS.md](ai/tools/AI-TOOLS.md) – Defines the tool surface available to AI agents.
-- [AI-PLANNER.md](ai/planning/AI-PLANNER.md) – Defines the planning agent for decomposition and sequencing.
-- [AI-REFLECTION.md](ai/reasoning/AI-REFLECTION.md) – Defines AI self-evaluation and refinement.
-- [AI-KNOWLEDGE-INDEX.md](./AI-KNOWLEDGE-INDEX.md) – Defines retrieval and ranking over the knowledge graph.
-- [TRADE-EXPLAINER.md](./TRADE-EXPLAINER.md) – Defines human-readable trade explanations.
-- [MARKET-SESSION.md](./MARKET-SESSION.md) – Defines market condition labels for strategy selection.
-- [OPPORTUNITY-LIFECYCLE.md](./OPPORTUNITY-LIFECYCLE.md) – Defines the lifecycle from detection to archival.
-- [CONTRACT-REGISTRY.md](./CONTRACT-REGISTRY.md) – Defines the canonical registry of deployed contracts, versions, ABIs, and addresses.
-- [RPC-MANAGER.md](./RPC-MANAGER.md) – Defines provider pools, health, rotation, latency, failover, and load balancing.
-- [CACHE-MANAGER.md](./CACHE-MANAGER.md) – Defines cache ownership, invalidation, TTL, and compression policies.
-- [UPDATE-MANAGER.md](./UPDATE-MANAGER.md) – Defines application, plugin, prompt, and model update lifecycle.
-- [DIAGNOSTICS.md](operations/DIAGNOSTICS.md) – Defines support bundle generation and troubleshooting output.
-- [BOOTSTRAP-SEQUENCE.md](./BOOTSTRAP-SEQUENCE.md) – Defines deterministic platform startup order.
-- [EVENT-CATALOG.md](reference/EVENT-CATALOG.md) – Defines the canonical registry of platform events and payloads.
-- [AI-GATEWAY.md](ai/runtime/AI-GATEWAY.md) – Defines provider-agnostic AI routing and capability normalization.
-- [AI-CONSENSUS.md](ai/reasoning/AI-CONSENSUS.md) – Defines multi-agent consensus and voting policy.
-- [AI-MEMORY-SYSTEM.md](ai/memory/AI-MEMORY-SYSTEM.md) – Defines the layered AI memory model and retention rules.
-- [DECISION-LOG.md](./DECISION-LOG.md) – Defines the operational decision log and replay-friendly narratives.
-## Overview rules
-- Describe purpose, prerequisites, and quick start for Windows users.
-- Describe what the bot does and does not do.
-
-## Final rules
-- Define quick start, prerequisites, and scope for Windows users.
-- Define what the bot does and does not do.
-
-## Canonical ownership
-This document defers to the canonical owners for implementation, policy, and schema details.
+| Folder | Purpose |
+| --- | --- |
+| [docs/adr](./adr/README.md) | Durable architecture decisions with stable ADR numbering. |
+| [docs/generated](./generated/README.md) | Generated documents intentionally retained as non-canonical references. |
+| [docs/generated/ai-orchestration](./generated/ai-orchestration/README.md) | Generated AI orchestration schema shards retained as non-canonical references. |
+| [docs/historical](./historical/README.md) | Archived or superseded documents preserved for lineage and conflict resolution. |
+| [docs/product-specification](./product-specification/README.md) | Software-system specification for the Apex Windows arbitrage application. |
+| [docs/product-specification/ai](./product-specification/ai/README.md) | Product AI runtime, memory, planning, providers, tools, reasoning, safety, and cost behavior. |
+| [docs/product-specification/architecture](./product-specification/architecture/README.md) | System boundaries, kernel, structure, and cross-system architecture. |
+| [docs/product-specification/configuration](./product-specification/configuration/README.md) | Configuration profiles, feature flags, capability registries, and config reference behavior. |
+| [docs/product-specification/dashboard](./product-specification/dashboard/README.md) | Dashboard runtime, layout, widgets, and workspace behavior. |
+| [docs/product-specification/data](./product-specification/data/README.md) | Database, state, storage, cache, data governance, and knowledge graph behavior. |
+| [docs/product-specification/deployment](./product-specification/deployment/README.md) | Windows app deployment, packaging, signing, versioning, install/update behavior. |
+| [docs/product-specification/execution](./product-specification/execution/README.md) | Trading, execution, risk, orders, wallets, portfolios, and strategy behavior. |
+| [docs/product-specification/interfaces](./product-specification/interfaces/README.md) | APIs, IPC, events, provider adapters, message catalogs, and contracts. |
+| [docs/product-specification/market](./product-specification/market/README.md) | Market data, chain/DEX/token/oracle registries, routing, liquidity, gas, MEV, opportunities. |
+| [docs/product-specification/operations](./product-specification/operations/README.md) | Runtime operations, monitoring, diagnostics, recovery, failures, health, and troubleshooting. |
+| [docs/product-specification/performance](./product-specification/performance/README.md) | Performance budgets, SLOs, capacity, threading, timing, and resource targets. |
+| [docs/product-specification/plugins](./product-specification/plugins/README.md) | Plugin SDK, lifecycle, sandbox, marketplace, and app-builder plugin behavior. |
+| [docs/product-specification/reference](./product-specification/reference/README.md) | Product reference material, roadmaps, changelog, glossary, and limitations. |
+| [docs/product-specification/runtime](./product-specification/runtime/README.md) | Runtime lifecycle, orchestration, services, workers, scheduling, and platform internals. |
+| [docs/product-specification/security](./product-specification/security/README.md) | Security contracts, permissions, secrets, trust boundaries, and signing/security behavior. |
+| [docs/product-specification/state-machines](./product-specification/state-machines/README.md) | Product state machines and state-machine indexes. |
+| [docs/product-specification/testing](./product-specification/testing/README.md) | Product testing strategy, test registries, backtesting, and local validation behavior. |
+| [docs/product-specification/ui](./product-specification/ui/README.md) | Design system, UX guidelines, user flows, user guide, and UI components. |
+| [docs/product-specification/windows](./product-specification/windows/README.md) | Windows desktop, service, network, notification, security integration, and platform behavior. |
+| [docs/repository-operating-model](./repository-operating-model/README.md) | How humans and AI agents govern and maintain repository knowledge. |
+| [docs/repository-operating-model/agent-system](./repository-operating-model/agent-system/README.md) | Rules and guidance for repository-facing coding and documentation agents. |
+| [docs/repository-operating-model/agent-system/agent-profiles](./repository-operating-model/agent-system/agent-profiles/README.md) | Agent-specific guidance derived from the root agent contract. |
+| [docs/repository-operating-model/contribution](./repository-operating-model/contribution/README.md) | Contributor-facing repository guidance. |
+| [docs/repository-operating-model/documentation-lifecycle](./repository-operating-model/documentation-lifecycle/README.md) | Lifecycle, index, and review workflow for durable documentation. |
+| [docs/repository-operating-model/governance](./repository-operating-model/governance/README.md) | Repository-level governance and source-of-truth conventions. |
+| [docs/repository-operating-model/registries](./repository-operating-model/registries/README.md) | Canonical repository knowledge registries. |
+| [docs/repository-operating-model/standards](./repository-operating-model/standards/README.md) | Repository standards for canonical sources, dependencies, and contributions. |
+| [docs/repository-operating-model/traceability](./repository-operating-model/traceability/README.md) | Document relationships, cross-reference indexes, and ownership matrices. |
+| [docs/repository-operating-model/validation](./repository-operating-model/validation/README.md) | Local-first validation expectations and quality gates. |
+| [docs/repository-operating-model/workflows](./repository-operating-model/workflows/README.md) | Durable repository workflows executed locally by contributors or agents. |

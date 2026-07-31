@@ -1,13 +1,34 @@
 ---
-type: SPECIFICATION
+metadata_schema_version: 1.0
+document_id: DOC-0003
+title: REBUILD-SYSTEM-SPECIFICATION
+plane: Repository Operating Model
+domain: Governance
+class: Specification
+authority: Canonical
+status: Active
 owner: Runtime Team
-status: Canonical
 version: 4.0.0
-last_updated: 2026-07-31
-purpose: Defines the repository knowledge architecture for an AI-agent-ready, docs-governed engineering repository, extending the two-plane model with stable document identity, domain classification, authority separation, canonical registries, and first-class traceability so every document can be identified, related, validated, and safely reorganized.
-scope: Repository knowledge model, repository operating model, product specification plane, document identity, concept registry, document registry, traceability, validator design, repo hygiene, migration planning, and future rebuild sequencing.
-audience: AI agents, maintainers, repository architects, automation engineers, and contributors responsible for rebuilding or governing the repository.
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
+related_concepts:
+  - CONCEPT-0003
+dependencies:
+  - DOC-0004
+consumers:
+  - DOC-0005
+  - DOC-0049
+  - DOC-0059
+validator_coverage: []
+supersedes:
+  - DOC-0013
+  - DOC-0014
+  - DOC-0015
+superseded_by: []
+last_updated: 2026-07-31
+type: SPECIFICATION
+purpose: "Defines the repository knowledge architecture for an AI-agent-ready, docs-governed engineering repository, extending the two-plane model with stable document identity, domain classification, authority separation, canonical registries, and first-class traceability so every document can be identified, related, validated, and safely reorganized."
+scope: "Repository knowledge model, repository operating model, product specification plane, document identity, concept registry, document registry, traceability, validator design, repo hygiene, migration planning, and future rebuild sequencing."
+audience: "AI agents, maintainers, repository architects, automation engineers, and contributors responsible for rebuilding or governing the repository."
 ---
 
 # REBUILD-SYSTEM-SPECIFICATION
@@ -73,7 +94,7 @@ The repository intentionally excludes:
 
 All validation and quality gates are executed explicitly by contributors before committing.
 
-This model is defined in `REPOSITORY-EXECUTION-MODEL.md`.
+This model is defined in `./REPOSITORY-EXECUTION-MODEL.md`.
 
 ## The three layers of meaning
 

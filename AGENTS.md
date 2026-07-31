@@ -1,3 +1,55 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0001
+title: AGENTS
+plane: Repository Operating Model
+domain: Agent System
+class: Specification
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: AGENTS.md
+related_concepts:
+  - CONCEPT-0001
+dependencies:
+  - DOC-0004
+consumers:
+  - DOC-0005
+  - DOC-0017
+  - DOC-0020
+  - DOC-0021
+  - DOC-0022
+  - DOC-0023
+  - DOC-0024
+  - DOC-0025
+  - DOC-0026
+  - DOC-0027
+  - DOC-0028
+  - DOC-0029
+  - DOC-0030
+  - DOC-0031
+  - DOC-0032
+  - DOC-0033
+  - DOC-0034
+  - DOC-0035
+  - DOC-0036
+  - DOC-0037
+  - DOC-0038
+  - DOC-0039
+  - DOC-0040
+  - DOC-0041
+  - DOC-0042
+  - DOC-0043
+  - DOC-0045
+  - DOC-0049
+  - DOC-0059
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-31
+---
+
 # AGENTS.md
 
 ## Purpose
@@ -194,7 +246,7 @@ The repository intentionally excludes:
 
 All validation and quality gates are executed explicitly by contributors before committing.
 
-See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
+See `./REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
 
 ## Temporary Execution Output Policy
 

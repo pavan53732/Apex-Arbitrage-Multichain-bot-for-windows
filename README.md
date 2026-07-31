@@ -1,55 +1,74 @@
 ---
-type: OVERVIEW
+metadata_schema_version: 1.0
+document_id: DOC-0005
+title: Repository README
+plane: Repository Operating Model
+domain: Governance
+class: Index
+authority: Canonical
+status: Active
 owner: Runtime Team
-status: Canonical
 version: 1.0.0
+canonical_source: README.md
+related_concepts:
+  - CONCEPT-0005
+dependencies:
+  - DOC-0001
+  - DOC-0002
+  - DOC-0003
+  - DOC-0004
+  - DOC-0006
+  - DOC-0007
+  - DOC-0008
+  - DOC-0058
+  - DOC-0079
+  - DOC-0103
+  - DOC-0227
+  - DOC-0266
+  - DOC-0289
+  - DOC-0298
+  - DOC-0338
+consumers:
+  - DOC-0049
+  - DOC-0059
+  - DOC-0100
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-29
+type: OVERVIEW
 purpose: Readme documentation.
 scope: Reference documentation.
-last_updated: 2026-07-29
-canonical_source: docs/README.md if filename.startswith('docs/') else README.md
 ---
 
-# Repository Agent Gates
+# Repository README
 
-This repository uses root-level gate files to tell each coding assistant which canonical documents to read before making changes.
+This repository uses a two-plane documentation knowledge model. The root is intentionally minimal and contains only repository-level control and entry files.
 
-## First read
-- [AGENTS.md](./AGENTS.md) for the general gate.
-- [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for system boundaries.
-- [docs/AI-PIPELINE.md](./docs/AI-PIPELINE.md) for AI behavior.
-- [docs/RUNTIME-OPERATIONS.md](./docs/RUNTIME-OPERATIONS.md) for runtime behavior.
-- [docs/TRADING-LIFECYCLE.md](./docs/TRADING-LIFECYCLE.md) and [docs/EXECUTION-LIFECYCLE.md](./docs/EXECUTION-LIFECYCLE.md) for trade and execution behavior.
-- [docs/DATABASE-SCHEMA.md](./docs/DATABASE-SCHEMA.md) for persistence structure.
-- [docs/SECURITY-CONTRACTS.md](./docs/SECURITY-CONTRACTS.md) for security rules.
+## Canonical root controls
 
-## Assistant-specific gates
-- [CLAUDE.md](./CLAUDE.md)
-- [GEMINI.md](./GEMINI.md)
-- [OPENCODE.md](./OPENCODE.md)
-- [KILO-CODE.md](./KILO-CODE.md)
-- [CLINE.md](./CLINE.md)
-- [ANTIGRAVITY.md](./ANTIGRAVITY.md)
-- [AIDER.md](./AIDER.md)
-- [CODEBUFF.md](./CODEBUFF.md)
-- [COPILOT.md](./COPILOT.md)
-- [CURSOR.md](./CURSOR.md)
-- [QODO.md](./QODO.md)
-- [RAYCAST.md](./RAYCAST.md)
-- [ROO-CODE.md](./ROO-CODE.md)
-- [TABNINE.md](./TABNINE.md)
-- [WARP.md](./WARP.md)
-- [WINDSURF.md](./WINDSURF.md)
-- [ZED.md](./ZED.md)
-- [QWEN.md](./QWEN.md)
-- [OLLAMA.md](./OLLAMA.md)
-- [LLAMA-CPP.md](./LLAMA-CPP.md)
-- [GITHUB-COPILOT-CLI.md](./GITHUB-COPILOT-CLI.md)
-- [GOOGLE-CODE-ASSISTANT.md](./GOOGLE-CODE-ASSISTANT.md)
-- [PERPLEXITY.md](./PERPLEXITY.md)
-- [CHATGPT.md](./CHATGPT.md)
+- [AGENTS](./AGENTS.md) — agent operating contract.
+- [Agent Rules](./AGENTS_RULES.md) — detailed repository agent rules.
+- [Repository Knowledge Model](./REBUILD-SYSTEM-SPECIFICATION.md) — canonical knowledge architecture.
+- [Repository Execution Model](./REPOSITORY-EXECUTION-MODEL.md) — local-first/no-CI execution policy.
 
-## Validation
-Run `scripts/validate_markdown_refs.sh` before committing documentation changes to catch broken local markdown references early.
+## Documentation entry points
+
+- [Documentation Index](./docs/README.md)
+- [Concept Registry](./docs/repository-operating-model/registries/CONCEPT-REGISTRY.md)
+- [Document Registry](./docs/repository-operating-model/registries/DOCUMENT-REGISTRY.md)
+- [Traceability Registry](./docs/repository-operating-model/registries/TRACEABILITY-REGISTRY.md)
+
+## First product-specification reads
+
+- [Architecture](./docs/product-specification/architecture/architecture.md)
+- [AI Pipeline](./docs/product-specification/ai/ai-pipeline.md)
+- [Runtime Operations](./docs/product-specification/operations/runtime-operations.md)
+- [Trading Lifecycle](./docs/product-specification/execution/trading-lifecycle.md)
+- [Execution Lifecycle](./docs/product-specification/execution/execution-lifecycle.md)
+- [Database Schema](./docs/product-specification/data/database-schema.md)
+- [Security Contracts](./docs/product-specification/security/security-contracts.md)
 
 ## Rule
-If a behavior is not explicit in the authoritative docs, the assistant should stop and ask rather than guess.
+
+If behavior is not explicit in a canonical owner document, stop and clarify rather than inventing behavior. All validation is local-first; this repository intentionally contains no GitHub Actions or CI/CD automation.

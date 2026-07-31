@@ -1,0 +1,64 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0223
+title: Code Signing
+plane: Product Specification
+domain: Deployment
+class: Reference
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: docs/product-specification/deployment/code-signing.md
+related_concepts:
+  - CONCEPT-0223
+dependencies: []
+consumers:
+  - DOC-0049
+  - DOC-0059
+  - DOC-0220
+  - DOC-0222
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-29
+type: REFERENCE
+purpose: Code Signing documentation.
+scope: Reference documentation.
+---
+
+# Code Signing
+
+## Version
+**Version:** 0.1.0 | **Status:** Draft | **Last Updated:** 2026-07-27 | **Owner:** DevOps Team
+
+## Purpose
+Defines code signing requirements for the Apex platform — signing binaries, plugin archives, configuration files, and release artifacts.
+
+## Scope
+All release builds published through the build pipeline must be signed. Developer builds and local testing may skip signing.
+
+## Signing Requirements
+
+| Artifact | Signing Method | Key Type | Verification |
+|----------|---------------|----------|--------------|
+| Windows executable (.exe) | Authenticode (signtool) | EV Code Signing Certificate | Windows SmartScreen |
+| Plugin archive (.aplx) | Ed25519 signature | Developer key pair | Plugin store verification |
+| Configuration files | SHA-256 hash | N/A (integrity only) | Checksum comparison |
+| Release artifacts (.zip) | GPG signature | Release key | GPG verification |
+| Container images | Cosign | OIDC-based key | Container registry |
+
+## Verification
+- All signed artifacts are verified before distribution.
+- Failed verification blocks the release pipeline.
+- Expired certificates trigger an alert 30 days before expiration.
+
+## Cross-References
+- **APP-BUILDER-WORKFLOW.md** — Build pipeline.
+- **SECURITY.md** — Security policies.
+- **RELEASE-PROCESS.md** (future) — Release management. Not yet authored; tracked as a known forward reference, not a broken link, per the Repository Canonicality Repair's identifier-normalization remediation.
+
+## Version History
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 0.1.0 | 2026-07-27 | Initial spec | DevOps Team |

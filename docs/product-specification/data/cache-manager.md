@@ -1,0 +1,81 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0265
+title: Cache Manager
+plane: Product Specification
+domain: Data
+class: Specification
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: docs/product-specification/data/cache-manager.md
+related_concepts:
+  - CONCEPT-0265
+dependencies:
+  - DOC-0078
+  - DOC-0079
+consumers:
+  - DOC-0034
+  - DOC-0049
+  - DOC-0059
+  - DOC-0269
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-29
+type: CONTRACT
+purpose: "Defines cache management, eviction policies, and cache lifecycle."
+scope: Caching for runtime components.
+---
+
+# Cache Manager
+
+## Document type
+Document type: [CONTRACT]
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
+## Purpose
+Authoritative owner for cache manager.
+
+## Scope
+Cross-cutting platform governance.
+
+## Responsibilities
+Define ownership, contracts, lifecycle, validation, and cross-references.
+
+## Cross-references
+- `../architecture/apex-os.md`
+- `../architecture/architecture.md`
+
+## Operational Contract
+Defines cache ownership, TTL, invalidation, compression, and recovery for price, pool, ABI, token, AI, and RPC caches.
+
+## Example
+A stale price cache entry is invalidated after a new market tick arrives.
+
+## Cache contract
+- Cache keys must be deterministic and namespaced by domain, chain, provider, and version.
+- Invalidation occurs on chain updates, provider changes, schema changes, and TTL expiry.
+- Eviction must prefer stale, low-value, or least-recently-used entries under pressure.
+- Consistency checks must fail closed when cache freshness is uncertain.
+
+## Cache limits
+- Must define TTL, eviction, and freshness windows by domain.
+
+## Required details
+- Define TTL, eviction, and freshness values.
+
+## Cache rules
+- Define TTL, eviction, and freshness by data domain.
+- Define cache invalidation on chain, provider, and schema changes.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

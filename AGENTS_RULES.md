@@ -1,3 +1,30 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0002
+title: Agent Rules
+plane: Repository Operating Model
+domain: Agent System
+class: Policy
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: AGENTS_RULES.md
+related_concepts:
+  - CONCEPT-0002
+dependencies:
+  - DOC-0004
+consumers:
+  - DOC-0005
+  - DOC-0049
+  - DOC-0059
+validator_coverage: []
+supersedes:
+  - DOC-0044
+superseded_by: []
+last_updated: 2026-07-31
+---
+
 # Agent Rules
 
 ## Repository Rules
@@ -18,7 +45,7 @@
 | **No Repository Automation** | Do not introduce automated workflow engines that execute repository tasks remotely. |
 | **Local First** | Validators, documentation tools, and helper utilities execute locally. |
 
-See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
+See `./REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
 
 ## AI Output Rules
 
@@ -47,7 +74,7 @@ See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
 
 
 
-See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
+See `./REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
 
 
 ## Development Rules
