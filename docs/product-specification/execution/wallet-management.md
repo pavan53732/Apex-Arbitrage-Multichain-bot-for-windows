@@ -45,7 +45,7 @@ Owns wallet discovery, creation, import, unlock, lock, rotation, permissions, an
 - `../security/security.md`
 - `../security/permission-model.md`
 - `./transaction-lifecycle.md`
-- `../market/token-registry.md`
+- `../market/tokens/token-registry.md`
 
 ## Operational Contract
 Defines wallet inventory, labeling, address hygiene, funding status, and authorization boundaries.

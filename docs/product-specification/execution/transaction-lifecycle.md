@@ -48,7 +48,7 @@ Defines submission, confirmation, replacement, cancellation, and finality handli
 ## Cross-references
 - `./execution-engine.md`
 - `../data/database-schema.md`
-- `../market/gas-optimisation.md`
+- `../market/routing/gas-optimisation.md`
 - `./wallet-management.md`
 
 ## Required details

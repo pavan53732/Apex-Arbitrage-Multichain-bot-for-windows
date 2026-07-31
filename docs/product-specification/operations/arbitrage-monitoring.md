@@ -46,7 +46,7 @@ Defines monitoring for spread windows, execution latency, fill status, and profi
 
 ## Cross-references
 - `./monitoring/metrics.md`
-- `../market/opportunity-ranking.md`
+- `../market/opportunities/opportunity-ranking.md`
 - `../performance/performance-slos.md`
 - `../execution/decision-log.md`
 

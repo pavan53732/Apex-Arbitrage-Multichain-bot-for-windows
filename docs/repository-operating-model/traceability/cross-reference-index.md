@@ -251,37 +251,37 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0299 | [Transaction Lifecycle](../../product-specification/execution/transaction-lifecycle.md) | Owner | CONCEPT-0299 |  |  |
 | DOC-0300 | [Wallet Command Center](../../product-specification/execution/wallet-command-center.md) | Owner | CONCEPT-0300 |  |  |
 | DOC-0301 | [Wallet Management](../../product-specification/execution/wallet-management.md) | Owner | CONCEPT-0301 |  |  |
-| DOC-0302 | [Chain Integration](../../product-specification/market/chain-integration.md) | Owner | CONCEPT-0302 |  |  |
-| DOC-0303 | [DEX Integration](../../product-specification/market/dex-integration.md) | Owner | CONCEPT-0303 |  |  |
-| DOC-0304 | [Routing Engine](../../product-specification/market/routing-engine.md) | Owner | CONCEPT-0304 |  |  |
-| DOC-0305 | [RPC Manager](../../product-specification/market/rpc-manager.md) | Owner | CONCEPT-0305 |  |  |
-| DOC-0306 | [Chain Registry](../../product-specification/market/chain-registry.md) | Owner | CONCEPT-0306 |  |  |
-| DOC-0307 | [DEX Registry](../../product-specification/market/dex-registry.md) | Owner | CONCEPT-0307 |  |  |
-| DOC-0308 | [Oracle Registry](../../product-specification/market/oracle-registry.md) | Owner | CONCEPT-0308 |  |  |
-| DOC-0309 | [Token Registry](../../product-specification/market/token-registry.md) | Owner | CONCEPT-0309 |  |  |
+| DOC-0302 | [Chain Integration](../../product-specification/market/chains/chain-integration.md) | Owner | CONCEPT-0302 |  | DOC-0410 |
+| DOC-0303 | [DEX Integration](../../product-specification/market/dex/dex-integration.md) | Owner | CONCEPT-0303 |  | DOC-0413 |
+| DOC-0304 | [Routing Engine](../../product-specification/market/routing/routing-engine.md) | Owner | CONCEPT-0304 |  | DOC-0415 |
+| DOC-0305 | [RPC Manager](../../product-specification/market/connectivity/rpc-manager.md) | Owner | CONCEPT-0305 |  | DOC-0411 |
+| DOC-0306 | [Chain Registry](../../product-specification/market/chains/chain-registry.md) | Owner | CONCEPT-0306 |  |  |
+| DOC-0307 | [DEX Registry](../../product-specification/market/dex/dex-registry.md) | Owner | CONCEPT-0307 |  |  |
+| DOC-0308 | [Oracle Registry](../../product-specification/market/tokens/oracle-registry.md) | Owner | CONCEPT-0308 |  |  |
+| DOC-0309 | [Token Registry](../../product-specification/market/tokens/token-registry.md) | Owner | CONCEPT-0309 |  | DOC-0416 |
 | DOC-0310 | [Market README](../../product-specification/market/README.md) | Index | CONCEPT-0317 | DOC-0317 |  |
-| DOC-0311 | [Chain Command Center](../../product-specification/market/chain-command-center.md) | Owner | CONCEPT-0311 |  |  |
-| DOC-0312 | [Chain Intelligence](../../product-specification/market/chain-intelligence.md) | Owner | CONCEPT-0312 |  |  |
-| DOC-0313 | [Chain Rotation](../../product-specification/market/chain-rotation.md) | Owner | CONCEPT-0313 |  |  |
-| DOC-0314 | [DEX Intelligence](../../product-specification/market/dex-intelligence.md) | Owner | CONCEPT-0314 |  |  |
-| DOC-0315 | [Gas Optimisation](../../product-specification/market/gas-optimisation.md) | Owner | CONCEPT-0315 |  |  |
-| DOC-0316 | [Liquidity Analysis](../../product-specification/market/liquidity-analysis.md) | Owner | CONCEPT-0316 |  | DOC-0330 |
-| DOC-0317 | [Market Data](../../product-specification/market/market-data.md) | Owner | CONCEPT-0317 |  | DOC-0310 |
-| DOC-0318 | [Market Intelligence](../../product-specification/market/market-intelligence.md) | Owner | CONCEPT-0318 |  |  |
-| DOC-0319 | [Market Regime Detection](../../product-specification/market/market-regime-detection.md) | Owner | CONCEPT-0319 |  |  |
-| DOC-0320 | [Market Session](../../product-specification/market/market-session.md) | Owner | CONCEPT-0320 |  |  |
-| DOC-0321 | [MEV Protection Detail](../../product-specification/market/mev-protection-detail.md) | Reference | CONCEPT-0322 | DOC-0322 |  |
-| DOC-0322 | [MEV Protection](../../product-specification/market/mev-protection.md) | Owner | CONCEPT-0322 |  | DOC-0321 |
-| DOC-0323 | [Opportunity Detection](../../product-specification/market/opportunity-detection.md) | Owner | CONCEPT-0323 |  |  |
-| DOC-0324 | [Opportunity Lifecycle](../../product-specification/market/opportunity-lifecycle.md) | Owner | CONCEPT-0324 |  |  |
-| DOC-0325 | [Opportunity Ranking](../../product-specification/market/opportunity-ranking.md) | Owner | CONCEPT-0325 |  |  |
-| DOC-0326 | [Pair Discovery](../../product-specification/market/pair-discovery.md) | Owner | CONCEPT-0326 |  |  |
-| DOC-0327 | [Price Discovery](../../product-specification/market/price-discovery.md) | Owner | CONCEPT-0327 |  |  |
-| DOC-0328 | [Route Optimization](../../product-specification/market/route-optimization.md) | Owner | CONCEPT-0328 |  | DOC-0329 |
-| DOC-0329 | [Route Scoring Model](../../product-specification/market/route-scoring-model.md) | Reference | CONCEPT-0328 | DOC-0328 |  |
-| DOC-0330 | [Slippage Model](../../product-specification/market/slippage-model.md) | Reference | CONCEPT-0316 | DOC-0316 |  |
-| DOC-0331 | [Token Discovery](../../product-specification/market/token-discovery.md) | Owner | CONCEPT-0331 |  |  |
-| DOC-0332 | [Token Intelligence](../../product-specification/market/token-intelligence.md) | Owner | CONCEPT-0332 |  |  |
+| DOC-0311 | [Chain Command Center](../../product-specification/market/chains/chain-command-center.md) | Owner | CONCEPT-0311 |  |  |
+| DOC-0312 | [Chain Intelligence](../../product-specification/market/chains/chain-intelligence.md) | Owner | CONCEPT-0312 |  |  |
+| DOC-0313 | [Chain Rotation](../../product-specification/market/chains/chain-rotation.md) | Owner | CONCEPT-0313 |  |  |
+| DOC-0314 | [DEX Intelligence](../../product-specification/market/dex/dex-intelligence.md) | Owner | CONCEPT-0314 |  |  |
+| DOC-0315 | [Gas Optimisation](../../product-specification/market/routing/gas-optimisation.md) | Owner | CONCEPT-0315 |  |  |
+| DOC-0316 | [Liquidity Analysis](../../product-specification/market/routing/liquidity-analysis.md) | Owner | CONCEPT-0316 |  | DOC-0330 |
+| DOC-0317 | [Market Data](../../product-specification/market/core/market-data.md) | Owner | CONCEPT-0317 |  | DOC-0310, DOC-0412 |
+| DOC-0318 | [Market Intelligence](../../product-specification/market/core/market-intelligence.md) | Owner | CONCEPT-0318 |  |  |
+| DOC-0319 | [Market Regime Detection](../../product-specification/market/core/market-regime-detection.md) | Owner | CONCEPT-0319 |  |  |
+| DOC-0320 | [Market Session](../../product-specification/market/core/market-session.md) | Owner | CONCEPT-0320 |  |  |
+| DOC-0321 | [MEV Protection Detail](../../product-specification/market/routing/mev-protection-detail.md) | Reference | CONCEPT-0322 | DOC-0322 |  |
+| DOC-0322 | [MEV Protection](../../product-specification/market/routing/mev-protection.md) | Owner | CONCEPT-0322 |  | DOC-0321 |
+| DOC-0323 | [Opportunity Detection](../../product-specification/market/opportunities/opportunity-detection.md) | Owner | CONCEPT-0323 |  | DOC-0414 |
+| DOC-0324 | [Opportunity Lifecycle](../../product-specification/market/opportunities/opportunity-lifecycle.md) | Owner | CONCEPT-0324 |  |  |
+| DOC-0325 | [Opportunity Ranking](../../product-specification/market/opportunities/opportunity-ranking.md) | Owner | CONCEPT-0325 |  |  |
+| DOC-0326 | [Pair Discovery](../../product-specification/market/tokens/pair-discovery.md) | Owner | CONCEPT-0326 |  |  |
+| DOC-0327 | [Price Discovery](../../product-specification/market/tokens/price-discovery.md) | Owner | CONCEPT-0327 |  |  |
+| DOC-0328 | [Route Optimization](../../product-specification/market/routing/route-optimization.md) | Owner | CONCEPT-0328 |  | DOC-0329 |
+| DOC-0329 | [Route Scoring Model](../../product-specification/market/routing/route-scoring-model.md) | Reference | CONCEPT-0328 | DOC-0328 |  |
+| DOC-0330 | [Slippage Model](../../product-specification/market/routing/slippage-model.md) | Reference | CONCEPT-0316 | DOC-0316 |  |
+| DOC-0331 | [Token Discovery](../../product-specification/market/tokens/token-discovery.md) | Owner | CONCEPT-0331 |  |  |
+| DOC-0332 | [Token Intelligence](../../product-specification/market/tokens/token-intelligence.md) | Owner | CONCEPT-0332 |  |  |
 | DOC-0333 | [Diagnostics](../../product-specification/operations/diagnostics.md) | Owner | CONCEPT-0333 |  | DOC-0398 |
 | DOC-0334 | [Error Handling and Logging](../../product-specification/operations/error-handling-and-logging.md) | Owner | CONCEPT-0334 |  | DOC-0362 |
 | DOC-0335 | [Health Checks](../../product-specification/operations/health-checks.md) | Owner | CONCEPT-0335 |  |  |
@@ -359,3 +359,10 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0407 | [AI Runtime README](../../product-specification/ai/runtime/README.md) | Index | CONCEPT-0103 | DOC-0103 |  |
 | DOC-0408 | [AI Safety README](../../product-specification/ai/safety/README.md) | Index | CONCEPT-0105 | DOC-0105 |  |
 | DOC-0409 | [AI Tools README](../../product-specification/ai/tools/README.md) | Index | CONCEPT-0107 | DOC-0107 |  |
+| DOC-0410 | [Market Chains README](../../product-specification/market/chains/README.md) | Index | CONCEPT-0302 | DOC-0302 |  |
+| DOC-0411 | [Market Connectivity README](../../product-specification/market/connectivity/README.md) | Index | CONCEPT-0305 | DOC-0305 |  |
+| DOC-0412 | [Market Core README](../../product-specification/market/core/README.md) | Index | CONCEPT-0317 | DOC-0317 |  |
+| DOC-0413 | [Market DEX README](../../product-specification/market/dex/README.md) | Index | CONCEPT-0303 | DOC-0303 |  |
+| DOC-0414 | [Market Opportunities README](../../product-specification/market/opportunities/README.md) | Index | CONCEPT-0323 | DOC-0323 |  |
+| DOC-0415 | [Market Routing README](../../product-specification/market/routing/README.md) | Index | CONCEPT-0304 | DOC-0304 |  |
+| DOC-0416 | [Market Tokens README](../../product-specification/market/tokens/README.md) | Index | CONCEPT-0309 | DOC-0309 |  |

@@ -67,10 +67,10 @@ For authoritative runtime flow, see `../runtime/orchestrator.md`.
 - `../ai/runtime/ai-pipeline.md`
 - `../operations/runtime-operations.md`
 - `../data/state-management.md`
-- `../market/chain-registry.md`
-- `../market/dex-registry.md`
-- `../market/token-registry.md`
-- `../market/oracle-registry.md`
+- `../market/chains/chain-registry.md`
+- `../market/dex/dex-registry.md`
+- `../market/tokens/token-registry.md`
+- `../market/tokens/oracle-registry.md`
 - `../dashboard/dashboard-layout.md`
 - `../dashboard/dashboard-widgets.md`
 - `../ui/ux-guidelines.md`
@@ -98,7 +98,7 @@ For dependency graph details, see `./dependency-graph.md`.
 For live architecture visualization, see `./live-architecture-viewer.md`.
 For data governance, see `../data/data-governance.md`.
 For constitution and philosophy, see `./apex-os.md`.
-For opportunity lifecycle, see `../market/opportunity-lifecycle.md`.
+For opportunity lifecycle, see `../market/opportunities/opportunity-lifecycle.md`.
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.
 

@@ -59,11 +59,11 @@ Owns canonical asset metadata, identifiers, decimals, display symbols, and chain
 - Unknown decimals block execution until verified.
 
 ## Cross-references
-- `../market/market-data.md`
+- `../market/core/market-data.md`
 - `./portfolio-management.md`
 - `./wallet-management.md`
 - `./strategies.md`
-- `../market/token-registry.md`
+- `../market/tokens/token-registry.md`
 
 ## Operational Contract
 Defines asset tracking, balances, custody, approvals, and transfer governance.

@@ -49,7 +49,7 @@ Defines the lifecycle of arbitrage windows from detection through expiry or exec
 
 ## Cross-references
 - `./trading-lifecycle.md`
-- `../market/opportunity-ranking.md`
+- `../market/opportunities/opportunity-ranking.md`
 - `./risk-engine.md`
 - `../runtime/orchestrator.md`
 

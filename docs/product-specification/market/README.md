@@ -9,7 +9,7 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/market/market-data.md
+canonical_source: docs/product-specification/market/core/market-data.md
 related_concepts:
   - CONCEPT-0317
 dependencies:
@@ -27,57 +27,28 @@ owned_domains: []
 
 ## Purpose and scope
 
-Market data, chain/DEX/token/oracle registries, routing, liquidity, gas, MEV, opportunities.
+Market data, intelligence, chain/DEX/token/oracle registries, routing, liquidity, gas, MEV, connectivity, and opportunity documentation.
 
-## Document classes expected
+## What belongs here
 
-- Index
-- Guide
-- Reference
-- Specification where this folder owns a canonical boundary
-- Registry only in registry folders
-- Historical only in historical folders
-- Generated only in generated folders
-
-## Canonical boundaries
-
-Market, chain, DEX, token, routing, and discovery specifications.
+Product market specifications and references. Trade execution and transaction submission belong under Execution.
 
 ## What does not belong here
 
-Trade execution state machines.
+Trading execution state machines, wallet management, and order submission behavior.
 
-## Documents
+## Subdomains
 
-| Document ID | Title | Class | Authority | Status |
-| --- | --- | --- | --- | --- |
-| DOC-0302 | [Chain Integration](./chain-integration.md) | Specification | Canonical | Active |
-| DOC-0303 | [DEX Integration](./dex-integration.md) | Specification | Canonical | Active |
-| DOC-0304 | [Routing Engine](./routing-engine.md) | Specification | Canonical | Active |
-| DOC-0305 | [RPC Manager](./rpc-manager.md) | Specification | Canonical | Active |
-| DOC-0306 | [Chain Registry](./chain-registry.md) | Registry | Canonical | Active |
-| DOC-0307 | [DEX Registry](./dex-registry.md) | Registry | Canonical | Active |
-| DOC-0308 | [Oracle Registry](./oracle-registry.md) | Registry | Canonical | Active |
-| DOC-0309 | [Token Registry](./token-registry.md) | Registry | Canonical | Active |
-| DOC-0311 | [Chain Command Center](./chain-command-center.md) | Reference | Canonical | Active |
-| DOC-0312 | [Chain Intelligence](./chain-intelligence.md) | Reference | Canonical | Active |
-| DOC-0313 | [Chain Rotation](./chain-rotation.md) | Reference | Canonical | Active |
-| DOC-0314 | [DEX Intelligence](./dex-intelligence.md) | Reference | Canonical | Active |
-| DOC-0315 | [Gas Optimisation](./gas-optimisation.md) | Reference | Canonical | Active |
-| DOC-0316 | [Liquidity Analysis](./liquidity-analysis.md) | Reference | Canonical | Active |
-| DOC-0317 | [Market Data](./market-data.md) | Reference | Canonical | Active |
-| DOC-0318 | [Market Intelligence](./market-intelligence.md) | Reference | Canonical | Active |
-| DOC-0319 | [Market Regime Detection](./market-regime-detection.md) | Reference | Canonical | Active |
-| DOC-0320 | [Market Session](./market-session.md) | Reference | Canonical | Active |
-| DOC-0321 | [MEV Protection Detail](./mev-protection-detail.md) | Reference | Canonical | Active |
-| DOC-0322 | [MEV Protection](./mev-protection.md) | Reference | Canonical | Active |
-| DOC-0323 | [Opportunity Detection](./opportunity-detection.md) | Reference | Canonical | Active |
-| DOC-0324 | [Opportunity Lifecycle](./opportunity-lifecycle.md) | Reference | Canonical | Active |
-| DOC-0325 | [Opportunity Ranking](./opportunity-ranking.md) | Reference | Canonical | Active |
-| DOC-0326 | [Pair Discovery](./pair-discovery.md) | Reference | Canonical | Active |
-| DOC-0327 | [Price Discovery](./price-discovery.md) | Reference | Canonical | Active |
-| DOC-0328 | [Route Optimization](./route-optimization.md) | Reference | Canonical | Active |
-| DOC-0329 | [Route Scoring Model](./route-scoring-model.md) | Reference | Canonical | Active |
-| DOC-0330 | [Slippage Model](./slippage-model.md) | Reference | Canonical | Active |
-| DOC-0331 | [Token Discovery](./token-discovery.md) | Reference | Canonical | Active |
-| DOC-0332 | [Token Intelligence](./token-intelligence.md) | Reference | Canonical | Active |
+| Subdomain | README | Canonical owner |
+| --- | --- | --- |
+| chains | [Market Chains README](chains/README.md) | [Chain Integration](./chains/chain-integration.md) |
+| connectivity | [Market Connectivity README](connectivity/README.md) | [Rpc Manager](./connectivity/rpc-manager.md) |
+| core | [Market Core README](core/README.md) | [Market Data](./core/market-data.md) |
+| dex | [Market DEX README](dex/README.md) | [Dex Integration](./dex/dex-integration.md) |
+| opportunities | [Market Opportunities README](opportunities/README.md) | [Opportunity Detection](./opportunities/opportunity-detection.md) |
+| routing | [Market Routing README](routing/README.md) | [Routing Engine](./routing/routing-engine.md) |
+| tokens | [Market Tokens README](tokens/README.md) | [Token Registry](./tokens/token-registry.md) |
+
+## Document creation rule
+
+Before adding a market document, identify the active market concept owner and place the document in the matching subdomain. Do not create duplicate market ownership documents.

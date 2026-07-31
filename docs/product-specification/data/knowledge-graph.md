@@ -55,8 +55,8 @@ Refresh source nodes, revalidate relations, and isolate stale subgraphs.
 
 ## Cross-references
 - `../ai/memory/ai-memory-system.md`
-- `../market/chain-intelligence.md`
-- `../market/market-intelligence.md`
+- `../market/chains/chain-intelligence.md`
+- `../market/core/market-intelligence.md`
 - `../interfaces/domain-model.md`
 
 For data governance, see `./data-governance.md`.

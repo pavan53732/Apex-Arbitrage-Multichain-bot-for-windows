@@ -45,7 +45,7 @@ Defines how arbitrage opportunities are coordinated across multiple exchanges or
 - Must specify partial fill handling and reconciliation rules.
 
 ## Cross-references
-- `../market/dex-integration.md`
+- `../market/dex/dex-integration.md`
 - `./execution-lifecycle.md`
 - `./trading-lifecycle.md`
 - `./risk-engine.md`

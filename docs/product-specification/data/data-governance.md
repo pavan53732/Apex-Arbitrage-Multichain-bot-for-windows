@@ -59,7 +59,7 @@ Invalid source, stale cache, broken provenance, incompatible schema.
 Reject invalid records, refresh from source, and replay lineage from durable storage.
 
 ## Cross-references
-- `../market/market-data.md`
+- `../market/core/market-data.md`
 - `./knowledge-graph.md`
 - `../ai/memory/ai-memory-system.md`
 - `./registry-system.md`

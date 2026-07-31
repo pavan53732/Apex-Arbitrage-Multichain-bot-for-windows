@@ -64,7 +64,7 @@ Must be secured with multi-sig and emergency pause controls.
 
 ## Cross-references
 - `../security/security-contracts.md`
-- `../market/chain-registry.md`
+- `../market/chains/chain-registry.md`
 - `../runtime/orchestrator.md`
 
 ## Governance Rules

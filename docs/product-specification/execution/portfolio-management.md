@@ -44,7 +44,7 @@ Aggregates balances and positions into portfolio value, allocation, and utilizat
 ## Cross-references
 - `./position-management.md`
 - `./wallet-management.md`
-- `../market/market-data.md`
+- `../market/core/market-data.md`
 
 ## Operational Contract
 Defines portfolio ownership, allocation, rebalancing, exposure limits, and wallet/strategy bindings.

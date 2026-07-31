@@ -41,8 +41,8 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | Registry schema version | 1.1 |
 | Registry model | Semantic relationships only |
 | Last regenerated | 2026-07-31 |
-| Relationship count | 620 |
-| Relationship distribution | Defines: 220, Depends On: 107, Indexes: 47, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
+| Relationship count | 634 |
+| Relationship distribution | Defines: 220, Depends On: 114, Indexes: 54, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
 
 ## Relationship Policy
 
@@ -673,3 +673,17 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0782 | DOC-0408 | Depends On | DOC-0105 | Active | AI Safety README depends on DOC-0105. |
 | TRACE-0783 | DOC-0409 | Indexes | CONCEPT-0107 | Active | AI Tools README indexes CONCEPT-0107. |
 | TRACE-0784 | DOC-0409 | Depends On | DOC-0107 | Active | AI Tools README depends on DOC-0107. |
+| TRACE-0785 | DOC-0410 | Indexes | CONCEPT-0302 | Active | Market Chains README indexes CONCEPT-0302. |
+| TRACE-0786 | DOC-0410 | Depends On | DOC-0302 | Active | Market Chains README depends on DOC-0302. |
+| TRACE-0787 | DOC-0411 | Indexes | CONCEPT-0305 | Active | Market Connectivity README indexes CONCEPT-0305. |
+| TRACE-0788 | DOC-0411 | Depends On | DOC-0305 | Active | Market Connectivity README depends on DOC-0305. |
+| TRACE-0789 | DOC-0412 | Indexes | CONCEPT-0317 | Active | Market Core README indexes CONCEPT-0317. |
+| TRACE-0790 | DOC-0412 | Depends On | DOC-0317 | Active | Market Core README depends on DOC-0317. |
+| TRACE-0791 | DOC-0413 | Indexes | CONCEPT-0303 | Active | Market DEX README indexes CONCEPT-0303. |
+| TRACE-0792 | DOC-0413 | Depends On | DOC-0303 | Active | Market DEX README depends on DOC-0303. |
+| TRACE-0793 | DOC-0414 | Indexes | CONCEPT-0323 | Active | Market Opportunities README indexes CONCEPT-0323. |
+| TRACE-0794 | DOC-0414 | Depends On | DOC-0323 | Active | Market Opportunities README depends on DOC-0323. |
+| TRACE-0795 | DOC-0415 | Indexes | CONCEPT-0304 | Active | Market Routing README indexes CONCEPT-0304. |
+| TRACE-0796 | DOC-0415 | Depends On | DOC-0304 | Active | Market Routing README depends on DOC-0304. |
+| TRACE-0797 | DOC-0416 | Indexes | CONCEPT-0309 | Active | Market Tokens README indexes CONCEPT-0309. |
+| TRACE-0798 | DOC-0416 | Depends On | DOC-0309 | Active | Market Tokens README depends on DOC-0309. |
