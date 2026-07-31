@@ -2,8 +2,8 @@
 metadata_schema_version: 1.0
 document_id: DOC-0233
 title: Test Case Registry
-plane: Product Specification
-domain: Testing
+plane: Repository Operating Model
+domain: Registries
 class: Registry
 authority: Reference
 status: Active
