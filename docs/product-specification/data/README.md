@@ -61,5 +61,5 @@ Market data behavior.
 | DOC-0273 | [Decision Ledger](./decision-ledger.md) | Reference | Canonical | Active |
 | DOC-0274 | [File Storage](./file-storage.md) | Reference | Canonical | Active |
 | DOC-0275 | [Knowledge Graph](./knowledge-graph.md) | Reference | Canonical | Active |
-| DOC-0276 | [Registry System](./registry-system.md) | Reference | Canonical | Active |
+| DOC-0276 | [Registry System](./registry-system.md) | Specification | Canonical | Active |
 | DOC-0277 | [Runtime Knowledge](./runtime-knowledge.md) | Reference | Canonical | Active |

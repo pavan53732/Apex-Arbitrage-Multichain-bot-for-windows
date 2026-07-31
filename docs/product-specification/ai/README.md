@@ -74,7 +74,7 @@ Repository AI/coding-agent instructions.
 | DOC-0124 | [AI Tools](./ai-tools.md) | Reference | Canonical | Active |
 | DOC-0125 | [Cloud AI Integration](./cloud-ai-integration.md) | Reference | Canonical | Active |
 | DOC-0126 | [Explainability](./explainability.md) | Reference | Canonical | Active |
-| DOC-0127 | [Governance Explainability](./governance-explainability.md) | Reference | Canonical | Active |
+| DOC-0127 | [Governance Explainability](./governance-explainability.md) | Specification | Canonical | Active |
 | DOC-0128 | [Learning Pipeline](./learning-pipeline.md) | Reference | Canonical | Active |
 | DOC-0129 | [Memory Lifecycle](./memory-lifecycle.md) | Reference | Canonical | Active |
 | DOC-0130 | [Model Capability Negotiation](./model-capability-negotiation.md) | Reference | Canonical | Active |

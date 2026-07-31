@@ -4,7 +4,7 @@ document_id: DOC-0127
 title: Governance Explainability
 plane: Product Specification
 domain: AI
-class: Reference
+class: Specification
 authority: Canonical
 status: Active
 owner: AI Team
@@ -21,7 +21,7 @@ last_updated: 2026-07-29
 concept_role: Owner
 owned_domains:
   - AI
-type: REFERENCE
+type: SPECIFICATION
 purpose: Governance Explainability documentation.
 scope: Reference documentation.
 ---

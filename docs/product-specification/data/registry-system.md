@@ -4,7 +4,7 @@ document_id: DOC-0276
 title: Registry System
 plane: Product Specification
 domain: Data
-class: Reference
+class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team

@@ -4,7 +4,7 @@ document_id: DOC-0347
 title: Provider Resilience
 plane: Product Specification
 domain: Operations
-class: Reference
+class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team

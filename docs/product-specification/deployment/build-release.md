@@ -4,7 +4,7 @@ document_id: DOC-0222
 title: Build Release
 plane: Product Specification
 domain: Deployment
-class: Reference
+class: Workflow
 authority: Canonical
 status: Active
 owner: UI Team

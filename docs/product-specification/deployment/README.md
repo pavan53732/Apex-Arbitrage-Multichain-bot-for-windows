@@ -53,7 +53,7 @@ Repository CI/CD workflow files.
 | --- | --- | --- | --- | --- |
 | DOC-0219 | [Windows Deployment](./windows-deployment.md) | Specification | Canonical | Active |
 | DOC-0221 | [App Builder Deployment Guide](./app-builder-deployment-guide.md) | Guide | Canonical | Active |
-| DOC-0222 | [Build Release](./build-release.md) | Reference | Canonical | Active |
+| DOC-0222 | [Build Release](./build-release.md) | Workflow | Canonical | Active |
 | DOC-0223 | [Code Signing](./code-signing.md) | Reference | Canonical | Active |
 | DOC-0224 | [Deployment](./deployment.md) | Reference | Canonical | Active |
 | DOC-0225 | [Versioning](./versioning.md) | Reference | Canonical | Active |

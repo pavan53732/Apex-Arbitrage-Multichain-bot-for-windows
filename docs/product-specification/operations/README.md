@@ -64,7 +64,7 @@ Repository task execution.
 | DOC-0344 | [Enterprise Operations](./enterprise-operations.md) | Reference | Canonical | Active |
 | DOC-0345 | [Notification Center](./notification-center.md) | Reference | Canonical | Active |
 | DOC-0346 | [Operations](./operations.md) | Reference | Canonical | Active |
-| DOC-0347 | [Provider Resilience](./provider-resilience.md) | Reference | Canonical | Active |
+| DOC-0347 | [Provider Resilience](./provider-resilience.md) | Specification | Canonical | Active |
 | DOC-0348 | [Queue Management](./queue-management.md) | Reference | Canonical | Active |
 | DOC-0349 | [Recovery And Failover](./recovery-and-failover.md) | Reference | Canonical | Active |
 | DOC-0350 | [Recovery Playbook](./recovery-playbook.md) | Reference | Canonical | Active |
