@@ -270,7 +270,7 @@ Each validator must produce a structured output:
       "code": "UNRESOLVED_REF",
       "file": "docs/domain/doc.md",
       "line": 42,
-      "message": "Reference to DOC-9999 not found in Document Registry",
+      "message": "Reference to DOC-999 not found in Document Registry",
       "severity": "error"
     }
   ],

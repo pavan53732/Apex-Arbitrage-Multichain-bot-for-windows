@@ -196,9 +196,9 @@ Validator-Pass: VAL-002
 
 ### Example 5: Reference Repair
 ```
-ref: repair broken DOC-0999 reference in DOC-0102 AI Orchestration
+ref: repair broken DOC-099 reference in DOC-0102 AI Orchestration
 
-Replace invalid DOC-0999 with correct DOC-0121 AI Planner
+Replace invalid DOC-099 with correct DOC-0121 AI Planner
 
 Validator-Pass: VAL-001
 ```

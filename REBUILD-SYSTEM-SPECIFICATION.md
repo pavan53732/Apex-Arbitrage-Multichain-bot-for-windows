@@ -509,7 +509,7 @@ A single active concept may be related to many documents. Guides, references, in
 
 Concept IDs remain stable even when earlier document-level concepts are consolidated. When a previously assigned Concept ID is no longer an active semantic concept, it is retained as a superseded alias with a `Canonical Concept ID` pointing to the active concept. This preserves ID history while restoring one active canonical owner per concept.
 
-Typed concept codes such as `AI-0102` are navigational aliases only. They do not replace stable `CONCEPT-0000` identifiers.
+Typed concept codes such as `AI-0102` are navigational aliases only. They do not replace stable `CONCEPT-999` identifiers.
 
 Registry files carry registry version metadata so future schema evolution can be audited without changing stable document or concept identity.
 

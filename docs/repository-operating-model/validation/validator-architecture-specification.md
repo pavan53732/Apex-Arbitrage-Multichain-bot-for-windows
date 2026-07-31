@@ -256,10 +256,10 @@ Every validator MUST emit this exact JSON structure:
       "file": "docs/domain/doc.md",
       "line": 42,
       "column": 10,
-      "message": "Reference to DOC-9999 not found in Document Registry",
+      "message": "Reference to DOC-999 not found in Document Registry",
       "severity": "ERROR",
       "rule": "All DOC-ID references must resolve to registered document",
-      "suggestion": "Add DOC-9999 to Document Registry or fix reference"
+      "suggestion": "Add DOC-999 to Document Registry or fix reference"
     }
   ],
   "warnings": []
