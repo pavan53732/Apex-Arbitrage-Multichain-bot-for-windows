@@ -13,7 +13,8 @@ canonical_source: docs/product-specification/operations/diagnostics.md
 related_concepts:
   - CONCEPT-0333
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0398
 validator_coverage: []
 supersedes: []
 superseded_by: []

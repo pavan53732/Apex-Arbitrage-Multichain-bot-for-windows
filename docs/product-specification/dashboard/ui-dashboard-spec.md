@@ -42,8 +42,8 @@ Executive overview, live market intelligence, AI intelligence center, strategy c
 
 ## Cross-references
 - `../interfaces/domain-model.md`
-- `../reference/metrics.md`
-- `../operations/healthchecks.md`
+- `../operations/monitoring/metrics.md`
+- `../operations/health-checks.md`
 - `../ai/ai-orchestration.md`
 
 ## Operational Contract

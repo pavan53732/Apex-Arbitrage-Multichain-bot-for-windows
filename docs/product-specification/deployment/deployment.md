@@ -58,7 +58,7 @@ Defines build pipeline, packaging, testing gates, release promotion, rollback ex
 
 ## Cross-references
 - `../windows/windows-desktop.md`
-- `./build-release-cicd.md`
+- `./build-release.md`
 - `../operations/runtime-operations.md`
 - `../security/security.md`
 

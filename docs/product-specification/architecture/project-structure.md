@@ -42,7 +42,7 @@ The implementation will use a multi-package structure for apps, packages, script
 ## Cross-references
 - `./architecture.md`
 - `./module-dependency.md`
-- `../deployment/build-release-cicd.md`
+- `../deployment/build-release.md`
 - `../deployment/versioning.md`
 
 ## Operational Contract

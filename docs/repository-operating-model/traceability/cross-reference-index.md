@@ -43,7 +43,7 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0009 | [Historical README](../../historical/README.md) | Index | CONCEPT-0003 | DOC-0003 |  |
 | DOC-0010 | [Repository Operating Model README](../README.md) | Index | CONCEPT-0003 | DOC-0003 |  |
 | DOC-0011 | [Governance README](../governance/README.md) | Index | CONCEPT-0003 | DOC-0003 |  |
-| DOC-0012 | [Governance](../governance/governance-overview.md) | Owner | CONCEPT-0012 |  |  |
+| DOC-0012 | [Governance Overview](../governance/governance-overview.md) | Owner | CONCEPT-0012 |  |  |
 | DOC-0013 | [Programme 3 Closure Orchestrator](../../historical/programme-3-closure-orchestrator.md) | Historical Reference | CONCEPT-0003 | DOC-0003 |  |
 | DOC-0014 | [Programme 3 Repair Planner](../../historical/programme-3-repair-planner.md) | Historical Reference | CONCEPT-0003 | DOC-0003 |  |
 | DOC-0015 | [Project Tree Complete](../../historical/project-tree-complete.md) | Historical Reference | CONCEPT-0003 | DOC-0003 |  |
@@ -202,7 +202,7 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0250 | [Plugin Marketplace](../../product-specification/plugins/plugin-marketplace.md) | Owner | CONCEPT-0250 |  |  |
 | DOC-0251 | [API Contracts](../../product-specification/interfaces/api-contracts.md) | Owner | CONCEPT-0251 |  | DOC-0257 |
 | DOC-0252 | [Domain Model](../../product-specification/interfaces/domain-model.md) | Owner | CONCEPT-0252 |  |  |
-| DOC-0253 | [Event Bus](../../product-specification/interfaces/event-bus.md) | Owner | CONCEPT-0253 |  | DOC-0258, DOC-0259, DOC-0363 |
+| DOC-0253 | [Event Bus](../../product-specification/interfaces/event-bus.md) | Owner | CONCEPT-0253 |  | DOC-0258, DOC-0259, DOC-0363, DOC-0397 |
 | DOC-0254 | [IPC Protocol](../../product-specification/interfaces/ipc-protocol.md) | Owner | CONCEPT-0254 |  | DOC-0264 |
 | DOC-0255 | [Interface Catalog](../../product-specification/interfaces/interface-catalog.md) | Owner | CONCEPT-0255 |  | DOC-0256 |
 | DOC-0256 | [Interfaces README](../../product-specification/interfaces/README.md) | Index | CONCEPT-0255 | DOC-0255 |  |
@@ -282,10 +282,10 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0330 | [Slippage Model](../../product-specification/market/slippage-model.md) | Reference | CONCEPT-0316 | DOC-0316 |  |
 | DOC-0331 | [Token Discovery](../../product-specification/market/token-discovery.md) | Owner | CONCEPT-0331 |  |  |
 | DOC-0332 | [Token Intelligence](../../product-specification/market/token-intelligence.md) | Owner | CONCEPT-0332 |  |  |
-| DOC-0333 | [Diagnostics](../../product-specification/operations/diagnostics.md) | Owner | CONCEPT-0333 |  |  |
+| DOC-0333 | [Diagnostics](../../product-specification/operations/diagnostics.md) | Owner | CONCEPT-0333 |  | DOC-0398 |
 | DOC-0334 | [Error Handling and Logging](../../product-specification/operations/error-handling-and-logging.md) | Owner | CONCEPT-0334 |  | DOC-0362 |
 | DOC-0335 | [Health Checks](../../product-specification/operations/health-checks.md) | Owner | CONCEPT-0335 |  |  |
-| DOC-0336 | [Monitoring Observability](../../product-specification/operations/monitoring-observability.md) | Owner | CONCEPT-0336 |  |  |
+| DOC-0336 | [Monitoring Observability](../../product-specification/operations/monitoring-observability.md) | Owner | CONCEPT-0336 |  | DOC-0399 |
 | DOC-0337 | [Recovery Coordination](../../product-specification/operations/recovery-coordination.md) | Owner | CONCEPT-0337 |  |  |
 | DOC-0338 | [Runtime Operations](../../product-specification/operations/runtime-operations.md) | Owner | CONCEPT-0338 |  | DOC-0342 |
 | DOC-0339 | [Error Catalog](../../product-specification/operations/error-catalog.md) | Owner | CONCEPT-0339 |  |  |
@@ -346,3 +346,6 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0394 | [Design System](../../product-specification/ui/design-system.md) | Owner | CONCEPT-0394 |  |  |
 | DOC-0395 | [Designer Protocols](../../product-specification/ui/designer-protocols.md) | Owner | CONCEPT-0395 |  |  |
 | DOC-0396 | [User Flows](../../product-specification/ui/user-flows.md) | Owner | CONCEPT-0396 |  |  |
+| DOC-0397 | [Events README](../../product-specification/interfaces/events/README.md) | Index | CONCEPT-0253 | DOC-0253 |  |
+| DOC-0398 | [Diagnostics README](../../product-specification/operations/diagnostics/README.md) | Index | CONCEPT-0333 | DOC-0333 |  |
+| DOC-0399 | [Monitoring README](../../product-specification/operations/monitoring/README.md) | Index | CONCEPT-0336 | DOC-0336 |  |

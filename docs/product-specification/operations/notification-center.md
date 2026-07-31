@@ -37,7 +37,7 @@ This document is an overview, reference, or index as noted below.
 Defines outbound notifications for desktop, Telegram, Discord, Slack, email, and webhooks.
 
 ## Cross-references
-- `./healthchecks.md`
+- `./health-checks.md`
 - `./runtime-operations.md`
 
 ## Operational Contract

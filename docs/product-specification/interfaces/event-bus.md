@@ -17,6 +17,7 @@ consumers:
   - DOC-0258
   - DOC-0259
   - DOC-0363
+  - DOC-0397
 validator_coverage: []
 supersedes: []
 superseded_by: []

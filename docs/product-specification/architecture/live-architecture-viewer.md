@@ -59,7 +59,7 @@ Refresh topology from kernel, requery registries, and fall back to cached graph.
 ## Cross-references
 - `./apex-kernel.md`
 - `./dependency-graph.md`
-- `../operations/healthchecks.md`
+- `../operations/health-checks.md`
 - `../dashboard/ui-dashboard-spec.md`
 
 ## Operational Contract

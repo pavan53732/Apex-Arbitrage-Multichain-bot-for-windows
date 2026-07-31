@@ -123,7 +123,7 @@ Trading-related contracts must include:
 - [`./ipc-protocol.md`](./ipc-protocol.md)
 - [`../architecture/module-dependency.md`](../architecture/module-dependency.md)
 - [`../data/state-management.md`](../data/state-management.md)
-- [`../operations/error-handling-logging.md`](../operations/error-handling-logging.md)
+- [`../operations/error-handling-and-logging.md`](../operations/error-handling-and-logging.md)
 
 ## Cross-references
 - `../deployment/versioning.md`

@@ -13,7 +13,8 @@ canonical_source: docs/product-specification/operations/monitoring-observability
 related_concepts:
   - CONCEPT-0336
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0399
 validator_coverage: []
 supersedes: []
 superseded_by: []

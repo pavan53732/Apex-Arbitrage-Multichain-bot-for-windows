@@ -43,7 +43,7 @@ Defines paper trading, replay, stress testing, and synthetic failure simulation.
 - Consumes strategy, execution, AI, market, and runtime snapshots.
 
 ## Shared simulation contract
-Simulation entities and accuracy metrics are defined by `../interfaces/domain-model.md` and `../reference/metrics.md`.
+Simulation entities and accuracy metrics are defined by `../interfaces/domain-model.md` and `../operations/monitoring/metrics.md`.
 Every simulation defines purpose, inputs, configuration, initial state, execution flow, expected outputs, validation criteria, success metrics, failure scenarios, and recovery behaviour.
 
 ## Determinism rules
@@ -297,10 +297,10 @@ Persist scenario ids, seeds, market snapshots, configuration hashes, code versio
 
 - `../interfaces/domain-model.md`
 
-- `../reference/metrics.md`
+- `../operations/monitoring/metrics.md`
 
 
-For canonical entities and performance tracking, see `../interfaces/domain-model.md` and `../reference/metrics.md`.
+For canonical entities and performance tracking, see `../interfaces/domain-model.md` and `../operations/monitoring/metrics.md`.
 
 
 ## Enterprise Contract – Simulation Engine

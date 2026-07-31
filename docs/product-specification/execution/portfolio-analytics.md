@@ -38,7 +38,7 @@ Defines ROI, win rate, profit distribution, drawdown, Sharpe ratio, and comparis
 
 ## Cross-references
 - `../interfaces/domain-model.md`
-- `../reference/metrics.md`
+- `../operations/monitoring/metrics.md`
 
 ## Operational Contract
 Defines portfolio metrics, performance attribution, risk views, and reporting outputs.

@@ -57,7 +57,7 @@ Refresh from kernel, registries, health probes, and event stream.
 
 ## Cross-references
 - `../architecture/apex-kernel.md`
-- `../operations/healthchecks.md`
+- `../operations/health-checks.md`
 - `../operations/monitoring-observability.md`
 - `../dashboard/dashboard-workspaces.md`
 

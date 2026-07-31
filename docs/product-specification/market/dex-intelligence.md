@@ -38,7 +38,7 @@ Defines DEX-level liquidity, TVL, fees, latency, pools, performance, and support
 
 ## Cross-references
 - `../interfaces/domain-model.md`
-- `../reference/metrics.md`
+- `../operations/monitoring/metrics.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

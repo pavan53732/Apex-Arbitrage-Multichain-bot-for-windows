@@ -3,7 +3,7 @@ metadata_schema_version: 1.0
 document_id: DOC-0362
 title: Error Codes
 plane: Product Specification
-domain: Reference
+domain: Operations
 class: Reference
 authority: Reference
 status: Active

@@ -41,8 +41,8 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | Registry schema version | 1.1 |
 | Registry model | Semantic relationships only |
 | Last regenerated | 2026-07-31 |
-| Relationship count | 594 |
-| Relationship distribution | Defines: 220, Depends On: 94, Indexes: 34, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
+| Relationship count | 600 |
+| Relationship distribution | Defines: 220, Depends On: 97, Indexes: 37, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
 
 ## Relationship Policy
 
@@ -647,3 +647,9 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0756 | DOC-0044 | Superseded By | DOC-0002 | Superseded | Document metadata superseded_by relationship. |
 | TRACE-0757 | DOC-0051 | Superseded By | DOC-0008 | Superseded | Document metadata superseded_by relationship. |
 | TRACE-0758 | DOC-0132 | Superseded By | DOC-0120 | Superseded | Document metadata superseded_by relationship. |
+| TRACE-0759 | DOC-0397 | Indexes | CONCEPT-0253 | Active | Events README indexes Event Bus concept. |
+| TRACE-0760 | DOC-0397 | Depends On | DOC-0253 | Active | Events README depends on Event Bus owner. |
+| TRACE-0761 | DOC-0398 | Indexes | CONCEPT-0333 | Active | Diagnostics README indexes Diagnostics concept. |
+| TRACE-0762 | DOC-0398 | Depends On | DOC-0333 | Active | Diagnostics README depends on Diagnostics owner. |
+| TRACE-0763 | DOC-0399 | Indexes | CONCEPT-0336 | Active | Monitoring README indexes Monitoring Observability concept. |
+| TRACE-0764 | DOC-0399 | Depends On | DOC-0336 | Active | Monitoring README depends on Monitoring Observability owner. |

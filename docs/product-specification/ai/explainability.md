@@ -58,7 +58,7 @@ Reject storage, request re-evaluation, or mark the decision as non-compliant.
 - `./ai-orchestration.md`
 - `../execution/decision-engine.md`
 - `./learning-pipeline.md`
-- `../reference/metrics.md`
+- `../operations/monitoring/metrics.md`
 
 For governance-grade trace compliance, see `./governance-explainability.md`.
 ## Operational Contract

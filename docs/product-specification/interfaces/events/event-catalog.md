@@ -3,7 +3,7 @@ metadata_schema_version: 1.0
 document_id: DOC-0363
 title: Event Catalog
 plane: Product Specification
-domain: Reference
+domain: Interfaces
 class: Reference
 authority: Reference
 status: Active

@@ -39,7 +39,7 @@ Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `../ui/user-guide.md`
-- `./troubleshooting.md`
+- `../operations/diagnostics/troubleshooting.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

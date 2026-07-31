@@ -81,7 +81,7 @@ Detected -> Classified -> Contained -> Restored -> Reconciled -> Released.
 - `./queue-management.md`
 - `../runtime/worker-architecture.md`
 - `./monitoring-observability.md`
-- `./error-handling-logging.md`
+- `./error-handling-and-logging.md`
 - `../../historical/traceability-matrix.md`
 
 ## Operational Contract

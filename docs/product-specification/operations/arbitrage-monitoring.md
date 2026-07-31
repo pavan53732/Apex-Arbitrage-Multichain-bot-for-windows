@@ -45,7 +45,7 @@ Defines monitoring for spread windows, execution latency, fill status, and profi
 - Must define success, partial success, failed opportunity, and expired window states.
 
 ## Cross-references
-- `../reference/metrics.md`
+- `./monitoring/metrics.md`
 - `../market/opportunity-ranking.md`
 - `../performance/performance-slos.md`
 - `../execution/decision-log.md`

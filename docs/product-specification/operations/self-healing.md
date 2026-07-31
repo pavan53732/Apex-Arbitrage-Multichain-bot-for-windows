@@ -54,7 +54,7 @@ Transient failure, repeated failure, unrecoverable failure.
 Restart worker, reconnect RPC, switch provider, reload cache, recover queue, notify operators.
 
 ## Cross-references
-- `./healthchecks.md`
+- `./health-checks.md`
 - `./provider-resilience.md`
 - `./recovery-and-failover.md`
 

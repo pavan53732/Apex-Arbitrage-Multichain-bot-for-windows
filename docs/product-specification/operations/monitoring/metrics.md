@@ -3,7 +3,7 @@ metadata_schema_version: 1.0
 document_id: DOC-0364
 title: Metrics
 plane: Product Specification
-domain: Reference
+domain: Operations
 class: Reference
 authority: Canonical
 status: Active
@@ -20,7 +20,7 @@ superseded_by: []
 last_updated: 2026-07-29
 concept_role: Owner
 owned_domains:
-  - Reference
+  - Operations
 type: REFERENCE
 purpose: Metrics documentation.
 scope: Reference documentation.

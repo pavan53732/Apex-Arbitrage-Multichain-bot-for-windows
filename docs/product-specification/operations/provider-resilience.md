@@ -64,7 +64,7 @@ If all providers fail, enter degraded mode and alert operations.
 ## Cross-references
 - `../ai/ai-provider-manager.md`
 - `../ai/ai-gateway.md`
-- `./healthchecks.md`
+- `./health-checks.md`
 - `../performance/performance-slos.md`
 
 ## Operational Contract

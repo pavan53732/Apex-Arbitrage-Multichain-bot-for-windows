@@ -11,11 +11,9 @@ owner: Runtime Team
 version: 1.0.0
 canonical_source: docs/product-specification/interfaces/event-bus.md
 related_concepts:
-  - CONCEPT-0302
-  - CONCEPT-0302
+  - CONCEPT-0253
 dependencies:
-  - DOC-0302
-  - DOC-0302
+  - DOC-0253
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -29,14 +27,34 @@ owned_domains: []
 
 ## Purpose and scope
 
+Event interface references, event catalogs, event flow descriptions, and event ownership indexes.
+
 ## What belongs here
+
+Event Bus references, event catalogs, event flow references, and event ownership material.
 
 ## What does not belong here
 
+Generic API, IPC, provider adapter, or product behavior documents that are not event-interface references.
+
 ## Expected document classes
+
+- Index
+- Reference
+- Specification when this folder owns a product behavior boundary
+- Guide when the document explains operational usage
 
 ## Canonical boundaries
 
+This folder indexes documents in its subdomain and defers behavioral authority to the canonical owner documents listed below.
+
 ## Documents
 
+| Document | Purpose |
+| --- | --- |
+| [Event Bus](../event-bus.md) | Canonical event bus behavior. |
+| [Event Catalog](./event-catalog.md) | Event catalog reference that defers to Event Bus. |
+
 ## Adjacent domains
+
+Adjacent domains may reference this folder, but they must not redefine the canonical behavior owned here.

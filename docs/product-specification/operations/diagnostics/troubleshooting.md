@@ -3,7 +3,7 @@ metadata_schema_version: 1.0
 document_id: DOC-0365
 title: Troubleshooting
 plane: Product Specification
-domain: Reference
+domain: Operations
 class: Reference
 authority: Canonical
 status: Active
@@ -20,7 +20,7 @@ superseded_by: []
 last_updated: 2026-07-29
 concept_role: Owner
 owned_domains:
-  - Reference
+  - Operations
 type: REFERENCE
 purpose: Troubleshooting documentation.
 scope: Reference documentation.
@@ -37,9 +37,9 @@ This document is an overview, reference, or index as noted below.
 Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
-- `../ui/user-guide.md`
-- `../operations/runtime-operations.md`
-- `../operations/monitoring-observability.md`
+- `../../ui/user-guide.md`
+- `../runtime-operations.md`
+- `../monitoring-observability.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

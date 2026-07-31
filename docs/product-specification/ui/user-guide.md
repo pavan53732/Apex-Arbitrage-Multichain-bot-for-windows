@@ -41,7 +41,7 @@ Provides operator-facing usage guidance for the application.
 
 ## Cross-references
 - `./user-flows.md`
-- `../reference/troubleshooting.md`
+- `../operations/diagnostics/troubleshooting.md`
 
 ## Governance Rules
 Defines how end users navigate features, interpret statuses, and follow safe operating procedures.
