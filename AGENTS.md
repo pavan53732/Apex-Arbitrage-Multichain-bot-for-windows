@@ -97,6 +97,7 @@ Before making changes, every agent must:
 6. Avoid committing generated artefacts.
 7. Keep root-level structure intentional and minimal.
 8. Do not create GitHub Actions workflows, CI/CD pipeline files, automation YAMLs, or repository automation unless explicitly requested.
+9. Before creating any new file, determine whether it represents permanent repository knowledge or temporary execution output. If it is temporary execution output, return it directly in the conversation instead of creating a file.
 
 ## Canonical source-of-truth rules
 
@@ -195,6 +196,46 @@ All validation and quality gates are executed explicitly by contributors before 
 
 See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
 
+## Temporary Execution Output Policy
+
+The repository is not a workspace for temporary AI outputs.
+
+Unless the user explicitly requests a permanent repository document, AI agents MUST NOT create temporary files during execution.
+
+This prohibition includes, but is not limited to:
+
+- AUDIT.md
+- REVIEW.md
+- REPORT.md
+- SUMMARY.md
+- ANALYSIS.md
+- FINDINGS.md
+- NOTES.md
+- PLAN.md
+- TODO.md
+- MIGRATION.md
+- IMPLEMENTATION-REPORT.md
+- COMPLETION-REPORT.md
+- STATUS.md
+- LOG.md
+- RESULT.md
+
+or equivalent markdown, text, JSON, HTML, CSV, XML or PDF artifacts.
+
+Temporary execution output belongs in the conversation.
+
+It does not belong in:
+
+- the repository
+- the workspace
+- the project root
+- temporary folders
+- docs/
+- generated/
+- reports/
+
+unless explicitly requested by the user.
+
 ## Generated artefact rule
 
 Generated outputs are non-canonical by default and should not be committed unless explicitly justified.
@@ -209,6 +250,10 @@ Examples include:
 - temporary reports
 - tool-generated summaries
 - CI/CD workflow files and repository automation unless explicitly approved
+
+Temporary execution files are prohibited even if they are not committed.
+
+Avoid creating temporary artifacts entirely unless the user explicitly requests them.
 
 ## Commit expectations
 

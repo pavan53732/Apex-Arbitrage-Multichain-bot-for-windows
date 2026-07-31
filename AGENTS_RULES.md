@@ -20,6 +20,22 @@
 
 See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
 
+## AI Output Rules
+
+| Rule | Description |
+|------|-------------|
+| **Chat-First Output** | Reviews, audits, reports, plans, summaries, findings, and analysis must be returned directly in the conversation unless the user explicitly requests a repository document. |
+| **No Temporary Markdown** | Do not create temporary .md files for execution output. |
+| **No Temporary JSON** | Do not create temporary JSON reports. |
+| **No Temporary HTML** | Do not create HTML reports. |
+| **No Temporary PDFs** | Do not create PDF reports. |
+| **No Temporary CSV** | Do not create CSV reports. |
+| **No Workspace Artifacts** | Do not generate temporary execution artifacts anywhere in the workspace. |
+| **Repository Contains Durable Knowledge Only** | The repository stores long-lived engineering knowledge only. |
+
+See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
+
+
 ## Development Rules
 
 | Rule | Description |

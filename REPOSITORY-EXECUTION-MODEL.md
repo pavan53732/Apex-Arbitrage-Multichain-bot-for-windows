@@ -149,6 +149,43 @@ No exception should be introduced casually.
 
 ## Relationship to other documents
 
+## Conversation is the Default Output Channel
+
+Unless explicitly instructed otherwise by the user:
+
+- all reviews
+- all audits
+- all summaries
+- all findings
+- all migration reports
+- all implementation reports
+- all validation reports
+- all completion reports
+
+must be returned directly in the conversation.
+
+AI agents must not create files merely to communicate execution results.
+
+## Workspace Hygiene
+
+AI agents must leave the workspace clean.
+
+Temporary communication artifacts must never be created.
+
+This includes:
+
+- markdown files
+- JSON files
+- HTML files
+- CSV files
+- TXT files
+- PDF files
+- XML files
+
+unless explicitly requested by the user.
+
+
+
 This document is referenced by:
 - AGENTS.md
 - AGENTS_RULES.md
