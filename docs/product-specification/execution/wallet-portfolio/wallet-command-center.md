@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/wallet-command-center.md
+canonical_source: docs/product-specification/execution/wallet-portfolio/wallet-command-center.md
 related_concepts:
   - CONCEPT-0300
 dependencies: []
@@ -37,8 +37,8 @@ This document is an overview, reference, or index as noted below.
 Defines wallet balances, approvals, positions, PnL, gas spent, assets, transaction history, allowance checking, and security alerts.
 
 ## Cross-references
-- `../interfaces/domain-model.md`
-- `../operations/health-checks.md`
+- `../../interfaces/domain-model.md`
+- `../../operations/health-checks.md`
 
 
 ## State Machine

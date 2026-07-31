@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/portfolio-management.md
+canonical_source: docs/product-specification/execution/wallet-portfolio/portfolio-management.md
 related_concepts:
   - CONCEPT-0293
 dependencies: []
@@ -44,7 +44,7 @@ Aggregates balances and positions into portfolio value, allocation, and utilizat
 ## Cross-references
 - `./position-management.md`
 - `./wallet-management.md`
-- `../market/core/market-data.md`
+- `../../market/core/market-data.md`
 
 ## Operational Contract
 Defines portfolio ownership, allocation, rebalancing, exposure limits, and wallet/strategy bindings.

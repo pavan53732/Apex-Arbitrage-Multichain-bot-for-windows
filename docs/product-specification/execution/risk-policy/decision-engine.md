@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Trading Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/decision-engine.md
+canonical_source: docs/product-specification/execution/risk-policy/decision-engine.md
 related_concepts:
   - CONCEPT-0279
 dependencies: []
@@ -60,10 +60,10 @@ stateDiagram-v2
 Decisions expire after `DECISION_TTL_SECONDS` unless executed.
 
 ## Cross-references
-- `../ai/orchestration/ai-consensus.md`
+- `../../ai/orchestration/ai-consensus.md`
 - `./risk-engine.md`
-- `../runtime/orchestrator.md`
-- `./trading-lifecycle.md`
+- `../../runtime/orchestrator.md`
+- `../trading/trading-lifecycle.md`
 
 ## Operational Contract
 Defines the authoritative gatekeeper between recommendation and execution, including veto hierarchy and timeouts.

@@ -401,9 +401,9 @@ When a chain is no longer viable (low liquidity, abandoned, exploited):
 *Adding a chain should be a focused PR. Use the testnet first, then mainnet, then community announcement.*
 
 ## Cross-references
-- `../../execution/transaction-lifecycle.md`
+- `../../execution/transactions/transaction-lifecycle.md`
 - `../routing/routing-engine.md`
-- `../../execution/wallet-management.md`
+- `../../execution/wallet-portfolio/wallet-management.md`
 - `../routing/gas-optimisation.md`
 - `../../operations/monitoring-observability.md`
 - `../../data/database-schema.md`

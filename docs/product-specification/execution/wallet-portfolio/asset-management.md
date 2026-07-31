@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/asset-management.md
+canonical_source: docs/product-specification/execution/wallet-portfolio/asset-management.md
 related_concepts:
   - CONCEPT-0286
 dependencies: []
@@ -59,11 +59,11 @@ Owns canonical asset metadata, identifiers, decimals, display symbols, and chain
 - Unknown decimals block execution until verified.
 
 ## Cross-references
-- `../market/core/market-data.md`
+- `../../market/core/market-data.md`
 - `./portfolio-management.md`
 - `./wallet-management.md`
-- `./strategies.md`
-- `../market/tokens/token-registry.md`
+- `../trading/strategies.md`
+- `../../market/tokens/token-registry.md`
 
 ## Operational Contract
 Defines asset tracking, balances, custody, approvals, and transfer governance.

@@ -96,7 +96,7 @@ Raw -> Parsed -> Normalized -> Validated -> Published -> Expired.
 - `../routing/routing-engine.md`
 - `../routing/liquidity-analysis.md`
 - `./market-intelligence.md`
-- `../../execution/strategies.md`
+- `../../execution/trading/strategies.md`
 - `../../operations/monitoring-observability.md`
 - `../tokens/token-registry.md`
 - `../tokens/oracle-registry.md`

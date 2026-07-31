@@ -48,7 +48,7 @@ stateDiagram-v2
 ## Cross-references
 - `./apex-kernel.md`
 - `../runtime/orchestrator.md`
-- `../execution/policy-engine.md`
+- `../execution/risk-policy/policy-engine.md`
 - `../plugins/plugin-sdk.md`
 - `../windows/windows-desktop.md`
 - `../operations/enterprise-operations.md`

@@ -148,7 +148,7 @@ Recovery path: restore last valid config.
 Completion criteria: settings confirmed.
 
 ## Cross-references
-- `../execution/trading-engine.md`
+- `../execution/trading/trading-engine.md`
 - `../operations/runtime-operations.md`
 - `../ai/runtime/ai-pipeline.md`
 - `../security/security.md`

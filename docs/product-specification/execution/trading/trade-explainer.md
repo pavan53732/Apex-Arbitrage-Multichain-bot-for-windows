@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: AI Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/trade-explainer.md
+canonical_source: docs/product-specification/execution/trading/trade-explainer.md
 related_concepts:
   - CONCEPT-0297
 dependencies: []
@@ -37,9 +37,9 @@ This document is an overview, reference, or index as noted below.
 Provides human-readable explanations for why a trade was executed.
 
 ## Cross-references
-- `../ai/explainability/explainability.md`
-- `../ai/explainability/governance-explainability.md`
-- `../data/decision-ledger.md`
+- `../../ai/explainability/explainability.md`
+- `../../ai/explainability/governance-explainability.md`
+- `../../data/decision-ledger.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

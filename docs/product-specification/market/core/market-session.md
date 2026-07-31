@@ -42,7 +42,7 @@ Trending, volatile, quiet, congested, recovery, high MEV.
 ## Cross-references
 - `./market-regime-detection.md`
 - `./market-intelligence.md`
-- `../../execution/strategy-rotation.md`
+- `../../execution/trading/strategy-rotation.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

@@ -68,8 +68,8 @@ Defines gas estimation, repricing, replacement, batching, and submission timing 
 - Over-budget rejection count.
 
 ## Cross-references
-- `../../execution/execution-engine.md`
-- `../../execution/transaction-lifecycle.md`
+- `../../execution/transactions/execution-engine.md`
+- `../../execution/transactions/transaction-lifecycle.md`
 - `./mev-protection.md`
 
 ## Operational Contract

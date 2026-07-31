@@ -100,7 +100,7 @@ Candidate -> Scored -> Validated -> Approved -> Bound -> Invalidated -> Replaced
 - `./slippage-model.md`
 - `./gas-optimisation.md`
 - `./mev-protection.md`
-- `../../execution/execution-engine.md`
+- `../../execution/transactions/execution-engine.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

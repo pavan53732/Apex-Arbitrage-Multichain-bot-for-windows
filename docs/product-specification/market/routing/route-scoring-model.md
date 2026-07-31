@@ -57,8 +57,8 @@ Recompute score, refresh data, or fall back to next-best route.
 
 ## Cross-references
 - `./route-optimization.md`
-- `../../execution/simulation-engine.md`
-- `../../execution/risk-engine.md`
+- `../../execution/simulation/simulation-engine.md`
+- `../../execution/risk-policy/risk-engine.md`
 
 ## Operational Contract
 Defines route features, weights, score calculation, and selection criteria.

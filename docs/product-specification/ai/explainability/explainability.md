@@ -57,7 +57,7 @@ Reject storage, request re-evaluation, or mark the decision as non-compliant.
 
 ## Cross-references
 - `../orchestration/ai-orchestration.md`
-- `../../execution/decision-engine.md`
+- `../../execution/risk-policy/decision-engine.md`
 - `../learning/learning-pipeline.md`
 - `../../operations/monitoring/metrics.md`
 

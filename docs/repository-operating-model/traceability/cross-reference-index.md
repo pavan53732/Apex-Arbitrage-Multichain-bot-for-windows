@@ -227,30 +227,30 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0275 | [Knowledge Graph](../../product-specification/data/knowledge-graph.md) | Owner | CONCEPT-0275 |  |  |
 | DOC-0276 | [Registry System](../../product-specification/data/registry-system.md) | Owner | CONCEPT-0276 |  |  |
 | DOC-0277 | [Runtime Knowledge](../../product-specification/data/runtime-knowledge.md) | Owner | CONCEPT-0277 |  |  |
-| DOC-0278 | [Arbitrage Window Manager](../../product-specification/execution/arbitrage-window-manager.md) | Owner | CONCEPT-0278 |  |  |
-| DOC-0279 | [Decision Engine](../../product-specification/execution/decision-engine.md) | Owner | CONCEPT-0279 |  |  |
-| DOC-0280 | [Execution Engine](../../product-specification/execution/execution-engine.md) | Owner | CONCEPT-0280 |  |  |
-| DOC-0281 | [Policy Engine](../../product-specification/execution/policy-engine.md) | Owner | CONCEPT-0281 |  |  |
-| DOC-0282 | [Risk Engine](../../product-specification/execution/risk-engine.md) | Owner | CONCEPT-0282 |  |  |
-| DOC-0283 | [Simulation Engine](../../product-specification/execution/simulation-engine.md) | Owner | CONCEPT-0283 |  | DOC-0236 |
-| DOC-0284 | [Trading Engine](../../product-specification/execution/trading-engine.md) | Owner | CONCEPT-0284 |  | DOC-0285 |
+| DOC-0278 | [Arbitrage Window Manager](../../product-specification/execution/trading/arbitrage-window-manager.md) | Owner | CONCEPT-0278 |  |  |
+| DOC-0279 | [Decision Engine](../../product-specification/execution/risk-policy/decision-engine.md) | Owner | CONCEPT-0279 |  |  |
+| DOC-0280 | [Execution Engine](../../product-specification/execution/transactions/execution-engine.md) | Owner | CONCEPT-0280 |  | DOC-0420 |
+| DOC-0281 | [Policy Engine](../../product-specification/execution/risk-policy/policy-engine.md) | Owner | CONCEPT-0281 |  |  |
+| DOC-0282 | [Risk Engine](../../product-specification/execution/risk-policy/risk-engine.md) | Owner | CONCEPT-0282 |  | DOC-0417 |
+| DOC-0283 | [Simulation Engine](../../product-specification/execution/simulation/simulation-engine.md) | Owner | CONCEPT-0283 |  | DOC-0236, DOC-0418 |
+| DOC-0284 | [Trading Engine](../../product-specification/execution/trading/trading-engine.md) | Owner | CONCEPT-0284 |  | DOC-0285, DOC-0419 |
 | DOC-0285 | [Execution README](../../product-specification/execution/README.md) | Index | CONCEPT-0284 | DOC-0284 |  |
-| DOC-0286 | [Asset Management](../../product-specification/execution/asset-management.md) | Owner | CONCEPT-0286 |  |  |
-| DOC-0287 | [Cross Exchange Arbitrage](../../product-specification/execution/cross-exchange-arbitrage.md) | Owner | CONCEPT-0287 |  |  |
+| DOC-0286 | [Asset Management](../../product-specification/execution/wallet-portfolio/asset-management.md) | Owner | CONCEPT-0286 |  |  |
+| DOC-0287 | [Cross Exchange Arbitrage](../../product-specification/execution/trading/cross-exchange-arbitrage.md) | Owner | CONCEPT-0287 |  |  |
 | DOC-0288 | [Decision Log](../../product-specification/execution/decision-log.md) | Owner | CONCEPT-0288 |  |  |
-| DOC-0289 | [Execution Lifecycle](../../product-specification/execution/execution-lifecycle.md) | Owner | CONCEPT-0289 |  |  |
-| DOC-0290 | [Execution Policies](../../product-specification/execution/execution-policies.md) | Owner | CONCEPT-0290 |  |  |
-| DOC-0291 | [Order Management](../../product-specification/execution/order-management.md) | Owner | CONCEPT-0291 |  |  |
-| DOC-0292 | [Portfolio Analytics](../../product-specification/execution/portfolio-analytics.md) | Owner | CONCEPT-0292 |  |  |
-| DOC-0293 | [Portfolio Management](../../product-specification/execution/portfolio-management.md) | Owner | CONCEPT-0293 |  |  |
-| DOC-0294 | [Position Management](../../product-specification/execution/position-management.md) | Owner | CONCEPT-0294 |  |  |
-| DOC-0295 | [Strategies](../../product-specification/execution/strategies.md) | Owner | CONCEPT-0295 |  |  |
-| DOC-0296 | [Strategy Rotation](../../product-specification/execution/strategy-rotation.md) | Owner | CONCEPT-0296 |  |  |
-| DOC-0297 | [Trade Explainer](../../product-specification/execution/trade-explainer.md) | Owner | CONCEPT-0297 |  |  |
-| DOC-0298 | [Trading Lifecycle](../../product-specification/execution/trading-lifecycle.md) | Owner | CONCEPT-0298 |  |  |
-| DOC-0299 | [Transaction Lifecycle](../../product-specification/execution/transaction-lifecycle.md) | Owner | CONCEPT-0299 |  |  |
-| DOC-0300 | [Wallet Command Center](../../product-specification/execution/wallet-command-center.md) | Owner | CONCEPT-0300 |  |  |
-| DOC-0301 | [Wallet Management](../../product-specification/execution/wallet-management.md) | Owner | CONCEPT-0301 |  |  |
+| DOC-0289 | [Execution Lifecycle](../../product-specification/execution/transactions/execution-lifecycle.md) | Owner | CONCEPT-0289 |  |  |
+| DOC-0290 | [Execution Policies](../../product-specification/execution/transactions/execution-policies.md) | Owner | CONCEPT-0290 |  |  |
+| DOC-0291 | [Order Management](../../product-specification/execution/transactions/order-management.md) | Owner | CONCEPT-0291 |  |  |
+| DOC-0292 | [Portfolio Analytics](../../product-specification/execution/wallet-portfolio/portfolio-analytics.md) | Owner | CONCEPT-0292 |  |  |
+| DOC-0293 | [Portfolio Management](../../product-specification/execution/wallet-portfolio/portfolio-management.md) | Owner | CONCEPT-0293 |  |  |
+| DOC-0294 | [Position Management](../../product-specification/execution/wallet-portfolio/position-management.md) | Owner | CONCEPT-0294 |  |  |
+| DOC-0295 | [Strategies](../../product-specification/execution/trading/strategies.md) | Owner | CONCEPT-0295 |  |  |
+| DOC-0296 | [Strategy Rotation](../../product-specification/execution/trading/strategy-rotation.md) | Owner | CONCEPT-0296 |  |  |
+| DOC-0297 | [Trade Explainer](../../product-specification/execution/trading/trade-explainer.md) | Owner | CONCEPT-0297 |  |  |
+| DOC-0298 | [Trading Lifecycle](../../product-specification/execution/trading/trading-lifecycle.md) | Owner | CONCEPT-0298 |  |  |
+| DOC-0299 | [Transaction Lifecycle](../../product-specification/execution/transactions/transaction-lifecycle.md) | Owner | CONCEPT-0299 |  |  |
+| DOC-0300 | [Wallet Command Center](../../product-specification/execution/wallet-portfolio/wallet-command-center.md) | Owner | CONCEPT-0300 |  |  |
+| DOC-0301 | [Wallet Management](../../product-specification/execution/wallet-portfolio/wallet-management.md) | Owner | CONCEPT-0301 |  | DOC-0421 |
 | DOC-0302 | [Chain Integration](../../product-specification/market/chains/chain-integration.md) | Owner | CONCEPT-0302 |  | DOC-0410 |
 | DOC-0303 | [DEX Integration](../../product-specification/market/dex/dex-integration.md) | Owner | CONCEPT-0303 |  | DOC-0413 |
 | DOC-0304 | [Routing Engine](../../product-specification/market/routing/routing-engine.md) | Owner | CONCEPT-0304 |  | DOC-0415 |
@@ -366,3 +366,8 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0414 | [Market Opportunities README](../../product-specification/market/opportunities/README.md) | Index | CONCEPT-0323 | DOC-0323 |  |
 | DOC-0415 | [Market Routing README](../../product-specification/market/routing/README.md) | Index | CONCEPT-0304 | DOC-0304 |  |
 | DOC-0416 | [Market Tokens README](../../product-specification/market/tokens/README.md) | Index | CONCEPT-0309 | DOC-0309 |  |
+| DOC-0417 | [Execution Risk Policy README](../../product-specification/execution/risk-policy/README.md) | Index | CONCEPT-0282 | DOC-0282 |  |
+| DOC-0418 | [Execution Simulation README](../../product-specification/execution/simulation/README.md) | Index | CONCEPT-0283 | DOC-0283 |  |
+| DOC-0419 | [Execution Trading README](../../product-specification/execution/trading/README.md) | Index | CONCEPT-0284 | DOC-0284 |  |
+| DOC-0420 | [Execution Transactions README](../../product-specification/execution/transactions/README.md) | Index | CONCEPT-0280 | DOC-0280 |  |
+| DOC-0421 | [Execution Wallet Portfolio README](../../product-specification/execution/wallet-portfolio/README.md) | Index | CONCEPT-0301 | DOC-0301 |  |

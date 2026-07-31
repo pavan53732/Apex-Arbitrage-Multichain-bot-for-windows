@@ -73,9 +73,9 @@ Defines MEV avoidance, mitigation, and execution safeguards.
 - Visibility risk count.
 
 ## Cross-references
-- `../../execution/execution-engine.md`
+- `../../execution/transactions/execution-engine.md`
 - `./routing-engine.md`
-- `../../execution/transaction-lifecycle.md`
+- `../../execution/transactions/transaction-lifecycle.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

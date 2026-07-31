@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Trading Team
 version: 1.0.1
-canonical_source: docs/product-specification/execution/policy-engine.md
+canonical_source: docs/product-specification/execution/risk-policy/policy-engine.md
 related_concepts:
   - CONCEPT-0281
 dependencies: []
@@ -54,10 +54,10 @@ Trading, AI, security, recovery, failover, and operational thresholds.
 Policies load from a central config file and can be hot-reloaded. Policy changes require approval and are versioned.
 
 ## Cross-references
-- `../configuration/configuration.md`
-- `../security/security-contracts.md`
+- `../../configuration/configuration.md`
+- `../../security/security-contracts.md`
 - `./risk-engine.md`
-- `../ai/providers/ai-cost-management.md`
+- `../../ai/providers/ai-cost-management.md`
 
 ## Governance Rules
 Defines policy evaluation, priority ordering, overrides, and final decision selection.

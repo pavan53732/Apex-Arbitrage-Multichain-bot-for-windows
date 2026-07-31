@@ -52,7 +52,7 @@ stateDiagram-v2
 ## Cross-references
 - `./opportunity-detection.md`
 - `./opportunity-ranking.md`
-- `../../execution/trading-lifecycle.md`
+- `../../execution/trading/trading-lifecycle.md`
 
 ## Operational Contract
 Defines the lifecycle from discovery through validation, scoring, simulation, approval, execution, closure, and archive.

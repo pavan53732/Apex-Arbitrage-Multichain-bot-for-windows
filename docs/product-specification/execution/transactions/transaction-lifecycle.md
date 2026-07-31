@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/transaction-lifecycle.md
+canonical_source: docs/product-specification/execution/transactions/transaction-lifecycle.md
 related_concepts:
   - CONCEPT-0299
 dependencies: []
@@ -47,9 +47,9 @@ Defines submission, confirmation, replacement, cancellation, and finality handli
 
 ## Cross-references
 - `./execution-engine.md`
-- `../data/database-schema.md`
-- `../market/routing/gas-optimisation.md`
-- `./wallet-management.md`
+- `../../data/database-schema.md`
+- `../../market/routing/gas-optimisation.md`
+- `../wallet-portfolio/wallet-management.md`
 
 ## Required details
 - Define replacement logic, persistence, and Windows restart recovery.

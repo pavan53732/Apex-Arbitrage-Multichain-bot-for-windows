@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Trading Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/execution-engine.md
+canonical_source: docs/product-specification/execution/transactions/execution-engine.md
 related_concepts:
   - CONCEPT-0280
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0420
 validator_coverage: []
 supersedes: []
 superseded_by: []

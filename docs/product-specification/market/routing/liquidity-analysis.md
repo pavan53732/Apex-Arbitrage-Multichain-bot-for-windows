@@ -104,7 +104,7 @@ Every liquidity analysis must define inputs, outputs, thresholds, scoring criter
 - `./routing-engine.md`
 - `../core/market-intelligence.md`
 - `./slippage-model.md`
-- `../../execution/execution-engine.md`
+- `../../execution/transactions/execution-engine.md`
 
 ## Operational Contract
 Defines liquidity inputs, thresholds, aggregation, scoring, and report generation.

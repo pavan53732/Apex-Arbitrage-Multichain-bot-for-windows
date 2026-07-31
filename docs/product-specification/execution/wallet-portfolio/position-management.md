@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/position-management.md
+canonical_source: docs/product-specification/execution/wallet-portfolio/position-management.md
 related_concepts:
   - CONCEPT-0294
 dependencies: []
@@ -42,9 +42,9 @@ Tracks active positions, exposure, cost basis, unrealized and realized PnL, and 
 - Publish position risk and accounting state.
 
 ## Cross-references
-- `./order-management.md`
+- `../transactions/order-management.md`
 - `./portfolio-management.md`
-- `./risk-engine.md`
+- `../risk-policy/risk-engine.md`
 
 ## Operational Contract
 Defines position creation, sizing, adjustment, risk limits, and closure handling.

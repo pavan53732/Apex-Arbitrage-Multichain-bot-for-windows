@@ -87,10 +87,10 @@ All recoveries follow this sequence:
 | **Severity** | Critical (if money at risk) |
 | **Detection** | Execution Engine reports `execution.reverted` or `execution.stuck` |
 | **Halt scope** | This trade only. Chain circuit breaker may trip. |
-| **Retry** | Follow retry strategy in `../execution/execution-engine.md` §4. |
+| **Retry** | Follow retry strategy in `../execution/transactions/execution-engine.md` §4. |
 | **Reconcile** | Query on-chain state to determine actual outcome. |
 | **Escalation** | If uncleared after 5 min → operator notification (`system.warning`). |
-| **Recovery** | Partial recovery or full unwind per `../execution/trading-engine.md` §4. |
+| **Recovery** | Partial recovery or full unwind per `../execution/trading/trading-engine.md` §4. |
 
 ### 2.4 Plugin Crash
 

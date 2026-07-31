@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/strategy-rotation.md
+canonical_source: docs/product-specification/execution/trading/strategy-rotation.md
 related_concepts:
   - CONCEPT-0296
 dependencies: []
@@ -59,13 +59,13 @@ Score = configurable weighted combination of win rate, Sharpe ratio, recent perf
 - ROTATION_COOLDOWN_MINUTES.
 
 ## Failure modes
-If a strategy fails SLO, disable it and alert through `../operations/notification-center.md`.
+If a strategy fails SLO, disable it and alert through `../../operations/notification-center.md`.
 
 ## Cross-references
-- `../runtime/orchestrator.md`
-- `../ai/orchestration/ai-consensus.md`
-- `../performance/performance-slos.md`
-- `../security/security-contracts.md`
+- `../../runtime/orchestrator.md`
+- `../../ai/orchestration/ai-consensus.md`
+- `../../performance/performance-slos.md`
+- `../../security/security-contracts.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

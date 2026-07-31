@@ -59,7 +59,7 @@ Rollback, disable, or pin to previous version.
 
 ## Cross-references
 - `./configuration.md`
-- `../execution/policy-engine.md`
+- `../execution/risk-policy/policy-engine.md`
 - `../deployment/versioning.md`
 
 ## Operational Contract

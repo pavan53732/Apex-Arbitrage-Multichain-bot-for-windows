@@ -81,8 +81,8 @@ Alternative voting models, weighted quorum logic, and additional agent roles.
 
 ## Cross references
 - `./ai-orchestration.md`
-- `../../execution/decision-engine.md`
-- `../../execution/risk-engine.md`
+- `../../execution/risk-policy/decision-engine.md`
+- `../../execution/risk-policy/risk-engine.md`
 - `../explainability/explainability.md`
 
 ## Implementation constraints

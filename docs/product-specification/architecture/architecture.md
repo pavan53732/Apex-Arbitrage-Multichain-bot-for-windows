@@ -62,8 +62,8 @@ For authoritative runtime flow, see `../runtime/orchestrator.md`.
 - Recovery must reconcile persisted state before new execution is admitted.
 
 ## Cross-references
-- `../execution/trading-engine.md`
-- `../execution/execution-engine.md`
+- `../execution/trading/trading-engine.md`
+- `../execution/transactions/execution-engine.md`
 - `../ai/runtime/ai-pipeline.md`
 - `../operations/runtime-operations.md`
 - `../data/state-management.md`
@@ -84,13 +84,13 @@ For canonical data contracts, see `../interfaces/domain-model.md`.
 
 ## Enterprise Contract – Architecture
 - Interfaces: `../interfaces/interface-agent-message.md`, `../interfaces/interface-tool-call.md`.
-- State machine: `../runtime/orchestrator.md`, `../execution/trading-lifecycle.md`, `../execution/execution-lifecycle.md`.
+- State machine: `../runtime/orchestrator.md`, `../execution/trading/trading-lifecycle.md`, `../execution/transactions/execution-lifecycle.md`.
 - Security boundaries: `../security/security-contracts.md`.
 - Performance SLOs: `../performance/performance-slos.md`.
 - Failure modes: sequencing failure, ambiguous ownership, runtime drift; recover via authoritative owner docs and orchestrator retry.
 
-For trading lifecycle, see `../execution/trading-lifecycle.md`.
-For execution lifecycle, see `../execution/execution-lifecycle.md`.
+For trading lifecycle, see `../execution/trading/trading-lifecycle.md`.
+For execution lifecycle, see `../execution/transactions/execution-lifecycle.md`.
 For event handling, see `../interfaces/event-bus.md`.
 For worker scheduling, see `../runtime/worker-pool.md`.
 For workspace persistence, see `../dashboard/dashboard-workspaces.md`.

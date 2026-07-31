@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/arbitrage-window-manager.md
+canonical_source: docs/product-specification/execution/trading/arbitrage-window-manager.md
 related_concepts:
   - CONCEPT-0278
 dependencies: []
@@ -49,9 +49,9 @@ Defines the lifecycle of arbitrage windows from detection through expiry or exec
 
 ## Cross-references
 - `./trading-lifecycle.md`
-- `../market/opportunities/opportunity-ranking.md`
-- `./risk-engine.md`
-- `../runtime/orchestrator.md`
+- `../../market/opportunities/opportunity-ranking.md`
+- `../risk-policy/risk-engine.md`
+- `../../runtime/orchestrator.md`
 
 ---
 

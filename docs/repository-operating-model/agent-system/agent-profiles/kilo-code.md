@@ -49,10 +49,10 @@ Guidance for Kilo Code-based coding agents contributing to this repository.
 ## Required reading
 - `../../../../AGENTS.md`
 - `../../../product-specification/architecture/architecture.md`
-- `../../../product-specification/execution/trading-lifecycle.md`
-- `../../../product-specification/execution/execution-lifecycle.md`
-- `../../../product-specification/execution/transaction-lifecycle.md`
-- `../../../product-specification/execution/order-management.md`
+- `../../../product-specification/execution/trading/trading-lifecycle.md`
+- `../../../product-specification/execution/transactions/execution-lifecycle.md`
+- `../../../product-specification/execution/transactions/transaction-lifecycle.md`
+- `../../../product-specification/execution/transactions/order-management.md`
 - `../../../product-specification/operations/runtime-operations.md`
 
 ## Working rule

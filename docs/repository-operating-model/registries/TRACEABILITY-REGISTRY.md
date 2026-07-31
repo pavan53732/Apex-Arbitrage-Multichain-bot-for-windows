@@ -41,8 +41,8 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | Registry schema version | 1.1 |
 | Registry model | Semantic relationships only |
 | Last regenerated | 2026-07-31 |
-| Relationship count | 634 |
-| Relationship distribution | Defines: 220, Depends On: 114, Indexes: 54, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
+| Relationship count | 644 |
+| Relationship distribution | Defines: 220, Depends On: 119, Indexes: 59, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
 
 ## Relationship Policy
 
@@ -687,3 +687,13 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0796 | DOC-0415 | Depends On | DOC-0304 | Active | Market Routing README depends on DOC-0304. |
 | TRACE-0797 | DOC-0416 | Indexes | CONCEPT-0309 | Active | Market Tokens README indexes CONCEPT-0309. |
 | TRACE-0798 | DOC-0416 | Depends On | DOC-0309 | Active | Market Tokens README depends on DOC-0309. |
+| TRACE-0799 | DOC-0417 | Indexes | CONCEPT-0282 | Active | Execution Risk Policy README indexes CONCEPT-0282. |
+| TRACE-0800 | DOC-0417 | Depends On | DOC-0282 | Active | Execution Risk Policy README depends on DOC-0282. |
+| TRACE-0801 | DOC-0418 | Indexes | CONCEPT-0283 | Active | Execution Simulation README indexes CONCEPT-0283. |
+| TRACE-0802 | DOC-0418 | Depends On | DOC-0283 | Active | Execution Simulation README depends on DOC-0283. |
+| TRACE-0803 | DOC-0419 | Indexes | CONCEPT-0284 | Active | Execution Trading README indexes CONCEPT-0284. |
+| TRACE-0804 | DOC-0419 | Depends On | DOC-0284 | Active | Execution Trading README depends on DOC-0284. |
+| TRACE-0805 | DOC-0420 | Indexes | CONCEPT-0280 | Active | Execution Transactions README indexes CONCEPT-0280. |
+| TRACE-0806 | DOC-0420 | Depends On | DOC-0280 | Active | Execution Transactions README depends on DOC-0280. |
+| TRACE-0807 | DOC-0421 | Indexes | CONCEPT-0301 | Active | Execution Wallet Portfolio README indexes CONCEPT-0301. |
+| TRACE-0808 | DOC-0421 | Depends On | DOC-0301 | Active | Execution Wallet Portfolio README depends on DOC-0301. |

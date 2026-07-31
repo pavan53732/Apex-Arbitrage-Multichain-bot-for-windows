@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/strategies.md
+canonical_source: docs/product-specification/execution/trading/strategies.md
 related_concepts:
   - CONCEPT-0295
 dependencies: []
@@ -1546,11 +1546,11 @@ Performance depends on liquidity, latency, and venue reliability.
 Add route scorers, signal filters, and AI ranking hooks only through documented interfaces.
 
 ## Cross-references
-- `./risk-engine.md`
-- `../ai/runtime/ai-pipeline.md`
-- `./execution-engine.md`
-- `../market/core/market-intelligence.md`
-- `./simulation-engine.md`
+- `../risk-policy/risk-engine.md`
+- `../../ai/runtime/ai-pipeline.md`
+- `../transactions/execution-engine.md`
+- `../../market/core/market-intelligence.md`
+- `../simulation/simulation-engine.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

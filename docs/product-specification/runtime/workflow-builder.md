@@ -58,7 +58,7 @@ Pause workflow, require correction, or route to fallback manual operation.
 
 ## Cross-references
 - `../interfaces/event-bus.md`
-- `../execution/policy-engine.md`
+- `../execution/risk-policy/policy-engine.md`
 - `./orchestrator.md`
 - `../dashboard/ui-dashboard-spec.md`
 

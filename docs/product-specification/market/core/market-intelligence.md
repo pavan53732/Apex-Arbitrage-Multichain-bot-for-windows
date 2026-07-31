@@ -167,7 +167,7 @@ Validation: risk output must align with risk-engine thresholds.
 - `./market-data.md`
 - `../opportunities/opportunity-detection.md`
 - `../opportunities/opportunity-ranking.md`
-- `../../execution/strategies.md`
+- `../../execution/trading/strategies.md`
 - `../../data/database-schema.md`
 - `../../operations/monitoring-observability.md`
 

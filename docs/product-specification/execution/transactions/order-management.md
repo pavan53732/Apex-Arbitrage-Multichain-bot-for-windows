@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/order-management.md
+canonical_source: docs/product-specification/execution/transactions/order-management.md
 related_concepts:
   - CONCEPT-0291
 dependencies: []
@@ -101,8 +101,8 @@ Placed | PartiallyFilled -> CancelRequested -> Cancelled | Filled.
 ## Cross-references
 - `./execution-engine.md`
 - `./transaction-lifecycle.md`
-- `../data/database-schema.md`
-- `./risk-engine.md`
+- `../../data/database-schema.md`
+- `../risk-policy/risk-engine.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/cross-exchange-arbitrage.md
+canonical_source: docs/product-specification/execution/trading/cross-exchange-arbitrage.md
 related_concepts:
   - CONCEPT-0287
 dependencies: []
@@ -45,10 +45,10 @@ Defines how arbitrage opportunities are coordinated across multiple exchanges or
 - Must specify partial fill handling and reconciliation rules.
 
 ## Cross-references
-- `../market/dex/dex-integration.md`
-- `./execution-lifecycle.md`
+- `../../market/dex/dex-integration.md`
+- `../transactions/execution-lifecycle.md`
 - `./trading-lifecycle.md`
-- `./risk-engine.md`
+- `../risk-policy/risk-engine.md`
 
 ## Canonical ownership
 This document defers to the canonical owners for implementation, policy, and schema details.

@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/execution-policies.md
+canonical_source: docs/product-specification/execution/transactions/execution-policies.md
 related_concepts:
   - CONCEPT-0290
 dependencies: []
@@ -55,9 +55,9 @@ Threshold breach, policy conflict, emergency stop, invalid pause state.
 Stop execution, notify operators, and require approval to resume.
 
 ## Cross-references
-- `./risk-engine.md`
-- `./policy-engine.md`
-- `./trading-lifecycle.md`
+- `../risk-policy/risk-engine.md`
+- `../risk-policy/policy-engine.md`
+- `../trading/trading-lifecycle.md`
 - `./execution-lifecycle.md`
 
 ## Governance Rules

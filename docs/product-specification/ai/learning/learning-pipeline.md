@@ -73,7 +73,7 @@ New models go to a shadow pool for 24 hours. Roll back automatically if shadow p
 - `../orchestration/ai-orchestration.md`
 - `../memory/ai-memory-system.md`
 - `../../operations/monitoring/metrics.md`
-- `../../execution/simulation-engine.md`
+- `../../execution/simulation/simulation-engine.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

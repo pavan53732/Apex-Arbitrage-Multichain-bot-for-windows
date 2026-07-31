@@ -41,7 +41,7 @@ This is a registry only. Development standards are defined by `./plugin-sdk.md`.
 
 ## Cross-references
 - `./plugin-sdk.md`
-- `../execution/strategies.md`
+- `../execution/trading/strategies.md`
 
 ## Governance Rules
 Marketplace entries must declare lifecycle state, permissions, version compatibility, and update policy.

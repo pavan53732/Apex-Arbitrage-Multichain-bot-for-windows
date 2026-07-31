@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/execution-lifecycle.md
+canonical_source: docs/product-specification/execution/transactions/execution-lifecycle.md
 related_concepts:
   - CONCEPT-0289
 dependencies: []
@@ -66,9 +66,9 @@ stateDiagram-v2
 - REVERTED may return to QUEUED after retry policy succeeds.
 
 ## Cross-references
-- `./trading-lifecycle.md`
-- `../runtime/orchestrator.md`
-- `../interfaces/domain-model.md`
+- `../trading/trading-lifecycle.md`
+- `../../runtime/orchestrator.md`
+- `../../interfaces/domain-model.md`
 
 ## Operational Contract
 Defines the lifecycle from pre-checks through simulation, approval, submission, confirmation, and post-trade reconciliation.

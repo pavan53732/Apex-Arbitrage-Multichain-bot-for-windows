@@ -50,8 +50,8 @@ Top-level index for the implementation specification set.
 - `../../repository-operating-model/documentation-lifecycle/documentation-map.md`
 - `./architecture.md`
 - `./project-structure.md`
-- `../execution/trading-engine.md`
-- `../execution/execution-engine.md`
+- `../execution/trading/trading-engine.md`
+- `../execution/transactions/execution-engine.md`
 
 
 ## Cross-references

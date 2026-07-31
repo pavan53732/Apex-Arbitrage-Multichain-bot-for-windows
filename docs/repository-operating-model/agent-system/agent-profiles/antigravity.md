@@ -51,8 +51,8 @@ Guidance for Antigravity-based coding agents contributing to this repository.
 - `../../../product-specification/architecture/architecture.md`
 - `../../../product-specification/ai/runtime/ai-pipeline.md`
 - `../../../product-specification/operations/runtime-operations.md`
-- `../../../product-specification/execution/trading-lifecycle.md`
-- `../../../product-specification/execution/execution-lifecycle.md`
+- `../../../product-specification/execution/trading/trading-lifecycle.md`
+- `../../../product-specification/execution/transactions/execution-lifecycle.md`
 - `../../../product-specification/data/database-schema.md`
 
 ## Working rule

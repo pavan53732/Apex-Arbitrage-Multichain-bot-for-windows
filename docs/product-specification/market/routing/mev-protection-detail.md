@@ -47,5 +47,5 @@ Defines the detailed MEV protection behavior required for arbitrage execution.
 ## Cross-references
 - `./mev-protection.md`
 - `./gas-optimisation.md`
-- `../../execution/execution-engine.md`
-- `../../execution/transaction-lifecycle.md`
+- `../../execution/transactions/execution-engine.md`
+- `../../execution/transactions/transaction-lifecycle.md`

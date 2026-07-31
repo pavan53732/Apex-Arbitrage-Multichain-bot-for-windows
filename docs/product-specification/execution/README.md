@@ -9,7 +9,7 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/trading-engine.md
+canonical_source: docs/product-specification/execution/trading/trading-engine.md
 related_concepts:
   - CONCEPT-0284
 dependencies:
@@ -27,50 +27,30 @@ owned_domains: []
 
 ## Purpose and scope
 
-Trading, execution, risk, orders, wallets, portfolios, and strategy behavior.
+Trading, transaction execution, risk and policy gates, wallet/portfolio behavior, and simulation documentation.
 
-## Document classes expected
+## What belongs here
 
-- Index
-- Guide
-- Reference
-- Specification where this folder owns a canonical boundary
-- Registry only in registry folders
-- Historical only in historical folders
-- Generated only in generated folders
-
-## Canonical boundaries
-
-Execution and trading specifications/references.
+Product execution specifications and references for trading, transaction execution, risk policy, wallet portfolio state, and simulation.
 
 ## What does not belong here
 
-Market discovery and chain registries.
+Market discovery, product AI orchestration, generic operations monitoring, or security secret lifecycle behavior unless explicitly execution-owned.
 
-## Documents
+## Subdomains
 
-| Document ID | Title | Class | Authority | Status |
-| --- | --- | --- | --- | --- |
-| DOC-0278 | [Arbitrage Window Manager](./arbitrage-window-manager.md) | Specification | Canonical | Active |
-| DOC-0279 | [Decision Engine](./decision-engine.md) | Specification | Canonical | Active |
-| DOC-0280 | [Execution Engine](./execution-engine.md) | Specification | Canonical | Active |
-| DOC-0281 | [Policy Engine](./policy-engine.md) | Specification | Canonical | Active |
-| DOC-0282 | [Risk Engine](./risk-engine.md) | Specification | Canonical | Active |
-| DOC-0283 | [Simulation Engine](./simulation-engine.md) | Specification | Canonical | Active |
-| DOC-0284 | [Trading Engine](./trading-engine.md) | Specification | Canonical | Active |
-| DOC-0286 | [Asset Management](./asset-management.md) | Reference | Canonical | Active |
-| DOC-0287 | [Cross Exchange Arbitrage](./cross-exchange-arbitrage.md) | Reference | Canonical | Active |
-| DOC-0288 | [Decision Log](./decision-log.md) | Reference | Canonical | Active |
-| DOC-0289 | [Execution Lifecycle](./execution-lifecycle.md) | Reference | Canonical | Active |
-| DOC-0290 | [Execution Policies](./execution-policies.md) | Reference | Canonical | Active |
-| DOC-0291 | [Order Management](./order-management.md) | Reference | Canonical | Active |
-| DOC-0292 | [Portfolio Analytics](./portfolio-analytics.md) | Reference | Canonical | Active |
-| DOC-0293 | [Portfolio Management](./portfolio-management.md) | Reference | Canonical | Active |
-| DOC-0294 | [Position Management](./position-management.md) | Reference | Canonical | Active |
-| DOC-0295 | [Strategies](./strategies.md) | Reference | Canonical | Active |
-| DOC-0296 | [Strategy Rotation](./strategy-rotation.md) | Reference | Canonical | Active |
-| DOC-0297 | [Trade Explainer](./trade-explainer.md) | Reference | Canonical | Active |
-| DOC-0298 | [Trading Lifecycle](./trading-lifecycle.md) | Reference | Canonical | Active |
-| DOC-0299 | [Transaction Lifecycle](./transaction-lifecycle.md) | Reference | Canonical | Active |
-| DOC-0300 | [Wallet Command Center](./wallet-command-center.md) | Reference | Canonical | Active |
-| DOC-0301 | [Wallet Management](./wallet-management.md) | Reference | Canonical | Active |
+| Subdomain | README | Canonical owner |
+| --- | --- | --- |
+| risk-policy | [Execution Risk Policy README](risk-policy/README.md) | [Risk Engine](./risk-policy/risk-engine.md) |
+| simulation | [Execution Simulation README](simulation/README.md) | [Simulation Engine](./simulation/simulation-engine.md) |
+| trading | [Execution Trading README](trading/README.md) | [Trading Engine](./trading/trading-engine.md) |
+| transactions | [Execution Transactions README](transactions/README.md) | [Execution Engine](./transactions/execution-engine.md) |
+| wallet-portfolio | [Execution Wallet Portfolio README](wallet-portfolio/README.md) | [Wallet Management](./wallet-portfolio/wallet-management.md) |
+
+## Additional execution references
+
+- [Decision Log](./decision-log.md) remains at the execution domain root until a later ownership decision moves it.
+
+## Document creation rule
+
+Before adding an execution document, identify the active execution concept owner and place the document in the matching subdomain. Do not create duplicate execution ownership documents.

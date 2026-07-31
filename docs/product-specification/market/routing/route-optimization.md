@@ -61,9 +61,9 @@ Multi-objective scoring uses profit, gas, slippage, historical success, confiden
 If the best route fails simulation, fallback to the second best and log the failure.
 
 ## Cross-references
-- `../../execution/simulation-engine.md`
-- `../../execution/execution-lifecycle.md`
-- `../../execution/trading-lifecycle.md`
+- `../../execution/simulation/simulation-engine.md`
+- `../../execution/transactions/execution-lifecycle.md`
+- `../../execution/trading/trading-lifecycle.md`
 
 ## Operational Contract
 Defines optimization objectives, constraints, scoring, and route comparison logic.

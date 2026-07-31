@@ -57,7 +57,7 @@ Reclassify with fresh data and reduce confidence if unstable.
 
 ## Cross-references
 - `./market-intelligence.md`
-- `../../execution/strategy-rotation.md`
+- `../../execution/trading/strategy-rotation.md`
 - `../../runtime/orchestrator.md`
 
 ## Operational Contract

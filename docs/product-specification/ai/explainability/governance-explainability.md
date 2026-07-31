@@ -61,8 +61,8 @@ Reject non-compliant traces, rebuild from source logs, and escalate to audit.
 
 ## Cross-references
 - `./explainability.md`
-- `../../execution/decision-engine.md`
-- `../../execution/policy-engine.md`
+- `../../execution/risk-policy/decision-engine.md`
+- `../../execution/risk-policy/policy-engine.md`
 - `../../execution/decision-log.md`
 
 ## Operational Contract

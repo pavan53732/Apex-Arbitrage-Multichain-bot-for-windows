@@ -42,7 +42,7 @@ Defines implementation sequencing so major subsystems are delivered in a safe de
 ## Cross-references
 - `../architecture/architecture.md`
 - `../architecture/project-structure.md`
-- `../execution/trading-engine.md`
+- `../execution/trading/trading-engine.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

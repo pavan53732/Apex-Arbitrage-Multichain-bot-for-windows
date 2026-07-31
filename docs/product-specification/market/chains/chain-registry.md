@@ -55,7 +55,7 @@ This registry is descriptive and feeds chain integration, routing, wallet, gas, 
 ## Cross-references
 - `./chain-integration.md`
 - `../routing/routing-engine.md`
-- `../../execution/wallet-management.md`
+- `../../execution/wallet-portfolio/wallet-management.md`
 - `../routing/gas-optimisation.md`
 - `../../data/database-schema.md`
 

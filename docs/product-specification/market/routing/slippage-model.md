@@ -74,8 +74,8 @@ Defines how expected slippage is estimated and bounded.
 - Threshold breach count.
 
 ## Cross-references
-- `../../execution/execution-engine.md`
-- `../../execution/strategies.md`
+- `../../execution/transactions/execution-engine.md`
+- `../../execution/trading/strategies.md`
 - `./routing-engine.md`
 
 ## Operational Contract

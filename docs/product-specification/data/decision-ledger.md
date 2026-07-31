@@ -57,7 +57,7 @@ Missing record, tampered record, incomplete lineage, replay mismatch.
 Rebuild from source logs, reject incomplete traces, escalate to audit.
 
 ## Cross-references
-- `../execution/decision-engine.md`
+- `../execution/risk-policy/decision-engine.md`
 - `../ai/explainability/governance-explainability.md`
 - `../ai/explainability/explainability.md`
 - `../execution/decision-log.md`

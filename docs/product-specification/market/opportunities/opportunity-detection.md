@@ -64,8 +64,8 @@ Determinism for same input snapshot.
 ## Cross-references
 - `../core/market-intelligence.md`
 - `../core/market-data.md`
-- `../../execution/strategies.md`
-- `../../execution/risk-engine.md`
+- `../../execution/trading/strategies.md`
+- `../../execution/risk-policy/risk-engine.md`
 
 For opportunity lifecycle, see `./opportunity-lifecycle.md`.
 ## Operational Contract

@@ -9,7 +9,7 @@ authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/simulation-engine.md
+canonical_source: docs/product-specification/execution/simulation/simulation-engine.md
 related_concepts:
   - CONCEPT-0283
 dependencies:
@@ -79,9 +79,9 @@ ScenarioDefined -> SnapshotCaptured -> Replayed -> Evaluated -> Persisted -> Pub
 - Benchmark latency and resource usage.
 
 ## Cross-references
-- `../execution/simulation-engine.md`
-- `../execution/strategies.md`
-- `../execution/execution-engine.md`
+- `../execution/simulation/simulation-engine.md`
+- `../execution/trading/strategies.md`
+- `../execution/transactions/execution-engine.md`
 - `../ai/runtime/ai-pipeline.md`
 - `./testing-guide.md`
 - `../deployment/versioning.md`

@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/portfolio-analytics.md
+canonical_source: docs/product-specification/execution/wallet-portfolio/portfolio-analytics.md
 related_concepts:
   - CONCEPT-0292
 dependencies: []
@@ -37,8 +37,8 @@ This document is an overview, reference, or index as noted below.
 Defines ROI, win rate, profit distribution, drawdown, Sharpe ratio, and comparison analytics.
 
 ## Cross-references
-- `../interfaces/domain-model.md`
-- `../operations/monitoring/metrics.md`
+- `../../interfaces/domain-model.md`
+- `../../operations/monitoring/metrics.md`
 
 ## Operational Contract
 Defines portfolio metrics, performance attribution, risk views, and reporting outputs.

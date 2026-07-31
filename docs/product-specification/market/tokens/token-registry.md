@@ -53,9 +53,9 @@ This registry is descriptive and feeds market data, routing, wallet, portfolio, 
 
 ## Cross-references
 - `../core/market-data.md`
-- `../../execution/asset-management.md`
-- `../../execution/portfolio-management.md`
-- `../../execution/wallet-management.md`
+- `../../execution/wallet-portfolio/asset-management.md`
+- `../../execution/wallet-portfolio/portfolio-management.md`
+- `../../execution/wallet-portfolio/wallet-management.md`
 - `../../data/database-schema.md`
 
 ## Registry boundary

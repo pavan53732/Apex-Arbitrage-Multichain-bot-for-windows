@@ -61,9 +61,9 @@ Same inputs must produce same ranking.
 
 ## Cross-references
 - `../core/market-intelligence.md`
-- `../../execution/strategies.md`
-- `../../execution/risk-engine.md`
-- `../../execution/execution-engine.md`
+- `../../execution/trading/strategies.md`
+- `../../execution/risk-policy/risk-engine.md`
+- `../../execution/transactions/execution-engine.md`
 
 ## Operational Contract
 Defines the scoring inputs, weighting model, thresholds, tie-breaking, and confidence factors used to rank opportunities.

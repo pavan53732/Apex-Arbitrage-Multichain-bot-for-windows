@@ -60,7 +60,7 @@ Chain scoring has its own lifecycle, health model, and consumer set that do not 
 ## Cross-references
 - `../core/market-data.md`
 - `../routing/routing-engine.md`
-- `../../execution/execution-engine.md`
+- `../../execution/transactions/execution-engine.md`
 - `../../operations/monitoring-observability.md`
 
 ## Operational Contract

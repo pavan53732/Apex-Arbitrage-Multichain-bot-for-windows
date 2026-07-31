@@ -9,12 +9,13 @@ authority: Canonical
 status: Active
 owner: Trading Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/simulation-engine.md
+canonical_source: docs/product-specification/execution/simulation/simulation-engine.md
 related_concepts:
   - CONCEPT-0283
 dependencies: []
 consumers:
   - DOC-0236
+  - DOC-0418
 validator_coverage: []
 supersedes: []
 superseded_by: []
@@ -43,7 +44,7 @@ Defines paper trading, replay, stress testing, and synthetic failure simulation.
 - Consumes strategy, execution, AI, market, and runtime snapshots.
 
 ## Shared simulation contract
-Simulation entities and accuracy metrics are defined by `../interfaces/domain-model.md` and `../operations/monitoring/metrics.md`.
+Simulation entities and accuracy metrics are defined by `../../interfaces/domain-model.md` and `../../operations/monitoring/metrics.md`.
 Every simulation defines purpose, inputs, configuration, initial state, execution flow, expected outputs, validation criteria, success metrics, failure scenarios, and recovery behaviour.
 
 ## Determinism rules
@@ -289,30 +290,30 @@ Persist scenario ids, seeds, market snapshots, configuration hashes, code versio
 - Harness failure rate.
 
 ## Cross-references
-- `../testing/backtesting.md`
-- `./strategies.md`
-- `./execution-engine.md`
-- `../ai/runtime/ai-pipeline.md`
-- `../testing/testing-guide.md`
+- `../../testing/backtesting.md`
+- `../trading/strategies.md`
+- `../transactions/execution-engine.md`
+- `../../ai/runtime/ai-pipeline.md`
+- `../../testing/testing-guide.md`
 
-- `../interfaces/domain-model.md`
+- `../../interfaces/domain-model.md`
 
-- `../operations/monitoring/metrics.md`
+- `../../operations/monitoring/metrics.md`
 
 
-For canonical entities and performance tracking, see `../interfaces/domain-model.md` and `../operations/monitoring/metrics.md`.
+For canonical entities and performance tracking, see `../../interfaces/domain-model.md` and `../../operations/monitoring/metrics.md`.
 
 
 ## Enterprise Contract – Simulation Engine
-- Interfaces: `../interfaces/interface-tool-call.md`.
-- State machine: `./trading-lifecycle.md`, `./execution-lifecycle.md`.
-- Security boundaries: `../security/security-contracts.md`.
-- Performance SLOs: `../performance/performance-slos.md`.
+- Interfaces: `../../interfaces/interface-tool-call.md`.
+- State machine: `../trading/trading-lifecycle.md`, `../transactions/execution-lifecycle.md`.
+- Security boundaries: `../../security/security-contracts.md`.
+- Performance SLOs: `../../performance/performance-slos.md`.
 - Failure modes: non-deterministic simulation, stale market data, invalid assumptions; recover via deterministic replay and abort.
 
-For trading lifecycle, see `./trading-lifecycle.md`.
-For execution lifecycle, see `./execution-lifecycle.md`.
-For performance targets, see `../performance/performance-slos.md`.
+For trading lifecycle, see `../trading/trading-lifecycle.md`.
+For execution lifecycle, see `../transactions/execution-lifecycle.md`.
+For performance targets, see `../../performance/performance-slos.md`.
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.
 

@@ -340,7 +340,7 @@ If a DEX is exploited, abandoned, or supplanted:
 - `../routing/routing-engine.md`
 - `../core/market-data.md`
 - `../chains/chain-integration.md`
-- `../../execution/execution-engine.md`
+- `../../execution/transactions/execution-engine.md`
 - `../routing/liquidity-analysis.md`
 - `./dex-registry.md`
 

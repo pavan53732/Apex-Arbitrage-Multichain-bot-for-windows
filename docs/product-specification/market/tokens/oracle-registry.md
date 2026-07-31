@@ -54,7 +54,7 @@ This registry is descriptive and feeds market data, routing, slippage, and risk 
 - `../core/market-data.md`
 - `../routing/liquidity-analysis.md`
 - `../routing/slippage-model.md`
-- `../../execution/risk-engine.md`
+- `../../execution/risk-policy/risk-engine.md`
 - `../../data/database-schema.md`
 
 ## Registry boundary

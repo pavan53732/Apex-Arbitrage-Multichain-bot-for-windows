@@ -49,7 +49,7 @@ stateDiagram-v2
 
 ## Cross-references
 - `./ai-orchestration.md`
-- `../../execution/decision-engine.md`
+- `../../execution/risk-policy/decision-engine.md`
 - `./ai-consensus.md`
 
 ## Operational Contract

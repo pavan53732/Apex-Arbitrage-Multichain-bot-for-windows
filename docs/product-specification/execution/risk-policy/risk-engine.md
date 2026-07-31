@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Trading Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/risk-engine.md
+canonical_source: docs/product-specification/execution/risk-policy/risk-engine.md
 related_concepts:
   - CONCEPT-0282
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0417
 validator_coverage: []
 supersedes: []
 superseded_by: []

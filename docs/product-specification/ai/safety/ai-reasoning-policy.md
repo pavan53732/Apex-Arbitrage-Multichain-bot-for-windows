@@ -57,8 +57,8 @@ Reject the action, route to deterministic logic, and log the violation.
 
 ## Cross-references
 - `../orchestration/ai-consensus.md`
-- `../../execution/decision-engine.md`
-- `../../execution/risk-engine.md`
+- `../../execution/risk-policy/decision-engine.md`
+- `../../execution/risk-policy/risk-engine.md`
 
 ## Governance Rules
 Defines allowed reasoning patterns, confidence thresholds, escalation rules, and safety constraints for AI decisions.

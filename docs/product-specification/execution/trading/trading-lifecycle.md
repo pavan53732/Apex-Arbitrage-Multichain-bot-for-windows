@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Trading Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/trading-lifecycle.md
+canonical_source: docs/product-specification/execution/trading/trading-lifecycle.md
 related_concepts:
   - CONCEPT-0298
 dependencies: []
@@ -76,10 +76,10 @@ stateDiagram-v2
 - RETRY returns to SCANNING after operator or policy approval.
 
 ## Cross-references
-- `../runtime/orchestrator.md`
-- `./execution-lifecycle.md`
-- `./risk-engine.md`
-- `./simulation-engine.md`
+- `../../runtime/orchestrator.md`
+- `../transactions/execution-lifecycle.md`
+- `../risk-policy/risk-engine.md`
+- `../simulation/simulation-engine.md`
 
 ## Operational Contract
 Defines the full trade lifecycle from opportunity to execution, confirmation, reconciliation, and closure.

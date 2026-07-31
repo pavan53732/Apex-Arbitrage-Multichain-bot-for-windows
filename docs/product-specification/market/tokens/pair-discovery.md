@@ -39,7 +39,7 @@ Navigation-only document pointing to the authoritative owner(s).
 ## Cross-references
 - `../core/market-data.md`
 - `../core/market-intelligence.md`
-- `../../execution/strategies.md`
+- `../../execution/trading/strategies.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

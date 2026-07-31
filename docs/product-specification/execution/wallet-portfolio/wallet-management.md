@@ -9,11 +9,12 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/execution/wallet-management.md
+canonical_source: docs/product-specification/execution/wallet-portfolio/wallet-management.md
 related_concepts:
   - CONCEPT-0301
 dependencies: []
-consumers: []
+consumers:
+  - DOC-0421
 validator_coverage: []
 supersedes: []
 superseded_by: []
@@ -42,10 +43,10 @@ Owns wallet discovery, creation, import, unlock, lock, rotation, permissions, an
 - Enforce signer permission boundaries and secret handling rules.
 
 ## Cross-references
-- `../security/security.md`
-- `../security/permission-model.md`
-- `./transaction-lifecycle.md`
-- `../market/tokens/token-registry.md`
+- `../../security/security.md`
+- `../../security/permission-model.md`
+- `../transactions/transaction-lifecycle.md`
+- `../../market/tokens/token-registry.md`
 
 ## Operational Contract
 Defines wallet inventory, labeling, address hygiene, funding status, and authorization boundaries.
