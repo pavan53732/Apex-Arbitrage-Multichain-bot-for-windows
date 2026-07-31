@@ -311,10 +311,10 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0359 | [Contract Management](../../product-specification/configuration/contract-management.md) | Owner | CONCEPT-0359 |  |  |
 | DOC-0360 | [Product Specification README](../../product-specification/README.md) | Index | CONCEPT-0079 | DOC-0079 |  |
 | DOC-0361 | [Reference README](../../product-specification/reference/README.md) | Index | CONCEPT-0368 | DOC-0368 |  |
-| DOC-0362 | [Error Codes](../../product-specification/reference/error-codes.md) | Reference | CONCEPT-0334 | DOC-0334 |  |
-| DOC-0363 | [Event Catalog](../../product-specification/reference/event-catalog.md) | Reference | CONCEPT-0253 | DOC-0253 |  |
-| DOC-0364 | [Metrics](../../product-specification/reference/metrics.md) | Owner | CONCEPT-0364 |  |  |
-| DOC-0365 | [Troubleshooting](../../product-specification/reference/troubleshooting.md) | Owner | CONCEPT-0365 |  |  |
+| DOC-0362 | [Error Codes](../../product-specification/operations/diagnostics/error-codes.md) | Reference | CONCEPT-0334 | DOC-0334 |  |
+| DOC-0363 | [Event Catalog](../../product-specification/interfaces/events/event-catalog.md) | Reference | CONCEPT-0253 | DOC-0253 |  |
+| DOC-0364 | [Metrics](../../product-specification/operations/monitoring/metrics.md) | Owner | CONCEPT-0364 |  |  |
+| DOC-0365 | [Troubleshooting](../../product-specification/operations/diagnostics/troubleshooting.md) | Owner | CONCEPT-0365 |  |  |
 | DOC-0366 | [Changelog](../../product-specification/reference/changelog.md) | Owner | CONCEPT-0366 |  |  |
 | DOC-0367 | [Enhancement Roadmap](../../product-specification/reference/enhancement-roadmap.md) | Owner | CONCEPT-0367 |  |  |
 | DOC-0368 | [FAQ](../../product-specification/reference/faq.md) | Owner | CONCEPT-0368 |  | DOC-0361 |

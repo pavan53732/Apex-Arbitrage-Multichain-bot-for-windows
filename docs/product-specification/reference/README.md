@@ -51,10 +51,10 @@ Canonical behavior specs when a domain owner exists.
 
 | Document ID | Title | Class | Authority | Status |
 | --- | --- | --- | --- | --- |
-| DOC-0362 | [Error Codes](./error-codes.md) | Reference | Canonical | Active |
-| DOC-0363 | [Event Catalog](./event-catalog.md) | Reference | Canonical | Active |
-| DOC-0364 | [Metrics](./metrics.md) | Reference | Canonical | Active |
-| DOC-0365 | [Troubleshooting](./troubleshooting.md) | Reference | Canonical | Active |
+| DOC-0362 | [](./) | Reference | Canonical | Active |
+| DOC-0363 | [](./) | Reference | Canonical | Active |
+| DOC-0364 | [](./) | Reference | Canonical | Active |
+| DOC-0365 | [](./) | Reference | Canonical | Active |
 | DOC-0366 | [Changelog](./changelog.md) | Reference | Reference | Active |
 | DOC-0367 | [Enhancement Roadmap](./enhancement-roadmap.md) | Reference | Reference | Active |
 | DOC-0368 | [FAQ](./faq.md) | Reference | Reference | Active |

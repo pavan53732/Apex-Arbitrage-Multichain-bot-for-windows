@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/reference/troubleshooting.md
+canonical_source: docs/product-specification/operations/diagnostics/troubleshooting.md
 related_concepts:
   - CONCEPT-0365
 dependencies: []

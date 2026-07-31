@@ -9,7 +9,7 @@ authority: Reference
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/error-handling-logging.md
+canonical_source: docs/product-specification/operations/diagnostics/error-codes.md
 related_concepts:
   - CONCEPT-0334
 dependencies:
