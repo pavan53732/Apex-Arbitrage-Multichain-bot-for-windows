@@ -53,6 +53,28 @@ Implementation relationship
 
 This is the true operating model for an AI-agent-ready repository.
 
+## Repository Execution Model
+
+This repository follows a local-first execution model.
+
+All repository operations are executed by:
+- human contributors
+- AI coding agents
+- local scripts
+- local validators
+- local development tools
+
+The repository intentionally excludes:
+- GitHub Actions
+- CI/CD pipelines
+- remote automation platforms
+- repository bots
+- scheduled automation
+
+All validation and quality gates are executed explicitly by contributors before committing.
+
+This model is defined in `REPOSITORY-EXECUTION-MODEL.md`.
+
 ## The three layers of meaning
 
 ### Layer 1 — Repository Operating Model
@@ -790,7 +812,7 @@ Rebuild last and only if justified:
 
 1. helper scripts
 2. compact reusable tools
-3. optional CI checks
+3. optional local validation utilities
 4. local-only reporting utilities
 5. certification systems only if there is real operational need
 

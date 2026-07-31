@@ -96,6 +96,7 @@ Before making changes, every agent must:
 5. Avoid creating duplicate concept documents if an existing canonical file should be edited.
 6. Avoid committing generated artefacts.
 7. Keep root-level structure intentional and minimal.
+8. Do not create GitHub Actions workflows, CI/CD pipeline files, automation YAMLs, or repository automation unless explicitly requested.
 
 ## Canonical source-of-truth rules
 
@@ -172,6 +173,28 @@ The following changes require extra caution:
 - validator-rule changes
 - reintroduction of tools/, scripts/, schemas/, or governance artefact systems as canonical layers
 
+## Repository execution model
+
+This repository follows a local-first execution model.
+
+All repository operations are executed locally by:
+- human contributors
+- AI coding agents
+- local scripts
+- local validators
+- local development tools
+
+The repository intentionally excludes:
+- GitHub Actions
+- CI/CD pipelines
+- remote automation platforms
+- repository bots
+- scheduled automation
+
+All validation and quality gates are executed explicitly by contributors before committing.
+
+See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
+
 ## Generated artefact rule
 
 Generated outputs are non-canonical by default and should not be committed unless explicitly justified.
@@ -185,6 +208,7 @@ Examples include:
 - analysis outputs
 - temporary reports
 - tool-generated summaries
+- CI/CD workflow files and repository automation unless explicitly approved
 
 ## Commit expectations
 

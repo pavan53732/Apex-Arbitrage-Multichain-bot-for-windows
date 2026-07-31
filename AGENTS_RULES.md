@@ -9,6 +9,17 @@
 | **Branch Strategy** | Work is done on session branches. Merge to `main` via explicit merge commits with detailed messages. |
 | **Governance Platform** | The Apex Governance Platform (`tools/governance/`) is the single canonical runtime. All governance computation originates here. WS0 is a verification layer only. |
 
+## Execution Model
+
+| Rule | Description |
+|------|-------------|
+| **Repository Execution Model** | All validation, documentation generation, repository analysis, and quality checks are executed locally by contributors or AI agents. |
+| **No CI/CD** | No GitHub Actions, Azure Pipelines, GitLab CI, CircleCI, Jenkins pipelines, Buildkite, Travis CI, or similar automation. |
+| **No Repository Automation** | Do not introduce automated workflow engines that execute repository tasks remotely. |
+| **Local First** | Validators, documentation tools, and helper utilities execute locally. |
+
+See `REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
+
 ## Development Rules
 
 | Rule | Description |
@@ -38,5 +49,5 @@
 
 ---
 
-*Last updated: 2026-07-30*
+*Last updated: 2026-07-31*
 *Source: Session agreements between user and agent*
