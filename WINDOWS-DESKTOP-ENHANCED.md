@@ -25,9 +25,9 @@ APEX-Desktop-Setup/
 ```
 Process: Node.js 20+
 Runtime: Electron 31+
-Security: 
+Security:
   - contextIsolation: true
-  - sandbox: true  
+  - sandbox: true
   - nodeIntegration: false
   - safeStorage: true (DPAPI encryption)
 ```
@@ -49,7 +49,7 @@ window.minimize/maximize/close
 // AI Settings
 ai.getProviders/saveProvider/deleteProvider/testConnection/resetProvider/resetAll/clearCache
 
-// Trade Management  
+// Trade Management
 trades.getHistory/getActive
 
 // Skills & Agents
@@ -105,7 +105,7 @@ const AIProvider = {
 ##### Anthropic Native:
 ```javascript
 {
-  provider_type: 'anthropic_native', 
+  provider_type: 'anthropic_native',
   base_url: 'https://api.anthropic.com',
   model_name: 'claude-sonnet-4-20250514',
   default_temperature: 0.2,
@@ -220,7 +220,7 @@ function selectProvider(request) {
       // Performance sort (lower latency preferred)
       return a.latency_ms - b.latency_ms;
     });
-  
+
   return candidates.find(p => p.can_handle(request)) || null;
 }
 ```
@@ -243,7 +243,7 @@ function selectProvider(request) {
 ```javascript
 const FAIL_OVER_CHAIN = [
   'provider-A-primary',
-  'provider-A-fallback', 
+  'provider-A-fallback',
   'provider-B-primary',
   'provider-C-primary'
 ];
@@ -344,13 +344,13 @@ const PRICING = {
 - Output: market_score(0-100), trend, volatility, liquidity_assessment
 - Temperature: 0.2 (analytical)
 
-**Opportunity Scanner**  
+**Opportunity Scanner**
 - Input: price_feeds, gas_prices, bridge_fees, slippage_estimates
 - Output: ranked_opportunities array with profit, risk_score, execution_path
 - Temperature: 0.1 (precise)
 
 **Risk Assessor**
-- Input: opportunity_details, portfolio_state, historical_loss_data  
+- Input: opportunity_details, portfolio_state, historical_loss_data
 - Output: risk_score(0-100), position_size, stop_loss, go/no-go
 - Temperature: 0.1 (conservative)
 
@@ -399,7 +399,7 @@ const PRICING = {
     }
   },
   outputs: {
-    type: 'object', 
+    type: 'object',
     properties: {
       opportunities: {
         type: 'array',
@@ -428,7 +428,7 @@ const PRICING = {
 
 **Arbitrage Skills**
 - intra-chain-arb: market-analyst + opportunity-scanner
-- cross-chain-arb: market-analyst + opportunity-scanner + risk-assessor  
+- cross-chain-arb: market-analyst + opportunity-scanner + risk-assessor
 - triangular-arb: opportunity-scanner
 - flash-loan-arb: opportunity-scanner + execution-planner + risk-assessor
 
@@ -557,7 +557,7 @@ Privacy: No user data collection
 
 #### Audit Trail:
 - Connection logs (last 20)
-- Error logs (last 10)  
+- Error logs (last 10)
 - Cache statistics
 - Cost summaries
 - Export diagnostics (JSON, no keys)
@@ -597,7 +597,7 @@ files: ["packages/desktop/out/**" , "README.txt"]
 
 mac: [deprecated]  # Not used
 linux: [deprecated] # Not used
-win: 
+win:
   target: ["nsis"]
   icon: "assets/icon.ico"
   publisherName: "APEX Technologies"
@@ -635,7 +635,7 @@ const ENV_CONFIG = {
     devtools_enabled: true
   },
   production: {
-    log_level: 'info', 
+    log_level: 'info',
     update_check: 'every-4h',
     max_providers: 5,
     devtools_enabled: false
@@ -726,7 +726,7 @@ Network: Connection latency, packet loss
 
 #### Documentation Hierarchy:
 1. **Project-Level**: APEX-ENHANCEMENT-SUMMARY.md (this file)
-2. **Architecture**: ARCHITECTURE.md, APEX-ARCHITECTURE.md  
+2. **Architecture**: ARCHITECTURE.md, APEX-ARCHITECTURE.md
 3. **Components**: AGENTS.md, SKILLS.md, AI-SETTINGS.md
 4. **Systems**: AI-PIPELINE.md, WINDOWS-DESKTOP.md
 5. **Support**: DESIGNER-PROTOCOLS.md, SECURITY.md, README.md
