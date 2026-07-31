@@ -241,4 +241,4 @@ A push is only considered successful when ALL are true:
 - [AI Failure Policy](./ai-failure-policy.md)
 - [AI Execution Contract](./ai-execution-contract.md)
 - [AI Capability Matrix](./ai-capability-matrix.md)
-- [REPOSITORY-EXECUTION-MODEL.md](../../REPOSITORY-EXECUTION-MODEL.md)
+- [REPOSITORY-EXECUTION-MODEL.md](../../../REPOSITORY-EXECUTION-MODEL.md)

@@ -54,7 +54,7 @@ A table mapping each subdomain to its canonical concept identity:
 
 | Subdomain | Concept ID | Canonical Owner | Subdomain README |
 | --- | --- | --- | --- |
-| subdomain-name | CONCEPT-XXXX | [Canonical Document](./subdomain/canonical-document.md) | [Subdomain README](./subdomain/README.md) |
+| subdomain-name | CONCEPT-XXXX | [Canonical Document (`./subdomain/canonical-document.md`) | [Subdomain README (`./subdomain/README.md`) |
 
 Rules:
 - Every subdomain folder must have a corresponding entry
@@ -93,11 +93,11 @@ For each subdomain listed in the Canonical Owner Map, a detailed section:
 ### subdomain-name
 
 - Concept: `CONCEPT-XXXX`
-- Canonical Owner: [Canonical Document](./subdomain/canonical-document.md)
-- Folder README: [Subdomain README](./subdomain/README.md)
+- Canonical Owner: [Canonical Document (`./subdomain/canonical-document.md`)
+- Folder README: [Subdomain README (`./subdomain/README.md`)
 
 Documents:
-- [Document Title](./subdomain/document.md) — Class
+- [Document Title (`./subdomain/document.md`) — Class
 ```
 
 Every document in the subdomain must be listed with its class.
@@ -209,7 +209,7 @@ owned_domains: []
 
 | Subdomain | Concept ID | Canonical Owner | README |
 | --- | --- | --- | --- |
-| subdomain | CONCEPT-XXXX | [Doc](./subdomain/doc.md) | [README](./subdomain/README.md) |
+| subdomain | CONCEPT-XXXX | [Doc (`./subdomain/doc.md`) | [README (`./subdomain/README.md`) |
 
 ## Document classes expected
 
@@ -225,11 +225,11 @@ owned_domains: []
 ### subdomain
 
 - Concept: `CONCEPT-XXXX`
-- Canonical Owner: [Doc](./subdomain/doc.md)
-- Folder README: [README](./subdomain/README.md)
+- Canonical Owner: [Doc (`./subdomain/doc.md`)
+- Folder README: [README (`./subdomain/README.md`)
 
 Documents:
-- [Doc Title](./subdomain/doc.md) — Class
+- [Doc Title (`./subdomain/doc.md`) — Class
 
 ## Before adding a document here
 

@@ -124,7 +124,7 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0090 | [Task Scheduler](../../product-specification/runtime/task-scheduler.md) | Owner | CONCEPT-0090 |  |  |
 | DOC-0091 | [Update Manager](../../product-specification/runtime/update-manager.md) | Owner | CONCEPT-0091 |  |  |
 | DOC-0092 | [Worker Pool](../../product-specification/runtime/worker-pool.md) | Owner | CONCEPT-0092 |  |  |
-| DOC-0093 | [Service Registry](../../product-specification/runtime/service-registry.md) | Owner | CONCEPT-0093 |  |  |
+| DOC-0093 | [Service Registry](../registries/service-registry.md) | Owner | CONCEPT-0093 |  |  |
 | DOC-0094 | [Runtime README](../../product-specification/runtime/README.md) | Index | CONCEPT-0087 | DOC-0087 |  |
 | DOC-0095 | [Concurrency Model](../../product-specification/runtime/concurrency-model.md) | Owner | CONCEPT-0095 |  |  |
 | DOC-0096 | [Service Lifecycle](../../product-specification/runtime/service-lifecycle.md) | Owner | CONCEPT-0096 |  |  |
@@ -182,7 +182,7 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0230 | [Secret Lifecycle](../../product-specification/security/secret-lifecycle.md) | Owner | CONCEPT-0230 |  |  |
 | DOC-0231 | [Trust Boundaries](../../product-specification/security/trust-boundaries.md) | Owner | CONCEPT-0231 |  |  |
 | DOC-0232 | [Testing](../../product-specification/testing/testing.md) | Owner | CONCEPT-0232 |  | DOC-0233, DOC-0234, DOC-0235 |
-| DOC-0233 | [Test Case Registry](../../product-specification/testing/test-case-registry.md) | Reference | CONCEPT-0232 | DOC-0232 |  |
+| DOC-0233 | [Test Case Registry](../registries/test-case-registry.md) | Reference | CONCEPT-0232 | DOC-0232 |  |
 | DOC-0234 | [Testing README](../../product-specification/testing/README.md) | Index | CONCEPT-0232 | DOC-0232 |  |
 | DOC-0235 | [Testing Guide](../../product-specification/testing/testing-guide.md) | Reference | CONCEPT-0232 | DOC-0232 |  |
 | DOC-0236 | [Backtesting](../../product-specification/testing/backtesting.md) | Reference | CONCEPT-0283 | DOC-0283 |  |
@@ -255,10 +255,10 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0303 | [DEX Integration](../../product-specification/market/dex/dex-integration.md) | Owner | CONCEPT-0303 |  | DOC-0413 |
 | DOC-0304 | [Routing Engine](../../product-specification/market/routing/routing-engine.md) | Owner | CONCEPT-0304 |  | DOC-0415 |
 | DOC-0305 | [RPC Manager](../../product-specification/market/connectivity/rpc-manager.md) | Owner | CONCEPT-0305 |  | DOC-0411 |
-| DOC-0306 | [Chain Registry](../../product-specification/market/chains/chain-registry.md) | Owner | CONCEPT-0306 |  |  |
-| DOC-0307 | [DEX Registry](../../product-specification/market/dex/dex-registry.md) | Owner | CONCEPT-0307 |  |  |
-| DOC-0308 | [Oracle Registry](../../product-specification/market/tokens/oracle-registry.md) | Owner | CONCEPT-0308 |  |  |
-| DOC-0309 | [Token Registry](../../product-specification/market/tokens/token-registry.md) | Owner | CONCEPT-0309 |  | DOC-0416 |
+| DOC-0306 | [Chain Registry](../registries/chain-registry.md) | Owner | CONCEPT-0306 |  |  |
+| DOC-0307 | [DEX Registry](../registries/dex-registry.md) | Owner | CONCEPT-0307 |  |  |
+| DOC-0308 | [Oracle Registry](../registries/oracle-registry.md) | Owner | CONCEPT-0308 |  |  |
+| DOC-0309 | [Token Registry](../registries/token-registry.md) | Owner | CONCEPT-0309 |  | DOC-0416 |
 | DOC-0310 | [Market README](../../product-specification/market/README.md) | Index | CONCEPT-0317 | DOC-0317 |  |
 | DOC-0311 | [Chain Command Center](../../product-specification/market/chains/chain-command-center.md) | Owner | CONCEPT-0311 |  |  |
 | DOC-0312 | [Chain Intelligence](../../product-specification/market/chains/chain-intelligence.md) | Owner | CONCEPT-0312 |  |  |

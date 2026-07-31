@@ -583,5 +583,5 @@ Each validator must have:
 
 ## Related Documents
 - [Validation Specification](../validation/validation-specification.md)
-- [REPOSITORY-EXECUTION-MODEL.md](../../REPOSITORY-EXECUTION-MODEL.md)
-- [AGENTS.md](../../AGENTS.md)
+- [REPOSITORY-EXECUTION-MODEL.md](../../../REPOSITORY-EXECUTION-MODEL.md)
+- [AGENTS.md](../../../AGENTS.md)

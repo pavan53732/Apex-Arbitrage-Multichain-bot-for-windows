@@ -82,28 +82,29 @@ class RegistryLoader:
                 headers = [h.strip() for h in line.split("|")[1:-1]]
                 continue
 
-            if in_table and line.startswith("|---"):
+            if in_table and line.startswith("|") and set(line.replace("|", "").replace(":", "").strip()) <= {"-", " "}:
+                # Markdown table separator rows may contain whitespace around dashes.
                 continue
 
             if in_table and line.startswith("|"):
                 if not line.strip().startswith("| Concept ID"):
                     parts = [p.strip() for p in line.split("|")[1:-1]]
-                    if len(parts) >= 14:
+                    if len(parts) >= 12:
                         try:
+                            # Registry schema v1.1 stores the concept name at column
+                            # 3 and the canonical owner at columns 4–6.
                             entry = ConceptEntry(
                                 concept_id=parts[0],
-                                status=parts[1],
-                                canonical_concept_id=parts[2] if parts[2] != "" else None,
-                                canonical_document=parts[3] if parts[3] != "" else None,
-                                description=parts[4],
-                                domain=parts[5],
-                                plane=parts[6],
-                                superseded_by=parts[12].split(",") if parts[12] else [],
-                                supersedes=parts[13].split(",") if parts[13] else [],
+                                status=parts[9],
+                                canonical_concept_id=parts[4] or None,
+                                canonical_document=parts[5] or None,
+                                description=parts[3],
+                                domain=parts[8],
+                                plane=parts[7],
                             )
                             entries[entry.concept_id] = entry
-                        except Exception:
-                            pass
+                        except (IndexError, ValueError):
+                            continue
                 continue
 
             if in_table and not line.startswith("|"):
@@ -134,7 +135,8 @@ class RegistryLoader:
                 in_table = True
                 continue
 
-            if in_table and line.startswith("|---"):
+            if in_table and line.startswith("|") and set(line.replace("|", "").replace(":", "").strip()) <= {"-", " "}:
+                # Markdown table separator rows may contain whitespace around dashes.
                 continue
 
             if in_table and line.startswith("|"):
@@ -194,7 +196,8 @@ class RegistryLoader:
                 in_table = True
                 continue
 
-            if in_table and line.startswith("|---"):
+            if in_table and line.startswith("|") and set(line.replace("|", "").replace(":", "").strip()) <= {"-", " "}:
+                # Markdown table separator rows may contain whitespace around dashes.
                 continue
 
             if in_table and line.startswith("|"):

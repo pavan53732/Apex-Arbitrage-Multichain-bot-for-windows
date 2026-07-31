@@ -146,5 +146,5 @@ Validator-Pass: VAL-002,VAL-003,VAL-004,VAL-008
 - [Concept Registry](../registries/CONCEPT-REGISTRY.md)
 - [Document Registry](../registries/DOCUMENT-REGISTRY.md)
 - [Traceability Registry](../registries/TRACEABILITY-REGISTRY.md)
-- [REBUILD-SYSTEM-SPECIFICATION.md](../../REBUILD-SYSTEM-SPECIFICATION.md)
+- [REBUILD-SYSTEM-SPECIFICATION.md](../../../REBUILD-SYSTEM-SPECIFICATION.md)
 - [Validation Specification](../validation/validation-specification.md)

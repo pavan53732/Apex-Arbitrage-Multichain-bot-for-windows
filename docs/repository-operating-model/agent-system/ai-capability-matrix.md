@@ -185,5 +185,5 @@ To add a new AI agent to this matrix:
 - [AI Commit Policy](./ai-commit-policy.md)
 - [AI Push Policy](./ai-push-policy.md)
 - [AI Workspace Policy](./ai-workspace-policy.md)
-- [AGENTS.md](../../AGENTS.md)
-- [REPOSITORY-EXECUTION-MODEL.md](../../REPOSITORY-EXECUTION-MODEL.md)
+- [AGENTS.md](../../../AGENTS.md)
+- [REPOSITORY-EXECUTION-MODEL.md](../../../REPOSITORY-EXECUTION-MODEL.md)

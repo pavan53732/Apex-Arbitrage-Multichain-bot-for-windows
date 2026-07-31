@@ -232,4 +232,4 @@ Only create a permanent repository document if:
 - [AI Commit Policy](./ai-commit-policy.md)
 - [AI Push Policy](./ai-push-policy.md)
 - [Validation Specification](../validation/validation-specification.md)
-- [Temporary Execution Output Policy (AGENTS.md)](../../AGENTS.md)
+- [Temporary Execution Output Policy (AGENTS.md)](../../../AGENTS.md)
