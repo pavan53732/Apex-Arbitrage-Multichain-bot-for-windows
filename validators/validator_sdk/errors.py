@@ -37,15 +37,17 @@ class ErrorCode(str, Enum):
     # Traceability errors
     INVALID_RELATIONSHIP_TYPE = "INVALID_RELATIONSHIP_TYPE"
     CIRCULAR_DEPENDS_ON = "CIRCULAR_DEPENDS_ON"
-    UNTRACED_REQUIREMENT = "UNTRACED_REQUIREMENT"
+    NO_INBOUND_TRACEABILITY_WARN = "NO_INBOUND_TRACEABILITY_WARN"
 
     # Orphan errors
     ORPHANED_CANONICAL_DOCUMENT = "ORPHANED_CANONICAL_DOCUMENT"
-    ORPHANED_ACTIVE_CONCEPT_WARN = "ORPHANED_ACTIVE_CONCEPT_WARN"
+    CONCEPT_NOT_IN_DOMAIN_NAVIGATION_WARN = "CONCEPT_NOT_IN_DOMAIN_NAVIGATION_WARN"
+    NO_INBOUND_DOCUMENT_TRACEABILITY_WARN = "NO_INBOUND_DOCUMENT_TRACEABILITY_WARN"
     DOMAIN_WITHOUT_README = "DOMAIN_WITHOUT_README"
 
     # Document class errors
     CLASS_MISMATCH = "CLASS_MISMATCH"
+    INDEX_LAYOUT_HEURISTIC_WARN = "INDEX_LAYOUT_HEURISTIC_WARN"
     PLANE_BOUNDARY_VIOLATION = "PLANE_BOUNDARY_VIOLATION"
     FOLDER_CLASS_MISMATCH = "FOLDER_CLASS_MISMATCH"
 
@@ -85,9 +87,12 @@ ERROR_MESSAGES = {
 
     ErrorCode.INVALID_RELATIONSHIP_TYPE: "Traceability {trace_id} has invalid relationship type '{type}'",
     ErrorCode.CIRCULAR_DEPENDS_ON: "Circular DependsOn chain detected involving {concepts}",
-    ErrorCode.UNTRACED_REQUIREMENT: "Requirement {concept_id} has no traceability to implementation",
+    ErrorCode.NO_INBOUND_TRACEABILITY_WARN: "Concept {concept_id} has no inbound traceability relationship",
 
     ErrorCode.ORPHANED_CANONICAL_DOCUMENT: "Canonical document {doc_id} is not reachable from any domain README",
+    ErrorCode.NO_INBOUND_DOCUMENT_TRACEABILITY_WARN: "Active document {doc_id} has no inbound traceability relationship",
+    ErrorCode.CONCEPT_NOT_IN_DOMAIN_NAVIGATION_WARN: "Active concept {concept_id} is not listed in domain navigation",
+    ErrorCode.INDEX_LAYOUT_HEURISTIC_WARN: "Index document {doc_id} has no recognized navigation layout",
     ErrorCode.DOMAIN_WITHOUT_README: "Domain {domain} has no README.md file",
 
     ErrorCode.CLASS_MISMATCH: "Document {doc_id} class '{current}' does not match expected '{expected}'",

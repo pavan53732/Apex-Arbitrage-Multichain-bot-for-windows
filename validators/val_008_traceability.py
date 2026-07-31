@@ -117,13 +117,13 @@ class Validator(BaseValidator):
 
         # Concepts that are "requirement-like" (Specifications, Policies) should be traced
         for concept_id, concept in concept_registry.items():
-            if concept.status == "Active" and concept.domain != "Registries":
+            if concept.status == "Active" and concept.description.lower().startswith("requirement"):
                 # Check if any document with concept_role: Owner traces to this
                 has_trace = concept_id in traced_targets
                 if not has_trace:
                     checked += 1
                     warnings.append(ValidationWarning(
-                        code=ErrorCode.UNTRACED_REQUIREMENT,
+                        code=ErrorCode.NO_INBOUND_TRACEABILITY_WARN,
                         file="",
                         line=1,
                         message=f"Active concept {concept_id} has no incoming traceability relationships",

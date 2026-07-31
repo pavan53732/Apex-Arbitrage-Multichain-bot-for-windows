@@ -25,6 +25,8 @@ class ValidationError:
     severity: str = "ERROR"  # ERROR | CRITICAL
     rule: str = ""
     suggestion: str = ""
+    validator_id: str = ""
+    rule_id: str = ""
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -41,6 +43,8 @@ class ValidationWarning:
     severity: str = "WARNING"
     rule: str = ""
     suggestion: str = ""
+    validator_id: str = ""
+    rule_id: str = ""
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -59,6 +63,7 @@ class ValidationResult:
     checked_items: int
     errors: list[ValidationError] = field(default_factory=list)
     warnings: list[ValidationWarning] = field(default_factory=list)
+    infos: list[ValidationWarning] = field(default_factory=list)
 
     def to_dict(self) -> dict:
         return {
@@ -72,6 +77,7 @@ class ValidationResult:
             "checked_items": self.checked_items,
             "errors": [e.to_dict() for e in self.errors],
             "warnings": [w.to_dict() for w in self.warnings],
+            "infos": [i.to_dict() for i in self.infos],
         }
 
     def to_json(self) -> str:
@@ -84,7 +90,7 @@ class ValidationResult:
             "required": [
                 "validator_id", "validator_name", "validator_version",
                 "timestamp", "execution_time_ms", "status", "severity",
-                "checked_items", "errors", "warnings"
+                "checked_items", "errors", "warnings", "infos"
             ],
             "properties": {
                 "validator_id": {"type": "string"},
@@ -99,7 +105,7 @@ class ValidationResult:
                     "type": "array",
                     "items": {
                         "type": "object",
-                        "required": ["code", "file", "line", "column", "message", "severity", "rule", "suggestion"],
+                        "required": ["code", "file", "line", "column", "message", "severity", "rule", "suggestion", "validator_id", "rule_id"],
                         "properties": {
                             "code": {"type": "string"},
                             "file": {"type": "string"},
@@ -109,6 +115,8 @@ class ValidationResult:
                             "severity": {"type": "string", "enum": ["ERROR", "CRITICAL"]},
                             "rule": {"type": "string"},
                             "suggestion": {"type": "string"},
+                            "validator_id": {"type": "string"},
+                            "rule_id": {"type": "string"},
                         }
                     }
                 },
@@ -116,7 +124,7 @@ class ValidationResult:
                     "type": "array",
                     "items": {
                         "type": "object",
-                        "required": ["code", "file", "line", "column", "message", "severity", "rule", "suggestion"],
+                        "required": ["code", "file", "line", "column", "message", "severity", "rule", "suggestion", "validator_id", "rule_id"],
                         "properties": {
                             "code": {"type": "string"},
                             "file": {"type": "string"},
@@ -126,6 +134,8 @@ class ValidationResult:
                             "severity": {"type": "string", "enum": ["WARNING"]},
                             "rule": {"type": "string"},
                             "suggestion": {"type": "string"},
+                            "validator_id": {"type": "string"},
+                            "rule_id": {"type": "string"},
                         }
                     }
                 },
@@ -245,6 +255,22 @@ class BaseValidator(ABC):
         errors: list[ValidationError],
         warnings: list[ValidationWarning]
     ) -> ValidationResult:
+        # Every finding is bound to its producing validator and an immutable
+        # Repository Operating Model rule. This keeps output machine-readable
+        # while preserving each validator's human-readable rule explanation.
+        rule_ids = {
+            "MISSING_REQUIRED_FIELD": "ROM-005", "INVALID_ENUM_VALUE": "ROM-005", "INVALID_ID_FORMAT": "ROM-002", "INVALID_SCHEMA_VERSION": "ROM-005", "INVALID_DATE_FORMAT": "ROM-005",
+            "UNRESOLVED_MARKDOWN_LINK": "ROM-006", "UNRESOLVED_DOC_REF": "ROM-006", "UNRESOLVED_CONCEPT_REF": "ROM-006", "BROKEN_ANCHOR_LINK": "ROM-006",
+            "REGISTRY_FILE_MISSING": "ROM-004", "REGISTRY_FS_MISMATCH": "ROM-004", "UNREGISTERED_DOCUMENT": "ROM-004", "MISSING_CANONICAL_OWNER": "ROM-001", "TRACEABILITY_ID_UNRESOLVED": "ROM-007",
+            "DUPLICATE_CONCEPT_OWNER": "ROM-001", "ORPHANED_ACTIVE_CONCEPT": "ROM-001", "INVALID_ALIAS_CHAIN": "ROM-003",
+            "INVALID_RELATIONSHIP_TYPE": "ROM-007", "CIRCULAR_DEPENDS_ON": "ROM-007", "NO_INBOUND_TRACEABILITY_WARN": "ROM-007",
+            "ORPHANED_CANONICAL_DOCUMENT": "ROM-004", "CONCEPT_NOT_IN_DOMAIN_NAVIGATION_WARN": "ROM-004", "NO_INBOUND_DOCUMENT_TRACEABILITY_WARN": "ROM-007", "DOMAIN_WITHOUT_README": "ROM-004",
+            "CLASS_MISMATCH": "ROM-008", "INDEX_LAYOUT_HEURISTIC_WARN": "ROM-008", "PLANE_BOUNDARY_VIOLATION": "ROM-008", "FOLDER_CLASS_MISMATCH": "ROM-008",
+            "PROHIBITED_TEMP_FILE": "ROM-012", "PROHIBITED_CICD_FILE": "ROM-011", "MISCLASSIFIED_GENERATED_DOC": "ROM-010",
+        }
+        for finding in [*errors, *warnings]:
+            finding.validator_id = self.VALIDATOR_ID
+            finding.rule_id = rule_ids.get(str(finding.code).split(".")[-1], "ROM-004")
         exec_time = self._stop_timer()
         return ValidationResult(
             validator_id=self.VALIDATOR_ID,

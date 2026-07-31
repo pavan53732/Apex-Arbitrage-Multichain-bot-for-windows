@@ -1,5 +1,6 @@
 ---
 metadata_schema_version: 1.0
+governance_version: 2.0.0
 document_id: DOC-0001
 title: AGENTS
 plane: Repository Operating Model

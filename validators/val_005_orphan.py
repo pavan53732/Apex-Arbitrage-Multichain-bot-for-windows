@@ -82,7 +82,7 @@ class Validator(BaseValidator):
                     # Allow some concepts to not be in READMEs (e.g., internal registry concepts)
                     if concept.domain not in ("Registries", "Standards", "Validation", "Traceability", "Workflows"):
                         warnings.append(ValidationWarning(
-                            code=ErrorCode.ORPHANED_ACTIVE_CONCEPT_WARN,
+                            code=ErrorCode.CONCEPT_NOT_IN_DOMAIN_NAVIGATION_WARN,
                             file="",
                             line=1,
                             message=f"Active concept {concept_id} not listed in any domain README Canonical Owner Map",
@@ -103,10 +103,10 @@ class Validator(BaseValidator):
                     # Check if it's explicitly standalone (e.g., root README, AGENTS.md)
                     if entry.path not in ("README.md", "AGENTS.md", "REBUILD-SYSTEM-SPECIFICATION.md", "REPOSITORY-EXECUTION-MODEL.md"):
                         warnings.append(ValidationWarning(
-                            code=ErrorCode.ORPHANED_CANONICAL_DOCUMENT,
+                            code=ErrorCode.NO_INBOUND_DOCUMENT_TRACEABILITY_WARN,
                             file=entry.path,
                             line=1,
-                            message=f"Active document {doc_id} has no inbound traceability relationships",
+                            message=format_error(ErrorCode.NO_INBOUND_DOCUMENT_TRACEABILITY_WARN, doc_id=doc_id),
                             severity="WARNING",
                             rule="Active documents should have traceability relationships",
                             suggestion=f"Add traceability from consuming documents to {doc_id}"

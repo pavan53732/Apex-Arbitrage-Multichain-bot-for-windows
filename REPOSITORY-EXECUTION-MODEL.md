@@ -300,3 +300,23 @@ It is the canonical source for repository execution policy.
 This repository is intentionally local-first.
 
 Its goal is explicit human and AI control, not autonomous automation.
+
+
+## Governance Version and Immutable Rules
+
+**Governance Version: 2.0.0.** Major versions are reserved for rare breaking governance-model changes; minor versions add append-only rules or validator capabilities; patch versions cover wording, clarifications, heuristic improvements, validator messages, and documentation corrections.
+
+Governance rule IDs are immutable, append-only, never renumbered, reused, or reassigned:
+
+- ROM-001 — exactly one canonical owner per concept.
+- ROM-002 — every tracked document has a stable Document ID.
+- ROM-003 — every tracked concept has a stable Concept ID.
+- ROM-004 — registries and canonical navigation reflect repository state.
+- ROM-005 — required metadata is complete and valid.
+- ROM-006 — cross-references resolve.
+- ROM-007 — traceability endpoints and relationship types are valid.
+- ROM-008 — plane, domain, authority, class, and placement comply.
+- ROM-009 — canonical authority is consistent.
+- ROM-010 — generated execution artifacts are not canonical sources.
+- ROM-011 — CI/CD and GitHub Actions are prohibited.
+- ROM-012 — temporary execution artifacts and workspace clutter are prohibited.

@@ -168,13 +168,18 @@ class Validator(BaseValidator):
             # Index documents should have navigation/lists
             if doc_class == "Index":
                 checked += 1
-                has_list = any(line.strip().startswith("- ") or line.strip().startswith("* ") for line in body.split("\n"))
-                if not has_list:
+                has_navigation = (
+                    any(line.strip().startswith(("- ", "* ", "|")) for line in body.split("\n"))
+                    or "](" in body
+                    or "cross-reference" in body.lower()
+                    or "navigation" in body.lower()
+                )
+                if not has_navigation:
                     warnings.append(ValidationWarning(
-                        code=ErrorCode.CLASS_MISMATCH,
+                        code=ErrorCode.INDEX_LAYOUT_HEURISTIC_WARN,
                         file=rel_str,
                         line=1,
-                        message=f"Index document {metadata.get('document_id')} lacks navigation lists",
+                        message=format_error(ErrorCode.INDEX_LAYOUT_HEURISTIC_WARN, doc_id=doc_id),
                         severity="WARNING",
                         rule="Index documents should contain navigation lists",
                         suggestion="Add document lists or change class"
