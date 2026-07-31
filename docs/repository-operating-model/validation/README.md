@@ -12,8 +12,12 @@ version: 1.0.0
 canonical_source: REPOSITORY-EXECUTION-MODEL.md
 related_concepts:
   - CONCEPT-0004
+  - CONCEPT-0066
+  - CONCEPT-0078
 dependencies:
   - DOC-0004
+  - DOC-0066
+  - DOC-0078
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -31,7 +35,7 @@ Local-first validation expectations and quality gates for repository knowledge.
 
 ## What belongs here
 
-Validation policy, local quality-gate descriptions, and validation specification references.
+Validation policy, local quality-gate descriptions, validation specification, validator architecture specification, and validator implementations.
 
 ## What does not belong here
 
@@ -63,7 +67,8 @@ Validation defines quality gates for all repository knowledge. It is governed by
 - Folder README: (self)
 
 Documents:
-- (No additional documents in this folder)
+- [Validation Specification](./validation-specification.md) — Specification
+- [Validator Architecture Specification](./validator-architecture-specification.md) — Specification
 
 ## Before adding a document here
 

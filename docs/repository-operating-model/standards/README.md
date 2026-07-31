@@ -27,6 +27,7 @@ related_concepts:
   - CONCEPT-0075
   - CONCEPT-0076
   - CONCEPT-0077
+  - CONCEPT-0078
 dependencies:
   - DOC-0052
   - DOC-0053
@@ -44,6 +45,7 @@ dependencies:
   - DOC-0075
   - DOC-0076
   - DOC-0077
+  - DOC-0078
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -57,11 +59,11 @@ owned_domains: []
 
 ## Purpose and scope
 
-Repository standards for canonical sources, dependencies, coding, contributions, README governance, validation, registry governance, document lifecycle, concept lifecycle, and AI agent governance.
+Repository standards for canonical sources, dependencies, coding, contributions, README governance, validation, registry governance, document lifecycle, concept lifecycle, AI agent governance, and validator architecture.
 
 ## What belongs here
 
-Policy documents constraining documentation, repository changes, coding practices, README structure, validation, registry operations, document lifecycle, concept lifecycle, and AI agent behavior.
+Policy documents constraining documentation, repository changes, coding practices, README structure, validation, registry operations, document lifecycle, concept lifecycle, AI agent behavior, and validator implementation architecture.
 
 ## What does not belong here
 
@@ -98,6 +100,7 @@ Documents:
 - [Dependency Authority Rules](./dependency-authority-rules.md) — Policy
 - [README Governance Standard](./readme-governance-standard.md) — Policy
 - [Validation Specification](../validation/validation-specification.md) — Specification
+- [Validator Architecture Specification](../validation/validator-architecture-specification.md) — Specification
 - [Registry Governance Standard](../registries/registry-governance-standard.md) — Policy
 - [Document Lifecycle Policy](../documentation-lifecycle/document-lifecycle-policy.md) — Policy
 - [Concept Lifecycle Policy](../registries/concept-lifecycle-policy.md) — Policy
