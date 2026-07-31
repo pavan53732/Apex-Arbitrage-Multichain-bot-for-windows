@@ -51,4 +51,4 @@ Product feature governance or temporary audit notes.
 
 | Document ID | Title | Class | Authority | Status |
 | --- | --- | --- | --- | --- |
-| DOC-0012 | [Governance](./readme-governance.md) | Guide | Derived | Active |
+| DOC-0012 | [Governance](./governance-overview.md) | Guide | Derived | Active |

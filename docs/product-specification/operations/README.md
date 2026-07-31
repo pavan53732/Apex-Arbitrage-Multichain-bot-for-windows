@@ -52,8 +52,8 @@ Repository task execution.
 | Document ID | Title | Class | Authority | Status |
 | --- | --- | --- | --- | --- |
 | DOC-0333 | [Diagnostics](./diagnostics.md) | Specification | Canonical | Active |
-| DOC-0334 | [Error Handling Logging](./error-handling-logging.md) | Specification | Canonical | Active |
-| DOC-0335 | [Healthchecks](./healthchecks.md) | Specification | Canonical | Active |
+| DOC-0334 | [Error Handling and Logging](./error-handling-and-logging.md) | Specification | Canonical | Active |
+| DOC-0335 | [Health Checks](./health-checks.md) | Specification | Canonical | Active |
 | DOC-0336 | [Monitoring Observability](./monitoring-observability.md) | Specification | Canonical | Active |
 | DOC-0337 | [Recovery Coordination](./recovery-coordination.md) | Specification | Canonical | Active |
 | DOC-0338 | [Runtime Operations](./runtime-operations.md) | Specification | Canonical | Active |

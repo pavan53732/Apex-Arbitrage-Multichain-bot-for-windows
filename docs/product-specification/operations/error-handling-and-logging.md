@@ -1,7 +1,7 @@
 ---
 metadata_schema_version: 1.0
 document_id: DOC-0334
-title: Error Handling Logging
+title: Error Handling and Logging
 plane: Product Specification
 domain: Operations
 class: Specification
@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Ops Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/error-handling-logging.md
+canonical_source: docs/product-specification/operations/error-handling-and-logging.md
 related_concepts:
   - CONCEPT-0334
 dependencies: []
@@ -27,7 +27,7 @@ purpose: "Defines the canonical error namespace map, error taxonomy, retry class
 scope: None
 ---
 
-# Error Handling Logging
+# Error Handling and Logging
 
 ## Document type
 Document type: [CONTRACT]

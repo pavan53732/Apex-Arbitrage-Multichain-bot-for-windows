@@ -1,7 +1,7 @@
 ---
 metadata_schema_version: 1.0
 document_id: DOC-0335
-title: Healthchecks
+title: Health Checks
 plane: Product Specification
 domain: Operations
 class: Specification
@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/operations/healthchecks.md
+canonical_source: docs/product-specification/operations/health-checks.md
 related_concepts:
   - CONCEPT-0335
 dependencies: []
@@ -26,7 +26,7 @@ purpose: "Defines concrete health probe definitions — check name, target, meth
 scope: None
 ---
 
-# Healthchecks
+# Health Checks
 
 ## Document type
 Document type: [CONTRACT]

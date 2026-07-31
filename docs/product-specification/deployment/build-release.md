@@ -1,7 +1,7 @@
 ---
 metadata_schema_version: 1.0
 document_id: DOC-0222
-title: Build Release CI/CD
+title: Build Release
 plane: Product Specification
 domain: Deployment
 class: Reference
@@ -9,7 +9,7 @@ authority: Canonical
 status: Active
 owner: UI Team
 version: 1.0.0
-canonical_source: docs/product-specification/deployment/build-release-cicd.md
+canonical_source: docs/product-specification/deployment/build-release.md
 related_concepts:
   - CONCEPT-0222
 dependencies: []
@@ -26,12 +26,12 @@ purpose: Build Release Cicd documentation.
 scope: Reference documentation.
 ---
 
-# Build Release Cicd
+# Build Release
 
 ## Document type
 This document is an overview, reference, or index as noted below.
 
-# Build Release CICD
+# Build Release
 
 ## Purpose
 Defines build, test, package, sign, and release stages for the Windows app.

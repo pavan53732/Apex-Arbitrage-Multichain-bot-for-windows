@@ -43,7 +43,7 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0009 | [Historical README](../../historical/README.md) | Index | CONCEPT-0003 | DOC-0003 |  |
 | DOC-0010 | [Repository Operating Model README](../README.md) | Index | CONCEPT-0003 | DOC-0003 |  |
 | DOC-0011 | [Governance README](../governance/README.md) | Index | CONCEPT-0003 | DOC-0003 |  |
-| DOC-0012 | [Governance](../governance/readme-governance.md) | Owner | CONCEPT-0012 |  |  |
+| DOC-0012 | [Governance](../governance/governance-overview.md) | Owner | CONCEPT-0012 |  |  |
 | DOC-0013 | [Programme 3 Closure Orchestrator](../../historical/programme-3-closure-orchestrator.md) | Historical Reference | CONCEPT-0003 | DOC-0003 |  |
 | DOC-0014 | [Programme 3 Repair Planner](../../historical/programme-3-repair-planner.md) | Historical Reference | CONCEPT-0003 | DOC-0003 |  |
 | DOC-0015 | [Project Tree Complete](../../historical/project-tree-complete.md) | Historical Reference | CONCEPT-0003 | DOC-0003 |  |
@@ -171,7 +171,7 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0219 | [Windows Deployment](../../product-specification/deployment/windows-deployment.md) | Owner | CONCEPT-0219 |  |  |
 | DOC-0220 | [Deployment README](../../product-specification/deployment/README.md) | Index | CONCEPT-0224 | DOC-0224 |  |
 | DOC-0221 | [App Builder Deployment Guide](../../product-specification/deployment/app-builder-deployment-guide.md) | Owner | CONCEPT-0221 |  |  |
-| DOC-0222 | [Build Release CI/CD](../../product-specification/deployment/build-release-cicd.md) | Owner | CONCEPT-0222 |  |  |
+| DOC-0222 | [Build Release](../../product-specification/deployment/build-release.md) | Owner | CONCEPT-0222 |  |  |
 | DOC-0223 | [Code Signing](../../product-specification/deployment/code-signing.md) | Owner | CONCEPT-0223 |  |  |
 | DOC-0224 | [Deployment](../../product-specification/deployment/deployment.md) | Owner | CONCEPT-0224 |  | DOC-0220 |
 | DOC-0225 | [Versioning](../../product-specification/deployment/versioning.md) | Owner | CONCEPT-0225 |  |  |
@@ -283,8 +283,8 @@ Regenerated from semantic dependencies, canonical-source ownership, and concept 
 | DOC-0331 | [Token Discovery](../../product-specification/market/token-discovery.md) | Owner | CONCEPT-0331 |  |  |
 | DOC-0332 | [Token Intelligence](../../product-specification/market/token-intelligence.md) | Owner | CONCEPT-0332 |  |  |
 | DOC-0333 | [Diagnostics](../../product-specification/operations/diagnostics.md) | Owner | CONCEPT-0333 |  |  |
-| DOC-0334 | [Error Handling Logging](../../product-specification/operations/error-handling-logging.md) | Owner | CONCEPT-0334 |  | DOC-0362 |
-| DOC-0335 | [Healthchecks](../../product-specification/operations/healthchecks.md) | Owner | CONCEPT-0335 |  |  |
+| DOC-0334 | [Error Handling and Logging](../../product-specification/operations/error-handling-and-logging.md) | Owner | CONCEPT-0334 |  | DOC-0362 |
+| DOC-0335 | [Health Checks](../../product-specification/operations/health-checks.md) | Owner | CONCEPT-0335 |  |  |
 | DOC-0336 | [Monitoring Observability](../../product-specification/operations/monitoring-observability.md) | Owner | CONCEPT-0336 |  |  |
 | DOC-0337 | [Recovery Coordination](../../product-specification/operations/recovery-coordination.md) | Owner | CONCEPT-0337 |  |  |
 | DOC-0338 | [Runtime Operations](../../product-specification/operations/runtime-operations.md) | Owner | CONCEPT-0338 |  | DOC-0342 |
