@@ -2,14 +2,14 @@
 metadata_schema_version: 1.0
 document_id: DOC-0093
 title: Service Registry
-plane: Product Specification
-domain: Runtime
+plane: Repository Operating Model
+domain: Registries
 class: Registry
 authority: Canonical
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/runtime/service-registry.md
+canonical_source: docs/repository-operating-model/registries/service-registry.md
 related_concepts:
   - CONCEPT-0093
 dependencies: []
