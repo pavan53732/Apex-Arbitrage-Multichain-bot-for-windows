@@ -14,10 +14,14 @@ related_concepts:
   - CONCEPT-0007
   - CONCEPT-0006
   - CONCEPT-0008
+  - CONCEPT-0067
+  - CONCEPT-0069
 dependencies:
   - DOC-0007
   - DOC-0006
   - DOC-0008
+  - DOC-0067
+  - DOC-0069
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -35,7 +39,7 @@ Canonical repository knowledge registries for concepts, documents, and semantic 
 
 ## What belongs here
 
-Registry definitions, registry versioning, and registry usage references.
+Registry definitions, registry versioning, registry usage references, and registry governance policies.
 
 ## What does not belong here
 
@@ -52,6 +56,7 @@ Generated reports, temporary audit files, caches, or product-domain data registr
 - Registry
 - Index
 - Reference
+- Policy
 
 ## Relationship to adjacent domains
 
@@ -69,6 +74,8 @@ Documents:
 - [Concept Registry](./CONCEPT-REGISTRY.md) — Registry
 - [Document Registry](./DOCUMENT-REGISTRY.md) — Registry
 - [Traceability Registry](./TRACEABILITY-REGISTRY.md) — Registry
+- [Registry Governance Standard](./registry-governance-standard.md) — Policy
+- [Concept Lifecycle Policy](./concept-lifecycle-policy.md) — Policy
 
 ## Registry versioning
 

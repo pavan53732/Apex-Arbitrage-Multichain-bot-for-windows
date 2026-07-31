@@ -15,11 +15,19 @@ related_concepts:
   - CONCEPT-0053
   - CONCEPT-0054
   - CONCEPT-0065
+  - CONCEPT-0066
+  - CONCEPT-0067
+  - CONCEPT-0068
+  - CONCEPT-0069
 dependencies:
   - DOC-0052
   - DOC-0053
   - DOC-0054
   - DOC-0065
+  - DOC-0066
+  - DOC-0067
+  - DOC-0068
+  - DOC-0069
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -33,11 +41,11 @@ owned_domains: []
 
 ## Purpose and scope
 
-Repository standards for canonical sources, dependencies, coding, contributions, and README governance.
+Repository standards for canonical sources, dependencies, coding, contributions, README governance, validation, registry governance, document lifecycle, and concept lifecycle.
 
 ## What belongs here
 
-Policy documents constraining documentation, repository changes, coding practices, and README structure.
+Policy documents constraining documentation, repository changes, coding practices, README structure, validation, registry operations, document lifecycle, and concept lifecycle.
 
 ## What does not belong here
 
@@ -73,6 +81,10 @@ Documents:
 - [Coding Standards](./coding-standards.md) — Policy
 - [Dependency Authority Rules](./dependency-authority-rules.md) — Policy
 - [README Governance Standard](./readme-governance-standard.md) — Policy
+- [Validation Specification](../validation/validation-specification.md) — Specification
+- [Registry Governance Standard](../registries/registry-governance-standard.md) — Policy
+- [Document Lifecycle Policy](../documentation-lifecycle/document-lifecycle-policy.md) — Policy
+- [Concept Lifecycle Policy](../registries/concept-lifecycle-policy.md) — Policy
 
 ## Before adding a document here
 

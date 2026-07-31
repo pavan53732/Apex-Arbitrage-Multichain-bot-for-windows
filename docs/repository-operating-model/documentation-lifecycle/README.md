@@ -14,10 +14,12 @@ related_concepts:
   - CONCEPT-0056
   - CONCEPT-0057
   - CONCEPT-0059
+  - CONCEPT-0068
 dependencies:
   - DOC-0056
   - DOC-0057
   - DOC-0059
+  - DOC-0068
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -35,7 +37,7 @@ Lifecycle, index, and review workflow for durable documentation in the repositor
 
 ## What belongs here
 
-Documentation lifecycle policy, documentation map, status review workflow, and navigation surfaces.
+Documentation lifecycle policy, documentation map, status review workflow, document lifecycle policy, and navigation surfaces.
 
 ## What does not belong here
 
@@ -53,6 +55,7 @@ Temporary migration/audit/completion reports, generated documentation, or produc
 - Workflow
 - Guide
 - Reference
+- Policy
 
 ## Relationship to adjacent domains
 
@@ -70,6 +73,7 @@ Documents:
 - [Documentation Lifecycle](./documentation-lifecycle.md) — Workflow
 - [Documentation Status Review Workflow](./documentation-status-review-workflow.md) — Workflow
 - [Documentation Map](./documentation-map.md) — Index
+- [Document Lifecycle Policy](./document-lifecycle-policy.md) — Policy
 
 ## Before adding a document here
 
