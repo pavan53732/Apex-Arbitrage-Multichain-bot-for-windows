@@ -1,17 +1,17 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0308
-title: Oracle Registry
-plane: Product Specification
-domain: Market
+document_id: DOC-0307
+title: DEX Registry
+plane: Repository Operating Model
+domain: Registries
 class: Registry
 authority: Canonical
 status: Active
 owner: Trading Team
 version: 1.0.0
-canonical_source: docs/product-specification/market/tokens/oracle-registry.md
+canonical_source: docs/repository-operating-model/registries/dex-registry.md
 related_concepts:
-  - CONCEPT-0308
+  - CONCEPT-0307
 dependencies: []
 consumers: []
 validator_coverage: []
@@ -22,11 +22,11 @@ concept_role: Owner
 owned_domains:
   - Market
 type: CONTRACT
-purpose: Defines oracle registry.
-scope: Oracle listing and metadata.
+purpose: Defines DEX registry.
+scope: DEX listing and metadata.
 ---
 
-# Oracle Registry
+# Dex Registry
 
 ## Document type
 Document type: [CONTRACT]
@@ -35,36 +35,36 @@ Document type: [CONTRACT]
 **Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
 
 ## Purpose
-Defines the authoritative registry of supported oracle sources and fallback order.
+Defines the authoritative registry of supported DEXs and their capabilities.
 
 ## Scope
-This registry is descriptive and feeds market data, routing, slippage, and risk decisions.
+This registry is descriptive and feeds routing, liquidity, execution, and market data decisions.
 
 ## Fields
-- Oracle name.
+- DEX name.
 - Chain id.
-- Feed identifiers.
-- Supported assets.
-- Update cadence.
-- Confidence policy.
-- Fallback priority.
-- Health status.
+- Router address.
+- Factory address.
+- Pool types.
+- Fee tiers.
+- Version.
+- Capability flags.
 
 ## Cross-references
-- `../core/market-data.md`
+- `./dex-integration.md`
+- `../routing/routing-engine.md`
 - `../routing/liquidity-analysis.md`
-- `../routing/slippage-model.md`
-- `../../execution/risk-policy/risk-engine.md`
+- `../core/market-data.md`
 - `../../data/persistence/database-schema.md`
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.
 
 ## Interface Contract
-Defines oracle identity, feed metadata, heartbeat expectations, and versioned feed configuration.
+Defines DEX identity, pool coverage, supported routes, status, and versioned metadata.
 
 ## Example
-A price oracle entry includes chain, feed id, heartbeat, and status.
+A DEX entry includes router address, supported features, and chain associations.
 
 ---
 

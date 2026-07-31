@@ -1,17 +1,17 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0307
-title: DEX Registry
-plane: Product Specification
+document_id: DOC-0306
+title: Chain Registry
+plane: Repository Operating Model
 domain: Market
 class: Registry
 authority: Canonical
 status: Active
 owner: Trading Team
 version: 1.0.0
-canonical_source: docs/product-specification/market/dex/dex-registry.md
+canonical_source: docs/repository-operating-model/registries/chain-registry.md
 related_concepts:
-  - CONCEPT-0307
+  - CONCEPT-0306
 dependencies: []
 consumers: []
 validator_coverage: []
@@ -22,11 +22,11 @@ concept_role: Owner
 owned_domains:
   - Market
 type: CONTRACT
-purpose: Defines DEX registry.
-scope: DEX listing and metadata.
+purpose: Defines chain registry.
+scope: Chain listing and metadata.
 ---
 
-# Dex Registry
+# Chain Registry
 
 ## Document type
 Document type: [CONTRACT]
@@ -35,36 +35,38 @@ Document type: [CONTRACT]
 **Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
 
 ## Purpose
-Defines the authoritative registry of supported DEXs and their capabilities.
+Defines the authoritative registry of supported chains and chain-level capabilities.
 
 ## Scope
-This registry is descriptive and feeds routing, liquidity, execution, and market data decisions.
+This registry is descriptive and feeds chain integration, routing, wallet, gas, and deployment decisions.
 
 ## Fields
-- DEX name.
+- Chain name.
 - Chain id.
-- Router address.
-- Factory address.
-- Pool types.
-- Fee tiers.
-- Version.
-- Capability flags.
+- RPC endpoints.
+- Explorer URL.
+- Native token.
+- Gas model.
+- Supported DEXs.
+- Flash loan support.
+- Finality profile.
+- Feature flags.
 
 ## Cross-references
-- `./dex-integration.md`
+- `./chain-integration.md`
 - `../routing/routing-engine.md`
-- `../routing/liquidity-analysis.md`
-- `../core/market-data.md`
+- `../../execution/wallet-portfolio/wallet-management.md`
+- `../routing/gas-optimisation.md`
 - `../../data/persistence/database-schema.md`
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.
 
 ## Interface Contract
-Defines DEX identity, pool coverage, supported routes, status, and versioned metadata.
+Defines chain identity, metadata, status, endpoints, capabilities, and versioned chain configuration.
 
 ## Example
-A DEX entry includes router address, supported features, and chain associations.
+A chain entry lists chain id, name, RPCs, explorers, and active status.
 
 ---
 

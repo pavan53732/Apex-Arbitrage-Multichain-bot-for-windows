@@ -1,20 +1,19 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0309
-title: Token Registry
-plane: Product Specification
+document_id: DOC-0308
+title: Oracle Registry
+plane: Repository Operating Model
 domain: Market
 class: Registry
 authority: Canonical
 status: Active
 owner: Trading Team
 version: 1.0.0
-canonical_source: docs/product-specification/market/tokens/token-registry.md
+canonical_source: docs/repository-operating-model/registries/oracle-registry.md
 related_concepts:
-  - CONCEPT-0309
+  - CONCEPT-0308
 dependencies: []
-consumers:
-  - DOC-0416
+consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
@@ -23,11 +22,11 @@ concept_role: Owner
 owned_domains:
   - Market
 type: CONTRACT
-purpose: Defines token registry.
-scope: Token listing and metadata.
+purpose: Defines oracle registry.
+scope: Oracle listing and metadata.
 ---
 
-# Token Registry
+# Oracle Registry
 
 ## Document type
 Document type: [CONTRACT]
@@ -36,36 +35,36 @@ Document type: [CONTRACT]
 **Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
 
 ## Purpose
-Defines the authoritative registry of tracked tokens and token metadata.
+Defines the authoritative registry of supported oracle sources and fallback order.
 
 ## Scope
-This registry is descriptive and feeds market data, routing, wallet, portfolio, and risk workflows.
+This registry is descriptive and feeds market data, routing, slippage, and risk decisions.
 
 ## Fields
-- Token symbol.
-- Contract address.
+- Oracle name.
 - Chain id.
-- Decimals.
-- Asset type.
-- Wrapped/native relationship.
-- Stablecoin flag.
-- Display name.
+- Feed identifiers.
+- Supported assets.
+- Update cadence.
+- Confidence policy.
+- Fallback priority.
+- Health status.
 
 ## Cross-references
 - `../core/market-data.md`
-- `../../execution/wallet-portfolio/asset-management.md`
-- `../../execution/wallet-portfolio/portfolio-management.md`
-- `../../execution/wallet-portfolio/wallet-management.md`
+- `../routing/liquidity-analysis.md`
+- `../routing/slippage-model.md`
+- `../../execution/risk-policy/risk-engine.md`
 - `../../data/persistence/database-schema.md`
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.
 
 ## Interface Contract
-Defines token metadata, chain association, address validation, status, and versioned token records.
+Defines oracle identity, feed metadata, heartbeat expectations, and versioned feed configuration.
 
 ## Example
-A token entry stores symbol, decimals, chain id, and active status.
+A price oracle entry includes chain, feed id, heartbeat, and status.
 
 ---
 
