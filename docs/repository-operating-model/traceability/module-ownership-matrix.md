@@ -79,4 +79,4 @@ This document is the authoritative source for which domain owns every major conc
 ## Related Documents
 - [Concept Registry](../registries/CONCEPT-REGISTRY.md)
 - [Document Registry](../registries/DOCUMENT-REGISTRY.md)
-- [REBUILD-SYSTEM-SPECIFICATION.md](../../REBUILD-SYSTEM-SPECIFICATION.md)
+- [REBUILD-SYSTEM-SPECIFICATION.md](../../../REBUILD-SYSTEM-SPECIFICATION.md)

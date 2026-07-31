@@ -41,7 +41,7 @@ CI/CD, scheduled automation, bots, logs, or generated workflow output.
 
 | Subdomain | Concept ID | Canonical Owner | README |
 | --- | --- | --- | --- |
-| workflows | CONCEPT-0004 | [REPOSITORY-EXECUTION-MODEL.md](../../REPOSITORY-EXECUTION-MODEL.md) | (self) |
+| workflows | CONCEPT-0004 | [REPOSITORY-EXECUTION-MODEL.md](../.>/../REPOSITORY-EXECUTION-MODEL.md) | (self) |
 
 ## Document classes expected
 
@@ -59,7 +59,7 @@ Workflows defines how work happens in the repository. It is governed by REPOSITO
 ### workflows
 
 - Concept: `CONCEPT-0004`
-- Canonical Owner: [REPOSITORY-EXECUTION-MODEL.md](../../REPOSITORY-EXECUTION-MODEL.md)
+- Canonical Owner: [REPOSITORY-EXECUTION-MODEL.md](../.>/../REPOSITORY-EXECUTION-MODEL.md)
 - Folder README: (self)
 
 Documents:
