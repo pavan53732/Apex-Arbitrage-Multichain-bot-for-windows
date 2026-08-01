@@ -43,9 +43,9 @@ Defines the complete engine lifecycle state machine — states, transitions, tim
 
 ```mermaid
 stateDiagram-v2
-  [*] --> INITIALISING
-  INITIALISING --> READY: all subsystems report ready
-  INITIALISING --> FAILED: critical subsystem fails to initialize
+  [*] --> INITIALIZING
+  INITIALIZING --> READY: all subsystems report ready
+  INITIALIZING --> FAILED: critical subsystem fails to initialize
   READY --> RUNNING: trading mode enabled
   RUNNING --> DEGRADED: non-critical subsystem fails
   RUNNING --> RECOVERING: subsystem failure detected, auto-recovery started
@@ -55,7 +55,7 @@ stateDiagram-v2
   RECOVERING --> RUNNING: recovery successful
   RECOVERING --> DEGRADED: recovery partial (some subsystems restored)
   RECOVERING --> FAILED: recovery exhausted, critical subsystem still down
-  FAILED --> INITIALISING: operator-initiated restart
+  FAILED --> INITIALIZING: operator-initiated restart
   FAILED --> STOPPED: operator-initiated full shutdown
   STOPPED --> [*]
 ```
@@ -66,7 +66,7 @@ stateDiagram-v2
 
 | State | Description | Entry Condition | Exit Condition | Timeout | Persistent? |
 |-------|-------------|-----------------|----------------|---------|-------------|
-| **INITIALISING** | Engine is loading config, starting subsystems, establishing connections | Process start or operator restart | All subsystems reach READY or a critical subsystem fails | `runtime.startup_timeout_ms` (60s) | No (transient) |
+| **INITIALIZING** | Engine is loading config, starting subsystems, establishing connections | Process start or operator restart | All subsystems reach READY or a critical subsystem fails | `runtime.startup_timeout_ms` (60s) | No (transient) |
 | **READY** | All subsystems initialized; trading not yet active | All subsystem latch countdown complete | Trading mode switch to `Active` | None (stable) | Yes |
 | **RUNNING** | Engine is fully operational; trading active | Trading mode enabled | Subsystem failure or shutdown command | None (stable) | Yes |
 | **DEGRADED** | One or more non-critical subsystems are down; core trading may continue | Non-critical health check fails | Recovery completes or shutdown | `runtime.degraded_timeout_ms` (300s) — if exceeded, transition to RECOVERING | Yes |
@@ -82,8 +82,8 @@ stateDiagram-v2
 
 | From | To | Trigger | Precondition | Postcondition | Event Emitted |
 |------|----|---------|--------------|---------------|---------------|
-| INITIALISING | READY | All subsystems report `READY` | Config valid; secrets loaded; DB connected; event bus started; RPC connections established | Engine state persisted as `READY` | `runtime.started` |
-| INITIALISING | FAILED | Critical subsystem fails to initialize | Any subsystem fails `runtime.startup_timeout_ms` | Failed subsystem isolated; startup abort logged | `system.error` (severity Critical) |
+| INITIALIZING | READY | All subsystems report `READY` | Config valid; secrets loaded; DB connected; event bus started; RPC connections established | Engine state persisted as `READY` | `runtime.started` |
+| INITIALIZING | FAILED | Critical subsystem fails to initialize | Any subsystem fails `runtime.startup_timeout_ms` | Failed subsystem isolated; startup abort logged | `system.error` (severity Critical) |
 | READY | RUNNING | Trading mode switched to `Active` | Risk engine loaded; wallet initialized; market data subscribed | Trading engine accepts opportunities | `runtime.mode.transition` (READY → RUNNING) |
 | RUNNING | DEGRADED | Non-critical subsystem health check fails | Failed subsystem is NOT trading, wallet, or risk | Trading continues; failed subsystem isolated | `runtime.health.failed` |
 | RUNNING | RECOVERING | Subsystem failure detected, auto-recovery enabled | `runtime.failover.enabled` = true | Failed subsystem under recovery management | `runtime.failover.started` |
@@ -93,7 +93,7 @@ stateDiagram-v2
 | RECOVERING | RUNNING | Recovery successful | Health check confirms subsystem restored | All subsystems operational; trading resumes | `runtime.health.restored` + `runtime.failover.completed` |
 | RECOVERING | DEGRADED | Partial recovery | Some subsystems restored, some still down | Trading resumes with limitations; still-degraded subsystems logged | `system.warning` (partial recovery) |
 | RECOVERING | FAILED | Recovery exhausted | All recovery attempts failed; critical subsystem still down | Engine cannot operate; operator intervention required | `system.error` (recovery exhausted) |
-| FAILED | INITIALISING | Operator restart | Operator command or scheduled restart | Fresh startup sequence begins | `runtime.starting` |
+| FAILED | INITIALIZING | Operator restart | Operator command or scheduled restart | Fresh startup sequence begins | `runtime.starting` |
 | FAILED | STOPPED | Operator full shutdown | Operator command | Process terminates | `runtime.stopped` |
 
 ### Forbidden Transitions
@@ -101,10 +101,10 @@ stateDiagram-v2
 | From | To | Reason |
 |------|----|--------|
 | FAILED | RUNNING | Cannot jump to running without re-initializing |
-| RUNNING | INITIALISING | Cannot re-init without stopping first |
-| STOPPED | RUNNING | Must go through INITIALISING → READY → RUNNING |
-| FAILED | READY | Must go through INITIALISING |
-| DEGRADED | INITIALISING | Must stop first, then re-initialize |
+| RUNNING | INITIALIZING | Cannot re-init without stopping first |
+| STOPPED | RUNNING | Must go through INITIALIZING → READY → RUNNING |
+| FAILED | READY | Must go through INITIALIZING |
+| DEGRADED | INITIALIZING | Must stop first, then re-initialize |
 
 ### Recovery Transitions
 
@@ -129,7 +129,7 @@ The engine uses a `std::latch(6)` to coordinate subsystem startup:
 - AI Pipeline → READY (counts down)
 - Trading Engine → READY (counts down)
 
-All 6 subsystems must reach READY before the engine transitions from INITIALISING → READY. If any subsystem fails within `runtime.startup_timeout_ms`, the engine transitions to FAILED.
+All 6 subsystems must reach READY before the engine transitions from INITIALIZING → READY. If any subsystem fails within `runtime.startup_timeout_ms`, the engine transitions to FAILED.
 
 ### Shutdown Sequence
 On shutdown, subsystems are stopped in reverse dependency order:
@@ -144,7 +144,7 @@ Engine transitions to STOPPED after all subsystems acknowledge.
 
 ### Config Reload Coupling
 - Engine in RUNNING state: hot-reload keys are applied immediately.
-- Engine in INITIALISING: all config applied on startup.
+- Engine in INITIALIZING: all config applied on startup.
 - Engine in FAILED: config reload blocked until operator restarts.
 - Engine in STOPPED: no config reload processing.
 
@@ -169,8 +169,8 @@ Every state transition emits an event:
 
 | Transition | Event | Payload |
 |------------|-------|---------|
-| INITIALISING → READY | `runtime.started` | `{phase_count, total_startup_ms, subsystem_statuses}` |
-| INITIALISING → FAILED | `system.error` | `{subsystem, reason, severity: Critical}` |
+| INITIALIZING → READY | `runtime.started` | `{phase_count, total_startup_ms, subsystem_statuses}` |
+| INITIALIZING → FAILED | `system.error` | `{subsystem, reason, severity: Critical}` |
 | READY → RUNNING | `runtime.mode.transition` | `{from: Ready, to: Running, reason}` |
 | RUNNING → DEGRADED | `runtime.health.failed` | `{subsystem, degraded_capabilities}` |
 | RUNNING → RECOVERING | `runtime.failover.started` | `{subsystem, recovery_strategy}` |

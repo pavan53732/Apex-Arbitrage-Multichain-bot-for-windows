@@ -56,6 +56,80 @@ Provides a single authoritative index tying all major lifecycle state machines t
 
 ---
 
+## 2. State-Machine Vocabulary and Scopes
+
+This section defines the controlled vocabulary for state-machine terminology across APEX. Terms are intentionally scope-specific; do not force different-scope states into a single universal term.
+
+### 2.1 Scope Classification
+
+States are classified into the following scope families:
+
+| Scope Family | Purpose | Example States |
+|--------------|---------|----------------|
+| **System/Runtime States** | System or major subsystem operational state | `INITIALIZING`, `READY`, `RUNNING`, `DEGRADED`, `FAILED`, `RECOVERING`, `STOPPING`, `STOPPED` |
+| **Component/Service Lifecycle States** | Component or service lifecycle | `STARTING`, `REGISTERED`, `HEALTHY`, `PAUSED`, `SUSPENDED`, `RESUMING`, `DISPOSED` |
+| **Worker/Plugin States** | Worker or plugin lifecycle | `SPAWNED`, `IDLE`, `BUSY`, `DRAINING`, `TERMINATED`, `DISCOVERED`, `LOADING`, `INSTALLED`, `UNLOADING`, `UNLOADED`, `ACTIVE` |
+| **Transaction States** | Blockchain transaction lifecycle | `QUEUED`, `SIGNING`, `BROADCASTING`, `IN_MEMPOOL`, `CONFIRMING`, `FINALIZED`, `REVERTED`, `REPLACED`, `STUCK`, `SUBMIT_FAILED`, `RETRYING`, `ABORTED`, `PENDING` |
+| **Execution/Trade/Strategy States** | Trade or strategy execution | `SCANNING`, `SIMULATING`, `EXECUTING`, `VERIFYING`, `SETTLED`, `RETRY`, `IDLE` |
+| **Recovery/Health Conditions** | Health or recovery state | `DEGRADED`, `FAILED`, `RECOVERING`, `DRAINED`, `FLUSHED`, `ALL_FAILED` |
+| **MVP Phase/Gate States** | Phase or gate state | `BOOTING`, `REGISTERING`, `RESOLVING_DEPENDENCIES`, `SHUTTING_DOWN`, `REJECTED` |
+
+### 2.2 Intentional Distinctions
+
+The following terms are **intentionally distinct** and represent different scopes:
+
+| Term | Scope | Definition | Do Not Confuse With |
+|------|-------|------------|---------------------|
+| `ACTIVE` | Worker/Plugin | Enabled/available capability or component participation state | `RUNNING` (system state), `EXECUTING` (transaction/trade) |
+| `READY` | System/Runtime | Initialized and eligible to begin work | `RUNNING` (actively processing), `IDLE` (ready but not working) |
+| `RUNNING` | System/Runtime | Ongoing runtime/component process state | `ACTIVE` (plugin/worker enabled), `EXECUTING` (transaction/trade) |
+| `EXECUTING` | Execution/Trade | Active transaction/trade/execution operation state | `RUNNING` (system/component), `ACTIVE` (plugin/worker) |
+| `DEGRADED` | System/Recovery | Operating with reduced capability or safeguards | `FAILED` (complete failure), `PAUSED` (temporarily suspended) |
+| `RECOVERING` | System/Recovery | Executing recovery actions after a degraded/failure condition | `RESUMING` (resuming from suspension), `RETRYING` (transaction retry) |
+| `FAILED` | All scopes (terminal) | Terminal failure requiring recovery, restart, or operator action | `DEGRADED` (still operational), `RECOVERING` (in recovery) |
+| `STOPPING` | System/Runtime | Controlled shutdown in progress | `STOPPED` (shutdown complete), `DRAINING` (finishing work before shutdown) |
+| `STOPPED` | System/Runtime | Shutdown complete | `STOPPING` (shutdown in progress), `TERMINATED` (forcibly ended) |
+| `IDLE` | Worker/Trade | Ready but not processing | `READY` (initialized and eligible), `PAUSED` (temporarily suspended) |
+| `PAUSED` | System/Worker | Temporarily suspended (can resume) | `SUSPENDED` (may be external trigger), `STOPPED` (shutdown complete) |
+| `PENDING` | Transaction | Transaction pending (generic) | `QUEUED` (specifically queued for submission), `WAITING` (AI state) |
+
+### 2.3 Spelling and Punctuation Normalization
+
+The following mechanical normalizations are applied across all state-machine documents:
+
+| Issue | Correction | Rationale |
+|-------|------------|-----------|
+| `INITIALISING` | `INITIALIZING` | Standardize on US spelling for consistency |
+| `RUNNING:` | `RUNNING` | Remove accidental diagram punctuation from state identifiers |
+| `READY.` | `READY` | Remove trailing punctuation from state names |
+| `FAILED,` | `FAILED` | Remove trailing punctuation from state names |
+| State names in lowercase | Uppercase | Use uppercase state tokens consistently in state tables, diagrams, and transition rules |
+
+**Punctuation in diagrams:** Preserve punctuation only as diagram syntax (e.g., `-->>`, `:`, `.`, `,` in mermaid syntax), never as part of the state name itself.
+
+### 2.4 Common Terminal States
+
+The following states are used consistently across multiple state machines:
+
+| State | Used In | Meaning |
+|-------|---------|---------|
+| `FAILED` | All state machines | Terminal failure requiring recovery, restart, or operator action |
+| `STOPPED` | System, Service, Engine | Shutdown complete (graceful) |
+| `TERMINATED` | Worker, Plugin | Forcibly ended (not graceful) |
+| `RECOVERING` | System, Service, Engine | Executing recovery actions |
+| `DEGRADED` | System, Engine | Operating with reduced capability |
+
+### 2.5 State Naming Conventions
+
+- **Use uppercase for all state names:** `RUNNING`, not `running` or `Running`
+- **Use underscores for multi-word states:** `IN_MEMPOOL`, not `InMempool` or `in_mempool`
+- **Avoid abbreviations:** `INITIALIZING`, not `INIT`
+- **Be explicit about scope:** `EXECUTING` (trade/transaction), not ambiguous `RUNNING`
+
+---
+
+---
+
 ## 2. Inter-State-Machine Coupling
 
 ### Engine → All Other Machines
