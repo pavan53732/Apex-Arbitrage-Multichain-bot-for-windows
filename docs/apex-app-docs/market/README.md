@@ -25,6 +25,8 @@ owned_domains: []
 
 # Market
 
+**Parent:** [Product Specification](../README.md)
+
 ## Purpose and scope
 
 Market data, intelligence, chain/DEX/token/oracle registries, routing, liquidity, gas, MEV, connectivity, and opportunity documentation.

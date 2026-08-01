@@ -24,9 +24,9 @@ concept_role: Owner
 owned_domains:
   - Governance
 type: POLICY
-purpose: "Defines the Repository Execution Model for this repository, explicitly stating the local-first philosophy, prohibition of CI/CD and GitHub Actions, and the human + AI interactive execution workflow."
-scope: "Repository execution, validation execution, commit workflow, local-first tooling, and prohibition of remote automation pipelines."
-audience: "AI agents, maintainers, contributors, and repository architects."
+purpose: "Canonical definition of the repository execution model: local-first execution, validation lifecycle, commit workflow, and prohibition of remote automation."
+scope: "Local-first execution model, validation execution, commit workflow, pre-commit steps, repository invariants, and remote automation prohibition."
+audience: "All contributors, AI agents, and maintainers executing repository operations."
 ---
 
 # REPOSITORY-EXECUTION-MODEL

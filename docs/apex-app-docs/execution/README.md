@@ -25,6 +25,8 @@ owned_domains: []
 
 # Execution
 
+**Parent:** [Product Specification](../README.md)
+
 ## Purpose and scope
 
 Trading, transaction execution, risk and policy gates, wallet/portfolio behavior, and simulation documentation.

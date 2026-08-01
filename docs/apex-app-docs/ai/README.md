@@ -25,6 +25,8 @@ owned_domains: []
 
 # AI
 
+**Parent:** [Product Specification](../README.md)
+
 ## Purpose and scope
 
 Product AI runtime, orchestration, providers, memory, tools, safety, prompts, knowledge, learning, and explainability documentation.

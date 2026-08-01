@@ -2,7 +2,7 @@
 metadata_schema_version: 1.0
 governance_version: 2.0.0
 document_id: DOC-0002
-title: Agent Rules
+title: Repository Operating Rules
 plane: Repository Operating Model
 domain: Agent System
 class: Policy

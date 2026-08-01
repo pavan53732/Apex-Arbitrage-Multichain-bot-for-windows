@@ -2,7 +2,7 @@
 metadata_schema_version: 1.0
 governance_version: 2.0.0
 document_id: DOC-0001
-title: AGENTS
+title: Agent Operating Contract
 plane: Repository Operating Model
 domain: Agent System
 class: Specification
@@ -238,25 +238,9 @@ The repository governance architecture is stable. AI agents must not redesign, r
 
 ## Repository execution model
 
-This repository follows a local-first execution model.
+This repository follows a local-first execution model. All repository work is performed explicitly by humans and AI agents, not by automated workflows or remote pipelines.
 
-All repository operations are executed locally by:
-- human contributors
-- AI coding agents
-- local scripts
-- local validators
-- local development tools
-
-The repository intentionally excludes:
-- GitHub Actions
-- CI/CD pipelines
-- remote automation platforms
-- repository bots
-- scheduled automation
-
-All validation and quality gates are executed explicitly by contributors before committing.
-
-See `./REPOSITORY-EXECUTION-MODEL.md` for the canonical policy.
+For the complete execution model including validation lifecycle, commit workflow, and automation policy, see `./REPOSITORY-EXECUTION-MODEL.md` (canonical source).
 
 ## Temporary Execution Output Policy
 

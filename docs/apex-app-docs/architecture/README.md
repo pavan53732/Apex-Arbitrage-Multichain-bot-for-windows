@@ -25,6 +25,8 @@ owned_domains: []
 
 # Architecture
 
+**Parent:** [Product Specification](../README.md)
+
 ## Purpose and scope
 
 System boundaries, kernel, structure, and cross-system architecture.

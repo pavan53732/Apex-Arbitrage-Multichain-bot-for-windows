@@ -8,7 +8,7 @@ class: Index
 authority: Derived
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 related_concepts:
   - CONCEPT-0003
@@ -20,12 +20,14 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-02
 concept_role: Index
 owned_domains: []
 ---
 
 # Governance
+
+**Parent:** [Repository Operating Model](../README.md)
 
 ## Purpose and scope
 

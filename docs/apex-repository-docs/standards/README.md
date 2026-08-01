@@ -8,7 +8,7 @@ class: Index
 authority: Derived
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-repository-docs/standards/canonical-source-rules.md
 related_concepts:
   - CONCEPT-0052
@@ -50,16 +50,18 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-02
 concept_role: Index
 owned_domains: []
 ---
 
 # Standards
 
+**Parent:** [Repository Operating Model](../README.md)
+
 ## Purpose and scope
 
-Repository standards for canonical sources, dependencies, coding, contributions, README governance, validation, registry governance, document lifecycle, concept lifecycle, AI agent governance, and validator architecture.
+Repository standards that define how to apply governance rules at the document, code, and architecture level. These standards make governance rules actionable through specific practices, naming conventions, metadata requirements, and implementation constraints.
 
 ## What belongs here
 
@@ -84,7 +86,7 @@ Product API or runtime contracts, product configuration schemas, or product feat
 
 ## Relationship to adjacent domains
 
-Standards are consumed by all Repository Operating Model domains and Product Specification domains. Product domains must not redefine repository standards.
+Governance defines rules; Standards defines how to apply them. Governance answers "what should the repository be"; Standards answers "how do we enforce it in practice". Governance is strategic; Standards is tactical. Both domains work together: Governance sets policy, Standards provides implementation guidance.
 
 ## Subdomain navigation
 

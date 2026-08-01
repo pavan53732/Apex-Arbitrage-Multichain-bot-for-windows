@@ -31,9 +31,9 @@ concept_role: Owner
 owned_domains:
   - Governance
 type: SPECIFICATION
-purpose: "Defines the repository knowledge architecture for an AI-agent-ready, docs-governed engineering repository, extending the two-plane model with stable document identity, domain classification, authority separation, canonical registries, and first-class traceability so every document can be identified, related, validated, and safely reorganized."
-scope: "Repository knowledge model, repository operating model, product specification plane, document identity, concept registry, document registry, traceability, validator design, repo hygiene, migration planning, and future rebuild sequencing."
-audience: "AI agents, maintainers, repository architects, automation engineers, and contributors responsible for rebuilding or governing the repository."
+purpose: "Defines the complete repository knowledge architecture and information model: two-plane structure (Repository Operating Model + Product Specification), document identity, domain classification, authority separation, canonical registries, traceability, and validator design."
+scope: "Repository knowledge model, information architecture, two-plane structure, document identity, domain classification, authority model, registries, traceability, validator design, and repository organization."
+audience: "AI agents, maintainers, repository architects, and contributors responsible for understanding repository knowledge architecture and governance."
 ---
 
 # REBUILD-SYSTEM-SPECIFICATION
@@ -81,25 +81,7 @@ This is the true operating model for an AI-agent-ready repository.
 
 ## Repository Execution Model
 
-This repository follows a local-first execution model.
-
-All repository operations are executed by:
-- human contributors
-- AI coding agents
-- local scripts
-- local validators
-- local development tools
-
-The repository intentionally excludes:
-- GitHub Actions
-- CI/CD pipelines
-- remote automation platforms
-- repository bots
-- scheduled automation
-
-All validation and quality gates are executed explicitly by contributors before committing.
-
-This model is defined in `./REPOSITORY-EXECUTION-MODEL.md`.
+This repository follows a local-first execution model. The complete execution model including workflow, validation lifecycle, and repository automation policy is defined in `./REPOSITORY-EXECUTION-MODEL.md`.
 
 ## The three layers of meaning
 

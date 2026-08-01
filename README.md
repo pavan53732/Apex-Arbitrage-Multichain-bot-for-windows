@@ -22,8 +22,8 @@ concept_role: Owner
 owned_domains:
   - Governance
 type: OVERVIEW
-purpose: Readme documentation.
-scope: Reference documentation.
+purpose: Repository entry point, navigation hub, and canonical architecture overview.
+scope: Repository root governance documentation and navigation to all major entry points.
 ---
 
 # Repository README

@@ -29,6 +29,8 @@ owned_domains: []
 
 # Validation
 
+**Parent:** [Repository Operating Model](../README.md)
+
 ## Purpose and scope
 
 Local-first validation expectations and quality gates for repository knowledge.

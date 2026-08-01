@@ -33,6 +33,8 @@ owned_domains: []
 
 # Registries
 
+**Parent:** [Repository Operating Model](../README.md)
+
 ## Purpose and scope
 
 Canonical repository knowledge registries for concepts, documents, and semantic traceability.
