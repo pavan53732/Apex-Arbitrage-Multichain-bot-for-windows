@@ -8,7 +8,7 @@ class: Registry
 authority: Canonical
 status: Active
 owner: Trading Team
-version: 1.0.0
+version: 2.0.0
 canonical_source: docs/apex-app-docs/market/registries/dex-registry.md
 related_concepts:
   - CONCEPT-0307
@@ -17,7 +17,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Market
@@ -33,6 +33,43 @@ Document type: [CONTRACT]
 
 ## Version
 **Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+
+## 0. Provider Trust Boundaries
+
+### DEX Authority Classification
+**Trust Level:** HIGH | **Authority:** EXECUTION_AUTHORITY
+
+**DEX Role:**
+- ✅ Provide executable quotes for trades
+- ✅ Determine actual trade pricing and slippage
+- ✅ Authority for PNL calculation
+- ✅ Source of truth for execution outcomes
+- ❌ NOT validation authority (oracles validate DEX quotes)
+- ❌ NOT analysis authority (AI analyzes but doesn't override)
+
+### Critical Invariants
+- **DEX quotes are execution authority** — actual trade prices come from DEX only
+- **Oracle validation required** — DEX quotes must be within 2% of oracle reference
+- **No single DEX monopoly** — use multiple DEXes for validation and redundancy
+
+### DEX Trust Tiers
+**Tier 1 (HIGH TRUST):**
+- Uniswap V3 (Ethereum, Arbitrum, Optimism, Polygon)
+- PancakeSwap V3 (BSC, Ethereum)
+- SushiSwap (multi-chain)
+- Curve Finance (stablecoin pools)
+
+**Tier 2 (MEDIUM TRUST):**
+-Balancer V2
+- 1inch (aggregator, not direct DEX)
+- Kyber Network
+
+**Tier 3 (LOW TRUST - Use with Caution):**
+- Newer DEXes (< 6 months track record)
+- Low liquidity DEXes (< $1M TVL)
+- DEXes with known exploits or vulnerabilities
+
+---
 
 ## Purpose
 Defines the authoritative registry of supported DEXs and their capabilities.
