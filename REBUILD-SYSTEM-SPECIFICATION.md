@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 4.1.0
+version: 4.2.0
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 related_concepts:
   - CONCEPT-0003
@@ -26,7 +26,7 @@ supersedes:
   - DOC-0014
   - DOC-0015
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Governance
@@ -712,15 +712,29 @@ Folders are implementation details of the knowledge model, not the model itself.
 
 ### Root
 
-The root should contain only repository-level control files and top-level entry points.
+The root contains only repository entry and execution documents:
+
+- README.md
+- AGENTS.md
+- AGENTS_RULES.md
+- REPOSITORY-EXECUTION-MODEL.md
+- REBUILD-SYSTEM-SPECIFICATION.md
+- validators/
+
+No other permanent root-level folders are part of the approved architecture.
 
 ### docs/
 
-docs/ remains the main documentation knowledge base unless a planned structural split is executed later.
+`docs/` is the documentation knowledge base. It contains exactly two permanent documentation roots:
+
+- `docs/apex-repository-docs/` — documentation describing the repository itself (governance, standards, registries, traceability, validation, workflows, contribution, documentation lifecycle, agent system).
+- `docs/apex-app-docs/` — documentation describing the APEX application (architecture, runtime, AI, execution, dashboard, security, windows, plugins, interfaces, testing, state machines).
+
+This is the only approved documentation architecture. No third permanent documentation root may be created under `docs/`. Any additional top-level documentation folder is either a temporary migration artifact or an architectural violation and requires an explicit governance revision before being committed.
 
 ### Future folders
 
-If separate folders are later created for operating-model or product-spec subdomains, they should follow registry and migration rules.
+If separate folders are later created for operating-model or product-spec subdomains, they must be created inside one of the two approved documentation roots (`docs/apex-repository-docs/` or `docs/apex-app-docs/`) and follow registry and migration rules. New top-level documentation roots under `docs/` require an explicit governance revision.
 
 ### Future tools/, scripts/, schemas/
 

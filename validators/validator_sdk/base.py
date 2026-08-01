@@ -187,15 +187,15 @@ class ValidatorConfig:
     def defaults(cls, repo_root: Path) -> ValidatorConfig:
         return cls(
             repository_root=repo_root,
-            registries_dir=repo_root / "docs" / "repository-operating-model" / "registries",
+            registries_dir=repo_root / "docs" / "apex-repository-docs" / "registries",
             ignored_paths=[".git", "generated", "node_modules", "__pycache__", ".venv", "venv"],
             ignored_files=["README.md", "*.tmp", "*.bak", "*.old"],
             ignored_patterns=[],
             max_file_size_mb=10,
             validator_timeout_seconds=30,
-            concept_registry_path=repo_root / "docs" / "repository-operating-model" / "registries" / "CONCEPT-REGISTRY.md",
-            document_registry_path=repo_root / "docs" / "repository-operating-model" / "registries" / "DOCUMENT-REGISTRY.md",
-            traceability_registry_path=repo_root / "docs" / "repository-operating-model" / "registries" / "TRACEABILITY-REGISTRY.md",
+            concept_registry_path=repo_root / "docs" / "apex-repository-docs" / "registries" / "CONCEPT-REGISTRY.md",
+            document_registry_path=repo_root / "docs" / "apex-repository-docs" / "registries" / "DOCUMENT-REGISTRY.md",
+            traceability_registry_path=repo_root / "docs" / "apex-repository-docs" / "registries" / "TRACEABILITY-REGISTRY.md",
         )
 
     @classmethod

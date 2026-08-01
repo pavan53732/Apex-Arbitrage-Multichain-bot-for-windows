@@ -9,7 +9,7 @@ class: Policy
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: AGENTS_RULES.md
 related_concepts:
   - CONCEPT-0002
@@ -20,7 +20,7 @@ validator_coverage: []
 supersedes:
   - DOC-0044
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Agent System
@@ -35,7 +35,8 @@ owned_domains:
 | **Output Format** | All reports, analysis, and summaries must be presented in table format. No plain text narratives for structured data. |
 | **No CI/CD Workflows** | The repository must not contain any GitHub Actions workflows, CI/CD pipelines, or automation workflows. No `.github/workflows/` directory or `*.yml`/`.yaml` pipeline files. |
 | **Branch Strategy** | Work directly on `main`. Commit after successful validation. Push immediately after commit. Verify remote synchronization. No unfinished local commits. No abandoned branches unless explicitly requested. |
-| **Governance Platform** | The Apex Governance Platform (`tools/governance/`) is the single canonical runtime. All governance computation originates here. WS0 is a verification layer only. |
+| **Governance Platform** | Repository governance is defined by the canonical root governance documents (README.md, AGENTS.md, AGENTS_RULES.md, REPOSITORY-EXECUTION-MODEL.md, REBUILD-SYSTEM-SPECIFICATION.md) and enforced by the local validator suite (`validators/`). All governance computation is local-first and originates from these documents. |
+| **Two Documentation Roots** | `docs/` shall contain exactly two permanent documentation roots: `docs/apex-repository-docs/` and `docs/apex-app-docs/`. No third permanent documentation root may be created without an explicit governance revision. |
 
 ## Execution Model
 

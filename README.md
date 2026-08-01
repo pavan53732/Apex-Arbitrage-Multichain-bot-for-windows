@@ -8,7 +8,7 @@ class: Index
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: README.md
 related_concepts:
   - CONCEPT-0005
@@ -17,7 +17,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Governance
@@ -29,6 +29,24 @@ scope: Reference documentation.
 # Repository README
 
 This repository uses a two-plane documentation knowledge model. The root is intentionally minimal and contains only repository-level control and entry files.
+
+## Approved repository architecture
+
+```
+Repository Root
+│
+├── Repository Entry & Execution
+│   (README.md, AGENTS.md, AGENTS_RULES.md,
+│    REPOSITORY-EXECUTION-MODEL.md,
+│    REBUILD-SYSTEM-SPECIFICATION.md,
+│    validators/)
+│
+└── docs/
+    ├── apex-repository-docs/
+    └── apex-app-docs/
+```
+
+`docs/` is the documentation knowledge base and contains exactly two permanent documentation roots. `docs/apex-repository-docs/` describes the repository itself (governance, standards, registries, traceability, validation, workflows, contribution, documentation lifecycle, agent system). `docs/apex-app-docs/` describes the APEX application (architecture, runtime, AI, execution, dashboard, security, windows, plugins, interfaces, testing, state machines). No third permanent documentation root is permitted under `docs/`.
 
 ## Canonical root controls
 

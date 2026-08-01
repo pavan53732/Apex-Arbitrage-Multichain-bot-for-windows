@@ -9,7 +9,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: AGENTS.md
 related_concepts:
   - CONCEPT-0001
@@ -41,6 +41,31 @@ This repository follows a two-plane documentation model:
 2. Product Specification
 
 Agents must understand that these two planes are different and must not be mixed.
+
+## Approved repository architecture
+
+The repository follows exactly one approved documentation architecture:
+
+```
+Repository Root
+│
+├── Repository Entry & Execution
+│   (README.md, AGENTS.md, AGENTS_RULES.md,
+│    REPOSITORY-EXECUTION-MODEL.md,
+│    REBUILD-SYSTEM-SPECIFICATION.md,
+│    validators/)
+│
+└── docs/
+    ├── apex-repository-docs/
+    └── apex-app-docs/
+```
+
+`docs/` is the documentation knowledge base and contains exactly two permanent documentation roots:
+
+- `docs/apex-repository-docs/` — documentation describing the repository itself (governance, standards, registries, traceability, validation, workflows, contribution, documentation lifecycle, agent system).
+- `docs/apex-app-docs/` — documentation describing the APEX application (architecture, runtime, AI, execution, dashboard, security, windows, plugins, interfaces, testing, state machines).
+
+No third permanent documentation root may be created under `docs/`. Any additional top-level documentation folder is either a temporary migration artifact or an architectural violation and requires an explicit governance revision before being committed.
 
 ## Plane 1 — Repository Operating Model
 
@@ -174,6 +199,8 @@ After structural or canonical changes, agents should ensure that applicable vali
 The root of the repository is reserved for repository-level control and entry files.
 
 Agents should not add new root files or folders unless there is a strong structural reason.
+
+`docs/` contains exactly two permanent documentation roots: `docs/apex-repository-docs/` (documentation about the repository itself) and `docs/apex-app-docs/` (documentation about the APEX application). No third permanent documentation root may be created under `docs/` without an explicit governance revision.
 
 ## Change classes
 

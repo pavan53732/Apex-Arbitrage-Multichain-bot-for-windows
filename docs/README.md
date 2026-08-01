@@ -8,7 +8,7 @@ class: Index
 authority: Derived
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-repository-docs/documentation-lifecycle/documentation-map.md
 related_concepts:
   - CONCEPT-0059
@@ -18,7 +18,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-01
 concept_role: Index
 owned_domains: []
 type: OVERVIEW
@@ -30,11 +30,12 @@ scope: Reference documentation.
 
 This index is the stable navigation surface for the repository knowledge system. Identity is controlled by the registries, not by folder paths.
 
+`docs/` contains exactly two permanent documentation roots: `docs/apex-app-docs/` (the APEX application specification) and `docs/apex-repository-docs/` (repository governance and operating documentation). No third permanent documentation root is permitted.
+
 | Folder | Purpose |
 | --- | --- |
-| [docs/adr](./adr/README.md) | Durable architecture decisions with stable ADR numbering. |
-| [docs/historical](./historical/README.md) | Archived or superseded documents preserved for lineage and conflict resolution. |
-| [docs/product-specification](./apex-app-docs/README.md) | Software-system specification for the Apex Windows arbitrage application. |
+| [docs/apex-app-docs](./apex-app-docs/README.md) | Software-system specification for the Apex Windows arbitrage application. |
+| [docs/apex-repository-docs](./apex-repository-docs/README.md) | How humans and AI agents govern and maintain repository knowledge. |
 | [docs/apex-app-docs/ai](./apex-app-docs/ai/README.md) | Product AI runtime, memory, planning, providers, tools, reasoning, safety, and cost behavior. |
 | [docs/apex-app-docs/architecture](./apex-app-docs/architecture/README.md) | System boundaries, kernel, structure, and cross-system architecture. |
 | [docs/apex-app-docs/configuration](./apex-app-docs/configuration/README.md) | Configuration profiles, feature flags, capability registries, and config reference behavior. |
@@ -54,7 +55,6 @@ This index is the stable navigation surface for the repository knowledge system.
 | [docs/apex-app-docs/testing](./apex-app-docs/testing/README.md) | Product testing strategy, test registries, backtesting, and local validation behavior. |
 | [docs/apex-app-docs/ui](./apex-app-docs/ui/README.md) | Design system, UX guidelines, user flows, user guide, and UI components. |
 | [docs/apex-app-docs/windows](./apex-app-docs/windows/README.md) | Windows desktop, service, network, notification, security integration, and platform behavior. |
-| [docs/repository-operating-model](./apex-repository-docs/README.md) | How humans and AI agents govern and maintain repository knowledge. |
 | [docs/apex-repository-docs/agent-system](./apex-repository-docs/agent-system/README.md) | Rules and guidance for repository-facing coding and documentation agents. |
 | [docs/apex-repository-docs/agent-system/agent-profiles](./apex-repository-docs/agent-system/agent-profiles/README.md) | Agent-specific guidance derived from the root agent contract. |
 | [docs/apex-repository-docs/contribution](./apex-repository-docs/contribution/README.md) | Contributor-facing repository guidance. |

@@ -8,7 +8,7 @@ class: Policy
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: REPOSITORY-EXECUTION-MODEL.md
 related_concepts:
   - CONCEPT-0004
@@ -19,7 +19,7 @@ consumers:
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Governance
@@ -177,6 +177,7 @@ The following invariants must never be violated:
 - No CI/CD.
 - Repository always synchronizes to `main` after successful implementation.
 - Root remains minimal.
+- docs/ contains exactly two permanent documentation roots: `apex-repository-docs/` and `apex-app-docs/`. No third permanent documentation root is permitted.
 - Knowledge registry always reflects repository state.
 - All validation and quality gates executed locally.
 - No GitHub Actions or remote pipelines.
