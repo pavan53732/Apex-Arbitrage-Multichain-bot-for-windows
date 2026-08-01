@@ -106,7 +106,7 @@ Draft → Review → Active → Deprecated → Archived
 **Requirements**:
 - Minimum 6 months in Deprecated state
 - No active documents reference it (traceability check)
-- Moved to `docs/historical/` if not already there
+- Moved to the appropriate plane-specific archive location (`docs/apex-repository-docs/archive/` or `docs/apex-app-docs/archive/`) if not already there
 - Status changed to `Archived`
 
 **Approver**: Runtime Team
