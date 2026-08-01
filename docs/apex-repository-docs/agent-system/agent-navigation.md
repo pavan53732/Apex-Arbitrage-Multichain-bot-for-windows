@@ -43,8 +43,8 @@ Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `./skills.md`
-- `../../product-specification/ai/runtime/ai-pipeline.md`
-- `../../product-specification/ui/user-flows.md`
+- `../../apex-app-docs/ai/runtime/ai-pipeline.md`
+- `../../apex-app-docs/ui/user-flows.md`
 
 
 ## Operational Contract
@@ -55,4 +55,4 @@ An input is validated before any state-changing action.
 
 ## Ownership boundary
 - This document is navigation only. It does not own AI execution, orchestration, or lifecycle behavior.
-- Authority belongs to `../../product-specification/ai/runtime/ai-pipeline.md`, `../../product-specification/runtime/orchestrator.md`, and `../../product-specification/ai/orchestration/ai-agent-specification.md`.
+- Authority belongs to `../../apex-app-docs/ai/runtime/ai-pipeline.md`, `../../apex-app-docs/runtime/orchestrator.md`, and `../../apex-app-docs/ai/orchestration/ai-agent-specification.md`.

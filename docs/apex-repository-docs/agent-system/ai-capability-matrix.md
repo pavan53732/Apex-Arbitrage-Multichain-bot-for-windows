@@ -168,7 +168,7 @@ To add a new AI agent to this matrix:
 1. Evaluate against all capabilities in this matrix
 2. Assign to appropriate tier
 3. Update this document (requires Runtime Team approval)
-4. Add agent profile in `docs/repository-operating-model/agent-system/agent-profiles/`
+4. Add agent profile in `docs/apex-repository-docs/agent-system/agent-profiles/`
 5. Update Agent Index
 
 ## Compliance

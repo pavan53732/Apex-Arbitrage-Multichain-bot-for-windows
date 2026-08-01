@@ -42,12 +42,12 @@ If a file fails any directive, abort and fix it before proceeding.
 Top-level index for the implementation specification set.
 
 ## Ownership
-- `../../repository-operating-model/documentation-lifecycle/documentation-map.md` owns documentation authority rules.
+- `../../apex-repository-docs/documentation-lifecycle/documentation-map.md` owns documentation authority rules.
 - `./architecture.md` owns system architecture and subsystem boundaries.
 - `./project-structure.md` owns repository layout and package boundaries.
 
 ## Cross-references
-- `../../repository-operating-model/documentation-lifecycle/documentation-map.md`
+- `../../apex-repository-docs/documentation-lifecycle/documentation-map.md`
 - `./architecture.md`
 - `./project-structure.md`
 - `../execution/trading/trading-engine.md`

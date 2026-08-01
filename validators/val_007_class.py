@@ -105,7 +105,7 @@ class Validator(BaseValidator):
                         message=format_error(ErrorCode.FOLDER_CLASS_MISMATCH, path=rel_str),
                         severity="ERROR",
                         rule="Registry documents must be in registries/ folder",
-                        suggestion="Move to docs/repository-operating-model/registries/ or change class"
+                        suggestion="Move to docs/apex-repository-docs/registries/ or change class"
                     ))
 
             # 3. Historical documents only in historical folders
@@ -132,8 +132,8 @@ class Validator(BaseValidator):
                         line=1,
                         message=format_error(ErrorCode.FOLDER_CLASS_MISMATCH, path=rel_str),
                         severity="ERROR",
-                        rule="ADR documents must be in docs/adr/ folder",
-                        suggestion="Move to docs/adr/ or change class"
+                        rule="ADR documents must be in docs/apex-app-docs/architecture/decisions/ folder",
+                        suggestion="Move to docs/apex-app-docs/architecture/decisions/ or change class"
                     ))
 
             # 5. Generated documents only in generated/ folder

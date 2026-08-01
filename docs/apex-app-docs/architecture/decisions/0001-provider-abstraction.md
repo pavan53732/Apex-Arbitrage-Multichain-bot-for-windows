@@ -48,4 +48,4 @@ Placeholder.
 Placeholder.
 
 ## Related Documents
-- `../product-specification/architecture/apex-os.md`
+- `../apex-app-docs/architecture/apex-os.md`

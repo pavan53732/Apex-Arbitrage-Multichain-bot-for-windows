@@ -39,7 +39,7 @@ state machine, schema, API, events, configuration ownership, and
 cross-subsystem wiring — is owned exclusively by
 **`../dashboard/dashboard-workspaces.md`**. This file exists only as a stable,
 short-form entry point referenced elsewhere in the documentation set
-(see `../../repository-operating-model/documentation-lifecycle/documentation-map.md`, `../../../README.md`).
+(see `../../apex-repository-docs/documentation-lifecycle/documentation-map.md`, `../../../README.md`).
 
 ## Purpose
 Defines workspace ownership, layout, settings, providers, dashboards, strategies, and wallets for each workspace.

@@ -37,8 +37,8 @@ This document is an overview, reference, or index as noted below.
 Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
-- `../../product-specification/architecture/project-structure.md`
-- `../../product-specification/testing/testing-guide.md`
+- `../../apex-app-docs/architecture/project-structure.md`
+- `../../apex-app-docs/testing/testing-guide.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

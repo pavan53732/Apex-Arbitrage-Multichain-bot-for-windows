@@ -9,7 +9,7 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/product-specification/market/tokens/token-registry.md
+canonical_source: docs/apex-app-docs/market/registries/token-registry.md
 related_concepts:
   - CONCEPT-0309
 dependencies:

@@ -393,7 +393,7 @@ metadata_schema_version: "1.0"
 
 # Paths
 repository_root: "."
-registries_dir: "docs/repository-operating-model/registries"
+registries_dir: "docs/apex-repository-docs/registries"
 
 # Discovery
 ignored_paths:

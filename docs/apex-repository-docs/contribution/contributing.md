@@ -39,7 +39,7 @@ Navigation-only document pointing to the authoritative owner(s).
 
 ## Cross-references
 - `../standards/coding-standards.md`
-- `../../product-specification/reference/implementation-roadmap.md`
+- `../../apex-app-docs/reference/implementation-roadmap.md`
 
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.

@@ -38,7 +38,7 @@ Provides navigation to the authoritative documentation set.
 
 ## Cross-references
 - `../../../AGENTS.md`
-- `../../product-specification/ai/runtime/ai-pipeline.md`
+- `../../apex-app-docs/ai/runtime/ai-pipeline.md`
 
 
 ## Operational Contract

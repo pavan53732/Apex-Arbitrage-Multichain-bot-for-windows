@@ -48,13 +48,13 @@ Guidance for Gemini-based coding agents contributing to this repository.
 
 ## Required reading
 - `../../../../AGENTS.md`
-- `../../../product-specification/architecture/architecture.md`
-- `../../../product-specification/ai/runtime/ai-pipeline.md`
-- `../../../product-specification/ai/providers/ai-provider-manager.md`
-- `../../../product-specification/ai/providers/model-capability-negotiation.md`
-- `../../../product-specification/execution/trading/trading-lifecycle.md`
-- `../../../product-specification/execution/transactions/execution-lifecycle.md`
-- `../../../product-specification/operations/reliability/runtime-operations.md`
+- `../../../apex-app-docs/architecture/architecture.md`
+- `../../../apex-app-docs/ai/runtime/ai-pipeline.md`
+- `../../../apex-app-docs/ai/providers/ai-provider-manager.md`
+- `../../../apex-app-docs/ai/providers/model-capability-negotiation.md`
+- `../../../apex-app-docs/execution/trading/trading-lifecycle.md`
+- `../../../apex-app-docs/execution/transactions/execution-lifecycle.md`
+- `../../../apex-app-docs/operations/reliability/runtime-operations.md`
 
 ## Working rule
 If a contract, payload, or lifecycle transition is not written down, do not infer it.
