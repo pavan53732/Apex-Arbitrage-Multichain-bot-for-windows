@@ -58,7 +58,7 @@ Market strategy or UI design.
 | DOC-0090 | [Task Scheduler](task-scheduler.md) | Specification | Canonical | Active |
 | DOC-0091 | [Update Manager](update-manager.md) | Specification | Canonical | Active |
 | DOC-0092 | [Worker Pool](worker-pool.md) | Specification | Canonical | Active |
-| DOC-0093 | [Service Registry](./service-registry.md) | Registry | Canonical | Active |
+| DOC-0093 | [Service Registry](registries/service-registry.md) | Registry | Canonical | Active |
 | DOC-0095 | [Concurrency Model](concurrency-model.md) | Reference | Canonical | Active |
 | DOC-0096 | [Service Lifecycle](service-lifecycle.md) | Reference | Canonical | Active |
 | DOC-0097 | [Shutdown Lifecycle](shutdown-lifecycle.md) | Reference | Canonical | Active |
