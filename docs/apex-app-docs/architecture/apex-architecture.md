@@ -46,6 +46,26 @@ Top-level index for the implementation specification set.
 - `./architecture.md` owns system architecture and subsystem boundaries.
 - `./project-structure.md` owns repository layout and package boundaries.
 
+## Authority Boundary
+
+**This document is a derived architecture guide.**
+
+- **Owns:** Architecture overview, project structure, documentation map navigation.
+- **Does NOT own:** System architecture (owned by `architecture.md`), subsystem implementation, runtime coordination, state management.
+- **Authority level:** Derived — defers to `architecture.md` for canonical system architecture.
+- **Superordinate document:**
+  - `architecture.md` — Whole-system canonical architecture reference
+- **Related documents:**
+  - `apex-os.md` — Platform constitution
+  - `apex-kernel.md` — Kernel specification
+  - `orchestrator.md` — Runtime sequencing
+
+**This document defers to `architecture.md` for system architecture and subsystem boundaries.** It is a derived guide, not a canonical specification.
+
+## Before creating or modifying ANY markdown file, verify it complies with the 5 Prime Directives.
+- `./architecture.md` owns system architecture and subsystem boundaries.
+- `./project-structure.md` owns repository layout and package boundaries.
+
 ## Cross-references
 - `../../apex-repository-docs/documentation-lifecycle/documentation-map.md`
 - `./architecture.md`

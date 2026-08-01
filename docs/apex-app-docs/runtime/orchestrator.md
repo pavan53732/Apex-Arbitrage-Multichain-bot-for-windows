@@ -35,6 +35,29 @@ Document type: [CONTRACT]
 ## Version
 **Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
 
+## Authority Boundary
+
+**This document is the runtime sequencing canonical specification.**
+
+- **Owns:** Runtime sequencing, cross-subsystem coordination, startup ordering, shutdown sequencing, health-driven state transitions, sleep/resume coordination, recovery delegation.
+- **Does NOT own:** Kernel event infrastructure (owned by APEX Kernel), flow definitions (owned by Runtime Flow Lifecycle), state semantics (owned by State Management), component state machines (owned by respective components), trading logic, execution logic, AI orchestration internals.
+- **Authority level:** Canonical — subordinate to `apex-kernel.md` for kernel infrastructure, superior to `runtime-flow-lifecycle.md` for sequencing.
+- **Superordinate documents:**
+  - `apex-os.md` — Platform constitution
+  - `architecture.md` — Whole-system architecture
+  - `apex-kernel.md` — Kernel lifecycle and event infrastructure
+- **Subordinate documents:**
+  - `runtime-flow-lifecycle.md` — Named flow definitions (sequenced by Orchestrator)
+  - `state-management.md` — State semantics (transitions coordinated by Orchestrator)
+  - All component state machine documents — local transitions (coordinated by Orchestrator)
+
+**Authority hierarchy position:**
+```
+APEX OS → Architecture → APEX Kernel → Orchestrator (this doc) → Runtime Flow Lifecycle → State Management
+```
+
+**This document defers to `apex-kernel.md` for kernel event infrastructure and to `architecture.md` for system boundaries.** It owns runtime sequencing and coordination only.
+
 ## Purpose
 Defines the single authoritative runtime orchestrator that coordinates all subsystem sequencing — startup ordering, subsystem priority, cross-system dependency resolution, health-driven state transitions, sleep/resume coordination, recovery delegation, and graceful shutdown ordering. The Orchestrator is the master lifecycle coordinator; it does NOT own the internal behavior of any subsystem, but it does own the sequencing, gating, and coordination rules that govern when subsystems may start, stop, recover, or transition between operational states.
 

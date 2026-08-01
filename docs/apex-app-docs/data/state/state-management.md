@@ -35,6 +35,29 @@ Document type: [CONTRACT]
 ## Version
 **Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Runtime Team
 
+## Authority Boundary
+
+**This document is the state semantics canonical specification.**
+
+- **Owns:** State semantics, persistence expectations, state synchronization rules, state domain definitions, timeout semantics, crash recovery procedures.
+- **Does NOT own:** Runtime sequencing (owned by Orchestrator), flow definitions (owned by Runtime Flow Lifecycle), kernel event infrastructure (owned by APEX Kernel), component state machines (owned by respective components).
+- **Authority level:** Canonical — subordinate to `runtime-flow-lifecycle.md` for flow-specific state handling, superior to component state machines for state semantics.
+- **Superordinate documents:**
+  - `apex-os.md` — Platform constitution
+  - `architecture.md` — Whole-system architecture
+  - `apex-kernel.md` — Kernel lifecycle and event infrastructure
+  - `orchestrator.md` — Runtime sequencing
+  - `runtime-flow-lifecycle.md` — Named flow definitions
+- **Subordinate documents:**
+  - All component state machine documents — local transitions (use state semantics)
+
+**Authority hierarchy position:**
+```
+APEX OS → Architecture → APEX Kernel → Orchestrator → Runtime Flow Lifecycle → State Management (this doc)
+```
+
+**This document defers to `runtime-flow-lifecycle.md` for flow-specific state handling and to `orchestrator.md` for runtime sequencing.** It owns state semantics and persistence expectations.
+
 ## Purpose
 Defines how APEX manages runtime state — state domains, ownership, synchronization rules, full subsystem state machine index, timeout semantics, Windows sleep/resume recovery, and persistence expectations.
 

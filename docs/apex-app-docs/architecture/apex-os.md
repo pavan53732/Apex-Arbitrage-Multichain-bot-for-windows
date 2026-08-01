@@ -45,6 +45,22 @@ stateDiagram-v2
   EVOLVING --> GOVERNING
 ```
 
+## Authority Boundary
+
+**This document is the platform constitution.**
+
+- **Owns:** Vision, mission, philosophy, design principles, architecture principles, runtime principles, AI principles, security principles, extensibility principles, roadmap, non-goals, and evolution strategy.
+- **Does NOT own:** Implementation details, subsystem behavior, runtime coordination, state management, or operational procedures.
+- **Authority level:** Canonical — all other architecture documents must align with this constitution.
+- **Subordinate documents:**
+  - `architecture.md` — Whole-system architecture reference
+  - `apex-kernel.md` — Kernel lifecycle and event infrastructure
+  - `orchestrator.md` — Runtime sequencing and coordination
+  - `runtime-flow-lifecycle.md` — Named flow definitions
+  - `state-management.md` — State semantics and persistence
+
+**This document defers to no other architecture document.** It is the root authority for platform design principles.
+
 ## Cross-references
 - `./apex-kernel.md`
 - `../runtime/orchestrator.md`

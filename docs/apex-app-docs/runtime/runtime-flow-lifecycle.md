@@ -34,6 +34,29 @@ Document type: [CONTRACT]
 ## Version
 **Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Runtime Team
 
+## Authority Boundary
+
+**This document is the named flow canonical specification.**
+
+- **Owns:** Named runtime flow definitions, flow lifecycle validation, flow execution patterns, flow recovery procedures.
+- **Does NOT own:** Runtime sequencing (owned by Orchestrator), kernel event infrastructure (owned by APEX Kernel), state semantics (owned by State Management), component state machines (owned by respective components).
+- **Authority level:** Canonical — subordinate to `orchestrator.md` for sequencing, superior to `state-management.md` for flow-specific state handling.
+- **Superordinate documents:**
+  - `apex-os.md` — Platform constitution
+  - `architecture.md` — Whole-system architecture
+  - `apex-kernel.md` — Kernel lifecycle and event infrastructure
+  - `orchestrator.md` — Runtime sequencing (executes flows)
+- **Subordinate documents:**
+  - `state-management.md` — State semantics and persistence (used by flows)
+  - All component state machine documents — local transitions (invoked by flows)
+
+**Authority hierarchy position:**
+```
+APEX OS → Architecture → APEX Kernel → Orchestrator → Runtime Flow Lifecycle (this doc) → State Management
+```
+
+**This document defers to `orchestrator.md` for runtime sequencing and to `apex-kernel.md` for kernel infrastructure.** It owns named flow definitions and lifecycle.
+
 ## Purpose
 Defines the complete set of runtime flows — worker creation/shutdown, plugin discovery/load/unload/update, provider initialization/failure, configuration reload, dashboard initialization/workspace restore, AI initialization/fallback, recovery/failover, hot-reload/restart boundary, Windows sleep/resume/power events, and update installation/rollback.
 
