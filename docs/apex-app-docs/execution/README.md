@@ -136,3 +136,10 @@ Documents:
 - Add or update metadata, registries, README navigation, and cross-references in the same change.
 - Run local metadata, registry, traceability, link, stale-path, empty-folder, and repository hygiene validation before committing.
 - Do not add generated documentation, CI/CD files, GitHub Actions, temporary reports, or repository automation.
+
+## Execution Ownership Boundaries
+
+- Transaction lifecycle documents own transaction and order state progression.
+- Trading lifecycle documents own strategy and trade progression.
+- Execution Engine owns execution coordination; the lifecycle documents have complementary scopes rather than duplicate ownership.
+- Wallet and portfolio documents remain separate from execution-flow ownership.

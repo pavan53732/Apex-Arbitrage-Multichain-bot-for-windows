@@ -65,3 +65,10 @@ Market strategy or UI design.
 | DOC-0098 | [Worker Architecture](worker-architecture.md) | Reference | Canonical | Active |
 | DOC-0099 | [Workflow Builder](workflow-builder.md) | Reference | Canonical | Active |
 | DOC-0100 | [Workspace Manager](workspace-manager.md) | Reference | Canonical | Active |
+
+## Runtime Ownership Boundaries
+
+- Orchestrator owns cross-subsystem sequencing and coordination.
+- Runtime Flow Lifecycle owns named runtime flows and transition coverage.
+- Service Lifecycle, Worker Architecture, and Workspace Manager own their component-level responsibilities.
+- Service Registry is runtime reference/configuration data, not a competing runtime specification.

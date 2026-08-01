@@ -60,3 +60,9 @@ This folder indexes Data documents in this subdomain and defers behavior to cano
 ## Adjacent domains
 
 Adjacent domains may reference these documents, but they must not redefine this folder's canonical ownership boundaries.
+
+## State Ownership Boundaries
+
+- State Management owns application state domains, synchronization, persistence expectations, and state-machine coordination.
+- Runtime Knowledge is a representation reference.
+- Decision Ledger owns decision-record state; Cache Manager owns cache behavior.

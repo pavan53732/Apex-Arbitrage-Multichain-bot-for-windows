@@ -62,3 +62,11 @@ Repository governance.
 | DOC-0083 | [Module Dependency](module-dependency.md) | Reference | Canonical | Active |
 | DOC-0084 | [Non Functional Requirements](non-functional-requirements.md) | Reference | Canonical | Active |
 | DOC-0085 | [Project Structure](project-structure.md) | Reference | Canonical | Active |
+
+## Architecture Ownership Boundaries
+
+- APEX Kernel owns kernel lifecycle, service registration, events, and plugin loading.
+- APEX Architecture is the derived orientation guide; it does not redefine kernel behavior.
+- APEX OS owns the platform-level conceptual model.
+- Architecture is the cross-system reference model; detailed contracts remain in domain specifications.
+- decisions/ records rationale and does not create competing runtime specifications.

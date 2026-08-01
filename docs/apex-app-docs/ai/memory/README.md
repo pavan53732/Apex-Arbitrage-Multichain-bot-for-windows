@@ -59,3 +59,9 @@ This folder indexes AI documents in this subdomain and defers behavior to the ca
 ## Adjacent domains
 
 Adjacent AI subdomains may reference these documents, but they must not redefine this folder's canonical ownership boundaries.
+
+## Memory Ownership Boundaries
+
+- AI Memory System owns in-product AI memory architecture and storage behavior.
+- Context Priority Matrix owns prompt-context precedence and capacity allocation.
+- Memory Lifecycle is a cross-subsystem lifecycle reference and does not redefine AI-memory storage semantics.
