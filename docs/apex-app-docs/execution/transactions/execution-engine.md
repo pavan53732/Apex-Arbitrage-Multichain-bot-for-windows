@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Trading Team
-version: 1.0.0
+version: 2.0.0
 canonical_source: docs/apex-app-docs/execution/transactions/execution-engine.md
 related_concepts:
   - CONCEPT-0280
@@ -18,12 +18,12 @@ consumers:
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Execution
 type: CONTRACT
-purpose: "Defines chain transaction execution, confirmation, cancellation, and recovery."
+purpose: "Defines chain transaction execution, confirmation, cancellation, and recovery with explicit MVP phase boundaries."
 scope: "Explicit execution sequencing, timeout handling, and retry/resume behavior."
 ---
 
@@ -39,6 +39,52 @@ Document type: [CONTRACT]
 Defines chain transaction execution, confirmation, cancellation, and recovery — with explicit execution sequencing, timeout handling, and retry/resume behavior.
 
 ---
+
+## 0. MVP Execution Phases
+
+### Phase 1 — Simulation Only (CURRENT)
+**Status:** Active | **Transaction Submission:** DISABLED | **Wallet Signing:** DISABLED
+
+**Execution Engine Behavior:**
+- Receives simulated execution payloads from trading engine
+- Validates transaction structure and route
+- Logs hypothetical transaction lifecycle
+- **Hard blocks on actual RPC broadcast**
+- No wallet interaction, no signing, no submission
+
+**Hard Invariants:**
+```python
+if execution_mode == SIMULATION_ONLY:
+    if transaction.attempt_broadcast:
+        reject(transaction, code="PHASE_1_BROADCAST_BLOCK")
+        return
+    if wallet.attempt_signing:
+        reject(transaction, code="PHASE_1_SIGNING_BLOCK")
+        return
+```
+
+### Phase 2 — Operator-Approved
+**Status:** Pending | **Transaction Submission:** REQUIRES_OPERATOR | **Wallet Signing:** OPERATOR_INITIATED
+
+**Execution Engine Behavior:**
+- Builds transactions as in Phase 3
+- Submits to operator dashboard for approval
+- Operator reviews and manually initiates signing
+- Execution engine monitors and reconciles
+- Risk engine enforces reduced limits
+
+### Phase 3 — Autonomous
+**Status:** Future | **Transaction Submission:** ENABLED | **Wallet Signing:** AUTONOMOUS
+
+**Execution Engine Behavior:**
+- Full autonomous transaction lifecycle
+- MEV-protected submission via Flashbots/private RPCs
+- Multi-chain execution with atomic routing
+- Automatic retry and recovery
+- Real-time reconciliation
+
+---
+
 
 ## 1. Transaction Lifecycle State Machine
 

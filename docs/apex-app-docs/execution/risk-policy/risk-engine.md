@@ -8,23 +8,24 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Trading Team
-version: 1.0.0
+version: 2.0.0
 canonical_source: docs/apex-app-docs/execution/risk-policy/risk-engine.md
 related_concepts:
   - CONCEPT-0282
 dependencies: []
 consumers:
   - DOC-0417
+  - DOC-0284
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Execution
 type: CONTRACT
-purpose: Defines risk engine.
-scope: Risk scoring and management.
+purpose: "Defines trading risk checks used before and during execution with explicit MVP phase-based limits and circuit breakers."
+scope: "Risk scoring and management for all MVP phases. **Phase 1: hard blocks on live execution. Phase 2: reduced limits with operator override. Phase 3: full limits with automated enforcement.**"
 ---
 
 # Risk Engine
@@ -33,10 +34,57 @@ scope: Risk scoring and management.
 Document type: [CONTRACT]
 
 ## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+**Version:** 2.0.0 | **Status:** Canonical | **Last Updated:** 2026-08-01 | **Owner:** Trading Team
 
 ## Purpose
-Defines trading risk checks used before and during execution — with explicit formulas, limits, circuit breakers, and abort behavior.
+Defines trading risk checks used before and during execution — with explicit formulas, limits, circuit breakers, and abort behavior for all MVP phases.
+
+**CRITICAL: Risk engine has VETO AUTHORITY in all phases. Phase 1 enforces hard blocks on live execution. No trade bypasses risk checks.**
+
+---
+
+## 0. MVP Phase Behavior
+
+### Phase 1 — Simulation Only (CURRENT)
+**Risk Mode:** HARD_BLOCK | **Live Execution:** ALWAYS_REJECTED
+
+**Risk Engine Behavior:**
+- All risk checks execute normally
+- Any opportunity reaching execution gate is HARD REJECTED
+- Risk engine logs: `REJECTED: PHASE_1_EXECUTION_BLOCK`
+- Simulation outcomes tracked for Phase 2 eligibility
+
+**Hard Invariants:**
+```python
+if execution_mode == SIMULATION_ONLY:
+    if trade.attempt_live_execution:
+        reject(trade, code="PHASE_1_BLOCK")
+        return
+```
+
+### Phase 2 — Operator-Approved
+**Risk Mode:** REDUCED_LIMITS | **Live Execution:** REQUIRES_RISK_APPROVAL
+
+**Risk Engine Behavior:**
+- All risk checks execute with 50% of Phase 3 limits
+- Operator can override risk rejection (with audit trail)
+- Risk engine logs all overrides
+- Emergency kill switch: risk engine can pause all execution
+
+**Reduced Limits:**
+- Max loss per trade: 50% of Phase 3
+- Max position size: 50% of Phase 3
+- Max daily loss: 50% of Phase 3
+- Max slippage: 50% of Phase 3
+
+### Phase 3 — Autonomous
+**Risk Mode:** FULL_LIMITS | **Live Execution:** AUTO_ENFORCED
+
+**Risk Engine Behavior:**
+- All risk checks execute with full limits
+- No operator override (fully automated)
+- Emergency kill switch: risk engine can pause all execution
+- Continuous learning from execution outcomes
 
 ---
 
@@ -46,159 +94,251 @@ Each trade opportunity passes through the risk pipeline sequentially. All checks
 
 ```mermaid
 flowchart LR
-    A[Opportunity] --> B[Max Loss Check]
-    B --> C[Liquidity Check]
-    C --> D[Slippage Check]
-    D --> E[Spread Integrity Check]
-    E --> F[Timing Budget Check]
-    F --> G[Exposure Check]
-    G --> H{All Pass?}
-    H -->|Yes| I[APPROVED]
-    H -->|No| J[REJECTED]
+    A[Opportunity] --> B[Phase Gate Check]
+    B --> C[Max Loss Check]
+    C --> D[Liquidity Check]
+    D --> E[Slippage Check]
+    E --> F[Spread Integrity Check]
+    F --> G[Timing Budget Check]
+    G --> H[Exposure Check]
+    H --> I{All Pass?}
+    I -->|Yes| J[APPROVED]
+    I -->|No| K[REJECTED]
 ```
+
+**Phase 1 Special:** Even if all checks pass, execution is blocked at Phase Gate.
 
 ---
 
 ## 2. Risk Check Definitions
 
+### 2.0 Phase Gate Check
+**Purpose:** Enforce MVP phase boundaries
+
+**Phase 1:**
+```
+condition: execution_mode == SIMULATION_ONLY
+action: REJECT with code="PHASE_1_EXECUTION_BLOCK"
+```
+
+**Phase 2:**
+```
+condition: operator_approval == true AND risk_score >= threshold
+action: APPROVE with audit trail
+```
+
+**Phase 3:**
+```
+condition: risk_score >= threshold
+action: AUTO_APPROVE
+```
+
 ### 2.1 Max Loss Check
-**Purpose**: Ensure worst-case loss does not exceed configured limit.
+**Purpose:** Ensure worst-case loss does not exceed configured limit.
 
+**Formula:**
 ```
+estimated_loss_usd = position_size_usd × max_adverse_movement_pct
 condition: estimated_loss_usd <= risk.max_loss_per_trade_usd
-default:   risk.max_loss_per_trade_usd = 50.00
-source:    CONFIGURATION-REFERENCE.md
 ```
 
-Failure action: REJECT with code `LOSS_LIMIT_EXCEEDED`.
+**Phase Limits:**
+- Phase 1: N/A (execution blocked)
+- Phase 2: `risk.max_loss_per_trade_usd = 25.00` (50% of Phase 3)
+- Phase 3: `risk.max_loss_per_trade_usd = 50.00`
+
+**Failure action:** REJECT with code `LOSS_LIMIT_EXCEEDED`.
 
 ### 2.2 Liquidity Check
-**Purpose**: Ensure DEX pools have sufficient depth for the trade size.
+**Purpose:** Ensure DEX pools have sufficient depth for the trade size.
 
+**Formula:**
 ```
 condition: trade_size_usd <= pool_liquidity_usd × risk.max_liquidity_usage_pct
 default:   risk.max_liquidity_usage_pct = 0.05 (5%)
 source:    On-chain pool query
 ```
 
-Failure action: REJECT with code `LIQUIDITY_INSUFFICIENT`.
+**Failure action:** REJECT with code `LIQUIDITY_INSUFFICIENT`.
 
 ### 2.3 Slippage Check
-**Purpose**: Ensure expected slippage is within acceptable range.
+**Purpose:** Ensure slippage does not exceed acceptable threshold.
 
+**Formula:**
 ```
-condition: expected_slippage_pct <= risk.max_slippage_pct
-default:   risk.max_slippage_pct = 1.0 (1%)
-expected_slippage_pct = (reserve_in / (reserve_in + trade_size)) - 1
+estimated_slippage_pct = (expected_output - minimum_output) / expected_output
+condition: estimated_slippage_pct <= risk.max_slippage_pct
 ```
 
-Failure action: REJECT with code `SLIPPAGE_EXCEEDED`.
+**Phase Limits:**
+- Phase 1: N/A (simulation only)
+- Phase 2: `risk.max_slippage_pct = 0.005` (0.5%)
+- Phase 3: `risk.max_slippage_pct = 0.01` (1.0%)
+
+**Failure action:** REJECT with code `SLIPPAGE_EXCEEDED`.
 
 ### 2.4 Spread Integrity Check
-**Purpose**: Verify the arbitrage spread is real (not a stale price or flash loan artifact).
+**Purpose:** Detect manipulated or stale prices.
 
+**Formula:**
 ```
-condition: (chain_A_price / chain_B_price) - 1 >= risk.min_arb_spread_pct
-default:   risk.min_arb_spread_pct = 0.3 (0.3%)
-validation: Prices must be within `risk.price_freshness_ms` (default 5000ms)
+price_deviation_pct = |dex_price - oracle_price| / oracle_price
+condition: price_deviation_pct <= risk.max_price_deviation_pct
+default:   risk.max_price_deviation_pct = 0.02 (2%)
 ```
 
-Failure action: REJECT with code `SPREAD_INVALID`.
+**Failure action:** REJECT with code `PRICE_INTEGRITY_FAIL`.
 
 ### 2.5 Timing Budget Check
-**Purpose**: Ensure the arbitrage can complete within the estimated timing window.
+**Purpose:** Ensure execution can complete before opportunity expires.
 
+**Formula:**
 ```
-condition: estimated_execution_ms <= risk.timing_budget_ms
-default:   risk.timing_budget_ms = 30000 (30s)
-estimated_execution_ms = gas_estimate / blocks_per_second + chain_latency_ms
+estimated_execution_time_ms = network_latency + gas_estimation + signing + broadcast
+opportunity_expiry_ms = time_until_arb_window_closes
+condition: estimated_execution_time_ms < opportunity_expiry_ms × risk.timing_buffer_pct
+default:   risk.timing_buffer_pct = 0.8 (80% of window)
 ```
 
-Failure action: REJECT with code `TIMING_BUDGET_EXCEEDED`.
+**Failure action:** REJECT with code `TIMING_BUDGET_EXCEEDED`.
 
 ### 2.6 Exposure Check
-**Purpose**: Prevent over-concentration in any single asset, chain, or strategy.
+**Purpose:** Ensure total portfolio exposure remains within limits.
 
+**Formula:**
 ```
-condition_a: position_size_usd / portfolio_value_usd <= risk.max_exposure_per_asset_pct
-condition_b: open_trades_on_chain <= risk.max_concurrent_trades_per_chain
-default:     risk.max_exposure_per_asset_pct = 0.10 (10%)
-             risk.max_concurrent_trades_per_chain = 3
+total_exposure_usd = sum(open_positions)
+condition: total_exposure_usd + new_position_usd <= risk.max_total_exposure_usd
 ```
 
-Failure action: REJECT with code `EXPOSURE_LIMIT_EXCEEDED`.
+**Phase Limits:**
+- Phase 1: N/A (no live positions)
+- Phase 2: `risk.max_total_exposure_usd = 500.00`
+- Phase 3: `risk.max_total_exposure_usd = 1000.00`
+
+**Failure action:** REJECT with code `EXPOSURE_LIMIT_EXCEEDED`.
 
 ---
 
 ## 3. Circuit Breakers
 
-### 3.1 Cascade Circuit Breaker
-If a leg of a multi-leg trade fails, subsequent legs on related chains are blocked for `risk.circuit_breaker.cooloff_ms` (default 60000ms).
+### 3.1 Per-Trade Circuit Breaker
+**Triggers:**
+- 3 consecutive losses
+- Loss > 2×² average loss
+- Execution failure rate > 10%
+
+**Action:** Pause trading for 5 minutes, alert operator
+
+### 3.2 Daily Loss Circuit Breaker
+**Triggers:**
+- Phase 2: Daily loss > $100
+- Phase 3: Daily loss > $200
+
+**Action:** Pause trading until next day, alert operator
+
+### 3.3 System-Wide Circuit Breaker
+**Triggers:**
+- Critical subsystem failure (wallet, RPC, DEX adapter)
+- Security incident detected
+- Operator manual trigger
+
+**Action:** Immediate halt of all execution, emergency shutdown
+
+---
+
+## 4. Risk Scoring
+
+### 4.1 Risk Score Calculation
+Each opportunity receives risk score (0.0 to 1.0):
 
 ```
-trigger:   trade leg failure on chain X
-action:    block all trades involving chain X for cooloff_ms
+risk_score = (
+    liquidity_score × 0.25 +
+    slippage_score × 0.20 +
+    spread_score × 0.20 +
+    timing_score × 0.15 +
+    exposure_score × 0.10 +
+    historical_success_rate × 0.10
+)
 ```
 
-### 3.2 Profitability Circuit Breaker
-If N consecutive trades result in net loss, trading is paused for escalating intervals.
+**Thresholds:**
+- Phase 2: `risk_score >= 0.7` for operator approval
+- Phase 3: `risk_score >= 0.8` for auto-approval
 
+### 4.2 Risk Score Components
+
+**Liquidity Score:**
 ```
-trigger:   risk.circuit_breaker.consecutive_losses (default 3)
-action:    pause trading for: 1st trip → 60s, 2nd → 300s, 3rd → 3600s
-reset:     A profitable trade resets the counter
+liquidity_score = min(1.0, pool_liquidity_usd / required_liquidity_usd)
 ```
 
-### 3.3 Volatility Circuit Breaker
-If network gas prices exceed threshold, reduce trade frequency.
-
+**Slippage Score:**
 ```
-trigger:   base_fee_gwei > risk.circuit_breaker.gas_spike_threshold_gwei (default 500)
-action:    throttle trade rate to 1/10 of normal; skip low-profit opportunities (< risk.min_arb_spread_pct × 2)
+slippage_score = 1.0 - (estimated_slippage_pct / max_slippage_pct)
+```
+
+**Spread Score:**
+```
+spread_score = 1.0 - (price_deviation_pct / max_deviation_pct)
+```
+
+**Timing Score:**
+```
+timing_score = 1.0 - (estimated_execution_time_ms / opportunity_expiry_ms)
 ```
 
 ---
 
-## 4. Partial Fill Handling
+## 5. Failure Modes
 
-| Scenario | Action |
-|----------|--------|
-| Leg 1 partially filled (fills < `risk.partial_fill.min_pct`) | Abort trade, attempt reversal |
-| Leg 1 partially filled (fills >= min_pct) | Continue to Leg 2 with adjusted position |
-| Leg 2 partially filled | Accept fill; record actual profit (may be negative) |
-| Cross-leg exposure | Sum of all leg values must not exceed `risk.max_exposure_per_trade_usd` |
+### 5.1 Risk Check Failures
+- **Max loss exceeded:** Reject, log, continue scanning
+- **Liquidity insufficient:** Reject, log, try smaller size
+- **Slippage exceeded:** Reject, log, wait for better conditions
+- **Spread integrity fail:** Reject, log, alert operator (possible manipulation)
+- **Timing budget exceeded:** Reject, log, skip opportunity
+- **Exposure limit exceeded:** Reject, log, wait for position closure
 
-Default `risk.partial_fill.min_pct`: 0.8 (80%).
-
----
-
-## 5. Risk Engine Observability
-
-Every risk check produces an event:
-
-| Event | Payload | Producer |
-|-------|---------|----------|
-| `risk.check.passed` | `{trade_id, check_name, value, limit}` | Risk Engine |
-| `risk.check.failed` | `{trade_id, check_name, value, limit, reason_code}` | Risk Engine |
-| `risk.circuit_breaker.tripped` | `{breaker_type, chain, cooloff_ms}` | Risk Engine |
-| `risk.circuit_breaker.reset` | `{breaker_type, chain}` | Risk Engine |
+### 5.2 Risk Engine Failures
+- **Calculation error:** Reject opportunity, log anomaly
+- **Data unavailable:** Reject opportunity, retry later
+- **State corruption:** Pause trading, alert operator, restore from checkpoint
 
 ---
 
-## Cross-References
+## 6. Cross-Subsystem Contracts
 
-- **TRADING-ENGINE.md** — Trade flow that invokes risk checks.
-- **EXECUTION-ENGINE.md** — Execution that may trigger post-submit risk events.
-- **TRADING-LIFECYCLE.md** — Where risk checks fit in the lifecycle.
-- **ARBITRAGE-WINDOW-MANAGER.md** — Timing window calculation.
-- **OPPORTUNITY-RANKING.md** — Risk-adjusted scoring.
-- **CONFIGURATION-REFERENCE.md** — Risk config keys (`risk.*`).
-- **TRACEABILITY-MATRIX.md** — Risk requirement coverage.
+### 6.1 Trading Engine
+**Contract:**
+- Trading engine must call risk engine before execution
+- Risk engine response within 10ms
+- Trading engine respects risk engine veto
+
+### 6.2 Simulation Engine
+**Contract:**
+- Simulation provides risk inputs (slippage, liquidity, timing)
+- Risk engine validates simulation assumptions
+- Risk engine receives simulation outcomes for learning
+
+### 6.3 Execution Engine
+**Contract:**
+- Execution engine reports actual outcomes to risk engine
+- Risk engine can halt execution mid-trade
+- Risk engine receives execution failures for learning
+
+### 6.4 Wallet Manager
+**Contract:**
+- Wallet manager provides balance and exposure data
+- Risk engine enforces exposure limits
+- Wallet manager respects risk engine blocks
 
 ---
 
-## Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |
+## Cross-references
+- `../trading/trading-engine.md` — trading lifecycle and execution
+- `../simulation/simulation-engine.md` — simulation validation
+- `../transactions/execution-engine.md` — execution lifecycle
+- `../../market/core/market-data.md` — price and liquidity data
+- `../../operations/monitoring/metrics.md` — risk metrics

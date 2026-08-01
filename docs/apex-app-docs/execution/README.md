@@ -8,7 +8,7 @@ class: Index
 authority: Derived
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 2.0.0
 canonical_source: docs/apex-app-docs/execution/trading/trading-engine.md
 related_concepts:
   - CONCEPT-0284
@@ -18,7 +18,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-01
 concept_role: Index
 owned_domains: []
 ---
@@ -28,6 +28,39 @@ owned_domains: []
 ## Purpose and scope
 
 Trading, transaction execution, risk and policy gates, wallet/portfolio behavior, and simulation documentation.
+
+## MVP Execution Phases
+
+**Current Phase:** Phase 1 — Simulation/Paper Trading Only
+
+### Phase 1 — Simulation Only (CURRENT)
+- All trading logic executes in simulation mode
+- No live wallet signing or transaction submission
+- Full arbitrage detection, scoring, and routing
+- Paper trades logged for PNL tracking and validation
+- Risk engine enforces hard blocks on live execution
+
+### Phase 2 — Operator-Approved (PENDING)
+- Real-time simulation with operator approval workflow
+- Manual wallet signing via dashboard
+- Risk engine enforces 50% of Phase 3 limits
+- Position limits: 10% of Phase 3 maximum
+
+### Phase 3 — Autonomous (FUTURE)
+- Full autonomous execution with MEV protection
+- Multi-chain arbitrage with automatic routing
+- Risk engine enforces full limits
+- Operator oversight via monitoring dashboard only
+
+**See individual component docs for phase-specific behavior:**
+- [`trading/trading-engine.md`](./trading/trading-engine.md) — trading lifecycle and phase gates
+- [`simulation/simulation-engine.md`](./simulation/simulation-engine.md) — simulation validation
+- [`risk-policy/risk-engine.md`](./risk-policy/risk-engine.md) — risk checks and circuit breakers
+- [`transactions/execution-engine.md`](./transactions/execution-engine.md) — transaction lifecycle
+- [`wallet-portfolio/wallet-management.md`](./wallet-portfolio/wallet-management.md) — wallet boundaries
+
+---
+
 
 ## What belongs here
 

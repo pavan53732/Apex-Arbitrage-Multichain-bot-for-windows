@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Trading Team
-version: 1.0.0
+version: 2.0.0
 canonical_source: docs/apex-app-docs/execution/simulation/simulation-engine.md
 related_concepts:
   - CONCEPT-0283
@@ -16,16 +16,17 @@ dependencies: []
 consumers:
   - DOC-0236
   - DOC-0418
+  - DOC-0284
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Execution
 type: CONTRACT
-purpose: Defines simulation engine.
-scope: Backtesting and simulation.
+purpose: "Defines paper trading, replay, stress testing, and synthetic failure simulation with explicit MVP Phase 1 primacy."
+scope: "Backtesting, paper trading, and simulation for all MVP phases. **Phase 1 (current): simulation-only operation. Phase 2: real-time validation layer. Phase 3: pre-execution gate.**"
 ---
 
 # Simulation Engine
@@ -34,303 +35,289 @@ scope: Backtesting and simulation.
 Document type: [CONTRACT]
 
 ## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+**Version:** 2.0.0 | **Status:** Canonical | **Last Updated:** 2026-08-01 | **Owner:** Trading Team
 
 ## Purpose
-Defines paper trading, replay, stress testing, and synthetic failure simulation.
+Defines paper trading, replay, stress testing, and synthetic failure simulation — the authoritative execution validation layer for all MVP phases.
 
-## Ownership
-- Owns simulation modes, scenario definitions, deterministic replay, and result reporting.
-- Consumes strategy, execution, AI, market, and runtime snapshots.
-
-## Shared simulation contract
-Simulation entities and accuracy metrics are defined by `../../interfaces/api/domain-model.md` and `../../operations/monitoring/metrics.md`.
-Every simulation defines purpose, inputs, configuration, initial state, execution flow, expected outputs, validation criteria, success metrics, failure scenarios, and recovery behaviour.
-
-## Determinism rules
-- Same inputs and scenario seed must produce the same simulated outcome class.
-- External live dependencies must be disabled unless explicitly marked hybrid.
-- Scenario configuration, market snapshot, code version, and replay clock must be recorded.
-
-## Scenario lifecycle
-Defined -> Materialized -> Running -> Scored -> Stored -> Released.
-
-## Simulation modes
-- Paper Trading.
-- Historical Replay.
-- Tick-by-Tick Replay.
-- Order Book Simulation.
-- Liquidity Simulation.
-- Gas Simulation.
-- Network Congestion.
-- RPC Failures.
-- Oracle Failures.
-- Wallet Failures.
-- Chain Reorganisations.
-- AI Decision Simulation.
-- Monte Carlo.
-- Stress Testing.
-- Black Swan Scenarios.
-- Regression Testing.
-- Benchmark Testing.
-
-## Mode specifications
-
-### Paper Trading
-Purpose: validate live workflow with simulated settlement.
-Inputs: live-like market snapshots and strategy output.
-Configuration: paper mode, no real submission, realistic fees.
-Initial state: clean simulated account and portfolio.
-Execution flow: generate decisions, simulate fills, update state, reconcile.
-Expected outputs: paper fills, PnL, risk state, alerts.
-Validation criteria: no live side effects, state consistency.
-Success metrics: fill realism, deterministic replay, low drift.
-Failure scenarios: missing quotes, stale state, rejected decision.
-Recovery behaviour: reset simulated state and replay from checkpoint.
-
-### Historical Replay
-Purpose: replay historical market snapshots through live logic.
-Inputs: historical snapshots and versioned config.
-Configuration: start/end time, seed, version pin.
-Initial state: restored from replay checkpoint.
-Execution flow: step through snapshots, score, execute simulated actions.
-Expected outputs: decisions, fills, PnL, logs.
-Validation criteria: deterministic output for identical inputs.
-Success metrics: replay fidelity and baseline comparison.
-Failure scenarios: missing data, version mismatch.
-Recovery behaviour: resume from last completed checkpoint.
-
-### Tick-by-Tick Replay
-Purpose: simulate tick-level decision timing.
-Inputs: tick stream, quote updates, strategy config.
-Configuration: tick mode, cadence, seed.
-Initial state: zeroed tick cursor.
-Execution flow: process each tick sequentially.
-Expected outputs: tick-aligned decisions and fills.
-Validation criteria: exact ordering and repeatability.
-Success metrics: latency fidelity and decision stability.
-Failure scenarios: dropped tick, clock drift.
-Recovery behaviour: restart from preserved tick index.
-
-### Order Book Simulation
-Purpose: emulate order book depth and queue effects.
-Inputs: book snapshots, spread, depth, strategy intent.
-Configuration: slippage model and match rules.
-Initial state: synthetic book state.
-Execution flow: match orders against depth and update book.
-Expected outputs: fills, partial fills, remaining depth.
-Validation criteria: book conservation and consistent matching.
-Success metrics: fill realism and slippage accuracy.
-Failure scenarios: depth collapse, spread shock.
-Recovery behaviour: restore from prior book snapshot.
-
-### Liquidity Simulation
-Purpose: test impact of shallow liquidity.
-Inputs: depth curves, route candidates, order size.
-Configuration: liquidity stress level.
-Initial state: baseline depth state.
-Execution flow: apply impact and determine fill quality.
-Expected outputs: slippage, partial fills, rejects.
-Validation criteria: expected price impact and rejection rules.
-Success metrics: liquidity sensitivity fidelity.
-Failure scenarios: sudden depth loss.
-Recovery behaviour: reset to prior depth snapshot.
-
-### Gas Simulation
-Purpose: model fee volatility and transaction economics.
-Inputs: gas estimates, fee market, chain state.
-Configuration: gas curve and replacement policy.
-Initial state: fee baseline.
-Execution flow: recalculate route economics under fee changes.
-Expected outputs: net edge after gas, replacement signals.
-Validation criteria: fee impact and replacement decision consistency.
-Success metrics: gas cost realism.
-Failure scenarios: fee spike, base fee shock.
-Recovery behaviour: reprice and re-evaluate.
-
-### Network Congestion
-Purpose: simulate submission delay and queueing pressure.
-Inputs: congestion model, RPC latency, mempool pressure.
-Configuration: latency multiplier and timeout budget.
-Initial state: normal network conditions.
-Execution flow: delay broadcasts and confirmations.
-Expected outputs: delayed fills, timeouts, retries.
-Validation criteria: timeout handling and backoff correctness.
-Success metrics: delay fidelity.
-Failure scenarios: congestion saturation.
-Recovery behaviour: continue from delay-adjusted state.
-
-### RPC Failures
-Purpose: validate provider outage handling.
-Inputs: RPC error schedule and retry policy.
-Configuration: failure injection profile.
-Initial state: healthy provider.
-Execution flow: force transient or terminal RPC errors.
-Expected outputs: retries, failover, hard rejects.
-Validation criteria: bounded retry and failover correctness.
-Success metrics: recovery rate and rejection correctness.
-Failure scenarios: sustained outage.
-Recovery behaviour: switch provider or fail closed.
-
-### Oracle Failures
-Purpose: validate missing or corrupted oracle inputs.
-Inputs: oracle stream and corruption schedule.
-Configuration: oracle trust policy.
-Initial state: valid oracle state.
-Execution flow: inject stale or invalid oracle data.
-Expected outputs: reject, pause, alert.
-Validation criteria: no decisions on invalid oracle data.
-Success metrics: safe rejection and alerting.
-Failure scenarios: stale oracle, conflict, outage.
-Recovery behaviour: resume only after clean oracle state.
-
-### Wallet Failures
-Purpose: validate signing and balance failures.
-Inputs: wallet state, nonce state, balance constraints.
-Configuration: signing policy and recovery policy.
-Initial state: unlocked wallet or simulated wallet.
-Execution flow: inject signing errors and balance shortages.
-Expected outputs: rejection, retry, halt.
-Validation criteria: fail-closed safety and nonce correctness.
-Success metrics: safe handling of signing faults.
-Failure scenarios: locked wallet, insufficient balance.
-Recovery behaviour: reconcile wallet state and retry if safe.
-
-### Chain Reorganisations
-Purpose: validate reorg resilience.
-Inputs: reorg depth, confirmation policy, transaction history.
-Configuration: finality threshold and rollback policy.
-Initial state: confirmed transaction state.
-Execution flow: rewind affected states and re-evaluate.
-Expected outputs: reorg alerts, state rollback, reconciliation.
-Validation criteria: no false finality, accurate rollback.
-Success metrics: reorg handling correctness.
-Failure scenarios: deep reorg.
-Recovery behaviour: reconcile to canonical chain state.
-
-### AI Decision Simulation
-Purpose: validate AI routing, confidence, and safety gates.
-Inputs: prompts, model outputs, evaluation configs.
-Configuration: provider set and fallback policy.
-Initial state: deterministic prompt set.
-Execution flow: produce candidate output, validate, score, and compare.
-Expected outputs: confidence, reject reasons, selected model.
-Validation criteria: same input yields same output class.
-Success metrics: calibration and safety adherence.
-Failure scenarios: malformed output, provider failover.
-Recovery behaviour: fallback to approved model or human review.
-
-### Monte Carlo
-Purpose: estimate distribution of outcomes.
-Inputs: stochastic parameter ranges and seeds.
-Configuration: trial count and distribution definitions.
-Initial state: baseline strategy state.
-Execution flow: run many randomized scenarios.
-Expected outputs: outcome distributions and percentiles.
-Validation criteria: reproducible with same seed set.
-Success metrics: distribution stability.
-Failure scenarios: invalid distribution, insufficient sample.
-Recovery behaviour: rerun with corrected config.
-
-### Stress Testing
-Purpose: validate resilience under adverse conditions.
-Inputs: degraded liquidity, higher gas, delayed confirmations.
-Configuration: stress multipliers.
-Initial state: normal operating baseline.
-Execution flow: apply combined stressors.
-Expected outputs: rejects, slower fills, lower PnL.
-Validation criteria: no unsafe live-side effects.
-Success metrics: safe failure behavior.
-Failure scenarios: overloaded queue, repeated rejections.
-Recovery behaviour: reduce stress or halt.
-
-### Black Swan Scenarios
-Purpose: test catastrophic tail events.
-Inputs: sudden price gap, chain failure, provider outage.
-Configuration: extreme shock profile.
-Initial state: baseline state.
-Execution flow: inject extreme shocks simultaneously.
-Expected outputs: emergency stop, alerts, minimal damage.
-Validation criteria: fail-closed and recoverable.
-Success metrics: containment and safe halt.
-Failure scenarios: compounding loss conditions.
-Recovery behaviour: manual recovery and reconciliation.
-
-### Regression Testing
-Purpose: ensure unchanged behavior across releases.
-Inputs: pinned cases, baseline outputs.
-Configuration: version pin and tolerance thresholds.
-Initial state: reference baseline state.
-Execution flow: compare current outputs to expected.
-Expected outputs: pass/fail deltas and drift report.
-Validation criteria: all must match baseline tolerance.
-Success metrics: low drift.
-Failure scenarios: output drift, missing baseline.
-Recovery behaviour: update baseline only after review.
-
-### Benchmark Testing
-Purpose: measure performance and capacity.
-Inputs: representative workloads and timing harness.
-Configuration: concurrency and repetition count.
-Initial state: performance baseline.
-Execution flow: run workloads and measure metrics.
-Expected outputs: latency, throughput, resource usage.
-Validation criteria: performance targets met.
-Success metrics: target compliance.
-Failure scenarios: saturation, timeout, resource exhaustion.
-Recovery behaviour: scale or tune configuration.
-
-## Persistence
-Persist scenario ids, seeds, market snapshots, configuration hashes, code versions, outputs, metrics, and artifact locations.
-
-## Monitoring
-- Scenario execution latency.
-- Regression pass/fail rate.
-- Resource consumption.
-- Harness failure rate.
-
-## Cross-references
-- `../../testing/backtesting.md`
-- `../trading/strategies.md`
-- `../transactions/execution-engine.md`
-- `../../ai/runtime/ai-pipeline.md`
-- `../../testing/testing-guide.md`
-
-- `../../interfaces/api/domain-model.md`
-
-- `../../operations/monitoring/metrics.md`
-
-
-For canonical entities and performance tracking, see `../../interfaces/api/domain-model.md` and `../../operations/monitoring/metrics.md`.
-
-
-## Enterprise Contract – Simulation Engine
-- Interfaces: `../../interfaces/messages/interface-tool-call.md`.
-- State machine: `../trading/trading-lifecycle.md`, `../transactions/execution-lifecycle.md`.
-- Security boundaries: `../../security/security-contracts.md`.
-- Performance SLOs: `../../performance/performance-slos.md`.
-- Failure modes: non-deterministic simulation, stale market data, invalid assumptions; recover via deterministic replay and abort.
-
-For trading lifecycle, see `../trading/trading-lifecycle.md`.
-For execution lifecycle, see `../transactions/execution-lifecycle.md`.
-For performance targets, see `../../performance/performance-slos.md`.
-## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
-
-## Example
-An input is validated before any state-changing action.
-
-## Required details
-- Define deterministic timing, headless mode, and Windows replay concerns.
-
-## Simulation rules
-- Define deterministic timing, headless mode, and Windows replay behavior.
-- Define result comparison and failure reporting.
+**CRITICAL: In Phase 1 (current), simulation engine is the PRIMARY execution mode. No live trades occur without simulation validation in any phase.**
 
 ---
 
-## Version History
+## 0. MVP Phase Roles
 
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |
+### Phase 1 — Simulation-Only (CURRENT)
+**Simulation Mode:** PAPER_TRADING | **Live Execution:** BLOCKED
+
+**Simulation Engine Responsibilities:**
+- Execute all detected opportunities in paper-trading mode
+- Record hypothetical PNL with realistic slippage and gas
+- Track execution latency and failure modes
+- Generate performance reports for Phase 2 eligibility
+- **Block all live execution via hard gating**
+
+**Execution Boundaries:**
+- ✅ Detect opportunities
+- ✅ Score and rank
+- ✅ Simulate execution
+- ✅ Record PNL
+- ❌ Sign transactions
+- ❌ Broadcast to chain
+- ❌ Move real funds
+
+### Phase 2 — Operator-Approved
+**Simulation Mode:** REALTIME_VALIDATION | **Live Execution:** REQUIRES_APPROVAL
+
+**Simulation Engine Responsibilities:**
+- Real-time simulation of every opportunity
+- Pre-approval validation for operator review
+- Confidence scoring based on historical simulation accuracy
+- Post-execution reconciliation (simulated vs. actual)
+
+### Phase 3 — Autonomous
+**Simulation Mode:** PRE_EXECUTION_GATE | **Live Execution:** ENABLED
+
+**Simulation Engine Responsibilities:**
+- Mandatory pre-execution gate (must pass before auto-execution)
+- Sub-100ms simulation latency requirement
+- Confidence threshold for auto-approval
+- Continuous learning from live execution outcomes
+
+---
+
+## 1. Simulation Modes
+
+### 1.1 Paper Trading (Phase 1 Primary)
+**Purpose:** Simulate all trading logic without live execution
+
+**Inputs:**
+- Real-time market data (prices, liquidity, gas)
+- Strategy signals
+- Risk engine scores
+
+**Execution Flow:**
+```
+1. Receive opportunity from trading engine
+2. Validate market data freshness (<5s old)
+3. Execute simulated route:
+   - Calculate input amount
+   - Apply slippage model
+   - Calculate output amount
+   - Subtract gas costs
+   - Compute net PNL
+4. Record simulation result
+5. Return to trading engine
+```
+
+**Outputs:**
+- Simulated PNL: `simulated_pnl_usd`
+- Execution latency: `latency_ms`
+- Failure mode (if any): `failure_code`
+- Confidence score: `confidence_0_to_1`
+
+### 1.2 Historical Replay
+**Purpose:** Backtest strategies on historical data
+
+**Inputs:**
+- Historical market snapshots
+- Strategy configuration
+- Initial capital
+
+**Execution Flow:**
+```
+1. Load historical data (e.g., 30 days)
+2. Replay tick-by-tick or bar-by-bar
+3. Execute strategy logic at each step
+4. Track cumulative PNL
+5. Calculate performance metrics
+```
+
+**Outputs:**
+- Cumulative PNL curve
+- Win rate, loss rate
+- Max drawdown
+- Sharpe ratio, Sortino ratio
+
+### 1.3 Stress Testing
+**Purpose:** Validate system behavior under adverse conditions
+
+**Stress Scenarios:**
+- Market crash (-50% in 1 hour)
+- Liquidity drought (pools dry up)
+- Gas spike (10x normal)
+- RPC failures (multiple providers down)
+- DEX contract failures
+- Oracle manipulation
+
+**Outputs:**
+- System behavior under stress
+- Failure modes and recovery
+- Capital preservation metrics
+
+---
+
+## 2. Determinism Rules
+
+### 2.1 Reproducibility
+**All Phases:** Mandatory
+
+- Same inputs + same seed = same outcome
+- Record: market snapshot, strategy config, code version, simulation seed
+- Enable replay of any simulated trade
+
+### 2.2 External Dependencies
+**Phase 1:** External live dependencies DISABLED
+
+- No live RPC calls during simulation
+- Use cached or historical market data
+- Gas estimates from historical averages
+- Slippage from historical pool behavior
+
+**Phase 2:** External dependencies ENABLED for validation
+
+- Real-time RPC queries for validation
+- Live gas estimates
+- Real-time pool state
+
+**Phase 3:** External dependencies MANDATORY
+
+- Pre-execution validation with live data
+- Sub-100ms latency requirement
+
+---
+
+## 3. Scenario Lifecycle
+
+### 3.1 Scenario Definition
+**Owner:** Simulation Engine
+
+```yaml
+scenario:
+  id: "SCENARIO-001"
+  type: "PAPER_TRADING"  # | HISTORICAL_REPLAY | STRESS_TEST
+  market_snapshot:
+    timestamp: "2026-08-01T06:00:00Z"
+    chains: ["BSC", "Polygon"]
+    dexes: ["PancakeSwap", "Uniswap"]
+  strategy_config:
+    min_profit_usd: 5.0
+    max_slippage_pct: 0.5
+  execution_config:
+    simulated_gas_price_gwei: 3
+    simulated_slippage_model: "HISTORICAL_P95"
+```
+
+### 3.2 Scenario Materialization
+**Process:**
+1. Load market data
+2. Initialize strategy
+3. Configure execution parameters
+4. Set random seed for determinism
+5. Begin simulation loop
+
+### 3.3 Scenario Execution
+**Phase 1:** Continuous loop
+- Scan for opportunities
+- Simulate each opportunity
+- Record outcomes
+- Update PNL
+
+**Phase 2:** Real-time validation
+- Validate opportunities before operator approval
+- Compare simulated vs. actual post-execution
+
+**Phase 3:** Pre-execution gate
+- Must complete in <100ms
+- Confidence threshold: >0.8 for auto-approval
+
+### 3.4 Scenario Scoring
+**Metrics:**
+- Win rate: `wins / total_trades`
+- Avg PNL per trade: `total_pnl / total_trades`
+- Sharpe ratio: `avg_return / std_dev(returns)`
+- Max drawdown: `max_peak_to_trough_decline`
+- Simulation accuracy: `|simulated_pnl - actual_pnl| / actual_pnl`
+
+### 3.5 Scenario Storage
+**Persisted Data:**
+- All simulated trades
+- PNL curve
+- Performance metrics
+- Failure logs
+- Market snapshots
+
+### 3.6 Scenario Release
+**Eligibility Criteria:**
+- Phase 1 → Phase 2: 100+ trades, positive PNL, <1% failure
+- Phase 2 → Phase 3: 500+ trades, positive PNL, <0.5% failure
+
+---
+
+## 4. Accuracy Metrics
+
+### 4.1 Simulation vs. Actual
+**Target (Phase 2+):**
+- PNL accuracy: >95%
+- Slippage accuracy: >90%
+- Gas estimate accuracy: >85%
+
+**Calculation:**
+```
+pnl_accuracy = 1 - |simulated_pnl - actual_pnl| / |actual_pnl|
+slippage_accuracy = 1 - |simulated_slippage - actual_slippage| / actual_slippage
+```
+
+### 4.2 Phase 1 Validation
+**No live execution, so accuracy measured against:**
+- Historical execution data
+- DEX aggregator quotes
+- Third-party backtesting tools
+
+---
+
+## 5. Failure Modes
+
+### 5.1 Data Failures
+- **Stale market data:** Reject opportunity, log warning
+- **Missing pool data:** Skip route, continue scanning
+- **RPC timeout:** Retry once, then failover to backup
+
+### 5.2 Execution Failures
+- **Simulation timeout:** Reject opportunity (<100ms budget)
+- **Calculation error:** Log anomaly, continue simulation
+- **State inconsistency:** Pause simulation, alert operator
+
+### 5.3 System Failures
+- **Memory overflow:** Trigger garbage collection, reduce history window
+- **Disk full:** Pause logging, alert operator
+- **Corrupted state:** Restore from last checkpoint
+
+---
+
+## 6. Cross-Subsystem Contracts
+
+### 6.1 Trading Engine
+**Contract:**
+- Trading engine sends opportunities to simulation
+- Simulation returns within 100ms (Phase 3) or 500ms (Phase 2)
+- Trading engine respects simulation results (no execution on failed simulation)
+
+### 6.2 Risk Engine
+**Contract:**
+- Simulation provides inputs to risk engine
+- Risk engine can veto simulation results
+- Risk engine receives all simulation outcomes for learning
+
+### 6.3 Execution Engine
+**Phase 1:** Execution engine receives simulation-only payloads
+**Phase 2:** Execution engine compares simulated vs. actual
+**Phase 3:** Execution engine requires simulation pass before auto-execution
+
+---
+
+## Cross-references
+- `../trading/trading-engine.md` — trading lifecycle and opportunity flow
+- `../risk-policy/risk-engine.md` — risk validation gates
+- `../transactions/execution-engine.md` — execution lifecycle
+- `../../interfaces/api/domain-model.md` — simulation data schemas
+- `../../operations/monitoring/metrics.md` — accuracy metrics
