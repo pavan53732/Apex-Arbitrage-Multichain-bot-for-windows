@@ -40,19 +40,19 @@ This repository uses a two-plane documentation knowledge model. The root is inte
 ## Documentation entry points
 
 - [Documentation Index](./docs/README.md)
-- [Concept Registry](./docs/repository-operating-model/registries/CONCEPT-REGISTRY.md)
-- [Document Registry](./docs/repository-operating-model/registries/DOCUMENT-REGISTRY.md)
-- [Traceability Registry](./docs/repository-operating-model/registries/TRACEABILITY-REGISTRY.md)
+- [Concept Registry](./docs/apex-repository-docs/registries/CONCEPT-REGISTRY.md)
+- [Document Registry](./docs/apex-repository-docs/registries/DOCUMENT-REGISTRY.md)
+- [Traceability Registry](./docs/apex-repository-docs/registries/TRACEABILITY-REGISTRY.md)
 
 ## First product-specification reads
 
-- [Architecture](./docs/product-specification/architecture/architecture.md)
-- [AI Pipeline](./docs/product-specification/ai/runtime/ai-pipeline.md)
-- [Runtime Operations](./docs/product-specification/operations/reliability/runtime-operations.md)
-- [Trading Lifecycle](./docs/product-specification/execution/trading/trading-lifecycle.md)
-- [Execution Lifecycle](./docs/product-specification/execution/transactions/execution-lifecycle.md)
-- [Database Schema](./docs/product-specification/data/persistence/database-schema.md)
-- [Security Contracts](./docs/product-specification/security/security-contracts.md)
+- [Architecture](./docs/apex-app-docs/architecture/architecture.md)
+- [AI Pipeline](./docs/apex-app-docs/ai/runtime/ai-pipeline.md)
+- [Runtime Operations](./docs/apex-app-docs/operations/reliability/runtime-operations.md)
+- [Trading Lifecycle](./docs/apex-app-docs/execution/trading/trading-lifecycle.md)
+- [Execution Lifecycle](./docs/apex-app-docs/execution/transactions/execution-lifecycle.md)
+- [Database Schema](./docs/apex-app-docs/data/persistence/database-schema.md)
+- [Security Contracts](./docs/apex-app-docs/security/security-contracts.md)
 
 ## Rule
 

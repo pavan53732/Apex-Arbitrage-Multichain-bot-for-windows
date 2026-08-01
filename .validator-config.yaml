@@ -5,7 +5,7 @@ metadata_schema_version: "1.0"
 
 # Paths
 repository_root: "."
-registries_dir: "docs/repository-operating-model/registries"
+registries_dir: "docs/apex-repository-docs/registries"
 
 # Discovery
 ignored_paths:
@@ -29,9 +29,9 @@ max_file_size_mb: 10
 validator_timeout_seconds: 30
 
 # Registry locations (relative to repo root)
-concept_registry: "docs/repository-operating-model/registries/CONCEPT-REGISTRY.md"
-document_registry: "docs/repository-operating-model/registries/DOCUMENT-REGISTRY.md"
-traceability_registry: "docs/repository-operating-model/registries/TRACEABILITY-REGISTRY.md"
+concept_registry: "docs/apex-repository-docs/registries/CONCEPT-REGISTRY.md"
+document_registry: "docs/apex-repository-docs/registries/DOCUMENT-REGISTRY.md"
+traceability_registry: "docs/apex-repository-docs/registries/TRACEABILITY-REGISTRY.md"
 
 # Per-validator config (optional overrides)
 validators:

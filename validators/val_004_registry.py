@@ -137,9 +137,9 @@ class Validator(BaseValidator):
 
         # 6. Registry version metadata present
         for reg_name, reg_path in [
-            ("Concept Registry", context.repository_root / "docs" / "repository-operating-model" / "registries" / "CONCEPT-REGISTRY.md"),
-            ("Document Registry", context.repository_root / "docs" / "repository-operating-model" / "registries" / "DOCUMENT-REGISTRY.md"),
-            ("Traceability Registry", context.repository_root / "docs" / "repository-operating-model" / "registries" / "TRACEABILITY-REGISTRY.md"),
+            ("Concept Registry", context.repository_root / "docs" / "apex-repository-docs" / "registries" / "CONCEPT-REGISTRY.md"),
+            ("Document Registry", context.repository_root / "docs" / "apex-repository-docs" / "registries" / "DOCUMENT-REGISTRY.md"),
+            ("Traceability Registry", context.repository_root / "docs" / "apex-repository-docs" / "registries" / "TRACEABILITY-REGISTRY.md"),
         ]:
             checked += 1
             if not reg_path.exists():

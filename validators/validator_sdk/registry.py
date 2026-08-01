@@ -59,7 +59,7 @@ class RegistryLoader:
     @staticmethod
     def load_concept_registry(repo_root: Path) -> dict[str, ConceptEntry]:
         """Load Concept Registry and return dict keyed by concept_id."""
-        registry_path = repo_root / "docs" / "repository-operating-model" / "registries" / "CONCEPT-REGISTRY.md"
+        registry_path = repo_root / "docs" / "apex-repository-docs" / "registries" / "CONCEPT-REGISTRY.md"
         if not registry_path.exists():
             return {}
 
@@ -115,7 +115,7 @@ class RegistryLoader:
     @staticmethod
     def load_document_registry(repo_root: Path) -> dict[str, DocumentEntry]:
         """Load Document Registry and return dict keyed by doc_id."""
-        registry_path = repo_root / "docs" / "repository-operating-model" / "registries" / "DOCUMENT-REGISTRY.md"
+        registry_path = repo_root / "docs" / "apex-repository-docs" / "registries" / "DOCUMENT-REGISTRY.md"
         if not registry_path.exists():
             return {}
 
@@ -176,7 +176,7 @@ class RegistryLoader:
     @staticmethod
     def load_traceability_registry(repo_root: Path) -> dict[str, TraceabilityEntry]:
         """Load Traceability Registry and return dict keyed by trace_id."""
-        registry_path = repo_root / "docs" / "repository-operating-model" / "registries" / "TRACEABILITY-REGISTRY.md"
+        registry_path = repo_root / "docs" / "apex-repository-docs" / "registries" / "TRACEABILITY-REGISTRY.md"
         if not registry_path.exists():
             return {}
 

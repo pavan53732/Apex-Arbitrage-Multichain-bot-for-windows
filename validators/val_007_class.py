@@ -111,7 +111,7 @@ class Validator(BaseValidator):
             # 3. Historical documents only in historical folders
             if doc_class == "Historical" or authority == "Historical" or status == "Historical":
                 checked += 1
-                if "historical" not in rel_str:
+                if "archive" not in rel_str:
                     errors.append(ValidationError(
                         code=ErrorCode.FOLDER_CLASS_MISMATCH,
                         file=rel_str,
@@ -125,7 +125,7 @@ class Validator(BaseValidator):
             # 4. ADR documents only in adr/ folder
             if doc_class == "ADR":
                 checked += 1
-                if not rel_str.startswith("docs/adr/"):
+                if not rel_str.startswith("docs/apex-app-docs/architecture/decisions/"):
                     errors.append(ValidationError(
                         code=ErrorCode.FOLDER_CLASS_MISMATCH,
                         file=rel_str,

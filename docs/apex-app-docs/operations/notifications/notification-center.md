@@ -1,0 +1,60 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0345
+title: Notification Center
+plane: Product Specification
+domain: Operations
+class: Reference
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: docs/apex-app-docs/operations/notifications/notification-center.md
+related_concepts:
+  - CONCEPT-0345
+dependencies: []
+consumers:
+  - DOC-0422
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Operations
+type: REFERENCE
+purpose: Notification Center documentation.
+scope: Reference documentation.
+---
+
+# Notification Center
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# Notification Center
+
+## Purpose
+Defines outbound notifications for desktop, Telegram, Discord, Slack, email, and webhooks.
+
+## Cross-references
+- `../monitoring/health-checks.md`
+- `../reliability/runtime-operations.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.
+
+## Windows delivery
+- Must define which alerts become Windows toasts versus in-app banners.
+- Must define persistence after restart and user preference controls.
+
+## Required details
+- Define toast vs in-app routing, severity mapping, and restart persistence.
+
+## Delivery behavior
+- Toast notifications handle critical alerts.
+- In-app notices handle noncritical updates.
+- User preferences control quiet hours and persistence.

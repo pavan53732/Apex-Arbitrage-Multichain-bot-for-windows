@@ -9,7 +9,7 @@ authority: Derived
 status: Active
 owner: Runtime Team
 version: 1.0.0
-canonical_source: docs/repository-operating-model/documentation-lifecycle/documentation-map.md
+canonical_source: docs/apex-repository-docs/documentation-lifecycle/documentation-map.md
 related_concepts:
   - CONCEPT-0059
 dependencies:

@@ -54,7 +54,7 @@ class Validator(BaseValidator):
                 self._extract_reachable_from_readme(body, reachable_docs, reachable_concepts)
 
         # Also check Documentation Map
-        doc_map_path = context.repository_root / "docs" / "repository-operating-model" / "documentation-lifecycle" / "documentation-map.md"
+        doc_map_path = context.repository_root / "docs" / "apex-repository-docs" / "documentation-lifecycle" / "documentation-map.md"
         if doc_map_path.exists():
             _, body = MetadataParser.parse(doc_map_path)
             self._extract_reachable_from_readme(body, reachable_docs, reachable_concepts)

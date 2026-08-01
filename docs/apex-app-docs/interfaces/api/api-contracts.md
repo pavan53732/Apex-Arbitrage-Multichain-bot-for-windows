@@ -1,0 +1,154 @@
+---
+metadata_schema_version: 1.0
+document_id: DOC-0251
+title: API Contracts
+plane: Product Specification
+domain: Interfaces
+class: Specification
+authority: Canonical
+status: Active
+owner: Runtime Team
+version: 1.0.0
+canonical_source: docs/apex-app-docs/interfaces/api/api-contracts.md
+related_concepts:
+  - CONCEPT-0251
+dependencies: []
+consumers:
+  - DOC-0257
+  - DOC-0426
+validator_coverage: []
+supersedes: []
+superseded_by: []
+last_updated: 2026-07-29
+concept_role: Owner
+owned_domains:
+  - Interfaces
+type: CONTRACT
+purpose: Api Contracts documentation.
+scope: Reference documentation.
+---
+
+# Api Contracts
+
+## Version
+**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+
+## Document type
+This document is an overview, reference, or index as noted below.
+
+# API-CONTRACTS.md
+
+## Purpose
+Defines internal service API contracts and external adapter contracts for APEX. This file is the contract-level counterpart to [`../ipc/ipc-protocol.md`](../ipc/ipc-protocol.md) and [`../../architecture/project-structure.md`](../../architecture/project-structure.md).
+
+## Scope
+Service interfaces, repository contracts, provider contracts, return-shape conventions, error semantics, and lifecycle expectations.
+
+## Ownership
+- `packages/core` owns shared service abstractions.
+- Feature packages own their own interfaces.
+- UI code consumes only stable adapter interfaces or IPC endpoints.
+
+## Contract Design Rules
+- All external boundaries must be typed.
+- All contract payloads must be serializable.
+- Contracts must reject unknown fields where security or correctness depends on strict validation.
+- Every contract must define success shape, error shape, and retry semantics.
+
+## Core Service Interfaces
+| Interface | Responsibility | Owner |
+|---|---|---|
+| `ConfigService` | resolves validated runtime config | `packages/config` |
+| `Logger` | structured logging and redaction | `packages/logging` |
+| `DbService` | database access and migrations | `packages/db` |
+| `AiOrchestrator` | prompt assembly, provider routing, schema validation | `packages/ai-orchestrator` |
+| `StrategyEngine` | strategy lifecycle and evaluation | `packages/strategy-engine` |
+| `RiskEngine` | validate, size, approve, or reject actions | `packages/risk-engine` |
+| `ChainClient` | chain reads and transaction submission | `packages/chain-clients` |
+| `DexClient` | quote, route, and calldata generation | `packages/dex-clients` |
+
+## Service Contract Shape
+Every service should define:
+- input schema,
+- output schema,
+- error codes,
+- side-effect notes,
+- idempotency expectations,
+- concurrency expectations.
+
+## AI Contract Requirements
+AI-oriented contracts must include:
+- provider id,
+- model id,
+- prompt/task id,
+- structured response schema,
+- token/timeout budget,
+- fallback behavior.
+
+## Trading Contract Requirements
+Trading-related contracts must include:
+- chain id,
+- asset identifiers,
+- quote id,
+- slippage ceiling,
+- fee assumptions,
+- risk state snapshot,
+- execution mode.
+
+## Contract Ownership by Domain
+### Configuration
+- `loadConfig()` returns a validated app config object.
+- No consumer may mutate config in place.
+
+### Strategy
+- `registerStrategy()`, `listStrategies()`, `runStrategy()`, `disableStrategy()`.
+- Strategy execution must be cancelable and observable.
+
+### Risk
+- `evaluateRisk()`, `computePositionSize()`, `isExecutionAllowed()`.
+- Returns must clearly identify reject reasons.
+
+### AI
+- `requestAnalysis()`, `routeTask()`, `validateStructuredResponse()`.
+- Provider failures must be distinguishable from validation failures.
+
+### Database
+- repositories expose query-by-purpose methods; no generic arbitrary query surfaces unless explicitly approved.
+
+## Versioning and Compatibility
+- Stable contracts require version identifiers.
+- Breaking changes must introduce versioned endpoints or a migration path.
+- Deprecated contracts must be documented with replacement and removal timeline.
+
+## Cross-References
+- [`../ipc/ipc-protocol.md`](../ipc/ipc-protocol.md)
+- [`../../architecture/module-dependency.md`](../../architecture/module-dependency.md)
+- [`../../data/state/state-management.md`](../../data/state/state-management.md)
+- [`../../operations/diagnostics/error-handling-and-logging.md`](../../operations/diagnostics/error-handling-and-logging.md)
+
+## Cross-references
+- `../../deployment/versioning.md`
+
+## Operational Contract
+Defines the responsibilities, invariants, and expected behavior for this component.
+
+## Example
+An input is validated before any state-changing action.
+
+## Transport contracts
+- Must define error mapping, versioning, and protocol compatibility.
+
+## Required details
+- Define transport and error compatibility.
+
+## Transport contracts
+- Define request/response shapes, error mapping, and protocol compatibility.
+- Define Windows IPC and external client boundaries if applicable.
+
+---
+
+## Version History
+
+| Version | Date | Changes | Author |
+|---------|------|---------|--------|
+| 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |
