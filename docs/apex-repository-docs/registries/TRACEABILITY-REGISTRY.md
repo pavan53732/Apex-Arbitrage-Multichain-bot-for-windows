@@ -41,8 +41,8 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | Registry schema version | 1.1 |
 | Registry model | Semantic relationships only |
 | Last regenerated | 2026-07-31 |
-| Relationship count | 672 |
-| Relationship distribution | Defines: 220, Depends On: 133, Indexes: 73, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
+| Relationship count | 676 |
+| Relationship distribution | Defines: 224, Depends On: 133, Indexes: 73, References: 54, Superseded By: 182, Superseded By Concept: 6, Supersedes: 4 |
 
 ## Relationship Policy
 
@@ -725,3 +725,7 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0834 | DOC-0434 | DependsOn | DOC-0276 | Active | Data Registries README depends on DOC-0276. |
 | TRACE-0835 | DOC-0435 | Indexes | CONCEPT-0267 | Active | Data State README indexes CONCEPT-0267. |
 | TRACE-0836 | DOC-0435 | DependsOn | DOC-0267 | Active | Data State README depends on DOC-0267. |
+| TRACE-0837 | DOC-0436 | Defines | CONCEPT-0397 | Active | Canonical document owner for active concept. |
+| TRACE-0838 | DOC-0437 | Defines | CONCEPT-0398 | Active | Canonical document owner for active concept. |
+| TRACE-0839 | DOC-0438 | Defines | CONCEPT-0399 | Active | Canonical document owner for active concept. |
+| TRACE-0840 | DOC-0439 | Defines | CONCEPT-0439 | Active | Canonical document owner for active concept. |

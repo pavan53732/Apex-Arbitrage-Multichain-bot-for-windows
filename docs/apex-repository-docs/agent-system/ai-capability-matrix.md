@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0070
+document_id: DOC-0439
 title: AI Capability Matrix
 plane: Repository Operating Model
 domain: Agent System
@@ -12,7 +12,6 @@ version: 1.0.0
 canonical_source: docs/apex-repository-docs/agent-system/ai-capability-matrix.md
 related_concepts:
   - CONCEPT-0001
-  - CONCEPT-0070
 dependencies:
   - DOC-0001
   - DOC-0016

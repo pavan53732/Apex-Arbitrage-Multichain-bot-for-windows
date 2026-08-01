@@ -39,7 +39,7 @@ Stable concept identity registry. `Concept ID` remains the permanent identity; `
 | Registry schema version | 1.1 |
 | Registry model | Concept-centric with stable superseded aliases |
 | Last regenerated | 2026-07-31 |
-| Active semantic concepts | 220 |
+| Active semantic concepts | 221 |
 | Superseded alias concept IDs retained | 176 |
 
 ## Concept-Centric Rules
@@ -450,3 +450,4 @@ Stable concept identity registry. `Concept ID` remains the permanent identity; `
 | CONCEPT-0397 | WIN-0397 | Semantic | Apex Enhancement Summary | CONCEPT-0397 | DOC-0436 | docs/apex-app-docs/reference/enhancements/APEX-ENHANCEMENT-SUMMARY.md | Product Specification | Windows | Active | DOC-0436 | Canonical owner |
 | CONCEPT-0398 | WIN-0398 | Semantic | Windows Desktop Enhanced | CONCEPT-0398 | DOC-0437 | docs/apex-app-docs/windows/WINDOWS-DESKTOP-ENHANCED.md | Product Specification | Windows | Active | DOC-0437 | Canonical owner |
 | CONCEPT-0399 | WIN-0399 | Semantic | Windows Arbitrage Gaps Audit | CONCEPT-0399 | DOC-0438 | docs/apex-app-docs/windows/audits/AUDIT-WINDOWS-ARBITRAGE-GAPS.md | Product Specification | Windows | Active | DOC-0438 | Canonical owner |
+| CONCEPT-0439 | AGENT-0439 | Semantic | AI Capability Matrix | CONCEPT-0439 | DOC-0439 | docs/apex-repository-docs/agent-system/ai-capability-matrix.md | Repository Operating Model | Agent System | Active | DOC-0439 | Canonical owner |

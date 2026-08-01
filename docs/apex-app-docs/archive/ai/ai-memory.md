@@ -29,9 +29,9 @@ scope: Reference documentation.
 
 # AI Memory
 
-This document was consolidated into `../product-specification/ai/memory/ai-memory-system.md`.
+This document was consolidated into [`../../ai/memory/ai-memory-system.md`](../../ai/memory/ai-memory-system.md).
 
-**Canonical owner:** `../product-specification/ai/memory/ai-memory-system.md`
+**Canonical owner:** `../../ai/memory/ai-memory-system.md`
 
 ## Cross-References
-- `../product-specification/ai/memory/ai-memory-system.md`
+- [`../../ai/memory/ai-memory-system.md`](../../ai/memory/ai-memory-system.md)

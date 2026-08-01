@@ -57,3 +57,5 @@ Generic deployment docs.
 | DOC-0240 | [Windows Notification Integration](windows-notification-integration.md) | Specification | Canonical | Active |
 | DOC-0241 | [Windows Security Integration](windows-security-integration.md) | Specification | Canonical | Active |
 | DOC-0242 | [Windows Service Integration](windows-service-integration.md) | Specification | Canonical | Active |
+| DOC-0437 | [Windows Desktop Enhanced](WINDOWS-DESKTOP-ENHANCED.md) | Guide | Canonical | Active |
+| DOC-0438 | [Windows Arbitrage Gaps Audit](audits/AUDIT-WINDOWS-ARBITRAGE-GAPS.md) | Reference | Canonical | Active |

@@ -40,8 +40,8 @@ Stable document identity registry. Paths are locations; Document IDs are identit
 | Registry schema version | 1.1 |
 | Registry model | Document identity with concept roles |
 | Last regenerated | 2026-07-31 |
-| Registered documents | 353 |
-| Active semantic concepts referenced | 220 |
+| Registered documents | 354 |
+| Active semantic concepts referenced | 221 |
 
 | Document ID | Path | Title | Plane | Domain | Class | Authority | Status | Owner | Version | Concept Role | Canonical Source | Related Concepts | Dependencies | Consumers | Supersedes | Superseded By |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -398,9 +398,7 @@ Stable document identity registry. Paths are locations; Document IDs are identit
 | DOC-0433 | docs/apex-app-docs/data/persistence/README.md | Data Persistence README | Product Specification | Data | Index | Derived | Active | Runtime Team | 1.0.0 | Index | docs/apex-app-docs/data/persistence/database-schema.md | CONCEPT-0266 | DOC-0266 |  |  |  |
 | DOC-0434 | docs/apex-app-docs/data/registries/README.md | Data Registries README | Product Specification | Data | Index | Derived | Active | Runtime Team | 1.0.0 | Index | docs/apex-app-docs/data/registries/registry-system.md | CONCEPT-0276 | DOC-0276 |  |  |  |
 | DOC-0435 | docs/apex-app-docs/data/state/README.md | Data State README | Product Specification | Data | Index | Derived | Active | Runtime Team | 1.0.0 | Index | docs/apex-app-docs/data/state/state-management.md | CONCEPT-0267 | DOC-0267 |  |  |  |
-| DOC-0397 | docs/apex-app-docs/interfaces/events/README.md | Events | Product Specification | Interfaces | Index | Derived | Active | Runtime Team | 1.0.0 | Index | docs/apex-app-docs/interfaces/events/event-bus.md | CONCEPT-0302 | DOC-0302 |  |  |
-| DOC-0398 | docs/apex-app-docs/operations/diagnostics/README.md | Diagnostics | Product Specification | Operations | Index | Derived | Active | Runtime Team | 1.0.0 | Index | docs/apex-app-docs/operations/diagnostics/diagnostics.md | CONCEPT-0333 | DOC-0333 |  |  |
-| DOC-0399 | docs/apex-app-docs/operations/monitoring/README.md | Monitoring | Product Specification | Operations | Index | Derived | Active | Runtime Team | 1.0.0 | Index | docs/apex-app-docs/operations/monitoring/monitoring-observability.md | CONCEPT-0332 | DOC-0332 |  |  |
 | DOC-0436 | docs/apex-app-docs/reference/enhancements/APEX-ENHANCEMENT-SUMMARY.md | Apex Enhancement Summary | Product Specification | Windows | Reference | Canonical | Active | Runtime Team | 1.0.0 | Owner | docs/apex-app-docs/reference/enhancements/APEX-ENHANCEMENT-SUMMARY.md | CONCEPT-0397 |  |  |  |  |
 | DOC-0437 | docs/apex-app-docs/windows/WINDOWS-DESKTOP-ENHANCED.md | Windows Desktop Enhanced | Product Specification | Windows | Guide | Canonical | Active | Runtime Team | 1.0.0 | Owner | docs/apex-app-docs/windows/WINDOWS-DESKTOP-ENHANCED.md | CONCEPT-0398 |  |  |  |  |
 | DOC-0438 | docs/apex-app-docs/windows/audits/AUDIT-WINDOWS-ARBITRAGE-GAPS.md | Windows Arbitrage Gaps Audit | Product Specification | Windows | Reference | Canonical | Active | Runtime Team | 1.0.0 | Owner | docs/apex-app-docs/windows/audits/AUDIT-WINDOWS-ARBITRAGE-GAPS.md | CONCEPT-0399 |  |  |  |  |
+| DOC-0439 | docs/apex-repository-docs/agent-system/ai-capability-matrix.md | AI Capability Matrix | Repository Operating Model | Agent System | Policy | Canonical | Active | Runtime Team | 1.0.0 | Owner | docs/apex-repository-docs/agent-system/ai-capability-matrix.md | CONCEPT-0439 |  |  |  |  |
