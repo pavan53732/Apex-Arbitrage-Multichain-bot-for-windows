@@ -23,7 +23,7 @@ from validator_sdk import (
 class Validator(BaseValidator):
     VALIDATOR_ID = "VAL-012"
     NAME = "Semantic Drift Validator"
-    VERSION = "1.0.0"
+    VERSION = "1.1.0"
     DESCRIPTION = "Detects semantic drift between related documents through content hashing, section comparison, and staleness analysis"
     CATEGORY = "drift"
     SEVERITY = "WARNING"
@@ -130,13 +130,35 @@ class Validator(BaseValidator):
                         except (ValueError, TypeError):
                             pass
 
-            # C) Section drift: compare section headings between related docs
+            # C) Section drift: compare section headings between related docs.
+            #    Scoped to same-concept, same-class dependency pairs: a consumer
+            #    that implements, extends, or explains a *different* concept
+            #    legitimately carries sections its dependency lacks (a guide
+            #    explains a specification; a detail document extends its base).
+            #    Only a consumer and dependency that share a related concept and
+            #    document class are expected to mirror each other's sections, so
+            #    those pairs are the drift signal.
             if entry.dependencies:
                 consumer_sections = set(doc_headings.get(doc_id, []))
+                consumer_class = entry.class_
+                consumer_concepts = set(entry.related_concepts)
                 for dep_id in entry.dependencies:
                     dep_id = dep_id.strip()
                     if not dep_id or dep_id not in doc_headings:
                         continue
+                    dep_entry = context.document_registry.get(dep_id)
+                    # Same-class scope: fall back to historical behavior when
+                    # either class is unknown; scope only when both are declared.
+                    if consumer_class and dep_entry and dep_entry.class_:
+                        if consumer_class != dep_entry.class_:
+                            continue
+                    # Same-concept scope: a consumer extending a different
+                    # concept legitimately has its own sections. Fall back to
+                    # historical behavior when either concept set is unknown.
+                    if dep_entry:
+                        dep_concepts = set(dep_entry.related_concepts)
+                        if consumer_concepts and dep_concepts and not (consumer_concepts & dep_concepts):
+                            continue
                     dep_sections = set(doc_headings[dep_id])
 
                     # Check for sections referenced by consumer but missing in dependency
@@ -147,7 +169,7 @@ class Validator(BaseValidator):
                                 file=entry.path, line=1,
                                 message=f"Consumer {doc_id} has section '{section}' absent from dependency {dep_id}",
                                 severity="WARNING",
-                                rule="Sections in consumer should be mirrored in dependency.",
+                                rule="Sections in a consumer should be mirrored in its same-concept dependency.",
                                 suggestion=f"Verify '{section}' is present in {dep_id}.",
                             ))
 
