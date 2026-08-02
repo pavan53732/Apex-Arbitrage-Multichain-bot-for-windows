@@ -14,14 +14,14 @@ related_concepts:
   - CONCEPT-0007
   - CONCEPT-0006
   - CONCEPT-0008
-  - CONCEPT-0067
-  - CONCEPT-0069
+  - CONCEPT-0444
+  - CONCEPT-0446
 dependencies:
   - DOC-0007
   - DOC-0006
   - DOC-0008
-  - DOC-0067
-  - DOC-0069
+  - DOC-0444
+  - DOC-0446
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -54,6 +54,8 @@ Generated reports, temporary audit files, caches, or product-domain data registr
 | registries | CONCEPT-0007 | [Document Registry](DOCUMENT-REGISTRY.md) | (self) |
 | registries | CONCEPT-0440 | [Team Registry](TEAM-REGISTRY.md) | (self) |
 | registries | CONCEPT-0441 | [Glossary](GLOSSARY.md) | (self) |
+| registries | CONCEPT-0444 | [Registry Governance Standard](registry-governance-standard.md) | (self) |
+| registries | CONCEPT-0446 | [Concept Lifecycle Policy](concept-lifecycle-policy.md) | (self) |
 
 ## Document classes expected
 

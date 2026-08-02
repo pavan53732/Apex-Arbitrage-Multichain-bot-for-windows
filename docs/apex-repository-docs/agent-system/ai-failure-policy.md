@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0073
+document_id: DOC-0449
 title: AI Failure Policy
 plane: Repository Operating Model
 domain: Agent System
@@ -12,14 +12,14 @@ version: 1.0.0
 canonical_source: docs/apex-repository-docs/agent-system/ai-failure-policy.md
 related_concepts:
   - CONCEPT-0001
-  - CONCEPT-0073
+  - CONCEPT-0449
 dependencies:
   - DOC-0001
   - DOC-0016
-  - DOC-0065
+  - DOC-0442
   - DOC-0070
-  - DOC-0071
-  - DOC-0072
+  - DOC-0447
+  - DOC-0448
 consumers: []
 validator_coverage: []
 supersedes: []

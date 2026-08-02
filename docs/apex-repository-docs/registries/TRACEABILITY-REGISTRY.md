@@ -731,3 +731,16 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0840 | DOC-0439 | Defines | CONCEPT-0439 | Active | Canonical document owner for active concept. |
 | TRACE-0841 | DOC-0440 | Defines | CONCEPT-0440 | Active | Canonical document owner for active concept. |
 | TRACE-0842 | DOC-0441 | Defines | CONCEPT-0441 | Active | Canonical document owner for active concept. |
+| TRACE-0843 | DOC-0442 | Defines | CONCEPT-0442 | Active | Canonical document owner for active concept. |
+| TRACE-0844 | DOC-0443 | Defines | CONCEPT-0443 | Active | Canonical document owner for active concept. |
+| TRACE-0845 | DOC-0444 | Defines | CONCEPT-0444 | Active | Canonical document owner for active concept. |
+| TRACE-0846 | DOC-0445 | Defines | CONCEPT-0445 | Active | Canonical document owner for active concept. |
+| TRACE-0847 | DOC-0446 | Defines | CONCEPT-0446 | Active | Canonical document owner for active concept. |
+| TRACE-0848 | DOC-0447 | Defines | CONCEPT-0447 | Active | Canonical document owner for active concept. |
+| TRACE-0849 | DOC-0448 | Defines | CONCEPT-0448 | Active | Canonical document owner for active concept. |
+| TRACE-0850 | DOC-0449 | Defines | CONCEPT-0449 | Active | Canonical document owner for active concept. |
+| TRACE-0851 | DOC-0450 | Defines | CONCEPT-0450 | Active | Canonical document owner for active concept. |
+| TRACE-0852 | DOC-0451 | Defines | CONCEPT-0451 | Active | Canonical document owner for active concept. |
+| TRACE-0853 | DOC-0452 | Defines | CONCEPT-0452 | Active | Canonical document owner for active concept. |
+| TRACE-0854 | DOC-0453 | Defines | CONCEPT-0453 | Active | Canonical document owner for active concept. |
+| TRACE-0855 | DOC-0454 | Defines | CONCEPT-0454 | Active | Canonical document owner for active concept. |

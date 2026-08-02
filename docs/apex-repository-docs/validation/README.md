@@ -12,12 +12,12 @@ version: 1.0.0
 canonical_source: REPOSITORY-EXECUTION-MODEL.md
 related_concepts:
   - CONCEPT-0004
-  - CONCEPT-0066
-  - CONCEPT-0078
+  - CONCEPT-0443
+  - CONCEPT-0454
 dependencies:
   - DOC-0004
-  - DOC-0066
-  - DOC-0078
+  - DOC-0443
+  - DOC-0454
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -48,6 +48,8 @@ Remote pipelines, CI/CD files, generated validation output, or product testing s
 | Subdomain | Concept ID | Canonical Owner | README |
 | --- | --- | --- | --- |
 | validation | CONCEPT-0004 | [REPOSITORY-EXECUTION-MODEL.md](../../REPOSITORY-EXECUTION-MODEL.md) | (self) |
+| validation | CONCEPT-0443 | [Validation Specification](validation-specification.md) | (self) |
+| validation | CONCEPT-0454 | [Validator Architecture Specification](validator-architecture-specification.md) | (self) |
 
 ## Document classes expected
 

@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0065
+document_id: DOC-0442
 title: README Governance Standard
 plane: Repository Operating Model
 domain: Standards
@@ -11,7 +11,7 @@ owner: Runtime Team
 version: 1.0.0
 canonical_source: docs/apex-repository-docs/standards/readme-governance-standard.md
 related_concepts:
-  - CONCEPT-0065
+  - CONCEPT-0442
 dependencies: []
 consumers: []
 validator_coverage: []

@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0077
+document_id: DOC-0453
 title: AI Workspace Policy
 plane: Repository Operating Model
 domain: Agent System
@@ -12,18 +12,18 @@ version: 1.0.0
 canonical_source: docs/apex-repository-docs/agent-system/ai-workspace-policy.md
 related_concepts:
   - CONCEPT-0001
-  - CONCEPT-0077
+  - CONCEPT-0453
 dependencies:
   - DOC-0001
   - DOC-0016
-  - DOC-0065
+  - DOC-0442
   - DOC-0070
-  - DOC-0071
-  - DOC-0072
-  - DOC-0073
-  - DOC-0074
-  - DOC-0075
-  - DOC-0076
+  - DOC-0447
+  - DOC-0448
+  - DOC-0449
+  - DOC-0450
+  - DOC-0451
+  - DOC-0452
 consumers: []
 validator_coverage: []
 supersedes: []

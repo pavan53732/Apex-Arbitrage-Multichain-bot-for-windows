@@ -14,12 +14,12 @@ related_concepts:
   - CONCEPT-0056
   - CONCEPT-0057
   - CONCEPT-0059
-  - CONCEPT-0068
+  - CONCEPT-0445
 dependencies:
   - DOC-0056
   - DOC-0057
   - DOC-0059
-  - DOC-0068
+  - DOC-0445
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -48,6 +48,7 @@ Temporary migration/audit/completion reports, generated documentation, or produc
 | Subdomain | Concept ID | Canonical Owner | README |
 | --- | --- | --- | --- |
 | documentation-lifecycle | CONCEPT-0056 | [Documentation Lifecycle](documentation-lifecycle.md) | (self) |
+| documentation-lifecycle | CONCEPT-0445 | [Document Lifecycle Policy](document-lifecycle-policy.md) | (self) |
 
 ## Document classes expected
 

@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0071
+document_id: DOC-0447
 title: AI Decision Tree
 plane: Repository Operating Model
 domain: Agent System
@@ -12,11 +12,11 @@ version: 1.0.0
 canonical_source: docs/apex-repository-docs/agent-system/ai-decision-tree.md
 related_concepts:
   - CONCEPT-0001
-  - CONCEPT-0071
+  - CONCEPT-0447
 dependencies:
   - DOC-0001
   - DOC-0016
-  - DOC-0065
+  - DOC-0442
   - DOC-0070
 consumers: []
 validator_coverage: []

@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0078
+document_id: DOC-0454
 title: Validator Architecture Specification
 plane: Repository Operating Model
 domain: Validation
@@ -12,10 +12,10 @@ version: 1.1.0
 canonical_source: docs/apex-repository-docs/validation/validator-architecture-specification.md
 related_concepts:
   - CONCEPT-0004
-  - CONCEPT-0078
+  - CONCEPT-0454
 dependencies:
   - DOC-0004
-  - DOC-0066
+  - DOC-0443
 consumers: []
 validator_coverage: []
 supersedes: []

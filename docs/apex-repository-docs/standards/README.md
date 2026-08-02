@@ -14,38 +14,12 @@ related_concepts:
   - CONCEPT-0052
   - CONCEPT-0053
   - CONCEPT-0054
-  - CONCEPT-0065
-  - CONCEPT-0066
-  - CONCEPT-0067
-  - CONCEPT-0068
-  - CONCEPT-0069
-  - CONCEPT-0070
-  - CONCEPT-0071
-  - CONCEPT-0072
-  - CONCEPT-0073
-  - CONCEPT-0074
-  - CONCEPT-0075
-  - CONCEPT-0076
-  - CONCEPT-0077
-  - CONCEPT-0078
+  - CONCEPT-0442
 dependencies:
   - DOC-0052
   - DOC-0053
   - DOC-0054
-  - DOC-0065
-  - DOC-0066
-  - DOC-0067
-  - DOC-0068
-  - DOC-0069
-  - DOC-0070
-  - DOC-0071
-  - DOC-0072
-  - DOC-0073
-  - DOC-0074
-  - DOC-0075
-  - DOC-0076
-  - DOC-0077
-  - DOC-0078
+  - DOC-0442
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -76,6 +50,7 @@ Product API or runtime contracts, product configuration schemas, or product feat
 | Subdomain | Concept ID | Canonical Owner | README |
 | --- | --- | --- | --- |
 | standards | CONCEPT-0052 | [Canonical Source Rules](canonical-source-rules.md) | (self) |
+| standards | CONCEPT-0442 | [README Governance Standard](readme-governance-standard.md) | (self) |
 
 ## Document classes expected
 

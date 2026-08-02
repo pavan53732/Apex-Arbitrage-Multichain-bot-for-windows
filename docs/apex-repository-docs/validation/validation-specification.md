@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0066
+document_id: DOC-0443
 title: Validation Specification
 plane: Repository Operating Model
 domain: Validation
@@ -8,11 +8,11 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.1.0
+version: 1.2.0
 canonical_source: docs/apex-repository-docs/validation/validation-specification.md
 related_concepts:
   - CONCEPT-0004
-  - CONCEPT-0066
+  - CONCEPT-0443
 dependencies:
   - DOC-0004
 consumers: []
@@ -114,10 +114,22 @@ The repository defines eight validator families. Each family must be implemented
 **Checks**:
 - Document Registry: every registered document exists at registered path
 - Document Registry: every .md file with DOC-ID is registered
+- Document Registry: the registry maps each declared DOC-ID back to the file that declares it
 - Concept Registry: every canonical owner document exists
 - Concept Registry: every active concept has Owner document
 - Traceability Registry: all source/target IDs resolve
 - Registry version metadata present and consistent
+
+**Identity binding**: A Document ID must be declared by exactly one file, and
+the registry must map that ID to that same file. Checking only that an ID
+appears somewhere in the registry is insufficient: when two files declare the
+same ID, the registered file owns it and the other becomes invisible to
+traceability, orphan detection, and coverage while still passing validation.
+The mismatch is therefore an error rather than a warning.
+
+Resolving a mismatch allocates a new ID to the **unregistered** file. The
+already-registered document keeps its ID, because ROM-002 protects the identity
+of documents the registry already tracks.
 
 **Input**: All three registries, filesystem
 **Output**: Report of registry/filesystem mismatches
@@ -125,6 +137,7 @@ The repository defines eight validator families. Each family must be implemented
 **Failure Semantics**:
 - Missing registered file = 1 error
 - Unregistered DOC-ID file = 1 warning
+- Declared DOC-ID mapped to a different path = 1 error
 - Missing canonical owner = 1 error
 - Unresolved traceability ID = 1 error
 - Error threshold: 0
@@ -340,6 +353,22 @@ An ordinary cross-reference is not delegation, and does not constitute coverage.
 Runtime documents that describe no stateful behaviour are reported as warnings
 rather than errors. The absence of a state machine in a stateless schema or
 contract document is a correct outcome.
+
+## Terminology Semantics
+
+Terminology validation (VAL-011) reads the canonical glossary at
+`docs/apex-repository-docs/registries/GLOSSARY.md`, whose table defines six
+columns: Term ID, Term, Canonical Definition, Concept ID, Domain, Related Terms.
+
+Two glossary terms are in conflict only when one is a complete phrase within the
+other and the two are owned by different domains, so that a reader cannot tell
+which is meant. Sharing a generic head noun is not a conflict: the repository
+deliberately names several components "... Engine", and that consistency is a
+property of the vocabulary rather than an ambiguity in it.
+
+A glossary that cannot be parsed disables terminology validation silently, so
+the loader must accept the table's actual column count rather than a larger
+assumed one.
 
 ## Implementation Requirements
 

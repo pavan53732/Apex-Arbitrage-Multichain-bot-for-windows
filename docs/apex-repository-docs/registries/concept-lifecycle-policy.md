@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0069
+document_id: DOC-0446
 title: Concept Lifecycle Policy
 plane: Repository Operating Model
 domain: Registries
@@ -12,7 +12,7 @@ version: 1.0.0
 canonical_source: docs/apex-repository-docs/registries/concept-lifecycle-policy.md
 related_concepts:
   - CONCEPT-0006
-  - CONCEPT-0069
+  - CONCEPT-0446
 dependencies:
   - DOC-0006
   - DOC-0007

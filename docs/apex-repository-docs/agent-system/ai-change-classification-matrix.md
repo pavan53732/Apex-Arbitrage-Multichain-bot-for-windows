@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0074
+document_id: DOC-0450
 title: AI Change Classification Matrix
 plane: Repository Operating Model
 domain: Agent System
@@ -12,15 +12,15 @@ version: 1.0.0
 canonical_source: docs/apex-repository-docs/agent-system/ai-change-classification-matrix.md
 related_concepts:
   - CONCEPT-0001
-  - CONCEPT-0074
+  - CONCEPT-0450
 dependencies:
   - DOC-0001
   - DOC-0016
-  - DOC-0065
+  - DOC-0442
   - DOC-0070
-  - DOC-0071
-  - DOC-0072
-  - DOC-0073
+  - DOC-0447
+  - DOC-0448
+  - DOC-0449
 consumers: []
 validator_coverage: []
 supersedes: []

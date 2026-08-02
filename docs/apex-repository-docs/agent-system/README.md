@@ -14,24 +14,24 @@ related_concepts:
   - CONCEPT-0001
   - CONCEPT-0018
   - CONCEPT-0070
-  - CONCEPT-0071
-  - CONCEPT-0072
-  - CONCEPT-0073
-  - CONCEPT-0074
-  - CONCEPT-0075
-  - CONCEPT-0076
-  - CONCEPT-0077
+  - CONCEPT-0447
+  - CONCEPT-0448
+  - CONCEPT-0449
+  - CONCEPT-0450
+  - CONCEPT-0451
+  - CONCEPT-0452
+  - CONCEPT-0453
 dependencies:
   - DOC-0001
   - DOC-0018
   - DOC-0070
-  - DOC-0071
-  - DOC-0072
-  - DOC-0073
-  - DOC-0074
-  - DOC-0075
-  - DOC-0076
-  - DOC-0077
+  - DOC-0447
+  - DOC-0448
+  - DOC-0449
+  - DOC-0450
+  - DOC-0451
+  - DOC-0452
+  - DOC-0453
 consumers: []
 validator_coverage: []
 supersedes: []
@@ -62,6 +62,13 @@ Product AI runtime/model behavior, product AI orchestration, product AI memory, 
 | --- | --- | --- | --- |
 | agent-profiles | CONCEPT-0018 | [Agent Profiles README](agent-profiles/README.md) | [Agent Profiles README](agent-profiles/README.md) |
 | agent-system | CONCEPT-0439 | [AI Capability Matrix](ai-capability-matrix.md) | (self) |
+| agent-system | CONCEPT-0447 | [AI Decision Tree](ai-decision-tree.md) | (self) |
+| agent-system | CONCEPT-0448 | [AI Execution Contract](ai-execution-contract.md) | (self) |
+| agent-system | CONCEPT-0449 | [AI Failure Policy](ai-failure-policy.md) | (self) |
+| agent-system | CONCEPT-0450 | [AI Change Classification Matrix](ai-change-classification-matrix.md) | (self) |
+| agent-system | CONCEPT-0451 | [AI Commit Policy](ai-commit-policy.md) | (self) |
+| agent-system | CONCEPT-0452 | [AI Push Policy](ai-push-policy.md) | (self) |
+| agent-system | CONCEPT-0453 | [AI Workspace Policy](ai-workspace-policy.md) | (self) |
 
 ## Document classes expected
 

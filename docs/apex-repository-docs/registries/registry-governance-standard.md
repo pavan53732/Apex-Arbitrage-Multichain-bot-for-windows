@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0067
+document_id: DOC-0444
 title: Registry Governance Standard
 plane: Repository Operating Model
 domain: Registries

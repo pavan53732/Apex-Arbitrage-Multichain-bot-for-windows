@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0068
+document_id: DOC-0445
 title: Document Lifecycle Policy
 plane: Repository Operating Model
 domain: Documentation Lifecycle
@@ -13,7 +13,7 @@ canonical_source: docs/apex-repository-docs/documentation-lifecycle/document-lif
 related_concepts:
   - CONCEPT-0056
   - CONCEPT-0057
-  - CONCEPT-0068
+  - CONCEPT-0445
 dependencies:
   - DOC-0056
   - DOC-0057

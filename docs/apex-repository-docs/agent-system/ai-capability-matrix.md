@@ -15,7 +15,7 @@ related_concepts:
 dependencies:
   - DOC-0001
   - DOC-0016
-  - DOC-0065
+  - DOC-0442
 consumers: []
 validator_coverage: []
 supersedes: []

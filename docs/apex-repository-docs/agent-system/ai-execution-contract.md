@@ -1,6 +1,6 @@
 ---
 metadata_schema_version: 1.0
-document_id: DOC-0072
+document_id: DOC-0448
 title: AI Execution Contract
 plane: Repository Operating Model
 domain: Agent System
@@ -12,13 +12,13 @@ version: 1.0.0
 canonical_source: docs/apex-repository-docs/agent-system/ai-execution-contract.md
 related_concepts:
   - CONCEPT-0001
-  - CONCEPT-0072
+  - CONCEPT-0448
 dependencies:
   - DOC-0001
   - DOC-0016
-  - DOC-0065
+  - DOC-0442
   - DOC-0070
-  - DOC-0071
+  - DOC-0447
 consumers: []
 validator_coverage: []
 supersedes: []
