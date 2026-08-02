@@ -61,6 +61,7 @@ Product AI runtime/model behavior, product AI orchestration, product AI memory, 
 | Subdomain | Concept ID | Canonical Owner | README |
 | --- | --- | --- | --- |
 | agent-profiles | CONCEPT-0018 | [Agent Profiles README](agent-profiles/README.md) | [Agent Profiles README](agent-profiles/README.md) |
+| agent-system | CONCEPT-0439 | [AI Capability Matrix](ai-capability-matrix.md) | (self) |
 
 ## Document classes expected
 

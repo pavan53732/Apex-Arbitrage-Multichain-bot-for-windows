@@ -52,6 +52,8 @@ Generated reports, temporary audit files, caches, or product-domain data registr
 | Subdomain | Concept ID | Canonical Owner | README |
 | --- | --- | --- | --- |
 | registries | CONCEPT-0007 | [Document Registry](DOCUMENT-REGISTRY.md) | (self) |
+| registries | CONCEPT-0440 | [Team Registry](TEAM-REGISTRY.md) | (self) |
+| registries | CONCEPT-0441 | [Glossary](GLOSSARY.md) | (self) |
 
 ## Document classes expected
 

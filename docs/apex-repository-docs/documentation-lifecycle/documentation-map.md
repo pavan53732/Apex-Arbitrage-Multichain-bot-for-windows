@@ -35,10 +35,10 @@ This map is regenerated from current document metadata and concept-centric regis
 
 | Field | Value |
 | --- | --- |
-| Documents | 353 |
-| Active semantic concepts | 220 |
-| Superseded concept aliases retained | 176 |
-| Traceability relationships | 672 |
+| Documents | 359 |
+| Active semantic concepts | 226 |
+| Superseded concept aliases retained | 178 |
+| Traceability relationships | 678 |
 
 ## Domain Map
 
@@ -62,12 +62,12 @@ This map is regenerated from current document metadata and concept-centric regis
 | Product Specification | State Machines | 7 | [Engine State Machine](../../apex-app-docs/state-machines/engine-state-machine.md), [Execution State Machine](../../apex-app-docs/state-machines/execution-state-machine.md), [Plugin State Machine](../../apex-app-docs/state-machines/plugin-state-machine.md), [Service State Machine](../../apex-app-docs/state-machines/service-state-machine.md), [System Wide State Machine Index](../../apex-app-docs/state-machines/state-machine-index.md), [Worker State Machine](../../apex-app-docs/state-machines/worker-state-machine.md) |
 | Product Specification | Testing | 5 | [Testing](../../apex-app-docs/testing/testing.md) |
 | Product Specification | UI | 7 | [Design System](../../apex-app-docs/ui/design-system.md), [Designer Protocols](../../apex-app-docs/ui/designer-protocols.md), [UI Component Spec](../../apex-app-docs/ui/ui-component-spec.md), [User Flows](../../apex-app-docs/ui/user-flows.md), [User Guide](../../apex-app-docs/ui/user-guide.md), [UX Guidelines](../../apex-app-docs/ui/ux-guidelines.md) |
-| Product Specification | Windows | 7 | [Windows App Architecture](../../apex-app-docs/windows/windows-app-architecture.md), [Windows Desktop](../../apex-app-docs/windows/windows-desktop.md), [Windows Network Resilience](../../apex-app-docs/windows/windows-network-resilience.md), [Windows Notification Integration](../../apex-app-docs/windows/windows-notification-integration.md), [Windows Security Integration](../../apex-app-docs/windows/windows-security-integration.md), [Windows Service Integration](../../apex-app-docs/windows/windows-service-integration.md) |
-| Repository Operating Model | Agent System | 33 | [AGENTS](../../../AGENTS.md), [Agent Rules](../../../AGENTS_RULES.md), [Agent Profiles README](../agent-system/agent-profiles/README.md) |
+| Product Specification | Windows | 10 | [Windows App Architecture](../../apex-app-docs/windows/windows-app-architecture.md), [Windows Desktop](../../apex-app-docs/windows/windows-desktop.md), [Windows Network Resilience](../../apex-app-docs/windows/windows-network-resilience.md), [Windows Notification Integration](../../apex-app-docs/windows/windows-notification-integration.md), [Windows Security Integration](../../apex-app-docs/windows/windows-security-integration.md), [Windows Service Integration](../../apex-app-docs/windows/windows-service-integration.md) |
+| Repository Operating Model | Agent System | 34 | [AGENTS](../../../AGENTS.md), [Agent Rules](../../../AGENTS_RULES.md), [Agent Profiles README](../agent-system/agent-profiles/README.md), [AI Capability Matrix](../agent-system/ai-capability-matrix.md) |
 | Repository Operating Model | Contribution | 2 | [Contributing](../contribution/contributing.md) |
 | Repository Operating Model | Documentation Lifecycle | 5 | [Documentation Lifecycle](documentation-lifecycle.md), [Documentation Map](documentation-map.md), [Documentation Status Review Workflow](documentation-status-review-workflow.md) |
 | Repository Operating Model | Governance | 10 | [Repository README](../../../README.md), [REBUILD-SYSTEM-SPECIFICATION](../../../REBUILD-SYSTEM-SPECIFICATION.md), [REPOSITORY-EXECUTION-MODEL](../../../REPOSITORY-EXECUTION-MODEL.md), [Governance Overview](../governance/governance-overview.md) |
-| Repository Operating Model | Registries | 4 | [Concept Registry](../registries/CONCEPT-REGISTRY.md), [Document Registry](../registries/DOCUMENT-REGISTRY.md), [Traceability Registry](../registries/TRACEABILITY-REGISTRY.md) |
+| Repository Operating Model | Registries | 6 | [Concept Registry](../registries/CONCEPT-REGISTRY.md), [Document Registry](../registries/DOCUMENT-REGISTRY.md), [Traceability Registry](../registries/TRACEABILITY-REGISTRY.md), [Team Registry](../registries/TEAM-REGISTRY.md), [Glossary](../registries/GLOSSARY.md) |
 | Repository Operating Model | Standards | 4 | [Canonical Source Rules](../standards/canonical-source-rules.md), [Coding Standards](../standards/coding-standards.md), [Dependency Authority Rules](../standards/dependency-authority-rules.md) |
 | Repository Operating Model | Traceability | 4 | [Cross Reference Index](../traceability/cross-reference-index.md), [Module Ownership Matrix](../traceability/module-ownership-matrix.md) |
 | Repository Operating Model | Validation | 1 |  |
@@ -440,3 +440,6 @@ All registered document identities are reachable through this canonical document
 - `DOC-0436`
 - `DOC-0437`
 - `DOC-0438`
+- `DOC-0439`
+- `DOC-0440`
+- `DOC-0441`
