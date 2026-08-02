@@ -19,6 +19,14 @@ from dataclasses import dataclass, field
 
 from .config import Config, ExecutionPhase
 from .dex import Pool, Quote, QuoteError, best_quote
+from .opportunity import (
+    Candidate,
+    DetectionResult,
+    OpportunityState,
+    Rejection,
+    detect,
+)
+from .routing import Route, RouteRejected, RouteState, RoutingResult, rank_routes
 from .rpc import RpcError, RpcPool
 
 PHASE_1_BLOCK_CODE = "PHASE_1_EXECUTION_BLOCK"
@@ -56,6 +64,52 @@ class SimulationResult:
             f"{self.quote.amount_out} {self.quote.token_out} "
             f"(impact {self.quote.price_impact_bps}bps, chain {self.chain_id}, "
             f"execution {self.rejection_code})"
+        )
+
+
+@dataclass(frozen=True)
+class DiscoveryResult:
+    """Outcome of a full detect-and-route pass.
+
+    Carries the rejections from both stages alongside the winning route.
+    Detection and routing rejections are distinct signals — one means no
+    opportunity existed, the other that none was safe to take — and collapsing
+    them would hide which gate stopped a trade.
+    """
+
+    chain_id: int
+    detection: DetectionResult
+    routing: RoutingResult
+    best_candidate: Candidate | None = None
+    executed: bool = False
+    rejection_code: str = PHASE_1_BLOCK_CODE
+
+    @property
+    def has_route(self) -> bool:
+        return bool(self.routing.routes)
+
+    @property
+    def best_route(self) -> Route:
+        """The winning route, or raise if none survived.
+
+        Raising rather than returning None enforces the routing contract's
+        hard-reject rule at the call site.
+        """
+        return self.routing.best
+
+    @property
+    def summary(self) -> str:
+        if not self.has_route:
+            return (
+                f"chain {self.chain_id}: no safe route "
+                f"({len(self.detection.candidates)} candidate(s), "
+                f"{len(self.routing.rejections)} route rejection(s))"
+            )
+        route = self.routing.routes[0]
+        return (
+            f"chain {self.chain_id}: {route.candidate_identity} "
+            f"net {route.net_edge_bps}bps "
+            f"(fingerprint {route.fingerprint}, execution {self.rejection_code})"
         )
 
 
@@ -104,7 +158,76 @@ class SimulationPipeline:
             excluded_venues=tuple(exclusions),
         )
 
-    def execute(self, result: SimulationResult) -> None:
+    def discover(
+        self,
+        pools: list[Pool],
+        amount_in: int,
+        *,
+        now_ms: int,
+        gas_cost_units: int,
+        min_reserve_in: int = 0,
+    ) -> "DiscoveryResult":
+        """Run the full Phase 1 discovery path.
+
+        Verifies connectivity, detects candidates, ranks routes, and advances
+        the winning opportunity through its lifecycle to `SIMULATED` — the
+        furthest state reachable while execution is blocked.
+
+        Connectivity is verified first. A chain that cannot be reached yields no
+        discovery at all rather than candidates computed against unverified
+        state, because an absent input is never treated as an unchanged one.
+        """
+        self._warnings.clear()
+
+        chain_id = self.rpc.verify_chain_id()
+        if not self.rpc.has_redundancy:
+            self._warnings.append(
+                f"chain {chain_id} has {len(self.rpc.healthy_endpoints)} healthy endpoint(s); "
+                f"autonomous execution requires at least 2"
+            )
+
+        detection = detect(
+            pools,
+            now_ms=now_ms,
+            freshness_budget_ms=self.config.quote_freshness_ms,
+            min_edge_bps=self.config.min_edge_bps,
+            min_reserve_in=min_reserve_in,
+        )
+
+        routing = rank_routes(
+            list(detection.candidates),
+            amount_in,
+            now_ms=now_ms,
+            freshness_budget_ms=self.config.quote_freshness_ms,
+            max_slippage_bps=self.config.max_slippage_bps,
+            gas_cost_units=gas_cost_units,
+            min_net_edge_bps=self.config.min_edge_bps,
+        )
+
+        # Advance the winning candidate through the lifecycle. Each step is a
+        # declared transition, so an out-of-order advance raises rather than
+        # silently skipping a gate the specification requires.
+        best_candidate: Candidate | None = None
+        if routing.routes:
+            winner = routing.routes[0]
+            for candidate in detection.candidates:
+                if candidate.identity == winner.candidate_identity:
+                    best_candidate = (
+                        candidate
+                        .transition_to(OpportunityState.VALIDATED)
+                        .transition_to(OpportunityState.SCORED)
+                        .transition_to(OpportunityState.SIMULATED)
+                    )
+                    break
+
+        return DiscoveryResult(
+            chain_id=chain_id,
+            detection=detection,
+            routing=routing,
+            best_candidate=best_candidate,
+        )
+
+    def execute(self, result: "SimulationResult | DiscoveryResult") -> None:
         """Reject execution unconditionally.
 
         Present so the execution gate exists and is testable. It has no success
@@ -115,10 +238,12 @@ class SimulationPipeline:
 
 
 __all__ = [
+    "DiscoveryResult",
     "ExecutionBlocked",
     "SimulationPipeline",
     "SimulationResult",
     "PHASE_1_BLOCK_CODE",
     "QuoteError",
+    "RouteRejected",
     "RpcError",
 ]
