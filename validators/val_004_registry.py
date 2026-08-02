@@ -21,7 +21,7 @@ from validator_sdk import (
 class Validator(BaseValidator):
     VALIDATOR_ID = "VAL-004"
     NAME = "Registry Consistency Validator"
-    VERSION = "1.0.0"
+    VERSION = "1.1.0"
     DESCRIPTION = "Verifies registries match actual repository state"
     CATEGORY = "registry"
     SEVERITY = "ERROR"
@@ -73,6 +73,32 @@ class Validator(BaseValidator):
                     rule="All documents with DOC-ID should be registered",
                     suggestion=f"Add {doc_id} to Document Registry"
                 ))
+            elif doc_id:
+                # Presence of the ID in the registry is not sufficient. The
+                # registry must map that ID back to this same file, otherwise
+                # two files silently share one identity: the registered file
+                # owns the ID and the other becomes invisible to traceability,
+                # orphan detection, and coverage while still passing validation.
+                registered_path = document_registry[doc_id].path.replace("\\", "/")
+                if registered_path != rel_str:
+                    errors.append(ValidationError(
+                        code=ErrorCode.REGISTRY_PATH_MISMATCH,
+                        file=rel_str,
+                        line=1,
+                        message=format_error(
+                            ErrorCode.REGISTRY_PATH_MISMATCH,
+                            path=rel_str,
+                            id=doc_id,
+                            registered_path=registered_path,
+                        ),
+                        severity="ERROR",
+                        rule="A Document ID must be declared by exactly one file, and the registry must map it to that file",
+                        suggestion=(
+                            f"Allocate a new Document ID to {rel_str}, or correct the "
+                            f"registry path for {doc_id}. Do not change the ID of the "
+                            f"already-registered document."
+                        ),
+                    ))
 
         # 3. Concept Registry: every canonical owner document exists
         for concept_id, concept in concept_registry.items():

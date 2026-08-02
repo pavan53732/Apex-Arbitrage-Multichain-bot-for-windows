@@ -26,6 +26,7 @@ class ErrorCode(str, Enum):
     REGISTRY_FILE_MISSING = "REGISTRY_FILE_MISSING"
     REGISTRY_FS_MISMATCH = "REGISTRY_FS_MISMATCH"
     UNREGISTERED_DOCUMENT = "UNREGISTERED_DOCUMENT"
+    REGISTRY_PATH_MISMATCH = "REGISTRY_PATH_MISMATCH"
     MISSING_CANONICAL_OWNER = "MISSING_CANONICAL_OWNER"
     TRACEABILITY_ID_UNRESOLVED = "TRACEABILITY_ID_UNRESOLVED"
 
@@ -134,6 +135,7 @@ ERROR_MESSAGES = {
     ErrorCode.REGISTRY_FILE_MISSING: "Registry file {path} does not exist",
     ErrorCode.REGISTRY_FS_MISMATCH: "Registry entry for {id} points to non-existent file {path}",
     ErrorCode.UNREGISTERED_DOCUMENT: "File {path} has DOC-ID but is not registered in Document Registry",
+    ErrorCode.REGISTRY_PATH_MISMATCH: "File {path} declares {id}, but the Document Registry maps {id} to {registered_path}",
     ErrorCode.MISSING_CANONICAL_OWNER: "Active concept {concept_id} has no canonical owner document",
     ErrorCode.TRACEABILITY_ID_UNRESOLVED: "Traceability {trace_id} references unresolved {source_id} or {target_id}",
 
