@@ -18,7 +18,14 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from .config import Config, ExecutionPhase
+from .decision import (
+    ConsensusResult,
+    Decision,
+    Recommendation,
+    decide,
+)
 from .dex import Pool, Quote, QuoteError, best_quote
+from .ledger import DecisionLedger, DecisionOutcome
 from .opportunity import (
     Candidate,
     DetectionResult,
@@ -127,6 +134,7 @@ class SimulationPipeline:
     config: Config
     rpc: RpcPool
     ledger: PerformanceLedger = field(default_factory=PerformanceLedger, init=False)
+    decisions: DecisionLedger = field(default_factory=DecisionLedger, init=False)
     _warnings: list[str] = field(default_factory=list, init=False)
     _last_risk_verdict: RiskVerdict | None = field(default=None, init=False)
 
@@ -283,6 +291,81 @@ class SimulationPipeline:
         """The verdict from the most recent paper trade, for auditing."""
         return self._last_risk_verdict
 
+    def adjudicate(
+        self,
+        discovery: "DiscoveryResult",
+        paper_trade: PaperTradeResult,
+        *,
+        now_ms: int,
+        consensus: ConsensusResult | None,
+        notional_cents: int,
+        created_at_ms: int | None = None,
+        human_override: bool | None = None,
+        policy_available: bool = True,
+    ) -> Decision:
+        """Run the decision gate and record the outcome in the ledger.
+
+        The decision is recorded whatever it is. The ledger contract requires
+        an immutable trace of decisions, and a ledger holding only approvals
+        would be a record of successes rather than of decisions.
+
+        A decision reaching APPROVED here still does not execute: `execute()`
+        remains blocked, and in Phase 1 the risk verdict carries the phase gate
+        rejection that stops the decision before the simulation gate anyway.
+        """
+        route = discovery.best_route
+
+        recommendation = Recommendation(
+            identity=route.candidate_identity,
+            route_fingerprint=route.fingerprint,
+            created_at_ms=created_at_ms if created_at_ms is not None else now_ms,
+            notional_cents=notional_cents,
+        )
+
+        decision = decide(
+            recommendation,
+            now_ms=now_ms,
+            consensus=consensus,
+            risk_verdict=self._last_risk_verdict,
+            simulation=paper_trade,
+            policy_available=policy_available,
+            human_override=human_override,
+        )
+
+        # The decision ID must be unique per decision, not per route. The same
+        # route can legitimately be adjudicated more than once at the same
+        # timestamp — re-evaluated after a deferral, or reconsidered under a
+        # human override — and each is a distinct decision that the ledger must
+        # record separately. The sequence number makes that explicit rather
+        # than letting the second decision collide with the first.
+        sequence = len(self.decisions)
+        self.decisions.append(
+            decision_id=f"{route.fingerprint}:{now_ms}:{sequence}",
+            timestamp_ms=now_ms,
+            trigger_event=f"discovery:{discovery.chain_id}",
+            market_snapshot=paper_trade.snapshot_hash,
+            recommendation=recommendation.identity,
+            deterministic_calculations={
+                "net_edge_bps": route.net_edge_bps,
+                "gas_penalty_bps": route.breakdown.gas_penalty_bps,
+                "slippage_penalty_bps": route.breakdown.slippage_penalty_bps,
+                "simulated_pnl_cents": paper_trade.simulated_pnl_cents,
+            },
+            policy_evaluation="available" if policy_available else "unavailable",
+            risk_verdict=(
+                self._last_risk_verdict.summary
+                if self._last_risk_verdict
+                else "unavailable"
+            ),
+            simulation_result=paper_trade.summary,
+            final_decision=decision.outcome,
+            # Explicitly absent rather than omitted: Phase 1 forbids execution,
+            # and recording that is itself the required lineage.
+            execution_result=None,
+            post_execution_outcome=None,
+        )
+        return decision
+
     def execute(self, result: "SimulationResult | DiscoveryResult | PaperTradeResult") -> None:
         """Reject execution unconditionally.
 
@@ -294,6 +377,8 @@ class SimulationPipeline:
 
 
 __all__ = [
+    "Decision",
+    "DecisionLedger",
     "DiscoveryResult",
     "PaperTradeResult",
     "PerformanceLedger",

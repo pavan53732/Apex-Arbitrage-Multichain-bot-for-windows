@@ -8,7 +8,7 @@ class: ADR
 authority: Canonical
 status: Active
 owner: Architecture Team
-version: 1.2.0
+version: 1.3.0
 canonical_source: docs/apex-app-docs/architecture/decisions/0009-phase-1-vertical-slice.md
 related_concepts:
   - CONCEPT-0455
@@ -68,11 +68,13 @@ simulation-only vertical slice rather than a full scaffold.**
 
 The slice implements one path end to end: configuration loading, an RPC provider
 pool, a constant-product DEX adapter, opportunity detection, route construction
-and ranking, the risk check pipeline, and paper-trade simulation with PNL
-recording. It covers `configuration.md`, `rpc-manager.md`, `dex-integration.md`,
+and ranking, the risk check pipeline, paper-trade simulation with PNL
+recording, the decision gate, and a hash-chained decision ledger. It covers
+`configuration.md`, `rpc-manager.md`, `dex-integration.md`,
 `opportunity-detection.md`, `opportunity-lifecycle.md`, `opportunity-ranking.md`,
 `routing-engine.md`, `route-scoring-model.md`, `risk-engine.md`,
-`simulation-engine.md`, and the Phase 1 clauses of `decision-engine.md`.
+`simulation-engine.md`, `decision-engine.md`, `ai-consensus.md`, and
+`decision-ledger.md`.
 
 A vertical slice is chosen over a horizontal scaffold because a scaffold of
 empty modules mirroring 372 documents would restate the specification in a
@@ -85,7 +87,10 @@ machines, stable route fingerprints, idempotent ranking, and an explicit
 tie-break order. The second added the risk pipeline and paper-trade simulation,
 closing the Phase 1 loop: the specification names simulation as the *primary*
 execution mode in this phase, so the loop is only complete once a trade is
-risk-checked, simulated, and recorded.
+risk-checked, simulated, and recorded. The third added the decision gate and
+the decision ledger, which together make the loop auditable — the gate decides,
+and the ledger holds an immutable hash-chained trace of what was decided and
+why.
 
 ### Phase 1 is enforced structurally, not by configuration
 
@@ -112,7 +117,7 @@ Live execution is impossible in this build rather than disabled in it:
 
 ### Positive
 
-- The specification is now falsifiable. The slice compiles, runs, and passes 149
+- The specification is now falsifiable. The slice compiles, runs, and passes 210
   deterministic tests, which is direct evidence that these documents are
   implementable rather than merely self-consistent.
 - Two lifecycle state machines transcribed directly from the specification —
@@ -140,7 +145,8 @@ Live execution is impossible in this build rather than disabled in it:
 ## Affected Components
 
 - `src/apex/` — the Phase 1 slice: config, RPC pool, DEX adapter, opportunity
-  detection, routing, risk checks, and paper-trade simulation.
+  detection, routing, risk checks, paper-trade simulation, the decision gate,
+  and the decision ledger.
 - `docs/apex-app-docs/execution/risk-policy/risk-engine.md` — supplies the phase
   invariant the slice enforces.
 - `docs/apex-app-docs/market/connectivity/rpc-manager.md` and
@@ -155,6 +161,8 @@ Live execution is impossible in this build rather than disabled in it:
 - `../../market/opportunities/opportunity-lifecycle.md`
 - `../../market/routing/routing-engine.md`
 - `../../execution/simulation/simulation-engine.md`
+- `../../execution/risk-policy/decision-engine.md`
+- `../../data/state/decision-ledger.md`
 - `../../execution/risk-policy/risk-engine.md`
 - `../../execution/risk-policy/policy-engine.md`
 - `../../market/connectivity/rpc-manager.md`
