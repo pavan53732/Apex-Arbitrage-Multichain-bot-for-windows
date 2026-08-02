@@ -25,6 +25,7 @@ from .decision import (
     decide,
 )
 from .dex import Pool, Quote, QuoteError, best_quote
+from .explain import Explanation, ExplanationStore, explain
 from .ledger import DecisionLedger, DecisionOutcome
 from .opportunity import (
     Candidate,
@@ -135,6 +136,7 @@ class SimulationPipeline:
     rpc: RpcPool
     ledger: PerformanceLedger = field(default_factory=PerformanceLedger, init=False)
     decisions: DecisionLedger = field(default_factory=DecisionLedger, init=False)
+    explanations: ExplanationStore = field(default_factory=ExplanationStore, init=False)
     _warnings: list[str] = field(default_factory=list, init=False)
     _last_risk_verdict: RiskVerdict | None = field(default=None, init=False)
 
@@ -339,8 +341,32 @@ class SimulationPipeline:
         # record separately. The sequence number makes that explicit rather
         # than letting the second decision collide with the first.
         sequence = len(self.decisions)
+        decision_id = f"{route.fingerprint}:{now_ms}:{sequence}"
+
+        # Every decision gets an explanation, not only the approvals. The
+        # explainability contract requires an arbitrage trace state why an
+        # opportunity was skipped, including the rejection reason, so a
+        # rejected or deferred decision is explained exactly as an approval is.
+        self.explanations.store(
+            explain(
+                decision,
+                decision_id=decision_id,
+                timestamp_ms=now_ms,
+                confidence_bps=paper_trade.confidence_bps,
+                inputs_used=(
+                    f"route:{route.fingerprint}",
+                    f"snapshot:{paper_trade.snapshot_hash}",
+                    f"chain:{discovery.chain_id}",
+                    f"notional:{notional_cents}c",
+                ),
+                alternatives_considered=tuple(
+                    r.fingerprint for r in discovery.routing.routes[1:4]
+                ),
+            )
+        )
+
         self.decisions.append(
-            decision_id=f"{route.fingerprint}:{now_ms}:{sequence}",
+            decision_id=decision_id,
             timestamp_ms=now_ms,
             trigger_event=f"discovery:{discovery.chain_id}",
             market_snapshot=paper_trade.snapshot_hash,
@@ -378,6 +404,8 @@ class SimulationPipeline:
 
 __all__ = [
     "Decision",
+    "Explanation",
+    "ExplanationStore",
     "DecisionLedger",
     "DiscoveryResult",
     "PaperTradeResult",

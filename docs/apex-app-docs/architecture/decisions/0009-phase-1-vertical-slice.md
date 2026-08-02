@@ -8,7 +8,7 @@ class: ADR
 authority: Canonical
 status: Active
 owner: Architecture Team
-version: 1.3.0
+version: 1.4.0
 canonical_source: docs/apex-app-docs/architecture/decisions/0009-phase-1-vertical-slice.md
 related_concepts:
   - CONCEPT-0455
@@ -73,8 +73,8 @@ recording, the decision gate, and a hash-chained decision ledger. It covers
 `configuration.md`, `rpc-manager.md`, `dex-integration.md`,
 `opportunity-detection.md`, `opportunity-lifecycle.md`, `opportunity-ranking.md`,
 `routing-engine.md`, `route-scoring-model.md`, `risk-engine.md`,
-`simulation-engine.md`, `decision-engine.md`, `ai-consensus.md`, and
-`decision-ledger.md`.
+`simulation-engine.md`, `decision-engine.md`, `ai-consensus.md`,
+`decision-ledger.md`, `trading-lifecycle.md`, and `explainability.md`.
 
 A vertical slice is chosen over a horizontal scaffold because a scaffold of
 empty modules mirroring 372 documents would restate the specification in a
@@ -90,7 +90,10 @@ execution mode in this phase, so the loop is only complete once a trade is
 risk-checked, simulated, and recorded. The third added the decision gate and
 the decision ledger, which together make the loop auditable — the gate decides,
 and the ledger holds an immutable hash-chained trace of what was decided and
-why.
+why. The fourth added the trade lifecycle and explanation traces: the lifecycle
+models the trade's own progression through the canonical state machine, and
+explanations render the ledger's lineage as the operator-facing account of why
+an opportunity was taken, skipped, or delayed.
 
 ### Phase 1 is enforced structurally, not by configuration
 
@@ -117,12 +120,15 @@ Live execution is impossible in this build rather than disabled in it:
 
 ### Positive
 
-- The specification is now falsifiable. The slice compiles, runs, and passes 210
+- The specification is now falsifiable. The slice compiles, runs, and passes 256
   deterministic tests, which is direct evidence that these documents are
   implementable rather than merely self-consistent.
-- Two lifecycle state machines transcribed directly from the specification —
-  opportunity and route — hold as executable transition tables, so a forbidden
-  transition named in prose is now a forbidden transition in code.
+- Four lifecycle state machines transcribed directly from the specification —
+  opportunity, route, trade, and explanation — hold as executable transition
+  tables, so a forbidden transition named in prose is now a forbidden
+  transition in code. The trade machine additionally distinguishes a move that
+  is prohibited from one that is merely unrecognised, because the specification
+  states allowed and forbidden transitions as two separate lists.
 - Phase progression becomes an explicit, reviewable decision rather than a
   configuration value someone can flip.
 - Validator behaviour is unchanged: the documentation plane and the
@@ -146,7 +152,7 @@ Live execution is impossible in this build rather than disabled in it:
 
 - `src/apex/` — the Phase 1 slice: config, RPC pool, DEX adapter, opportunity
   detection, routing, risk checks, paper-trade simulation, the decision gate,
-  and the decision ledger.
+  the decision ledger, the trade lifecycle, and explanation traces.
 - `docs/apex-app-docs/execution/risk-policy/risk-engine.md` — supplies the phase
   invariant the slice enforces.
 - `docs/apex-app-docs/market/connectivity/rpc-manager.md` and
@@ -163,6 +169,8 @@ Live execution is impossible in this build rather than disabled in it:
 - `../../execution/simulation/simulation-engine.md`
 - `../../execution/risk-policy/decision-engine.md`
 - `../../data/state/decision-ledger.md`
+- `../../execution/trading/trading-lifecycle.md`
+- `../../ai/explainability/explainability.md`
 - `../../execution/risk-policy/risk-engine.md`
 - `../../execution/risk-policy/policy-engine.md`
 - `../../market/connectivity/rpc-manager.md`
