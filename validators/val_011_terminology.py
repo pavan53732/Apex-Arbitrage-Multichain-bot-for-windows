@@ -12,10 +12,21 @@ from validator_sdk import (
 )
 
 
+# Structural words that carry no distinguishing meaning on their own. Two
+# compound terms sharing only one of these are not in conflict: the repository
+# deliberately names several components "... Engine", and that consistency is a
+# feature of the vocabulary rather than an ambiguity in it.
+GENERIC_HEAD_NOUNS = {
+    "engine", "manager", "service", "system", "layer", "module",
+    "component", "registry", "model", "policy", "contract", "pipeline",
+    "matrix", "index", "map", "pool", "gateway", "adapter", "provider",
+}
+
+
 class Validator(BaseValidator):
     VALIDATOR_ID = "VAL-011"
     NAME = "Terminology Validator"
-    VERSION = "1.0.0"
+    VERSION = "1.1.0"
     DESCRIPTION = "Detects inconsistent term usage across documents using the glossary"
     CATEGORY = "terminology"
     SEVERITY = "WARNING"
@@ -58,8 +69,17 @@ class Validator(BaseValidator):
                     ti2 = glossary[t2]
                     s1 = set(ti1["lower"].split())
                     s2 = set(ti2["lower"].split())
-                    shared = s1 & s2
-                    if shared and ti1["domain"] != ti2["domain"]:
+                    # A shared head noun is ordinary compound vocabulary, not a
+                    # collision: "Trading Engine" and "Routing Engine" are
+                    # distinct terms that both happen to be engines. Genuine
+                    # ambiguity requires one term to be a complete phrase within
+                    # the other, so that a reader cannot tell which is meant.
+                    shared = (s1 & s2) - GENERIC_HEAD_NOUNS
+                    if not shared:
+                        continue
+                    if not (s1 < s2 or s2 < s1):
+                        continue
+                    if ti1["domain"] != ti2["domain"]:
                         warnings.append(ValidationWarning(
                             code="POTENTIAL_TERM_CONFLICT",
                             file=rel_str, line=1,
@@ -80,7 +100,10 @@ class Validator(BaseValidator):
         for line in content.split("\n"):
             if line.startswith("| TERM-"):
                 parts = [p.strip() for p in line.split("|")[1:-1]]
-                if len(parts) >= 7:
+                # The glossary table defines six columns: Term ID, Term,
+                # Canonical Definition, Concept ID, Domain, Related Terms.
+                # Only indices 0-5 are read below, so six is the true minimum.
+                if len(parts) >= 6:
                     entries[parts[1].lower()] = {
                         "term_id": parts[0], "term": parts[1],
                         "definition": parts[2],
