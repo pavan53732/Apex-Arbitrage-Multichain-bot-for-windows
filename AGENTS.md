@@ -27,6 +27,8 @@ last_updated: 2026-08-01
 concept_role: Owner
 owned_domains:
   - Agent System
+purpose: Canonical operating contract governing how AI agents and human contributors work inside this repository.
+scope: Agent operating rules, plane classification, canonical source-of-truth discipline, documentation classes, file-creation policy, and commit expectations.
 ---
 
 # AGENTS.md

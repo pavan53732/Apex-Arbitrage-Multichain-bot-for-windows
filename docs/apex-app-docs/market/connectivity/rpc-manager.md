@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 2.0.0
+version: 2.1.0
 canonical_source: docs/apex-app-docs/market/connectivity/rpc-manager.md
 related_concepts:
   - CONCEPT-0305
@@ -18,7 +18,7 @@ consumers:
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-08-01
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Market
@@ -33,7 +33,7 @@ scope: RPC management for runtime components.
 Document type: [CONTRACT]
 
 ## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
+**Version:** 2.1.0 | **Status:** Canonical | **Last Updated:** 2026-08-02 | **Owner:** Runtime Team
 
 ## 0. Provider Trust Boundaries
 
@@ -90,6 +90,27 @@ Define ownership, contracts, lifecycle, validation, and cross-references.
 - `../../architecture/apex-os.md`
 - `../../architecture/architecture.md`
 
+## Failure Handling
+
+RPC providers are connectivity only, so a provider failure is a routing problem
+rather than a trading signal. The manager fails over between endpoints and never
+allows a single provider's response to stand as authoritative.
+
+| Failure | Detection | Outcome |
+| --- | --- | --- |
+| Endpoint latency breach | Latency exceeds threshold across repeated samples | The endpoint is rotated out of the active pool and health-scored down |
+| Endpoint returns errors | Error rate exceeds threshold | Automatic failover to the next healthy endpoint in tier order |
+| Rate limit reached | HTTP 429 or provider-specific limit response | Requests back off and shift to another endpoint; the limited endpoint is rested rather than retried immediately |
+| WebSocket disconnect | Subscription drops | Reconnect with backoff; missed state is re-queried rather than assumed unchanged |
+| RPC disagreement | Responses conflict across endpoints | Resolved by consensus per the trust boundary rules; a single endpoint never decides |
+| Fewer than two healthy RPCs | Health monitor reports pool below minimum | Phase 3 autonomous execution is blocked, as the redundancy invariant is unmet |
+| All endpoints unhealthy for a chain | No endpoint passes health checks | The chain is reported unavailable to consumers; the manager does not fabricate a response |
+| Transaction submission fails | Submission rejected by the endpoint | Resubmission is attempted through a different endpoint; submission is never treated as successful without confirmation |
+
+Because the RPC layer holds no pricing, validation, or execution authority, a
+failover never changes a trade decision — it only changes which endpoint served
+the query.
+
 ## Operational Contract
 Defines provider pool management, health, rotation, failover, latency, routing, and rate-limit handling.
 
@@ -110,4 +131,5 @@ A slow RPC endpoint is rotated out after repeated latency breaches.
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 2.1.0 | 2026-08-02 | Added Failure Handling section defining failover, rate-limit, disconnect, disagreement, and redundancy-floor behaviour. | Runtime Team |
 | 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Runtime Team |

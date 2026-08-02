@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Trading Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-app-docs/market/chains/chain-integration.md
 related_concepts:
   - CONCEPT-0302
@@ -18,7 +18,7 @@ consumers:
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Market
@@ -33,7 +33,7 @@ scope: Blockchain connectivity.
 Document type: [CONTRACT]
 
 ## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-08-02 | **Owner:** Trading Team
 
 ## Purpose
 Defines chain integration.
@@ -409,6 +409,26 @@ When a chain is no longer viable (low liquidity, abandoned, exploited):
 - `../../data/persistence/database-schema.md`
 - `./chain-registry.md`
 
+## Failure Handling
+
+A chain adapter failure isolates that chain. Because APEX is chain-agnostic and
+every chain is an adapter behind a common interface, a failing chain is removed
+from routing rather than degrading the chains around it.
+
+| Failure | Detection | Outcome |
+| --- | --- | --- |
+| All RPC endpoints unhealthy for a chain | RPC Manager reports no healthy endpoint | The chain is marked unavailable and withdrawn from routing; existing in-flight transactions continue to be tracked |
+| Chain ID mismatch | Adapter's declared `chain_id` does not match the value reported by the endpoint | The endpoint is rejected; a mismatched endpoint is never used, because it would submit transactions to the wrong network |
+| Multicall3 not deployed | Contract probe fails at adapter initialisation | The adapter falls back to sequential calls; this is a degradation, not a failure |
+| Flash loan provider absent | Provider registry empty for the chain | Strategies requiring flash loans are disabled for that chain only |
+| Reorg detected | Observed block history diverges from the tracked chain | Affected confirmations are invalidated and re-evaluated against the canonical chain |
+| Non-standard fee market | EIP-1559 probe returns unexpected results | The adapter falls back to legacy gas pricing rather than submitting a malformed fee |
+| Contract addresses missing | Required APEX deployment address absent for the chain | The chain remains unavailable for execution; read-only queries may still function |
+
+Chain availability transitions are reported through monitoring so that a chain
+withdrawn from routing is visible to the operator rather than appearing as an
+absence of opportunities.
+
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.
 
@@ -421,4 +441,5 @@ An input is validated before any state-changing action.
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.1.0 | 2026-08-02 | Added Failure Handling section defining per-chain isolation for RPC, chain-ID, multicall, flash-loan, reorg, fee-market, and deployment failures. | Trading Team |
 | 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

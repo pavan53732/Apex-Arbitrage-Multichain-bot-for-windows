@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Trading Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-app-docs/market/dex/dex-integration.md
 related_concepts:
   - CONCEPT-0303
@@ -18,7 +18,7 @@ consumers:
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Market
@@ -33,7 +33,7 @@ scope: DEX connectivity.
 Document type: [CONTRACT]
 
 ## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-08-02 | **Owner:** Trading Team
 
 ## Purpose
 Defines DEX integration.
@@ -344,6 +344,26 @@ If a DEX is exploited, abandoned, or supplanted:
 - `../routing/liquidity-analysis.md`
 - `./dex-registry.md`
 
+## Failure Handling
+
+A DEX adapter that cannot produce a trustworthy quote is excluded from routing
+for that request. A stale or unverifiable quote is more dangerous than a missing
+one, because routing would treat it as a real opportunity.
+
+| Failure | Detection | Outcome |
+| --- | --- | --- |
+| Quote call reverts or times out | Adapter quote request fails | The DEX is excluded from routing for that request; routing proceeds with the remaining venues |
+| Pool not found | Factory lookup or pool derivation returns no pool | The pair is treated as unavailable on that DEX, not as zero liquidity |
+| Reserves stale | Reserve snapshot older than the freshness budget | The quote is discarded and re-fetched; a stale reserve is never used to size a trade |
+| Slippage exceeds tolerance at execution | Pre-execution revalidation against current reserves | The swap is not submitted; the opportunity is withdrawn |
+| Fee-on-transfer token encountered on an adapter that does not support it | Capability check against the adapter's declared `capabilities` | The pair is rejected, because the received amount cannot be predicted correctly |
+| Malformed or mismatched ABI | Decode failure on adapter response | The adapter is disabled and the failure escalated; partial decoding is never accepted |
+| Router or factory address missing for a chain | Deployment lookup fails | The DEX is unavailable on that chain only; other chains are unaffected |
+
+Exclusions are per-request and per-venue. A DEX repeatedly excluded for quote
+failures is surfaced through monitoring so that a persistently broken adapter is
+distinguishable from a temporarily illiquid market.
+
 ## Operational Contract
 Defines the responsibilities, invariants, and expected behavior for this component.
 
@@ -359,4 +379,5 @@ An input is validated before any state-changing action.
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.1.0 | 2026-08-02 | Added Failure Handling section defining per-venue exclusion on quote, pool, staleness, slippage, capability, and ABI failures. | Trading Team |
 | 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

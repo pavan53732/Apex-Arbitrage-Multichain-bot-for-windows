@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Trading Team
-version: 1.0.1
+version: 1.1.0
 canonical_source: docs/apex-app-docs/execution/risk-policy/policy-engine.md
 related_concepts:
   - CONCEPT-0281
@@ -17,7 +17,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Execution
@@ -32,7 +32,7 @@ scope: Policy enforcement.
 Document type: [CONTRACT]
 
 ## Version
-**Version:** 1.0.1 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-08-02 | **Owner:** Trading Team
 
 ## Purpose
 Defines the central source of truth for all user-configurable policies.
@@ -52,6 +52,26 @@ Trading, AI, security, recovery, failover, and operational thresholds.
 
 ## Governance
 Policies load from a central config file and can be hot-reloaded. Policy changes require approval and are versioned.
+
+## Failure Handling
+
+A policy failure blocks the dependent execution path. The Policy Engine never
+substitutes an implicit default for a missing or invalid threshold, because a
+silently defaulted limit is indistinguishable from an intentionally configured
+one and would weaken every consumer that depends on it.
+
+| Failure | Detection | Outcome |
+| --- | --- | --- |
+| Policy file missing or unreadable | Load fails at startup | Startup aborts; the engine does not begin serving policy values it cannot source |
+| Policy file invalid | Schema or type validation fails on load | The load is rejected and the previous valid policy set is retained |
+| Hot reload produces invalid policy | Validation fails during reload | The reload is discarded atomically; the running policy set is left unchanged and the failure is surfaced to the Windows UI |
+| Requested policy value absent | Consumer requests an undefined key | The request fails explicitly; the dependent execution path blocks rather than proceeding on an assumed value |
+| Policy value out of permitted range | Range check on read or load | The value is rejected and treated as absent |
+| Conflicting policy sources | Priority ordering resolves to more than one candidate | Resolution fails closed; the conflict is reported rather than arbitrarily broken |
+
+Because consumers such as the Decision Engine and Risk Engine read thresholds
+through this engine rather than caching them, a retained or rejected policy set
+takes effect consistently across all consumers at once.
 
 ## Cross-references
 - `../../configuration/core/configuration.md`
@@ -84,5 +104,6 @@ Defines the Policy Engine as the single, hot-reloadable source of truth for ever
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.1.0 | 2026-08-02 | Added Failure Handling section defining load, hot-reload, missing-value, range, and conflict failure behaviour. | Trading Team |
 | 1.0.1 | 2026-07-29 | Added `## Operational Contract` section (state-machine-consistent authoritative contract body) to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`). All other content unchanged. | Trading Team |
 | 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

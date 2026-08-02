@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Ops Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-app-docs/operations/monitoring/monitoring-observability.md
 related_concepts:
   - CONCEPT-0336
@@ -18,7 +18,7 @@ consumers:
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Operations
@@ -33,7 +33,7 @@ scope: None
 Document type: [CONTRACT]
 
 ## Version
-**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-07-27 | **Owner:** Ops Team
+**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-08-02 | **Owner:** Ops Team
 
 ## Purpose
 Defines metrics catalog, alert thresholds, health states, telemetry rules, dashboards, diagnostic exports, and Windows-specific observability integration for all subsystems.
@@ -141,6 +141,24 @@ Defines metrics catalog, alert thresholds, health states, telemetry rules, dashb
 
 ---
 
+## 2A. Failure Handling
+
+The observability path is best-effort and must never become a source of failure
+for the systems it observes. A monitoring failure degrades visibility; it does
+not degrade trading.
+
+| Failure | Detection | Outcome |
+| --- | --- | --- |
+| Metric collection fails for a subsystem | Collector returns an error or times out | The metric is recorded as unavailable rather than as zero, so alerts do not fire on a false reading |
+| Notification channel unavailable | Delivery to a channel fails | The alert is delivered through the remaining channels; Critical alerts are retained for redelivery |
+| Windows Event Log write fails | Write returns an error | Logging falls back to the local event store; the failure is itself recorded once, not per event |
+| Metrics backlog grows | Buffer depth exceeds its bound | Oldest low-severity samples are dropped first; Critical alerts are never dropped |
+| Health score cannot be computed | One or more inputs unavailable | The score is reported as unknown rather than defaulting to healthy |
+| Alert storm | Repeated identical alerts within the suppression window | Alerts are coalesced with an occurrence count; suppression never applies to Critical severity |
+
+Because an unavailable metric is distinct from a zero-valued metric, threshold
+alerts in the table above are evaluated only against readings actually observed.
+
 ## 3. Windows-Specific Observability
 
 | Integration | Method | Data | Frequency |
@@ -169,5 +187,6 @@ Defines metrics catalog, alert thresholds, health states, telemetry rules, dashb
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.1.0 | 2026-08-02 | Added Failure Handling section defining best-effort observability semantics and the unavailable-versus-zero metric distinction. | Ops Team |
 | 1.1.0 | 2026-07-27 | Full metrics catalog (50+ metrics), alert thresholds, Windows observability, health score integration | Ops Team |
 | 1.0.0 | 2025-01-15 | Initial stub | Ops Team |
