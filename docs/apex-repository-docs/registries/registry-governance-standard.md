@@ -8,7 +8,7 @@ class: Policy
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-repository-docs/registries/registry-governance-standard.md
 related_concepts:
   - CONCEPT-0006
@@ -19,10 +19,11 @@ dependencies:
   - DOC-0007
   - DOC-0008
 consumers: []
-validator_coverage: []
+validator_coverage:
+  - VAL-008
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Registries

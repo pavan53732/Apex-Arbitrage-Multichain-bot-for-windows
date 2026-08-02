@@ -8,16 +8,17 @@ class: Policy
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-repository-docs/standards/readme-governance-standard.md
 related_concepts:
   - CONCEPT-0442
 dependencies: []
 consumers: []
-validator_coverage: []
+validator_coverage:
+  - VAL-005
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Standards

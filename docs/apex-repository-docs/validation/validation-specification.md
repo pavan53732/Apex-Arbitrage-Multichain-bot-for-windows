@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.2.0
+version: 1.3.0
 canonical_source: docs/apex-repository-docs/validation/validation-specification.md
 related_concepts:
   - CONCEPT-0004
@@ -16,7 +16,8 @@ related_concepts:
 dependencies:
   - DOC-0004
 consumers: []
-validator_coverage: []
+validator_coverage:
+  - VAL-001
 supersedes: []
 superseded_by: []
 last_updated: 2026-08-02

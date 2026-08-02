@@ -8,7 +8,7 @@ class: Policy
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.1.0
+version: 1.2.0
 canonical_source: REPOSITORY-EXECUTION-MODEL.md
 related_concepts:
   - CONCEPT-0004
@@ -16,10 +16,11 @@ dependencies: []
 consumers:
   - DOC-0047
   - DOC-0064
-validator_coverage: []
+validator_coverage:
+  - VAL-006
 supersedes: []
 superseded_by: []
-last_updated: 2026-08-01
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Governance

@@ -8,7 +8,7 @@ class: Policy
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-repository-docs/documentation-lifecycle/document-lifecycle-policy.md
 related_concepts:
   - CONCEPT-0056
@@ -19,10 +19,11 @@ dependencies:
   - DOC-0057
   - DOC-0059
 consumers: []
-validator_coverage: []
+validator_coverage:
+  - VAL-007
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Documentation Lifecycle
