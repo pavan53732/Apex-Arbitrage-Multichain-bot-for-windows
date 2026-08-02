@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-repository-docs/validation/validation-specification.md
 related_concepts:
   - CONCEPT-0004
@@ -19,7 +19,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Validation
@@ -285,6 +285,61 @@ Each validator must produce a structured output:
 - Total warnings by validator
 - Overall pass/fail
 - Duration per validator
+
+## Completeness Semantics
+
+Completeness validators (VAL-010, VAL-013) determine whether a document states
+what its class and domain require. They evaluate substance, not wording.
+
+### Structured metadata satisfies a section requirement
+
+Where a required section corresponds to a canonical frontmatter field —
+`purpose`, `scope`, `dependencies`, `consumers` — a populated field satisfies
+the requirement. Those fields are canonical metadata validated by VAL-002.
+Requiring the same information to be restated as a prose heading would duplicate
+canonical metadata and split its authority, which the Canonical Edit-First Rule
+prohibits.
+
+An explicitly empty list satisfies a `dependencies` or `consumers` requirement.
+Declaring that a document has no dependencies is a statement, not an omission.
+
+### Required sections are scoped by class and domain
+
+Required sections fall into two tiers:
+
+- **Core sections** apply to every document of a class. A specification that
+  does not state its purpose, scope, dependencies, and consumers cannot be
+  reviewed or traced.
+- **Domain sections** apply only where the subject matter owns the concern.
+  `Failure Handling` is required of Execution, Runtime, Market, and Operations
+  specifications; `State Machine` is required of State Machines specifications.
+
+Sections outside these tiers are recommended and reported as warnings. A
+requirement that does not apply to a document produces noise rather than signal,
+and uniformly demanding every section of every specification would train
+contributors to add empty headings.
+
+### Equivalent headings satisfy a requirement
+
+Documents express the same concern under established domain vocabulary. A
+`Failure Modes`, `Error Handling`, or `Recovery` heading satisfies a
+`Failure Handling` requirement; a `Lifecycle` or `Bootstrap Sequence` heading
+satisfies a state-model requirement. Numbered headings are equivalent to their
+unnumbered form.
+
+### State machine coverage has three valid forms
+
+A runtime specification satisfies VAL-013 by documenting its own state model, by
+presenting a state or transition table or Mermaid state diagram, or by
+explicitly delegating its lifecycle rules to a document that defines a state
+model. Delegation is the preferred outcome under the one-canonical-owner rule.
+
+Delegation requires an explicit statement of hand-off alongside the reference.
+An ordinary cross-reference is not delegation, and does not constitute coverage.
+
+Runtime documents that describe no stateful behaviour are reported as warnings
+rather than errors. The absence of a state machine in a stateless schema or
+contract document is a correct outcome.
 
 ## Implementation Requirements
 
