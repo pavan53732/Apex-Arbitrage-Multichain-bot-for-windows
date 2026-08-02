@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 4.2.0
+version: 4.3.0
 canonical_source: REBUILD-SYSTEM-SPECIFICATION.md
 related_concepts:
   - CONCEPT-0003
@@ -26,7 +26,7 @@ supersedes:
   - DOC-0014
   - DOC-0015
 superseded_by: []
-last_updated: 2026-08-01
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Governance
@@ -702,8 +702,20 @@ The root contains only repository entry and execution documents:
 - REPOSITORY-EXECUTION-MODEL.md
 - REBUILD-SYSTEM-SPECIFICATION.md
 - validators/
+- src/
 
-No other permanent root-level folders are part of the approved architecture.
+`src/` holds APEX implementation code. It was authorised by an explicit
+governance revision recorded in
+`docs/apex-app-docs/architecture/decisions/0009-phase-1-vertical-slice.md`, and
+is constrained by that decision: implementation is simulation-only while the
+product is in Phase 1, and advancing beyond Phase 1 requires a further
+governance decision. Implementation code is not documentation and does not
+carry document metadata, registry identity, or validator coverage; the
+documentation planes remain the canonical source of behaviour.
+
+No other permanent root-level folders are part of the approved architecture. A
+new root-level folder requires an explicit governance revision recorded as an
+ADR before it may be committed.
 
 ### docs/
 

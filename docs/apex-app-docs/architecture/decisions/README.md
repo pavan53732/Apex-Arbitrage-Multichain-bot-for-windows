@@ -59,3 +59,4 @@ General references or transient decisions.
 | DOC-0075 | [ADR 0006 Runtime Governance](0006-runtime-governance.md) | ADR | Canonical | Active |
 | DOC-0076 | [ADR 0007 Workspace Model](0007-workspace-model.md) | ADR | Canonical | Active |
 | DOC-0077 | [ADR 0008 Orchestrator State Machine](0008-orchestrator-state-machine.md) | ADR | Canonical | Active |
+| DOC-0455 | [ADR 0009 Phase 1 Vertical Slice](0009-phase-1-vertical-slice.md) | ADR | Canonical | Active |

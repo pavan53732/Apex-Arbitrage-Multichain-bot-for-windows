@@ -744,3 +744,4 @@ Stable semantic relationship registry. This registry intentionally excludes nois
 | TRACE-0853 | DOC-0452 | Defines | CONCEPT-0452 | Active | Canonical document owner for active concept. |
 | TRACE-0854 | DOC-0453 | Defines | CONCEPT-0453 | Active | Canonical document owner for active concept. |
 | TRACE-0855 | DOC-0454 | Defines | CONCEPT-0454 | Active | Canonical document owner for active concept. |
+| TRACE-0856 | DOC-0455 | Defines | CONCEPT-0455 | Active | Canonical document owner for active concept. |

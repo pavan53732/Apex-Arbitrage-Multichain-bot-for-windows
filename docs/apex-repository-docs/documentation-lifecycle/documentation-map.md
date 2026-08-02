@@ -456,3 +456,4 @@ All registered document identities are reachable through this canonical document
 - `DOC-0452`
 - `DOC-0453`
 - `DOC-0454`
+- `DOC-0455`
