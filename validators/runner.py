@@ -97,6 +97,55 @@ class ValidatorRunner:
     ]
     FAIL_FAST_VALIDATORS = {"VAL-006"}
 
+    # Minimum inspection expected of each validator, expressed as a fraction of
+    # the discovered markdown corpus.
+    #
+    # A validator that inspects nothing reports PASS, because a run with no
+    # findings is indistinguishable from a run that never looked. That makes a
+    # silently broken validator invisible: replacing its document loop with an
+    # empty sequence produces a green suite. The floor closes that hole by
+    # asserting each validator actually did work proportional to the corpus.
+    #
+    # Fractions rather than absolute counts, so the floor scales as documents
+    # are added and does not have to be revised on every corpus change.
+    #
+    # Values are per-validator because inspection counts are not uniform. A
+    # validator iterating every markdown file reaches a ratio of 1.0, while one
+    # driven by registry entries or a narrow document class reaches far less.
+    # Applying a single fraction to all of them would either misfire on the
+    # selective validators or be too weak to detect a broken one.
+    #
+    # Each floor is set to roughly half the ratio observed on both the real
+    # corpus and the test fixture, which detects a validator that has stopped
+    # working while tolerating normal variation in repository composition.
+    COVERAGE_FLOOR: dict[str, float] = {
+        "VAL-001": 0.50,   # every markdown file
+        "VAL-002": 0.50,   # every markdown file
+        "VAL-003": 0.50,   # registry-driven, scales with concepts
+        "VAL-004": 1.00,   # multiple passes per registered document
+        "VAL-005": 1.00,   # several reachability passes per document
+        "VAL-006": 0.50,   # every markdown file
+        "VAL-007": 0.60,   # multiple class checks per registered document
+        "VAL-008": 0.15,   # traceability relationships only
+        "VAL-010": 0.50,   # every markdown file
+        "VAL-011": 0.50,   # every markdown file
+        "VAL-012": 0.50,   # every registered document
+        "VAL-013": 0.50,   # every markdown file
+        "VAL-014": 0.50,   # every registered document
+        "VAL-015": 0.10,   # cross-domain pairs and derived documents only
+        "VAL-016": 0.15,   # owner documents only
+        "VAL-017": 0.50,   # every markdown file
+        "VAL-018": 0.50,   # every markdown file
+        # VAL-009 is excluded deliberately: it inspects ADRs only. A
+        # corpus-proportional floor is meaningless for a validator scoped to a
+        # fixed handful of documents.
+    }
+
+    # Absolute floor for validators whose scope is a small fixed set.
+    ABSOLUTE_COVERAGE_FLOOR: dict[str, int] = {
+        "VAL-009": 1,      # at least one ADR must be inspected
+    }
+
     # Module mapping
     VALIDATOR_MODULES = {
         "VAL-001": "val_001_crossref",
@@ -168,12 +217,67 @@ class ValidatorRunner:
             previous_results=[],
         )
 
+    def expected_coverage(self, validator_id: str, corpus_size: int) -> int:
+        """Minimum `checked_items` expected of a validator for this corpus.
+
+        Returns 0 when no floor is configured, which disables the check for
+        that validator rather than failing it.
+        """
+        absolute = self.ABSOLUTE_COVERAGE_FLOOR.get(validator_id)
+        if absolute is not None:
+            return absolute
+        fraction = self.COVERAGE_FLOOR.get(validator_id)
+        if fraction is None:
+            return 0
+        return int(corpus_size * fraction)
+
+    def _enforce_coverage_floor(
+        self,
+        validator: BaseValidator,
+        validator_id: str,
+        result: ValidationResult,
+        corpus_size: int,
+    ) -> ValidationResult:
+        """Convert an under-inspecting validator into an execution error.
+
+        A validator that reports PASS while having inspected nothing has not
+        validated anything; it has merely declined to look. Treating that as a
+        pass lets a silently broken validator hide behind a green suite, so it
+        is reported as an execution error (exit code 3 territory) rather than
+        as a passing result.
+
+        The check is skipped when the corpus itself is empty, since inspecting
+        nothing is then the correct outcome.
+        """
+        if corpus_size == 0:
+            return result
+        if result.status == "ERROR":
+            return result
+
+        expected = self.expected_coverage(validator_id, corpus_size)
+        if expected <= 0 or result.checked_items >= expected:
+            return result
+
+        self.logger.error(
+            f"{validator_id} inspected {result.checked_items} items, "
+            f"below the expected floor of {expected} for a corpus of {corpus_size}"
+        )
+        return validator._result_error(
+            result.checked_items,
+            f"Coverage floor breached: {validator_id} inspected "
+            f"{result.checked_items} item(s) against an expected minimum of "
+            f"{expected} for a corpus of {corpus_size} markdown file(s). A "
+            f"validator that inspects nothing cannot report a meaningful pass; "
+            f"this usually means its discovery loop is broken or misconfigured.",
+        )
+
     def run(self, changed_files: list[Path] = None) -> AggregateResult:
         """Run all validators in sequence."""
         self.logger.info("Starting validation run")
         start_time = time.perf_counter()
 
         context = self.build_context(changed_files)
+        corpus_size = len(context.all_markdown_files)
         results = []
         fail_fast_at = None
 
@@ -186,6 +290,8 @@ class ValidatorRunner:
             except Exception as e:
                 self.logger.error(f"Validator {validator_id} crashed: {e}")
                 result = validator._result_error(0, str(e))
+            else:
+                result = self._enforce_coverage_floor(validator, validator_id, result, corpus_size)
 
             results.append(result)
             context.previous_results.append(result)

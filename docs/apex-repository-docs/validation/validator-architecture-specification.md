@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.1.0
+version: 1.2.0
 canonical_source: docs/apex-repository-docs/validation/validator-architecture-specification.md
 related_concepts:
   - CONCEPT-0004
@@ -313,6 +313,45 @@ each validator.
 Result `status` and `severity` are derived from the routed findings. A result
 does not report FAIL when no finding is an error, so a validator cannot fail a
 run on the strength of advisory findings alone.
+
+### Coverage Floor
+
+A validator that inspects nothing reports PASS, because a run with no findings
+is indistinguishable from a run that never looked. That makes a silently broken
+validator invisible: replacing its discovery loop with an empty sequence
+produces a green suite.
+
+The runner therefore asserts a minimum `checked_items` for each validator,
+expressed as a fraction of the discovered markdown corpus so the floor scales
+with the repository rather than requiring revision on every change. A validator
+falling below its floor is reported as an execution error rather than a pass,
+because it has not validated anything — it has declined to look.
+
+Floors are per-validator because inspection counts are not uniform. A validator
+iterating every markdown file reaches a ratio near 1.0, while one driven by
+registry entries or scoped to a single document class reaches far less. A
+validator whose scope is a small fixed set, such as the ADR validator, uses an
+absolute floor instead, since a corpus-proportional value is meaningless for it.
+
+The floor detects a validator that has stopped working entirely. It does not
+detect partial degradation in a validator with several independent counting
+loops, where one loop can fail while the others keep the total above the floor.
+
+### Validator Test Suite
+
+Validators are verified against purpose-built fixture repositories under
+`validators/tests/`, not against the live corpus. Coupling the tests to the real
+repository would let a validator pass merely because the corpus happens to be
+clean, and would break the tests whenever a document is added.
+
+The suite holds three obligations:
+
+- a structurally valid baseline repository is accepted by every validator, which
+  is the control that makes every rejection assertion meaningful
+- each validator rejects the specific defect it exists to catch, mutating the
+  baseline in exactly one way per test
+- the coverage floor fires on a gutted validator and stays silent on a
+  legitimate one
 
 ## 5. Exit Code Standard
 
