@@ -29,9 +29,7 @@ scope: Reference documentation.
 # Decision Ledger
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Decision Ledger
+Document type: [CONTRACT]
 
 ## Purpose
 Defines the immutable record of every autonomous decision and outcome.
@@ -48,7 +46,27 @@ stateDiagram-v2
 ```
 
 ## Required fields
-Unique Decision ID, timestamp, trigger event, market snapshot, AI recommendation, deterministic calculations, policy evaluation, risk score, simulation result, final decision, execution result, post-execution outcome.
+- Unique Decision ID.
+- Timestamp.
+- Trigger event.
+- Market snapshot.
+- AI recommendation.
+- Deterministic calculations.
+- Policy evaluation.
+- Risk score.
+- Simulation result.
+- Final decision.
+- Execution result.
+- Post-execution outcome.
+
+## Ledger Semantics
+Defines the immutable trace of autonomous decisions, simulation outputs, execution results, and outcomes.
+
+## Integrity rules
+- Records are hash-chained; a tampered record is detected on read and flagged.
+- A record missing required fields or with incomplete lineage is rejected, not partially stored.
+- Replays must reproduce the recorded decision deterministically; a replay mismatch escalates to audit.
+- Archived records remain readable but are excluded from live replay.
 
 ## Failure modes
 Missing record, tampered record, incomplete lineage, replay mismatch.
@@ -62,8 +80,9 @@ Rebuild from source logs, reject incomplete traces, escalate to audit.
 - `../../ai/explainability/explainability.md`
 - `../../execution/decision-log.md`
 
-## Ledger Semantics
-Defines the immutable trace of autonomous decisions, simulation outputs, execution results, and outcomes.
+## Operational Contract
+
+This document owns the immutable decision ledger. The decision engine produces decisions; the ledger records them with lineage. Nothing may mutate a stored record.
 
 ## Example
-A trade decision records market snapshot, risk score, and post-execution outcome.
+A trade decision records market snapshot, risk score, and post-execution outcome, hash-chained to the prior record.

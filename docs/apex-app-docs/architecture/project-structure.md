@@ -29,41 +29,50 @@ scope: Reference documentation.
 # Project Structure
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Project Structure
+Document type: [CONTRACT]
 
 ## Purpose
-Defines the canonical repository layout and ownership boundaries for implementation.
+Defines the canonical repository layout and ownership boundaries for implementation of the APEX application.
 
-## Planned layout
-The implementation will use a multi-package structure for apps, packages, scripts, assets, tests, and contracts.
+## Scope
+Top-level directory layout for the implementation repository, including apps, packages, scripts, tests, contracts, and Windows packaging. This document is the layout contract; module import rules are owned by `./module-dependency.md`.
+
+## Repository layout
+- `apps/` — runnable application shells: the desktop renderer and the Windows service host.
+- `packages/core/` — platform-independent domain logic: market, trading, execution, risk, AI, and data.
+- `packages/windows/` — Windows-specific integration: tray, notifications, service management, and packaging glue.
+- `packages/adapters/` — external integrations: chains, DEXs, providers, and RPC.
+- `scripts/` — deterministic local helper scripts (build, package, validate).
+- `contracts/` — schemas, ABIs, and typed interface definitions.
+- `tests/` — unit, integration, and backtesting suites.
+- `docs/` — the documentation knowledge base (this repository).
+- `installers/` — Windows packaging inputs and output staging (generated, not committed).
+
+## Structure rules
+- Top-level folders separate docs, services, workers, tests, and tooling.
+- Core packages never import Windows packages; Windows packages depend on core.
+- Packaging artifacts and generated outputs live outside `packages/` and are never committed.
+- Each package owns its tests beside the source, with cross-package tests in `tests/`.
+- A new top-level folder requires architecture approval and a layout update here.
+
+## Layout governance
+- A new top-level directory requires architecture approval.
+- Packaging and generated outputs are never committed to source control.
+- The layout contract and the module dependency rules change together.
+- Tests live beside source; cross-package suites live in `tests/`.
+- Every top-level entry has a stated purpose and an owning document; an unexplained folder is removed or documented.
+- The repository root remains limited to control and entry files per the repository operating model.
 
 ## Cross-references
 - `./architecture.md`
 - `./module-dependency.md`
+- `./component-diagrams.md`
 - `../deployment/build-release.md`
 - `../deployment/versioning.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+This document owns the implementation repository layout. It aligns with the component diagrams and module dependency rules; any layout change updates this contract and the module import rules together. It does not own runtime behavior.
 
 ## Example
-An input is validated before any state-changing action.
-
-## Repository layout
-- Must define the actual directories for app, service, docs, and installers.
-
-## Required details
-- Define repo directories and installer layout.
-
-## Repository layout
-- Define the actual directories for docs, app, service, installers, and tests.
-- Define where Windows packaging artifacts live.
-
-## Structure rules
-- Define top-level folders for docs, services, workers, tests, and tools.
-- Define boundaries between core and Windows-specific code.
-
-## Canonical ownership
-This document defers to the canonical owners for implementation, policy, and schema details.
+A Windows packaging artifact is generated into `installers/` during the build and excluded from source control, matching the build-release contract.

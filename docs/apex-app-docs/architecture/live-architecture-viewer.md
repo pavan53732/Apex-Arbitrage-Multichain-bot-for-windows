@@ -29,9 +29,7 @@ scope: Reference documentation.
 # Live Architecture Viewer
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Live Architecture Viewer
+Document type: [CONTRACT]
 
 ## Purpose
 Defines the authoritative live topology and runtime visualization layer for modules, queues, events, and health.
@@ -50,6 +48,23 @@ stateDiagram-v2
   REFRESHING --> SYNCED
 ```
 
+## Lifecycle model
+- Initial state: `DISCOVERING` — topology sources are enumerated.
+- Terminal state: `SYNCED` — the viewer reflects the live runtime state.
+- Allowed transitions: as shown in the state machine.
+- Forbidden transitions: `STALE -> RENDERING` without refresh; rendering before discovery completes.
+- Recovery: stale or failed renders return to `REFRESHING` and fall back to the cached graph.
+- Failure: missing nodes, invalid edges, and render failures surface as stale-viewer alerts.
+
+## Topology sources
+- Kernel registrations, service registry, dependency graph, health checks, event routes, and queue states.
+- The viewer renders live module, queue, event, and health topology for the dashboard.
+
+## Refresh rules
+- Topology refreshes from the kernel on a fixed interval and on change events.
+- Registries are requeried on refresh; a requery failure falls back to the last cached graph.
+- A stale graph older than the configured freshness window is rendered as stale, not as current.
+
 ## Failure modes
 Stale graph, missing node, invalid edge, render failure.
 
@@ -63,10 +78,8 @@ Refresh topology from kernel, requery registries, and fall back to cached graph.
 - `../dashboard/ui-dashboard-spec.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+This document owns the live topology visualization layer. It consumes kernel registrations and the dependency graph but does not own them; it renders their state for operators. Rendering must never be treated as authoritative runtime state — the kernel remains the source of truth.
 
 ## Example
-An input is validated before any state-changing action.
-
-## Canonical ownership
-This document defers to the canonical owners for implementation, policy, and schema details.
+When a worker retires, the viewer detects the change event, requeries the registry, and refreshes the rendered topology within the refresh window.

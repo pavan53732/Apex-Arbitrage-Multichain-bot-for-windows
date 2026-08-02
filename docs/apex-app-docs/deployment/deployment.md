@@ -27,12 +27,10 @@ purpose: Deployment documentation.
 scope: Reference documentation.
 ---
 
-# Deployment
+# APEX Deployment & Release Guide
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# APEX Deployment & Release Guide
+Document type: [GUIDE]
 
 ## Purpose
 Defines build pipeline, packaging, testing gates, release promotion, rollback expectations, and operator release workflow.
@@ -56,28 +54,34 @@ Defines build pipeline, packaging, testing gates, release promotion, rollback ex
 - Migration scripts must be reversible or explicitly documented.
 - Release artifacts must include checksums and version metadata.
 
-## Cross-references
-- `../windows/windows-desktop.md`
-- `./build-release.md`
-- `../operations/reliability/runtime-operations.md`
-- `../security/security.md`
+## Release channels
+- Updates flow through the configured channel: `canary`, `beta`, or `production`.
+- Promotion between channels requires verification on the lower channel first.
+- A release is promoted only when smoke tests and rollback checks pass.
 
-## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
-
-## Example
-An input is validated before any state-changing action.
+## Rollback
+- Every release keeps the previous version available for rollback.
+- Rollback restores the prior version and verifies health after restore.
+- A failed promotion is rolled back automatically and reported to operators.
 
 ## Windows deployments
-- Must define installer, auto-update, and rollback patterns.
-
-## Required details
-- Define installer and update channels.
+- Installer packages, permissions, and the upgrade flow follow the Windows deployment contract.
+- Deployment failures fail safe: a partial deployment is never presented as current.
 
 ## Deployment rules
 - Define installer, update, rollback, and rollout behavior for Windows.
 - Define safe failure and recovery during deployment.
 
-## Deployment rules
-- Define Windows deployment packages, permissions, and upgrade flow.
-- Define rollback and verification steps.
+## Cross-references
+- `../windows/windows-desktop.md`
+- `./build-release.md`
+- `./windows-deployment.md`
+- `../operations/reliability/runtime-operations.md`
+- `../security/security.md`
+
+## Operational Contract
+
+Defines the packaging, installer flow, release channels, and upgrade/rollback procedures for the APEX Windows app. Stage sequencing and gates are owned by `build-release.md`; this guide covers the operator release workflow end to end.
+
+## Example
+A canary release fails post-install health verification; it is rolled back automatically and the prior production version remains current.

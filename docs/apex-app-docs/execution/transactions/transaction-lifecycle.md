@@ -29,9 +29,7 @@ scope: Reference documentation.
 # Transaction Lifecycle
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Transaction Lifecycle
+Document type: [CONTRACT]
 
 ## Purpose
 Defines submission, confirmation, replacement, cancellation, and finality handling for chain transactions.
@@ -40,10 +38,34 @@ Defines submission, confirmation, replacement, cancellation, and finality handli
 - Owns transaction state, receipt tracking, replacement, cancellation, and finality boundaries.
 - Does not own trade ranking or risk policy.
 
-## Missing details covered
-- Replacement logic must define nonce bumping and retry limits.
-- Persistence must define how state survives Windows restarts.
-- Recovery must define reorg, pending, and failed transaction handling.
+## Transaction rules
+- A transaction is submitted with a validated payload and gas policy; submission is recorded.
+- Pending transactions are tracked until confirmation or failure.
+- Replacement uses explicit nonce bumping and bounded retry limits.
+- Cancellation is allowed only before confirmation and is itself a recorded action.
+- Finality is determined per chain profile; a reorg moves confirmed state back to pending for reconciliation.
+
+## Persistence and recovery
+- Pending state persists across Windows restarts; a restart rehydrates transactions from the store.
+- A failed transaction is recorded with its error and a decision to retry or abandon is made by policy.
+- Reorg, pending, and failed handling is explicit and surfaced to the execution lifecycle.
+
+## Lifecycle model
+- Initial state: `SUBMITTED`.
+- Terminal state: `CONFIRMED` or `FAILED`.
+- Allowed transitions: submission, pending, confirmation, replacement, cancellation, and finality.
+- Forbidden transitions: cancelling a confirmed transaction; replacing without nonce bump.
+- Recovery transitions: rehydrate pending state on restart; reorg reconciliation.
+- Failure transitions: failed transactions recorded and routed to policy.
+
+## Finality
+- Finality follows the chain profile for the executing chain.
+- A reorg moves confirmed state back to pending for reconciliation.
+- Receipt tracking records confirmations as they arrive.
+- Cancellation is recorded and audited like any other transaction action.
+- Confirmation depth thresholds are per chain and configured, never implicit.
+- A transaction stranded beyond its retry budget is recorded and routed to policy.
+- Receipts are persisted with the transaction for audit and reconciliation.
 
 ## Cross-references
 - `./execution-engine.md`
@@ -51,21 +73,9 @@ Defines submission, confirmation, replacement, cancellation, and finality handli
 - `../../market/routing/gas-optimisation.md`
 - `../wallet-portfolio/wallet-management.md`
 
-## Required details
-- Define replacement logic, persistence, and Windows restart recovery.
+## Operational Contract
 
-## Recovery
-- Replacement and nonce bump rules must be explicit.
-- Pending state must persist across app restarts.
+This document owns transaction state, receipt tracking, replacement, cancellation, and finality boundaries. Execution mechanics are owned by the execution engine; gas policy by gas optimisation; wallets by wallet management.
 
-## Transaction rules
-- Define submission, pending, confirmation, replacement, cancellation, and finality.
-- Define persistence and recovery across restarts.
-
-## Lifecycle model
-- Initial state: defined by the lifecycle owner.
-- Terminal state: defined by the lifecycle owner.
-- Allowed transitions: explicitly listed by the lifecycle owner.
-- Forbidden transitions: explicitly listed by the lifecycle owner.
-- Recovery transitions: explicitly listed by the lifecycle owner.
-- Failure transitions: explicitly listed by the lifecycle owner.
+## Example
+A pending transaction survives a restart, is rehydrated, and is replaced with a nonce bump when gas policy allows.

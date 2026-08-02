@@ -26,18 +26,46 @@ purpose: Ai Tools documentation.
 scope: Reference documentation.
 ---
 
-# Ai Tools
-
-## Document type
-This document is an overview, reference, or index as noted below.
-
 # AI Tools
 
-## Purpose
-Defines every tool available to AI agents.
+## Document type
+Document type: [CONTRACT]
 
-## Scope
-Market search, risk query, wallet query, simulation, logs, configuration, notifications, charts, reports.
+## Purpose
+Defines every tool available to AI agents and the rules governing their use.
+
+## Tool surface
+- Market search.
+- Risk query.
+- Wallet query.
+- Simulation.
+- Logs.
+- Configuration.
+- Notifications.
+- Charts.
+- Reports.
+
+## Tool rules
+- Every tool has a canonical name, argument shape, output shape, and permission boundary declared in its schema.
+- Tools are versioned; a tool version bump must preserve backward compatibility or require agent revalidation.
+- A tool call is validated against its schema before execution; an invalid call is rejected.
+- Tool execution is bounded by timeout, and permission checks run before every invocation.
+- Tools never mutate financial state directly; they return data and validated proposals to the orchestrator.
+- A tool failure returns a normalized error through the tool-call contract, never a fabricated result.
+
+## Permission model
+- Tool access is granted per agent role by the permission model.
+- A tool outside the agent's granted surface is denied with an explicit reason.
+
+## Tool governance
+- New tools are approved by the tool governance process and versioned before exposure to agents.
+- Tool removal follows deprecation: a deprecated tool remains callable with a warning until retired.
+- Tool logs are retained for audit and replay.
+
+## Failure handling
+- A tool that exceeds its timeout returns a normalized timeout error.
+- A permission-denied tool returns the denial reason; it is never silently skipped.
+- A tool that crashes returns a runtime error through the tool-call contract.
 
 ## Cross-references
 - `../../interfaces/messages/interface-tool-call.md`
@@ -48,15 +76,4 @@ Market search, risk query, wallet query, simulation, logs, configuration, notifi
 Defines the complete tool surface available to AI agents, including permissions, argument shapes, and result expectations.
 
 ## Example
-The risk agent uses a tool to query exposure before consensus.
-
-## Required details
-- Define tool schema and permissions.
-
-## Tool rules
-- Define tool names, arguments, outputs, and permission boundaries.
-- Define how tools are versioned and validated.
-
-## Tool rules
-- Define tool names, arguments, outputs, permissions, and versioning.
-- Define tool validation before execution.
+The risk agent uses a tool to query exposure before consensus; the call is schema-validated, permission-checked, and timed out if it exceeds its budget.

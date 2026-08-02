@@ -30,15 +30,26 @@ scope: Reference documentation.
 # Explainability
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Explainability
+Document type: [CONTRACT]
 
 ## Purpose
 Defines the mandatory trace format for every decision, recommendation, and action.
 
 ## Required fields
-Decision ID, rationale, confidence, alternatives considered, inputs used, gates passed, veto source, and timestamp.
+- Decision ID.
+- Rationale.
+- Confidence.
+- Alternatives considered.
+- Inputs used.
+- Gates passed.
+- Veto source.
+- Timestamp.
+
+## Explanation rules
+- Explain why actions were taken, skipped, or delayed.
+- Capture inputs, outputs, and decision context for auditability.
+- Arbitrage explanations must state why opportunities were taken or skipped, including the rejection reason.
+- An explanation without a rationale is non-compliant and is rejected for storage.
 
 ## State machine
 ```mermaid
@@ -62,22 +73,10 @@ Reject storage, request re-evaluation, or mark the decision as non-compliant.
 - `../../operations/monitoring/metrics.md`
 
 For governance-grade trace compliance, see `./governance-explainability.md`.
+
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+This document owns the trace format and explanation rules for decisions, recommendations, and actions. Governance-grade audit lineage is owned by `governance-explainability.md`. Every decision must produce a replayable explanation; a decision that cannot be explained is not stored.
 
 ## Example
-An input is validated before any state-changing action.
-
-## Arbitrage explanations
-- Must explain why opportunities were taken or skipped.
-
-## Required details
-- Define why decisions were taken or skipped.
-
-## Explanation rules
-- Explain why actions were taken, skipped, or delayed.
-- Capture inputs, outputs, and decision context for auditability.
-
-## Explanation rules
-- Explain why actions were taken, skipped, or delayed.
-- Capture inputs, outputs, and decision context.
+An arbitrage opportunity is skipped because it fails the minimum-profit gate; the explanation records the gate result, the inputs, and the reason.

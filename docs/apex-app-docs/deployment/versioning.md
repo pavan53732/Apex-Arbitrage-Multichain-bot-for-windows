@@ -29,12 +29,11 @@ scope: Reference documentation.
 # Versioning
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Versioning
+Document type: [POLICY]
 
 ## Support Doc
 This document provides guidance. Canonical version numbers for code, schema, and API are maintained by their respective owners (Schema/Config/API).
+
 ## Purpose
 Defines versioning rules for configuration, database, API, strategy, plugin, and migration artifacts.
 
@@ -49,6 +48,26 @@ This document covers semantic versioning, compatibility, deprecation, and migrat
 - Plugin interfaces.
 - Migrations.
 
+## Versioning rules
+- Versions follow semantic versioning: major, minor, and patch components are meaningful.
+- A breaking change requires a major version bump and a documented migration plan.
+- A backward-compatible addition is a minor bump; a bug fix is a patch bump.
+- Deprecation is announced one minor version before removal.
+- Compatible surfaces may not consume a major version older than their declared floor.
+
+## Compatibility
+- Schema, API, and configuration compatibility is enforced by their canonical owners.
+- A consumer must declare the minimum version it supports.
+- Version mismatches are surfaced by the dependency graph and validators.
+
+## Enforcement
+- Version policy is enforced by the validators and the release gate.
+- A version mismatch blocks promotion between channels.
+- Deprecation windows are tracked in the roadmap.
+- A migration must be reversible or paired with a documented forward-only decision.
+- Plugin interface versions are checked against the host API version before activation.
+- A version bump updates the versioned surface's canonical owner in the same change.
+
 ## Cross-references
 - `../data/persistence/database-schema.md`
 - `../interfaces/api/api-contracts.md`
@@ -60,4 +79,4 @@ This document covers semantic versioning, compatibility, deprecation, and migrat
 Defines version policy for documents, schemas, APIs, plugins, contracts, and compatibility expectations.
 
 ## Example
-A breaking schema change requires a version bump and migration plan.
+A breaking schema change requires a version bump and migration plan; the migration is reversible and documented.

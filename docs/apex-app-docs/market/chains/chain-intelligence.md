@@ -29,9 +29,7 @@ scope: Reference documentation.
 # Chain Intelligence
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Chain Intelligence
+Document type: [CONTRACT]
 
 ## Purpose
 Owns chain-level scoring, health classification, and execution suitability for supported networks.
@@ -57,6 +55,20 @@ Chain scoring has its own lifecycle, health model, and consumer set that do not 
 - Reject reasons.
 - Health events.
 
+## Scoring rules
+- Scores are deterministic for the same input snapshot.
+- Suitability class is derived from score bands and the chain's feature profile.
+- A chain with an active reorg alert is unsuitable for execution.
+- Score history is retained for monitoring and alerting.
+
+## Consumer contract
+- Routing, execution, and strategy owners consume the suitability score before dispatch.
+- A score below the execution floor rejects the chain for that decision.
+- Health events are published to monitoring and alerting surfaces.
+- A chain under a reorg alert is excluded from execution until the alert clears.
+- Scoring inputs are versioned so score history stays reproducible.
+- A suitability class change is recorded with its reason and timestamp.
+
 ## Cross-references
 - `../core/market-data.md`
 - `../routing/routing-engine.md`
@@ -64,7 +76,8 @@ Chain scoring has its own lifecycle, health model, and consumer set that do not 
 - `../../operations/monitoring/monitoring-observability.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+This document owns chain-level scoring, health classification, and execution suitability. Chain identity lives in the chain registry; market data owns prices. This document classifies chain health for consumers.
 
 ## Example
-An input is validated before any state-changing action.
+A chain with repeated RPC timeouts is scored unsuitable and excluded from routing until health recovers.

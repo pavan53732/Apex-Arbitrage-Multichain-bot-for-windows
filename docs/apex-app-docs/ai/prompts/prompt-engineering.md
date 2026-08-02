@@ -33,7 +33,7 @@ scope: Reference documentation.
 **Version:** 1.0.1 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
 
 ## Document type
-This document is an overview, reference, or index as noted below.
+Document type: [CONTRACT]
 
 # Prompt Engineering
 
@@ -51,6 +51,16 @@ This document covers system prompts, few-shot prompts, safety prompts, agent pro
 - Versioned prompt packs.
 - Context injection rules.
 
+## Versioning rules
+- Prompt packs are versioned; a version bump requires validation against the criteria in `## Prompt rules` before rollout.
+- A prompt change that alters model/provider behavior must be reviewed before release.
+- Deprecated prompts are retained in the pack history for replay and audit.
+
+## Context shaping
+- Only context required for the task is injected; risk prompts include only the context needed for exposure analysis.
+- Context injection must respect the limits defined by context-window management.
+- Guardrails are applied at construction time, not at inference time.
+
 ## Cross-references
 - `../runtime/ai-pipeline.md`
 - `../providers/ai-settings.md`
@@ -64,7 +74,7 @@ This document governs capability, memory, prompt, or cost definitions. For runti
 Defines prompt templates, system prompts, context shaping, guardrails, and prompt versioning.
 
 ## Example
-A risk prompt includes only the context required for exposure analysis.
+A risk prompt includes only the context required for exposure analysis, drawn from the versioned prompt pack.
 
 ## Prompt rules
 - Define prompt templates, versioning, and validation criteria.

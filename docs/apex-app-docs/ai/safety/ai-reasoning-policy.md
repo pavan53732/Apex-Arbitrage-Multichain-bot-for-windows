@@ -26,18 +26,19 @@ purpose: Ai Reasoning Policy documentation.
 scope: Reference documentation.
 ---
 
-# Ai Reasoning Policy
+# AI Reasoning Policy
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# AI Reasoning Policy
+Document type: [POLICY]
 
 ## Purpose
 Defines which problems may use AI and which must remain deterministic.
 
 ## Rules
-AI may advise on ranking, explanation, and configuration advice. AI must never own deterministic financial calculations or final authority where policy forbids it.
+- AI may advise on ranking, explanation, and configuration advice.
+- AI must never own deterministic financial calculations or final authority where policy forbids it.
+- Risk scores, exposure limits, and position sizing are deterministic and AI-advised at most.
+- A forbidden-path request is rejected, not routed around the policy.
 
 ## State machine
 ```mermaid
@@ -48,6 +49,19 @@ stateDiagram-v2
   ALLOW_AI --> DISPATCHED
   REQUIRE_DETERMINISTIC --> REJECTED
 ```
+
+## Lifecycle model
+- Initial state: `EVALUATING` — the problem is classified by policy.
+- Terminal state: `DISPATCHED` (AI path) or `REJECTED` (deterministic-only path).
+- Allowed transitions: `EVALUATING -> ALLOW_AI -> DISPATCHED`; `EVALUATING -> REQUIRE_DETERMINISTIC -> REJECTED`.
+- Forbidden transitions: routing a deterministic-only problem to `ALLOW_AI`; dispatching without evaluation.
+- Recovery: a rejected action is logged and the deterministic path is used.
+- Failure: policy drift and ambiguous responsibility are surfaced as violations.
+
+## Confidence and escalation
+- Low-confidence recommendations are escalated for operator review, never executed directly.
+- Confidence thresholds are operator-configurable and bounded by the risk engine.
+- A recommendation below the execution threshold is withheld and explained.
 
 ## Failure modes
 AI used in forbidden path, policy drift, ambiguous responsibility.
@@ -64,8 +78,4 @@ Reject the action, route to deterministic logic, and log the violation.
 Defines allowed reasoning patterns, confidence thresholds, escalation rules, and safety constraints for AI decisions.
 
 ## Example
-A low-confidence plan is escalated instead of executed automatically.
-
-## Reasoning rules
-- Define when reasoning is required, how it is summarized, and when it is blocked.
-- Define confidence thresholds and escalation rules.
+A low-confidence plan is escalated instead of executed automatically; a deterministic exposure calculation is never replaced by an AI estimate.

@@ -32,7 +32,7 @@ scope: Reference documentation.
 **Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-08-02 | **Owner:** Runtime Team
 
 ## Document type
-This document is an overview, reference, or index as noted below.
+Document type: [CONTRACT]
 
 # Arbitrage Window Manager
 
@@ -44,8 +44,10 @@ Defines the lifecycle of arbitrage windows from detection through expiry or exec
 - Does not own trade execution or route scoring.
 
 ## Window contract
-- Must define latency budget per leg, expiry conditions, and timing synchronization.
-- Must define what happens when the opportunity becomes stale mid-flow.
+- A window is created when an opportunity is detected and validated; it carries a latency budget per leg.
+- Expiry conditions are explicit: stale prices, breached latency budgets, and clock desynchronization expire a window.
+- Timing synchronization is required before window creation; a desynchronized clock suspends window creation.
+- An opportunity that becomes stale mid-flow is invalidated and withdrawn from ranking rather than extended.
 
 ## Failure Handling
 

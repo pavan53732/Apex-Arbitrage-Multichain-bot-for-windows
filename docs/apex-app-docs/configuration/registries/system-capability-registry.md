@@ -56,22 +56,27 @@ Wrong capability label, stale capability, incompatible version.
 ## Recovery
 Re-scan adapters, revalidate manifests, and suspend stale capabilities.
 
+## Capability discovery
+- Capabilities are discovered by scanning adapters and validating manifests.
+- A capability label must map to a real implementation; an unbacked label is suspended.
+- Capability versions are checked for compatibility before use.
+- A stale or wrong capability label is never served as current.
+
 ## Cross-references
 - `../../data/registries/registry-system.md`
 - `../../plugins/plugin-sdk.md`
 - `../../ai/providers/ai-provider-manager.md`
 - `../../ai/runtime/ai-gateway.md`
 
-## Required details
-- Define platform capabilities and runtime features.
-
 ## Capability rules
-- Define platform, runtime, service, and plugin capabilities explicitly.
-- Define how capability checks block unsupported features.
-
-## Capability rules
-- Define discoverable capabilities, feature flags, and compatibility.
-- Define capability ownership and versioning.
+- Capabilities are discovered by scanning adapters and validating manifests; a label without a backing implementation is suspended.
+- Capability versions are checked for compatibility before use; an incompatible version blocks the feature.
+- Feature flags gate capability exposure; a disabled flag blocks the capability from consumers.
+- Ownership and versioning are recorded per capability; a stale capability is never served as current.
+- Capability checks run before a feature is enabled; an unsupported feature is blocked with a clear reason.
+- A capability is refreshed on a defined cadence and on adapter change events.
+- A suspended capability is revalidated before it can be re-published.
+- Capability discovery failures are logged and surfaced to operators.
 
 ## Canonical ownership
 This document defers to the canonical owners for implementation, policy, and schema details.

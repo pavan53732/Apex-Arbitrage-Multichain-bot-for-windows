@@ -29,12 +29,25 @@ scope: Reference documentation.
 # Execution Policies
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Execution Policies
+Document type: [CONTRACT]
 
 ## Purpose
 Defines the policy layer for gas, exposure, trading windows, profit thresholds, retry policy, emergency stop, and pause policy.
+
+## Policy domains
+- **Gas** — gas caps and fee policies bounded by operator configuration.
+- **Exposure** — per-trade and total exposure limits.
+- **Trading windows** — allowed trading hours and session constraints.
+- **Profit thresholds** — minimum profit gates before execution.
+- **Retry** — bounded retries with cooldown; no unbounded retry loops.
+- **Emergency stop** — immediate stop of active orders and wallet locking.
+- **Pause** — deliberate suspension of execution with operator control.
+
+## Evaluation rules
+- Every execution candidate is evaluated against the policy layer before dispatch.
+- A threshold breach or policy conflict blocks execution and is recorded with its reason.
+- Pause and emergency stop are distinct: pause is reversible by the operator; emergency stop locks wallets until explicit recovery.
+- Resuming from emergency stop requires operator approval.
 
 ## State machine
 ```mermaid
@@ -64,7 +77,4 @@ Stop execution, notify operators, and require approval to resume.
 Defines execution permissions, sequencing, retries, stop conditions, and exception handling.
 
 ## Example
-A policy prevents execution when risk checks fail.
-
-## Required details
-- Define risk, slippage, timing, and proxy-related policy limits.
+A policy prevents execution when risk checks fail; an emergency stop locks wallets until the operator approves recovery.

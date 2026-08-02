@@ -49,6 +49,25 @@ Policy mandates from this document are enforced by `./security.md` and `./securi
 - **Emergency stop**: `/admin/emergency-stop` terminates active orders and locks wallets.
 - **Audit log**: Every state transition logs user ID, timestamp, and immutable hash.
 
+## Policy statements
+- **Least privilege**: Every role is granted the minimum actions required for its function; permissions are enforced by the permission model.
+- **Trust boundaries**: Cross-trust-domain traffic is validated; plugins and external providers are isolated by the trust-boundary model.
+- **Secret rotation**: Secrets rotate on a defined schedule or on suspected compromise; rotation triggers configuration refresh.
+- **Fail closed**: A security-relevant check that cannot be verified denies the action; degraded security posture blocks live execution.
+- **Monitoring**: Security events are logged to the monitoring pipeline and mapped to alerts by `./security.md` §7.
+
+## Enforcement
+- Mandated controls are non-negotiable; a violation blocks the operation that would violate them.
+- Enforcement details, incident response, and monitoring live in `./security.md`; this document only declares the mandates.
+
+## Scope of application
+- Mandates apply to every platform surface: desktop, service mode, plugins, AI, and deployment.
+- A mandate violation in any surface blocks the violating operation.
+
+## Review
+- Mandates are reviewed on the security review cadence.
+- A new mandate is added here and enforced in `./security.md` in the same change.
+
 ## Cross-References
 - `./security.md` — Full security architecture.
 - `./permission-model.md` — Role/action permission matrix.

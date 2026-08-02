@@ -35,8 +35,6 @@ scope: Reference documentation.
 ## Document type
 This document is an overview, reference, or index as noted below.
 
-# Contract Registry
-
 ## Purpose
 Authoritative owner for contract registry.
 
@@ -45,6 +43,30 @@ Cross-cutting platform governance.
 
 ## Responsibilities
 Define ownership, contracts, lifecycle, validation, and cross-references.
+
+## Registry fields
+- Contract id.
+- Version.
+- ABI reference.
+- Chain mapping.
+- Deployment status.
+- Governance approval record.
+
+## Registry rules
+- A contract is identified by id and version; the pair is unique.
+- ABIs are stored and versioned in the ABI store.
+- Chain mappings are explicit and validated.
+- Deployment status transitions follow the contract lifecycle.
+- Entries are immutable after approval; changes create a new version.
+- Flash loan receivers and execution contracts are versioned and chain-scoped.
+- A contract cannot be selected for deployment without recorded governance approvals.
+
+## Registry lifecycle
+- A contract enters the registry at `Registered` with a proposed version and ABI reference.
+- Approval records attach to the entry; deployment is blocked until approvals are present.
+- An upgrade creates a new version of the entry; the previous version remains immutable for audit.
+- A withdrawn contract is marked withdrawn, not deleted; its history stays queryable.
+- Registry changes are validated against the chain mappings before they take effect.
 
 ## Cross-references
 - `../../architecture/apex-os.md`

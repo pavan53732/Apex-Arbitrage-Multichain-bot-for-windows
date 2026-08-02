@@ -29,12 +29,42 @@ scope: Reference documentation.
 # Feature Matrix
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# FEATURE MATRIX
+Document type: [REFERENCE]
 
 ## Purpose
-Navigation-only document pointing to the authoritative owner(s).
+Lists supported strategies, platforms, and app modes for the APEX platform.
+
+## Strategies
+| Strategy | Owner | Status |
+| --- | --- | --- |
+| Cross-exchange arbitrage | `cross-exchange-arbitrage.md` | Active |
+| Triangular arbitrage | strategies | Planned |
+| Flash-loan arbitrage | strategies | Planned |
+| Route-scored execution | routing engine | Active |
+
+## Platforms
+| Platform | Mode | Notes |
+| --- | --- | --- |
+| Windows desktop | App + tray | Primary target |
+| Windows service | Headless service mode | Managed via SCM |
+| Simulation | Paper trading | Phase 1 default |
+
+## App modes
+- Simulation (paper trading).
+- Operator-approved execution.
+- Autonomous execution (phased).
+
+## Feature status legend
+- Active — implemented and governed by a canonical owner.
+- Planned — on the roadmap; not yet implemented.
+- Deprecated — scheduled for removal.
+- In development — partially implemented; not yet governed.
+- Maintenance — implemented and stable; changes limited to fixes.
+- The matrix is updated in the same change as the feature's status change.
+- A status change updates the roadmap and the enhancement roadmap together.
+- Rows reference their canonical owner; a row without an owner is a documentation gap.
+- The matrix is the single status surface; other docs reference it.
+- Platform rows reflect the deployment contracts' current modes.
 
 ## Cross-references
 - `./implementation-roadmap.md`
@@ -42,10 +72,8 @@ Navigation-only document pointing to the authoritative owner(s).
 - `../execution/trading/strategies.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+This document owns the feature matrix: strategies, platforms, and app modes with status. Behavior for each feature is owned by its canonical owner; this matrix is the status table.
 
 ## Example
-An input is validated before any state-changing action.
-
-## Required details
-- List supported strategies, platforms, and app modes in a table.
+A user checks the matrix to confirm that simulation mode is the current default for Phase 1.

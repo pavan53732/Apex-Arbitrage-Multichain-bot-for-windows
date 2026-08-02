@@ -29,29 +29,55 @@ scope: Reference documentation.
 # Changelog
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# CHANGELOG
+Document type: [REFERENCE]
 
 ## Purpose
-Navigation-only document pointing to the authoritative owner(s).
-
-## Cross-references
-- `../execution/decision-log.md`
-- `./implementation-roadmap.md`
-
-## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
-
-## Example
-An input is validated before any state-changing action.
-
-## Required details
-- Maintain versioned release notes for Windows and trading changes.
+Maintains versioned release notes for the APEX platform.
 
 ## Changelog rules
 - Record user-visible changes, fixes, and migrations by version.
 - Keep entries brief and release-oriented.
+- Each entry references its canonical owner where relevant.
 
-## Final rules
-- Record user-visible changes, fixes, and migrations by version.
+## Entry format
+- Entries are grouped by release version, newest first.
+- Breaking changes and migrations are flagged explicitly.
+- Each entry names the affected surface and its canonical owner.
+- Security fixes are labeled with severity and remediation.
+- Entries never contain secrets or customer data.
+
+## Release discipline
+- A changelog entry is written in the same change as the release it describes.
+- Unreleased changes accumulate under an "Unreleased" section until the next release.
+- Release dates are recorded per version.
+- A revert or hotfix appends an entry rather than rewriting history.
+- The changelog is user-visible; internal validator changes are documented in the repository docs.
+- Deprecations are announced here at least one minor version before removal.
+- The changelog links to the deployment and versioning contracts for release mechanics.
+- Every version entry is reviewed with the release gate.
+- Historical entries are retained; they are never rewritten after release.
+- The changelog is the single release-history surface for the platform.
+- Migration entries state the upgrade path and rollback.
+- Release notes are generated from this changelog.
+
+## Current entries
+| Version | Date | Changes |
+| --- | --- | --- |
+| 0.1.0 (planned) | — | Initial desktop shell, simulation pipeline, validator suite, and governance model. |
+
+## Structure
+- Entries are grouped by release version, newest first.
+- Breaking changes and migrations are flagged explicitly.
+- The decision log tracks autonomous decisions; this changelog tracks user-visible releases.
+
+## Cross-references
+- `../execution/decision-log.md`
+- `./implementation-roadmap.md`
+- `../deployment/versioning.md`
+
+## Operational Contract
+
+This document owns the versioned release changelog. Each release entry is written at release time and reflects user-visible changes, fixes, and migrations.
+
+## Example
+A Windows packaging fix is recorded under its release version with a reference to the deployment contract.

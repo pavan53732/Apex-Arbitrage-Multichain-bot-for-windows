@@ -29,9 +29,7 @@ scope: Reference documentation.
 # Portfolio Management
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Portfolio Management
+Document type: [CONTRACT]
 
 ## Purpose
 Aggregates balances and positions into portfolio value, allocation, and utilization snapshots.
@@ -41,20 +39,43 @@ Aggregates balances and positions into portfolio value, allocation, and utilizat
 - Aggregate positions and wallet balances.
 - Feed risk, reporting, and UI dashboards.
 
+## Portfolio rules
+- Portfolio aggregation spans multiple wallets and chains; every value is chain- and asset-aware.
+- Allocation and exposure are computed deterministically and fed to the risk engine.
+- A rebalance is blocked if exposure exceeds policy; the block is recorded with its reason.
+- Reconciliation after failed or partial trades recomputes the snapshot and surfaces drift.
+- Utilization compares deployed capital against available capital per strategy and wallet.
+
+## Snapshot semantics
+- Snapshots are point-in-time and labeled with their timestamp.
+- A stale snapshot is never served as current to the UI or risk engine.
+
+## Snapshot content
+- Total value.
+- Allocation by asset, chain, and strategy.
+- Exposure and utilization.
+- Position counts and wallet balances.
+
+## Consistency
+- Snapshots are computed atomically from position and balance state.
+- Drift after partial trades triggers reconciliation.
+- Snapshot timestamps are explicit and never implied.
+- A rebalance applies only when the post-state remains within policy bounds.
+- Utilization compares deployed capital against available capital per strategy and wallet.
+- Portfolio state is the single input to risk, reporting, and UI dashboards.
+- A wallet that cannot be priced is excluded with a labeled gap, not silently zeroed.
+- Snapshot history is retained for analytics and audit.
+- Allocation is chain- and asset-aware across all wallets.
+
 ## Cross-references
 - `./position-management.md`
 - `./wallet-management.md`
+- `./portfolio-analytics.md`
 - `../../market/core/market-data.md`
 
 ## Operational Contract
-Defines portfolio ownership, allocation, rebalancing, exposure limits, and wallet/strategy bindings.
+
+Defines portfolio ownership, allocation, rebalancing, exposure limits, and wallet/strategy bindings. Positions are owned by position management; balances by wallet management; this document aggregates them into portfolio state.
 
 ## Example
-A portfolio rebalance is blocked if exposure exceeds policy.
-
-## Required details
-- Define multi-wallet aggregation and reconciliation.
-
-## Portfolio rules
-- Define portfolio aggregation across multiple wallets and chains.
-- Define reconciliation after failed or partial trades.
+A portfolio rebalance is blocked if exposure exceeds policy; the snapshot is reconciled after a partial trade completes.

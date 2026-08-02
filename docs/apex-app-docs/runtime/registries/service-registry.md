@@ -40,6 +40,17 @@ Defines the canonical registration and lookup mechanism for runtime services.
 ## Contract
 Nothing instantiates services directly; everything registers with the kernel-managed registry.
 
+## Registration contract
+- Service identifiers are unique, stable, and versioned; a duplicate registration is rejected.
+- Every entry records health, version, lifecycle state, and declared dependencies.
+- Lookup returns the current registration and never resolves a retired or suspended service as healthy.
+- A service is schedulable only after its dependencies are available.
+
+## Windows SCM mapping
+- Desktop-mode services register with the in-process registry.
+- Service-mode components map to Windows Service Control Manager entries with matching names and start types.
+- SCM start type and failure recovery actions are declared in the service registration.
+
 ## State machine
 ```mermaid
 stateDiagram-v2
@@ -70,9 +81,6 @@ Defines service identity, registration, status, ownership, and versioned service
 
 ## Example
 A service entry exposes health, version, and lifecycle state before it is scheduled.
-
-## Required details
-- Define SCM mapping, dependencies, recovery, and lookup.
 
 ## Registry rules
 - Define service names, dependencies, recovery actions, and lookup behavior.

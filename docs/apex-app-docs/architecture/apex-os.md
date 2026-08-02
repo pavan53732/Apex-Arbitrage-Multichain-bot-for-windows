@@ -26,12 +26,10 @@ purpose: Apex Os documentation.
 scope: Reference documentation.
 ---
 
-# Apex Os
+# APEX OS
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# APEX OS
+Document type: [CONTRACT]
 
 ## Purpose
 Defines the constitution of the platform: vision, mission, philosophy, design principles, architecture principles, runtime principles, AI principles, security principles, extensibility principles, roadmap, non-goals, and evolution strategy.
@@ -44,6 +42,14 @@ stateDiagram-v2
   GOVERNING --> EVOLVING
   EVOLVING --> GOVERNING
 ```
+
+## Lifecycle model
+- Initial state: `DEFINED` — the constitution is written and accepted.
+- Terminal state: none — the constitution governs continuously and evolves.
+- Allowed transitions: `DEFINED -> GOVERNING`, `GOVERNING -> EVOLVING`, `EVOLVING -> GOVERNING`.
+- Forbidden transitions: any transition that bypasses `GOVERNING`, such as direct `DEFINED -> EVOLVING`.
+- Recovery: an evolution that fails validation returns to `GOVERNING` without taking effect.
+- Failure: a proposed evolution that violates the constitution is rejected and logged.
 
 ## Authority Boundary
 
@@ -61,6 +67,17 @@ stateDiagram-v2
 
 **This document defers to no other architecture document.** It is the root authority for platform design principles.
 
+## Design principles
+- The system is designed for multi-chain arbitrage from the start, with Polygon as the first live-network target (ADR 0004).
+- Safety precedes yield: risk gates must execute before any live submission.
+- Deterministic core, assisted by AI: financial calculations and final authority stay deterministic; AI advises on ranking, explanation, and configuration.
+- Operator control: autonomous execution is phased and operator-approved.
+
+## Non-goals
+- This document does not define runtime sequencing, component behavior, or operational procedures.
+- The platform does not promise exact fee, latency, liquidity, or provider guarantees.
+- Local LLM inference is not a production configuration goal; production AI uses cloud providers.
+
 ## Cross-references
 - `./apex-kernel.md`
 - `../runtime/orchestrator.md`
@@ -70,7 +87,8 @@ stateDiagram-v2
 - `../operations/reliability/enterprise-operations.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+This document is the platform constitution. Every architecture document must align with these principles; conflicts are resolved in favor of this document. Implementation, runtime, and operational behavior remain with their canonical owners.
 
 ## Example
-An input is validated before any state-changing action.
+A proposed feature that would execute trades without operator approval in Phase 1 is rejected because it violates the operator-control principle and the phased-execution roadmap.

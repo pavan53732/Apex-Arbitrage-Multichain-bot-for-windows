@@ -26,26 +26,54 @@ purpose: Dex Intelligence documentation.
 scope: Reference documentation.
 ---
 
-# Dex Intelligence
+# DEX Intelligence
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# DEX Intelligence
+Document type: [CONTRACT]
 
 ## Purpose
 Defines DEX-level liquidity, TVL, fees, latency, pools, performance, and supported-token views.
 
+## View content
+- Liquidity and TVL per DEX.
+- Fee structure and latency.
+- Pool counts and supported tokens.
+- Historical performance and route quality.
+
+## Arbitrage intelligence
+- DEX ranking factors include liquidity depth, fee sensitivity, latency, and historical fill quality.
+- Route-quality signals feed arbitrage opportunity detection and ranking.
+- A DEX with stale data is excluded from ranking until refreshed.
+- Intelligence is deterministic for the same input snapshot.
+
+## Views and refresh
+- Liquidity and TVL views refresh on the dashboard cadence and on pool-change events.
+- Fee and latency views reflect the current integration state with their timestamp.
+- Pool counts and supported tokens are derived from the DEX registry, not duplicated.
+- Historical performance views retain the data needed for route-quality analysis.
+- A view for a venue without a registry entry is not rendered.
+- Data quality is monitored: stale or missing fields are flagged, not silently zeroed.
+- Intelligence outputs are consumed read-only by opportunity detection and ranking.
+- DEX ranking changes are recorded with their reason for audit.
+- Refresh failures degrade the view visibly rather than blocking the command center.
+- The intelligence contract is bounded: pricing and execution behavior live in their owners.
+- Ranking weights are configuration, validated before use.
+- Intelligence refresh latency meets the performance SLO for the surface.
+- Views follow the dashboard and design-system contracts.
+
+## Governance
+- DEX metadata and registry identity are owned by the DEX registry and integration contracts.
+- This document owns the intelligence views derived from them.
+
 ## Cross-references
 - `../../interfaces/api/domain-model.md`
 - `../../operations/monitoring/metrics.md`
+- `./dex-registry.md`
+- `../opportunities/opportunity-ranking.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+Defines DEX-level liquidity, TVL, fees, latency, pools, performance, and supported-token views. DEX identity is owned by the DEX registry; this document owns the intelligence over it.
 
 ## Example
-An input is validated before any state-changing action.
-
-## Arbitrage intelligence
-- Must define DEX ranking factors, fee sensitivity, and route quality signals.
-- Must define how intelligence feeds arbitrage opportunity detection.
+A DEX with high fees and shallow liquidity is ranked below a lower-fee venue for route selection.

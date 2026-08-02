@@ -61,6 +61,12 @@ Primary and secondary provider lists are explicitly configured. Health probes ru
 ## Failure modes
 If all providers fail, enter degraded mode and alert operations.
 
+## Circuit breaking
+- A provider that exceeds the failure threshold is opened (removed from rotation).
+- Health probes decide when an opened provider is safe to retry.
+- Failback policy controls when a recovered provider is reinstated.
+- Degraded mode blocks execution-facing requests that require provider availability.
+
 ## Cross-references
 - `../../ai/providers/ai-provider-manager.md`
 - `../../ai/runtime/ai-gateway.md`

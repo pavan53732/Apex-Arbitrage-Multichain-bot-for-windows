@@ -32,22 +32,30 @@ scope: Reference documentation.
 **Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-08-02 | **Owner:** Runtime Team
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Update Manager
+Document type: [CONTRACT]
 
 ## Purpose
-Authoritative owner for update manager.
+Authoritative owner for update manager behavior: application, plugin, prompt, and model updates.
 
 ## Scope
-Cross-cutting platform governance.
+Cross-cutting platform governance for update channels, integrity verification, migration, rollback, and update visibility.
 
 ## Responsibilities
-Define ownership, contracts, lifecycle, validation, and cross-references.
+- Own update handling, rollback, migration, and integrity checks for all update classes.
+- Publish update outcomes to the Windows UI so failures are visible.
+- Do not own feature behavior; features are owned by their subsystems.
+
+## Update sources
+- Application installer and auto-update channel (`canary`, `beta`, `production`).
+- Plugin archives (`.aplx`) from the plugin marketplace.
+- Prompt packs and model provider endpoints for the AI pipeline.
+- Each source is versioned and verified before application.
 
 ## Cross-references
 - `../architecture/apex-os.md`
 - `../architecture/architecture.md`
+- `../plugins/plugin-sdk.md`
+- `../ai/prompts/prompt-engineering.md`
 
 ## Operational Contract
 Defines application, plugin, prompt, and model update handling, rollback, migration, and integrity checks.

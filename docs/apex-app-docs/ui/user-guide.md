@@ -29,32 +29,61 @@ scope: Reference documentation.
 # User Guide
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# User Guide
+Document type: [GUIDE]
 
 ## Purpose
 Provides operator-facing usage guidance for the application.
 
 ## Ownership
-- User guidance only.
+- User guidance only; behavior is owned by the canonical contracts.
 
-## Cross-references
-- `./user-flows.md`
-- `../operations/diagnostics/troubleshooting.md`
+## Installation and first run
+- Install the signed package from the release channel.
+- On first run, complete configuration, workspace creation, and wallet connection.
+- Review the simulation-mode default before enabling any execution.
+
+## Tray and updates
+- The tray shows runtime status and notification state.
+- Updates are applied per the update channel and roll back on failure.
+
+## Safe operating procedure
+- Review trade status before approving any action.
+- Understand the trade explainer before relying on autonomous recommendations.
+- Use the emergency stop only for immediate risk; it locks wallets until recovery.
+- Start in simulation mode and graduate to live execution only with approval.
+
+## Day-to-day operations
+- Open the command centers to review chains, wallets, and opportunities before acting.
+- Read notifications for critical alerts; quiet hours suppress noncritical updates only.
+- Export reports and logs from the diagnostics and analytics surfaces for review.
+- Keep the application updated; updates are integrity-checked and roll back on failure.
+
+## Troubleshooting basics
+- Check the tray status first; an unexpected tray state indicates a service issue.
+- Read error codes from the diagnostics surface before escalating.
+- Restart the application only outside active trading windows when possible.
+
+## Account and security
+- Wallet keys live in the OS keychain; signing always requires desktop approval.
+- Configuration changes under `%PROGRAMDATA%` require elevation.
+- Report suspected incidents through the escalation path in the operations contracts.
+
+## Getting help
+- Consult the FAQ for common questions.
+- Follow the troubleshooting guide for connectivity and runtime issues.
+- The user guide summarizes; canonical contracts remain authoritative.
 
 ## Governance Rules
 Defines how end users navigate features, interpret statuses, and follow safe operating procedures.
 
+## Cross-references
+- `./user-flows.md`
+- `../operations/diagnostics/troubleshooting.md`
+- `../reference/faq.md`
+
+## Operational Contract
+
+This document owns operator-facing usage guidance. Feature behavior is owned by the canonical contracts; this guide describes how to operate them safely.
+
 ## Example
-The guide explains how to review trade status before approving an action.
-
-## Windows user actions
-- Must define install, first-run, tray, and update steps for end users.
-
-## Required details
-- Define install, update, tray, and first-run help.
-
-## User workflows
-- Define install, update, tray, first-run, and troubleshooting steps.
-- Define the minimum actions needed to start trading safely.
+The guide explains how to review trade status before approving an action, and how to interpret the trade explainer.

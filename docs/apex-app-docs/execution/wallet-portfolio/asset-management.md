@@ -29,9 +29,7 @@ scope: Reference documentation.
 # Asset Management
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Asset Management
+Document type: [CONTRACT]
 
 ## Purpose
 Owns canonical asset metadata, identifiers, decimals, display symbols, and chain-specific asset normalization.
@@ -57,6 +55,13 @@ Owns canonical asset metadata, identifiers, decimals, display symbols, and chain
 - Duplicate canonical ids are rejected.
 - Conflicting symbols must be resolved with chain-aware aliases.
 - Unknown decimals block execution until verified.
+- An asset with an unverified contract address is not eligible for execution.
+- Metadata updates emit change events so caches and UI refresh consistently.
+
+## Governance rules
+- The canonical asset registry is the single source for asset identity across chains.
+- Wrapped assets declare their native relationship and are normalized per chain.
+- Display precision is chain-aware; a value is never displayed with more precision than its asset supports.
 
 ## Cross-references
 - `../../market/core/market-data.md`
@@ -66,7 +71,8 @@ Owns canonical asset metadata, identifiers, decimals, display symbols, and chain
 - `../../market/tokens/token-registry.md`
 
 ## Operational Contract
-Defines asset tracking, balances, custody, approvals, and transfer governance.
+
+Defines asset tracking, balances, custody, approvals, and transfer governance. Asset identity is canonical here; balances and custody are owned by wallet management.
 
 ## Example
-A supported asset cannot be transferred until approval and balance checks pass.
+A supported asset cannot be transferred until approval and balance checks pass; an asset with unknown decimals blocks execution until verified.

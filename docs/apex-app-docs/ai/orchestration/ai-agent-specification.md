@@ -26,39 +26,57 @@ purpose: Ai Agent Specification documentation.
 scope: Reference documentation.
 ---
 
-# Ai Agent Specification
-
-
-## AI Guard
-Before creating or modifying ANY markdown file, verify it complies with the 5 Prime Directives.
-- Lifecycle docs must explicitly define initial state, terminal state, allowed transitions, forbidden transitions, recovery transitions, and failure transitions.
-- Interface docs must explicitly define producer, consumer, payload, schema, validation, versioning, and failure behavior.
-- Owner docs must explicitly state what they own and do not own.
-- Cross-cutting docs must defer to canonical owners.
-- Short docs must explicitly declare whether they are an [INDEX], [OVERVIEW], or [REFERENCE].
-If a file fails any directive, abort and fix it before proceeding.
-
-## Document type
-This document is an overview, reference, or index as noted below.
-
 # AI Agent Specification
 
+## Document type
+Document type: [CONTRACT]
+
 ## Purpose
-Defines message and tool schemas for AI agents.
+Defines message and tool schemas for AI agents, and the contract each agent must satisfy.
 
 ## Support Doc
 This document provides schemas for agent messages and tool calls. Lifecycle rules are defined in `./ai-orchestration.md`.
 
+## Agent contract
+Each agent defines:
+- **Identity** — a stable agent identifier and role.
+- **Goals** — the objectives the agent is responsible for.
+- **Inputs and outputs** — structured message schemas the agent consumes and produces.
+- **Tools** — the tool surface the agent may invoke, bounded by permissions.
+- **Memory access** — which memory scopes the agent may read and write.
+- **Metrics** — the metrics the agent reports for monitoring.
+- **Lifecycle expectations** — readiness, handoff, and failure behavior.
+
+## Tool invocation
+- Agents invoke tools through the canonical tool-call contract; every invocation is validated and permission-checked.
+- A tool result or error is returned through the same contract; results are never fabricated by the agent.
+
+## Failure and handoff
+- An agent that cannot complete a goal must fail explicitly and hand off to the orchestrator with a reason.
+- No agent may silently degrade; failure is recorded in the decision ledger.
+
+## Agent types
+- Planner agent.
+- Risk agent.
+- Strategy agent.
+- Explanation agent.
+- Each type declares its role, tool surface, and memory scope.
+
+## Registration
+- Agents register with the orchestrator before dispatch.
+- An unregistered agent is not dispatchable.
+- Agent capabilities are declared and validated at registration.
+- Registration is revalidated when the agent's declared capabilities change.
+- An agent whose registration is revoked is removed from dispatch in the same cycle.
+
 ## Cross-references
 - `./ai-orchestration.md`
 - `../runtime/ai-pipeline.md`
+- `../tools/ai-tools.md`
+- `../../interfaces/messages/interface-tool-call.md`
 
 ## Interface Contract
 Each agent defines purpose, inputs, outputs, tools, memory access, metrics, and lifecycle expectations.
 
 ## Example
-The planner agent decomposes goals, orders dependencies, and emits a structured execution plan.
-
-## Agent rules
-- Define agent identity, goals, tools, permissions, and output expectations.
-- Define failure and handoff behavior.
+The planner agent decomposes goals, orders dependencies, and emits a structured execution plan through the canonical message schema.

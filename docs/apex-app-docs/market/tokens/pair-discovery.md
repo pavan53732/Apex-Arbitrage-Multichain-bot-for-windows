@@ -29,20 +29,53 @@ scope: Reference documentation.
 # Pair Discovery
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# PAIR DISCOVERY
+Document type: [CONTRACT]
 
 ## Purpose
-Navigation-only document pointing to the authoritative owner(s).
+Defines how trading pairs are discovered, validated, and promoted for the platform.
+
+## Discovery sources
+- DEX pool listings.
+- Token registry additions.
+- Chain registry scans.
+- Strategy requirements.
+
+## Discovery rules
+- A pair is defined by its base and quote assets on a specific chain and DEX.
+- A discovered pair is validated against token metadata before promotion.
+- Pairs with stale or invalid metadata are rejected, not silently kept.
+- Discovery runs on a defined cadence and on registry change events.
+- Promoted pairs are recorded in the pair store and published to market data consumers.
+
+## Pair validation
+- A pair passes only when both assets resolve in the token registry for the same chain.
+- Liquidity and freshness gates are evaluated before promotion.
+- A rejected pair is recorded with its reason code for tuning.
+- Pair records are versioned and chain-scoped.
+
+## Sources and refresh
+- Discovery sources are DEX pool listings, registry additions, chain scans, and strategy requirements.
+- Discovery runs on a defined cadence and on registry change events.
+- A source outage degrades discovery to the remaining sources and is flagged.
+
+## Output
+- Promoted pairs are published to market data consumers through the domain model.
+- Pair output is deterministic for the same inputs.
+- Pair records include the discovery source and timestamp for traceability.
+- Duplicate pairs are collapsed; the registry entry is the identity.
+- A pair that fails revalidation is withdrawn from market data surfaces.
+- Pair discovery feeds opportunity detection with validated pairs only.
+- Discovery configuration changes are validated before activation.
 
 ## Cross-references
 - `../core/market-data.md`
 - `../core/market-intelligence.md`
+- `./token-discovery.md`
 - `../../execution/trading/strategies.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+This document owns pair discovery and validation. Token metadata is owned by the token registry; DEX pool data by the DEX integration. This document composes them into validated pairs.
 
 ## Example
-An input is validated before any state-changing action.
+A new pool on a supported DEX is discovered, its tokens are validated, and the pair is promoted to market data consumers.

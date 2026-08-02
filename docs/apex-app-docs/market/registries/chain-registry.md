@@ -52,18 +52,30 @@ This registry is descriptive and feeds chain integration, routing, wallet, gas, 
 - Finality profile.
 - Feature flags.
 
-## Cross-references
-- `./chain-integration.md`
-- `../routing/routing-engine.md`
-- `../../execution/wallet-portfolio/wallet-management.md`
-- `../routing/gas-optimisation.md`
-- `../../data/persistence/database-schema.md`
+## Registry rules
+- A chain id is unique and stable; a duplicate is rejected.
+- RPC endpoints are versioned and health-checked by the RPC manager.
+- Native token, gas model, and finality profile are canonical per chain.
+- Feature flags and capability labels follow the capability registry.
+- An entry's status (active, deprecated, suspended) is explicit and versioned.
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.
 
 ## Interface Contract
 Defines chain identity, metadata, status, endpoints, capabilities, and versioned chain configuration.
+
+## Lifecycle
+- Entries transition through active, suspended, and deprecated states.
+- Suspended chains are excluded from routing and scanning.
+- Registry updates emit change events to consumers.
+
+## Cross-references
+- `./chain-integration.md`
+- `../routing/routing-engine.md`
+- `../../execution/wallet-portfolio/wallet-management.md`
+- `../routing/gas-optimisation.md`
+- `../../data/persistence/database-schema.md`
 
 ## Example
 A chain entry lists chain id, name, RPCs, explorers, and active status.

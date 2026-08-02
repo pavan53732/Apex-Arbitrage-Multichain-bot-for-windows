@@ -28,12 +28,10 @@ purpose: Performance Slos documentation.
 scope: Reference documentation.
 ---
 
-# Performance Slos
+# Performance SLOs
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Performance SLOs
+Document type: [CONTRACT]
 
 ## Purpose
 Defines numeric performance targets for core platform paths.
@@ -47,16 +45,37 @@ Defines numeric performance targets for core platform paths.
 - Simulation <= 500ms per run.
 - Budget enforcement must check cost cap before every AI call.
 
+## SLO semantics
+- Targets are p95 unless stated otherwise; outliers are measured, not ignored.
+- A sustained breach is an incident and triggers the alerting path.
+- SLOs are measured by the metrics pipeline and reviewed on a defined cadence.
+- Startup, latency, render, and recovery paths have measured baselines.
+
+## Measurement rules
+- SLOs are measured from production-like workloads; synthetic numbers are labeled.
+- A measurement window is explicit and consistent across surfaces.
+- Breach counts and severity are defined per SLO.
+- An SLO change is a reviewed change recorded in this document.
+- SLOs never include trading decisions; they bound platform paths only.
+- Degraded mode is measured separately and never reported as normal performance.
+- Alerting thresholds sit below the SLO to catch degradation early.
+- SLOs are reviewed on a defined cadence against measured baselines.
+- New surfaces declare their SLOs here before release.
+- A missed SLO drives a remediation item, not a silent adjustment.
+- SLO coverage is tracked by the metrics pipeline per surface.
+
+## Recovery SLOs
+- A failed component recovers within its recovery budget or is escalated.
+- Degraded mode must not silently meet an SLO meant for normal operation.
+
 ## Cross-references
 - `../ai/providers/ai-cost-management.md`
 - `../operations/monitoring/metrics.md`
 - `../operations/monitoring/health-checks.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+Defines numeric performance targets for core platform paths. Metrics are owned by the metrics contract; this document owns the targets measured against them.
 
 ## Example
-An input is validated before any state-changing action.
-
-## Required details
-- Define startup, latency, render, and recovery SLOs.
+A dashboard render that exceeds 100ms p95 triggers a breach alert and is investigated before the next release.

@@ -51,18 +51,31 @@ This registry is descriptive and feeds market data, routing, wallet, portfolio, 
 - Stablecoin flag.
 - Display name.
 
-## Cross-references
-- `../core/market-data.md`
-- `../../execution/wallet-portfolio/asset-management.md`
-- `../../execution/wallet-portfolio/portfolio-management.md`
-- `../../execution/wallet-portfolio/wallet-management.md`
-- `../../data/persistence/database-schema.md`
+## Registry rules
+- A token is identified by its chain id and contract address; the pair is unique.
+- Decimals and asset type are validated before a token is promoted into the registry.
+- Wrapped/native relationships are explicit and chain-aware.
+- Stablecoin flags follow the stablecoin classification rules.
+- A token's status and version are explicit; deprecated tokens are flagged, not removed.
 
 ## Registry boundary
 This is a pure data registry. All runtime behaviour, routing decisions, and validation rules are defined by the market/data/routing authority.
 
 ## Interface Contract
 Defines token metadata, chain association, address validation, status, and versioned token records.
+
+## Lifecycle
+- Tokens transition through candidate, active, and deprecated states.
+- Discovery promotes candidates after validation; a candidate is never served as active.
+- Deprecated tokens remain for history and are flagged, not removed.
+- Registry updates emit change events to consumers.
+
+## Cross-references
+- `../core/market-data.md`
+- `../../execution/wallet-portfolio/asset-management.md`
+- `../../execution/wallet-portfolio/portfolio-management.md`
+- `../../execution/wallet-portfolio/wallet-management.md`
+- `../../data/persistence/database-schema.md`
 
 ## Example
 A token entry stores symbol, decimals, chain id, and active status.

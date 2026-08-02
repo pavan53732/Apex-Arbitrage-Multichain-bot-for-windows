@@ -27,12 +27,10 @@ purpose: Ui Component Spec documentation.
 scope: Reference documentation.
 ---
 
-# Ui Component Spec
+# UI Component Spec
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# UI Component Spec
+Document type: [CONTRACT]
 
 ## Purpose
 Defines reusable UI components for the desktop trading app.
@@ -41,19 +39,42 @@ Defines reusable UI components for the desktop trading app.
 - Owns component props, states, and interaction behavior.
 - Does not own business logic or runtime orchestration.
 
-## Required components
-- Status badge.
+## Core components
+- Status banner.
 - Spread panel.
 - P&L panel.
 - Health panel.
-- Notification area.
+- Notification drawer.
+- Data table and chart primitives.
+
+## Component contract
+- Every component defines loading, empty, error, and live states.
+- Props are typed and bound to the domain model; components never fetch runtime state directly.
+- Components are theme-driven and consume design-system tokens only.
+- Interaction behavior follows the UX guidelines; destructive actions require confirmation.
+
+## State semantics
+- Loading: explicit and non-blocking where possible.
+- Empty: informative, with a recovery action where one exists.
+- Error: actionable recovery text, never a raw stack trace.
+- Live: reflects current domain state and refreshes per the dashboard contract.
+- A component never blocks the shell while waiting for data.
+- Data binding flows through the domain model; components never read runtime state directly.
+- Destructive actions require confirmation per the UX guidelines.
+- Component names and props follow the design-system conventions.
+- New components are added here before first use in a screen.
+- Accessibility states (focus, keyboard) are part of every component contract.
 
 ## Cross-references
 - `../dashboard/ui-dashboard-spec.md`
 - `../dashboard/dashboard-widgets.md`
+- `./design-system.md`
 - `./ux-guidelines.md`
 - `../windows/windows-desktop.md`
 
-## Core components
-- Status banner, spread panel, P&L panel, health panel, and notification drawer.
-- Each component must define loading, empty, error, and live states.
+## Operational Contract
+
+This document owns reusable UI component definitions. Business logic and runtime state are owned by their canonical owners; components render the domain model through the dashboard and API contracts.
+
+## Example
+The health panel renders loading while health is unknown, shows an error with retry when health checks fail, and shows live status otherwise.

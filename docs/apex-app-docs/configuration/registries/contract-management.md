@@ -62,6 +62,10 @@ New deployments are selected via configuration and governance approval, not auto
 ## Security
 Must be secured with multi-sig and emergency pause controls.
 
+## Deployment control
+- Deployment selection is governance-gated; no deployment is rotated automatically.
+- A retired contract is removed from active selection only after approval.
+
 ## Cross-references
 - `../../security/security-contracts.md`
 - `../../market/chains/chain-registry.md`

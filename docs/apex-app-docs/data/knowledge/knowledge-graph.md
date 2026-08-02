@@ -30,12 +30,28 @@ scope: Reference documentation.
 # Knowledge Graph
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Knowledge Graph
+Document type: [CONTRACT]
 
 ## Purpose
 Defines the structured graph linking protocols, tokens, strategies, chains, DEXs, risks, and AI agents.
+
+## Node types
+- Protocol nodes (chains, DEXs, oracles, tokens).
+- Strategy nodes.
+- Risk nodes (policies, limits).
+- Execution nodes (transactions, positions).
+- AI agent nodes (agents, memory scopes).
+
+## Edge rules
+- Edges express typed relations (links-to, depends-on, risks, executed-by).
+- A duplicate entity or invalid relation is rejected at validation.
+- Stale nodes and broken edges are detected and isolated, not served.
+- Version drift between linked entities is flagged and reconciled.
+
+## Update propagation
+- Source changes propagate through the graph on ingest and refresh.
+- A refresh revalidates relations before serving.
+- Serving never returns a stale subgraph as current.
 
 ## State machine
 ```mermaid
@@ -61,8 +77,9 @@ Refresh source nodes, revalidate relations, and isolate stale subgraphs.
 - `../../interfaces/api/domain-model.md`
 
 For data governance, see `./data-governance.md`.
+
 ## Governance Rules
 Defines node types, edges, indexing, update propagation, and retrieval semantics for the knowledge graph.
 
 ## Example
-A strategy node links to market regime, risk policy, and execution history.
+A strategy node links to market regime, risk policy, and execution history; a stale relation is isolated rather than served.

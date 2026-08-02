@@ -26,12 +26,10 @@ purpose: Self Healing documentation.
 scope: Reference documentation.
 ---
 
-# Self Healing
+# Self-Healing
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Self-Healing
+Document type: [CONTRACT]
 
 ## Purpose
 Defines the canonical recovery actions for workers, RPC, providers, caches, wallets, and queues.
@@ -50,8 +48,23 @@ stateDiagram-v2
 ## Failure modes
 Transient failure, repeated failure, unrecoverable failure.
 
-## Recovery
-Restart worker, reconnect RPC, switch provider, reload cache, recover queue, notify operators.
+## Recovery actions
+- Restart worker.
+- Reconnect RPC.
+- Switch provider.
+- Reload cache.
+- Recover queue.
+- Notify operators.
+
+## Healing rules
+- A transient failure is retried with bounded backoff.
+- A repeated failure escalates after the retry budget; it never heals silently.
+- An unrecoverable failure is surfaced to operators and the component is held safe.
+- Every healing action is verified before the component is declared stable.
+- Healing is observable: recovery events are recorded in the recovery metrics.
+- Healing actions are ordered by risk; a destructive action requires operator confirmation.
+- A healed component resumes at its last safe state, never mid-operation.
+- Healing is bounded by the performance and recovery budgets.
 
 ## Cross-references
 - `../monitoring/health-checks.md`
@@ -59,7 +72,8 @@ Restart worker, reconnect RPC, switch provider, reload cache, recover queue, not
 - `./recovery-and-failover.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+Defines the canonical recovery actions for workers, RPC, providers, caches, wallets, and queues. Detection and verification are owned by health checks; this document owns the healing actions between them.
 
 ## Example
-An input is validated before any state-changing action.
+A worker that fails transiently is restarted with backoff; after repeated failures it escalates to operators instead of retrying forever.

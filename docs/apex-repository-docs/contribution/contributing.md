@@ -30,23 +30,57 @@ scope: Reference documentation.
 # Contributing
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# CONTRIBUTING
+Document type: [GUIDE]
 
 ## Purpose
-Navigation-only document pointing to the authoritative owner(s).
+Describes how contributors and AI agents make changes to this repository: setup, classification, implementation, validation, and review.
+
+## Scope
+Repository-wide contribution workflow for documentation and validator changes. This repository is local-first: all work is performed explicitly by humans and AI agents, never by automated pipelines.
+
+## Setup
+- Clone the repository from GitHub.
+- Install the validator dependencies: `pip install -r validators/requirements.txt`.
+- Run the validation suite with `python3 validators/runner.py` from the repository root.
+- Confirm the working tree is clean before starting work.
+
+## Before making a change
+1. Read the canonical governance owners: `AGENTS.md`, `REBUILD-SYSTEM-SPECIFICATION.md`, and `REPOSITORY-EXECUTION-MODEL.md`.
+2. Classify the change: determine plane (Repository Operating Model or Product Specification), domain, class, authority, and status.
+3. Identify the canonical file for the concept. If a canonical owner exists, update it; do not create a duplicate.
+4. If the change is structural or semantic, confirm the canonical relationship before editing.
+
+## Implementation rules
+- Edit canonical sources rather than creating parallel documents.
+- Update registries, README navigation, and cross-references in the same change.
+- Do not create temporary execution artifacts or generated reports in the repository.
+- Keep root-level structure minimal and intentional.
+
+## Validation gates
+- Run `python3 validators/runner.py` after every change.
+- Review the result: 0 errors expected; warnings must be understood, not ignored.
+- Verify metadata is valid and cross-references resolve before opening a review.
+
+## Review requirements
+- Reviews check plane selection, canonical ownership, registry consistency, and traceability.
+- A change is complete only when validated, committed with an explanatory message, and pushed to `main`.
+
+## Definition of done
+- Validated: 0 errors from the validator suite.
+- Metadata valid and registries updated in the same change.
+- Workspace clean; no temporary artifacts remain.
+- The commit message explains what changed, why it changed, the plane, and the document class.
+- Cross-references and registry rows are updated in the same change as the edit they describe.
 
 ## Cross-references
 - `../standards/coding-standards.md`
 - `../../apex-app-docs/reference/implementation-roadmap.md`
+- `../../REPOSITORY-EXECUTION-MODEL.md`
+- `../documentation-lifecycle/documentation-lifecycle.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+
+This document owns the contributor workflow guidance. Repository execution policy, commit workflow, and validation lifecycle are owned by `REPOSITORY-EXECUTION-MODEL.md` and referenced above.
 
 ## Example
-An input is validated before any state-changing action.
-
-## Required details
-- Define setup, branch, test, and review requirements.
-- Run `../scripts/validate_markdown_refs.sh` from the repository root before opening a review when you touched markdown navigation or canonical references.
+A contributor adding a new product document classifies it as Product Specification, records it in the registries, runs the validators, and resolves all errors before opening the change for review.

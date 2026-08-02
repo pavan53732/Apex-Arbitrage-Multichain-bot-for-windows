@@ -29,9 +29,7 @@ scope: Reference documentation.
 # Opportunity Lifecycle
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Opportunity Lifecycle
+Document type: [CONTRACT]
 
 ## Purpose
 Defines the lifecycle from detection to archival.
@@ -49,21 +47,31 @@ stateDiagram-v2
   CLOSED --> ARCHIVED
 ```
 
+## Lifecycle model
+- Initial state: `DETECTED`.
+- Terminal state: `ARCHIVED`.
+- Allowed transitions: as shown in the state machine.
+- Forbidden transitions: execution without approval; skipping validation; resurrecting an archived opportunity.
+- Recovery: a failed validation returns the candidate to detection; a failed execution returns to simulated for re-evaluation.
+- Failure: an opportunity that cannot be validated, scored, or executed is recorded with its failure reason and archived.
+
+## Transition rules
+- An opportunity moves to approval only after scoring and simulation pass configured thresholds.
+- Execution is gated by risk and operator policy.
+- Closed opportunities are archived with their outcome for analysis.
+- Every transition is recorded with its trigger and reason in the decision ledger.
+- A state machine violation is rejected and logged; it never silently mutates state.
+- Archived opportunities retain their full history for analysis and audit.
+- Recovery transitions re-enter the flow at the revalidated state, not the original.
+
 ## Cross-references
 - `./opportunity-detection.md`
 - `./opportunity-ranking.md`
 - `../../execution/trading/trading-lifecycle.md`
 
 ## Operational Contract
-Defines the lifecycle from discovery through validation, scoring, simulation, approval, execution, closure, and archive.
+
+Defines the lifecycle from discovery through validation, scoring, simulation, approval, execution, closure, and archive. Detection and ranking are owned by their documents; this document owns the state transitions between them.
 
 ## Example
-An opportunity moves to approval only after scoring and simulation pass configured thresholds.
-
-## Lifecycle model
-- Initial state: defined by the lifecycle owner.
-- Terminal state: defined by the lifecycle owner.
-- Allowed transitions: explicitly listed by the lifecycle owner.
-- Forbidden transitions: explicitly listed by the lifecycle owner.
-- Recovery transitions: explicitly listed by the lifecycle owner.
-- Failure transitions: explicitly listed by the lifecycle owner.
+An opportunity moves to approval only after scoring and simulation pass configured thresholds; a failed execution returns it to simulation for re-evaluation.

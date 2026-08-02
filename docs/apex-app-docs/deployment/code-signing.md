@@ -52,6 +52,24 @@ All release builds published through the build pipeline must be signed. Develope
 - Failed verification blocks the release pipeline.
 - Expired certificates trigger an alert 30 days before expiration.
 
+## Key management
+- Signing keys are held in the key store and never embedded in source or configuration.
+- Certificate renewal is tracked; an alert is raised 30 days before expiration.
+- Compromised or revoked keys invalidate affected artifacts, which must be re-signed or withdrawn.
+- Key access is restricted to the release pipeline identity; no developer credential can sign a release artifact.
+- Every signature records its signer, certificate, and timestamp for audit.
+- Key rotation produces a signed transition record so artifact verification remains continuous.
+
+## Policy
+- Developer builds and local testing may skip signing; release builds may not.
+- A release artifact that fails verification is blocked from distribution.
+- Plugins are verified against the developer public key on the marketplace before activation.
+
+## Compliance
+- Signing policy is enforced at the release gate; an unsigned release is blocked.
+- A signed artifact's signature is verified before distribution.
+- Signing logs are retained for audit.
+
 ## Cross-References
 - **APP-BUILDER-WORKFLOW.md** — Build pipeline.
 - **SECURITY.md** — Security policies.

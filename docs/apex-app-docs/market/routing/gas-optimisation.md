@@ -67,13 +67,20 @@ Defines gas estimation, repricing, replacement, batching, and submission timing 
 - Replacement count.
 - Over-budget rejection count.
 
+## Governance
+- Gas policy is bounded by operator configuration; a policy change is validated before use.
+- Fee caps and priority fees are selected within policy limits.
+- Persisted gas decisions carry the gas model version and route fingerprint for audit.
+- A gas decision that would breach slippage or edge thresholds is rejected before submission.
+- Submission timing respects the arbitrage window of the opportunity.
+
 ## Cross-references
 - `../../execution/transactions/execution-engine.md`
 - `../../execution/transactions/transaction-lifecycle.md`
 - `./mev-protection.md`
 
 ## Operational Contract
-Defines the responsibilities, invariants, and expected behavior for this component.
+This document owns gas estimation, fee policy, replacement thresholds, and submission timing. Execution mechanics are owned by the execution engine; this document supplies the gas decisions it uses.
 
 ## Example
-An input is validated before any state-changing action.
+A route is repriced with a bounded fee bump that preserves nonce safety and respects the edge threshold; the decision is persisted with the gas model version and route fingerprint.

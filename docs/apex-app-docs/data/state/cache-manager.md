@@ -35,39 +35,49 @@ Document type: [CONTRACT]
 **Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Runtime Team
 
 ## Purpose
-Authoritative owner for cache manager.
+Authoritative owner for cache manager behavior.
 
 ## Scope
-Cross-cutting platform governance.
+Cross-cutting platform governance for cache ownership, TTL, invalidation, compression, and recovery.
 
 ## Responsibilities
-Define ownership, contracts, lifecycle, validation, and cross-references.
+Define ownership, contracts, lifecycle, validation, and cross-references for all cache domains.
 
-## Cross-references
-- `../../architecture/apex-os.md`
-- `../../architecture/architecture.md`
-
-## Operational Contract
-Defines cache ownership, TTL, invalidation, compression, and recovery for price, pool, ABI, token, AI, and RPC caches.
-
-## Example
-A stale price cache entry is invalidated after a new market tick arrives.
+## Cache domains
+- Price caches.
+- Pool caches.
+- ABI caches.
+- Token metadata caches.
+- AI context caches.
+- RPC response caches.
 
 ## Cache contract
 - Cache keys must be deterministic and namespaced by domain, chain, provider, and version.
 - Invalidation occurs on chain updates, provider changes, schema changes, and TTL expiry.
 - Eviction must prefer stale, low-value, or least-recently-used entries under pressure.
 - Consistency checks must fail closed when cache freshness is uncertain.
+- TTL and freshness windows are defined per data domain; a stale entry is never served as fresh.
+- A stale price cache entry is invalidated after a new market tick arrives.
 
-## Cache limits
-- Must define TTL, eviction, and freshness windows by domain.
+## Recovery
+- A cache that cannot be validated is rebuilt from source rather than served.
+- Cache corruption triggers reload from the durable source and logs the event.
 
-## Required details
-- Define TTL, eviction, and freshness values.
+## Freshness
+- Freshness windows are defined per data domain; a stale entry fails closed on read.
+- Cache consistency is verified on read whenever freshness is uncertain.
 
-## Cache rules
-- Define TTL, eviction, and freshness by data domain.
-- Define cache invalidation on chain, provider, and schema changes.
+## Cross-references
+- `../../architecture/apex-os.md`
+- `../../architecture/architecture.md`
+- `./state-management.md`
+
+## Operational Contract
+
+Defines cache ownership, TTL, invalidation, compression, and recovery for price, pool, ABI, token, AI, and RPC caches. Caches are acceleration, never the source of truth; the durable stores and live sources own truth.
+
+## Example
+A stale price cache entry is invalidated after a new market tick arrives, and a consistency failure blocks reads rather than serving stale data.
 
 ---
 

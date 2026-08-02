@@ -30,9 +30,7 @@ scope: Reference documentation.
 # Opportunity Detection
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Opportunity Detection
+Document type: [CONTRACT]
 
 ## Purpose
 Detects candidate opportunities from market, chain, and strategy inputs.
@@ -51,15 +49,27 @@ Candidate list, reason codes, confidence, and timestamps.
 ## Algorithms
 Rule-based filters, freshness gates, and strategy-specific pattern detectors.
 
-## Thresholds
-Candidates below freshness or liquidity thresholds are rejected.
+## Detection rules
+- Candidates below freshness or liquidity thresholds are rejected with a reason code.
+- Detection is deterministic for the same input snapshot; AI hints may not override deterministic filters.
+- A candidate that violates risk or policy gates is rejected before ranking.
+- Reason codes and confidence are recorded for every candidate.
+- Every candidate carries its detection inputs and timestamps for traceability.
+- A candidate is emitted only when the underlying market snapshot is fresh.
+- Detection capacity is bounded; the detector backlogs rather than drops events silently.
+- A detection failure is surfaced and the detector retries with backoff.
+- Candidate volume is monitored against thresholds; an anomaly triggers review.
+- Rejection reasons are queryable by strategy and gate for tuning.
+- Policy gates are evaluated in a fixed order; the first failing gate produces the reason.
+- A candidate reused across strategies is detected once and shared by reference.
+- Detection outputs are versioned with the detector configuration.
+- Detector configuration changes are validated before activation.
 
 ## Monitoring
 Candidate rate, rejection rate, freshness failures.
 
 ## Validation
 Determinism for same input snapshot.
-
 
 ## Cross-references
 - `../core/market-intelligence.md`
@@ -68,8 +78,10 @@ Determinism for same input snapshot.
 - `../../execution/risk-policy/risk-engine.md`
 
 For opportunity lifecycle, see `./opportunity-lifecycle.md`.
+
 ## Operational Contract
-Defines the detection pipeline, signal sources, filters, validation, and promotion into ranking.
+
+Defines the detection pipeline, signal sources, filters, validation, and promotion into ranking. Market data and risk are owned by their canonical owners; this document detects candidates from them.
 
 ## Example
-A detected spread passes minimum profit and liquidity checks before scoring.
+A detected spread passes minimum profit and liquidity checks before scoring; a stale quote is rejected with its freshness reason.

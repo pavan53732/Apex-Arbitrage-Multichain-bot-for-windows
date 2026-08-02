@@ -26,12 +26,10 @@ purpose: Interface Notification Channel documentation.
 scope: Reference documentation.
 ---
 
-# Interface Notification Channel
+# Interface: Notification Channel
 
 ## Document type
-This document is an overview, reference, or index as noted below.
-
-# Interface: Notification Channel
+Document type: [CONTRACT]
 
 ## Purpose
 Defines outbound notification channel contracts.
@@ -45,18 +43,11 @@ Defines outbound notification channel contracts.
 - `id` is required for acknowledgements.
 - `metadata` must include channel, source, and timestamp.
 
-## Cross-references
-- `../../operations/notifications/notification-center.md`
-- `../../operations/reliability/runtime-operations.md`
-
-## Interface Contract
-Defines channels, severities, delivery guarantees, retry policy, and escalation semantics for notifications.
-
-## Example
-A high-severity execution failure is routed to the notification center and operator channel.
-
-## Required details
-- Define toast persistence, delivery guarantees, and priority routing.
+## Delivery semantics
+- Severity determines routing and priority: critical alerts use toast/operator channels; noncritical updates use in-app notices.
+- Delivery guarantees are per channel; a channel that cannot deliver must return a delivery error rather than silently dropping.
+- Retry policy is bounded and channel-aware; escalation raises severity after repeated failures.
+- Notifications persist after restart per the notification-center contract.
 
 ## Interface model
 - Producer: defined by the owning system.
@@ -66,3 +57,26 @@ A high-severity execution failure is routed to the notification center and opera
 - Validation: defined by the owning system.
 - Versioning: defined by the owning system.
 - Failure behavior: defined by the owning system.
+
+## Severity levels
+- Critical, warning, and info severities are defined by the notification center.
+- Critical alerts route to toast and operator channels; noncritical updates use in-app notices.
+
+## Acknowledgement
+- Acknowledged notifications are marked and re-escalated on timeout.
+- Delivery receipts are returned per channel.
+- An unacknowledged critical alert is re-escalated until acknowledged or resolved.
+- Delivery failures record the channel error and route to the notification center for retry policy.
+- Channel capabilities (rate limits, size limits) are declared per channel and enforced.
+- Payloads conform to the notification channel schema; a malformed payload is rejected before send.
+- Severity mapping follows the notification-center contract, never per-call ad hoc mapping.
+
+## Cross-references
+- `../../operations/notifications/notification-center.md`
+- `../../operations/reliability/runtime-operations.md`
+
+## Interface Contract
+Defines channels, severities, delivery guarantees, retry policy, and escalation semantics for notifications.
+
+## Example
+A high-severity execution failure is routed to the notification center and operator channel; a noncritical update uses an in-app notice.

@@ -26,12 +26,10 @@ purpose: Interface Tool Call documentation.
 scope: Reference documentation.
 ---
 
-# Interface Tool Call
+# Interface: Tool Call
 
 ## Document type
-This document is a reference.
-
-# Interface: Tool Call
+Document type: [CONTRACT]
 
 ## Purpose
 Defines canonical tool invocation and result contracts.
@@ -49,24 +47,33 @@ Defines canonical tool invocation and result contracts.
 - `timeout` is required and must be greater than zero.
 - `result` and `error` are mutually exclusive.
 
+## Interface model
+- Producer: Agent Orchestrator.
+- Consumer: Tool Adapter.
+- Payload: Tool name, args, timeout, result, and error.
+- Schema: name, args, result, error, timeout, permissions.
+- Validation: name required, timeout > 0, result xor error, args validated by tool schema.
+- Versioning: v1.0 backward compatible with additive tool metadata.
+- Failure behavior: unknown tool, invalid args, timeout, permission denied, or tool runtime error.
+
+## Invocation semantics
+- Every invocation is validated against the tool schema before dispatch.
+- Permission checks run before execution; an unauthorized tool is denied with a reason.
+- Tool execution is bounded by `timeout`; a timeout returns a normalized error, never a partial result as success.
+- A tool result or error is returned through this contract; results are never fabricated by the agent.
+
+## Result normalization
+- Errors are normalized to a canonical error shape before return.
+- A timeout is distinguishable from a failure result.
+- A permission denial is returned with its reason, never swallowed.
+
 ## Cross-references
 - `../../ai/orchestration/ai-agent-specification.md`
 - `../../ai/orchestration/ai-orchestration.md`
+- `../../ai/tools/ai-tools.md`
 
 ## Interface Contract
 Defines AI tool invocation shape, permissions, arguments, result handling, and error normalization.
 
 ## Example
-The AI asks the risk tool for exposure metrics before recommending execution.
-
-## Required details
-- Define tool arguments, outputs, permissions, and sandbox constraints.
-
-## Interface model
-- Producer: Agent Orchestrator.
-- Consumer: Tool Adapter.
-- Payload: Tool name, args, timeout, result, and error..
-- Schema: name, args, result, error, timeout, permissions.
-- Validation: name required, timeout > 0, result xor error, args validated by tool schema.
-- Versioning: v1.0 backward compatible with additive tool metadata.
-- Failure behavior: unknown tool, invalid args, timeout, permission denied, or tool runtime error.
+The AI asks the risk tool for exposure metrics before recommending execution; the call is schema-validated and permission-checked before dispatch.
