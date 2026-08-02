@@ -8,7 +8,7 @@ class: Guide
 authority: Canonical
 status: Active
 owner: UI Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-app-docs/ui/ux-guidelines.md
 related_concepts:
   - CONCEPT-0393
@@ -17,7 +17,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - UI

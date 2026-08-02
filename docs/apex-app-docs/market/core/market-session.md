@@ -8,7 +8,7 @@ class: Reference
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-app-docs/market/core/market-session.md
 related_concepts:
   - CONCEPT-0320
@@ -17,7 +17,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Market

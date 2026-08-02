@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Security Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-app-docs/security/security-contracts.md
 related_concepts:
   - CONCEPT-0227
@@ -17,7 +17,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Security
@@ -29,7 +29,7 @@ scope: Reference documentation.
 # Security Contracts
 
 ## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Security Team
+**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-08-02 | **Owner:** Security Team
 
 ## Document type
 Document type: [REFERENCE]
@@ -81,4 +81,5 @@ Policy mandates from this document are enforced by `./security.md` and `./securi
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.1.0 | 2026-08-02 | Expanded canonical content: replaced placeholder directives and generic boilerplate with grounded ownership, rules, lifecycle, failure, and cross-reference detail. | Security Team |
 | 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Security Team |

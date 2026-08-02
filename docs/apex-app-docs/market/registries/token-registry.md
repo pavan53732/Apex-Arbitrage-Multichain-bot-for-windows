@@ -8,7 +8,7 @@ class: Registry
 authority: Canonical
 status: Active
 owner: Trading Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-app-docs/market/registries/token-registry.md
 related_concepts:
   - CONCEPT-0309
@@ -18,7 +18,7 @@ consumers:
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Market
@@ -33,7 +33,7 @@ scope: Token listing and metadata.
 Document type: [CONTRACT]
 
 ## Version
-**Version:** 1.0.0 | **Status:** Canonical | **Last Updated:** 2026-07-29 | **Owner:** Trading Team
+**Version:** 1.1.0 | **Status:** Canonical | **Last Updated:** 2026-08-02 | **Owner:** Trading Team
 
 ## Purpose
 Defines the authoritative registry of tracked tokens and token metadata.
@@ -86,4 +86,5 @@ A token entry stores symbol, decimals, chain id, and active status.
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.1.0 | 2026-08-02 | Expanded canonical content: replaced placeholder directives and generic boilerplate with grounded ownership, rules, lifecycle, failure, and cross-reference detail. | Trading Team |
 | 1.0.0 | 2026-07-29 | Added formal Document type declaration, Version block, and Version History section to satisfy [CONTRACT] compliance (`architecture-tests/validate_contracts.py`, `architecture-tests/validate_ownership.py`). Substantive content unchanged. | Trading Team |

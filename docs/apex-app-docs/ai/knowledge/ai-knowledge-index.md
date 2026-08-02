@@ -8,7 +8,7 @@ class: Index
 authority: Canonical
 status: Active
 owner: AI Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-app-docs/ai/knowledge/ai-knowledge-index.md
 related_concepts:
   - CONCEPT-0111
@@ -18,7 +18,7 @@ consumers:
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - AI

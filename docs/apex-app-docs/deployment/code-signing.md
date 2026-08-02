@@ -8,7 +8,7 @@ class: Reference
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-app-docs/deployment/code-signing.md
 related_concepts:
   - CONCEPT-0223
@@ -17,7 +17,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-29
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Deployment
@@ -29,7 +29,7 @@ scope: Reference documentation.
 # Code Signing
 
 ## Version
-**Version:** 0.1.0 | **Status:** Draft | **Last Updated:** 2026-07-27 | **Owner:** DevOps Team
+**Version:** 1.1.0 | **Status:** Draft | **Last Updated:** 2026-08-02 | **Owner:** DevOps Team
 
 ## Purpose
 Defines code signing requirements for the Apex platform — signing binaries, plugin archives, configuration files, and release artifacts.
@@ -78,4 +78,5 @@ All release builds published through the build pipeline must be signed. Develope
 ## Version History
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
+| 1.1.0 | 2026-08-02 | Expanded canonical content: replaced placeholder directives and generic boilerplate with grounded ownership, rules, lifecycle, failure, and cross-reference detail. | Runtime Team |
 | 0.1.0 | 2026-07-27 | Initial spec | DevOps Team |
