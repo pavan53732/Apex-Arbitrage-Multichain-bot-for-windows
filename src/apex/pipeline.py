@@ -26,8 +26,15 @@ from .opportunity import (
     Rejection,
     detect,
 )
+from .risk import RiskLimits, RiskVerdict, TradeAssessment, evaluate as evaluate_risk
 from .routing import Route, RouteRejected, RouteState, RoutingResult, rank_routes
 from .rpc import RpcError, RpcPool
+from .simulation import (
+    PerformanceLedger,
+    SimulationMode,
+    SimulationResult as PaperTradeResult,
+    simulate,
+)
 
 PHASE_1_BLOCK_CODE = "PHASE_1_EXECUTION_BLOCK"
 
@@ -119,7 +126,9 @@ class SimulationPipeline:
 
     config: Config
     rpc: RpcPool
+    ledger: PerformanceLedger = field(default_factory=PerformanceLedger, init=False)
     _warnings: list[str] = field(default_factory=list, init=False)
+    _last_risk_verdict: RiskVerdict | None = field(default=None, init=False)
 
     @property
     def warnings(self) -> tuple[str, ...]:
@@ -227,7 +236,54 @@ class SimulationPipeline:
             best_candidate=best_candidate,
         )
 
-    def execute(self, result: "SimulationResult | DiscoveryResult") -> None:
+    def paper_trade(
+        self,
+        discovery: "DiscoveryResult",
+        amount_in: int,
+        *,
+        now_ms: int,
+        assessment: TradeAssessment,
+        gas_cost_cents: int,
+        limits: RiskLimits | None = None,
+        latency_ms: int = 0,
+        seed: int = 0,
+    ) -> PaperTradeResult:
+        """Risk-check and paper-trade the winning route.
+
+        The risk pipeline runs first and its verdict is carried into the
+        simulation rather than gating it. Phase 1 exists to gather hypothetical
+        performance data, and simulating only the trades risk would have
+        approved would bias that record toward success. The rejection is
+        recorded on the result instead.
+
+        Nothing here signs or broadcasts. `paper_trade` is the terminal
+        operation available in this build; `execute` remains unconditionally
+        blocked.
+        """
+        route = discovery.best_route  # raises RouteRejected when none survived
+
+        verdict = evaluate_risk(assessment, limits, simulation_only=True)
+        self._last_risk_verdict = verdict
+
+        result = simulate(
+            route,
+            amount_in,
+            now_ms=now_ms,
+            gas_cost_cents=gas_cost_cents,
+            risk_verdict=verdict,
+            latency_ms=latency_ms,
+            seed=seed,
+            mode=SimulationMode.PAPER_TRADING,
+        )
+        self.ledger.record(result)
+        return result
+
+    @property
+    def last_risk_verdict(self) -> RiskVerdict | None:
+        """The verdict from the most recent paper trade, for auditing."""
+        return self._last_risk_verdict
+
+    def execute(self, result: "SimulationResult | DiscoveryResult | PaperTradeResult") -> None:
         """Reject execution unconditionally.
 
         Present so the execution gate exists and is testable. It has no success
@@ -239,6 +295,8 @@ class SimulationPipeline:
 
 __all__ = [
     "DiscoveryResult",
+    "PaperTradeResult",
+    "PerformanceLedger",
     "ExecutionBlocked",
     "SimulationPipeline",
     "SimulationResult",
