@@ -84,6 +84,16 @@ class ValidatorRunner:
         "VAL-008",  # Traceability Validator
         "VAL-005",  # Orphan Detector
         "VAL-007",  # Document-Class Validator
+        "VAL-018",  # Validator Coverage (INFO-only)
+        "VAL-010",  # Specification Completeness
+        "VAL-013",  # State Machine Coverage
+        "VAL-014",  # Interface Contract
+        "VAL-009",  # ADR Consistency
+        "VAL-016",  # Ownership Fitness
+        "VAL-011",  # Terminology
+        "VAL-012",  # Semantic Drift
+        "VAL-015",  # Cross-Domain Consistency
+        "VAL-017",  # Documentation Quality
     ]
     FAIL_FAST_VALIDATORS = {"VAL-006"}
 
@@ -97,6 +107,16 @@ class ValidatorRunner:
         "VAL-006": "val_006_generated",
         "VAL-007": "val_007_class",
         "VAL-008": "val_008_traceability",
+        "VAL-009": "val_009_adr",
+        "VAL-010": "val_010_completeness",
+        "VAL-011": "val_011_terminology",
+        "VAL-012": "val_012_drift",
+        "VAL-013": "val_013_statemachine",
+        "VAL-014": "val_014_interfaces",
+        "VAL-015": "val_015_crossdomain",
+        "VAL-016": "val_016_ownership",
+        "VAL-017": "val_017_quality",
+        "VAL-018": "val_018_coverage",
     }
 
     def __init__(self, repo_root: Path | None = None, config: ValidatorConfig | None = None):

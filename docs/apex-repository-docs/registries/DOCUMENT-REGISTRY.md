@@ -40,8 +40,8 @@ Stable document identity registry. Paths are locations; Document IDs are identit
 | Registry schema version | 1.1 |
 | Registry model | Document identity with concept roles |
 | Last regenerated | 2026-07-31 |
-| Registered documents | 354 |
-| Active semantic concepts referenced | 221 |
+| Registered documents | 356 |
+| Active semantic concepts referenced | 223 |
 
 | Document ID | Path | Title | Plane | Domain | Class | Authority | Status | Owner | Version | Concept Role | Canonical Source | Related Concepts | Dependencies | Consumers | Supersedes | Superseded By |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -402,3 +402,5 @@ Stable document identity registry. Paths are locations; Document IDs are identit
 | DOC-0437 | docs/apex-app-docs/windows/WINDOWS-DESKTOP-ENHANCED.md | Windows Desktop Enhanced | Product Specification | Windows | Guide | Canonical | Active | Runtime Team | 1.0.0 | Owner | docs/apex-app-docs/windows/WINDOWS-DESKTOP-ENHANCED.md | CONCEPT-0398 |  |  |  |  |
 | DOC-0438 | docs/apex-app-docs/windows/audits/AUDIT-WINDOWS-ARBITRAGE-GAPS.md | Windows Arbitrage Gaps Audit | Product Specification | Windows | Reference | Canonical | Active | Runtime Team | 1.0.0 | Owner | docs/apex-app-docs/windows/audits/AUDIT-WINDOWS-ARBITRAGE-GAPS.md | CONCEPT-0399 |  |  |  |  |
 | DOC-0439 | docs/apex-repository-docs/agent-system/ai-capability-matrix.md | AI Capability Matrix | Repository Operating Model | Agent System | Policy | Canonical | Active | Runtime Team | 1.0.0 | Owner | docs/apex-repository-docs/agent-system/ai-capability-matrix.md | CONCEPT-0439 |  |  |  |  |
+| DOC-0440 | docs/apex-repository-docs/registries/TEAM-REGISTRY.md | Team Registry | Repository Operating Model | Registries | Registry | Canonical | Active | Runtime Team | 1.0.0 | Owner | docs/apex-repository-docs/registries/TEAM-REGISTRY.md | CONCEPT-0440 |  | DOC-0007 |  |  |
+| DOC-0441 | docs/apex-repository-docs/registries/GLOSSARY.md | Glossary | Repository Operating Model | Registries | Registry | Canonical | Active | Runtime Team | 1.0.0 | Owner | docs/apex-repository-docs/registries/GLOSSARY.md | CONCEPT-0441 | DOC-0006 |  |  |  |
