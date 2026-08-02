@@ -271,6 +271,46 @@ class BaseValidator(ABC):
         for finding in [*errors, *warnings]:
             finding.validator_id = self.VALIDATOR_ID
             finding.rule_id = rule_ids.get(str(finding.code).split(".")[-1], "ROM-004")
+
+        # Route every finding to the output channel its severity declares.
+        #
+        # The published result schema constrains each channel: `errors` accepts
+        # only ERROR/CRITICAL, `warnings` accepts only WARNING, and advisory
+        # findings belong in `infos`. Validators legitimately downgrade a
+        # finding's severity (for example VAL-010 lowers low-weight sections to
+        # WARNING), so a validator-supplied channel is treated as a default
+        # rather than as the final destination. Partitioning here keeps every
+        # validator schema-compliant without requiring each one to re-implement
+        # the same routing logic.
+        routed_errors: list[ValidationError] = []
+        routed_warnings: list[ValidationWarning] = []
+        routed_infos: list[ValidationWarning] = []
+
+        for finding in [*errors, *warnings]:
+            finding_severity = str(getattr(finding, "severity", "")).upper()
+            if finding_severity in ("ERROR", "CRITICAL"):
+                routed_errors.append(finding)
+            elif finding_severity == "WARNING":
+                routed_warnings.append(finding)
+            else:
+                routed_infos.append(finding)
+
+        # Status and severity are recomputed from the routed findings so that a
+        # result never claims FAIL on the strength of findings that were, in
+        # fact, only advisory.
+        if status == "FAIL" and not routed_errors:
+            status = "PASS"
+
+        if status != "ERROR":
+            if routed_errors:
+                severity = "CRITICAL" if any(
+                    str(e.severity).upper() == "CRITICAL" for e in routed_errors
+                ) else "ERROR"
+            elif routed_warnings:
+                severity = "WARNING"
+            else:
+                severity = "INFO"
+
         exec_time = self._stop_timer()
         return ValidationResult(
             validator_id=self.VALIDATOR_ID,
@@ -281,8 +321,9 @@ class BaseValidator(ABC):
             status=status,
             severity=severity,
             checked_items=checked_items,
-            errors=errors,
-            warnings=warnings,
+            errors=routed_errors,
+            warnings=routed_warnings,
+            infos=routed_infos,
         )
 
     def _result_pass(self, checked_items: int, warnings: list[ValidationWarning] = None) -> ValidationResult:

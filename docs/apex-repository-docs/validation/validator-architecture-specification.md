@@ -8,7 +8,7 @@ class: Specification
 authority: Canonical
 status: Active
 owner: Runtime Team
-version: 1.0.0
+version: 1.1.0
 canonical_source: docs/apex-repository-docs/validation/validator-architecture-specification.md
 related_concepts:
   - CONCEPT-0004
@@ -20,7 +20,7 @@ consumers: []
 validator_coverage: []
 supersedes: []
 superseded_by: []
-last_updated: 2026-07-31
+last_updated: 2026-08-02
 concept_role: Owner
 owned_domains:
   - Validation
@@ -291,6 +291,28 @@ Every validator MUST emit this exact JSON structure:
 - Validator crashes → status "ERROR", exit code 3
 
 ---
+
+### Finding Channel Routing
+
+A finding's severity determines its output channel. The SDK partitions findings
+when constructing a result, so that the published schema holds for every
+validator:
+
+| Finding severity | Channel |
+| --- | --- |
+| CRITICAL, ERROR | `errors` |
+| WARNING | `warnings` |
+| INFO | `infos` |
+
+Validators legitimately downgrade a finding's severity after deciding which
+channel to append it to — VAL-010, for example, lowers low-weight sections to
+WARNING. A validator-supplied channel is therefore a default, not the final
+destination, and routing is performed centrally rather than re-implemented by
+each validator.
+
+Result `status` and `severity` are derived from the routed findings. A result
+does not report FAIL when no finding is an error, so a validator cannot fail a
+run on the strength of advisory findings alone.
 
 ## 5. Exit Code Standard
 
