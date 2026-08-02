@@ -19,7 +19,7 @@ from validator_sdk import (
 class Validator(BaseValidator):
     VALIDATOR_ID = "VAL-009"
     NAME = "ADR Consistency Validator"
-    VERSION = "1.0.0"
+    VERSION = "1.1.0"
     DESCRIPTION = "Verifies ADRs are consistent with current architecture, not stale, and supersession chains are complete"
     CATEGORY = "consistency"
     SEVERITY = "ERROR"
@@ -95,6 +95,44 @@ class Validator(BaseValidator):
                             rule="ADRs should have Context, Decision, and Consequences.",
                             suggestion=f"Add '{s}' section.",
                         ))
+
+            # Conformance: a document an ADR names as governed must acknowledge
+            # the decision. An ADR that records a binding architectural choice
+            # while the governed specification never references it leaves the
+            # decision unenforced, and a reader of that specification alone has
+            # no way to know the constraint exists.
+            if entry.status == "Active" and entry.consumers:
+                for cid in entry.consumers:
+                    cid = cid.strip()
+                    if not cid or cid not in context.document_registry:
+                        continue
+                    consumer = context.document_registry[cid]
+                    consumer_file = context.repository_root / consumer.path
+                    if not consumer_file.exists():
+                        continue
+                    checked += 1
+                    try:
+                        consumer_text = consumer_file.read_text(encoding="utf-8")
+                    except Exception:
+                        continue
+                    # The decision may be cited by ADR identity or by filename.
+                    adr_name = Path(path).name
+                    if doc_id in consumer_text or adr_name in consumer_text:
+                        continue
+                    warnings.append(ValidationWarning(
+                        code="ADR_NOT_ACKNOWLEDGED",
+                        file=consumer.path, line=1,
+                        message=(
+                            f"Document {cid} is governed by Active ADR {doc_id} "
+                            f"but does not reference it"
+                        ),
+                        severity="WARNING",
+                        rule="A document governed by an Active ADR must reference that decision.",
+                        suggestion=(
+                            f"Reference {doc_id} ({adr_name}) in {consumer.path}, or remove "
+                            f"{cid} from the ADR's consumers if it is not governed by the decision."
+                        ),
+                    ))
 
         if errors: return self._result_fail(checked, errors)
         return self._result_pass(checked, warnings)
